@@ -1,0 +1,256 @@
+import React, { useEffect, useState } from "react";
+import AdminLayout from "@/components/admin/AdminLayout";
+import { supabase } from "@/integrations/supabase/client";
+import { 
+  Users, 
+  Download, 
+  Search, 
+  Filter, 
+  MoreHorizontal, 
+  Eye, 
+  CheckCircle,
+  Clock,
+  Mail,
+  Phone,
+  MapPin,
+  LifeBuoy
+} from "lucide-react";
+import { 
+  Table, 
+  TableBody, 
+  TableCell, 
+  TableHead, 
+  TableHeader, 
+  TableRow 
+} from "@/components/ui/table";
+import { 
+  DropdownMenu, 
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuTrigger 
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Badge } from "@/components/ui/badge";
+import { toast } from "sonner";
+import { formatDate } from "@/lib/index";
+
+export default function AdminLeads() {
+  const [leads, setLeads] = useState<any[]>([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    fetchLeads();
+  }, []);
+
+  const fetchLeads = async () => {
+    setIsLoading(true);
+    const { data, error } = await supabase
+      .from('leads')
+      .select('*')
+      .order('created_at', { ascending: false });
+
+    if (error) {
+      toast.error("Fehler beim Laden der Anfragen");
+    } else {
+      setLeads(data || []);
+    }
+    setIsLoading(false);
+  };
+
+  const updateStatus = async (id: string, newStatus: string) => {
+    const { error } = await supabase
+      .from('leads')
+      .update({ status: newStatus })
+      .eq('id', id);
+
+    if (error) {
+      toast.error("Status konnte nicht aktualisiert werden");
+    } else {
+      toast.success(`Anfrage auf '${newStatus}' gesetzt`);
+      fetchLeads();
+    }
+  };
+
+  const exportToCSV = () => {
+    if (leads.length === 0) return;
+
+    const headers = [
+      "Datum", "Vorname", "Nachname", "E-Mail", "Telefon", 
+      "PLZ", "Versicherung", "Bereiche", "Dringlichkeit", 
+      "Info", "Status"
+    ];
+
+    const csvRows = [
+      headers.join(";"), // Header row
+      ...leads.map(lead => [
+        new Date(lead.created_at).toLocaleDateString("de-DE"),
+        lead.first_name,
+        lead.last_name,
+        lead.email,
+        lead.phone,
+        lead.zip_code,
+        lead.insurance,
+        lead.areas.join(", "),
+        lead.urgency,
+        (lead.additional_info || "").replace(/;/g, ",").replace(/\n/g, " "),
+        lead.status
+      ].join(";"))
+    ];
+
+    const csvContent = csvRows.join("\n");
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(blob);
+    
+    link.setAttribute("href", url);
+    link.setAttribute("download", `feminatalis_leads_${new Date().toISOString().split('T')[0]}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    toast.success("CSV-Export erfolgreich gestartet");
+  };
+
+  const filteredLeads = leads.filter(lead => 
+    `${lead.first_name} ${lead.last_name}`.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    lead.email.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return (
+    <AdminLayout title="Anfragen-Management (Leads)">
+      <div className="space-y-6 animate-in fade-in duration-500">
+        
+        {/* Toolbar */}
+        <div className="flex flex-col md:flex-row gap-4 items-center justify-between bg-white/50 p-6 rounded-[2rem] border border-primary/5">
+          <div className="relative w-full md:w-96">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-primary/30" />
+            <Input 
+              placeholder="Name oder E-Mail suchen..." 
+              className="pl-12 h-12 rounded-xl bg-white border-primary/5"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
+          <div className="flex items-center gap-3 w-full md:w-auto">
+            <Button variant="outline" className="h-12 rounded-xl flex-1 md:flex-none border-primary/10 gap-2">
+              <Filter size={18} /> Filter
+            </Button>
+            <Button 
+              onClick={exportToCSV}
+              className="h-12 rounded-xl flex-1 md:flex-none bg-accent text-white gap-2 hover:shadow-lg transition-all"
+            >
+              <Download size={18} /> CSV Export
+            </Button>
+          </div>
+        </div>
+
+        {/* Leads Table */}
+        <div className="bg-white/80 backdrop-blur-md rounded-[2.5rem] border border-primary/5 shadow-xl shadow-primary/5 overflow-hidden">
+          <Table>
+            <TableHeader className="bg-primary/5">
+              <TableRow className="hover:bg-transparent border-none">
+                <TableHead className="font-bold text-primary py-6 px-8">Client</TableHead>
+                <TableHead className="font-bold text-primary">Datum</TableHead>
+                <TableHead className="font-bold text-primary">Schwerpunkt</TableHead>
+                <TableHead className="font-bold text-primary">Status</TableHead>
+                <TableHead className="font-bold text-primary text-right px-8">Aktion</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {isLoading ? (
+                <TableRow>
+                  <TableCell colSpan={5} className="h-64 text-center">
+                    <div className="flex flex-col items-center gap-4 text-muted-foreground">
+                      <Clock className="w-8 h-8 animate-spin opacity-20" />
+                      Wird geladen...
+                    </div>
+                  </TableCell>
+                </TableRow>
+              ) : filteredLeads.length === 0 ? (
+                <TableRow>
+                  <TableCell colSpan={5} className="h-64 text-center text-muted-foreground">
+                    Keine Anfragen gefunden.
+                  </TableCell>
+                </TableRow>
+              ) : (
+                filteredLeads.map((lead) => (
+                  <TableRow key={lead.id} className="hover:bg-primary/5 border-primary/5 transition-colors group">
+                    <TableCell className="py-6 px-8">
+                      <div className="flex items-center gap-4">
+                        <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-primary font-bold shadow-inner shrink-0">
+                          {lead.first_name[0]}{lead.last_name[0]}
+                        </div>
+                        <div>
+                          <p className="font-bold text-primary">{lead.first_name} {lead.last_name}</p>
+                          <p className="text-xs text-muted-foreground">{lead.email}</p>
+                        </div>
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      <div className="text-sm text-primary/60">{formatDate(lead.created_at)}</div>
+                    </TableCell>
+                    <TableCell>
+                      <div className="flex flex-wrap gap-1">
+                        {lead.areas.map((area: string) => (
+                          <Badge key={area} variant="outline" className="bg-white border-primary/10 text-primary capitalize text-[10px]">
+                            {area}
+                          </Badge>
+                        ))}
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      <Badge className={cn(
+                        "rounded-full px-3 py-1 text-[10px] uppercase tracking-wider font-black",
+                        lead.status === 'neu' ? "bg-accent text-white" : 
+                        lead.status === 'kontaktiert' ? "bg-blue-500 text-white" :
+                        "bg-green-500 text-white"
+                      )}>
+                        {lead.status}
+                      </Badge>
+                    </TableCell>
+                    <TableCell className="text-right px-8">
+                      <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                          <Button variant="ghost" className="h-10 w-10 p-0 rounded-full">
+                            <MoreHorizontal className="h-5 w-5" />
+                          </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent align="end" className="rounded-2xl border-primary/5 shadow-2xl p-2 min-w-[180px]">
+                          <DropdownMenuItem className="rounded-xl flex gap-3 py-3 px-4 cursor-pointer" onClick={() => toast.info("Detailansicht folgt")}>
+                            <Eye size={18} className="text-primary/40" /> Details ansehen
+                          </DropdownMenuItem>
+                          <DropdownMenuItem className="rounded-xl flex gap-3 py-3 px-4 cursor-pointer" onClick={() => updateStatus(lead.id, 'kontaktiert')}>
+                            <Clock size={18} className="text-blue-500" /> Auf 'Kontaktiert'
+                          </DropdownMenuItem>
+                          <DropdownMenuItem className="rounded-xl flex gap-3 py-3 px-4 cursor-pointer" onClick={() => updateStatus(lead.id, 'abgeschlossen')}>
+                            <CheckCircle size={18} className="text-green-500" /> Auf 'Erledigt'
+                          </DropdownMenuItem>
+                        </DropdownMenuContent>
+                      </DropdownMenu>
+                    </TableCell>
+                  </TableRow>
+                ))
+              )}
+            </TableBody>
+          </Table>
+        </div>
+
+        {/* Footer Info */}
+        <div className="p-8 bg-primary/5 rounded-[2rem] flex flex-col md:flex-row items-center justify-between gap-6 opacity-60">
+           <div className="flex items-center gap-3">
+             <LifeBuoy className="w-5 h-5 text-primary" />
+             <p className="text-xs font-medium text-primary">Tipp: Exportiere die Leads regelmäßig für deine interne Buchhaltung.</p>
+           </div>
+           <p className="text-xs font-bold text-primary uppercase tracking-[0.2em]">Gesamt: {leads.length} Einträge</p>
+        </div>
+      </div>
+    </AdminLayout>
+  );
+}
+
+function cn(...inputs: any[]) {
+  return inputs.filter(Boolean).join(" ");
+}
