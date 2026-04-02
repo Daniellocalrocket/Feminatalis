@@ -54,6 +54,9 @@ export const ROUTE_PATHS = {
   ADMIN_DASHBOARD: "/admin",
   ADMIN_LEADS: "/admin/leads",
   ADMIN_EVENTS: "/admin/events",
+
+  // Legal
+  IMPRESSUM: "/impressum",
 } as const;
 
 export interface User {

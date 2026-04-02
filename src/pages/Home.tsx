@@ -23,8 +23,8 @@ export default function Home() {
           <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
             Ganzheitliche Gesundheit
           </div>
-          <h1 className="text-5xl md:text-7xl font-serif text-primary mb-6 leading-tight">
-            Praxis für Funktionelle <br className="hidden md:block"/>Medizin <br className="md:hidden"/>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif text-primary mb-6 leading-tight tracking-tight">
+            Praxis für Funktionelle <br className="hidden sm:block"/>Medizin <br className="sm:hidden"/>
             <span className="text-accent">& Hebammenpraxis</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
@@ -50,9 +50,9 @@ export default function Home() {
               { icon: <Heart className="w-8 h-8 text-primary"/>, title: "Hebammenpraxis", desc: "Sichere Begleitung in Schwangerschaft, Wochenbett & Rückbildung.", link: ROUTE_PATHS.HEBAMMENPRAXIS },
               { icon: <Baby className="w-8 h-8 text-blue-500"/>, title: "Kinderwunsch", desc: "Natürliche Unterstützung auf dem Weg zu Ihrem Wunschkind.", link: ROUTE_PATHS.KINDERWUNSCH }
             ].map((s, i) => (
-              <div key={i} className="bg-white rounded-3xl p-8 shadow-xl shadow-black/5 text-center flex flex-col items-center border border-border/50">
-                <div className="w-16 h-16 rounded-full bg-[#fde4c8]/30 border border-border flex items-center justify-center mb-6">{s.icon}</div>
-                <h3 className="text-2xl font-serif text-primary mb-3">{s.title}</h3>
+              <div key={i} className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl shadow-black/5 text-center flex flex-col items-center border border-border/50">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#fde4c8]/30 border border-border flex items-center justify-center mb-6">{s.icon}</div>
+                <h3 className="text-xl sm:text-2xl font-serif text-primary mb-3">{s.title}</h3>
                 <p className="text-muted-foreground mb-6 flex-grow">{s.desc}</p>
                 <Link to={s.link} className="text-accent font-bold inline-flex items-center gap-2 hover:gap-3 transition-all">Mehr erfahren <ArrowRight className="w-4 h-4"/></Link>
               </div>
@@ -223,8 +223,13 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="text-center">
-            <Link to={ROUTE_PATHS.HEBAMMENPRAXIS} className="inline-block bg-accent text-white px-8 py-3 rounded-xl font-bold hover:bg-accent/90 transition-all shadow-md">Hebammenpraxis ansehen</Link>
+          <div className="text-center px-4">
+            <Link 
+              to={ROUTE_PATHS.HEBAMMENPRAXIS} 
+              className="inline-flex w-full sm:w-auto justify-center bg-accent text-white px-6 sm:px-8 py-3.5 rounded-xl font-bold hover:bg-accent/90 transition-all shadow-md text-sm sm:text-base"
+            >
+              Hebammenpraxis ansehen
+            </Link>
           </div>
         </div>
       </section>

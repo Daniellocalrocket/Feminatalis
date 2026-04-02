@@ -336,7 +336,7 @@ export function Layout({ children }: LayoutProps) {
                 <li className="flex justify-between"><span>Fr:</span> <span>11:00–14:00</span></li>
               </ul>
               <div className="pt-4">
-                <Link to="#" className="text-xs hover:text-primary transition-colors">Impressum</Link> / 
+                <Link to={ROUTE_PATHS.IMPRESSUM} className="text-xs hover:text-primary transition-colors">Impressum</Link> / 
                 <Link to="#" className="text-xs hover:text-primary transition-colors"> Datenschutz</Link>
               </div>
             </div>

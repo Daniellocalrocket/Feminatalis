@@ -40,6 +40,7 @@ import Beschwerden from "@/pages/hebammenpraxis/Beschwerden";
 import Mikronaehrstoffe from "@/pages/hebammenpraxis/Mikronaehrstoffe";
 import CosMedea from "@/pages/CosMedea";
 import Vorqualifizierung from "@/pages/Vorqualifizierung";
+import Impressum from "@/pages/Impressum";
 
 // Admin Pages
 import AdminLogin from "@/pages/admin/Login";
@@ -199,6 +200,10 @@ const App = () => {
               <Route 
                 path={ROUTE_PATHS.VORQUALIFIZIERUNG} 
                 element={<Vorqualifizierung />} 
+              />
+              <Route 
+                path={ROUTE_PATHS.IMPRESSUM} 
+                element={<Impressum />} 
               />
               
               {/* Admin Routes */}
