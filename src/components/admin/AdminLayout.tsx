@@ -23,6 +23,24 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
   const location = useLocation();
   const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(true);
+  const [isAuthChecking, setIsAuthChecking] = React.useState(true);
+
+  React.useEffect(() => {
+    const checkAuth = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) {
+        toast.error("Bitte melden Sie sich an, um diesen Bereich zu sehen");
+        navigate("/admin/login");
+      } else {
+        setIsAuthChecking(false);
+      }
+    };
+    checkAuth();
+  }, [navigate]);
+
+  if (isAuthChecking) {
+    return <div className="min-h-screen bg-[#fff9f2] flex items-center justify-center p-4"><div className="animate-spin w-8 h-8 border-4 border-primary border-t-transparent rounded-full" /></div>;
+  }
 
   const navigation = [
     { name: "Dashboard", href: "/admin", icon: LayoutDashboard },
