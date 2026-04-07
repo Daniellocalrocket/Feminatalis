@@ -29,6 +29,13 @@ import {
   DropdownMenuItem, 
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu";
+import { 
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -39,6 +46,7 @@ export default function AdminLeads() {
   const [leads, setLeads] = useState<any[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedLead, setSelectedLead] = useState<any | null>(null);
 
   useEffect(() => {
     fetchLeads();
@@ -79,23 +87,30 @@ export default function AdminLeads() {
     const headers = [
       "Datum", "Vorname", "Nachname", "E-Mail", "Telefon", 
       "PLZ", "Versicherung", "Bereiche", "Dringlichkeit", 
-      "Info", "Status"
+      "Info", "Situation", "Motivation", "Erfahrung", "Individualitaet", "Eigenverantwortung", "Investition", "RealityCheck", "Status"
     ];
 
     const csvRows = [
       headers.join(";"), // Header row
       ...leads.map(lead => [
         new Date(lead.created_at).toLocaleDateString("de-DE"),
-        lead.first_name,
-        lead.last_name,
-        lead.email,
-        lead.phone,
-        lead.zip_code,
-        lead.insurance,
-        lead.areas.join(", "),
-        lead.urgency,
+        lead.first_name || "",
+        lead.last_name || "",
+        lead.email || "",
+        lead.phone || "",
+        lead.zip_code || "",
+        lead.insurance || "",
+        (lead.areas || []).join(", "),
+        lead.urgency || "",
         (lead.additional_info || "").replace(/;/g, ",").replace(/\n/g, " "),
-        lead.status
+        lead.mindset_situation || "",
+        lead.mindset_motivation || "",
+        lead.mindset_experience || "",
+        lead.mindset_individuality || "",
+        lead.mindset_responsibility || "",
+        lead.mindset_investment || "",
+        lead.mindset_reality || "",
+        lead.status || ""
       ].join(";"))
     ];
 
@@ -220,7 +235,10 @@ export default function AdminLeads() {
                           </Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="end" className="rounded-2xl border-primary/5 shadow-2xl p-2 min-w-[200px]">
-                          <DropdownMenuItem className="rounded-xl flex gap-3 py-3 px-4 cursor-pointer" onClick={() => toast.info("Detailansicht folgt")}>
+                          <DropdownMenuItem 
+                            className="rounded-xl flex gap-3 py-3 px-4 cursor-pointer" 
+                            onClick={() => setSelectedLead(lead)}
+                          >
                             <Eye size={18} className="text-primary/40" /> Details ansehen
                           </DropdownMenuItem>
                           <DropdownMenuItem className="rounded-xl flex gap-3 py-3 px-4 cursor-pointer text-green-600 focus:text-green-600" onClick={() => updateStatus(lead.id, 'bestätigt')}>
@@ -250,6 +268,79 @@ export default function AdminLeads() {
            </div>
            <p className="text-xs font-bold text-primary uppercase tracking-[0.2em]">Gesamt: {leads.length} Einträge</p>
         </div>
+
+        {/* Detail Modal */}
+        {selectedLead && (
+          <Dialog open={!!selectedLead} onOpenChange={(open) => !open && setSelectedLead(null)}>
+            <DialogContent className="max-w-2xl max-h-[85vh] overflow-y-auto rounded-[2rem]">
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-serif text-primary">Lead Details</DialogTitle>
+                <DialogDescription>
+                  Erfasst am {formatDate(selectedLead.created_at)}
+                </DialogDescription>
+              </DialogHeader>
+
+              <div className="space-y-6 mt-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <p className="text-xs font-bold text-muted-foreground uppercase">Name</p>
+                    <p className="text-primary">{selectedLead.first_name} {selectedLead.last_name}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-muted-foreground uppercase">Kontakt</p>
+                    <p className="text-primary">{selectedLead.email}</p>
+                    <p className="text-primary">{selectedLead.phone}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-muted-foreground uppercase">PLZ</p>
+                    <p className="text-primary">{selectedLead.zip_code}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-muted-foreground uppercase">Versicherung</p>
+                    <p className="text-primary">{selectedLead.insurance}</p>
+                  </div>
+                </div>
+
+                <div className="border-t border-b border-primary/5 py-4 my-4">
+                  <p className="text-xs font-bold text-muted-foreground uppercase mb-2">Schwerpunkte</p>
+                  <div className="flex flex-wrap gap-2">
+                    {(selectedLead.areas || []).map((area: string) => (
+                      <Badge key={area} variant="outline" className="text-primary capitalize">{area}</Badge>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="bg-orange-50/50 p-6 rounded-2xl border border-primary/5 space-y-4">
+                  <h4 className="font-serif text-lg text-primary mb-2">Mindset & Motivation</h4>
+                  
+                  {[
+                    { label: "1. Aktuelle Situation", value: selectedLead.mindset_situation },
+                    { label: "2. Motivation", value: selectedLead.mindset_motivation },
+                    { label: "3. Erfahrung", value: selectedLead.mindset_experience },
+                    { label: "4. Individualität", value: selectedLead.mindset_individuality },
+                    { label: "5. Eigenverantwortung", value: selectedLead.mindset_responsibility },
+                    { label: "6. Investition", value: selectedLead.mindset_investment },
+                    { label: "7. Reality-Check", value: selectedLead.mindset_reality }
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex flex-col border-b border-primary/5 pb-2 last:border-0 last:pb-0">
+                       <span className="text-xs text-muted-foreground font-bold">{item.label}</span>
+                       <span className="text-sm font-medium text-primary">Auswahl: {item.value || "-"}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {selectedLead.additional_info && (
+                  <div>
+                    <p className="text-xs font-bold text-muted-foreground uppercase mb-1">Zusätzliche Infos</p>
+                    <p className="p-4 bg-muted/30 rounded-xl text-sm italic border border-primary/5">
+                      "{selectedLead.additional_info}"
+                    </p>
+                  </div>
+                )}
+              </div>
+            </DialogContent>
+          </Dialog>
+        )}
       </div>
     </AdminLayout>
   );
