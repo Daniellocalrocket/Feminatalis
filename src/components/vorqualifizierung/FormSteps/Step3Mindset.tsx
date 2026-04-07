@@ -7,78 +7,86 @@ import { Brain, Target, Activity, Settings2, Hand, PiggyBank, Briefcase } from "
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
-const MINDSET_QUESTIONS = [
-  {
-    id: "mqSituation",
-    icon: Activity,
-    title: "1. Aktuelle Situation",
-    options: [
-      { value: "A", label: "Ich stehe ganz am Anfang (Kinderwunsch/Früh-SS)." },
-      { value: "B", label: "Ich bin mittendrin (Fortgeschrittene SS/Wochenbett)." },
-      { value: "C", label: "Ich habe eine spezifische Herausforderung, die sofortige Klärung braucht." }
-    ]
-  },
-  {
-    id: "mqMotivation",
-    icon: Target,
-    title: "2. Motivation (Tiefe)",
-    options: [
-      { value: "A", label: "Ich suche allgemeine Tipps und Sicherheit für den Alltag." },
-      { value: "B", label: "Ich möchte verstehen, wie mein Körper in dieser Phase funktioniert." },
-      { value: "C", label: "Ich will die tieferen Ursachen angehen und neue Wege abseits des Standards gehen." }
-    ]
-  },
-  {
-    id: "mqExperience",
-    icon: Brain,
-    title: "3. Erfahrungs-Level",
-    options: [
-      { value: "A", label: "Ich verlasse mich bisher primär auf die Standard-Vorsorge." },
-      { value: "B", label: "Ich habe mich schon eingelesen und vereinzelt Dinge ausprobiert." },
-      { value: "C", label: "Ich habe bereits eigene Diagnostik/Therapien hinter mir und bin informiert." }
-    ]
-  },
-  {
-    id: "mqIndividuality",
-    icon: Settings2,
-    title: "4. Der Hauptfilter (Individualität)",
-    options: [
-      { value: "A", label: "Ich fühle mich mit allgemeinen, bewährten Empfehlungen am wohlsten." },
-      { value: "B", label: "Ich suche eine Mischung aus Standard und individuellen Ansätzen." },
-      { value: "C", label: "Ich möchte eine absolut individuelle Begleitung, die nur auf meinen Körper schaut." }
-    ]
-  },
-  {
-    id: "mqResponsibility",
-    icon: Hand,
-    title: "5. Eigenverantwortung",
-    options: [
-      { value: "A", label: "Ich möchte mich erst einmal unverbindlich informieren." },
-      { value: "B", label: "Ich bin bereit für Veränderungen, brauche aber viel Anleitung." },
-      { value: "C", label: "Ich bin bereit, aktiv und konsequent Dinge im Alltag umzusetzen." }
-    ]
-  },
-  {
-    id: "mqInvestment",
-    icon: PiggyBank,
-    title: "6. Investitions-Mindset",
-    options: [
-      { value: "A", label: "Die Begleitung sollte sich strikt im Rahmen der Kassenleistungen bewegen." },
-      { value: "B", label: "Ich bin bereit für sinnvolle Ergänzungen, sofern der Nutzen klar ist." },
-      { value: "C", label: "Ich investiere bewusst in meine Gesundheit über den Kassenstandard hinaus." }
-    ]
-  },
-  {
-    id: "mqReality",
-    icon: Briefcase,
-    title: "7. Reality-Check (Arbeitsweise)",
-    options: [
-      { value: "A", label: "Ich bin unsicher, ob eine aktive Mitarbeit das Richtige für mich ist." },
-      { value: "B", label: "Das Konzept klingt interessant, ich habe aber noch Fragen zur Umsetzung." },
-      { value: "C", label: "Das ist genau das, was ich suche – ich will die volle Verantwortung übernehmen." }
-    ]
-  }
-];
+const getMindsetQuestions = (areas: string[] = []) => {
+  const isMaternal = areas.includes("hebamme") || areas.includes("kinderwunsch");
+
+  return [
+    {
+      id: "mqSituation",
+      icon: Activity,
+      title: "1. Aktuelle Situation",
+      options: isMaternal ? [
+        { value: "A", label: "Ich stehe ganz am Anfang (Kinderwunsch/Früh-SS)." },
+        { value: "B", label: "Ich bin mittendrin (Fortgeschrittene SS/Wochenbett)." },
+        { value: "C", label: "Ich habe eine spezifische Herausforderung, die sofortige Klärung braucht." }
+      ] : [
+        { value: "A", label: "Ich stehe ganz am Anfang und möchte mich präventiv aufstellen." },
+        { value: "B", label: "Ich bin mittendrin und suche Begleitung für meine aktuellen Themen." },
+        { value: "C", label: "Ich habe eine spezifische Herausforderung, die sofortige Klärung braucht." }
+      ]
+    },
+    {
+      id: "mqMotivation",
+      icon: Target,
+      title: "2. Motivation (Tiefe)",
+      options: [
+        { value: "A", label: "Ich suche allgemeine Tipps und Sicherheit für den Alltag." },
+        { value: "B", label: `Ich möchte verstehen, wie mein Körper ${isMaternal ? 'in dieser Phase ' : ''}funktioniert.` },
+        { value: "C", label: "Ich will die tieferen Ursachen angehen und neue Wege abseits des Standards gehen." }
+      ]
+    },
+    {
+      id: "mqExperience",
+      icon: Brain,
+      title: "3. Erfahrungs-Level",
+      options: [
+        { value: "A", label: `Ich verlasse mich bisher primär auf die ${isMaternal ? 'Standard-Vorsorge' : 'klassische Schulmedizin'}.` },
+        { value: "B", label: "Ich habe mich schon eingelesen und vereinzelt Dinge ausprobiert." },
+        { value: "C", label: "Ich habe bereits eigene Diagnostik/Therapien hinter mir und bin informiert." }
+      ]
+    },
+    {
+      id: "mqIndividuality",
+      icon: Settings2,
+      title: "4. Der Hauptfilter (Individualität)",
+      options: [
+        { value: "A", label: "Ich fühle mich mit allgemeinen, bewährten Empfehlungen am wohlsten." },
+        { value: "B", label: "Ich suche eine Mischung aus Standard und individuellen Ansätzen." },
+        { value: "C", label: "Ich möchte eine absolut individuelle Begleitung, die nur auf meinen Körper schaut." }
+      ]
+    },
+    {
+      id: "mqResponsibility",
+      icon: Hand,
+      title: "5. Eigenverantwortung",
+      options: [
+        { value: "A", label: "Ich möchte mich erst einmal unverbindlich informieren." },
+        { value: "B", label: "Ich bin bereit für Veränderungen, brauche aber viel Anleitung." },
+        { value: "C", label: "Ich bin bereit, aktiv und konsequent Dinge im Alltag umzusetzen." }
+      ]
+    },
+    {
+      id: "mqInvestment",
+      icon: PiggyBank,
+      title: "6. Investitions-Mindset",
+      options: [
+        { value: "A", label: "Die Begleitung sollte sich strikt im Rahmen der Kassenleistungen bewegen." },
+        { value: "B", label: "Ich bin bereit für sinnvolle Ergänzungen, sofern der Nutzen klar ist." },
+        { value: "C", label: "Ich investiere bewusst in meine Gesundheit über den Kassenstandard hinaus." }
+      ]
+    },
+    {
+      id: "mqReality",
+      icon: Briefcase,
+      title: "7. Reality-Check (Arbeitsweise)",
+      options: [
+        { value: "A", label: "Ich bin unsicher, ob eine aktive Mitarbeit das Richtige für mich ist." },
+        { value: "B", label: "Das Konzept klingt interessant, ich habe aber noch Fragen zur Umsetzung." },
+        { value: "C", label: "Das ist genau das, was ich suche – ich will die volle Verantwortung übernehmen." }
+      ]
+    }
+  ];
+};
 
 interface Step3MindsetProps {
   activeIndex: number;
@@ -86,7 +94,9 @@ interface Step3MindsetProps {
 
 export default function Step3Mindset({ activeIndex }: Step3MindsetProps) {
   const { watch, setValue, formState: { errors } } = useFormContext<VorqualifizierungData>();
-  const question = MINDSET_QUESTIONS[activeIndex];
+  const areas = watch("areas") || [];
+  const mindsetQuestions = getMindsetQuestions(areas);
+  const question = mindsetQuestions[activeIndex];
 
   if (!question) return null;
 

@@ -2,34 +2,16 @@ import React from "react";
 import SEO from "@/components/SEO";
 import VorqualifizierungForm from "@/components/vorqualifizierung/VorqualifizierungForm";
 import { motion } from "framer-motion";
-import { Heart } from "lucide-react";
 
 export default function Vorqualifizierung() {
   return (
-    <div className="bg-[#fff9f2] min-h-screen pt-32 pb-24">
+    <div className="bg-[#fff9f2] min-h-screen pt-24 pb-24">
       <SEO 
         title="Persönliche Vorqualifizierung" 
         description="Lernen wir uns kennen. Erzählen Sie mir kurz, womit ich Ihnen helfen darf, damit ich mich optimal auf unser Erstgespräch vorbereiten kann." 
       />
       
       <div className="container mx-auto px-4 max-w-5xl">
-        <motion.div 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16 space-y-6"
-        >
-          <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 px-5 py-2 rounded-full text-xs font-black uppercase tracking-[0.2em] shadow-sm">
-             <Heart className="w-4 h-4 fill-current" /> Vorqualifizierung
-          </div>
-          <h1 className="text-5xl lg:text-7xl font-serif text-primary leading-[1.1]">
-            Lernen wir <br />
-            <span className="text-orange-600">uns kennen</span>
-          </h1>
-          <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            Erzählen Sie mir kurz, womit ich Ihnen helfen darf. Ich melde mich persönlich bei Ihnen zurück.
-          </p>
-        </motion.div>
-
         <motion.div
            initial={{ opacity: 0, y: 30 }}
            animate={{ opacity: 1, y: 0 }}
