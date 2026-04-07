@@ -41,6 +41,43 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
 import { formatDate } from "@/lib/index";
+import { Progress } from "@/components/ui/progress";
+
+const calculateScore = (lead: any) => {
+  const values = [
+    lead.mindset_situation,
+    lead.mindset_motivation,
+    lead.mindset_experience,
+    lead.mindset_individuality,
+    lead.mindset_responsibility,
+    lead.mindset_investment,
+    lead.mindset_reality
+  ];
+  let points = 0;
+  let answered = 0;
+  values.forEach(v => {
+    if (v === 'A') { points += 1; answered++; }
+    else if (v === 'B') { points += 2; answered++; }
+    else if (v === 'C') { points += 3; answered++; }
+  });
+  
+  if (answered === 0) return null;
+  return Math.round((points / (answered * 3)) * 100);
+};
+
+const getScoreColor = (score: number | null) => {
+  if (score === null) return "bg-slate-100 text-slate-500";
+  if (score >= 80) return "bg-green-100 text-green-700 border-green-200";
+  if (score >= 55) return "bg-orange-100 text-orange-700 border-orange-200";
+  return "bg-red-100 text-red-700 border-red-200";
+};
+
+const getScoreStars = (value: string) => {
+  if (value === 'A') return "⭐";
+  if (value === 'B') return "⭐⭐";
+  if (value === 'C') return "⭐⭐⭐";
+  return "-";
+};
 
 export default function AdminLeads() {
   const [leads, setLeads] = useState<any[]>([]);
@@ -170,6 +207,7 @@ export default function AdminLeads() {
                 <TableHead className="font-bold text-primary py-6 px-8">Client</TableHead>
                 <TableHead className="font-bold text-primary">Datum</TableHead>
                 <TableHead className="font-bold text-primary">Schwerpunkt</TableHead>
+                <TableHead className="font-bold text-primary">Match</TableHead>
                 <TableHead className="font-bold text-primary">Status</TableHead>
                 <TableHead className="font-bold text-primary text-right px-8">Aktion</TableHead>
               </TableRow>
@@ -177,7 +215,7 @@ export default function AdminLeads() {
             <TableBody>
               {isLoading ? (
                 <TableRow>
-                  <TableCell colSpan={5} className="h-64 text-center">
+                  <TableCell colSpan={6} className="h-64 text-center">
                     <div className="flex flex-col items-center gap-4 text-muted-foreground">
                       <Clock className="w-8 h-8 animate-spin opacity-20" />
                       Wird geladen...
@@ -186,7 +224,7 @@ export default function AdminLeads() {
                 </TableRow>
               ) : filteredLeads.length === 0 ? (
                 <TableRow>
-                  <TableCell colSpan={5} className="h-64 text-center text-muted-foreground">
+                  <TableCell colSpan={6} className="h-64 text-center text-muted-foreground">
                     Keine Anfragen gefunden.
                   </TableCell>
                 </TableRow>
@@ -215,6 +253,15 @@ export default function AdminLeads() {
                           </Badge>
                         ))}
                       </div>
+                    </TableCell>
+                    <TableCell>
+                      {calculateScore(lead) !== null ? (
+                        <Badge variant="outline" className={cn("font-black tracking-widest text-[10px]", getScoreColor(calculateScore(lead)))}>
+                           {calculateScore(lead)}%
+                        </Badge>
+                      ) : (
+                        <span className="text-xs text-muted-foreground">-</span>
+                      )}
                     </TableCell>
                     <TableCell>
                       <Badge className={cn(
@@ -274,10 +321,20 @@ export default function AdminLeads() {
           <Dialog open={!!selectedLead} onOpenChange={(open) => !open && setSelectedLead(null)}>
             <DialogContent className="max-w-2xl max-h-[85vh] overflow-y-auto rounded-[2rem]">
               <DialogHeader>
-                <DialogTitle className="text-2xl font-serif text-primary">Lead Details</DialogTitle>
-                <DialogDescription>
-                  Erfasst am {formatDate(selectedLead.created_at)}
-                </DialogDescription>
+                <div className="flex justify-between items-start">
+                  <div>
+                    <DialogTitle className="text-2xl font-serif text-primary">Lead Details</DialogTitle>
+                    <DialogDescription>
+                      Erfasst am {formatDate(selectedLead.created_at)}
+                    </DialogDescription>
+                  </div>
+                  {calculateScore(selectedLead) !== null && (
+                    <div className={cn("px-4 py-2 rounded-2xl flex flex-col items-center border", getScoreColor(calculateScore(selectedLead)))}>
+                      <span className="text-[10px] uppercase tracking-widest font-bold opacity-70">Match-Score</span>
+                      <span className="text-2xl font-bold">{calculateScore(selectedLead)}%</span>
+                    </div>
+                  )}
+                </div>
               </DialogHeader>
 
               <div className="space-y-6 mt-4">
@@ -323,8 +380,11 @@ export default function AdminLeads() {
                     { label: "7. Reality-Check", value: selectedLead.mindset_reality }
                   ].map((item, idx) => (
                     <div key={idx} className="flex flex-col border-b border-primary/5 pb-2 last:border-0 last:pb-0">
-                       <span className="text-xs text-muted-foreground font-bold">{item.label}</span>
-                       <span className="text-sm font-medium text-primary">Auswahl: {item.value || "-"}</span>
+                       <div className="flex justify-between items-center mb-1">
+                         <span className="text-xs text-muted-foreground font-bold">{item.label}</span>
+                         <span className="text-xs">{item.value ? getScoreStars(item.value) : ""}</span>
+                       </div>
+                       <span className="text-sm font-medium text-primary">Auswahl: {item.value || "Nicht beantwortet"} {item.value === 'C' ? '(Premium)' : item.value === 'B' ? '(Interessiert)' : item.value === 'A' ? '(Standard)' : ''}</span>
                     </div>
                   ))}
                 </div>
