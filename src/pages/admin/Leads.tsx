@@ -205,10 +205,11 @@ export default function AdminLeads() {
                       <Badge className={cn(
                         "rounded-full px-3 py-1 text-[10px] uppercase tracking-wider font-black",
                         lead.status === 'neu' ? "bg-accent text-white" : 
+                        lead.status === 'bestätigt' ? "bg-green-600 text-white" :
                         lead.status === 'kontaktiert' ? "bg-blue-500 text-white" :
-                        "bg-green-500 text-white"
+                        "bg-slate-500 text-white"
                       )}>
-                        {lead.status}
+                        {lead.status === 'bestätigt' ? "Bestätigt" : lead.status}
                       </Badge>
                     </TableCell>
                     <TableCell className="text-right px-8">
@@ -218,15 +219,18 @@ export default function AdminLeads() {
                             <MoreHorizontal className="h-5 w-5" />
                           </Button>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent align="end" className="rounded-2xl border-primary/5 shadow-2xl p-2 min-w-[180px]">
+                        <DropdownMenuContent align="end" className="rounded-2xl border-primary/5 shadow-2xl p-2 min-w-[200px]">
                           <DropdownMenuItem className="rounded-xl flex gap-3 py-3 px-4 cursor-pointer" onClick={() => toast.info("Detailansicht folgt")}>
                             <Eye size={18} className="text-primary/40" /> Details ansehen
+                          </DropdownMenuItem>
+                          <DropdownMenuItem className="rounded-xl flex gap-3 py-3 px-4 cursor-pointer text-green-600 focus:text-green-600" onClick={() => updateStatus(lead.id, 'bestätigt')}>
+                             <CheckCircle size={18} /> Bestätigen
                           </DropdownMenuItem>
                           <DropdownMenuItem className="rounded-xl flex gap-3 py-3 px-4 cursor-pointer" onClick={() => updateStatus(lead.id, 'kontaktiert')}>
                             <Clock size={18} className="text-blue-500" /> Auf 'Kontaktiert'
                           </DropdownMenuItem>
                           <DropdownMenuItem className="rounded-xl flex gap-3 py-3 px-4 cursor-pointer" onClick={() => updateStatus(lead.id, 'abgeschlossen')}>
-                            <CheckCircle size={18} className="text-green-500" /> Auf 'Erledigt'
+                            <CheckCircle size={18} className="text-slate-500" /> Auf 'Erledigt'
                           </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>

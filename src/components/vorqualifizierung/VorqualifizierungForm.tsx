@@ -13,14 +13,16 @@ import { supabase } from "@/integrations/supabase/client";
 // Form steps components will be imported or defined here
 import Step1Area from "./FormSteps/Step1Area";
 import Step2Contact from "./FormSteps/Step2Contact";
-import Step3Details from "./FormSteps/Step3Details";
-import Step4Final from "./FormSteps/Step4Final";
+import Step3Mindset from "./FormSteps/Step3Mindset";
+import Step4Details from "./FormSteps/Step4Details";
+import Step5Final from "./FormSteps/Step5Final";
 
 const STEPS = [
   { id: 1, title: "Schwerpunkt", subtitle: "Wählen Sie Ihren Schwerpunkt" },
   { id: 2, title: "Kontakt", subtitle: "Wie kann ich Sie erreichen?" },
-  { id: 3, title: "Details", subtitle: "Ein paar weitere Details" },
-  { id: 4, title: "Abschluss", subtitle: "Fast geschafft!" },
+  { id: 3, title: "Ihre Situation", subtitle: "Kurze Selbsteinschätzung" },
+  { id: 4, title: "Details", subtitle: "Ein paar weitere Details" },
+  { id: 5, title: "Abschluss", subtitle: "Fast geschafft!" },
 ];
 
 export default function VorqualifizierungForm() {
@@ -40,8 +42,9 @@ export default function VorqualifizierungForm() {
     let fieldsToValidate: any = [];
     if (currentStep === 1) fieldsToValidate = ["areas"];
     if (currentStep === 2) fieldsToValidate = ["firstName", "lastName", "email", "phone", "zipCode", "insurance"];
-    if (currentStep === 3) fieldsToValidate = ["urgency"]; // Partial validation for step 3
-    if (currentStep === 4) fieldsToValidate = ["dataConsent"];
+    if (currentStep === 3) fieldsToValidate = ["mqSituation", "mqMotivation", "mqExperience", "mqIndividuality", "mqResponsibility", "mqInvestment", "mqReality"];
+    if (currentStep === 4) fieldsToValidate = ["urgency"]; // Partial validation for step 4
+    if (currentStep === 5) fieldsToValidate = ["dataConsent"];
 
     const isStepValid = await trigger(fieldsToValidate);
     
@@ -77,6 +80,13 @@ export default function VorqualifizierungForm() {
           areas: data.areas,
           urgency: data.urgency,
           additional_info: data.additionalInfo,
+          mindset_situation: data.mqSituation,
+          mindset_motivation: data.mqMotivation,
+          mindset_experience: data.mqExperience,
+          mindset_individuality: data.mqIndividuality,
+          mindset_responsibility: data.mqResponsibility,
+          mindset_investment: data.mqInvestment,
+          mindset_reality: data.mqReality,
         }
       ]);
 
@@ -145,8 +155,9 @@ export default function VorqualifizierungForm() {
             >
               {currentStep === 1 && <Step1Area />}
               {currentStep === 2 && <Step2Contact />}
-              {currentStep === 3 && <Step3Details />}
-              {currentStep === 4 && <Step4Final />}
+              {currentStep === 3 && <Step3Mindset />}
+              {currentStep === 4 && <Step4Details />}
+              {currentStep === 5 && <Step5Final />}
             </motion.div>
           </AnimatePresence>
 

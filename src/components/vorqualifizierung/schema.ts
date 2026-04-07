@@ -36,7 +36,16 @@ export const vorqualifizierungSchema = z.object({
     required_error: "Bitte wählen Sie Ihre Versicherungssituation aus.",
   }),
 
-  // Schritt 3 (Bedingte Felder)
+  // Schritt 3: Mindset
+  mqSituation: z.enum(["A", "B", "C"], { required_error: "Bitte wählen Sie eine Option aus." }),
+  mqMotivation: z.enum(["A", "B", "C"], { required_error: "Bitte wählen Sie eine Option aus." }),
+  mqExperience: z.enum(["A", "B", "C"], { required_error: "Bitte wählen Sie eine Option aus." }),
+  mqIndividuality: z.enum(["A", "B", "C"], { required_error: "Bitte wählen Sie eine Option aus." }),
+  mqResponsibility: z.enum(["A", "B", "C"], { required_error: "Bitte wählen Sie eine Option aus." }),
+  mqInvestment: z.enum(["A", "B", "C"], { required_error: "Bitte wählen Sie eine Option aus." }),
+  mqReality: z.enum(["A", "B", "C"], { required_error: "Bitte wählen Sie eine Option aus." }),
+
+  // Schritt 4 (Bedingte Felder)
   urgency: z.string().min(1, "Bitte wählen Sie die Dringlichkeit aus."),
   
   // Hebammenpraxis spezifisch
@@ -51,7 +60,7 @@ export const vorqualifizierungSchema = z.object({
   complaintType: z.string().optional(),
   mainConcern: z.string().max(200, "Maximal 200 Zeichen").optional(),
 
-  // Schritt 4
+  // Schritt 5
   additionalInfo: z.string().max(500, "Maximal 500 Zeichen").optional(),
   dataConsent: z.boolean().refine(val => val === true, {
     message: "Sie müssen der Datenschutzerklärung zustimmen.",
