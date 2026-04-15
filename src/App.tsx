@@ -21,7 +21,6 @@ import Labor from "@/pages/naturheilpraxis/Labor";
 import LongCovid from "@/pages/naturheilpraxis/LongCovid";
 import Infusionstherapie from "@/pages/naturheilpraxis/Infusionstherapie";
 import CO2Therapie from "@/pages/naturheilpraxis/CO2Therapie";
-import OzonTherapie from "@/pages/naturheilpraxis/OzonTherapie";
 import Darmsanierung from "@/pages/naturheilpraxis/Darmsanierung";
 import Hormontherapie from "@/pages/naturheilpraxis/Hormontherapie";
 import Schwermetall from "@/pages/naturheilpraxis/Schwermetall";
@@ -47,6 +46,8 @@ import AdminLogin from "@/pages/admin/Login";
 import AdminDashboard from "@/pages/admin/Dashboard";
 import AdminLeads from "@/pages/admin/Leads";
 import AdminEvents from "@/pages/admin/Events";
+import AdminBlog from "@/pages/admin/Blog";
+import AdminSettings from "@/pages/admin/Settings";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -122,10 +123,6 @@ const App = () => {
               <Route 
                 path={ROUTE_PATHS.CO2_THERAPIE} 
                 element={<CO2Therapie />} 
-              />
-              <Route 
-                path={ROUTE_PATHS.OZON_THERAPIE} 
-                element={<OzonTherapie />} 
               />
               <Route 
                 path={ROUTE_PATHS.DARMANALYSE} 
@@ -222,6 +219,14 @@ const App = () => {
               <Route 
                 path={ROUTE_PATHS.ADMIN_EVENTS} 
                 element={<AdminEvents />} 
+              />
+              <Route 
+                path={ROUTE_PATHS.ADMIN_BLOG} 
+                element={<AdminBlog />} 
+              />
+              <Route 
+                path={ROUTE_PATHS.ADMIN_SETTINGS} 
+                element={<AdminSettings />} 
               />
               {/* Fallback route - Redirecting to Home as no specific NotFound was provided */}
               <Route 

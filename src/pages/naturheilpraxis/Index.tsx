@@ -2,118 +2,178 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
-import { Stethoscope, Droplet, Wind, Brain, Activity, ShieldCheck, Flame, Zap, ArrowRight, HeartPulse, Sparkles } from "lucide-react";
+import { Stethoscope, Droplet, Wind, Brain, Activity, Flame, Zap, ArrowRight, HeartPulse, Sparkles, Microscope, FlaskConical, Thermometer } from "lucide-react";
 
 export default function Naturheilpraxis() {
-  const leistungen = [
-    { icon: <Activity className="w-6 h-6 text-primary" />, title: "Labor & Diagnostik", desc: "Tiefgehende Blutanalyse (30+ Parameter), Hormonstatus und Nährstoff-Screening.", path: ROUTE_PATHS.LABOR },
-    { icon: <Droplet className="w-6 h-6 text-primary" />, title: "Infusionstherapie", desc: "Hochdosierte Vitamine, Mineralien und Energie-Boost - direkt dorthin, wo es fehlt.", path: ROUTE_PATHS.INFUSIONSTHERAPIE },
-    { icon: <ShieldCheck className="w-6 h-6 text-primary" />, title: "Allergiebehandlung", desc: "Ursächliche Behandlung durch Desensibilisierung und nachhaltige Immunmodulation.", path: ROUTE_PATHS.ALLERGIE },
-    { icon: <Flame className="w-6 h-6 text-primary" />, title: "TCM & Akupunktur", desc: "Traditionelle Chinesische Medizin, Kräuterheilkunde und Moxibustion.", path: ROUTE_PATHS.TCM },
-    { icon: <Brain className="w-6 h-6 text-primary" />, title: "brainLight Massage", desc: "Tiefenentspannung durch Shiatsu-Massage, Lichttherapie und Klangfrequenzen.", path: ROUTE_PATHS.BRAINLIGHT },
-    { icon: <Wind className="w-6 h-6 text-primary" />, title: "Mitochondrien-Therapie", desc: "IHHT-Sauerstofftherapie und Regeneration der zellulären Kraftwerke.", path: ROUTE_PATHS.MITOCHONDRIEN },
-    { icon: <Stethoscope className="w-6 h-6 text-primary" />, title: "Long-Covid Hilfe", desc: "Strukturierter Aufbau bei post-viraler Erschöpfung und Konzentrationsstörungen.", path: ROUTE_PATHS.LONG_COVID },
-    { icon: <Zap className="w-6 h-6 text-primary" />, title: "Zelltraining (IHHT)", desc: "Innovatives Training zur Verbesserung der Zellfunktion und ATP-Produktion.", path: ROUTE_PATHS.ZELLTRAINING }
+  const diagnostik = [
+    { title: "Funktionelle Labordiagnostik", desc: "Vollblut-Analysen, Hormonstatus, Mikrobiom & Stoffwechsel.", path: ROUTE_PATHS.LABOR, icon: <Microscope className="w-8 h-8" /> },
+    { title: "Metavital Diagnostik", desc: "Biophysikalische Systemanalyse deiner Körperfunktionen.", path: ROUTE_PATHS.ALLERGIE, icon: <Activity className="w-8 h-8" /> },
+    { title: "Schwermetall-Checks", desc: "Ursachenforschung bei chronischen Blockaden durch Toxine.", path: ROUTE_PATHS.LABOR, icon: <FlaskConical className="w-8 h-8" /> }
   ];
 
-  const weitereLeistungen = [
-    { title: "Klassische Homöopathie", desc: "Ganzheitliche Behandlung akuter und chronischer Beschwerden.", path: ROUTE_PATHS.HOMOEOPATHIE },
-    { title: "Blutegeltherapie", desc: "Bei Entzündungen, Durchblutungsstörungen und venösen Problemen.", path: ROUTE_PATHS.BLUTEGEL },
-    { title: "Medizinische Lasertherapie", desc: "Schmerzlinderung und Regeneration mit Licht.", path: ROUTE_PATHS.LASERTHERAPIE },
-    { title: "Hormontherapie", desc: "Ausgleich hormoneller Dysbalancen durch natürliche Methoden.", path: ROUTE_PATHS.HORMONTHERAPIE }
+  const therapien = [
+    { title: "Infusionstherapie", desc: "Direkte Nährstoffflutung für maximale Zell-Energie.", path: ROUTE_PATHS.INFUSIONSTHERAPIE, icon: <Droplet className="w-6 h-6" /> },
+    { title: "IHHT Zelltraining", desc: "Simulation von Höhentraining zur Regeneration der Mitochondrien.", path: ROUTE_PATHS.ZELLTRAINING, icon: <Wind className="w-6 h-6" /> },
+    { title: "Hämo-Laser-Therapie", desc: "Systemische Blutbestrahlung zur Aktivierung des Stoffwechsels.", path: ROUTE_PATHS.LASERTHERAPIE, icon: <Zap className="w-6 h-6" /> },
+    { title: "TCM & Akupunktur", desc: "Ganzheitliche Regulation nach der Lehre der 5 Elemente.", path: ROUTE_PATHS.TCM, icon: <Flame className="w-6 h-6" /> },
+    { title: "Homöopathie", desc: "Sanfte Informationsmedizin zur Selbstheilungsaktivierung.", path: ROUTE_PATHS.HOMOEOPATHIE, icon: <Sparkles className="w-6 h-6" /> },
+    { title: "Blutegeltherapie", desc: "Biochemische Wirkung des Egelspeichels bei Entzündungen.", path: ROUTE_PATHS.BLUTEGEL, icon: <Thermometer className="w-6 h-6" /> }
   ];
 
   return (
-    <div className="bg-background min-h-screen">
+    <div className="bg-background min-h-screen font-sans">
       <SEO 
-        title="Ganzheitliche Naturheilpraxis | Ursachenforschung & Therapie | feminatalis" 
-        description="Ihre Naturheilpraxis für Labor & Diagnostik, Infusionstherapie und mitochondriale Medizin in Bad Schönborn. Wir finden die wahre Ursache Ihrer Beschwerden." 
+        title="Naturheilpraxis | Funktionelle Medizin & Diagnostik | feminatalis" 
+        description="Ganzheitliche Therapieansätze in Bad Schönborn. Wir finden die Ursache deiner Beschwerden durch tiefgreifende Diagnostik und modernste Naturheilkunde." 
       />
 
       {/* Hero */}
-      <section className="pt-32 pb-20">
-        <div className="container mx-auto px-4 text-center max-w-4xl">
-          <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-6 inline-block uppercase tracking-wider">Ursachenbasierte Naturheilkunde</span>
-          <h1 className="text-4xl lg:text-6xl font-serif text-primary mb-8 leading-tight">
-            Wir behandeln nicht nur Symptome.<br /> Wir finden die Ursache.
+      <section className="pt-32 pb-20 bg-muted/20 text-center">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 uppercase tracking-wider">
+            Ursachenbasierte Medizin
+          </div>
+          <h1 className="text-4xl md:text-7xl font-serif text-primary mb-8 leading-[1.1]">
+            Nicht nur Symptome lindern. <span className="text-accent italic font-light">Die Ursache heilen.</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-10">
-            Die klassische Medizin stößt oft an ihre Grenzen, wenn Laborwerte "noch im Rahmen" sind, Sie sich aber trotzdem erschöpft fühlen. In der Naturheilpraxis feminatalis setzen wir auf tiefgreifende Diagnostik und ressourcenorientierte Behandlungen.
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto italic text-center font-medium mb-12">
+            In der Naturheilpraxis feminatalis betrachten wir deinen Körper als komplexes System. Wir messen, statt zu raten, und unterstützen deine Zellen dabei, wieder in ihre volle Kraft zu kommen.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-             <Link to={ROUTE_PATHS.CONTACT} className="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary/90 transition-all shadow-lg active:scale-95 flex items-center gap-2">Termin online buchen</Link>
-             <Link to={ROUTE_PATHS.LABOR} className="bg-white text-primary border border-primary px-8 py-4 rounded-xl font-bold hover:bg-muted transition-all">Labor & Diagnostik</Link>
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
+             <Link to={ROUTE_PATHS.CONTACT} className="inline-flex bg-primary text-white px-12 py-5 rounded-2xl font-bold hover:scale-105 transition-all shadow-2xl flex items-center justify-center gap-3 border-none text-lg">
+                Jetzt Analyse-Termin buchen <ArrowRight className="w-6 h-6" />
+             </Link>
+             <Link to={ROUTE_PATHS.LABOR} className="inline-flex bg-white text-primary border border-border px-12 py-5 rounded-2xl font-bold hover:bg-muted transition-all items-center justify-center text-lg shadow-sm">
+                Labor & Diagnostik
+             </Link>
           </div>
         </div>
       </section>
 
-      {/* Leistungen Grid */}
-      <section className="py-24 bg-card/30 border-y border-border/50">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif text-primary mb-4 leading-tight">Das medizinische Leistungsspektrum</h2>
-            <p className="text-muted-foreground text-lg">Moderne Diagnostik trifft auf traditionelle Heilmethoden.</p>
+      {/* Core Philosophy */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="bg-primary p-12 lg:p-16 rounded-[4rem] border border-border shadow-2xl flex flex-col md:flex-row gap-12 items-center relative overflow-hidden">
+             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/20 via-transparent to-transparent pointer-events-none"></div>
+             <div className="bg-white/10 backdrop-blur-sm w-32 h-32 rounded-[2rem] flex items-center justify-center shrink-0 border border-white/20 relative z-10 hidden sm:flex">
+                <Brain className="text-accent w-16 h-16" />
+             </div>
+             <div className="relative z-10 text-left">
+                <h2 className="text-3xl lg:text-5xl font-serif text-white mb-6 leading-tight">Das Prinzip der kleinsten Einheit</h2>
+                <p className="text-lg text-white/90 leading-relaxed italic font-medium">
+                  "Die Zelle ist die kleinste lebende Einheit deines Körpers. Wenn deine Zellen gesund sind und Energie produzieren können, bist auch du gesund und leistungsfähig. Deshalb setzen wir dort an, wo Gesundheit entsteht."
+                </p>
+             </div>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {leistungen.map((leistung, idx) => (
-              <Link to={leistung.path} key={idx} className="bg-white p-8 rounded-3xl border border-border/60 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                <div className="mb-6 bg-muted/50 w-12 h-12 rounded-full flex items-center justify-center group-hover:bg-accent/10 transition-colors">
-                  {leistung.icon}
+        </div>
+      </section>
+
+      {/* Diagnostik Grid */}
+      <section className="py-24 bg-muted/20">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="mb-20 text-center">
+            <h2 className="text-4xl lg:text-6xl font-serif text-primary mb-6">Phase 1: Exakte Diagnostik</h2>
+            <p className="text-muted-foreground text-xl font-medium max-w-2xl mx-auto italic">Zahlen, Daten und Fakten als absolut notwendiges Fundament jeder tiefgreifenden Therapie.</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 text-left">
+            {diagnostik.map((item, i) => (
+              <Link to={item.path} key={i} className="group bg-white p-10 lg:p-12 rounded-[3.5rem] border border-border hover:border-accent transition-all hover:shadow-2xl flex flex-col justify-between">
+                <div>
+                  <div className="bg-muted/30 w-20 h-20 rounded-2xl flex items-center justify-center mb-10 border border-border group-hover:border-accent/30 transition-colors shadow-sm text-accent">
+                     {item.icon}
+                  </div>
+                  <h3 className="text-2xl font-serif text-primary font-bold mb-4">{item.title}</h3>
+                  <p className="text-muted-foreground text-base leading-relaxed mb-8 font-medium">{item.desc}</p>
                 </div>
-                <h3 className="text-xl font-serif text-primary font-bold mb-3 leading-snug">{leistung.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">{leistung.desc}</p>
-                <span className="text-accent text-xs font-bold uppercase tracking-widest flex items-center gap-1 group-hover:gap-2 transition-all">Mehr erfahren <ArrowRight size={14}/></span>
+                <div className="flex items-center gap-2 text-accent font-bold group-hover:gap-4 transition-all pb-2">
+                   Details untersuchen <ArrowRight size={20} />
+                </div>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Weitere Leistungen */}
-      <section className="py-24 bg-white">
+      {/* Therapien Grid */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="mb-20 text-left md:text-center w-full">
+            <h2 className="text-4xl lg:text-6xl font-serif text-primary mb-6">Phase 2: Behandlungsmethoden</h2>
+            <p className="text-muted-foreground text-xl font-medium max-w-2xl mx-auto italic">Ganzheitliche, hochmoderne Verfahren zur Regulation und Regeneration deiner Zellen.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+            {therapien.map((item, i) => (
+              <Link to={item.path} key={i} className="bg-white p-10 rounded-[3rem] border border-border hover:shadow-xl hover:border-accent group transition-all flex flex-col justify-between items-start h-full">
+                <div className="bg-muted/30 w-16 h-16 rounded-2xl flex items-center justify-center shrink-0 mb-6 group-hover:bg-accent/10 transition-colors">
+                   <div className="text-primary group-hover:scale-110 transition-transform">{item.icon}</div>
+                </div>
+                <div className="flex-1">
+                   <h4 className="text-xl font-serif font-bold text-primary mb-3 text-left">{item.title}</h4>
+                   <p className="text-sm font-medium text-muted-foreground leading-relaxed text-left opacity-90">{item.desc}</p>
+                </div>
+                <div className="mt-8 text-accent opacity-0 group-hover:opacity-100 transition-all flex items-center gap-2 font-bold text-sm">
+                   Mehr erfahren <ArrowRight size={16} />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Specialty Sections */}
+      <section className="py-24 bg-muted/20 border-y border-border text-left">
         <div className="container mx-auto px-4 max-w-6xl">
-           <div className="grid lg:grid-cols-2 gap-16 items-center">
-             <div>
-               <h2 className="text-3xl font-serif text-primary mb-6 leading-tight">Weitere spezialisierte Leistungen</h2>
-               <p className="text-muted-foreground mb-8">Ergänzend zu unseren Schwerpunkten bieten wir bewährte Naturheilverfahren für eine ganzheitliche Genesung an.</p>
-               <div className="space-y-4">
-                 {weitereLeistungen.map((l, i) => (
-                   <Link key={i} to={l.path} className="flex items-center justify-between p-4 bg-background rounded-xl border border-border border-l-4 border-l-accent hover:shadow-md transition-all group">
-                     <div>
-                       <h4 className="font-bold text-primary text-sm mb-0.5">{l.title}</h4>
-                       <p className="text-xs text-muted-foreground">{l.desc}</p>
-                     </div>
-                     <ArrowRight size={16} className="text-accent/40 group-hover:text-accent group-hover:translate-x-1 transition-all" />
-                   </Link>
-                 ))}
-               </div>
-             </div>
-             <div className="grid grid-cols-2 gap-4">
-                <div className="bg-[#fde4c8]/20 p-8 rounded-3xl flex flex-col items-center text-center">
-                  <HeartPulse className="text-accent w-10 h-10 mb-4 opacity-50"/>
-                  <h4 className="font-bold text-primary text-sm mb-2">Präzision</h4>
-                  <p className="text-[10px] opacity-70 italic whitespace-pre-line">"Wir messen, statt nur zu raten."</p>
+           <div className="grid lg:grid-cols-2 gap-16 items-start">
+              <div className="space-y-10 text-left">
+                <div className="text-left">
+                   <h2 className="text-4xl lg:text-5xl font-serif text-primary leading-tight mb-4 text-left">Unsere fokussierten Spezialgebiete</h2>
+                   <p className="text-muted-foreground font-medium text-lg text-left italic">Themen, für die wir wirklich brennen.</p>
                 </div>
-                <div className="bg-[#77252c]/5 p-8 rounded-3xl flex flex-col items-center text-center mt-8">
-                  <Sparkles className="text-primary w-10 h-10 mb-4 opacity-50"/>
-                  <h4 className="font-bold text-primary text-sm mb-2">Ganzheitlichkeit</h4>
-                  <p className="text-[10px] opacity-70 italic whitespace-pre-line">"Körper & Geist als System."</p>
+                <div className="flex flex-col gap-5 text-left">
+                  {[
+                    { title: "Long-Covid & Chronic Fatigue", path: ROUTE_PATHS.LONG_COVID },
+                    { title: "Ganzheitlicher Kinderwunsch", path: ROUTE_PATHS.KINDERWUNSCH },
+                    { title: "Mitochondrien-Medizin", path: ROUTE_PATHS.MITOCHONDRIEN },
+                    { title: "Hormonelle Dysbalancen", path: ROUTE_PATHS.HORMONTHERAPIE }
+                  ].map((spec, i) => (
+                    <Link key={i} to={spec.path} className="flex items-center justify-between p-6 lg:p-8 bg-white rounded-3xl border border-border hover:border-accent hover:shadow-lg transition-all group shadow-sm text-left">
+                       <span className="font-bold text-primary text-xl font-serif">{spec.title}</span>
+                       <ArrowRight className="text-accent opacity-0 group-hover:opacity-100 group-hover:translate-x-3 transition-all w-8 h-8" />
+                    </Link>
+                  ))}
                 </div>
-             </div>
+              </div>
+              
+              <div className="bg-primary text-primary-foreground p-12 lg:p-16 rounded-[4rem] shadow-2xl relative overflow-hidden h-full flex flex-col justify-center text-left">
+                 <div className="absolute top-0 right-0 p-8">
+                   <HeartPulse className="w-48 h-48 text-accent/10 -mr-10 -mt-10" />
+                 </div>
+                 <h3 className="text-3xl lg:text-4xl font-serif font-bold mb-8 relative z-10 leading-tight">Wann ist die Naturheilkunde <br />für dich richtig?</h3>
+                 <p className="text-lg opacity-90 leading-relaxed mb-10 relative z-10 font-medium">
+                    Natürliche Ursachenmedizin ist dann besonders wertvoll, wenn du deine Gesundheit proaktiv in die eigenen Hände nehmen möchtest oder die klassische Medizin absolut keine ausreichende Erklärung für dein chronisches Empfinden findet. Wir arbeiten bewusstein komplementär, also streng wissenschaftlich ergänzend zur Schulmedizin.
+                 </p>
+                 <Link to={ROUTE_PATHS.CONTACT} className="text-accent font-bold flex items-center gap-3 hover:gap-5 transition-all text-xl w-fit relative z-10">
+                    Termin für Erstgespräch anfragen <ArrowRight className="w-6 h-6" />
+                 </Link>
+              </div>
            </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-primary text-white">
+      <section className="py-32 bg-background border-t border-border text-center">
         <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h2 className="text-4xl font-serif mb-6 leading-tight">Gemeinsam zur tiefen Ursache Ihres Wohlbefindens</h2>
-          <p className="text-xl opacity-80 mb-12 leading-relaxed">
-            Ob chronische Erschöpfung, hormonelle Dysbalancen oder akute Allergien – wir nehmen uns Zeit für Ihre Geschichte und entwickeln einen faktenbasierten Behandlungsplan.
+          <Stethoscope className="w-20 h-20 text-primary mx-auto mb-10 opacity-20" />
+          <h2 className="text-4xl lg:text-6xl font-serif text-primary mb-10 leading-tight font-bold text-center">Bist du bereit für deinen <br />ersten aktiven Schritt?</h2>
+          <p className="text-xl text-muted-foreground mb-16 max-w-3xl mx-auto font-medium leading-relaxed text-center">
+            Lass uns gemeinsam detektivisch herausfinden, was dein Körper wirklich vermisst. Buche jetzt dein umfassendes Analysegespräch.
           </p>
-          <Link to={ROUTE_PATHS.CONTACT} className="inline-block bg-accent text-white px-10 py-5 rounded-xl font-bold text-xl hover:bg-accent/90 transition-all shadow-xl active:scale-95">Jetzt Termin online buchen</Link>
+          <div className="flex justify-center">
+             <Link to={ROUTE_PATHS.CONTACT} className="inline-flex bg-primary text-white px-14 py-6 rounded-2xl font-bold text-xl hover:scale-105 transition-all shadow-2xl border-none">Anamnese-Termin anfragen</Link>
+          </div>
         </div>
       </section>
     </div>
   );
 }
+

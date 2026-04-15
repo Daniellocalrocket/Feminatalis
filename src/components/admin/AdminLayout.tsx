@@ -9,9 +9,12 @@ import {
   LogOut, 
   ChevronRight,
   Menu,
-  X
+  X,
+  BookOpen,
+  Settings
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ROUTE_PATHS } from "@/lib/index";
 import { toast } from "sonner";
 
 interface AdminLayoutProps {
@@ -43,9 +46,11 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
   }
 
   const navigation = [
-    { name: "Dashboard", href: "/admin", icon: LayoutDashboard },
-    { name: "Anfragen (Leads)", href: "/admin/leads", icon: Users },
-    { name: "Kurse & Events", href: "/admin/events", icon: Calendar },
+    { name: "Dashboard", href: ROUTE_PATHS.ADMIN_DASHBOARD, icon: LayoutDashboard },
+    { name: "Anfragen (Leads)", href: ROUTE_PATHS.ADMIN_LEADS, icon: Users },
+    { name: "Kurse & Events", href: ROUTE_PATHS.ADMIN_EVENTS, icon: Calendar },
+    { name: "Blogverwaltung", href: ROUTE_PATHS.ADMIN_BLOG, icon: BookOpen },
+    { name: "Einstellungen", href: ROUTE_PATHS.ADMIN_SETTINGS, icon: Settings },
   ];
 
   const handleLogout = async () => {

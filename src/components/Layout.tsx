@@ -63,7 +63,6 @@ export function Layout({ children }: LayoutProps) {
         { name: "Infusionstherapie", path: ROUTE_PATHS.INFUSIONSTHERAPIE, desc: "Direkte Nährstoffaufnahme" },
         { name: "Long-Covid Hilfe", path: ROUTE_PATHS.LONG_COVID, desc: "Energieaufbau" },
         { name: "CO2-Therapie", path: ROUTE_PATHS.CO2_THERAPIE, desc: "Carboxytherapie" },
-        { name: "Ozon-Sauerstoff-Therapie", path: ROUTE_PATHS.OZON_THERAPIE, desc: "Immun-Boost" },
         { name: "Darmanalyse & Mikrobiom", path: ROUTE_PATHS.DARMANALYSE, desc: "Darmgesundheit" },
         { name: "Bioidentische Hormone", path: ROUTE_PATHS.HORMONTHERAPIE, desc: "Natürliche Balance" },
         { name: "Schwermetallausleitung", path: ROUTE_PATHS.SCHWERMETALL, desc: "Chelat-Therapie" },

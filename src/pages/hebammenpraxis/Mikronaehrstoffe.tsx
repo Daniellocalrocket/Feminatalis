@@ -2,73 +2,90 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
-import { Activity, Check, ArrowRight, Zap, Target } from "lucide-react";
+import { Activity, Check, ArrowRight, Zap, Target, Info, Sparkles, Heart } from "lucide-react";
 
 export default function Mikronaehrstoffe() {
+  const reasonsForSupplements = [
+    { title: "Zellebene", desc: "Sichert einen optimalen Stoffwechsel auf Zellebene und somit die Funktion jedes Organs.", icon: <Zap className="text-accent" /> },
+    { title: "Krankheits-Schutz", desc: "Schützende, antioxidative Wirkung vieler Vitamine bewahrt deinen Körper vor Schäden.", icon: <Sparkles className="text-accent" /> },
+    { title: "Erhöhter Bedarf", desc: "Stress, Medikamente wie die Pille oder Antibiotika und Umweltgifte rauben deinem Körper wichtige Depots.", icon: <Activity className="text-accent" /> },
+    { title: "Nährstoffverlust", desc: "Lange Transportwege, Lagerung und unreife Ernten führen bei modernen Lebensmitteln oft zu Vitalstoffmangel.", icon: <Target className="text-accent" /> }
+  ];
+
   return (
-    <div className="bg-background min-h-screen pt-32 pb-20">
+    <div className="bg-background min-h-screen">
       <SEO 
-        title="Mikronährstoff-Beratung & Labor | feminatalis" 
-        description="Optimale Versorgung mit Vitalstoffen in Schwangerschaft und Stillzeit für Mutter und Kind. Mikronährstoff-Beratung in Bad Schönborn." 
+        title="Mikronährstoff-Therapie (Orthomolekulare Medizin) | Naturheilpraxis feminatalis" 
+        description="Optimiere deine Vitalstoff-Versorgung mit orthomolekularer Medizin. Wissenschaftlich fundierte Analysen statt blinder Einnahme." 
       />
       
-      <div className="container mx-auto px-4 max-w-4xl">
-        <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-6 inline-block">Vitalstoff-Fokus</span>
-        <h1 className="text-4xl md:text-6xl font-serif text-primary mb-8 leading-tight">Mikronährstoff-Beratung</h1>
-        
-        <div className="prose prose-lg max-w-none text-muted-foreground mb-12">
-          <p className="text-xl leading-relaxed mb-8">
-            Wussten Sie, dass der Bedarf an bestimmten Mikronährstoffen in der Schwangerschaft um bis zu 100% steigt? Ein Mangel kann nicht nur Ihre eigene Energie schwächen, sondern auch die Entwicklung Ihres Kindes massiv beeinflussen.
+      <section className="pt-32 pb-20 bg-muted/20 text-center">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 uppercase tracking-wider">
+            Orthomolekulare Medizin
+          </div>
+          <h1 className="text-4xl md:text-7xl font-serif text-primary mb-8 leading-[1.1]">
+            Mikronährstoff- <br />
+            <span className="text-accent italic font-light">Therapie</span>
+          </h1>
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto italic text-center">
+            "Orthomolekular bedeutet 'richtig versorgt mit Nährstoffen' – die Basis deiner Gesundheit."
           </p>
-          
-          <div className="bg-[#fff08a]/20 p-10 rounded-[2.5rem] border border-yellow-200/50 mb-12 text-center shadow-sm">
-            <h2 className="text-primary font-serif text-3xl mb-6">Präzise Analysen statt Vermutungen</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                { title: "Vitamine", desc: "D3, B12, Folsäure, etc.", icon: <Zap className="text-accent w-6 h-6 mx-auto mb-2"/> },
-                { title: "Mineralien", desc: "Magnesium, Calcium, etc.", icon: <Activity className="text-accent w-6 h-6 mx-auto mb-2"/> },
-                { title: "Spurenelemente", desc: "Eisen, Zink, Selen, Jod.", icon: <Target className="text-accent w-6 h-6 mx-auto mb-2"/> },
-                { title: "Spezial-Labor", desc: "Individuelle Vollblut-Analyse.", icon: <Zap className="text-accent w-6 h-6 mx-auto mb-2"/> }
-              ].map((item, i) => (
-                <div key={i} className="flex flex-col items-center">
-                  {item.icon}
-                  <h4 className="font-bold text-primary mb-1 text-sm">{item.title}</h4>
-                  <p className="text-xs opacity-90">{item.desc}</p>
+        </div>
+      </section>
+
+      <section className="py-20 text-left">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-start mb-24 text-left">
+            <div className="space-y-6">
+              <h2 className="text-3xl font-serif text-primary leading-tight text-left">Nebenwirkungsarm und nachhaltig gesund sein.</h2>
+              <div className="prose prose-lg text-muted-foreground text-left">
+                <p>
+                  Das Fachwort „orthomolekular“ wurde 1968 vom Biochemiker Professor Linus Pauling eingeführt. Er betonte vor allem die schützende <strong>antioxidative Wirkung</strong> vieler Vitamine, die den Körper vor zellulären Schäden bewahren können.
+                </p>
+                <p>
+                  Obwohl diese selbst bei hohen Dosierungen nebenwirkungsarme Therapie von gesundheitsbewussten Menschen geschätzt wird, findet die Verwendung von Vitalstoffen zur Vorbeugung erst langsam Einzug in die Schulmedizin. Dabei ist eine gute Versorgung die absolute Grundvoraussetzung für einen reibungslosen Stoffwechsel.
+                </p>
+              </div>
+              <div className="bg-white border border-border p-6 rounded-2xl shadow-sm flex items-start gap-4">
+                <Info className="text-accent shrink-0 w-6 h-6" />
+                <p className="text-sm font-medium italic text-left">
+                  In unserer Praxis setzen wir auf präzise Laboranalysen statt blinder Einnahme von Standard-Präparaten.
+                </p>
+              </div>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-6 mt-8 text-left">
+              {reasonsForSupplements.map((reason, i) => (
+                <div key={i} className="bg-white p-8 rounded-3xl border border-border shadow-sm hover:border-accent transition-all group">
+                   <div className="bg-muted/30 w-12 h-12 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/10 transition-colors">
+                     {reason.icon}
+                   </div>
+                   <h4 className="font-bold text-primary mb-3 text-left">{reason.title}</h4>
+                   <p className="text-xs text-muted-foreground leading-relaxed text-left">{reason.desc}</p>
                 </div>
               ))}
             </div>
           </div>
-          
-          <h2 className="text-primary font-serif text-3xl mb-6">Wann ist eine Beratung sinnvoll?</h2>
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-white p-6 rounded-2xl shadow-sm border border-border">
-              <h4 className="font-bold text-primary mb-3">Im Hebammen-Bereich</h4>
-              <ul className="space-y-2 text-sm leading-relaxed">
-                <li className="flex items-start gap-3"><Check className="text-accent shrink-0"/> Optimale Vorbereitung auf die Geburt.</li>
-                <li className="flex items-start gap-3"><Check className="text-accent shrink-0"/> Unterstützung der Entwicklung des Babys.</li>
-                <li className="flex items-start gap-3"><Check className="text-accent shrink-0"/> Vermeidung von Fatigue-Zuständen im Wochenbett.</li>
-              </ul>
-            </div>
-            <div className="bg-white p-6 rounded-2xl shadow-sm border border-border">
-              <h4 className="font-bold text-primary mb-3">Im Heilpraktiker-Bereich</h4>
-              <ul className="space-y-2 text-sm leading-relaxed">
-                <li className="flex items-start gap-3"><Check className="text-accent shrink-0"/> Ausgleich chronischer Mangelzustände.</li>
-                <li className="flex items-start gap-3"><Check className="text-accent shrink-0"/> Regeneration bei Erschöpfung / Long-Covid.</li>
-                <li className="flex items-start gap-3"><Check className="text-accent shrink-0"/> Behandlung von immunologischen Defiziten.</li>
-              </ul>
-            </div>
+
+          <div className="bg-primary text-white p-12 lg:p-20 rounded-[4rem] text-center shadow-2xl relative overflow-hidden mb-24">
+             <div className="absolute top-0 right-0 p-8 text-white/5">
+                <Heart size={150} />
+             </div>
+             <h2 className="text-3xl lg:text-4xl font-serif mb-8 text-white font-bold">Wurzeln deiner Gesundheit stärken</h2>
+             <p className="text-lg opacity-80 mb-12 max-w-2xl mx-auto text-white">
+               Wusstest du, dass Stress, chronische Krankheiten und sogar die Einnahme der Anti-Baby-Pille oder von Antibiotika den Bedarf an bestimmten Mineralien und Vitaminen drastisch erhöhen?
+             </p>
+             <div className="flex flex-col sm:flex-row justify-center gap-6 relative z-10">
+               <Link to={ROUTE_PATHS.LABOR} className="bg-accent text-white px-10 py-5 rounded-xl font-bold hover:scale-105 transition-all shadow-xl flex items-center justify-center gap-2">
+                 Vitalstoff-Check im Labor <ArrowRight size={20} />
+               </Link>
+               <Link to={ROUTE_PATHS.CONTACT} className="bg-white/10 text-white border border-white/20 px-10 py-5 rounded-xl font-bold hover:bg-white/20 transition-all backdrop-blur-sm">
+                 Vorsorge-Gespräch buchen
+               </Link>
+             </div>
           </div>
         </div>
-        
-        <div className="bg-primary text-white p-10 rounded-[2.5rem] text-center shadow-xl">
-          <Activity className="w-16 h-16 mx-auto mb-6 opacity-80" />
-          <h2 className="text-3xl font-serif mb-4">Gezielte Nährstoff-Strategie.</h2>
-          <p className="mb-8 opacity-90 max-w-xl mx-auto">Verlassen Sie sich nicht auf Standard-Präparate aus der Drogerie – setzen Sie auf medizinisch fundierte Analysen und Beratung.</p>
-          <Link to={ROUTE_PATHS.CONTACT} className="inline-block bg-accent text-white px-8 py-4 rounded-xl font-bold hover:bg-accent/90 transition-all flex items-center justify-center gap-2 mx-auto w-fit">
-            Analyse-Termin vereinbaren <ArrowRight className="w-5 h-5" />
-          </Link>
-        </div>
-      </div>
+      </section>
     </div>
   );
 }

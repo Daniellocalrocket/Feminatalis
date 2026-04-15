@@ -2,111 +2,137 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
-import { ClipboardList, FlaskConical, Target, HeartHandshake, Check, ArrowRight, Activity, Zap, Beaker } from "lucide-react";
+import { ClipboardList, Target, HeartHandshake, CheckCircle2, ArrowRight, Zap, Heart, Users, Instagram } from "lucide-react";
 
 export default function Kinderwunsch() {
-  const schritte = [
-    { num: "01", icon: <ClipboardList className="w-8 h-8 text-accent" />, title: "Ausführliches Erstgespräch", desc: "60-90 Min intensive Anamnese: Vorgeschichte, Lebensstil und Ihre ganz persönlichen Ziele stehen im Mittelpunkt." },
-    { num: "02", icon: <FlaskConical className="w-8 h-8 text-accent" />, title: "Umfassende Diagnostik", desc: "Spezialisierte Laboranalysen von Hormonstatus über Nährstoffversorgung bis hin zu versteckten Entzündungsmarkern." },
-    { num: "03", icon: <Target className="w-8 h-8 text-accent" />, title: "Individueller Therapieplan", desc: "Maßgeschneiderte Strategien für Mikronährstoffe, Ernährung, Entgiftung und notwendige Lebensstil-Anpassungen." },
-    { num: "04", icon: <HeartHandshake className="w-8 h-8 text-accent" />, title: "Kontinuierliche Begleitung", desc: "Wir lassen Sie nicht allein. Regelmäßige Verlaufskontrollen und feine Anpassungen des Therapieplans bis zum Erfolg." }
+  const bausteine = [
+    { title: "Körpercheck & Labor", desc: "Mitochondrien-Funktion, Immunstatus, Hormone, Darmflora und Mikronährstoffe (Vit. D, A, Selen...)." },
+    { title: "(Ei)Zelltraining IHHT", desc: "Regeneration der Eizellkraftwerke für maximale Energie und optimale Voraussetzungen." },
+    { title: "Regulation Hormonsystem", desc: "Phytotherapie und naturidentische Hormone (homöopathisch), Ausleitung der Pille." },
+    { title: "Entgiftung & Milieu", desc: "Maßnahmen zur Entschlackung durch Homöopathie, Akupunktur oder Infusionen." },
+    { title: "Psychische Balance", desc: "Förderung des Loslassens, Entspannung und Klärung von Blockaden." },
+    { title: "Positive Erfolgsausrichtung", desc: "Mentale Blockaden erkennen und realistische Etappen-Ziele setzen." }
   ];
 
   return (
     <div className="bg-background min-h-screen">
       <SEO 
-        title="Ganzheitliche Kinderwunschbehandlung & Fruchtbarkeit | feminatalis" 
-        description="Natürliche Begleitung auf dem Weg zum Wunschkind. Kombination aus Hebammenwissen und Heilpraktiker-Expertise in Bad Schönborn." 
+        title="Ganzheitliche Kinderwunschbehandlung | Naturheilpraxis feminatalis" 
+        description="Dein Glücksprojekt - das Kinderwunschprogramm. Wir kombinieren Hebammenwissen und funktionelle Medizin für deinen Weg zum Wunschkind." 
       />
 
-      {/* Hero */}
-      <section className="pt-32 pb-20">
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 overflow-hidden relative">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[600px] bg-accent/5 rounded-full blur-3xl -z-10 opacity-60"></div>
         <div className="container mx-auto px-4 max-w-5xl text-center">
-          <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-6 inline-block uppercase tracking-wider">Kinderwunschbehandlung</span>
-          <h1 className="text-4xl lg:text-6xl font-serif text-primary mb-8 leading-tight">
-            Ganzheitlicher Weg zum Wunschkind
+          <span className="bg-accent/10 text-accent px-4 py-1.5 rounded-full text-sm font-bold mb-6 inline-block uppercase tracking-wider">Dein Glücksprojekt</span>
+          <h1 className="text-4xl lg:text-7xl font-serif text-primary mb-8 leading-tight">
+            Dein Weg zum <br />
+            <span className="text-accent italic font-light">Wunschkind</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            Ein unerfüllter Kinderwunsch belastet Körper und Seele tiefgreifend. Wir suchen nach den individuellen Ursachen abseits der reinen Reproduktionsmedizin und schaffen die optimalen Voraussetzungen für eine gesunde Empfängnis.
+            Wünschst du dir ein Baby und es klappt einfach nicht? Jeden Monat die Hoffnung, der Druck der Zeit... Du bist nicht allein. Wir suchen nach den Ursachen abseits der Standardmedizin und optimieren deine Fruchtbarkeit ganzheitlich.
           </p>
-          <Link to={ROUTE_PATHS.CONTACT} className="inline-block bg-accent text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-accent/90 transition-all shadow-lg active:scale-95">
-            Beratungsgespräch vereinbaren
-          </Link>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to={ROUTE_PATHS.CONTACT} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+              Beratungstermin vereinbaren
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* 4 Schritte */}
-      <section className="py-24 bg-card/30 border-y border-border/50">
+      {/* Principle Section */}
+      <section className="py-24 bg-muted/30">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <h2 className="text-3xl md:text-4xl font-serif text-primary font-bold">Hebammenkunst trifft auf funktionelle Medizin</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Das Herzstück meiner Arbeit als Heilpraktikerin und Hebamme ist die Unterstützung von Paaren mit Kinderwunsch. Wir schaffen die optimale Basis für eine gesunde Empfängnis – ganz ohne die oft belastenden Praktiken großer Kinderwunschzentren.
+              </p>
+              <div className="bg-white p-8 rounded-3xl border border-border shadow-sm italic">
+                "Ich unterstütze dich mit wirkungsvollen Methoden, kreativen Ideen und bewährten Tipps auf dem Weg zu deinem Wunschkind."
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { label: "Wissen", icon: <ClipboardList /> },
+                { label: "Wärme", icon: <Heart /> },
+                { label: "Orientierung", icon: <Zap /> },
+                { label: "Erfolg", icon: <Target /> }
+              ].map((item, i) => (
+                <div key={i} className="bg-card p-8 rounded-3xl border border-border flex flex-col items-center justify-center text-center">
+                  <div className="text-accent mb-4">{item.icon}</div>
+                  <span className="font-bold text-primary">{item.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Program Blocks */}
+      <section className="py-24">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif text-primary mb-4">Unser Behandlungsablauf</h2>
-            <p className="text-muted-foreground text-lg">Systematisch und einfühlsam zu Ihrem Ziel.</p>
+            <h2 className="text-4xl font-serif text-primary mb-4">Bausteine des Programms</h2>
+            <p className="text-muted-foreground text-lg">Ein individuell abgestimmtes Therapie- und Beratungs-Konzept.</p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-            {schritte.map((step, idx) => (
-              <div key={idx} className="relative bg-white p-8 rounded-3xl border border-border/60 hover:shadow-xl transition-all duration-300 group">
-                <span className="absolute -top-8 -left-2 text-8xl font-sans font-bold text-muted opacity-10 group-hover:opacity-20 transition-opacity">{step.num}</span>
-                <div className="mb-6 relative z-10 bg-orange-50 w-16 h-16 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">{step.icon}</div>
-                <h3 className="text-2xl font-serif text-primary mb-3 relative z-10 leading-snug">{step.title}</h3>
-                <p className="text-sm text-muted-foreground relative z-10 leading-relaxed">{step.desc}</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {bausteine.map((block, i) => (
+              <div key={i} className="p-8 bg-card rounded-[2.5rem] border border-border hover:border-accent transition-colors group">
+                <CheckCircle2 className="w-8 h-8 text-accent mb-6 group-hover:scale-110 transition-transform" />
+                <h3 className="text-xl font-bold text-primary mb-4">{block.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{block.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Methoden Grid */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
-            <div className="flex-1">
-              <h2 className="text-4xl font-serif text-primary mb-8">Therapiemethoden im Fokus</h2>
-              <div className="grid sm:grid-cols-2 gap-6">
-                {[
-                  { icon: <Activity className="text-accent w-6 h-6"/>, title: "Hormonanalyse", desc: "Bestimmung von Östrogenen, Progesteron, LH, FSH und Schilddrüse." },
-                  { icon: <Zap className="text-accent w-6 h-6"/>, title: "Mikronährstofftherapie", desc: "Ausgleich von Mängeln mit optimierten Vitalstoffen für den Kinderwunsch." },
-                  { icon: <Check className="text-accent w-6 h-6"/>, title: "Ernährungsberatung", desc: "Anti-Entzündung, Blutzuckerbalance und antioxidativer Schutz." },
-                  { icon: <Beaker className="text-accent w-6 h-6"/>, title: "Stoffwechsel-Optimierung", desc: "Entgiftung bei Belastungen & Regulation der Zellkraftwerke." }
-                ].map((m, i) => (
-                  <div key={i} className="p-6 bg-background rounded-2xl border border-border hover:border-accent transition-colors">
-                    <div className="mb-4">{m.icon}</div>
-                    <h4 className="font-bold text-primary mb-2 text-lg">{m.title}</h4>
-                    <p className="text-sm text-muted-foreground">{m.desc}</p>
-                  </div>
-                ))}
+      {/* Partners & Success */}
+      <section className="py-24 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-16">
+            <Users className="w-16 h-16 mx-auto mb-6 opacity-30" />
+            <h2 className="text-4xl font-serif font-bold mb-8">Gemeinsam zum Elternglück</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="space-y-6 bg-white/5 p-10 rounded-[3rem] border border-white/10">
+              <h3 className="text-2xl font-serif font-bold text-accent">Erfolgsfaktoren</h3>
+              <ul className="space-y-4">
+                <li className="flex gap-4 items-start">
+                  <CheckCircle2 className="w-5 h-5 text-accent mt-1 shrink-0" />
+                  <span>Aktive Teilnahme deines Partners am Programm</span>
+                </li>
+                <li className="flex gap-4 items-start">
+                  <CheckCircle2 className="w-5 h-5 text-accent mt-1 shrink-0" />
+                  <span>Bereitschaft, neue Wege eigenverantwortlich zu gehen</span>
+                </li>
+                <li className="flex gap-4 items-start">
+                  <CheckCircle2 className="w-5 h-5 text-accent mt-1 shrink-0" />
+                  <span>Offene Kommunikation und wertschätzende Zusammenarbeit</span>
+                </li>
+              </ul>
+            </div>
+            <div className="space-y-8">
+              <div className="flex gap-6 items-center bg-white/5 p-8 rounded-3xl border border-white/10">
+                <Instagram className="w-12 h-12 text-accent" />
+                <div>
+                  <h4 className="font-bold text-xl">Fruchtbarkeits-Kompass</h4>
+                  <p className="text-sm opacity-70">Folge @fruchtbarkeits_kompass für wöchentliche Impulse und Rituale.</p>
+                </div>
+              </div>
+              <p className="text-lg opacity-80 leading-relaxed italic">
+                "Dein Weg zum Wunschkind darf leichter werden. Wir bringen Wissen, Wärme und Orientierung in dein Glücksprojekt."
+              </p>
+              <div className="pt-4">
+                <Link to={ROUTE_PATHS.CONTACT} className="bg-accent text-white px-10 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-transform flex items-center justify-center gap-3">
+                  Jetzt unverbindlich anfragen <ArrowRight />
+                </Link>
               </div>
             </div>
-            <div className="lg:w-1/3 bg-[#fff9f2] p-10 rounded-[2.5rem] border border-border sticky top-32">
-              <h3 className="text-2xl font-serif text-primary mb-6">Diagnostik-Bereiche</h3>
-              <ul className="space-y-4 text-primary font-medium">
-                <li className="flex items-center gap-3"><Check className="text-green-500 w-5 h-5"/> Vollständiges Hormonprofil</li>
-                <li className="flex items-center gap-3"><Check className="text-green-500 w-5 h-5"/> Schilddrüsenfunktion & Antikörper</li>
-                <li className="flex items-center gap-3"><Check className="text-green-500 w-5 h-5"/> Nährstoffstatus (Vitamine/Mineralien)</li>
-                <li className="flex items-center gap-3"><Check className="text-green-500 w-5 h-5"/> Entzündungsmarker im Blut</li>
-                <li className="flex items-center gap-3"><Check className="text-green-500 w-5 h-5"/> Stoffwechselparameter</li>
-                <li className="flex items-center gap-3 border-t border-border pt-4 mt-4 text-xs opacity-60 italic font-normal">Optional: Schwermetallbelastung</li>
-              </ul>
-              <Link to={ROUTE_PATHS.CONTACT} className="bg-primary text-white w-full py-4 rounded-xl mt-10 font-bold hover:bg-primary/90 transition-all flex items-center justify-center gap-2 group">
-                 Termin buchen <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform"/>
-              </Link>
-            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Support Section */}
-      <section className="py-24 bg-primary text-white overflow-hidden relative">
-        <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
-          <HeartHandshake className="w-20 h-20 mx-auto mb-8 opacity-30" />
-          <h2 className="text-4xl font-serif mb-6 leading-tight">Sie sind nicht allein auf diesem Weg</h2>
-          <p className="text-xl opacity-80 mb-12 leading-relaxed">
-            Wir kombinieren Hebammenwissen mit Heilpraktiker-Expertise, um die funktionellen Parameter in Ihrem Zellstoffwechsel zu optimieren. Oft sind es kleine Korrekturen, die den großen Unterschied machen.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-             <Link to={ROUTE_PATHS.CONTACT} className="bg-accent text-white px-10 py-5 rounded-xl font-bold text-xl hover:bg-accent/90 transition-all shadow-xl">Jetzt Erstgespräch buchen</Link>
-          </div>
-          <p className="mt-8 text-sm opacity-60 italic">Begleitung vor, während und nach IVF-Eingriffen ebenfalls möglich.</p>
         </div>
       </section>
     </div>

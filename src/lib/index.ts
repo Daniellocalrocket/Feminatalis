@@ -21,7 +21,6 @@ export const ROUTE_PATHS = {
   TCM: "/naturheilpraxis/tcm",
   LONG_COVID: "/naturheilpraxis/long-covid",
   CO2_THERAPIE: "/naturheilpraxis/co2-therapie",
-  OZON_THERAPIE: "/naturheilpraxis/ozon-therapie",
   DARMANALYSE: "/naturheilpraxis/darmanalyse",
   HORMONTHERAPIE: "/naturheilpraxis/hormontherapie",
   SCHWERMETALL: "/naturheilpraxis/schwermetall",
@@ -54,6 +53,8 @@ export const ROUTE_PATHS = {
   ADMIN_DASHBOARD: "/admin",
   ADMIN_LEADS: "/admin/leads",
   ADMIN_EVENTS: "/admin/events",
+  ADMIN_BLOG: "/admin/blog",
+  ADMIN_SETTINGS: "/admin/settings",
 
   // Legal
   IMPRESSUM: "/impressum",
