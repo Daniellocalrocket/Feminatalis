@@ -9,6 +9,7 @@ export const ROUTE_PATHS = {
   // Hebammenpraxis
   HEBAMMENPRAXIS: "/hebammenpraxis",
   GEBURTSVORBEREITUNG: "/hebammenpraxis/geburtsvorbereitung",
+  PREMIUM_ZELL_ENERGIE: "/hebammenpraxis/geburtsvorbereitung/premium-zell-energie",
   WOCHENBETTBETREUUNG: "/hebammenpraxis/wochenbettbetreuung",
   RUECKBILDUNG: "/hebammenpraxis/rueckbildung",
   ZELLTRAINING: "/hebammenpraxis/zelltraining",
@@ -41,6 +42,7 @@ export const ROUTE_PATHS = {
   // CosMedea & Shop
   COSMEDEA: "/naturheilpraxis-cosmedea",
   SHOP: "/shop",
+  EVENTS: "/veranstaltungen",
   
   // Onlinekurs
   KURS: "/kurs",
@@ -54,6 +56,7 @@ export const ROUTE_PATHS = {
   ADMIN_LEADS: "/admin/leads",
   ADMIN_EVENTS: "/admin/events",
   ADMIN_BLOG: "/admin/blog",
+  ADMIN_NEWS: "/admin/news",
   ADMIN_SETTINGS: "/admin/settings",
 
   // Legal
