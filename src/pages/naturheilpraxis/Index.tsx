@@ -7,7 +7,7 @@ import { Stethoscope, Droplet, Wind, Brain, Activity, Flame, Zap, ArrowRight, He
 export default function Naturheilpraxis() {
   const diagnostik = [
     { title: "Funktionelle Labordiagnostik", desc: "Vollblut-Analysen, Hormonstatus, Mikrobiom & Stoffwechsel.", path: ROUTE_PATHS.LABOR, icon: <Microscope className="w-8 h-8" /> },
-    { title: "Metavital Diagnostik", desc: "Biophysikalische Systemanalyse deiner Körperfunktionen.", path: ROUTE_PATHS.ALLERGIE, icon: <Activity className="w-8 h-8" /> },
+    { title: "Mikrobiom- & Darmanalyse", desc: "Tiefgreifende Stuhldiagnostik zur Analyse von Dysbiosen, Leaky-Gut und Entzündungen.", path: ROUTE_PATHS.DARMANALYSE, icon: <Activity className="w-8 h-8" /> },
     { title: "Schwermetall-Checks", desc: "Ursachenforschung bei chronischen Blockaden durch Toxine.", path: ROUTE_PATHS.LABOR, icon: <FlaskConical className="w-8 h-8" /> }
   ];
 

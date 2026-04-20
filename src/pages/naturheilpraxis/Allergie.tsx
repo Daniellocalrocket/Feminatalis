@@ -16,7 +16,7 @@ export default function Allergie() {
   const behandlungsmethoden = [
     "Umfassender Aufbau der Darmflora (Mikrobiom-Therapie)",
     "Individuelle orthomolekulare Vitalstofftherapie",
-    "Präzise Frequenztherapie mit Metavital (Metalle & toxische Belastungen)",
+    "Gezielte Regulation des Immunsystems durch Milieutherapie",
     "Naturheilkundliche immunmodulierende Eigenbluttherapie",
     "Ganzheitliche Klassische Homöopathie & Körperakupunktur",
     "Gezielte und laborgeprägte Entschlackung & Ausleitung"
@@ -77,7 +77,7 @@ export default function Allergie() {
                   Klassische Labor- und Provokationstests zeigen oft lediglich die Sensibilisierung (den momentanen Allergiefokus), legen aber nicht die wahre Wurzel des Problems frei.
                 </p>
                 <p>
-                  Aus diesem Grund nutzen wir ergänzend den tiefgehenden <strong>Allergiescan mit Metavital</strong>, der insbesondere auch für Kinder absolut schmerzfrei und hervorragend geeignet ist.
+                  Aus diesem Grund nutzen wir eine tiefgehende <strong>funktionelle Labordiagnostik</strong> in Kombination mit einer Mikrobiom-Analyse, um versteckte Entzündungen und systemische Belastungen präzise zu identifizieren.
                 </p>
               </div>
               <div className="bg-white p-8 lg:p-10 rounded-[2.5rem] border border-border shadow-sm text-left">

@@ -8,7 +8,6 @@ export default function TCM() {
   const pillars = [
     { title: "Akupunktur", desc: "Regulation des Qi-Flusses durch hochpräzise Reize an Energie-Meridianpunkten.", icon: <Zap className="text-accent w-8 h-8" /> },
     { title: "Ernährung (5 Elemente)", desc: "Natürliche Lebensmittel als Heilmittel – exakt angepasst an deinen Konstitutionstyp.", icon: <Leaf className="text-accent w-8 h-8" /> },
-    { title: "Heilkräuter", desc: "Komplexe, hochwirksame Rezepturen aus Wurzeln, Rinden und vitalen Blüten.", icon: <Activity className="text-primary w-8 h-8" /> },
     { title: "Schröpfen & Moxa", desc: "Tiefes Lösen von massiven Blockaden und intensives Wärmen bei Kältesymptomen.", icon: <Sun className="text-accent w-8 h-8" /> }
   ];
 
@@ -16,7 +15,7 @@ export default function TCM() {
     <div className="bg-background min-h-screen font-sans">
       <SEO 
         title="Traditionelle Chinesische Medizin (TCM) | Naturheilpraxis feminatalis" 
-        description="Bringe Yin und Yang ins harmonische Gleichgewicht. Wir nutzen Akupunktur, Kräutertherapie und Zungendiagnostik für deine ganzheitliche Heilung." 
+        description="Bringe Yin und Yang ins harmonische Gleichgewicht. Wir nutzen Akupunktur und Zungendiagnostik für deine ganzheitliche Heilung." 
       />
 
       {/* Hero Section */}
