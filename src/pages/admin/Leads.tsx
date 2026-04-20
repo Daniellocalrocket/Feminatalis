@@ -13,7 +13,8 @@ import {
   Mail,
   Phone,
   MapPin,
-  LifeBuoy
+  LifeBuoy,
+  Trash2
 } from "lucide-react";
 import { 
   Table, 
