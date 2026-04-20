@@ -79,9 +79,18 @@ const getScoreStars = (value: string) => {
   return "-";
 };
 
+const STATUS_FILTERS = [
+  { label: "Alle", value: "alle" },
+  { label: "Neu", value: "neu" },
+  { label: "Kontaktiert", value: "kontaktiert" },
+  { label: "Bestätigt", value: "bestätigt" },
+  { label: "Erledigt", value: "abgeschlossen" },
+];
+
 export default function AdminLeads() {
   const [leads, setLeads] = useState<any[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [statusFilter, setStatusFilter] = useState("alle");
   const [isLoading, setIsLoading] = useState(true);
   const [selectedLead, setSelectedLead] = useState<any | null>(null);
 
@@ -102,6 +111,18 @@ export default function AdminLeads() {
       setLeads(data || []);
     }
     setIsLoading(false);
+  };
+
+  const deleteLead = async (id: string, name: string) => {
+    if (!confirm(`Bist du sicher, dass du die Anfrage von "${name}" unwiderruflich löschen möchtest?`)) return;
+    const { error } = await supabase.from('leads').delete().eq('id', id);
+    if (error) {
+      toast.error("Fehler beim Löschen");
+    } else {
+      toast.success("Anfrage gelöscht");
+      setSelectedLead(null);
+      fetchLeads();
+    }
   };
 
   const updateStatus = async (id: string, newStatus: string) => {
@@ -166,36 +187,58 @@ export default function AdminLeads() {
     toast.success("CSV-Export erfolgreich gestartet");
   };
 
-  const filteredLeads = leads.filter(lead => 
-    `${lead.first_name} ${lead.last_name}`.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    lead.email.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredLeads = leads.filter(lead => {
+    const matchesSearch =
+      `${lead.first_name} ${lead.last_name}`.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      lead.email.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesStatus = statusFilter === "alle" || lead.status === statusFilter;
+    return matchesSearch && matchesStatus;
+  });
 
   return (
     <AdminLayout title="Anfragen-Management (Leads)">
       <div className="space-y-6 animate-in fade-in duration-500">
         
         {/* Toolbar */}
-        <div className="flex flex-col md:flex-row gap-4 items-center justify-between bg-white/50 p-6 rounded-[2rem] border border-primary/5">
-          <div className="relative w-full md:w-96">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-primary/30" />
-            <Input 
-              placeholder="Name oder E-Mail suchen..." 
-              className="pl-12 h-12 rounded-xl bg-white border-primary/5"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-          </div>
-          <div className="flex items-center gap-3 w-full md:w-auto">
-            <Button variant="outline" className="h-12 rounded-xl flex-1 md:flex-none border-primary/10 gap-2">
-              <Filter size={18} /> Filter
-            </Button>
+        <div className="flex flex-col gap-4 bg-white/50 p-6 rounded-[2rem] border border-primary/5">
+          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+            <div className="relative w-full md:w-96">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-primary/30" />
+              <Input 
+                placeholder="Name oder E-Mail suchen..." 
+                className="pl-12 h-12 rounded-xl bg-white border-primary/5"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
             <Button 
               onClick={exportToCSV}
-              className="h-12 rounded-xl flex-1 md:flex-none bg-accent text-white gap-2 hover:shadow-lg transition-all"
+              className="h-12 rounded-xl bg-accent text-white gap-2 hover:shadow-lg transition-all px-6"
             >
               <Download size={18} /> CSV Export
             </Button>
+          </div>
+          {/* Status Filter Pills */}
+          <div className="flex flex-wrap gap-2">
+            {STATUS_FILTERS.map((f) => (
+              <button
+                key={f.value}
+                onClick={() => setStatusFilter(f.value)}
+                className={cn(
+                  "px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all border",
+                  statusFilter === f.value
+                    ? "bg-primary text-white border-primary shadow-lg shadow-primary/20"
+                    : "bg-white text-primary/50 border-primary/10 hover:border-primary/30 hover:text-primary"
+                )}
+              >
+                {f.label}
+                {f.value !== "alle" && (
+                  <span className="ml-1.5 opacity-70">
+                    ({leads.filter(l => l.status === f.value).length})
+                  </span>
+                )}
+              </button>
+            ))}
           </div>
         </div>
 
@@ -297,6 +340,12 @@ export default function AdminLeads() {
                           <DropdownMenuItem className="rounded-xl flex gap-3 py-3 px-4 cursor-pointer" onClick={() => updateStatus(lead.id, 'abgeschlossen')}>
                             <CheckCircle size={18} className="text-slate-500" /> Auf 'Erledigt'
                           </DropdownMenuItem>
+                          <DropdownMenuItem 
+                            className="rounded-xl flex gap-3 py-3 px-4 cursor-pointer text-red-500 focus:text-red-500 focus:bg-red-50" 
+                            onClick={() => deleteLead(lead.id, `${lead.first_name} ${lead.last_name}`)}
+                          >
+                            <Trash2 size={18} /> Löschen
+                          </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
                     </TableCell>
@@ -344,10 +393,10 @@ export default function AdminLeads() {
                     <p className="text-primary">{selectedLead.first_name} {selectedLead.last_name}</p>
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-muted-foreground uppercase">Kontakt</p>
-                    <p className="text-primary">{selectedLead.email}</p>
-                    <p className="text-primary">{selectedLead.phone}</p>
-                  </div>
+                     <p className="text-xs font-bold text-muted-foreground uppercase">Kontakt</p>
+                     <a href={`mailto:${selectedLead.email}`} className="block text-accent hover:underline font-medium">{selectedLead.email}</a>
+                     <a href={`tel:${selectedLead.phone}`} className="block text-accent hover:underline font-medium">{selectedLead.phone}</a>
+                   </div>
                   <div>
                     <p className="text-xs font-bold text-muted-foreground uppercase">PLZ</p>
                     <p className="text-primary">{selectedLead.zip_code}</p>

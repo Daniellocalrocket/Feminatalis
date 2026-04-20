@@ -17,6 +17,7 @@ import { cn } from "@/lib/utils";
 import { ROUTE_PATHS } from "@/lib/index";
 import { toast } from "sonner";
 
+
 interface AdminLayoutProps {
   children: React.ReactNode;
   title: string;
@@ -27,6 +28,7 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
   const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(true);
   const [isAuthChecking, setIsAuthChecking] = React.useState(true);
+  const [newLeadsCount, setNewLeadsCount] = React.useState(0);
 
   React.useEffect(() => {
     const checkAuth = async () => {
@@ -36,6 +38,12 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
         navigate("/admin/login");
       } else {
         setIsAuthChecking(false);
+        // Fetch new leads count after auth confirmed
+        const { count } = await supabase
+          .from('leads')
+          .select('*', { count: 'exact', head: true })
+          .eq('status', 'neu');
+        setNewLeadsCount(count || 0);
       }
     };
     checkAuth();
@@ -81,8 +89,9 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
         </div>
 
         <nav className="flex-1 px-4 py-8 space-y-2">
-          {navigation.map((item) => {
+        {navigation.map((item) => {
             const isActive = location.pathname === item.href;
+            const showBadge = item.href === ROUTE_PATHS.ADMIN_LEADS && newLeadsCount > 0;
             return (
               <Link
                 key={item.name}
@@ -95,10 +104,15 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
                 )}
               >
                 <item.icon size={22} className={cn("shrink-0", isActive ? "text-white" : "group-hover:text-white")} />
-                <span className={cn("font-medium transition-all", !isSidebarOpen && "lg:hidden")}>
+                <span className={cn("font-medium transition-all flex-1", !isSidebarOpen && "lg:hidden")}>
                   {item.name}
                 </span>
-                {isActive && isSidebarOpen && <ChevronRight size={16} className="ml-auto opacity-50" />}
+                {showBadge && isSidebarOpen && (
+                  <span className="bg-orange-500 text-white text-[10px] font-black rounded-full w-5 h-5 flex items-center justify-center animate-pulse shrink-0">
+                    {newLeadsCount > 9 ? "9+" : newLeadsCount}
+                  </span>
+                )}
+                {isActive && isSidebarOpen && !showBadge && <ChevronRight size={16} className="ml-auto opacity-50" />}
               </Link>
             );
           })}

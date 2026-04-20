@@ -40,6 +40,7 @@ export default function AdminBlog() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [editingPost, setEditingPost] = useState<any>(null);
   const [searchTerm, setSearchTerm] = useState("");
+  const [pubFilter, setPubFilter] = useState<"alle" | "published" | "draft">("alle");
 
   const initialPostState = {
     title: "",
@@ -48,7 +49,8 @@ export default function AdminBlog() {
     content_html: "",
     category: "Allgemein",
     image_url: "",
-    google_doc_id: ""
+    google_doc_id: "",
+    is_published: false
   };
 
   const [formData, setFormData] = useState(initialPostState);
@@ -141,7 +143,8 @@ export default function AdminBlog() {
       content_html: post.content_html || "",
       category: post.category || "Allgemein",
       image_url: post.image_url || "",
-      google_doc_id: post.google_doc_id || ""
+      google_doc_id: post.google_doc_id || "",
+      is_published: post.is_published ?? false
     });
     setIsDialogOpen(true);
   };
@@ -152,10 +155,16 @@ export default function AdminBlog() {
     setIsDialogOpen(true);
   };
 
-  const filteredPosts = posts.filter(post => 
-    post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    (post.category && post.category.toLowerCase().includes(searchTerm.toLowerCase()))
-  );
+  const filteredPosts = posts.filter(post => {
+    const matchesSearch =
+      post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      (post.category && post.category.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesPub =
+      pubFilter === "alle" ||
+      (pubFilter === "published" && post.is_published) ||
+      (pubFilter === "draft" && !post.is_published);
+    return matchesSearch && matchesPub;
+  });
 
   return (
     <AdminLayout title="Blog-Verwaltung">
@@ -175,15 +184,32 @@ export default function AdminBlog() {
           </Button>
         </div>
 
-        {/* Search */}
-        <div className="relative max-w-md">
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-primary/30" />
-          <Input 
-            placeholder="Nach Titeln oder Kategorien suchen..." 
-            className="pl-12 h-12 rounded-xl bg-white border-primary/5 shadow-sm"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
+        {/* Search + Filter Pills */}
+        <div className="flex flex-col gap-4">
+          <div className="relative max-w-md">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-primary/30" />
+            <Input 
+              placeholder="Nach Titeln oder Kategorien suchen..." 
+              className="pl-12 h-12 rounded-xl bg-white border-primary/5 shadow-sm"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
+          <div className="flex gap-2">
+            {(["alle", "published", "draft"] as const).map((f) => (
+              <button
+                key={f}
+                onClick={() => setPubFilter(f)}
+                className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all border ${
+                  pubFilter === f
+                    ? "bg-primary text-white border-primary shadow-lg shadow-primary/20"
+                    : "bg-white text-primary/50 border-primary/10 hover:border-primary/30 hover:text-primary"
+                }`}
+              >
+                {f === "alle" ? `Alle (${posts.length})` : f === "published" ? `Veröffentlicht (${posts.filter(p => p.is_published).length})` : `Entwürfe (${posts.filter(p => !p.is_published).length})`}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Content Section */}
@@ -230,7 +256,10 @@ export default function AdminBlog() {
                           <span className="flex items-center gap-1"><Tag size={14} /> {post.slug}</span>
                         </div>
                       </div>
-                      <div className="flex gap-2">
+                      <div className="flex items-center gap-2">
+                        <Badge className={post.is_published ? "bg-green-100 text-green-700 border-green-200 border" : "bg-amber-100 text-amber-700 border-amber-200 border"}>
+                          {post.is_published ? "✓ Live" : "Entwurf"}
+                        </Badge>
                         <Button variant="ghost" size="icon" className="h-10 w-10 text-primary/40 hover:text-primary hover:bg-primary/5 rounded-full" onClick={() => openEditDialog(post)}>
                           <Edit3 size={18} />
                         </Button>
@@ -306,6 +335,25 @@ export default function AdminBlog() {
                     <Label htmlFor="google_doc_id" className="uppercase text-xs font-bold opacity-60">Google Doc ID (für Sync)</Label>
                     <Input id="google_doc_id" value={formData.google_doc_id} onChange={(e) => setFormData({...formData, google_doc_id: e.target.value})} className="h-12 rounded-xl" placeholder="z.B. 1A2b3C..." />
                   </div>
+
+                  {/* Published Toggle */}
+                  <div className="flex items-center justify-between p-5 bg-muted/30 rounded-2xl border border-border">
+                    <div>
+                      <p className="font-bold text-primary text-sm">Status</p>
+                      <p className="text-xs text-muted-foreground">{formData.is_published ? "Wird live auf der Website angezeigt" : "Nur intern sichtbar (Entwurf)"}</p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setFormData({...formData, is_published: !formData.is_published})}
+                      className={`relative w-14 h-7 rounded-full transition-colors ${
+                        formData.is_published ? "bg-green-500" : "bg-slate-300"
+                      }`}
+                    >
+                      <span className={`absolute top-1 w-5 h-5 bg-white rounded-full shadow transition-transform ${
+                        formData.is_published ? "translate-x-8" : "translate-x-1"
+                      }`} />
+                    </button>
+                  </div>
                 </div>
 
                 <div className="space-y-6">
@@ -324,7 +372,7 @@ export default function AdminBlog() {
               <DialogFooter className="pt-8 border-t border-primary/5">
                 <Button variant="ghost" type="button" onClick={() => setIsDialogOpen(false)} className="rounded-xl h-12 px-8">Abbrechen</Button>
                 <Button type="submit" className="bg-primary text-white font-bold h-12 px-10 rounded-xl hover:shadow-lg transition-all">
-                  {editingPost ? "Speichern" : "Veröffentlichen"}
+                  {editingPost ? "Speichern" : (formData.is_published ? "Veröffentlichen" : "Als Entwurf speichern")}
                 </Button>
               </DialogFooter>
             </form>
