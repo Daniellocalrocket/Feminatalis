@@ -36,6 +36,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription,
+  DialogFooter,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -94,6 +95,7 @@ export default function AdminLeads() {
   const [statusFilter, setStatusFilter] = useState("alle");
   const [isLoading, setIsLoading] = useState(true);
   const [selectedLead, setSelectedLead] = useState<any | null>(null);
+  const [leadToDelete, setLeadToDelete] = useState<{id: string, name: string} | null>(null);
 
   useEffect(() => {
     fetchLeads();
@@ -114,14 +116,15 @@ export default function AdminLeads() {
     setIsLoading(false);
   };
 
-  const deleteLead = async (id: string, name: string) => {
-    if (!confirm(`Bist du sicher, dass du die Anfrage von "${name}" unwiderruflich löschen möchtest?`)) return;
-    const { error } = await supabase.from('leads').delete().eq('id', id);
+  const executeDelete = async () => {
+    if (!leadToDelete) return;
+    const { error } = await supabase.from('leads').delete().eq('id', leadToDelete.id);
     if (error) {
       toast.error("Fehler beim Löschen");
     } else {
       toast.success("Anfrage gelöscht");
       setSelectedLead(null);
+      setLeadToDelete(null);
       fetchLeads();
     }
   };
@@ -343,7 +346,7 @@ export default function AdminLeads() {
                           </DropdownMenuItem>
                           <DropdownMenuItem 
                             className="rounded-xl flex gap-3 py-3 px-4 cursor-pointer text-red-500 focus:text-red-500 focus:bg-red-50" 
-                            onClick={() => deleteLead(lead.id, `${lead.first_name} ${lead.last_name}`)}
+                            onClick={() => setLeadToDelete({ id: lead.id, name: `${lead.first_name} ${lead.last_name}` })}
                           >
                             <Trash2 size={18} /> Löschen
                           </DropdownMenuItem>
@@ -451,6 +454,23 @@ export default function AdminLeads() {
             </DialogContent>
           </Dialog>
         )}
+
+        {/* Delete Confirmation Modal */}
+        <Dialog open={!!leadToDelete} onOpenChange={(open) => !open && setLeadToDelete(null)}>
+          <DialogContent className="max-w-md rounded-[2rem]">
+            <DialogHeader>
+              <DialogTitle className="text-2xl font-serif text-primary">Anfrage löschen</DialogTitle>
+              <DialogDescription>
+                Bist du sicher, dass du die Anfrage von <strong className="text-primary">{leadToDelete?.name}</strong> unwiderruflich löschen möchtest?
+              </DialogDescription>
+            </DialogHeader>
+            <DialogFooter className="mt-6 flex gap-3 sm:justify-between w-full">
+              <Button variant="outline" className="flex-1 rounded-xl" onClick={() => setLeadToDelete(null)}>Abbrechen</Button>
+              <Button variant="destructive" className="flex-1 rounded-xl bg-red-500 hover:bg-red-600 text-white" onClick={executeDelete}>Ja, löschen</Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+
       </div>
     </AdminLayout>
   );
