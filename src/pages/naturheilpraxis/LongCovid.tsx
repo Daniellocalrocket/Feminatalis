@@ -96,7 +96,7 @@ export default function LongCovid() {
             <div className="relative z-10 text-left max-w-5xl mx-auto">
               <div className="flex flex-col md:flex-row items-start md:items-center gap-6 mb-10 text-left">
                 <div className="bg-white/10 p-4 rounded-2xl shrink-0 text-left">
-                   <TestTube2 className="w-10 h-10 text-accent text-left" />
+                   <TestTube2 className="w-10 h-10 text-[#fde4c8] text-left" />
                 </div>
                 <h2 className="text-3xl md:text-5xl font-serif font-bold text-white leading-tight text-left">
                   Die richtige Diagnostik <br className="hidden md:block" />ist vollkommen entscheidend
@@ -108,7 +108,7 @@ export default function LongCovid() {
               <div className="grid md:grid-cols-2 gap-4 mb-12 text-left">
                 {erweiterteDiagnostik.map((test, i) => (
                   <div key={i} className="flex items-start gap-4 bg-white/5 p-5 rounded-2xl border border-white/10 hover:bg-white/15 transition-colors text-left">
-                    <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-[#fde4c8] shrink-0 mt-0.5" />
                     <span className="text-sm font-medium leading-relaxed text-white text-left">{test}</span>
                   </div>
                 ))}

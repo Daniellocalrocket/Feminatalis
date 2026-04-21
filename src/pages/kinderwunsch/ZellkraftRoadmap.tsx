@@ -125,11 +125,11 @@ export default function ZellkraftRoadmap() {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="bg-primary p-10 md:p-16 rounded-[4rem] text-white shadow-2xl relative overflow-hidden"
+              className="bg-primary p-10 md:p-16 rounded-[4rem] shadow-2xl relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-accent/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-              <div className="relative z-10 space-y-6">
-                <h3 className="text-3xl font-serif mb-6">Der Paradigmenwechsel</h3>
+              <div className="relative z-10 space-y-6 text-white">
+                <h3 className="text-3xl font-serif mb-6 text-white">Der Paradigmenwechsel</h3>
                 <p className="text-white/80 leading-relaxed text-lg">
                   Der Zellkraft-Ansatz beendet das bloße Hoffen. Wir nutzen die <strong>physiologische Logik</strong> deines Körpers, um ihn in einen Zustand der „biologischen Sicherheit“ zu führen.
                 </p>
@@ -197,12 +197,12 @@ export default function ZellkraftRoadmap() {
       </section>
 
       {/* Done-For-You Elements (Mental Load reduction) */}
-      <section className="py-24 bg-primary text-white overflow-hidden relative">
+      <section className="py-24 bg-primary overflow-hidden relative">
         <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(255,255,255,0.05)_0%,_transparent_40%)]" />
         
-        <div className="container mx-auto px-4 max-w-6xl relative z-10">
+        <div className="container mx-auto px-4 max-w-6xl relative z-10 text-white">
           <div className="text-center mb-20">
-             <h2 className="text-4xl md:text-5xl font-serif mb-6">Senke deinen Mental Load <span className="text-accent italic font-light">sofort.</span></h2>
+             <h2 className="text-4xl md:text-5xl font-serif mb-6 text-white">Senke deinen Mental Load <span className="text-[#fde4c8] italic font-light">sofort.</span></h2>
              <p className="text-lg opacity-70 max-w-2xl mx-auto">
                Der Kurs liefert dir fertige Werkzeuge, damit du nicht länger raten musst, sondern einfach umsetzen kannst.
              </p>
@@ -210,18 +210,18 @@ export default function ZellkraftRoadmap() {
 
           <div className="grid md:grid-cols-3 gap-8">
              <div className="bg-white/5 p-8 rounded-[2.5rem] border border-white/10 backdrop-blur-md">
-                <FileText className="text-accent mb-6 w-12 h-12" />
-                <h4 className="text-xl font-bold mb-4">Roadmap-Canvas</h4>
+                <FileText className="text-[#fde4c8] mb-6 w-12 h-12" />
+                <h4 className="text-xl font-bold mb-4 text-white">Roadmap-Canvas</h4>
                 <p className="text-white/60 text-sm leading-relaxed">Dein roter faden für die nächsten 90 Tage. Alle Schritte grafisch aufbereitet für maximale Übersicht.</p>
              </div>
              <div className="bg-white/5 p-8 rounded-[2.5rem] border border-white/10 backdrop-blur-md">
-                <MessageSquare className="text-accent mb-6 w-12 h-12" />
-                <h4 className="text-xl font-bold mb-4">Arzt-Leitfaden</h4>
+                <MessageSquare className="text-[#fde4c8] mb-6 w-12 h-12" />
+                <h4 className="text-xl font-bold mb-4 text-white">Arzt-Leitfaden</h4>
                 <p className="text-white/60 text-sm leading-relaxed">10 gezielte Fragen für dein nächstes Gespräch im Kinderwunschzentrum, die Klarheit und Augenhöhe erzwingen.</p>
              </div>
              <div className="bg-white/5 p-8 rounded-[2.5rem] border border-white/10 backdrop-blur-md">
-                <ClipboardCheck className="text-accent mb-6 w-12 h-12" />
-                <h4 className="text-xl font-bold mb-4">Stoffwechsel-Protokolle</h4>
+                <ClipboardCheck className="text-[#fde4c8] mb-6 w-12 h-12" />
+                <h4 className="text-xl font-bold mb-4 text-white">Stoffwechsel-Protokolle</h4>
                 <p className="text-white/60 text-sm leading-relaxed">Animal-based & Keto-Logik zur Optimierung deiner Biologie – ohne Rätselraten bei der Ernährung.</p>
              </div>
           </div>

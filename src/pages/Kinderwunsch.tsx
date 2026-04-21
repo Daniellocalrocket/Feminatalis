@@ -143,18 +143,18 @@ export default function Kinderwunsch() {
       </section>
 
       {/* Partners & Success */}
-      <section className="py-24 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 max-w-5xl">
+      <section className="py-24 bg-primary text-white">
+        <div className="container mx-auto px-4 max-w-5xl text-white">
           <div className="text-center mb-16">
             <Users className="w-16 h-16 mx-auto mb-6 opacity-30" />
-            <h2 className="text-4xl font-serif font-bold mb-8">Gemeinsam zum Elternglück</h2>
+            <h2 className="text-4xl font-serif font-bold mb-8 text-white">Gemeinsam zum Elternglück</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6 bg-white/5 p-10 rounded-[3rem] border border-white/10">
-              <h3 className="text-2xl font-serif font-bold text-accent">Erfolgsfaktoren</h3>
+              <h3 className="text-2xl font-serif font-bold text-[#fde4c8]">Erfolgsfaktoren</h3>
               <ul className="space-y-4">
                 <li className="flex gap-4 items-start">
-                  <CheckCircle2 className="w-5 h-5 text-accent mt-1 shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-[#fde4c8] mt-1 shrink-0" />
                   <span>Aktive Teilnahme deines Partners am Programm</span>
                 </li>
                 <li className="flex gap-4 items-start">

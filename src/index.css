@@ -182,6 +182,15 @@
     @apply font-serif font-bold tracking-tight text-primary;
   }
 
+  .bg-primary h1, 
+  .bg-primary h2, 
+  .bg-primary h3, 
+  .bg-primary h4, 
+  .bg-primary h5, 
+  .bg-primary h6 {
+    @apply text-white;
+  }
+
   code, pre {
     @apply font-mono;
   }

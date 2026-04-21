@@ -98,7 +98,7 @@ export default function PremiumZellkraftKurs() {
               <div className="absolute -top-6 -left-6 bg-accent text-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg rotate-3 border-2 border-white">
                 <Brain size={24} />
               </div>
-              <h3 className="text-2xl md:text-3xl font-serif text-primary mb-6">Die biologische Lösung</h3>
+              <h3 className="text-2xl md:text-3xl font-serif mb-6 text-primary">Die biologische Lösung</h3>
               <p className="text-primary/80 mb-8 leading-relaxed">
                 Dieser Kurs ist anders. Wir rüsten dich mit kompromisslosen biologischen Fakten aus. Du lernst nicht nur Atmen, sondern wie du die <strong>100.000 Mitochondrien in deiner Eizelle</strong> vor Toxinen schützt und die zukünftige hormonelle sowie kognitive Gesundheit deines Kindes durch hochverfügbare Nährstoffe (Epigenetik) aktiv programmierst.
               </p>
@@ -272,7 +272,7 @@ export default function PremiumZellkraftKurs() {
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
            <div className="grid lg:grid-cols-12 gap-16 items-center">
               <div className="lg:col-span-7">
-                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/20 text-accent-foreground text-sm font-bold mb-6 uppercase tracking-widest border border-accent/30 shadow-sm border-[#f07d00]">
+                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/20 text-[#fde4c8] text-sm font-bold mb-6 uppercase tracking-widest border border-accent/30 shadow-sm border-[#f07d00]">
                    <Sparkles size={16} /> Zusatzmaterial Inklusive
                  </div>
                  <h2 className="text-4xl lg:text-5xl font-serif text-white mb-6">
