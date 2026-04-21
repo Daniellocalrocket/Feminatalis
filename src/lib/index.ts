@@ -9,7 +9,7 @@ export const ROUTE_PATHS = {
   // Hebammenpraxis
   HEBAMMENPRAXIS: "/hebammenpraxis",
   GEBURTSVORBEREITUNG: "/hebammenpraxis/geburtsvorbereitung",
-  PREMIUM_ZELL_ENERGIE: "/hebammenpraxis/geburtsvorbereitung/premium-zell-energie",
+  PREMIUM_ZELLKRAFT_KURS: "/hebammenpraxis/geburtsvorbereitung/zellkraft-kurs",
   WOCHENBETTBETREUUNG: "/hebammenpraxis/wochenbettbetreuung",
   RUECKBILDUNG: "/hebammenpraxis/rueckbildung",
   ZELLTRAINING: "/hebammenpraxis/zelltraining",

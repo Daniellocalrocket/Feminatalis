@@ -11,7 +11,7 @@ import FAQ from "@/pages/FAQ";
 import Contact from "@/pages/Contact";
 import Hebammenpraxis from "@/pages/hebammenpraxis/Index";
 import Geburtsvorbereitung from "@/pages/hebammenpraxis/Geburtsvorbereitung";
-import PremiumZellEnergie from "@/pages/hebammenpraxis/PremiumZellEnergie";
+import PremiumZellkraftKurs from "@/pages/hebammenpraxis/PremiumZellkraftKurs";
 import Zelltraining from "@/pages/hebammenpraxis/Zelltraining";
 import Wochenbettbetreuung from "@/pages/hebammenpraxis/Wochenbettbetreuung";
 import Akupunktur from "@/pages/hebammenpraxis/Akupunktur";
@@ -98,8 +98,8 @@ const App = () => {
                 element={<Geburtsvorbereitung />} 
               />
               <Route 
-                path={ROUTE_PATHS.PREMIUM_ZELL_ENERGIE} 
-                element={<PremiumZellEnergie />} 
+                path={ROUTE_PATHS.PREMIUM_ZELLKRAFT_KURS} 
+                element={<PremiumZellkraftKurs />} 
               />
               <Route 
                 path={ROUTE_PATHS.ZELLTRAINING} 

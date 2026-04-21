@@ -2,7 +2,7 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { ROUTE_PATHS } from "@/lib/index";
-import { ShieldCheck, ArrowRight, Heart, Brain, UserCheck, BookOpen, Crown, AlertTriangle } from "lucide-react";
+import { ShieldCheck, ArrowRight, Heart, Brain, UserCheck, BookOpen, Crown, AlertTriangle, Wind, Users, Hospital, Activity } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export default function Geburtsvorbereitung() {
@@ -26,7 +26,7 @@ export default function Geburtsvorbereitung() {
               <span className="text-orange-600">Sicherheit.</span>
             </h1>
             <p className="text-xl lg:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl">
-              Wir bereiten Sie auf das Wunder der Geburt vor. Mit bewährtem Hebammenwissen als starkem Fundament, um Ängste abzubauen und den Kopf auf die bevorstehende Aufgabe einzustellen.
+              Wir bereiten Sie auf das Wunder der Geburt vor. Mit bewährtem Hebammenwissen als starkem Fundament, um Ängste abzubauen, den Partner einzubinden und den Kopf auf die bevorstehende Aufgabe einzustellen.
             </p>
             <div className="flex flex-wrap gap-5">
                <Link to={ROUTE_PATHS.CONTACT} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
@@ -42,21 +42,24 @@ export default function Geburtsvorbereitung() {
 
       {/* Das Basis-Fundament */}
       <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-20 max-w-3xl mx-auto">
-            <h2 className="text-4xl font-serif text-primary mb-6">Das Fundament der klassischen Vorbereitung</h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Der klassische Geburtsvorbereitungskurs (oft eine Kassenleistung) legt das intellektuelle Fundament. Sie lernen den Prozess verstehen, was Ihnen Sicherheit und innere Ruhe gibt.
+            <h2 className="text-3xl md:text-5xl font-serif text-primary mb-6">Das Fundament der klassischen Vorbereitung</h2>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              Der klassische Geburtsvorbereitungskurs (als anerkannte Kassenleistung) legt Ihr unverzichtbares intellektuelles Fundament. Sie lernen den reinen Prozess verstehen – anatomisch, logistisch und mental. Dieses Grundlagenwissen ist der erste, entscheidende Schritt, um Ausgeliefertsein in Sicherheit zu verwandeln.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {[
-              { icon: <BookOpen className="text-blue-600" />, title: "Die Phasen der Geburt", desc: "Verstehen Sie genau, was in Ihrem Körper während der Eröffnungs-, Übergangs- und Austrittsphase vor sich geht." },
-              { icon: <Brain className="text-primary" />, title: "Schmerz & Angst", desc: "Demystifizierung des Geburtsschmerzes. Wissen baut Ängste ab und hilft, Verkrampfungen im Vorfeld mental zu adressieren." },
-              { icon: <Heart className="text-red-500" />, title: "Stillen & Wochenbett", desc: "Die allerersten Tage mit dem Baby. Wie Sie das Bonding optimal gestalten und sich auf das Wochenbett vorbereiten." }
+              { icon: <BookOpen className="text-blue-600" />, title: "Die Geburtsphasen", desc: "Verstehen Sie von Grund auf, was anatomisch während der Eröffnungs-, Übergangs- und Austrittsphase vor sich geht, um dem Prozess zu vertrauen." },
+              { icon: <Wind className="text-teal-600" />, title: "Atmung & Positionen", desc: "Erlernen Sie handfeste Atemtechniken und entlastende Gebärpositionen, die Ihnen helfen, Wehen aktiv zu veratmen und mit dem Körper zu arbeiten." },
+              { icon: <Brain className="text-primary" />, title: "Mindset & Angstabbau", desc: "Demystifizierung des Geburtsschmerzes. Faktisches Wissen minimiert die Angstspirale und hilft Ihnen, körperliche Verkrampfungen aufzulösen." },
+              { icon: <Users className="text-orange-500" />, title: "Teamwork im Kreißsaal", desc: "Wie Ihr Partner (oder Ihre Begleitung) wirklich helfen kann: Von wirksamen Massagetechniken bis zur emotionalen Verankerung unter starken Wehen." },
+              { icon: <Hospital className="text-purple-500" />, title: "Abläufe & Interventionen", desc: "Was passiert eigentlich bei der Klinikaufnahme? Wir besprechen medizinische Eingriffe (wie CTG, Wehentropf oder PDA) transparent, damit Sie vorbereitet sind." },
+              { icon: <Heart className="text-red-500" />, title: "Stillen & Babypflege", desc: "Die ersten 48 Stunden: Vom goldenen Bonding, über grundlegende Stillpositionen bis zur Grundpflege des Säuglings (Wickeln, Halten, Baden)." }
             ].map((col, i) => (
-               <div key={i} className="bg-primary/5 p-10 rounded-[2.5rem] border border-primary/10">
+               <div key={i} className="bg-primary/5 p-8 lg:p-10 rounded-[2.5rem] border border-primary/10 hover:border-primary/20 transition-all hover:-translate-y-1 hover:shadow-lg">
                  <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm">
                    {col.icon}
                  </div>
@@ -64,6 +67,18 @@ export default function Geburtsvorbereitung() {
                  <p className="text-muted-foreground leading-relaxed">{col.desc}</p>
                </div>
             ))}
+          </div>
+          
+          <div className="bg-[#f8f9fa] rounded-3xl p-8 border border-border flex flex-col md:flex-row gap-8 items-center justify-between">
+             <div>
+                <h4 className="flex items-center gap-2 text-xl font-bold text-primary mb-2"><Activity className="text-orange-500" /> Kassenleistung</h4>
+                <p className="text-muted-foreground max-w-2xl">
+                  Die Kosten für den reinen Basis-Geburtsvorbereitungskurs werden bei gesetzlich Versicherten in der Regel komplett für die Schwangere von der Krankenkasse übernommen.
+                </p>
+             </div>
+             <Link to={ROUTE_PATHS.CONTACT} className="bg-white border border-border text-primary font-bold px-8 py-3 rounded-xl shadow-sm hover:shadow-md transition-all whitespace-nowrap">
+               Anfrage stellen
+             </Link>
           </div>
         </div>
       </section>
@@ -105,8 +120,8 @@ export default function Geburtsvorbereitung() {
                  <p className="text-muted-foreground mb-8">
                    Sichern Sie sich nicht nur das Wissen, sondern die physische <strong>Urkraft</strong>. Laden Sie Ihre Zell-Batterie mit ATP und Mineralien tiefenphysiologisch voll auf – für eine Intervention-freie Geburt.
                  </p>
-                 <Link to={ROUTE_PATHS.PREMIUM_ZELL_ENERGIE} className="w-full bg-orange-600 text-white px-8 py-5 rounded-xl font-bold hover:bg-orange-700 transition-all flex items-center justify-center gap-2 mb-4">
-                   Details zum Premium-Modul <ArrowRight size={18} />
+                 <Link to={ROUTE_PATHS.PREMIUM_ZELLKRAFT_KURS} className="w-full bg-orange-600 text-white px-8 py-5 rounded-xl font-bold hover:bg-orange-700 transition-all flex items-center justify-center gap-2 mb-4">
+                   Details zum Premium-Zellkraft-Kurs <ArrowRight size={18} />
                  </Link>
                  <p className="text-xs text-muted-foreground uppercase tracking-widest">Die St. Petersburger Schule</p>
               </div>
