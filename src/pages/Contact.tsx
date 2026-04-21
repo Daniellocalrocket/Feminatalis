@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ROUTE_PATHS } from "@/lib/index";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, ExternalLink } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, ExternalLink, Calendar, Users, HeartPulse, ChevronRight, MessageSquare } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { IMAGES } from "@/assets/images";
+import SEO from "@/components/SEO";
 
 const springPresets = {
   gentle: { type: "spring", stiffness: 300, damping: 35 },
@@ -12,161 +13,186 @@ const springPresets = {
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#fff9f2]">
+      <SEO 
+        title="Kontakt & Terminbuchung | Feminatalis"
+        description="Wählen Sie Ihren Weg zu uns. Direkte Terminbuchung für die Naturheilpraxis oder Vorqualifizierung für die Hebammenbegleitung."
+      />
+
       {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-10">
-          <img
-            src={IMAGES.WELLNESS_NATURAL_6}
-            alt="Natural Wellness"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-primary/5 to-transparent -z-10" />
+        <div className="container mx-auto px-4 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={springPresets.gentle}
-            className="max-w-3xl mx-auto text-center"
+            className="max-w-3xl mx-auto"
           >
-            <h1 className="text-4xl md:text-6xl font-semibold text-foreground mb-6">
-              Lass uns sprechen
+            <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-xs font-bold uppercase tracking-widest mb-6">
+              Persönlicher Kontakt
+            </span>
+            <h1 className="text-4xl md:text-6xl font-serif text-primary mb-6">
+              Lass uns den ersten <br /> Schritt gemeinsam gehen.
             </h1>
-            <p className="text-xl text-muted-foreground">
-              Ich begleite dich empathisch und fachkundig auf deinem Weg zum Wunschkind.
-              Vereinbare ein Erstgespräch oder schick mir deine Fragen.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              Egal ob du eine medizinische Behandlung in der Naturheilpraxis suchst oder eine empathische Begleitung durch deine Schwangerschaft wünschst – ich bin für dich da.
             </p>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-12 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Left Column: Calendar & Accessibility Info */}
+      {/* Gateway Section */}
+      <section className="pb-24">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+            
+            {/* Option A: Naturheilpraxis */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={springPresets.gentle}
-              className="space-y-12"
             >
-              <div className="space-y-6">
-                <h2 className="text-3xl font-serif text-primary underline decoration-accent/20 underline-offset-4 font-bold">Termin direkt online buchen</h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  Wählen Sie Ihren passenden Termin direkt aus meinem Kalender. Sie erhalten sofort eine Bestätigung per E-Mail. 
-                  Für Akut-Anfragen nutzen Sie bitte weiterhin das Telefon.
-                </p>
-                
-                {/* Booking CTA Button for Mobile/Direct access */}
-                <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <a 
-                    href="https://calendar.app.google/RYQGskXW5jivjhBk6" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="bg-accent text-white px-8 py-5 rounded-2xl font-bold hover:bg-accent/90 transition-all flex items-center justify-center gap-3 shadow-xl hover:scale-[1.02] active:scale-[0.98]"
-                  >
-                    <Clock size={20} /> Jetzt Termin wählen
-                  </a>
+              <Card className="group h-full border-none shadow-2xl rounded-[3rem] overflow-hidden bg-white hover:shadow-primary/5 transition-all duration-500">
+                <div className="h-32 bg-primary/5 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                  <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary">
+                    <Calendar size={32} />
+                  </div>
                 </div>
-
-                {/* Secure Embedded Booking Frame */}
-                <div className="rounded-[2.5rem] overflow-hidden border border-border shadow-2xl bg-white p-2">
-                   <div className="relative w-full min-h-[600px] md:min-h-[750px] bg-muted/20">
-                     <iframe 
-                       src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ25nfo5KWrAQ06zJe6zwyNruIvcbVjEHxkR5PFo9uhkZ_1GpZL4G8COmvRmcLOKgMIFGG8-mKeA?gv=true" 
-                       style={{ border: 0 }} 
-                       className="absolute inset-0 w-full h-full rounded-2xl"
-                       frameBorder="0" 
-                       title="Terminbuchung feminatalis"
-                     ></iframe>
-                   </div>
-                </div>
-                <p className="text-[11px] text-muted-foreground italic text-center">
-                  Sichere Buchung über Google Calendar. Ihre Daten werden verschlüsselt übertragen.
-                </p>
-              </div>
-
-              <div className="grid gap-6">
-                <Card className="border-none bg-primary/5 rounded-[2rem]">
-                  <CardContent className="p-8 flex items-start gap-5">
-                    <div className="p-4 rounded-2xl bg-white shadow-sm text-primary">
-                      <MapPin size={24} />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-primary mb-1">Praxis Bad Schönborn</h4>
-                      <p className="text-muted-foreground">Hebelstr. 3A, 76669 Bad-Schönborn</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <Card className="border-none bg-orange-50/50 rounded-[2rem]">
-                    <CardContent className="p-8 flex items-start gap-5">
-                      <div className="p-4 rounded-2xl bg-white shadow-sm text-orange-600">
-                        <Phone size={24} />
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-primary mb-1">Telefon</h4>
-                        <a href="tel:072538468728" className="text-muted-foreground hover:text-primary transition-colors">07253-8468728</a>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
+                <CardContent className="p-8 md:p-12">
+                  <h3 className="text-2xl md:text-3xl font-serif text-primary mb-4 text-center">Naturheilpraxis & Ästhetik</h3>
+                  <p className="text-muted-foreground text-center mb-10 leading-relaxed min-h-[3rem]">
+                    Termine für TCM, Akupunktur, Darmsanierung oder die Poring-Methode® können Sie bequem direkt online reservieren.
+                  </p>
+                  
+                  <div className="space-y-4">
+                    <a 
+                      href="https://calendar.app.google/RYQGskXW5jivjhBk6" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="w-full bg-primary text-white h-16 rounded-2xl font-bold flex items-center justify-center gap-3 shadow-lg hover:bg-primary/90 hover:-translate-y-1 transition-all group/btn"
+                    >
+                      <Clock size={20} /> Jetzt Termin wählen
+                      <ExternalLink size={16} className="opacity-50 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
+                    </a>
+                    <p className="text-[11px] text-center text-muted-foreground uppercase tracking-widest font-medium opacity-60">
+                      Öffnet Google Calendar Booking
+                    </p>
+                  </div>
+                  
+                  <ul className="mt-12 space-y-4 border-t border-border pt-8">
+                     {[
+                       "Direkte Terminauswahl",
+                       "Sofortige Bestätigung",
+                       "Erinnerung per E-Mail"
+                     ].map((item, i) => (
+                       <li key={i} className="flex items-center gap-3 text-sm text-primary/70">
+                         <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                         {item}
+                       </li>
+                     ))}
+                  </ul>
+                </CardContent>
+              </Card>
             </motion.div>
 
-            {/* Right Column: Contact Form Placeholder */}
+            {/* Option B: Hebammenpraxis */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={springPresets.gentle}
             >
-              <div className="sticky top-24">
-                <h2 className="text-3xl font-serif text-primary mb-8 underline decoration-accent/20 underline-offset-4">Anfrage senden</h2>
-                <Card className="shadow-2xl border-none overflow-hidden rounded-[3rem] bg-white border border-border/50">
-                  <CardContent className="p-0">
-                    <div className="flex flex-col items-center justify-center min-h-[600px] bg-gradient-to-br from-primary/5 via-white to-orange-50/30 p-12 text-center gap-8">
-                      <div className="relative">
-                        <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center">
-                          <Mail className="w-10 h-10 text-primary" />
-                        </div>
-                        <div className="absolute inset-0 rounded-full border-2 border-primary/20 animate-ping opacity-30" />
-                      </div>
+              <Card className="group h-full border-none shadow-2xl rounded-[3rem] overflow-hidden bg-white border-2 border-accent/5 hover:shadow-accent/5 transition-all duration-500">
+                <div className="h-32 bg-accent/5 flex items-center justify-center group-hover:bg-accent/10 transition-colors">
+                  <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-accent">
+                    <MessageSquare size={32} />
+                  </div>
+                </div>
+                <CardContent className="p-8 md:p-12">
+                  <h3 className="text-2xl md:text-3xl font-serif text-primary mb-4 text-center">Hebammenpraxis & Kurse</h3>
+                  <p className="text-muted-foreground text-center mb-10 leading-relaxed min-h-[3rem]">
+                    Für die Betreuung in der Schwangerschaft und Kurse ist ein kurzes Kennenlernen wichtig, um zu prüfen, ob wir zueinander passen.
+                  </p>
+                  
+                  <div className="space-y-4">
+                    <Link 
+                      to={ROUTE_PATHS.VORQUALIFIZIERUNG}
+                      className="w-full bg-accent text-white h-16 rounded-2xl font-bold flex items-center justify-center gap-3 shadow-lg hover:bg-accent/90 hover:-translate-y-1 transition-all group/btn"
+                    >
+                      <Users size={20} /> Vorqualifizierung starten
+                      <ChevronRight size={20} className="group-hover/btn:translate-x-1 transition-transform" />
+                    </Link>
+                    <p className="text-[11px] text-center text-accent uppercase tracking-widest font-bold">
+                      Empfohlen für neue Anfragen
+                    </p>
+                  </div>
 
-                      <div className="space-y-4">
-                        <h3 className="text-2xl font-serif text-primary">Direktkontakt & Formular</h3>
-                        <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
-                          Nutzen Sie unser gesichertes Kontaktformular für Ihre Anfrage. Wir melden uns zeitnah bei Ihnen zurück.
-                        </p>
-                      </div>
-
-                      <div className="w-full max-w-sm border border-dashed border-primary/30 rounded-3xl p-8 bg-white/50 backdrop-blur-sm">
-                         <p className="text-xs text-muted-foreground font-bold uppercase tracking-widest mb-6">Individuelle Anfrage</p>
-                         <div className="flex flex-col gap-4">
-                            <Link 
-                               to={ROUTE_PATHS.VORQUALIFIZIERUNG} 
-                               className="bg-primary text-white py-4 rounded-xl font-bold shadow-lg hover:bg-primary/95 transition-all flex items-center justify-center gap-2"
-                            >
-                               <Mail size={18} /> Zum Kontaktformular
-                            </Link>
-                            <p className="text-[10px] text-muted-foreground italic">
-                               Nutzen Sie unser Vorqualifizierungs-Formular für eine schnellere Bearbeitung.
-                            </p>
-                         </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
+                  <ul className="mt-12 space-y-4 border-t border-border pt-8">
+                     {[
+                       "Individuelle Kapazitätsprüfung",
+                       "Persönliches Match-Making",
+                       "Rückmeldung innerhalb von 24h"
+                     ].map((item, i) => (
+                       <li key={i} className="flex items-center gap-3 text-sm text-primary/70">
+                         <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                         {item}
+                       </li>
+                     ))}
+                  </ul>
+                </CardContent>
+              </Card>
             </motion.div>
+
           </div>
         </div>
       </section>
 
-      {/* Map Section – anklickbar */}
-      <section className="w-full h-[400px] bg-muted relative overflow-hidden">
+      {/* Info Blocks */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div className="flex flex-col items-center text-center p-10 rounded-[3rem] bg-slate-50 border border-slate-100 transition-all hover:bg-slate-100/50">
+               <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary mb-6">
+                 <MapPin size={24} />
+               </div>
+               <h4 className="text-lg font-serif text-primary mb-2 font-bold">Standort</h4>
+               <p className="text-muted-foreground text-sm uppercase tracking-wider font-medium mb-4">Praxis Bad Schönborn</p>
+               <p className="text-primary font-medium leading-relaxed">
+                 Hebelstr. 3A <br /> 76669 Bad-Schönborn
+               </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center p-10 rounded-[3rem] bg-orange-50 border border-orange-100 transition-all hover:bg-orange-100/50">
+               <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-orange-600 mb-6">
+                 <Phone size={24} />
+               </div>
+               <h4 className="text-lg font-serif text-primary mb-2 font-bold">Direkter Draht</h4>
+               <p className="text-muted-foreground text-sm uppercase tracking-wider font-medium mb-4">Für Rückfragen & Notfälle</p>
+               <a href="tel:072538468728" className="text-primary text-xl font-bold hover:text-orange-600 transition-colors">
+                 07253-8468728
+               </a>
+            </div>
+
+            <div className="flex flex-col items-center text-center p-10 rounded-[3rem] bg-primary/5 border border-primary/10 transition-all hover:bg-primary/10">
+               <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary mb-6">
+                 <Mail size={24} />
+               </div>
+               <h4 className="text-lg font-serif text-primary mb-2 font-bold">E-Mail</h4>
+               <p className="text-muted-foreground text-sm uppercase tracking-wider font-medium mb-4">Schriftliche Anfragen</p>
+               <a href="mailto:info@feminatalis.de" className="text-primary font-bold hover:text-accent transition-colors">
+                 info@feminatalis.de
+               </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="w-full h-[500px] relative overflow-hidden bg-slate-100 border-t border-border">
         <a
           href="https://www.google.com/maps/search/?api=1&query=Hebelstr.+3A,+76669+Bad-Sch%C3%B6nborn"
           target="_blank"
@@ -174,19 +200,19 @@ export default function Contact() {
           className="absolute inset-0 flex items-center justify-center group"
           aria-label="Praxis auf Google Maps öffnen"
         >
-          <div className="text-center space-y-4 px-4 z-10">
-            <div className="w-16 h-16 rounded-full bg-primary/15 flex items-center justify-center mx-auto group-hover:bg-primary/25 transition-colors">
+          <div className="text-center space-y-6 px-4 z-10">
+            <div className="w-20 h-20 rounded-full bg-white shadow-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-500">
               <MapPin className="h-8 w-8 text-primary" />
             </div>
-            <p className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
-              Hebelstr. 3A, 76669 Bad-Schönborn
-            </p>
-            <p className="text-sm text-muted-foreground flex items-center justify-center gap-1 group-hover:text-primary/70 transition-colors">
-              <ExternalLink size={14} />
-              Auf Google Maps öffnen
-            </p>
+            <div className="bg-white/80 backdrop-blur-md p-6 rounded-[2rem] shadow-xl border border-white">
+              <p className="text-xl font-serif text-primary font-bold mb-1">
+                Feminatalis Praxis
+              </p>
+              <p className="text-muted-foreground flex items-center justify-center gap-2">
+                <ExternalLink size={16} /> Auf Google Maps anzeigen
+              </p>
+            </div>
           </div>
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background pointer-events-none" />
         </a>
       </section>
     </div>
