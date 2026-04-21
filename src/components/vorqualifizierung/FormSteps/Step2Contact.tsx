@@ -17,13 +17,29 @@ export default function Step2Contact() {
   const areas = watch("areas") || [];
 
   useEffect(() => {
-    // Check if PLZ is in correct region (starting with 76 for Bruchsal/Bad Schönborn area)
+    // Define nearby zip code patterns (approx. 10km driving distance around Bad Schönborn 76669)
+    const isNearby = (plz: string) => {
+      if (!plz || plz.length !== 5) return true; // Don't show info while typing
+
+      // Strict list of nearby 5-digit zip codes
+      const nearbyZips = [
+        "76669", // Bad Schönborn (Mingolsheim / Langenbrücken)
+        "76709", // Kronau
+        "76684", // Östringen
+        "76698", // Ubstadt-Weiher
+        "69254", // Malsch (bei Wiesloch)
+        "68789", // St. Leon-Rot
+        "69242", // Mühlhausen
+        "69231", // Rauenberg
+        "76694", // Forst
+        "76707", // Hambrücken
+      ];
+
+      return nearbyZips.includes(plz);
+    };
+
     if (zipCode && zipCode.length === 5) {
-      if (!zipCode.startsWith("76")) {
-        setShowPlzInfo(true);
-      } else {
-        setShowPlzInfo(false);
-      }
+      setShowPlzInfo(!isNearby(zipCode));
     } else {
       setShowPlzInfo(false);
     }
