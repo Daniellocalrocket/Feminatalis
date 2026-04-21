@@ -14,7 +14,7 @@ const getMindsetQuestions = (areas: string[] = []) => {
     {
       id: "mqSituation",
       icon: Activity,
-      title: "1. Aktuelle Situation",
+      title: "1. Wo stehen Sie aktuell?",
       options: isMaternal ? [
         { value: "A", label: "Ich stehe ganz am Anfang (Kinderwunsch/Früh-SS)." },
         { value: "B", label: "Ich bin mittendrin (Fortgeschrittene SS/Wochenbett)." },
@@ -28,7 +28,7 @@ const getMindsetQuestions = (areas: string[] = []) => {
     {
       id: "mqMotivation",
       icon: Target,
-      title: "2. Motivation (Tiefe)",
+      title: "2. Was ist Ihr wichtigstes Ziel?",
       options: [
         { value: "A", label: "Ich suche allgemeine Tipps und Sicherheit für den Alltag." },
         { value: "B", label: `Ich möchte verstehen, wie mein Körper ${isMaternal ? 'in dieser Phase ' : ''}funktioniert.` },
@@ -38,7 +38,7 @@ const getMindsetQuestions = (areas: string[] = []) => {
     {
       id: "mqExperience",
       icon: Brain,
-      title: "3. Erfahrungs-Level",
+      title: "3. Ihr bisheriger Wissensstand",
       options: [
         { value: "A", label: `Ich verlasse mich bisher primär auf die ${isMaternal ? 'Standard-Vorsorge' : 'klassische Schulmedizin'}.` },
         { value: "B", label: "Ich habe mich schon eingelesen und vereinzelt Dinge ausprobiert." },
@@ -48,7 +48,7 @@ const getMindsetQuestions = (areas: string[] = []) => {
     {
       id: "mqIndividuality",
       icon: Settings2,
-      title: "4. Der Hauptfilter (Individualität)",
+      title: "4. Fokus & Individualität",
       options: [
         { value: "A", label: "Ich fühle mich mit allgemeinen, bewährten Empfehlungen am wohlsten." },
         { value: "B", label: "Ich suche eine Mischung aus Standard und individuellen Ansätzen." },
@@ -58,7 +58,7 @@ const getMindsetQuestions = (areas: string[] = []) => {
     {
       id: "mqResponsibility",
       icon: Hand,
-      title: "5. Eigenverantwortung",
+      title: "5. Aktive Mitwirkung",
       options: [
         { value: "A", label: "Ich möchte mich erst einmal unverbindlich informieren." },
         { value: "B", label: "Ich bin bereit für Veränderungen, brauche aber viel Anleitung." },
@@ -68,7 +68,7 @@ const getMindsetQuestions = (areas: string[] = []) => {
     {
       id: "mqInvestment",
       icon: PiggyBank,
-      title: "6. Investitions-Mindset",
+      title: "6. Investition in Ihre Gesundheit",
       options: [
         { value: "A", label: "Die Begleitung sollte sich strikt im Rahmen der Kassenleistungen bewegen." },
         { value: "B", label: "Ich bin bereit für sinnvolle Ergänzungen, sofern der Nutzen klar ist." },
@@ -78,7 +78,7 @@ const getMindsetQuestions = (areas: string[] = []) => {
     {
       id: "mqReality",
       icon: Briefcase,
-      title: "7. Reality-Check (Arbeitsweise)",
+      title: "7. Passt mein Ansatz zu Ihnen?",
       options: [
         { value: "A", label: "Ich bin unsicher, ob eine aktive Mitarbeit das Richtige für mich ist." },
         { value: "B", label: "Das Konzept klingt interessant, ich habe aber noch Fragen zur Umsetzung." },
