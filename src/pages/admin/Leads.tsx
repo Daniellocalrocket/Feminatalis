@@ -149,7 +149,7 @@ export default function AdminLeads() {
     const headers = [
       "Datum", "Vorname", "Nachname", "E-Mail", "Telefon", 
       "PLZ", "Versicherung", "Bereiche", "Dringlichkeit", 
-      "Info", "Situation", "Motivation", "Erfahrung", "Individualitaet", "Eigenverantwortung", "Investition", "RealityCheck", "Status"
+      "Info", "Status_Aktuell", "Hauptziel", "Wissenstand", "Fokus", "Umsetzung", "Investition", "Ansatz_Match", "Status"
     ];
 
     const csvRows = [
@@ -424,13 +424,13 @@ export default function AdminLeads() {
                   <h4 className="font-serif text-lg text-primary mb-2">Mindset & Motivation</h4>
                   
                   {[
-                    { label: "1. Aktuelle Situation", value: selectedLead.mindset_situation },
-                    { label: "2. Motivation", value: selectedLead.mindset_motivation },
-                    { label: "3. Erfahrung", value: selectedLead.mindset_experience },
-                    { label: "4. Individualität", value: selectedLead.mindset_individuality },
-                    { label: "5. Eigenverantwortung", value: selectedLead.mindset_responsibility },
-                    { label: "6. Investition", value: selectedLead.mindset_investment },
-                    { label: "7. Reality-Check", value: selectedLead.mindset_reality }
+                    { label: "1. Aktueller Status", value: selectedLead.mindset_situation },
+                    { label: "2. Hauptziel", value: selectedLead.mindset_motivation },
+                    { label: "3. Wissenstand", value: selectedLead.mindset_experience },
+                    { label: "4. Fokus & Begleitung", value: selectedLead.mindset_individuality },
+                    { label: "5. Aktive Umsetzung", value: selectedLead.mindset_responsibility },
+                    { label: "6. Investitionsbereitschaft", value: selectedLead.mindset_investment },
+                    { label: "7. Ansatz-Match", value: selectedLead.mindset_reality }
                   ].map((item, idx) => (
                     <div key={idx} className="flex flex-col border-b border-primary/5 pb-2 last:border-0 last:pb-0">
                        <div className="flex justify-between items-center mb-1">
