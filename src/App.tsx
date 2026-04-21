@@ -40,6 +40,7 @@ import Beschwerden from "@/pages/hebammenpraxis/Beschwerden";
 import Mikronaehrstoffe from "@/pages/hebammenpraxis/Mikronaehrstoffe";
 import CosMedea from "@/pages/CosMedea";
 import Vorqualifizierung from "@/pages/Vorqualifizierung";
+import ZellkraftRoadmap from "@/pages/kinderwunsch/ZellkraftRoadmap";
 import Impressum from "@/pages/Impressum";
 
 // Admin Pages
@@ -156,6 +157,10 @@ const App = () => {
               <Route 
                 path={ROUTE_PATHS.KINDERWUNSCH} 
                 element={<Kinderwunsch />} 
+              />
+              <Route 
+                path={ROUTE_PATHS.ZELLKRAFT_ROADMAP} 
+                element={<ZellkraftRoadmap />} 
               />
               <Route 
                 path={ROUTE_PATHS.UEBER_MICH} 

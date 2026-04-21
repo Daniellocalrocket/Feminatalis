@@ -38,6 +38,7 @@ export const ROUTE_PATHS = {
   
   // Kinderwunsch
   KINDERWUNSCH: "/kinderwunsch",
+  ZELLKRAFT_ROADMAP: "/kinderwunsch/zellkraft-roadmap",
   
   // CosMedea & Shop
   COSMEDEA: "/naturheilpraxis-cosmedea",

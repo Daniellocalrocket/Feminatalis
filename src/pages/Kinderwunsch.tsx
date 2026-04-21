@@ -90,6 +90,58 @@ export default function Kinderwunsch() {
         </div>
       </section>
 
+      {/* Zellkraft Roadmap Teaser (New Section) */}
+      <section className="py-24 bg-[#fff9f2] relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/5 blur-[100px] -z-10" />
+        <div className="container mx-auto px-4 max-w-6xl">
+           <div className="bg-white p-12 lg:p-20 rounded-[4rem] border border-accent/10 shadow-2xl relative overflow-hidden">
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl" />
+              <div className="grid lg:grid-cols-12 gap-16 items-center">
+                 <div className="lg:col-span-7">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-xs font-bold tracking-widest uppercase mb-8">
+                       <Zap size={14} /> Exklusives Online-Programm
+                    </div>
+                    <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6 leading-tight">
+                       Vom Informationschaos <br />
+                       <span className="text-accent italic font-light">zur Strategin.</span>
+                    </h2>
+                    <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
+                       Fragst du dich auch oft: „Was soll ich als Nächstes tun?“ Wenn dich die Flut an Kinderwunsch-Tipps lähmt, ist es Zeit für eine klare Strategie. In meiner <strong>Zellkraft-Roadmap</strong> transformieren wir dein Wissen in einen exakten 90-Tage-Fahrplan.
+                    </p>
+                    <div className="grid sm:grid-cols-2 gap-4 mb-10">
+                       {[
+                         "90-Tage-Zell-Optimierung",
+                         "Plan A, B und C Strategie",
+                         "Befund-Check & Laborsouveränität",
+                         "Regulation des Nervensystems"
+                       ].map((item, i) => (
+                         <div key={i} className="flex items-center gap-3 text-sm font-medium text-primary">
+                           <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center text-accent">
+                             <CheckCircle2 size={12} />
+                           </div>
+                           {item}
+                         </div>
+                       ))}
+                    </div>
+                    <Link to={ROUTE_PATHS.ZELLKRAFT_ROADMAP} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold transition-all shadow-xl hover:-translate-y-1 inline-flex items-center gap-3">
+                       Mehr zur Zellkraft-Roadmap <ArrowRight />
+                    </Link>
+                 </div>
+                 <div className="lg:col-span-5 hidden lg:block">
+                    <div className="relative">
+                       <div className="absolute inset-0 bg-accent rounded-3xl rotate-6 blur-md opacity-10" />
+                       <div className="bg-slate-50 p-12 rounded-3xl border border-border shadow-inner flex flex-col items-center text-center">
+                          <Target className="w-16 h-16 text-accent mb-6" />
+                          <h3 className="text-2xl font-serif text-primary mb-2">90 Tage</h3>
+                          <p className="text-sm text-muted-foreground uppercase tracking-widest font-bold">Bioenergetische Strategie</p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+      </section>
+
       {/* Partners & Success */}
       <section className="py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 max-w-5xl">
