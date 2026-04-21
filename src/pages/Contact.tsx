@@ -67,17 +67,15 @@ export default function Contact() {
                   </p>
                   
                   <div className="space-y-4">
-                    <a 
-                      href="https://calendar.app.google/RYQGskXW5jivjhBk6" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="w-full bg-primary text-white h-16 rounded-2xl font-bold flex items-center justify-center gap-3 shadow-lg hover:bg-primary/90 hover:-translate-y-1 transition-all group/btn"
+                    <Link 
+                      to={`${ROUTE_PATHS.VORQUALIFIZIERUNG}?type=naturheilpraxis`}
+                      className="w-full bg-primary text-white h-16 rounded-2xl font-bold flex items-center justify-center gap-3 shadow-lg hover:bg-primary/95 hover:-translate-y-1 transition-all group/btn"
                     >
-                      <Clock size={20} /> Jetzt Termin wählen
-                      <ExternalLink size={16} className="opacity-50 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
-                    </a>
+                      <Clock size={20} /> Behandlung anfragen
+                      <ChevronRight size={16} className="opacity-50 group-hover/btn:translate-x-1 transition-transform" />
+                    </Link>
                     <p className="text-[11px] text-center text-muted-foreground uppercase tracking-widest font-medium opacity-60">
-                      Öffnet Google Calendar Booking
+                      Für TCM, Labor & Therapie
                     </p>
                   </div>
                   
@@ -118,14 +116,14 @@ export default function Contact() {
                   
                   <div className="space-y-4">
                     <Link 
-                      to={ROUTE_PATHS.VORQUALIFIZIERUNG}
+                      to={`${ROUTE_PATHS.VORQUALIFIZIERUNG}?type=hebamme`}
                       className="w-full bg-accent text-white h-16 rounded-2xl font-bold flex items-center justify-center gap-3 shadow-lg hover:bg-accent/90 hover:-translate-y-1 transition-all group/btn"
                     >
-                      <Users size={20} /> Vorqualifizierung starten
+                      <Users size={20} /> Betreuung anfragen
                       <ChevronRight size={20} className="group-hover/btn:translate-x-1 transition-transform" />
                     </Link>
                     <p className="text-[11px] text-center text-accent uppercase tracking-widest font-bold">
-                      Empfohlen für neue Anfragen
+                      Kennenlernen & Verfügbarkeit
                     </p>
                   </div>
 

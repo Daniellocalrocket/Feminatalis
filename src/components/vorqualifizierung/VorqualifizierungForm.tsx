@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm, FormProvider } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion, AnimatePresence } from "framer-motion";
+import { useSearchParams } from "react-router-dom";
 import { vorqualifizierungSchema, defaultValues, VorqualifizierungData } from "./schema";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -29,7 +30,10 @@ const MINDSET_QUESTIONS_COUNT = 7;
 
 
 export default function VorqualifizierungForm() {
-  const [currentStepIndex, setCurrentStepIndex] = useState(0); // 0: area, 1: contact, 2: mindset, 3: details, 4: final
+  const [searchParams] = useSearchParams();
+  const typeParam = searchParams.get("type"); // 'hebamme' or 'naturheilpraxis'
+  
+  const [currentStepIndex, setCurrentStepIndex] = useState(typeParam ? 1 : 0); // 0: area, 1: contact, 2: mindset, 3: details, 4: final
   const [mindsetStep, setMindsetStep] = useState(0); // 0-6
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -39,7 +43,15 @@ export default function VorqualifizierungForm() {
     mode: "onBlur",
   });
 
-  const { handleSubmit, trigger, watch, formState: { isSubmitting } } = methods;
+  const { handleSubmit, trigger, watch, setValue, formState: { isSubmitting } } = methods;
+
+  useEffect(() => {
+    if (typeParam === 'hebamme') {
+      setValue("areas", ["hebamme"], { shouldValidate: true });
+    } else if (typeParam === 'naturheilpraxis') {
+      setValue("areas", ["naturheilkunde"], { shouldValidate: true });
+    }
+  }, [typeParam, setValue]);
 
   const currentStepId = BASE_STEPS[currentStepIndex].id;
   const totalDisplaySteps = BASE_STEPS.length + MINDSET_QUESTIONS_COUNT - 1;
@@ -75,7 +87,7 @@ export default function VorqualifizierungForm() {
   const prevStep = () => {
     if (currentStepId === "mindset" && mindsetStep > 0) {
       setMindsetStep(prev => prev - 1);
-    } else if (currentStepIndex > 0) {
+    } else if (currentStepIndex > (typeParam ? 1 : 0)) {
       setCurrentStepIndex(prev => prev - 1);
       if (BASE_STEPS[currentStepIndex - 1].id === "mindset") {
         setMindsetStep(MINDSET_QUESTIONS_COUNT - 1);

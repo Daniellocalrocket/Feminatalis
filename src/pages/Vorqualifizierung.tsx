@@ -1,13 +1,23 @@
 import React from "react";
+import { useSearchParams } from "react-router-dom";
 import SEO from "@/components/SEO";
 import VorqualifizierungForm from "@/components/vorqualifizierung/VorqualifizierungForm";
 import { motion } from "framer-motion";
 
 export default function Vorqualifizierung() {
+  const [searchParams] = useSearchParams();
+  const type = searchParams.get("type");
+  
+  const pageTitle = type === 'naturheilpraxis' 
+    ? "Ihre Behandlungsanfrage" 
+    : type === 'hebamme' 
+    ? "Ihre Betreuungsanfrage" 
+    : "Persönliches Kennenlernen";
+
   return (
     <div className="bg-[#fff9f2] min-h-screen pt-24 pb-24">
       <SEO 
-        title="Persönliche Vorqualifizierung" 
+        title={`${pageTitle} | Feminatalis`}
         description="Lernen wir uns kennen. Erzählen Sie mir kurz, womit ich Ihnen helfen darf, damit ich mich optimal auf unser Erstgespräch vorbereiten kann." 
       />
       
