@@ -90,7 +90,7 @@ export default function CoursesOverview() {
       />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-white border-b border-border/50">
+      <section className="relative pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden bg-white border-b border-border/50">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/5 blur-[100px] -z-10" />
         <div className="container mx-auto px-4 max-w-6xl">
           <motion.div 
@@ -98,108 +98,26 @@ export default function CoursesOverview() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 text-primary text-xs font-bold tracking-widest uppercase mb-8 border border-primary/10">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 text-primary text-xs font-bold tracking-widest uppercase mb-6 border border-primary/10">
               <Compass size={14} /> Dein Wegbegleiter
             </div>
-            <h1 className="text-5xl md:text-7xl font-serif text-primary mb-8 leading-[1.1]">
-              Wähle deine <br /> 
-              <span className="text-accent italic font-light">Evolutionsstufe.</span>
+            <h1 className="text-4xl md:text-6xl font-serif text-primary mb-6 leading-[1.1]">
+              Kurse & <span className="text-accent italic font-light">Veranstaltungen</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Vom ersten Impuls bis zur tiefgreifenden Zell-Strategie. Entdecke unsere Formate, die dich von der reinen Informationsempfängerin zur aktiven Gestalterin deiner Biologie machen.
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Finde den Weg, der zu deiner aktuellen Phase passt.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Online Programs - The Premium Path */}
-      <section className="py-24 lg:py-32">
+      {/* Events Section - NOW FIRST */}
+      <section className="py-20 lg:py-24 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="flex items-center justify-between mb-16">
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-serif text-primary mb-2">Premium Online-Programme</h2>
-              <p className="text-muted-foreground underline decoration-accent/30 underline-offset-4">Maximale Flexibilität & biologische Tiefe</p>
-            </div>
-            <div className="hidden md:block">
-               <Sparkles className="text-accent w-12 h-12 opacity-20" />
-            </div>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-10">
-            {premiumCourses.map((course) => (
-              <motion.div
-                key={course.id}
-                whileHover={{ y: -5 }}
-                className="relative group bg-white p-10 lg:p-14 rounded-[3.5rem] border border-border hover:border-accent/40 shadow-xl shadow-primary/5 transition-all flex flex-col h-full"
-              >
-                <div className="absolute top-8 right-8">
-                  <Badge className={`bg-${course.color} text-white px-4 py-1.5 rounded-full text-[10px] uppercase font-black tracking-widest shadow-lg shadow-${course.color}/20`}>
-                    {course.badge}
-                  </Badge>
-                </div>
-
-                <div className={`w-16 h-16 rounded-2xl bg-${course.color}/5 flex items-center justify-center text-${course.color} mb-10 group-hover:scale-110 transition-transform`}>
-                  <course.icon size={32} strokeWidth={1.5} />
-                </div>
-
-                <div className="mb-4">
-                  <h3 className="text-sm font-bold text-accent uppercase tracking-[0.2em] mb-2">{course.subtitle}</h3>
-                  <h4 className="text-3xl lg:text-4xl font-serif text-primary leading-tight">{course.title}</h4>
-                </div>
-
-                <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-                  {course.description}
-                </p>
-
-                <div className="space-y-4 mb-12 flex-grow">
-                  {course.features.map((feature, i) => (
-                    <div key={i} className="flex items-center gap-3 text-primary/80 font-medium whitespace-nowrap overflow-hidden text-ellipsis">
-                      <CheckCircle2 size={18} className="text-accent shrink-0" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-
-                <Link 
-                  to={course.link} 
-                  className={`bg-${course.color} text-white w-full py-6 rounded-2xl font-bold text-center flex items-center justify-center gap-3 hover:translate-x-1 transition-all shadow-xl shadow-${course.color}/10`}
-                >
-                  Zum Programm <ArrowRight size={20} />
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Psychology Teaser / Strategic Guide */}
-      <section className="py-20 bg-primary text-white overflow-hidden relative">
-         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_0%_0%,_rgba(255,255,255,0.05)_0%,_transparent_50%)]" />
-         <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
-            <Heart className="w-16 h-16 mx-auto mb-8 text-accent animate-pulse" />
-            <h2 className="text-4xl font-serif mb-8 text-white">Welcher Weg passt zu <span className="text-accent italic">deiner</span> Situation?</h2>
-            <div className="grid md:grid-cols-2 gap-8 text-left bg-white/5 p-10 rounded-[3rem] border border-white/10 backdrop-blur-md">
-               <div className="space-y-4">
-                  <h4 className="font-bold text-accent uppercase tracking-widest text-xs">Der erste Schritt</h4>
-                  <p className="text-sm opacity-70">„Ich möchte die Praxis kennenlernen, Fragen stellen und einen Überblick über ein bestimmtes Thema bekommen.“</p>
-                  <p className="font-serif text-lg">→ Besuche ein Live-Event</p>
-               </div>
-               <div className="space-y-4 md:border-l md:border-white/10 md:pl-8">
-                  <h4 className="font-bold text-[#fde4c8] uppercase tracking-widest text-xs">Die Komplett-Lösung</h4>
-                  <p className="text-sm opacity-70">„Ich möchte volle Souveränität, einen strategischen 90-Tage Plan und tiefgreifende biologische Optimierung ohne Zeitverlust.“</p>
-                  <p className="font-serif text-lg text-[#fde4c8]">→ Wähle ein Online-Programm</p>
-               </div>
-            </div>
-         </div>
-      </section>
-
-      {/* Events Section */}
-      <section className="py-24 lg:py-32 bg-white">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-20">
-             <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6">Veranstaltungen & Termine</h2>
+          <div className="text-center mb-16">
+             <h2 className="text-3xl md:text-5xl font-serif text-primary mb-4">Veranstaltungen & Termine</h2>
              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-               Persönlicher Austausch und gezielte Workshops in Bad Schönborn. Ergänze dein Wissen durch unsere Live-Formate.
+               Persönlicher Austausch und Workshops vor Ort in Bad Schönborn.
              </p>
           </div>
 
@@ -211,7 +129,7 @@ export default function CoursesOverview() {
             <div className="text-center p-20 bg-[#fff9f2] rounded-[3rem] border border-dashed border-primary/20">
               <Calendar className="w-16 h-16 mx-auto text-primary/20 mb-6" />
               <p className="text-xl font-serif text-primary/60">Aktuell sind keine weiteren öffentlichen Termine geplant.</p>
-              <p className="text-sm text-muted-foreground mt-2">Tritt unserem Newsletter bei, um über neue Termine informiert zu werden.</p>
+              <p className="text-sm text-muted-foreground mt-2">Wir informieren dich gerne über neue Termine.</p>
             </div>
           ) : (
             <motion.div 
@@ -248,15 +166,15 @@ export default function CoursesOverview() {
                     </div>
                     <div className="flex items-center gap-3 text-sm text-muted-foreground">
                       <Users size={16} className="text-accent" />
-                      Maximale Teilnehmer: {event.max_participants}
+                      Max. {event.max_participants} Teilnehmer
                     </div>
                   </div>
 
                   <Link 
                     to={ROUTE_PATHS.CONTACT} 
-                    className="w-full py-4 rounded-xl border border-primary/20 text-primary font-bold hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2 group-inner"
+                    className="w-full py-4 rounded-xl border border-primary/20 text-primary font-bold hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2"
                   >
-                    Platz anfragen <ArrowRight size={16} className="group-hover:translate-x-1" />
+                    Platz anfragen <ArrowRight size={16} />
                   </Link>
                 </motion.div>
               ))}
@@ -265,6 +183,82 @@ export default function CoursesOverview() {
         </div>
       </section>
 
+      {/* Psychology Teaser / Strategic Guide */}
+      <section className="py-20 bg-primary text-white overflow-hidden relative">
+         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_0%_0%,_rgba(255,255,255,0.05)_0%,_transparent_50%)]" />
+         <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
+            <Heart className="w-16 h-16 mx-auto mb-8 text-accent animate-pulse" />
+            <h2 className="text-3xl lg:text-4xl font-serif mb-8 text-white">Finde die Tiefe, die du <span className="text-accent italic">jetzt</span> brauchst.</h2>
+            <div className="grid md:grid-cols-2 gap-8 text-left bg-white/5 p-10 rounded-[3rem] border border-white/10 backdrop-blur-md">
+               <div className="space-y-4">
+                  <h4 className="font-bold text-accent uppercase tracking-widest text-xs">Der erste Impuls</h4>
+                  <p className="text-sm opacity-70">„Ich möchte die Praxis kennenlernen und einen Überblick über ein bestimmtes Thema bekommen.“</p>
+                  <p className="font-serif text-lg">→ Besuche ein Live-Event</p>
+               </div>
+               <div className="space-y-4 md:border-l md:border-white/10 md:pl-8">
+                  <h4 className="font-bold text-[#fde4c8] uppercase tracking-widest text-xs">Das Strategie-Upgrade</h4>
+                  <p className="text-sm opacity-70">„Ich möchte volle Souveränität, einen strategischen Plan und tiefgreifende biologische Optimierung.“</p>
+                  <p className="font-serif text-lg text-[#fde4c8]">→ Wähle ein Online-Programm</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      {/* Online Programs - NOW BELOW EVENTS */}
+      <section className="py-20 lg:py-24">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="flex items-center justify-between mb-16">
+            <div>
+              <h2 className="text-3xl lg:text-4xl font-serif text-primary mb-2">Premium Online-Programme</h2>
+              <p className="text-muted-foreground underline decoration-accent/30 underline-offset-4">Maximale Flexibilität & biologische Tiefe</p>
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-10">
+            {premiumCourses.map((course) => (
+              <motion.div
+                key={course.id}
+                whileHover={{ y: -5 }}
+                className="relative group bg-white p-10 rounded-[3.5rem] border border-border hover:border-accent/40 shadow-xl shadow-primary/5 transition-all flex flex-col h-full"
+              >
+                <div className="absolute top-8 right-8">
+                  <Badge className={`bg-${course.color} text-white px-4 py-1.5 rounded-full text-[10px] uppercase font-black tracking-widest shadow-lg shadow-${course.color}/20`}>
+                    {course.badge}
+                  </Badge>
+                </div>
+
+                <div className={`w-14 h-14 rounded-2xl bg-${course.color}/5 flex items-center justify-center text-${course.color} mb-8 group-hover:scale-110 transition-transform`}>
+                  <course.icon size={28} strokeWidth={1.5} />
+                </div>
+
+                <div className="mb-4">
+                  <h3 className="text-xs font-bold text-accent uppercase tracking-[0.2em] mb-2">{course.subtitle}</h3>
+                  <h4 className="text-3xl font-serif text-primary leading-tight">{course.title}</h4>
+                </div>
+
+                <p className="text-muted-foreground mb-8 leading-relaxed">
+                  {course.description}
+                </p>
+
+                <div className="space-y-3 mb-10 flex-grow">
+                  {course.features.map((feature, i) => (
+                    <div key={i} className="flex items-center gap-3 text-primary/80 text-sm font-medium">
+                      <CheckCircle2 size={16} className="text-accent shrink-0" />
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+
+                <Link 
+                  to={course.link} 
+                  className={`bg-${course.color} text-white w-full py-5 rounded-2xl font-bold text-center flex items-center justify-center gap-3 hover:translate-x-1 transition-all shadow-xl shadow-${course.color}/10`}
+                >
+                  Zum Programm <ArrowRight size={20} />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       {/* Trust Quote */}
       <section className="py-24 border-t border-border/50">
          <div className="container mx-auto px-4 text-center max-w-4xl">
