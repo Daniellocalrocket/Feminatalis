@@ -163,7 +163,7 @@ export function Layout({ children }: LayoutProps) {
                 to={ROUTE_PATHS.KURS}
                 className="bg-primary text-primary-foreground px-6 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 hover:shadow-primary/20 transition-all shadow-md hover:shadow-lg active:scale-95 whitespace-nowrap"
               >
-                Kurs starten
+                Kurse & Events
               </Link>
             </div>
           </nav>
@@ -230,7 +230,7 @@ export function Layout({ children }: LayoutProps) {
                 onClick={closeMobileMenu}
                 className="bg-primary text-primary-foreground px-8 py-4 rounded-xl text-center text-lg font-semibold mt-4 shadow-lg"
               >
-                Kurs buchen
+                Kurse & Events
               </Link>
             </nav>
           </motion.div>
