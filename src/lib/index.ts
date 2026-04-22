@@ -50,6 +50,7 @@ export const ROUTE_PATHS = {
   
   // Vorqualifizierungsformular
   VORQUALIFIZIERUNG: "/kontakt/vorqualifizierung",
+  EVENT_BOOKING: "/event-buchung/:eventId",
 
   // Admin Area
   ADMIN_LOGIN: "/admin/login",

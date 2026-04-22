@@ -42,6 +42,7 @@ import CosMedea from "@/pages/CosMedea";
 import Vorqualifizierung from "@/pages/Vorqualifizierung";
 import ZellkraftRoadmap from "@/pages/kinderwunsch/ZellkraftRoadmap";
 import CoursesOverview from "@/pages/CoursesOverview";
+import EventBooking from "@/pages/EventBooking";
 import Impressum from "@/pages/Impressum";
 
 // Admin Pages
@@ -166,6 +167,10 @@ const App = () => {
               <Route 
                 path={ROUTE_PATHS.KURS} 
                 element={<CoursesOverview />} 
+              />
+              <Route 
+                path={ROUTE_PATHS.EVENT_BOOKING} 
+                element={<EventBooking />} 
               />
               <Route 
                 path={ROUTE_PATHS.UEBER_MICH} 

@@ -48,6 +48,9 @@ export default function AdminEvents() {
   const [events, setEvents] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isParticipantsDialogOpen, setIsParticipantsDialogOpen] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState<any>(null);
+  const [participants, setParticipants] = useState<any[]>([]);
   const [editingEvent, setEditingEvent] = useState<any>(null);
 
   const initialEventState = {
@@ -72,24 +75,69 @@ export default function AdminEvents() {
     setIsLoading(true);
     const { data, error } = await supabase
       .from('events')
-      .select('*')
+      .select(`
+        *,
+        event_stats (
+          registrations_count,
+          spots_left
+        )
+      `)
       .order('date', { ascending: true });
 
     if (error) {
       toast.error("Fehler beim Laden der Events");
     } else {
-      setEvents(data || []);
+      const transformedData = data.map((e: any) => ({
+        ...e,
+        registrations_count: e.event_stats?.registrations_count || 0,
+        spots_left: e.event_stats?.spots_left ?? e.max_participants
+      }));
+      setEvents(transformedData || []);
     }
     setIsLoading(false);
+  };
+
+  const fetchParticipants = async (eventId: string) => {
+    const { data, error } = await supabase
+      .from('event_registrations')
+      .select('*')
+      .eq('event_id', eventId)
+      .order('created_at', { ascending: false });
+
+    if (error) {
+      toast.error("Fehler beim Laden der Teilnehmer");
+    } else {
+      setParticipants(data || []);
+    }
+  };
+
+  const openParticipantsDialog = (event: any) => {
+    setSelectedEvent(event);
+    setParticipants([]);
+    fetchParticipants(event.id);
+    setIsParticipantsDialogOpen(true);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    // Create clean payload without virtual properties
+    const payload = {
+      title: formData.title,
+      description: formData.description,
+      date: formData.date,
+      time: formData.time,
+      location: formData.location,
+      price: formData.price,
+      max_participants: formData.max_participants,
+      category: formData.category,
+      status: formData.status
+    };
+
     if (editingEvent) {
       const { error } = await supabase
         .from('events')
-        .update(formData)
+        .update(payload)
         .eq('id', editingEvent.id);
 
       if (error) {
@@ -102,7 +150,7 @@ export default function AdminEvents() {
     } else {
       const { error } = await supabase
         .from('events')
-        .insert([formData]);
+        .insert([payload]);
 
       if (error) {
         toast.error("Event konnte nicht erstellt werden");
@@ -195,6 +243,14 @@ export default function AdminEvents() {
                       {event.category}
                     </Badge>
                     <div className="flex gap-2">
+                       <Button 
+                         variant="ghost" 
+                         size="sm" 
+                         className="rounded-xl h-10 px-4 text-primary font-bold hover:bg-primary/5"
+                         onClick={() => openParticipantsDialog(event)}
+                       >
+                         <Users size={16} className="mr-2" /> Teilnehmer ({event.registrations_count})
+                       </Button>
                        <Button variant="ghost" size="icon" className="h-10 w-10 text-primary/40 hover:text-primary hover:bg-primary/5 rounded-full" onClick={() => openEditDialog(event)}>
                          <Edit3 size={18} />
                        </Button>
@@ -231,7 +287,7 @@ export default function AdminEvents() {
                       </div>
                       <div>
                         <p className="font-bold">Belegung</p>
-                        <p>Max. {event.max_participants} Pers.</p>
+                        <p>{event.registrations_count} / {event.max_participants} Pers.</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3 text-sm text-primary/60">
@@ -253,6 +309,69 @@ export default function AdminEvents() {
             ))}
           </div>
         )}
+
+        {/* Participants Dialog */}
+        <Dialog open={isParticipantsDialogOpen} onOpenChange={setIsParticipantsDialogOpen}>
+          <DialogContent className="max-w-4xl rounded-[3rem] bg-white border-primary/5 shadow-2xl p-0 overflow-hidden">
+            <div className="p-8 border-b border-primary/5 flex items-center justify-between bg-[#fff9f2]">
+              <div>
+                <h3 className="text-2xl font-serif text-primary mb-1">Teilnehmerliste</h3>
+                <p className="text-sm text-muted-foreground">{selectedEvent?.title}</p>
+              </div>
+              <Badge variant="outline" className="bg-white px-4 py-2 text-primary font-bold shadow-sm">
+                {participants.length} Anmeldungen
+              </Badge>
+            </div>
+            
+            <div className="max-h-[60vh] overflow-y-auto p-8">
+              {participants.length === 0 ? (
+                <div className="text-center py-20 bg-slate-50 rounded-[2rem] border border-dashed border-primary/10">
+                  <p className="text-primary/40 font-serif italic text-lg">Noch keine Anmeldungen für dieses Event.</p>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  <table className="w-full text-left">
+                    <thead>
+                      <tr className="text-xs uppercase font-black tracking-widest text-primary/40 border-b border-primary/5">
+                        <th className="pb-4 pl-4">Name</th>
+                        <th className="pb-4">Kontakt</th>
+                        <th className="pb-4">Partner?</th>
+                        <th className="pb-4">Anmeldedatum</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {participants.map((p) => (
+                        <tr key={p.id} className="group hover:bg-slate-50 transition-colors">
+                          <td className="py-4 pl-4 font-bold text-primary">{p.first_name} {p.last_name}</td>
+                          <td className="py-4">
+                            <div className="flex flex-col text-xs">
+                              <span className="text-primary/70">{p.email}</span>
+                              <span className="text-primary/40">{p.phone}</span>
+                            </div>
+                          </td>
+                          <td className="py-4">
+                            {p.has_partner ? (
+                              <Badge className="bg-accent text-white border-none">Mit Partner</Badge>
+                            ) : (
+                              <span className="text-primary/20">—</span>
+                            )}
+                          </td>
+                          <td className="py-4 text-xs text-primary/40">
+                            {new Date(p.created_at).toLocaleDateString('de-DE')}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </div>
+            
+            <DialogFooter className="p-8 bg-white border-t border-primary/5">
+              <Button onClick={() => setIsParticipantsDialogOpen(false)} className="rounded-xl h-12 px-8 flex-1 sm:flex-none">Schließen</Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
 
         {/* Create/Edit Dialog */}
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>

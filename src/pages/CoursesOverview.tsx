@@ -26,20 +26,33 @@ export default function CoursesOverview() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    async function fetchEvents() {
+    async function fetchData() {
+      // Fetch combined data from events and event_stats
       const { data, error } = await supabase
         .from('events')
-        .select('*')
+        .select(`
+          *,
+          event_stats (
+            registrations_count,
+            spots_left
+          )
+        `)
         .eq('status', 'published')
         .gte('date', new Date().toISOString().split('T')[0])
         .order('date', { ascending: true });
 
       if (!error && data) {
-        setEvents(data);
+        // Transform the nested event_stats into flat properties for easier use
+        const transformedData = data.map((e: any) => ({
+          ...e,
+          registrations_count: e.event_stats?.registrations_count || 0,
+          spots_left: e.event_stats?.spots_left ?? e.max_participants
+        }));
+        setEvents(transformedData);
       }
       setIsLoading(false);
     }
-    fetchEvents();
+    fetchData();
   }, []);
 
   const premiumCourses = [
@@ -136,6 +149,19 @@ export default function CoursesOverview() {
                     <div className="px-3 py-1 rounded-full bg-white text-[10px] uppercase font-bold text-primary tracking-widest border border-border shadow-sm">
                       {event.category}
                     </div>
+                    {event.spots_left <= 0 ? (
+                      <Badge className="bg-red-500 text-white border-none px-3 py-1 text-[10px] uppercase font-black tracking-widest">
+                        Ausgebucht
+                      </Badge>
+                    ) : event.spots_left <= 3 ? (
+                      <Badge className="bg-orange-500 text-white border-none px-3 py-1 text-[10px] uppercase font-black tracking-widest animate-pulse">
+                        Nur noch {event.spots_left} Plätze
+                      </Badge>
+                    ) : (
+                      <div className="text-[10px] font-bold text-green-600 uppercase tracking-widest">
+                        Anmeldung möglich
+                      </div>
+                    )}
                   </div>
 
                   <h4 className="text-2xl font-serif text-primary mb-4 leading-tight group-hover:text-accent transition-colors flex-grow">
@@ -153,16 +179,29 @@ export default function CoursesOverview() {
                     </div>
                     <div className="flex items-center gap-3 text-sm text-muted-foreground">
                       <Users size={16} className="text-accent" />
-                      Max. {event.max_participants} Teilnehmer
+                      {event.spots_left <= 0 ? (
+                        <span className="text-red-500 font-bold">Kurs ist voll belegt</span>
+                      ) : (
+                        <span>Noch {event.spots_left} von {event.max_participants} Plätzen frei</span>
+                      )}
                     </div>
                   </div>
 
-                  <Link 
-                    to={`${ROUTE_PATHS.VORQUALIFIZIERUNG}?type=hebamme&event=${encodeURIComponent(event.title)}`}
-                    className="w-full py-4 rounded-xl border border-primary/20 text-primary font-bold hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2"
-                  >
-                    Platz anfragen <ArrowRight size={16} />
-                  </Link>
+                  {event.spots_left > 0 ? (
+                    <Link 
+                      to={ROUTE_PATHS.EVENT_BOOKING.replace(':eventId', event.id)}
+                      className="w-full py-4 rounded-xl bg-primary text-white font-bold hover:bg-primary/90 transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/10"
+                    >
+                      Jetzt Platz buchen <ArrowRight size={16} />
+                    </Link>
+                  ) : (
+                    <Button 
+                      disabled
+                      className="w-full py-4 h-auto rounded-xl border border-border text-muted-foreground font-bold bg-slate-100 flex items-center justify-center gap-2 cursor-not-allowed"
+                    >
+                      <Lock size={16} /> Aktuell ausgebucht
+                    </Button>
+                  )}
                 </motion.div>
               ))}
             </motion.div>
