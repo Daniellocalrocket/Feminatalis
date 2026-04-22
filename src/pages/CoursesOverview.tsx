@@ -27,30 +27,45 @@ export default function CoursesOverview() {
 
   useEffect(() => {
     async function fetchData() {
-      // Fetch combined data from events and event_stats
-      const { data, error } = await supabase
-        .from('events')
-        .select(`
-          *,
-          event_stats (
-            registrations_count,
-            spots_left
-          )
-        `)
-        .eq('status', 'published')
-        .gte('date', new Date().toISOString().split('T')[0])
-        .order('date', { ascending: true });
+      setIsLoading(true);
+      try {
+        // Fetch events first
+        const { data: eventsData, error: eventsError } = await supabase
+          .from('events')
+          .select('*')
+          .eq('status', 'published')
+          .gte('date', new Date().toISOString().split('T')[0])
+          .order('date', { ascending: true });
 
-      if (!error && data) {
-        // Transform the nested event_stats into flat properties for easier use
-        const transformedData = data.map((e: any) => ({
-          ...e,
-          registrations_count: e.event_stats?.registrations_count || 0,
-          spots_left: e.event_stats?.spots_left ?? e.max_participants
-        }));
-        setEvents(transformedData);
+        if (eventsError) throw eventsError;
+
+        // Fetch stats separately
+        const { data: statsData, error: statsError } = await supabase
+          .from('event_stats')
+          .select('*');
+
+        if (statsError) {
+          console.warn("Could not fetch event stats:", statsError);
+        }
+
+        // Merge data
+        if (eventsData) {
+          const transformedData = eventsData.map((event: any) => {
+            const stat = statsData?.find((s: any) => s.event_id === event.id);
+            return {
+              ...event,
+              registrations_count: stat?.registrations_count || 0,
+              spots_left: stat?.spots_left ?? event.max_participants
+            };
+          });
+          setEvents(transformedData);
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        toast.error("Fehler beim Laden der Veranstaltungen.");
+      } finally {
+        setIsLoading(false);
       }
-      setIsLoading(false);
     }
     fetchData();
   }, []);

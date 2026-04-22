@@ -73,28 +73,39 @@ export default function AdminEvents() {
 
   const fetchEvents = async () => {
     setIsLoading(true);
-    const { data, error } = await supabase
-      .from('events')
-      .select(`
-        *,
-        event_stats (
-          registrations_count,
-          spots_left
-        )
-      `)
-      .order('date', { ascending: true });
+    try {
+      // Fetch events first
+      const { data: eventsData, error: eventsError } = await supabase
+        .from('events')
+        .select('*')
+        .order('date', { ascending: true });
 
-    if (error) {
+      if (eventsError) throw eventsError;
+
+      // Fetch stats separately
+      const { data: statsData, error: statsError } = await supabase
+        .from('event_stats')
+        .select('*');
+
+      if (statsData) {
+        const transformedData = eventsData.map((event: any) => {
+          const stat = statsData.find((s: any) => s.event_id === event.id);
+          return {
+            ...event,
+            registrations_count: stat?.registrations_count || 0,
+            spots_left: stat?.spots_left ?? event.max_participants
+          };
+        });
+        setEvents(transformedData || []);
+      } else {
+        setEvents(eventsData || []);
+      }
+    } catch (error) {
+      console.error("Fetch events error:", error);
       toast.error("Fehler beim Laden der Events");
-    } else {
-      const transformedData = data.map((e: any) => ({
-        ...e,
-        registrations_count: e.event_stats?.registrations_count || 0,
-        spots_left: e.event_stats?.spots_left ?? e.max_participants
-      }));
-      setEvents(transformedData || []);
+    } finally {
+      setIsLoading(false);
     }
-    setIsLoading(false);
   };
 
   const fetchParticipants = async (eventId: string) => {
