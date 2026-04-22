@@ -66,7 +66,7 @@ export default function Home() {
         <div className="container mx-auto max-w-5xl px-4">
           <div className="flex flex-wrap items-center justify-center md:justify-between gap-8 text-center sm:text-left text-primary font-medium">
             <div className="flex items-center gap-3"><Award className="w-6 h-6 text-accent"/> 33 Jahre Hebammen-Erfahrung</div>
-            <div className="flex items-center gap-3"><Heart className="w-6 h-6 text-accent"/> 500+ Begleitete Mütter</div>
+            <div className="flex items-center gap-3"><Heart className="w-6 h-6 text-accent"/> 4500+ Begleitete Mütter</div>
             <div className="flex items-center gap-3"><CheckCircle className="w-6 h-6 text-accent"/> 100% Sicher & Evidenzbasiert</div>
             <div className="flex items-center gap-3"><Activity className="w-6 h-6 text-accent"/> Prävention & Ganzheitlichkeit</div>
           </div>
