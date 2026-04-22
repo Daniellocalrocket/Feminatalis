@@ -49,7 +49,7 @@ export default function CoursesOverview() {
       subtitle: "Planungsphase & Kinderwunsch",
       description: "Vom Informationschaos zur Strategin. Deine bioenergetische 90-Tage-Begleitung für maximale Fruchtbarkeit.",
       features: ["90-Tage-Zell-Logik", "Arzt-Leitfaden", "Befund-Board", "Animal-Based Fokus"],
-      link: ROUTE_PATHS.ZELLKRAFT_ROADMAP,
+      link: `${ROUTE_PATHS.ZELLKRAFT_ROADMAP}?event=${encodeURIComponent("Zellkraft-Roadmap")}`,
       badge: "Strategische Wahl",
       icon: Target,
       color: "accent"
@@ -60,7 +60,7 @@ export default function CoursesOverview() {
       subtitle: "Schwangerschaft & Geburtsreife",
       description: "Werde zur Architektin der kindlichen Entwicklung. Tiefe bioenergetische Optimierung für eine sichere Geburt.",
       features: ["Mitochondrien-Shuttle", "Epigenetik-Matrix", "Nervensystem-Regulation", "Interventions-Schutz"],
-      link: ROUTE_PATHS.PREMIUM_ZELLKRAFT_KURS,
+      link: `${ROUTE_PATHS.PREMIUM_ZELLKRAFT_KURS}?event=${encodeURIComponent("Zellkraft-Geburtskompass")}`,
       badge: "Vollumfängliche Begleitung",
       icon: Zap,
       color: "primary"
@@ -158,7 +158,7 @@ export default function CoursesOverview() {
                   </div>
 
                   <Link 
-                    to={ROUTE_PATHS.CONTACT} 
+                    to={`${ROUTE_PATHS.VORQUALIFIZIERUNG}?type=hebamme&event=${encodeURIComponent(event.title)}`}
                     className="w-full py-4 rounded-xl border border-primary/20 text-primary font-bold hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2"
                   >
                     Platz anfragen <ArrowRight size={16} />

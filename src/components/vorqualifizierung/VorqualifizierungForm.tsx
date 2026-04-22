@@ -32,6 +32,7 @@ const MINDSET_QUESTIONS_COUNT = 7;
 export default function VorqualifizierungForm() {
   const [searchParams] = useSearchParams();
   const typeParam = searchParams.get("type"); // 'hebamme' or 'naturheilpraxis'
+  const eventParam = searchParams.get("event");
   
   const [currentStepIndex, setCurrentStepIndex] = useState(typeParam ? 1 : 0); // 0: area, 1: contact, 2: mindset, 3: details, 4: final
   const [mindsetStep, setMindsetStep] = useState(0); // 0-6
@@ -110,7 +111,7 @@ export default function VorqualifizierungForm() {
           insurance: data.insurance,
           areas: data.areas,
           urgency: data.urgency,
-          additional_info: data.additionalInfo,
+          additional_info: eventParam ? `Buchungsanfrage für: ${decodeURIComponent(eventParam)}. ${data.additionalInfo || ""}` : data.additionalInfo,
           mindset_situation: data.mqSituation,
           mindset_motivation: data.mqMotivation,
           mindset_experience: data.mqExperience,
@@ -169,6 +170,13 @@ export default function VorqualifizierungForm() {
         </div>
         <Progress value={(currentDisplayProgress / totalDisplaySteps) * 100} className="h-1.5 mb-6 bg-white/50 border border-primary/10 overflow-hidden rounded-full shadow-inner" />
         
+        {eventParam && (
+          <div className="mb-8 p-4 bg-primary/5 rounded-2xl border border-primary/10 inline-block">
+            <p className="text-[10px] font-bold uppercase tracking-widest text-primary/40 mb-1">Buchungsanfrage für:</p>
+            <p className="text-lg font-serif text-primary">{decodeURIComponent(eventParam)}</p>
+          </div>
+        )}
+
         <h2 className="text-2xl md:text-4xl font-serif text-primary mb-2">{BASE_STEPS[currentStepIndex].title}</h2>
         <p className="text-base text-muted-foreground">{BASE_STEPS[currentStepIndex].subtitle}</p>
       </CardHeader>
