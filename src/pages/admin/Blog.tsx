@@ -195,7 +195,7 @@ export default function AdminBlog() {
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             {(["alle", "published", "draft"] as const).map((f) => (
               <button
                 key={f}

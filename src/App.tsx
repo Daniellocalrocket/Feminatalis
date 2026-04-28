@@ -7,6 +7,7 @@ import { ROUTE_PATHS } from "@/lib/index";
 import { Layout } from "@/components/Layout";
 import Home from "@/pages/Home";
 import Blog from "@/pages/Blog";
+import BlogPostDetails from "@/pages/BlogPostDetails";
 import FAQ from "@/pages/FAQ";
 import Contact from "@/pages/Contact";
 import Hebammenpraxis from "@/pages/hebammenpraxis/Index";
@@ -83,6 +84,10 @@ const App = () => {
               <Route 
                 path={ROUTE_PATHS.BLOG} 
                 element={<Blog />} 
+              />
+              <Route 
+                path={ROUTE_PATHS.BLOG_POST} 
+                element={<BlogPostDetails />} 
               />
               <Route 
                 path={ROUTE_PATHS.FAQ} 

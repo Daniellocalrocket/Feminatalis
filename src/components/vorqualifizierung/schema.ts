@@ -42,8 +42,8 @@ export const vorqualifizierungSchema = z.object({
   mqExperience: z.enum(["A", "B", "C"], { required_error: "Bitte wählen Sie eine Option aus." }),
   mqIndividuality: z.enum(["A", "B", "C"], { required_error: "Bitte wählen Sie eine Option aus." }),
   mqResponsibility: z.enum(["A", "B", "C"], { required_error: "Bitte wählen Sie eine Option aus." }),
-  mqInvestment: z.enum(["A", "B", "C"], { required_error: "Bitte wählen Sie eine Option aus." }),
-  mqReality: z.enum(["A", "B", "C"], { required_error: "Bitte wählen Sie eine Option aus." }),
+  mqInvestment: z.enum(["A", "B", "C"]).optional(),
+  mqReality: z.enum(["A", "B", "C"]).optional(),
 
   // Schritt 4 (Bedingte Felder)
   urgency: z.string().min(1, "Bitte wählen Sie die Dringlichkeit aus."),

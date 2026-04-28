@@ -102,17 +102,17 @@ export default function AdminDashboard() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
           {/* Recent Leads */}
-          <Card className="lg:col-span-2 border-none shadow-xl shadow-primary/5 rounded-[2.5rem] bg-white/80 backdrop-blur-md">
-            <CardHeader className="flex flex-row items-center justify-between p-8 pb-4">
-              <CardTitle className="text-xl font-serif text-primary">Letzte Anfragen</CardTitle>
+          <Card className="lg:col-span-2 border-none shadow-xl shadow-primary/5 rounded-[2rem] md:rounded-[2.5rem] bg-white/80 backdrop-blur-md">
+            <CardHeader className="flex flex-row items-center justify-between p-5 md:p-8 pb-2 md:pb-4">
+              <CardTitle className="text-lg md:text-xl font-serif text-primary">Letzte Anfragen</CardTitle>
               <Link to="/admin/leads">
-                <Button variant="ghost" className="text-accent hover:bg-accent/10">Alle ansehen <ArrowUpRight className="ml-2 w-4 h-4" /></Button>
+                <Button variant="ghost" className="text-accent hover:bg-accent/10 px-3 md:px-4">Alle ansehen <ArrowUpRight className="ml-1 md:ml-2 w-4 h-4" /></Button>
               </Link>
             </CardHeader>
-            <CardContent className="p-8 pt-0">
-              <div className="space-y-4">
+            <CardContent className="p-5 md:p-8 pt-0">
+              <div className="space-y-3 md:space-y-4">
                 {recentLeads.length === 0 ? (
-                  <p className="text-center py-10 text-muted-foreground border-2 border-dashed border-primary/5 rounded-3xl">Keine aktuellen Anfragen gefunden.</p>
+                  <p className="text-center py-8 md:py-10 text-sm md:text-base text-muted-foreground border-2 border-dashed border-primary/5 rounded-3xl">Keine aktuellen Anfragen gefunden.</p>
                 ) : (
                   recentLeads.map((lead) => (
                     <div key={lead.id} className="flex items-center justify-between p-4 rounded-2xl border border-primary/5 hover:bg-primary/5 transition-all group">
@@ -138,12 +138,12 @@ export default function AdminDashboard() {
 
           {/* Quick Actions & Next Event */}
           <div className="space-y-8">
-            <Card className="border-none shadow-xl shadow-primary/5 rounded-[2.5rem] bg-accent text-white overflow-hidden relative">
+            <Card className="border-none shadow-xl shadow-primary/5 rounded-[2rem] md:rounded-[2.5rem] bg-accent text-white overflow-hidden relative">
               <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-bl-[100px]" />
-              <CardHeader className="p-8 pb-2">
-                <CardTitle className="text-lg font-serif">Nächster Kurs</CardTitle>
+              <CardHeader className="p-5 md:p-8 pb-0 md:pb-2">
+                <CardTitle className="text-base md:text-lg font-serif">Nächster Kurs</CardTitle>
               </CardHeader>
-              <CardContent className="p-8 pt-4">
+              <CardContent className="p-5 md:p-8 pt-2 md:pt-4">
                 {stats.nextEvent ? (
                   <div className="space-y-4">
                     <h3 className="text-2xl font-bold">{stats.nextEvent.title}</h3>
@@ -167,9 +167,9 @@ export default function AdminDashboard() {
               </CardContent>
             </Card>
 
-            <Card className="border-none shadow-xl shadow-primary/5 rounded-[2.5rem] bg-white p-8">
-              <CardTitle className="text-xl font-serif text-primary mb-6">Quick Actions</CardTitle>
-              <div className="grid grid-cols-1 gap-3">
+            <Card className="border-none shadow-xl shadow-primary/5 rounded-[2rem] md:rounded-[2.5rem] bg-white p-5 md:p-8">
+              <CardTitle className="text-lg md:text-xl font-serif text-primary mb-4 md:mb-6">Quick Actions</CardTitle>
+              <div className="grid grid-cols-1 gap-2 md:gap-3">
                 <Button className="h-14 rounded-2xl bg-primary hover:shadow-lg transition-all text-sm font-bold" onClick={() => navigate("/admin/events")}>Neuen Kurs anlegen</Button>
                 <Button variant="outline" className="h-14 rounded-2xl border-primary/10 hover:bg-primary/5 text-sm font-bold" onClick={() => navigate("/admin/leads")}>Leads exportieren (CSV)</Button>
               </div>

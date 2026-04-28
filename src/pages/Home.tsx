@@ -34,8 +34,8 @@ export default function Home() {
             <Link to={ROUTE_PATHS.CONTACT} className="bg-accent text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-accent/90 transition-all shadow-lg shadow-accent/20 flex items-center justify-center gap-2 w-full sm:w-fit">
               <CheckCircle className="w-5 h-5" /> Jetzt Termin online buchen
             </Link>
-            <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary border-2 border-primary/10 px-8 py-4 rounded-xl font-bold text-lg hover:border-primary/30 transition-all flex items-center justify-center gap-2 w-full sm:w-fit">
-              Lernen wir uns kennen
+            <Link to={ROUTE_PATHS.COURSES} className="bg-white text-primary border-2 border-primary/10 px-8 py-4 rounded-xl font-bold text-lg hover:border-primary/30 transition-all flex items-center justify-center gap-2 w-full sm:w-fit">
+              Kurse & Events
             </Link>
           </div>
         </div>
@@ -73,65 +73,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Vorqualifizierungs-Sektion (NEU) */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-[3rem] p-8 md:p-16 border border-primary/5 shadow-2xl shadow-primary/5 flex flex-col lg:flex-row items-center gap-12 relative overflow-hidden"
-          >
-            {/* Background Decoration */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-orange-100/30 rounded-bl-[200px] -z-0" />
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-primary/5 rounded-tr-[100px] -z-0" />
 
-            <div className="flex-1 relative z-10">
-              <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
-                Der erste Schritt
-              </div>
-              <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6 leading-tight">
-                Lernen wir <span className="text-accent underline decoration-accent/20 underline-offset-8">uns kennen</span>
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Damit ich mich optimal auf unsere Zusammenarbeit vorbereiten kann, hilft mir ein kleiner Vorab-Check. Erzählen Sie mir kurz von Ihrem Anliegen – egal ob Hebammenbetreuung, Kinderwunsch oder Naturheilkunde. 
-              </p>
-              
-              <div className="grid sm:grid-cols-2 gap-6 mb-10">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center"><Clock className="w-5 h-5 text-primary" /></div>
-                  <span className="text-sm font-medium text-primary/80">Nur 2 Minuten Zeitaufwand</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center"><Heart className="w-5 h-5 text-primary" /></div>
-                  <span className="text-sm font-medium text-primary/80">Persönliche Ersteinschätzung</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center"><Activity className="w-5 h-5 text-primary" /></div>
-                  <span className="text-sm font-medium text-primary/80">Direktes Feedback & Klarheit</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center"><Sparkles className="w-5 h-5 text-primary" /></div>
-                  <span className="text-sm font-medium text-primary/80">Völlig unverbindlich</span>
-                </div>
-              </div>
-
-              <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-primary/95 transition-all shadow-xl shadow-primary/10 items-center gap-3 group">
-                Jetzt Vorab-Check starten <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-
-            <div className="w-full lg:w-5/12 relative z-10">
-              <div className="aspect-[4/3] bg-orange-50 rounded-[2.5rem] border border-orange-100 flex items-center justify-center p-8 text-center bg-[url('/src/assets/images/pattern-dot.svg')] bg-repeat">
-                <div className="space-y-4">
-                  <p className="text-4xl font-serif text-primary italic">„Ich freue mich <br /> auf Sie!“</p>
-                  <p className="text-sm font-bold text-accent uppercase tracking-widest italic">— Angela Deschner</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Hebammenpraxis Sektion */}
       <section className="py-24 bg-white">
@@ -189,9 +131,12 @@ export default function Home() {
           <div className="bg-[#fff08a]/30 rounded-[3rem] p-8 md:p-16 mb-16 flex flex-col md:flex-row items-center gap-16 border border-yellow-200/50 shadow-inner relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#fff08a]/20 rounded-bl-[200px] -z-0" />
             <div className="flex-1 relative z-10">
-              <h3 className="text-3xl md:text-4xl font-serif text-primary mb-6">Sicherheit durch physiologische Überlegenheit</h3>
+              <h3 className="text-3xl md:text-4xl font-serif text-primary mb-6">Warum Kassenleistungen niemals ausreichen</h3>
+              <p className="text-lg text-muted-foreground mb-4 leading-relaxed font-medium">
+                Das Standard-Kassensystem deckt nur das absolute Minimum ab. Wer jedoch eine wirklich selbstbestimmte, kraftvolle Geburt und eine schnelle Regeneration im Wochenbett erleben möchte, braucht mehr als nur "Routine-Vorsorge".
+              </p>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Ich biete keine Routine-Vorsorge an. Wer mit 20 % Ladung in die Geburt geht, riskiert Wehenschwäche und medizinische Eingriffe. Mein Ziel ist die 100-Prozent-Ladung Ihres „Zell-Akkus“.
+                Ich arbeite primär mit Frauen, die verstanden haben, dass sie selbst aktiv Verantwortung übernehmen müssen. Mein Fokus liegt auf Premium-Begleitung und fundiertem Wissen. Wer mit 20 % Ladung in die Geburt geht, riskiert Wehenschwäche und medizinische Eingriffe. Mein Ziel ist die 100-Prozent-Ladung Ihres „Zell-Akkus“.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
                 <div><div className="text-3xl font-bold text-accent">33 J.</div><div className="text-xs font-black uppercase tracking-widest text-primary/60">Expertise</div></div>
@@ -377,13 +322,76 @@ export default function Home() {
 
               <div>
                 <h4 className="font-bold text-primary text-xl mb-3">Sprachen</h4>
-                <div className="flex gap-3">
+                <div className="flex gap-3 mb-8">
                   <span className="bg-white border border-border px-4 py-1.5 rounded-full text-sm font-medium text-primary shadow-sm">Deutsch</span>
-                  <span className="bg-white border border-border px-4 py-1.5 rounded-full text-sm font-medium text-primary shadow-sm">Englisch</span>
+                  <span className="bg-white border border-border px-4 py-1.5 rounded-full text-sm font-medium text-primary shadow-sm">Russisch</span>
                 </div>
+                <Link to={ROUTE_PATHS.UEBER_MICH} className="inline-flex bg-white border border-primary/20 text-primary px-8 py-3 rounded-xl font-bold hover:bg-primary/5 transition-all shadow-sm items-center gap-2">
+                  Mehr über mich erfahren <ArrowRight size={18} />
+                </Link>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Vorqualifizierungs-Sektion (moved here) */}
+      <section className="py-24 relative overflow-hidden bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-[#fde4c8]/20 rounded-[3rem] p-8 md:p-16 border border-primary/5 shadow-sm flex flex-col lg:flex-row items-center gap-12 relative overflow-hidden"
+          >
+            {/* Background Decoration */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-orange-100/30 rounded-bl-[200px] -z-0" />
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-primary/5 rounded-tr-[100px] -z-0" />
+
+            <div className="flex-1 relative z-10">
+              <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+                Der erste Schritt
+              </div>
+              <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6 leading-tight">
+                Lernen wir <span className="text-accent underline decoration-accent/20 underline-offset-8">uns kennen</span>
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                Meine Programme erfordern Ihre aktive Mitarbeit und die Bereitschaft, Verantwortung für Ihre Gesundheit zu übernehmen. Damit wir herausfinden, ob meine Philosophie und Ihre Ziele zusammenpassen, hilft mir ein kurzer Vorab-Check.
+              </p>
+              
+              <div className="grid sm:grid-cols-2 gap-6 mb-10">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm"><Clock className="w-5 h-5 text-accent" /></div>
+                  <span className="text-sm font-medium text-primary/80">Nur 2 Minuten Zeitaufwand</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm"><Heart className="w-5 h-5 text-accent" /></div>
+                  <span className="text-sm font-medium text-primary/80">Passt unser Konzept zu Ihnen?</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm"><Activity className="w-5 h-5 text-accent" /></div>
+                  <span className="text-sm font-medium text-primary/80">Direktes Feedback & Klarheit</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm"><Sparkles className="w-5 h-5 text-accent" /></div>
+                  <span className="text-sm font-medium text-primary/80">Völlig unverbindlich</span>
+                </div>
+              </div>
+
+              <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-primary/95 transition-all shadow-xl shadow-primary/10 items-center gap-3 group">
+                Jetzt Vorab-Check starten <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+
+            <div className="w-full lg:w-5/12 relative z-10">
+              <div className="aspect-[4/3] bg-white rounded-[2.5rem] border border-orange-100 flex items-center justify-center p-8 text-center bg-[url('/src/assets/images/pattern-dot.svg')] bg-repeat shadow-sm">
+                <div className="space-y-4">
+                  <p className="text-4xl font-serif text-primary italic">„Ich freue mich <br /> auf Sie!“</p>
+                  <p className="text-sm font-bold text-accent uppercase tracking-widest italic">— Angela Deschner</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

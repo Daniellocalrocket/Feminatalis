@@ -340,8 +340,8 @@ export default function AdminEvents() {
                   <p className="text-primary/40 font-serif italic text-lg">Noch keine Anmeldungen für dieses Event.</p>
                 </div>
               ) : (
-                <div className="space-y-4">
-                  <table className="w-full text-left">
+                <div className="space-y-4 overflow-x-auto">
+                  <table className="w-full min-w-[500px] text-left">
                     <thead>
                       <tr className="text-xs uppercase font-black tracking-widest text-primary/40 border-b border-primary/5">
                         <th className="pb-4 pl-4">Name</th>

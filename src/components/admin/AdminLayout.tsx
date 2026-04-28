@@ -26,7 +26,8 @@ interface AdminLayoutProps {
 export default function AdminLayout({ children, title }: AdminLayoutProps) {
   const location = useLocation();
   const navigate = useNavigate();
-  const [isSidebarOpen, setIsSidebarOpen] = React.useState(true);
+  // Default to closed on mobile, open on desktop
+  const [isSidebarOpen, setIsSidebarOpen] = React.useState(window.innerWidth >= 1024);
   const [isAuthChecking, setIsAuthChecking] = React.useState(true);
   const [newLeadsCount, setNewLeadsCount] = React.useState(0);
 
@@ -96,6 +97,9 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
               <Link
                 key={item.name}
                 to={item.href}
+                onClick={() => {
+                  if (window.innerWidth < 1024) setIsSidebarOpen(false);
+                }}
                 className={cn(
                   "flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 group",
                   isActive 
@@ -130,22 +134,40 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
         </div>
       </aside>
 
+      {/* Mobile Backdrop */}
+      {isSidebarOpen && (
+        <div 
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 lg:hidden"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
+
       {/* Main Content */}
       <main className={cn(
         "flex-1 transition-all duration-300 min-h-screen",
         isSidebarOpen ? "lg:pl-72" : "lg:pl-20"
       )}>
         {/* Header */}
-        <header className="bg-white/50 backdrop-blur-md border-b border-primary/5 h-20 flex items-center justify-between px-8 sticky top-0 z-40">
-          <h2 className="text-xl font-serif text-primary">{title}</h2>
-          <div className="flex items-center gap-4 text-sm font-medium text-primary/60">
-            <span>Admin-Panel</span>
+        <header className="bg-white/50 backdrop-blur-md border-b border-primary/5 h-20 flex items-center justify-between px-4 lg:px-8 sticky top-0 z-30">
+          <div className="flex items-center gap-3">
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className="lg:hidden text-primary shrink-0"
+              onClick={() => setIsSidebarOpen(true)}
+            >
+              <Menu size={24} />
+            </Button>
+            <h2 className="text-lg md:text-xl font-serif text-primary line-clamp-1">{title}</h2>
+          </div>
+          <div className="flex items-center gap-2 md:gap-4 text-xs md:text-sm font-medium text-primary/60 shrink-0">
+            <span className="hidden sm:inline">Admin-Panel</span>
             <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
           </div>
         </header>
 
         {/* Content Area */}
-        <div className="p-8">
+        <div className="p-4 md:p-8">
           {children}
         </div>
       </main>

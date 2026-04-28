@@ -1,6 +1,7 @@
 export const ROUTE_PATHS = {
   HOME: "/",
   BLOG: "/blog",
+  BLOG_POST: "/blog/:slug",
   FAQ: "/faq",
   CONTACT: "/kontakt",
   UEBER_MICH: "/ueber-mich",

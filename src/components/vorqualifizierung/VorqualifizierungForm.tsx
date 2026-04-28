@@ -26,7 +26,7 @@ const BASE_STEPS = [
   { id: "final", title: "Abschluss", subtitle: "Fast geschafft!" },
 ];
 
-const MINDSET_QUESTIONS_COUNT = 7;
+const MINDSET_QUESTIONS_COUNT = 5;
 
 
 export default function VorqualifizierungForm() {
@@ -65,7 +65,7 @@ export default function VorqualifizierungForm() {
     if (currentStepId === "area") fieldsToValidate = ["areas"];
     if (currentStepId === "contact") fieldsToValidate = ["firstName", "lastName", "email", "phone", "zipCode", "insurance"];
     if (currentStepId === "mindset") {
-      const qIds = ["mqSituation", "mqMotivation", "mqExperience", "mqIndividuality", "mqResponsibility", "mqInvestment", "mqReality"];
+      const qIds = ["mqSituation", "mqMotivation", "mqExperience", "mqIndividuality", "mqResponsibility"];
       fieldsToValidate = [qIds[mindsetStep]];
     }
     if (currentStepId === "details") fieldsToValidate = ["urgency"];
@@ -117,8 +117,8 @@ export default function VorqualifizierungForm() {
           mindset_experience: data.mqExperience,
           mindset_individuality: data.mqIndividuality,
           mindset_responsibility: data.mqResponsibility,
-          mindset_investment: data.mqInvestment,
-          mindset_reality: data.mqReality,
+          mindset_investment: data.mqInvestment || "Nicht abgefragt",
+          mindset_reality: data.mqReality || "Nicht abgefragt",
         }
       ]);
 

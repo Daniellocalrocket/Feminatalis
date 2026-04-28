@@ -247,8 +247,8 @@ export default function AdminLeads() {
         </div>
 
         {/* Leads Table */}
-        <div className="bg-white/80 backdrop-blur-md rounded-[2.5rem] border border-primary/5 shadow-xl shadow-primary/5 overflow-hidden">
-          <Table>
+        <div className="bg-white/80 backdrop-blur-md rounded-[2.5rem] border border-primary/5 shadow-xl shadow-primary/5 overflow-x-auto">
+          <Table className="min-w-[800px]">
             <TableHeader className="bg-primary/5">
               <TableRow className="hover:bg-transparent border-none">
                 <TableHead className="font-bold text-primary py-6 px-8">Client</TableHead>
