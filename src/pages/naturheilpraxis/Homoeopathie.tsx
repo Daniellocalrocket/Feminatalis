@@ -2,7 +2,9 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
+import PreisTransparenz from "@/components/PreisTransparenz";
 import { Leaf, CheckCircle2, ArrowRight, Sparkles, Scale, BookOpen, AlertCircle, Quote } from "lucide-react";
+import SplitScreenHero from "@/components/SplitScreenHero";
 
 export default function Homoeopathie() {
   const anwendungen = [
@@ -21,25 +23,18 @@ export default function Homoeopathie() {
         description="Ganzheitliche Heilung durch das fundamentale Ähnlichkeitsprinzip. Wir nutzen tiefgreifende Homöopathie, um deine Selbstheilungskräfte sanft zu aktivieren." 
       />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-muted/20 text-center">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 uppercase tracking-wider">
-            Die zelluläre Informationsmedizin
-          </div>
-          <h1 className="text-4xl md:text-7xl font-serif text-primary mb-8 leading-[1.1]">
-            Homöopathie <br />
-            <span className="text-accent italic font-light">Sanfte Regulation</span>
-          </h1>
-          <div className="max-w-2xl mx-auto relative px-8 text-center mt-12 mb-8">
-             <Quote className="absolute -top-6 -left-4 text-accent/20 w-16 h-16" />
-             <p className="text-xl text-muted-foreground leading-relaxed italic text-center font-serif font-medium">
-                "Wähle, um sanft, schnell, gewiss und dauerhaft zu heilen, in jedem Krankheitsfalle eine Arznei, welche ein ähnliches Leiden erregen kann, als sie heilen soll!"
-             </p>
-             <span className="text-xs font-bold text-primary mt-6 block uppercase tracking-widest text-center">— Samuel Hahnemann</span>
-          </div>
-        </div>
-      </section>
+      <SplitScreenHero
+        badge="Informationsmedizin"
+        title={<>Klassische <br /><span className="text-accent italic font-light">Homöopathie</span></>}
+        subtitle="Sanfte Impulse für tiefgreifende Heilung. Die Homöopathie nutzt das Ähnlichkeitsprinzip, um deine körpereigenen Selbstheilungskräfte auf energetischer Ebene zu aktivieren."
+        imageSrc="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?q=80&w=2070&auto=format&fit=crop"
+        imageAlt="Homöopathische Globuli und Naturheilkunde"
+        imageKey="img_hero_homoeopathie"
+      >
+        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+          Kostenfreie Vor-Analyse anfragen
+        </Link>
+      </SplitScreenHero>
 
       {/* Philosophy Section */}
       <section className="py-20 text-left">
@@ -126,6 +121,11 @@ export default function Homoeopathie() {
         </div>
       </section>
 
+      <PreisTransparenz 
+        preisHint="Erstanamnese ab 120,- €" 
+        hinweis="Ausführliches Gespräch (60-90 Min.) inkl. Repertorisation."
+      />
+
       {/* CTA */}
       <section className="py-24 bg-background border-t border-border text-center">
         <div className="container mx-auto px-4 max-w-4xl text-center">
@@ -134,8 +134,8 @@ export default function Homoeopathie() {
             Bereit für die tiefe, sanfte <br />Kraft der ewigen Regulation?
           </h2>
           <div className="flex justify-center">
-             <Link to={ROUTE_PATHS.CONTACT} className="inline-flex bg-primary text-white px-12 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-2xl flex items-center justify-center gap-3 shadow-primary/20 border-none">
-               Erst-Anamnese anfragen <ArrowRight className="w-6 h-6 text-white text-center" />
+             <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-12 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-2xl flex items-center justify-center gap-3 shadow-primary/20 border-none">
+               Kostenfreie Vor-Analyse anfragen <ArrowRight className="w-6 h-6 text-white text-center" />
              </Link>
           </div>
         </div>

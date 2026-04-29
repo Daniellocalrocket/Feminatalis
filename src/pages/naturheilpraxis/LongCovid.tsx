@@ -2,7 +2,9 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
+import PreisTransparenz from "@/components/PreisTransparenz";
 import { ShieldAlert, Activity, HeartPulse, CheckCircle2, ListChecks, TestTube2, AlertTriangle, ShieldCheck, ArrowRight } from "lucide-react";
+import SplitScreenHero from "@/components/SplitScreenHero";
 
 export default function LongCovid() {
   const symptome = [
@@ -31,21 +33,18 @@ export default function LongCovid() {
         description="Anhaltende Beschwerden nach Infektion oder Impfung? Wir bieten spezialisierte Diagnostik und Therapie bei Post-Covid und Post-Vakzin-Syndrom." 
       />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-muted/20 text-center">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 uppercase tracking-wider">
-            Post-Virale & Post-Vakzin Medizin
-          </div>
-          <h1 className="text-4xl md:text-7xl font-serif text-primary mb-8 leading-[1.1]">
-            Zurück ins Leben <br />
-            <span className="text-accent italic font-light">nach Covid oder Impfung</span>
-          </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto italic text-center">
-            "Hast du nach einer Infektion oder Impfung anhaltende Beschwerden? Fühlst du dich schlapp, unkonzentriert oder leidest an rheumatischen Symptomen? Du bildest dir das nicht ein – und man kann vieles für deine Gesundheit tun."
-          </p>
-        </div>
-      </section>
+      <SplitScreenHero
+        badge="Post-Virale & Post-Vakzin Medizin"
+        title={<>Zurück ins Leben <br /><span className="text-accent italic font-light">nach Covid oder Impfung</span></>}
+        subtitle='Hast du nach einer Infektion oder Impfung anhaltende Beschwerden? Fühlst du dich schlapp, unkonzentriert oder leidest an rheumatischen Symptomen? Du bildest dir das nicht ein – und man kann vieles für deine Gesundheit tun.'
+        imageSrc="https://images.unsplash.com/photo-1631549916768-4a9e8902c1e3?q=80&w=2070&auto=format&fit=crop"
+        imageAlt="Long-Covid Diagnostik und Behandlung"
+        imageKey="img_hero_long_covid"
+      >
+        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+          Kostenfreie Vor-Analyse anfragen
+        </Link>
+      </SplitScreenHero>
 
       {/* Definition Section */}
       <section className="py-20 text-left">
@@ -123,6 +122,11 @@ export default function LongCovid() {
         </div>
       </section>
 
+      <PreisTransparenz 
+        preisHint="Spezialdiagnostik & Beratung" 
+        hinweis="Individuelle Abrechnung nach Zeitaufwand und Laborparametern."
+      />
+
       {/* Final CTA */}
       <section className="py-24 bg-muted/20 border-t border-border text-center">
         <div className="container mx-auto px-4 max-w-4xl text-center">
@@ -132,8 +136,8 @@ export default function LongCovid() {
             Wir bringen deinen Körper zurück in eine stabile, selbstregulierende Balance.
           </p>
           <div className="flex justify-center">
-            <Link to={ROUTE_PATHS.CONTACT} className="inline-flex bg-primary text-white px-12 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-transform shadow-2xl flex items-center justify-center gap-3 shadow-primary/20 border-none">
-              Termin anfragen <Activity className="w-6 h-6 text-white text-center" />
+            <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-12 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-transform shadow-2xl flex items-center justify-center gap-3 shadow-primary/20 border-none">
+              Kostenfreie Vor-Analyse anfragen <Activity className="w-6 h-6 text-white text-center" />
             </Link>
           </div>
         </div>

@@ -77,6 +77,7 @@ export function Layout({ children }: LayoutProps) {
     },
     { name: "Kinderwunsch", path: ROUTE_PATHS.KINDERWUNSCH },
     { name: "Über mich", path: ROUTE_PATHS.UEBER_MICH },
+    { name: "Preisliste", path: ROUTE_PATHS.PREISLISTE },
     { name: "Magazin", path: ROUTE_PATHS.BLOG },
     { name: "Kontakt", path: ROUTE_PATHS.CONTACT }
   ];

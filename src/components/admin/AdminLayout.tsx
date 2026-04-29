@@ -11,7 +11,8 @@ import {
   Menu,
   X,
   BookOpen,
-  Settings
+  Settings,
+  Image as ImageIcon
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ROUTE_PATHS } from "@/lib/index";
@@ -59,6 +60,7 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
     { name: "Anfragen (Leads)", href: ROUTE_PATHS.ADMIN_LEADS, icon: Users },
     { name: "Kurse & Events", href: ROUTE_PATHS.ADMIN_EVENTS, icon: Calendar },
     { name: "Blogverwaltung", href: ROUTE_PATHS.ADMIN_BLOG, icon: BookOpen },
+    { name: "Bilder-Management", href: ROUTE_PATHS.ADMIN_IMAGES, icon: ImageIcon },
     { name: "Einstellungen", href: ROUTE_PATHS.ADMIN_SETTINGS, icon: Settings },
   ];
 

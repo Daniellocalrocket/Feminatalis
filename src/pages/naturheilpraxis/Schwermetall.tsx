@@ -2,7 +2,9 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
+import PreisTransparenz from "@/components/PreisTransparenz";
 import { ShieldAlert, Syringe, Droplets, ArrowRight, CheckCircle2, FlaskConical, AlertTriangle, BatteryLow, TestTube } from "lucide-react";
+import SplitScreenHero from "@/components/SplitScreenHero";
 
 export default function Schwermetall() {
   const symptome = [
@@ -46,21 +48,18 @@ export default function Schwermetall() {
         description="Gezielte Chelat-Therapie bei Quecksilber, Blei oder Aluminium im Körper. Entgifte deine Zellen für mehr Energie und einen klaren Geist." 
       />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-muted/20 text-center">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 uppercase tracking-wider">
-            Toxikologie & Entgiftung
-          </div>
-          <h1 className="text-4xl md:text-7xl font-serif text-primary mb-8 leading-[1.1]">
-            Klinische <br />
-            <span className="text-accent italic font-light">Schwermetallausleitung</span>
-          </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto italic text-center">
-            "Tiefsitzende Umweltgifte verdrängen wichtige Vitalstoffe, lähmen deinen Stoffwechsel und blockieren nahezu alle zellulären Heilungsprozesse."
-          </p>
-        </div>
-      </section>
+      <SplitScreenHero
+        badge="Detox & Entgiftung"
+        title={<>Schwermetall- <br /><span className="text-accent italic font-light">Ausleitung & Entgiftung</span></>}
+        subtitle="Befreie deinen Körper von verborgenen Lasten. Durch gezielte Labordiagnostik und individuelle Ausleitungsverfahren schaffen wir die Basis für einen gesunden Stoffwechsel."
+        imageSrc="https://images.unsplash.com/photo-1532187875605-1ef6c237f1f0?q=80&w=2070&auto=format&fit=crop"
+        imageAlt="Schwermetallausleitung und Entgiftung"
+        imageKey="img_hero_schwermetall"
+      >
+        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+          Kostenfreie Vor-Analyse anfragen
+        </Link>
+      </SplitScreenHero>
 
       {/* Intro & Indikationen Section */}
       <section className="py-20 text-left">
@@ -124,6 +123,11 @@ export default function Schwermetall() {
         </div>
       </section>
 
+      <PreisTransparenz 
+        preisHint="Provokationstest ab 120,- €" 
+        hinweis="Zzgl. Laborkosten und Material (Chelatbildner)."
+      />
+
       {/* Final CTA */}
       <section className="py-24 bg-muted/20 border-t border-border text-center">
         <div className="container mx-auto px-4 max-w-4xl text-center">
@@ -133,8 +137,8 @@ export default function Schwermetall() {
              Beginne mit einem Provokationstest und verschaffe dir Klarheit über deine tatsächliche Belastung.
            </p>
            <div className="flex justify-center">
-              <Link to={ROUTE_PATHS.CONTACT} className="inline-flex bg-primary text-white px-12 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-transform shadow-2xl flex items-center justify-center gap-3 shadow-primary/20 border-none">
-                Provokationstest anfragen <ArrowRight className="text-white w-6 h-6" />
+              <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-12 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-transform shadow-2xl flex items-center justify-center gap-3 shadow-primary/20 border-none">
+                Kostenfreie Vor-Analyse anfragen <ArrowRight className="text-white w-6 h-6" />
               </Link>
            </div>
         </div>

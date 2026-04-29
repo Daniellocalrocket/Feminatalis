@@ -2,7 +2,9 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
+import PreisTransparenz from "@/components/PreisTransparenz";
 import { Zap, Target, CheckCircle2, ShieldAlert, BatteryLow, Activity, ArrowRight, Lightbulb } from "lucide-react";
+import SplitScreenHero from "@/components/SplitScreenHero";
 
 export default function Mitochondrien() {
   const schadfaktoren = [
@@ -31,21 +33,18 @@ export default function Mitochondrien() {
         description="Die Basis deiner Energie. Stärke deine Zellkraftwerke bei Erschöpfung, Burnout und chronischen Beschwerden durch mitochondriale Medizin." 
       />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-muted/20 text-center">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 uppercase tracking-wider">
-            Mitochondriale Medizin
-          </div>
-          <h1 className="text-4xl md:text-7xl font-serif text-primary mb-8 leading-[1.1]">
-            Mitochondrien <br />
-            <span className="text-accent italic font-light">Die Kraftwerke deiner Zellen</span>
-          </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto italic text-center">
-            "Dein Körper besteht aus rund 80 Billionen Zellen. In fast jeder davon leben Tausende Mitochondrien, die fast alle Stoffwechselprozesse und deine gesamte Energieleistung steuern."
-          </p>
-        </div>
-      </section>
+      <SplitScreenHero
+        badge="Mitochondriale Medizin"
+        title={<>Zellkraft- <br /><span className="text-accent italic font-light">Mitochondrien-Therapie</span></>}
+        subtitle="Deine Gesundheit beginnt in der Zelle. Mit gezielter IHHT-Höhentraining und Mikronährstoff-Therapie laden wir deine zellulären Kraftwerke wieder auf – für mehr Vitalität und Leistungsfähigkeit."
+        imageSrc="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=2070&auto=format&fit=crop"
+        imageAlt="Mitochondrien-Therapie und Zellgesundheit"
+        imageKey="img_hero_mitochondrien"
+      >
+        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+          Kostenfreie Vor-Analyse anfragen
+        </Link>
+      </SplitScreenHero>
 
       {/* ATP Logic Section */}
       <section className="py-20 text-left">
@@ -119,14 +118,19 @@ export default function Mitochondrien() {
               </div>
               
               <div className="pt-16 text-center">
-                <Link to={ROUTE_PATHS.CONTACT} className="inline-flex items-center justify-center gap-3 bg-accent text-white px-12 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-xl border-none">
-                  Analyse-Termin buchen <ArrowRight className="w-6 h-6 text-white" />
+                <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex items-center justify-center gap-3 bg-accent text-white px-12 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-xl border-none">
+                  Kostenfreie Vor-Analyse anfragen <ArrowRight className="w-6 h-6 text-white" />
                 </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <PreisTransparenz 
+        preisHint="Mitochondrien-Check & Beratung" 
+        hinweis="Analytische Tiefe für deine zelluläre Energie."
+      />
     </div>
   );
 }

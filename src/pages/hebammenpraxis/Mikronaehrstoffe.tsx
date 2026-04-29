@@ -2,7 +2,9 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
+import PreisTransparenz from "@/components/PreisTransparenz";
 import { Activity, Check, ArrowRight, Zap, Target, Info, Sparkles, Heart } from "lucide-react";
+import SplitScreenHero from "@/components/SplitScreenHero";
 
 export default function Mikronaehrstoffe() {
   const reasonsForSupplements = [
@@ -19,20 +21,21 @@ export default function Mikronaehrstoffe() {
         description="Optimiere deine Vitalstoff-Versorgung mit orthomolekularer Medizin. Wissenschaftlich fundierte Analysen statt blinder Einnahme." 
       />
       
-      <section className="pt-32 pb-20 bg-muted/20 text-center">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 uppercase tracking-wider">
-            Orthomolekulare Medizin
-          </div>
-          <h1 className="text-4xl md:text-7xl font-serif text-primary mb-8 leading-[1.1]">
-            Mikronährstoff- <br />
-            <span className="text-accent italic font-light">Therapie</span>
-          </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto italic text-center">
-            "Orthomolekular bedeutet 'richtig versorgt mit Nährstoffen' – die Basis deiner Gesundheit."
-          </p>
-        </div>
-      </section>
+      <SplitScreenHero
+        badge="Orthomolekulare Medizin"
+        title={<>Mikronährstoff- <br /><span className="text-accent italic font-light">Therapie</span></>}
+        subtitle='Orthomolekular bedeutet "richtig versorgt mit Nährstoffen". In unserer Praxis setzen wir auf präzise Laboranalysen statt blinder Einnahme von Standard-Präparaten – die Basis deiner Gesundheit.'
+        imageSrc="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=2070&auto=format&fit=crop"
+        imageAlt="Mikronährstoff-Therapie und Vitalstoffe"
+        imageKey="img_hero_mikronaehrstoffe"
+      >
+        <Link to={ROUTE_PATHS.LABOR} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+          Vitalstoff-Check im Labor <ArrowRight size={20} />
+        </Link>
+        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary border-2 border-primary/20 px-10 py-5 rounded-2xl font-bold hover:bg-muted transition-all flex items-center gap-2">
+          Kostenfreie Vor-Analyse anfragen
+        </Link>
+      </SplitScreenHero>
 
       <section className="py-20 text-left">
         <div className="container mx-auto px-4 max-w-6xl">
@@ -79,13 +82,18 @@ export default function Mikronaehrstoffe() {
                <Link to={ROUTE_PATHS.LABOR} className="bg-accent text-white px-10 py-5 rounded-xl font-bold hover:scale-105 transition-all shadow-xl flex items-center justify-center gap-2">
                  Vitalstoff-Check im Labor <ArrowRight size={20} />
                </Link>
-               <Link to={ROUTE_PATHS.CONTACT} className="bg-white/10 text-white border border-white/20 px-10 py-5 rounded-xl font-bold hover:bg-white/20 transition-all backdrop-blur-sm">
+               <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white/10 text-white border border-white/20 px-10 py-5 rounded-xl font-bold hover:bg-white/20 transition-all backdrop-blur-sm">
                  Vorsorge-Gespräch buchen
                </Link>
              </div>
           </div>
         </div>
       </section>
+
+      <PreisTransparenz 
+        preisHint="Vitalstoff-Check ab 65,- €" 
+        hinweis="Zzgl. Laborkosten je nach Analyseumfang."
+      />
     </div>
   );
 }

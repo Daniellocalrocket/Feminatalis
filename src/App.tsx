@@ -44,6 +44,7 @@ import ZellkraftRoadmap from "@/pages/kinderwunsch/ZellkraftRoadmap";
 import CoursesOverview from "@/pages/CoursesOverview";
 import EventBooking from "@/pages/EventBooking";
 import Impressum from "@/pages/Impressum";
+import Preisliste from "@/pages/Preisliste";
 
 // Admin Pages
 import AdminLogin from "@/pages/admin/Login";
@@ -52,6 +53,7 @@ import AdminLeads from "@/pages/admin/Leads";
 import AdminEvents from "@/pages/admin/Events";
 import AdminBlog from "@/pages/admin/Blog";
 import AdminSettings from "@/pages/admin/Settings";
+import AdminImages from "@/pages/admin/Images";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -180,6 +182,10 @@ const App = () => {
                 path={ROUTE_PATHS.UEBER_MICH} 
                 element={<UeberMich />} 
               />
+              <Route 
+                path={ROUTE_PATHS.PREISLISTE} 
+                element={<Preisliste />} 
+              />
               
               {/* New Routes */}
               <Route 
@@ -248,6 +254,10 @@ const App = () => {
               <Route 
                 path={ROUTE_PATHS.ADMIN_SETTINGS} 
                 element={<AdminSettings />} 
+              />
+              <Route 
+                path={ROUTE_PATHS.ADMIN_IMAGES} 
+                element={<AdminImages />} 
               />
               {/* Fallback route - Redirecting to Home as no specific NotFound was provided */}
               <Route 

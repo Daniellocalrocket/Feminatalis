@@ -60,6 +60,7 @@ export const ROUTE_PATHS = {
   ADMIN_BLOG: "/admin/blog",
   ADMIN_NEWS: "/admin/news",
   ADMIN_SETTINGS: "/admin/settings",
+  ADMIN_IMAGES: "/admin/images",
 
   // Legal
   IMPRESSUM: "/impressum",

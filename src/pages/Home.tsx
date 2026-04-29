@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { motion } from "framer-motion";
-import { Leaf, Heart, Baby, Check, Phone, Mail, Clock, MapPin, Award, ArrowRight, ChevronRight, Activity, Smile, Star, CheckCircle, Syringe, Sparkles, Microscope, Zap, ShieldCheck, Instagram, Youtube } from "lucide-react";
+import { Leaf, Heart, Baby, Check, Phone, Mail, Clock, MapPin, Award, ArrowRight, ChevronRight, Activity, Star, CheckCircle, Syringe, Sparkles, Microscope, Zap, ShieldCheck, Instagram, Youtube } from "lucide-react";
+import { useSiteImages } from "@/hooks/useSiteImages";
 
 export default function Home() {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", topic: "", message: "", agree: false });
+  const { getImageUrl } = useSiteImages();
+
+  const heroImage = getImageUrl("img_hero_home", "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,26 +22,42 @@ export default function Home() {
       <SEO title="Ganzheitliche Gesundheit | feminatalis" description="Praxis für Funktionelle Medizin & Hebammenpraxis in Bad Schönborn." />
 
       {/* Hero Section */}
-      <section className="bg-background pt-32 pb-48 text-center relative overflow-hidden">
+      <section className="relative pt-32 pb-48 text-center overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={heroImage} 
+            alt="Feminatalis Background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-white/75 backdrop-blur-[1px]" />
+        </div>
+
         <div className="container mx-auto px-4 relative z-10 max-w-4xl">
-          <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
-            Ganzheitliche Gesundheit
-          </div>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif text-primary mb-6 leading-tight tracking-tight">
-            Praxis für Funktionelle <br className="hidden sm:block"/>Medizin <br className="sm:hidden"/>
-            <span className="text-accent">& Hebammenpraxis</span>
-          </h1>
-          <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Wir kombinieren modernste Labordiagnostik mit tiefem naturheilkundlichen und geburtshilflichen Wissen. Für Ihre Gesundheit auf allen Lebenswegen.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to={ROUTE_PATHS.CONTACT} className="bg-accent text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-accent/90 transition-all shadow-lg shadow-accent/20 flex items-center justify-center gap-2 w-full sm:w-fit">
-              <CheckCircle className="w-5 h-5" /> Jetzt Termin online buchen
-            </Link>
-            <Link to={ROUTE_PATHS.COURSES} className="bg-white text-primary border-2 border-primary/10 px-8 py-4 rounded-xl font-bold text-lg hover:border-primary/30 transition-all flex items-center justify-center gap-2 w-full sm:w-fit">
-              Kurse & Events
-            </Link>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
+              Ganzheitliche Gesundheit
+            </div>
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif text-primary mb-6 leading-tight tracking-tight">
+              Praxis für Funktionelle <br className="hidden sm:block"/>Medizin <br className="sm:hidden"/>
+              <span className="text-accent">& Hebammenpraxis</span>
+            </h1>
+            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+              Wir kombinieren modernste Labordiagnostik mit tiefem naturheilkundlichen und geburtshilflichen Wissen. Für Ihre Gesundheit auf allen Lebenswegen.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link to={ROUTE_PATHS.CONTACT} className="bg-accent text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-accent/90 transition-all shadow-lg shadow-accent/20 flex items-center justify-center gap-2 w-full sm:w-fit">
+                <CheckCircle className="w-5 h-5" /> Jetzt Termin online buchen
+              </Link>
+              <Link to={ROUTE_PATHS.KURS} className="bg-white text-primary border-2 border-primary/10 px-8 py-4 rounded-xl font-bold text-lg hover:border-primary/30 transition-all flex items-center justify-center gap-2 w-full sm:w-fit">
+                Kurse & Events
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -144,8 +164,8 @@ export default function Home() {
                 <div><div className="text-3xl font-bold text-accent">Sicher</div><div className="text-xs font-black uppercase tracking-widest text-primary/60">Evidenz</div></div>
               </div>
             </div>
-            <div className="w-full md:w-1/3 aspect-[4/5] bg-green-100 rounded-3xl border-2 border-green-200 flex items-center justify-center p-6 text-center text-green-700 font-medium opacity-60">
-              Platz für Bild
+            <div className="w-full md:w-1/3 aspect-[4/5] rounded-3xl overflow-hidden shadow-lg">
+              <img src="/hebammen_section.png" alt="Schwangere Frau in der Hebammenpraxis" className="w-full h-full object-cover" />
             </div>
           </div>
 
@@ -258,8 +278,8 @@ export default function Home() {
                   </Link>
                 </div>
             </div>
-            <div className="w-full lg:w-5/12 aspect-[4/3] bg-orange-50 rounded-[2.5rem] border border-border flex items-center justify-center text-amber-700 font-medium relative opacity-80">
-              Platz für Kinderwunsch Bild
+            <div className="w-full lg:w-5/12 aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-lg">
+              <img src="/kinderwunsch_section.png" alt="Kinderwunsch – Hoffnung und Geborgenheit" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -271,11 +291,8 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="flex flex-col md:flex-row gap-16 items-center">
             <div className="w-full md:w-5/12">
-              <div className="aspect-[3/4] bg-white rounded-[2.5rem] p-4 shadow-sm relative border border-border/50">
-                <div className="w-full h-full bg-slate-100 rounded-[2rem] border-2 border-dashed border-slate-300 flex flex-col items-center justify-center text-slate-400">
-                  <Smile className="w-16 h-16 mb-4"/>
-                  <span>Portrait Angela Deschner</span>
-                </div>
+              <div className="aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-xl border border-border/50">
+                <img src="/angela_portrait.png" alt="Angela Deschner – Hebamme und Heilpraktikerin" className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="flex-1">

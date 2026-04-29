@@ -2,146 +2,90 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
-import { CheckCircle2, ShieldAlert, ActivitySquare, Dna, Leaf, ShieldCheck, ArrowRight, Bug } from "lucide-react";
+import { Activity, ShieldCheck, ArrowRight, Microscope, Zap, Heart } from "lucide-react";
+import SplitScreenHero from "@/components/SplitScreenHero";
+import PreisTransparenz from "@/components/PreisTransparenz";
+import { motion } from "framer-motion";
 
 export default function Darmsanierung() {
-  const indikationen = [
-    "Reizdarmsyndrom & SIBO (Blähbauch, Krämpfe, Diarrhoe)",
-    "Nahrungsmittelunverträglichkeiten & Histaminintoleranz",
-    "Chronische Erschöpfung, Müdigkeit & Burnout-Syndrom",
-    "Hartnäckige Hauterkrankungen (Neurodermitis, Akne, Psoriasis)",
-    "Schwere Autoimmunerkrankungen (Hashimoto, Rheuma etc.)",
-    "Häufige virale / bakterielle Infekte & schwaches Immunsystem",
-    "Depressive Verstimmungen, Ängste & starker Brain Fog",
-    "Unerfüllter Kinderwunsch & hormonelle Dysbalancen"
-  ];
-
-  const therapiePhasen = [
-    {
-      title: "1. Exakte Diagnostik",
-      desc: "Hochspezialisierte Stuhldiagnostik (komplettes Mikrobiom, tiefe Entzündungsmarker, Leaky-Gut Marker wie Zonulin). Kein Raten, wir messen.",
-      icon: <ActivitySquare className="w-8 h-8 text-accent" />
-    },
-    {
-      title: "2. Gezieltes Reinigen",
-      desc: "Konsequente und sanfte Ausleitung von Toxinen, Abbau von Biofilmen und Reduktion von potenziell pathogenen Erregern (z.B. Candida).",
-      icon: <Leaf className="w-8 h-8 text-accent" />
-    },
-    {
-      title: "3. Darmschleimhaut Reparieren",
-      desc: "Massiver Wiederaufbau der Darmschleimhaut (schützende Mucin-Schicht) und strikte Versiegelung beim Leaky-Gut-Syndrom.",
-      icon: <ShieldCheck className="w-8 h-8 text-accent" />
-    },
-    {
-      title: "4. Nachhaltig Besiedeln",
-      desc: "Gezielter, hochdosierter Aufbau der physiologischen, guten Darmflora durch genau passende prä- und probiotische Bakterienstämme exakt nach Laborbefund.",
-      icon: <Dna className="w-8 h-8 text-accent" />
-    }
+  const fokusBereiche = [
+    { title: "Mikrobiomanalyse", desc: "Präzise Stuhldiagnostik zur Bestimmung der Bakterienzusammensetzung und Entzündungsmarker.", icon: Microscope },
+    { title: "Leaky-Gut-Therapie", desc: "Heilung der löchrigen Darmbarriere zur Reduzierung systemischer Entzündungen.", icon: ShieldCheck },
+    { title: "Dysbiose-Ausgleich", desc: "Gezielte Zufuhr von Prä- und Probiotika basierend auf deinen Laborergebnissen.", icon: Activity },
+    { title: "Immunmodulation", desc: "Stärkung des darmassoziierten Immunsystems (GALT) für deine gesamte Gesundheit.", icon: Heart }
   ];
 
   return (
     <div className="bg-background min-h-screen font-sans">
       <SEO 
-        title="Darmsanierung & Mikrobiom-Therapie | Naturheilpraxis feminatalis" 
-        description="Der absolute Schlüssel zur Gesundheit liegt in deinem Darm. Wir bieten hochspezialisierte Mikrobiom-Diagnostik und individuelle Therapiekonzepte bei Reizdarm und Leaky-Gut." 
+        title="Darmsanierung & Mikrobiom | Naturheilpraxis feminatalis" 
+        description="Gesundheit beginnt im Darm. Mit ganzheitlicher Mikrobiomanalyse und Darmsanierung stärken wir deine Abwehr und dein Wohlbefinden." 
       />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-muted/20 text-center">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 uppercase tracking-wider">
-            Darmgesundheit & Mikrobiom
-          </div>
-          <h1 className="text-4xl md:text-7xl font-serif text-primary mb-8 leading-[1.1]">
-            Das Zentrum <br />
-            <span className="text-accent italic font-light">deiner Gesundheit</span>
-          </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto italic text-center font-medium">
-            "Der Tod sitzt im Darm" – das wusste schon Paracelsus. Heute sagt die moderne Wissenschaft ganz klar: Knapp 80% unseres hochentwickelten Immunsystems und unserer mentalen Kraft sind lokal in der Darmschleimhaut angesiedelt.
-          </p>
-        </div>
-      </section>
+      <SplitScreenHero
+        badge="Zentrum der Gesundheit"
+        title={<>Darmanalyse & <br /><span className="text-accent italic font-light">Mikrobiom-Therapie</span></>}
+        subtitle="Dein Darm ist weit mehr als ein Verdauungsorgan – er ist das Zentrum deines Immunsystems und deiner psychischen Stabilität. Wir bringen deine innere Welt wieder ins Gleichgewicht."
+        imageSrc="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=2070&auto=format&fit=crop"
+        imageAlt="Darmgesundheit und Mikrobiom"
+        imageKey="img_hero_darmanalyse"
+      >
+        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+          Kostenfreie Vor-Analyse anfragen <ArrowRight size={20} />
+        </Link>
+      </SplitScreenHero>
 
-      {/* Intro & Indikationen Section */}
-      <section className="py-20 text-left">
+      <section className="py-24 text-left">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
-            <div className="bg-white p-12 lg:p-16 rounded-[4rem] border border-border shadow-2xl relative overflow-hidden text-left h-full">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 -mr-32 -mt-32 rounded-full blur-3xl pointer-events-none"></div>
-              <div className="relative z-10 text-left">
-                <Bug className="w-16 h-16 text-primary opacity-20 mb-8" />
-                <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-8 text-left leading-tight">Warum eine echte <br />Darmsanierung?</h2>
-                <div className="prose prose-lg text-muted-foreground leading-relaxed font-medium">
-                  <p>
-                    Unser hochkomplexes Darmmikrobiom (die Gesamtheit aller unserer Milliarden Darmbakterien) produziert essentielle lebenswichtige Vitamine, extrem wichtige Neurotransmitter (wie z.B. Serotonin, unser "Glückshormon") und moduliert unser gesamtes empfindliches Immunsystem in Sekundenbruchteilen. 
-                  </p>
-                  <p>
-                    Massive Fehlernährung, Dauerstress, akute Umweltgifte und vor allem oft verordnete Medikamente wie <strong>Antibiotika und Magensäureblocker (PPIs)</strong> können diese feine, vitale bakterielle Balance in Kürze grundlegend zerstören. Die folgenschwere Konsequenz sind extrem oft stille chronische Entzündungen (Silent Inflammation) und das sogenannte <strong>"Leaky-Gut-Syndrom"</strong> (der buchstäblich löchrige Darm), bei dem gefährliche Toxine ungehindert direkt in den Blutkreislauf und sogar ins Gehirn gelangen können.
-                  </p>
+            <div className="space-y-8">
+              <h2 className="text-4xl font-serif text-primary leading-tight">Der Darm: Spiegel deines Wohlbefindens</h2>
+              <div className="prose prose-lg text-muted-foreground leading-relaxed">
+                <p>
+                  Ob Allergien, Hautprobleme, chronische Müdigkeit oder Autoimmunerkrankungen – die Ursache liegt erstaunlich oft in einem gestörten Darmmilieu. Eine oberflächliche Kur reicht hier meist nicht aus.
+                </p>
+                <p>
+                  Wir setzen auf eine <strong>fundierte Stuhldiagnostik</strong> in spezialisierten Laboren, um Schleimhautimmunität, Entzündungsgrade und die Vielfalt deines Mikrobioms schwarz auf weiß zu sehen. Erst dann entwickeln wir deinen individuellen Sanierungsplan.
+                </p>
+              </div>
+              <div className="bg-white border border-border/50 p-8 rounded-[2.5rem] shadow-sm flex items-start gap-6">
+                <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center text-accent shrink-0">
+                  <Microscope size={24} />
                 </div>
+                <p className="font-medium text-primary italic leading-relaxed">
+                  Basierend auf Ihren Laborwerten erstellen wir einen präzisen Fahrplan aus Ernährung, Supplementierung und Schleimhautschutz.
+                </p>
               </div>
             </div>
-            
-            <div className="space-y-8 text-left h-full">
-              <h3 className="text-3xl lg:text-4xl font-serif text-primary font-bold text-left mb-8 leading-tight">Typische Anzeichen <br />einer Dysbiose:</h3>
-              <div className="flex flex-col gap-5 mt-2 text-left">
-                {indikationen.map((item, i) => (
-                  <div key={i} className="flex items-center gap-5 bg-white p-6 rounded-2xl border border-border shadow-sm hover:border-accent transition-colors text-left group">
-                    <div className="bg-muted/30 p-2 rounded-xl group-hover:bg-accent/10 transition-colors">
-                      <ShieldAlert className="w-6 h-6 text-accent shrink-0" />
-                    </div>
-                    <span className="text-sm lg:text-base font-bold text-primary leading-snug">{item}</span>
+
+            <div className="grid sm:grid-cols-2 gap-6">
+              {fokusBereiche.map((item, i) => (
+                <div key={i} className="bg-white p-10 rounded-[2.5rem] border border-border/50 shadow-sm flex flex-col group hover:border-accent transition-all">
+                  <div className="bg-muted/30 w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent/10 transition-colors">
+                    <item.icon className="text-accent w-7 h-7" />
                   </div>
-                ))}
-              </div>
+                  <h4 className="font-bold text-primary mb-3 font-serif text-xl">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Therapy Phasen*/}
-      <section className="py-24 bg-primary relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/5 via-transparent to-transparent pointer-events-none"></div>
-        <div className="container mx-auto px-4 max-w-7xl relative z-10">
-          <div className="text-center mb-20 text-center">
-             <h2 className="text-4xl lg:text-6xl font-serif text-white font-bold text-center mb-8 leading-tight">Das feminatalis <br />4-Phasen-Erfolgsmodell</h2>
-             <p className="text-white/90 font-medium mt-4 text-center max-w-3xl mx-auto italic text-xl leading-relaxed">
-               Eine nachhaltig erfolgreiche Darmsanierung ist definitiv kein "schnelles Probiotikum von der Stange aus der Apotheke", sondern bedarf eines hochstrategischen, engmaschig laborbasierten und individuell angepassten Vorgehens.
+          <div className="bg-primary text-white p-12 lg:p-20 rounded-[4rem] text-center shadow-2xl relative overflow-hidden mb-24">
+             <div className="absolute bottom-0 right-0 w-64 h-64 bg-accent/20 -mr-32 -mb-32 rounded-full blur-3xl opacity-20"></div>
+             <Zap className="w-16 h-16 text-accent mx-auto mb-8 animate-pulse relative z-10" />
+             <h2 className="text-3xl lg:text-5xl font-serif mb-8 text-white font-bold relative z-10">Vitalität durch Balance</h2>
+             <p className="text-xl opacity-90 mb-12 max-w-3xl mx-auto leading-relaxed relative z-10">
+               Ein gesunder Darm bedeutet weniger Entzündungen, eine bessere Nährstoffaufnahme und eine stabilere Psyche. Lass uns gemeinsam den Grundstein für deine langfristige Gesundheit legen.
              </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
-             {therapiePhasen.map((phase, i) => (
-               <div key={i} className="bg-white/5 backdrop-blur-md p-10 rounded-[3rem] border border-white/10 text-left hover:bg-white/10 transition-all shadow-2xl relative overflow-hidden group">
-                  <div className="absolute -right-10 -top-10 opacity-5 group-hover:opacity-10 transition-opacity">
-                     <Bug className="w-48 h-48 text-white" />
-                  </div>
-                  <div className="mb-8 bg-white/10 w-20 h-20 rounded-2xl flex items-center justify-center border border-white/20 relative z-10">
-                    {phase.icon}
-                  </div>
-                  <h3 className="text-2xl font-serif text-white font-bold mb-6 relative z-10">{phase.title}</h3>
-                  <p className="text-white/80 leading-relaxed text-sm font-medium relative z-10 pb-4">{phase.desc}</p>
-               </div>
-             ))}
+             <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary px-12 py-5 rounded-2xl font-bold hover:bg-accent hover:text-white transition-all shadow-xl inline-flex items-center gap-3 relative z-10">
+               Darmanalyse anfragen <ArrowRight size={20} />
+             </Link>
           </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-32 bg-background border-t border-border text-center">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
-           <Dna className="w-20 h-20 text-primary mx-auto mb-10 opacity-20" />
-           <h2 className="text-4xl md:text-6xl font-serif text-primary mb-10 leading-tight font-bold text-center">Dein sicherer Weg <br />zur inneren Stärke</h2>
-           <p className="text-xl text-muted-foreground leading-relaxed font-medium text-center mb-16 max-w-3xl mx-auto">
-             Beginne jetzt vollkommen konsequent mit dem wichtigsten Fundament deiner langfristigen Gesundheit – von innen heraus. Ohne funktionierenden Darm ist alles andere umsonst.
-           </p>
-           <div className="flex justify-center">
-              <Link to={ROUTE_PATHS.CONTACT} className="inline-flex bg-primary text-white px-14 py-6 rounded-2xl font-bold text-xl hover:scale-105 transition-transform shadow-2xl flex items-center justify-center gap-4 shadow-primary/20 border-none">
-                Große Labor-Analyse vereinbaren <ArrowRight className="text-white w-7 h-7" />
-              </Link>
-           </div>
-        </div>
-      </section>
+      <PreisTransparenz />
     </div>
   );
 }

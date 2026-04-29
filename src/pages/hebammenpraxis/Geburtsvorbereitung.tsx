@@ -2,150 +2,90 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { ROUTE_PATHS } from "@/lib/index";
-import { ShieldCheck, ArrowRight, Heart, Brain, UserCheck, BookOpen, Crown, AlertTriangle, Wind, Users, Hospital, Activity } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { ShieldCheck, ArrowRight, Heart, Brain, UserCheck, BookOpen, Crown, Wind, Users, Hospital, Activity } from "lucide-react";
+import SplitScreenHero from "@/components/SplitScreenHero";
+import PreisTransparenz from "@/components/PreisTransparenz";
+import { motion } from "framer-motion";
 
 export default function Geburtsvorbereitung() {
+  const modules = [
+    { title: "Physische Vorbereitung", desc: "Atemtechniken, Gebärpositionen und Körperarbeit für eine aktive Geburt.", icon: Wind },
+    { title: "Mentale Stärke", desc: "Angstabbau durch fundiertes Wissen und positive Visualisierungen.", icon: Brain },
+    { title: "Partner-Einbindung", desc: "Wie der Partner effektiv unterstützen kann und was seine Rolle im Kreißsaal ist.", icon: Users },
+    { title: "Klinik-Check", desc: "Abläufe im Krankenhaus, Interventionen und selbstbestimmte Entscheidungen.", icon: Hospital }
+  ];
+
   return (
-    <div className="bg-background min-h-screen">
+    <div className="bg-background min-h-screen font-sans">
       <SEO 
         title="Geburtsvorbereitung | Klassisches Hebammenwissen" 
         description="Ihre solide Basis für die Geburt. Klassisches Hebammenwissen, Atemtechniken und fundierte Aufklärung, um Ängste abzubauen." 
       />
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-24 overflow-hidden border-b border-border/50">
-        <div className="absolute top-0 left-0 w-1/4 h-full bg-primary/5 -z-10 rounded-r-[100px]" />
+      <SplitScreenHero
+        badge="Säule 1: Basis-Wissen"
+        title={<>Klassisches Hebammenwissen trifft <br /><span className="text-accent italic font-light">Sicherheit</span></>}
+        subtitle="Wir bereiten dich auf das Wunder der Geburt vor. Mit bewährtem Wissen als starkem Fundament, um Ängste abzubauen und den Kopf auf die bevorstehende Aufgabe einzustellen."
+        imageSrc="https://images.unsplash.com/photo-1559839734-2b71f1e3c7e3?q=80&w=2070&auto=format&fit=crop"
+        imageAlt="Geburtsvorbereitungskurs"
+        imageKey="img_hero_geburtsvorbereitung"
+      >
+        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+          Kursplatz anfragen <ArrowRight size={20} />
+        </Link>
+      </SplitScreenHero>
+
+      <section className="py-24 text-left">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="max-w-4xl">
-            <span className="bg-primary/10 text-primary px-5 py-2 rounded-full text-xs font-black mb-8 inline-block uppercase tracking-[0.2em] shadow-sm">
-              Säule 1: Basis-Wissen
-            </span>
-            <h1 className="text-5xl lg:text-7xl font-serif text-primary mb-8 leading-[1.1]">
-              Klassisches Hebammenwissen trifft auf <br />
-              <span className="text-orange-600">Sicherheit.</span>
-            </h1>
-            <p className="text-xl lg:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl">
-              Wir bereiten Sie auf das Wunder der Geburt vor. Mit bewährtem Hebammenwissen als starkem Fundament, um Ängste abzubauen, den Partner einzubinden und den Kopf auf die bevorstehende Aufgabe einzustellen.
-            </p>
-            <div className="flex flex-wrap gap-5">
-               <Link to={ROUTE_PATHS.CONTACT} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
-                 Basis-Kurs buchen
-               </Link>
-               <a href="#premium-upsell" className="bg-orange-50 text-orange-700 border border-orange-200 px-10 py-5 rounded-2xl font-bold hover:bg-orange-100 transition-all flex items-center gap-2 group">
-                 Zum Premium-Modul <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-               </a>
+          <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
+            <div className="space-y-8">
+              <h2 className="text-4xl font-serif text-primary leading-tight">Wissen nimmt den Schmerz die Macht</h2>
+              <div className="prose prose-lg text-muted-foreground leading-relaxed">
+                <p>
+                  Angst entsteht oft aus Ungewissheit. In unseren Kursen beleuchten wir die physiologischen Vorgänge der Geburt so präzise, dass du verstehst, was dein Körper leistet und warum jeder Schmerzimpuls einen Sinn hat.
+                </p>
+                <p>
+                  Wir kombinieren <strong>traditionelles Hebammenhandwerk</strong> mit modernen medizinischen Erkenntnissen, um dir eine realistische und kraftspendende Perspektive auf deine Geburt zu geben.
+                </p>
+              </div>
+              <div className="bg-white border border-border/50 p-8 rounded-[2.5rem] shadow-sm flex items-start gap-6">
+                <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center text-accent shrink-0">
+                  <UserCheck size={24} />
+                </div>
+                <p className="font-medium text-primary italic leading-relaxed">
+                  Unser Ziel ist es, dass du informierte Entscheidungen treffen kannst – egal ob im Geburtshaus oder in der Uniklinik.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-6">
+              {modules.map((item, i) => (
+                <div key={i} className="bg-white p-10 rounded-[2.5rem] border border-border/50 shadow-sm flex flex-col group hover:border-accent transition-all">
+                  <div className="bg-muted/30 w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent/10 transition-colors">
+                    <item.icon className="text-accent w-7 h-7" />
+                  </div>
+                  <h4 className="font-bold text-primary mb-3 font-serif text-xl">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Das Basis-Fundament */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-20 max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-serif text-primary mb-6">Das Fundament der klassischen Vorbereitung</h2>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Der klassische Geburtsvorbereitungskurs (als anerkannte Kassenleistung) legt Ihr unverzichtbares intellektuelles Fundament. Sie lernen den reinen Prozess verstehen – anatomisch, logistisch und mental. Dieses Grundlagenwissen ist der erste, entscheidende Schritt, um Ausgeliefertsein in Sicherheit zu verwandeln.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {[
-              { icon: <BookOpen className="text-blue-600" />, title: "Die Geburtsphasen", desc: "Verstehen Sie von Grund auf, was anatomisch während der Eröffnungs-, Übergangs- und Austrittsphase vor sich geht, um dem Prozess zu vertrauen." },
-              { icon: <Wind className="text-teal-600" />, title: "Atmung & Positionen", desc: "Erlernen Sie handfeste Atemtechniken und entlastende Gebärpositionen, die Ihnen helfen, Wehen aktiv zu veratmen und mit dem Körper zu arbeiten." },
-              { icon: <Brain className="text-primary" />, title: "Mindset & Angstabbau", desc: "Demystifizierung des Geburtsschmerzes. Faktisches Wissen minimiert die Angstspirale und hilft Ihnen, körperliche Verkrampfungen aufzulösen." },
-              { icon: <Users className="text-orange-500" />, title: "Teamwork im Kreißsaal", desc: "Wie Ihr Partner (oder Ihre Begleitung) wirklich helfen kann: Von wirksamen Massagetechniken bis zur emotionalen Verankerung unter starken Wehen." },
-              { icon: <Hospital className="text-purple-500" />, title: "Abläufe & Interventionen", desc: "Was passiert eigentlich bei der Klinikaufnahme? Wir besprechen medizinische Eingriffe (wie CTG, Wehentropf oder PDA) transparent, damit Sie vorbereitet sind." },
-              { icon: <Heart className="text-red-500" />, title: "Stillen & Babypflege", desc: "Die ersten 48 Stunden: Vom goldenen Bonding, über grundlegende Stillpositionen bis zur Grundpflege des Säuglings (Wickeln, Halten, Baden)." }
-            ].map((col, i) => (
-               <div key={i} className="bg-primary/5 p-8 lg:p-10 rounded-[2.5rem] border border-primary/10 hover:border-primary/20 transition-all hover:-translate-y-1 hover:shadow-lg">
-                 <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm">
-                   {col.icon}
-                 </div>
-                 <h3 className="text-xl font-serif text-primary mb-3">{col.title}</h3>
-                 <p className="text-muted-foreground leading-relaxed">{col.desc}</p>
-               </div>
-            ))}
-          </div>
-          
-          <div className="bg-[#f8f9fa] rounded-3xl p-8 border border-border flex flex-col md:flex-row gap-8 items-center justify-between">
-             <div>
-                <h4 className="flex items-center gap-2 text-xl font-bold text-primary mb-2"><Activity className="text-orange-500" /> Kassenleistung</h4>
-                <p className="text-muted-foreground max-w-2xl">
-                  Die Kosten für den reinen Basis-Geburtsvorbereitungskurs werden bei gesetzlich Versicherten in der Regel komplett für die Schwangere von der Krankenkasse übernommen.
-                </p>
-             </div>
-             <Link to={ROUTE_PATHS.CONTACT} className="bg-white border border-border text-primary font-bold px-8 py-3 rounded-xl shadow-sm hover:shadow-md transition-all whitespace-nowrap">
-               Anfrage stellen
+          <div className="bg-primary text-white p-12 lg:p-20 rounded-[4rem] text-center shadow-2xl relative overflow-hidden mb-24">
+             <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 -mr-32 -mt-32 rounded-full blur-3xl opacity-20"></div>
+             <Crown className="w-16 h-16 text-accent mx-auto mb-8 animate-pulse relative z-10" />
+             <h2 className="text-3xl lg:text-5xl font-serif mb-8 text-white font-bold relative z-10">Bereit für den Start?</h2>
+             <p className="text-xl opacity-90 mb-12 max-w-3xl mx-auto leading-relaxed relative z-10">
+               Die Plätze in unseren Geburtsvorbereitungskursen sind begrenzt, um eine persönliche Atmosphäre zu gewährleisten. Melde dich frühzeitig an.
+             </p>
+             <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary px-12 py-5 rounded-2xl font-bold hover:bg-accent hover:text-white transition-all shadow-xl inline-flex items-center gap-3 relative z-10">
+               Platz anfragen <ArrowRight size={20} />
              </Link>
           </div>
         </div>
       </section>
 
-      {/* Bedarf Wecken / Pain Point */}
-      <section className="py-24 bg-gray-50 border-y border-border/50 relative overflow-hidden">
-        <div className="absolute -left-40 top-1/2 -translate-y-1/2 w-96 h-96 bg-red-100 rounded-full blur-[100px] opacity-40 mix-blend-multiply" />
-        <div className="container mx-auto px-4 max-w-6xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 text-red-600 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-red-100">
-                <AlertTriangle size={16} /> Wichtig zu wissen
-              </div>
-              <h2 className="text-4xl font-serif text-primary leading-tight mb-8">
-                Warum Wissen allein für den Geburtsmarathon nicht ausreicht.
-              </h2>
-              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  Stellen Sie sich vor, Sie laufen einen Marathon. Sie haben Bücher darüber gelesen, wie man atmet und wohin die Strecke führt. Sie fühlen sich mental gut vorbereitet.
-                </p>
-                <p>
-                  Wenn Ihr <strong className="text-primary">innerer Zell-Akku</strong> aber leer ist, werden Sie nach 10 Kilometern erschöpft zusammenbrechen. Alles theoretische Wissen nützt nichts, wenn der Muskel keine Kraft mehr hat.
-                </p>
-                <p className="p-6 bg-white rounded-2xl border border-primary/10 italic text-primary/80 shadow-sm">
-                  Die Gebärmutter ist ein reiner Muskel, der über Stunden auf Hochtouren arbeitet. Wenn die körpereigenen Energiedepots (ATP) leer sind, kommt es zu einem Wehen-Stopp. <strong>Die Folge: Fast immer unaufhaltsame medizinische Interventionen.</strong>
-                </p>
-              </div>
-            </div>
-            
-            <div className="relative" id="premium-upsell">
-              <div className="bg-white p-12 lg:p-14 rounded-[3rem] shadow-2xl border-4 border-orange-100 relative z-10 text-center flex flex-col items-center">
-                 <div className="absolute -top-6 bg-orange-500 text-white px-6 py-2 rounded-full font-bold uppercase tracking-widest text-sm flex items-center gap-2 shadow-lg">
-                    <Crown size={16} /> Die Lösung
-                 </div>
-                 <h3 className="text-3xl font-serif text-primary mt-4 mb-4">
-                   Premium-Modul:<br/>
-                   <span className="text-orange-600">Zell-Energie</span>
-                 </h3>
-                 <p className="text-muted-foreground mb-8">
-                   Sichern Sie sich nicht nur das Wissen, sondern die physische <strong>Urkraft</strong>. Laden Sie Ihre Zell-Batterie mit ATP und Mineralien tiefenphysiologisch voll auf – für eine Intervention-freie Geburt.
-                 </p>
-                 <Link to={ROUTE_PATHS.PREMIUM_ZELLKRAFT_KURS} className="w-full bg-orange-600 text-white px-8 py-5 rounded-xl font-bold hover:bg-orange-700 transition-all flex items-center justify-center gap-2 mb-4">
-                   Details zum Premium-Zellkraft-Kurs <ArrowRight size={18} />
-                 </Link>
-                 <p className="text-xs text-muted-foreground uppercase tracking-widest">Die St. Petersburger Schule</p>
-              </div>
-              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-orange-200 rounded-full blur-[80px] opacity-60 -z-0" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action for Standard */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
-          <UserCheck className="w-16 h-16 mx-auto mb-8 text-primary opacity-20" />
-          <h2 className="text-3xl md:text-4xl font-serif text-primary mb-6">Sie möchten sich für die Basis anmelden?</h2>
-          <p className="text-xl text-muted-foreground mb-12">
-            Falls Sie ausschließlich den klassischen Geburtsvorbereitungskurs (Wissen & Theorie) buchen möchten, können Sie uns hier schnell kontaktieren.
-          </p>
-          <div className="flex justify-center">
-            <Link to={ROUTE_PATHS.CONTACT} className="inline-block bg-primary text-white border-2 border-primary px-12 py-6 rounded-2xl font-bold text-xl hover:bg-primary/90 transition-all active:scale-95">
-              Nur Basis-Kurs anfragen
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PreisTransparenz />
     </div>
   );
 }

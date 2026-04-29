@@ -3,6 +3,7 @@ import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
 import { Check, ArrowRight, Activity, Zap, Wind, HeartPulse, Sparkles, Quote, Star, ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function BrainLight() {
   const features = [
@@ -40,18 +41,43 @@ export default function BrainLight() {
       />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-[#F9F7F4] text-center border-b border-border">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 uppercase tracking-wider">
-            Neurowissenschaft trifft Entspannung
+      <section className="relative pt-32 pb-24 overflow-hidden border-b border-border/50">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column: Text Content */}
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 uppercase tracking-wider">
+                Neurowissenschaft trifft Entspannung
+              </div>
+              <h1 className="text-4xl lg:text-6xl font-serif text-primary mb-8 leading-[1.1]">
+                brainLight® <br />
+                <span className="text-accent italic font-light text-3xl md:text-5xl">Licht. Klang. Massage. Synergie.</span>
+              </h1>
+              <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-2xl">
+                Ein atemberaubendes, sinnliches Resonanz-Erlebnis auf neuro-wissenschaftlicher Basis. Regeneration des Nervensystems in kürzester Zeit.
+              </p>
+            </motion.div>
+
+            {/* Right Column: Atmospheric Image */}
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
+                <img 
+                  src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=2070&auto=format&fit=crop" 
+                  alt="brainLight Wellness" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
           </div>
-          <h1 className="text-4xl md:text-7xl font-serif text-primary mb-8 leading-[1.1]">
-            brainLight® <br />
-            <span className="text-accent italic font-light text-4xl md:text-6xl">Licht. Klang. Massage. Synergie.</span>
-          </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto italic text-center font-medium">
-            "Ein atemberaubendes, sinnliches Resonanz-Erlebnis, das auf dem absoluten Fundament seriöser neuro-wissenschaftlicher Studien steht – weit entfernt von banaler Esoterik."
-          </p>
         </div>
       </section>
 
@@ -125,12 +151,22 @@ export default function BrainLight() {
                   <br /><br />
                   <strong>Geheimtipp:</strong> Ideal auch als tiefgradig ergänzende Entspannung direkt nach einer anstrengenden medizinischen Behandlung in unserer Praxis.
                 </p>
-                <Link to={ROUTE_PATHS.CONTACT} className="bg-accent text-white px-8 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-all w-full flex items-center justify-center gap-3 border-none shadow-accent/20 shadow-lg">
+                <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-accent text-white px-8 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-all w-full flex items-center justify-center gap-3 border-none shadow-accent/20 shadow-lg">
                   Persönliche Session buchen <ArrowUpRight className="w-5 h-5 text-white" />
                 </Link>
                 <p className="mt-6 text-xs opacity-60 text-white italic text-center">Zeiten & Konditionen entnehmen Sie bitte unserer aktuellen Preisliste am Empfang.</p>
               </div>
             </div>
+          </div>
+
+          <div className="bg-accent/5 p-8 rounded-[2.5rem] border border-accent/20 flex flex-col md:flex-row items-center justify-between gap-6 mt-20 max-w-5xl mx-auto">
+            <div>
+              <h3 className="text-xl font-bold text-primary mb-2">Investition</h3>
+              <p className="text-muted-foreground">Tiefenregeneration-Session (20 Min.): 25,- €.</p>
+            </div>
+            <Link to={ROUTE_PATHS.PREISLISTE} className="text-accent font-bold flex items-center gap-2 hover:underline">
+              Zur kompletten Preisliste <ArrowRight size={18} />
+            </Link>
           </div>
         </div>
       </section>

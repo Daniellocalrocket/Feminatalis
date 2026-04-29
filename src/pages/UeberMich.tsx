@@ -18,8 +18,12 @@ import {
   Star
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { useSiteImages } from "@/hooks/useSiteImages";
 
 export default function UeberMich() {
+  const { getImageUrl } = useSiteImages();
+  const portraitAngela = getImageUrl("img_portrait_angela", "");
+  const portraitRomy = getImageUrl("img_portrait_romy", "");
   const timeline = [
     { year: "1989-1992", title: "Hebammenausbildung & Examen", desc: "Grundstein meiner medizinischen Laufbahn." },
     { year: "1992-1995", title: "St. Petersburg (Russland)", desc: "Wochenstation eines großen Geburtshauses." },
@@ -64,12 +68,19 @@ export default function UeberMich() {
             
             <div className="bg-white rounded-[3rem] p-4 shadow-xl border border-primary/5 aspect-[4/5] relative group overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-tr from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              {/* PLATZHALTER BILD - Hier kann später das echte Porträt eingefügt werden */}
-              <div className="w-full h-full bg-slate-50 rounded-[2.5rem] flex items-center justify-center border-2 border-dashed border-primary/10 text-muted-foreground flex-col gap-3 relative z-10">
-                <Heart className="w-12 h-12 text-primary/20" />
-                <span className="font-serif text-lg text-primary/60">Porträt Angela Deschner</span>
-                <span className="text-xs uppercase tracking-widest opacity-50">(Echtes Bild wird später eingefügt)</span>
-              </div>
+              {portraitAngela ? (
+                <img 
+                  src={portraitAngela} 
+                  alt="Angela Deschner" 
+                  className="w-full h-full object-cover rounded-[2.5rem]" 
+                />
+              ) : (
+                <div className="w-full h-full bg-slate-50 rounded-[2.5rem] flex items-center justify-center border-2 border-dashed border-primary/10 text-muted-foreground flex-col gap-3 relative z-10">
+                  <Heart className="w-12 h-12 text-primary/20" />
+                  <span className="font-serif text-lg text-primary/60">Porträt Angela Deschner</span>
+                  <span className="text-xs uppercase tracking-widest opacity-50">(Bild im Admin-Bereich hochladen)</span>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -193,11 +204,19 @@ export default function UeberMich() {
           <div className="bg-white rounded-[3rem] p-8 md:p-16 shadow-xl border border-yellow-200 flex flex-col md:flex-row items-center gap-12 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#fff08a]/20 rounded-bl-[200px] -z-0" />
             <div className="w-full md:w-1/3 relative z-10">
-              <div className="aspect-square bg-slate-50 rounded-[2.5rem] border border-primary/10 flex items-center justify-center flex-col text-muted-foreground p-6 text-center">
-                <Heart className="w-12 h-12 text-primary/20 mb-3" />
-                <span className="font-serif">Porträt Romy</span>
-                <span className="text-xs uppercase tracking-widest opacity-50">(Echtes Bild folgt)</span>
-              </div>
+              {portraitRomy ? (
+                <img 
+                  src={portraitRomy} 
+                  alt="Romy Greulich" 
+                  className="w-full aspect-square object-cover rounded-[2.5rem] border border-primary/10" 
+                />
+              ) : (
+                <div className="aspect-square bg-slate-50 rounded-[2.5rem] border border-primary/10 flex items-center justify-center flex-col text-muted-foreground p-6 text-center">
+                  <Heart className="w-12 h-12 text-primary/20 mb-3" />
+                  <span className="font-serif">Porträt Romy</span>
+                  <span className="text-xs uppercase tracking-widest opacity-50">(Bild im Admin-Bereich hochladen)</span>
+                </div>
+              )}
             </div>
             <div className="flex-1 relative z-10">
               <span className="text-accent font-bold uppercase tracking-widest text-sm mb-4 block">Praxisteam</span>

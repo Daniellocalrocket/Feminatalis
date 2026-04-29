@@ -2,7 +2,9 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
-import { Zap, Check, ArrowRight, Activity, Target, Heart, Shield } from "lucide-react";
+import { Zap, ArrowRight, Activity, Target, Heart, Shield } from "lucide-react";
+import SplitScreenHero from "@/components/SplitScreenHero";
+import PreisTransparenz from "@/components/PreisTransparenz";
 
 export default function Akupunktur() {
   const treatments = [
@@ -19,27 +21,25 @@ export default function Akupunktur() {
         description="Gezielte Akupunktur für Schwangerschaft und allgemeine Gesundheit. Entdecke das NADA-Protokoll zur Entspannung und Schmerzlinderung." 
       />
 
-      <section className="pt-32 pb-20 bg-[#FBF7F4] text-center">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 uppercase tracking-wider">
-            Heilung durch feine Impulse
-          </div>
-          <h1 className="text-4xl md:text-7xl font-serif text-primary mb-8 leading-[1.1]">
-            Akupunktur <br />
-            <span className="text-accent italic font-light">Tradition trifft Moderne</span>
-          </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto italic text-center">
-            "Kleine Nadeln, große Wirkung – schmerzfrei, steril und wissenschaftlich anerkannt."
-          </p>
-        </div>
-      </section>
+      <SplitScreenHero
+        badge="Heilung durch feine Impulse"
+        title={<>Akupunktur <br /><span className="text-accent italic font-light">Tradition trifft Moderne</span></>}
+        subtitle="Kleine Nadeln, große Wirkung – schmerzfrei, steril und wissenschaftlich anerkannt. Gezielte Regulation deines Körpers für Schwangerschaft und allgemeine Gesundheit."
+        imageSrc="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=2070&auto=format&fit=crop"
+        imageAlt="Akupunktur Behandlung"
+        imageKey="img_hero_tcm"
+      >
+        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+          Kostenfreie Vor-Analyse anfragen <ArrowRight size={20} />
+        </Link>
+      </SplitScreenHero>
 
       <section className="py-20 text-left">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-24 text-left">
             <div className="space-y-6">
               <h2 className="text-3xl font-serif text-primary leading-tight text-left">Gezielte Regulation deines Körpers</h2>
-              <div className="prose prose-lg text-muted-foreground text-left text-left">
+              <div className="prose prose-lg text-muted-foreground text-left">
                 <p>
                   Akupunktur ist weit mehr als nur das Setzen von Nadeln. Es ist eine präzise Regulationstherapie, die das Nervensystem anspricht, die Durchblutung fördert und die Ausschüttung von körpereigenen Botenstoffen aktiviert.
                 </p>
@@ -74,7 +74,7 @@ export default function Akupunktur() {
                Ein spezielles Ohrakupunktur-Verfahren zur Stabilisierung bei Stress, Erschöpfung und emotionalen Belastungen. Es fördert die innere Ruhe, verbessert den Schlaf und reduziert Suchtdruck.
              </p>
              <div className="flex flex-col sm:flex-row justify-center gap-6 relative z-10">
-               <Link to={ROUTE_PATHS.CONTACT} className="bg-accent text-white px-10 py-5 rounded-xl font-bold hover:scale-105 transition-all shadow-xl flex items-center justify-center gap-2 border-none">
+               <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-accent text-white px-10 py-5 rounded-xl font-bold hover:scale-105 transition-all shadow-xl flex items-center justify-center gap-2 border-none">
                  Termin für NADA vereinbaren <ArrowRight size={20} />
                </Link>
              </div>
@@ -99,6 +99,8 @@ export default function Akupunktur() {
           </div>
         </div>
       </section>
+
+      <PreisTransparenz />
     </div>
   );
 }

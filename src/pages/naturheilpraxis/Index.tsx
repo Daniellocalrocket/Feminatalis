@@ -3,6 +3,7 @@ import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
 import { Stethoscope, Droplet, Wind, Brain, Activity, Flame, Zap, ArrowRight, HeartPulse, Sparkles, Microscope, FlaskConical, Thermometer } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Naturheilpraxis() {
   const diagnostik = [
@@ -28,25 +29,41 @@ export default function Naturheilpraxis() {
       />
 
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-muted/20 text-center">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 uppercase tracking-wider">
-            Ursachenbasierte Medizin
-          </div>
-          <h1 className="text-4xl md:text-7xl font-serif text-primary mb-8 leading-[1.1]">
-            Nicht nur Symptome lindern. <span className="text-accent italic font-light">Die Ursache heilen.</span>
-          </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto italic text-center font-medium mb-12">
-            In der Naturheilpraxis feminatalis betrachten wir deinen Körper als komplexes System. Wir messen, statt zu raten, und unterstützen deine Zellen dabei, wieder in ihre volle Kraft zu kommen.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-             <Link to={ROUTE_PATHS.CONTACT} className="inline-flex bg-primary text-white px-12 py-5 rounded-2xl font-bold hover:scale-105 transition-all shadow-2xl flex items-center justify-center gap-3 border-none text-lg">
-                Jetzt Analyse-Termin buchen <ArrowRight className="w-6 h-6" />
-             </Link>
-             <Link to={ROUTE_PATHS.LABOR} className="inline-flex bg-white text-primary border border-border px-12 py-5 rounded-2xl font-bold hover:bg-muted transition-all items-center justify-center text-lg shadow-sm">
-                Labor & Diagnostik
-             </Link>
-          </div>
+      <section className="relative pt-32 pb-48 text-center overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2040&auto=format&fit=crop" 
+            alt="Naturheilpraxis Background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-white/75 backdrop-blur-[1px]" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10 max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 uppercase tracking-wider">
+              Ursachenbasierte Medizin
+            </div>
+            <h1 className="text-4xl md:text-7xl font-serif text-primary mb-8 leading-[1.1]">
+              Nicht nur Symptome lindern. <span className="text-accent italic font-light">Die Ursache heilen.</span>
+            </h1>
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto italic font-medium mb-12">
+              In der Naturheilpraxis feminatalis betrachten wir deinen Körper als komplexes System. Wir messen, statt zu raten, und unterstützen deine Zellen dabei, wieder in ihre volle Kraft zu kommen.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-6">
+               <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-12 py-5 rounded-2xl font-bold hover:scale-105 transition-all shadow-2xl flex items-center justify-center gap-3 border-none text-lg">
+                  Jetzt Analyse-Termin buchen <ArrowRight className="w-6 h-6" />
+               </Link>
+               <Link to={ROUTE_PATHS.LABOR} className="inline-flex bg-white text-primary border border-border px-12 py-5 rounded-2xl font-bold hover:bg-muted transition-all items-center justify-center text-lg shadow-sm">
+                  Labor & Diagnostik
+               </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -152,7 +169,7 @@ export default function Naturheilpraxis() {
                  <p className="text-lg opacity-90 leading-relaxed mb-10 relative z-10 font-medium">
                     Natürliche Ursachenmedizin ist dann besonders wertvoll, wenn du deine Gesundheit proaktiv in die eigenen Hände nehmen möchtest oder die klassische Medizin absolut keine ausreichende Erklärung für dein chronisches Empfinden findet. Wir arbeiten bewusstein komplementär, also streng wissenschaftlich ergänzend zur Schulmedizin.
                  </p>
-                 <Link to={ROUTE_PATHS.CONTACT} className="text-accent font-bold flex items-center gap-3 hover:gap-5 transition-all text-xl w-fit relative z-10">
+                 <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="text-accent font-bold flex items-center gap-3 hover:gap-5 transition-all text-xl w-fit relative z-10">
                     Termin für Erstgespräch anfragen <ArrowRight className="w-6 h-6" />
                  </Link>
               </div>
@@ -169,7 +186,7 @@ export default function Naturheilpraxis() {
             Lass uns gemeinsam detektivisch herausfinden, was dein Körper wirklich vermisst. Buche jetzt dein umfassendes Analysegespräch.
           </p>
           <div className="flex justify-center">
-             <Link to={ROUTE_PATHS.CONTACT} className="inline-flex bg-primary text-white px-14 py-6 rounded-2xl font-bold text-xl hover:scale-105 transition-all shadow-2xl border-none">Anamnese-Termin anfragen</Link>
+             <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-14 py-6 rounded-2xl font-bold text-xl hover:scale-105 transition-all shadow-2xl border-none">Anamnese-Termin anfragen</Link>
           </div>
         </div>
       </section>

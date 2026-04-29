@@ -3,6 +3,8 @@ import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
 import { Compass, Check, ArrowRight, Activity, Zap, Wind, Moon, Sun, Leaf } from "lucide-react";
+import SplitScreenHero from "@/components/SplitScreenHero";
+import PreisTransparenz from "@/components/PreisTransparenz";
 
 export default function TCM() {
   const pillars = [
@@ -18,21 +20,19 @@ export default function TCM() {
         description="Bringe Yin und Yang ins harmonische Gleichgewicht. Wir nutzen Akupunktur und Zungendiagnostik für deine ganzheitliche Heilung." 
       />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-muted/20 text-center">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 uppercase tracking-wider">
-            Jahrtausendealte Weisheit
-          </div>
-          <h1 className="text-4xl md:text-7xl font-serif text-primary mb-8 leading-[1.1]">
-            TCM <br />
-            <span className="text-accent italic font-light">Körper & Geist im Fluss</span>
-          </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto italic text-center font-medium">
-            "Wahre Gesundheit ist das harmonische Zusammenspiel von Yin und Yang – von innerer Ruhe und kraftvoller Aktivität."
-          </p>
-        </div>
-      </section>
+
+      <SplitScreenHero
+        badge="Traditionelle Chinesische Medizin"
+        title={<>Sanfte Heilung durch <br /><span className="text-accent italic font-light">TCM & Akupunktur</span></>}
+        subtitle="Erlebe die tiefe Balance von Körper und Geist. Wir verbinden jahrtausendealtes Wissen mit modernen diagnostischen Ansätzen für deine nachhaltige Gesundheit."
+        imageSrc="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=2070&auto=format&fit=crop"
+        imageAlt="TCM Behandlung und Akupunktur"
+        imageKey="img_hero_tcm"
+      >
+        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+          Kostenfreie Vor-Analyse anfragen
+        </Link>
+      </SplitScreenHero>
 
       {/* Intro Section */}
       <section className="py-20 text-left">
@@ -99,13 +99,18 @@ export default function TCM() {
                 ))}
              </div>
              <div className="mt-16 flex flex-col sm:flex-row justify-center gap-6 relative z-10">
-               <Link to={ROUTE_PATHS.CONTACT} className="bg-white text-primary px-12 py-5 rounded-2xl font-bold hover:scale-105 transition-all shadow-xl flex items-center justify-center gap-3 border-none text-lg">
+               <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary px-12 py-5 rounded-2xl font-bold hover:scale-105 transition-all shadow-xl flex items-center justify-center gap-3 border-none text-lg">
                  Puls- & Zungendiagnose anfragen <ArrowRight size={24} className="text-primary" />
                </Link>
              </div>
           </div>
         </div>
       </section>
+
+      <PreisTransparenz 
+        preisHint="Akupunktur ab 65,- €" 
+        hinweis="Abrechnung nach GebüH. Private Kassen übernehmen i.d.R. die Kosten."
+      />
     </div>
   );
 }

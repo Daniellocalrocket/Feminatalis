@@ -3,6 +3,7 @@ import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
 import { Battery, HeartPulse, Zap, ShieldCheck, Microscope, Award, ArrowRight, Activity, Thermometer, UserCheck } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Hebammenpraxis() {
   return (
@@ -13,29 +14,42 @@ export default function Hebammenpraxis() {
       />
       
       {/* 1. Hero-Sektion (Der Einstieg) */}
-      <section className="relative pt-32 pb-24 overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-orange-50/50 -z-10 rounded-l-[100px]" />
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="max-w-4xl">
+      <section className="relative pt-32 pb-48 text-center overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?q=80&w=2070&auto=format&fit=crop" 
+            alt="Hebammenpraxis Background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-white/75 backdrop-blur-[1px]" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10 max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <span className="bg-orange-100 text-orange-600 px-5 py-2 rounded-full text-xs font-black mb-8 inline-block uppercase tracking-[0.2em] shadow-sm">
               Das Feminatalis Geburtskraft-Konzept
             </span>
-            <h1 className="text-5xl lg:text-7xl font-serif text-primary mb-8 leading-[1.1] animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            <h1 className="text-5xl lg:text-7xl font-serif text-primary mb-8 leading-[1.1]">
               Maximale <span className="text-orange-600">Geburtskraft</span>: <br />
               Das Zell-Protokoll für Ihre interventionsfreie Entbindung.
             </h1>
-            <p className="text-xl lg:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl">
+            <p className="text-xl lg:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto">
               Ihr Uterusmuskel ist der Hochleistungsmotor der Geburt. Ich sorge dafür, dass er den entscheidenden Treibstoff hat. Mit 33 Jahren Erfahrung und dem Fokus auf zelluläre Energie-Optimierung bereite ich Ihren Körper auf die größte körperliche Leistung Ihres Lebens vor.
             </p>
-            <div className="flex flex-wrap gap-5">
-                <Link to={ROUTE_PATHS.CONTACT} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:bg-primary/95 hover:shadow-2xl hover:-translate-y-0.5 transition-all active:scale-95 shadow-xl flex items-center gap-3">
+            <div className="flex flex-wrap justify-center gap-5">
+                <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:bg-primary/95 hover:shadow-2xl hover:-translate-y-0.5 transition-all active:scale-95 shadow-xl flex items-center gap-3">
                   <UserCheck size={20} /> Termin online buchen
                 </Link>
                <a href="#saeulen" className="bg-white text-primary border-2 border-primary/20 px-10 py-5 rounded-2xl font-bold hover:bg-muted transition-all flex items-center gap-2">
                  Die 3 Säulen entdecken <ArrowRight size={20} />
                </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -200,7 +214,7 @@ export default function Hebammenpraxis() {
           <p className="text-xl text-muted-foreground mb-12">
             Investieren Sie in die optimale Vorbereitung Ihrer körperlichen Ressourcen. Für eine Geburt aus eigener Stärke.
           </p>
-          <Link to={ROUTE_PATHS.CONTACT} className="inline-block bg-primary text-white px-12 py-6 rounded-2xl font-bold text-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 w-fit mx-auto">
+          <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-block bg-primary text-white px-12 py-6 rounded-2xl font-bold text-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 w-fit mx-auto">
             <UserCheck size={24} /> Jetzt Termin online buchen
           </Link>
         </div>

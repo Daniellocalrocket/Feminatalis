@@ -2,7 +2,9 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
+import PreisTransparenz from "@/components/PreisTransparenz";
 import { Zap, CheckCircle2, ArrowRight, FlaskConical, HeartPulse, Sun, ShieldCheck } from "lucide-react";
+import SplitScreenHero from "@/components/SplitScreenHero";
 
 export default function Lasertherapie() {
   const laserEffekte = [
@@ -19,21 +21,18 @@ export default function Lasertherapie() {
         description="Medizinische Lasertherapie zur Zellregeneration und Hämo-Laser zur systemischen Blutaktivierung. Sanfte Heilung durch Lichtenergie." 
       />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-muted/20 text-center">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 uppercase tracking-wider">
-            Lichtenergie für die Zelle
-          </div>
-          <h1 className="text-4xl md:text-7xl font-serif text-primary mb-8 leading-[1.1]">
-            Lasertherapie <br />
-            <span className="text-accent italic font-light">Reparatur durch Photonen</span>
-          </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto italic text-center">
-            "Gebündeltes Licht als Bio-Katalysator: Schmerzfrei, sanft und von enormer Tiefe."
-          </p>
-        </div>
-      </section>
+      <SplitScreenHero
+        badge="Biophotonen & Energie"
+        title={<>Photon- <br /><span className="text-accent italic font-light">Lasertherapie</span></>}
+        subtitle="Wir bringen Licht in deine Zellen. Die Low-Level-Lasertherapie nutzt die Kraft der Photonen, um Entzündungen zu hemmen, die Wundheilung zu beschleunigen und die mitochondriale Energieproduktion sanft zu stimulieren."
+        imageSrc="https://images.unsplash.com/photo-1579152276503-3406322316e6?q=80&w=2070&auto=format&fit=crop"
+        imageAlt="Lasertherapie Behandlung"
+        imageKey="img_hero_lasertherapie"
+      >
+        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+          Kostenfreie Vor-Analyse anfragen
+        </Link>
+      </SplitScreenHero>
 
       {/* Basic Effects */}
       <section className="py-20 text-left">
@@ -134,13 +133,18 @@ export default function Lasertherapie() {
         </div>
       </section>
 
+      <PreisTransparenz 
+        preisHint="Lasertherapie ab 45,- €" 
+        hinweis="Gezielte Zellregeneration durch hochreine Lichtenergie."
+      />
+
       {/* CTA */}
       <section className="py-24 bg-muted/20 border-t border-border text-center">
         <div className="container mx-auto px-4 max-w-4xl text-center">
            <ShieldCheck className="w-16 h-16 text-accent mx-auto mb-8 opacity-20" />
            <h2 className="text-3xl md:text-5xl font-serif text-primary mb-10 leading-tight font-bold text-center">Bereit für deine <br />Licht-Regeneration?</h2>
-           <Link to={ROUTE_PATHS.CONTACT} className="inline-flex bg-primary text-white px-12 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-2xl flex items-center gap-3 shadow-primary/20 border-none">
-             Termin anfragen <ArrowRight className="w-6 h-6 text-white text-center" />
+           <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-12 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-2xl flex items-center gap-3 shadow-primary/20 border-none">
+             Kostenfreie Vor-Analyse anfragen <ArrowRight className="w-6 h-6 text-white text-center" />
            </Link>
            <p className="text-xs text-muted-foreground mt-8 italic font-medium text-center">Abrechnung erfolgt nach Zeitaufwand (ca. 100 € / Std.) zzgl. evtl. Materialkosten.</p>
         </div>
