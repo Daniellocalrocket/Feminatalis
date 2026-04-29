@@ -39,7 +39,6 @@ import Blutegel from "@/pages/naturheilpraxis/Blutegel";
 import Lasertherapie from "@/pages/naturheilpraxis/Lasertherapie";
 import Beschwerden from "@/pages/hebammenpraxis/Beschwerden";
 import Mikronaehrstoffe from "@/pages/hebammenpraxis/Mikronaehrstoffe";
-import CosMedea from "@/pages/CosMedea";
 import Vorqualifizierung from "@/pages/Vorqualifizierung";
 import ZellkraftRoadmap from "@/pages/kinderwunsch/ZellkraftRoadmap";
 import CoursesOverview from "@/pages/CoursesOverview";
@@ -215,10 +214,7 @@ const App = () => {
                 path={ROUTE_PATHS.MIKRONAEHRSTOFFE} 
                 element={<Mikronaehrstoffe />} 
               />
-              <Route 
-                path={ROUTE_PATHS.COSMEDEA} 
-                element={<CosMedea />} 
-              />
+
               <Route 
                 path={ROUTE_PATHS.VORQUALIFIZIERUNG} 
                 element={<Vorqualifizierung />} 

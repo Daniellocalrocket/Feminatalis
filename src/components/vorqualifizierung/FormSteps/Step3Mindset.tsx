@@ -122,7 +122,7 @@ const getMindsetQuestions = (areas: string[] = []) => {
     ];
   }
 
-  // Default to Naturheilkunde & Cosmedea
+  // Default to Naturheilkunde
   return [
     {
       id: "mqSituation",

@@ -10,7 +10,7 @@ import { Info, MapPin, Shield } from "lucide-react";
 export default function Step2Contact() {
   const { register, watch, formState: { errors } } = useFormContext<VorqualifizierungData>();
   const [showPlzInfo, setShowPlzInfo] = useState(false);
-  const [showInsuranceInfo, setShowInsuranceInfo] = useState(false);
+
 
   const zipCode = watch("zipCode");
   const insurance = watch("insurance");
@@ -45,14 +45,6 @@ export default function Step2Contact() {
     }
   }, [zipCode]);
 
-  useEffect(() => {
-    // Check for cosMedea + Kasse combination
-    if (insurance === "Gesetzlich versichert" && areas.includes("cosmedea")) {
-      setShowInsuranceInfo(true);
-    } else {
-      setShowInsuranceInfo(false);
-    }
-  }, [insurance, areas]);
 
   return (
     <div className="space-y-10 animate-in fade-in duration-500 max-w-2xl mx-auto px-4">
@@ -122,14 +114,7 @@ export default function Step2Contact() {
         {errors.insurance && <p className="text-red-500 text-xs pl-2 font-bold">{errors.insurance.message}</p>}
       </div>
 
-      {showInsuranceInfo && (
-        <Alert className="bg-orange-50 border-orange-200 rounded-2xl animate-in slide-in-from-top-2 duration-300">
-          <AlertDescription className="text-primary/70 flex items-center gap-3">
-             <Info className="w-5 h-5 text-accent shrink-0" />
-             Ästhetische Behandlungen sind reine Privatleistungen. Ich informiere Sie gerne über die Kosten.
-          </AlertDescription>
-        </Alert>
-      )}
+
     </div>
   );
 }

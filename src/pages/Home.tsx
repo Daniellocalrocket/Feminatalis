@@ -265,31 +265,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* cosMedea Section */}
-      <section className="py-24 bg-white relative overflow-hidden">
-        <div className="container mx-auto px-4 max-w-6xl relative z-10">
-          <div className="bg-[#fde4c8]/20 rounded-[3rem] p-10 md:p-16 border border-border flex flex-col md:flex-row items-center gap-16 shadow-sm">
-            <div className="flex-1 order-2 md:order-1">
-              <span className="text-accent font-bold uppercase tracking-widest text-sm mb-4 block">Zweitpraxis cosMedea</span>
-              <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6 leading-tight">Wellness & Ästhetik:<br/>Natürlich schöne Ergebnisse</h2>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                In unserer Zweitpraxis cosMedea setzen wir auf Behandlungen, die Ihre natürliche Ausstrahlung unterstreichen. Von Tiefenentspannung im brainLight-Sessel bis hin zu ganzheitlichen Anti-Aging-Konzepten – wir unterstützen Ihre Schönheit von innen und außen.
-              </p>
-              <div className="flex flex-wrap gap-4 mb-8">
-                {["Wellness & Massage", "Natürliches Anti-Aging", "Ästhetik"].map((tag, i) => (
-                  <span key={i} className="bg-white border border-border px-4 py-1.5 rounded-full text-sm font-medium text-primary">{tag}</span>
-                ))}
-              </div>
-              <Link to={ROUTE_PATHS.COSMEDEA} className="text-primary font-bold inline-flex items-center gap-2 group">
-                Zu cosMedea wechseln <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform"/>
-              </Link>
-            </div>
-            <div className="w-full md:w-5/12 aspect-square bg-orange-100/30 rounded-[2.5rem] border border-orange-200 flex items-center justify-center text-orange-800 font-medium order-1 md:order-2 opacity-60">
-              Platz für CosMedea Bild
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Über Mich */}
       <section className="py-24 bg-[#fff9ed] border-t border-border/40">

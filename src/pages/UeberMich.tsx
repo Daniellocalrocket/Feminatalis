@@ -32,7 +32,7 @@ export default function UeberMich() {
     { year: "2021-2022", title: "Mitochondriale Medizin & Post-Covid", desc: "Spezialisierung auf Mikrobiom, IHHT und Long-Covid-Syndrome." },
     { year: "2023", title: "Chelat-Therapie & Hormone", desc: "Ausbildung zur Chelat-Therapeutin (DACT), Fortbildungen zur Labordiagnostik." },
     { year: "2024", title: "Ästhetik & Drip-Spa", desc: "Fachfortbildung zur Ästhetik-Therapeutin, Spezialisierung auf Infusionen und IHHT (IGAF e.V.)." },
-    { year: "April 2025", title: "Eröffnung cosMedea", desc: "Zweitpraxis für Ästhetik, Anti-Aging und Wellness." },
+
   ];
 
   return (
@@ -128,7 +128,7 @@ export default function UeberMich() {
               { icon: <Microscope className="text-blue-600 w-8 h-8"/>, title: "Mitochondriale Medizin", desc: "Zertifizierte IHHT-Therapeutin (IGAF e.V.) und geprüfte Vitalstoffberaterin." },
               { icon: <Star className="text-yellow-600 w-8 h-8"/>, title: "Master of Acupuncture", desc: "Fundierte Ausbildung (2013), speziell für Frauenheilkunde und Kinderwunsch." },
               { icon: <CheckCircle2 className="text-green-600 w-8 h-8"/>, title: "Chelat-Therapeutin", desc: "Ausbildung bei der DACT (2023). Spezialisiert auf Schwermetallausleitung und Entgiftung." },
-              { icon: <Heart className="text-rose-500 w-8 h-8"/>, title: "Ästhetik & CosMedea", desc: "Fachfortbildung Ästhetik-Therapeutin (2024). Natürliches Anti-Aging und Wellness." },
+              { icon: <Heart className="text-rose-500 w-8 h-8"/>, title: "Ästhetik & Anti-Aging", desc: "Fachfortbildung zur Ästhetik-Therapeutin (2024). Natürliche Konzepte für Ausstrahlung und Wellness." },
             ].map((q, i) => (
               <div key={i} className="bg-white p-8 rounded-[2rem] shadow-sm border border-border hover:border-accent/30 transition-all group">
                 <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">

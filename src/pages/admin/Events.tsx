@@ -438,7 +438,6 @@ export default function AdminEvents() {
                           <SelectItem value="hebamme">Hebammenpraxis</SelectItem>
                           <SelectItem value="naturheilkunde">Naturheilpraxis</SelectItem>
                           <SelectItem value="kinderwunsch">Kinderwunsch</SelectItem>
-                          <SelectItem value="cosmedea">CosMedea</SelectItem>
                         </SelectContent>
                      </Select>
                    </div>
