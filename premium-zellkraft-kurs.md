@@ -1,4 +1,4 @@
-# Premium Zellkraft Kurs - Infos
+ # Premium Zellkraft Kurs - Infos
 
 Dieses Kursprogramm für den „Zellkraft-Geburtskompass“ ist darauf ausgelegt, werdende Mütter von der bloßen Informationsempfängerin zur informierten Architektin der kindlichen Entwicklung zu transformieren. Der Fokus liegt auf der bioenergetischen Optimierung (Mitochondrien) und der physiologischen Sicherheit, um alte Mythen durch biologische Wahrheiten zu ersetzen.
 

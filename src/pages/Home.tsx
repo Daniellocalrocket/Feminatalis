@@ -330,7 +330,7 @@ export default function Home() {
               Hebammenbegleitung im Wandel – <span className="text-accent italic">bewusst · vertieft · individuell</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Nach 33 Jahren Erfahrung fokussiere ich mich auf eine exklusive, tiefgreifende Begleitung. Ich nehme nur eine begrenzte Anzahl an Frauen auf, die über die Standard-Versorgung hinaus in ihre Gesundheit und Geburtskraft investieren möchten.
+              Nach 33 Jahren Erfahrung fokussiere ich mich auf eine exklusive, tiefgreifende Begleitung für eine begrenzte Anzahl an Frauen. Wenn du bereit bist, über die Standard-Versorgung hinaus in deine Gesundheit und Geburtskraft zu investieren, begleite ich dich gerne auf diesem Weg.
             </p>
           </div>
 
