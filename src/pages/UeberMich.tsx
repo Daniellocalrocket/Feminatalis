@@ -55,7 +55,7 @@ export default function UeberMich() {
               <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
                 Expertise aus 33 Jahren
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-primary mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-primary mb-6 leading-tight [hyphens:auto] [overflow-wrap:anywhere] break-words">
                 Angela Deschner
               </h1>
               <p className="text-xl md:text-2xl font-serif text-accent italic mb-8 leading-relaxed">

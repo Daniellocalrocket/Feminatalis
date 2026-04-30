@@ -42,7 +42,7 @@ export default function Home() {
             <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
               Ganzheitliche Gesundheit
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif text-primary mb-6 leading-tight tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif text-primary mb-6 leading-tight tracking-tight [hyphens:auto] [overflow-wrap:anywhere] break-words">
               Praxis für Funktionelle <br className="hidden sm:block"/>Medizin <br className="sm:hidden"/>
               <span className="text-accent">& Hebammenpraxis</span>
             </h1>
@@ -164,8 +164,12 @@ export default function Home() {
                 <div><div className="text-3xl font-bold text-accent">Sicher</div><div className="text-xs font-black uppercase tracking-widest text-primary/60">Evidenz</div></div>
               </div>
             </div>
-            <div className="w-full md:w-1/3 aspect-[4/5] rounded-3xl overflow-hidden shadow-lg">
-              <img src="/hebammen_section.png" alt="Schwangere Frau in der Hebammenpraxis" className="w-full h-full object-cover" />
+            <div className="w-full md:w-1/3 aspect-[4/5] rounded-3xl overflow-hidden shadow-lg bg-slate-50">
+              <img 
+                src={getImageUrl("img_hebammen_section_home", "/hebammen_section.png")} 
+                alt="Schwangere Frau in der Hebammenpraxis" 
+                className="w-full h-full object-cover" 
+              />
             </div>
           </div>
 
@@ -278,8 +282,12 @@ export default function Home() {
                   </Link>
                 </div>
             </div>
-            <div className="w-full lg:w-5/12 aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-lg">
-              <img src="/kinderwunsch_section.png" alt="Kinderwunsch – Hoffnung und Geborgenheit" className="w-full h-full object-cover" />
+            <div className="w-full lg:w-5/12 aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-lg bg-slate-50">
+              <img 
+                src={getImageUrl("img_kinderwunsch_section_home", "/kinderwunsch_section.png")} 
+                alt="Kinderwunsch – Hoffnung und Geborgenheit" 
+                className="w-full h-full object-cover" 
+              />
             </div>
           </div>
         </div>
@@ -291,8 +299,12 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="flex flex-col md:flex-row gap-16 items-center">
             <div className="w-full md:w-5/12">
-              <div className="aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-xl border border-border/50">
-                <img src="/angela_portrait.png" alt="Angela Deschner – Hebamme und Heilpraktikerin" className="w-full h-full object-cover" />
+              <div className="aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-xl border border-border/50 bg-slate-50">
+                <img 
+                  src={getImageUrl("img_portrait_angela", "/angela_portrait.png")} 
+                  alt="Angela Deschner – Hebamme und Heilpraktikerin" 
+                  className="w-full h-full object-cover" 
+                />
               </div>
             </div>
             <div className="flex-1">
@@ -567,14 +579,12 @@ export default function Home() {
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-tr from-accent to-orange-400 rounded-[3rem] opacity-30 blur-2xl group-hover:opacity-50 transition-opacity" />
                 <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-[3rem] relative shadow-2xl">
-                  <div className="aspect-square bg-muted rounded-2xl mb-6 flex items-center justify-center overflow-hidden border border-white/5">
-                    {/* Placeholder for Instagram-like preview */}
-                    <div className="text-center px-6">
-                      <Instagram size={48} className="text-white/20 mx-auto mb-4" />
-                      <p className="text-sm font-serif italic text-white/40 leading-relaxed">
-                        Besuche mein Profil für tägliche Einblicke in Frauengesundheit & Zell-Energie.
-                      </p>
-                    </div>
+                  <div className="aspect-square bg-muted rounded-2xl mb-6 flex items-center justify-center overflow-hidden border border-white/5 shadow-inner">
+                    <img 
+                      src={getImageUrl("img_instagram_portrait", "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2000&auto=format&fit=crop")} 
+                      alt="Angela Deschner Instagram" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-primary font-bold shadow-inner">AD</div>

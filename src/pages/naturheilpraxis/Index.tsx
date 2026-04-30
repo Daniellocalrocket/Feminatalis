@@ -4,8 +4,11 @@ import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
 import { Stethoscope, Droplet, Wind, Brain, Activity, Flame, Zap, ArrowRight, HeartPulse, Sparkles, Microscope, FlaskConical, Thermometer } from "lucide-react";
 import { motion } from "framer-motion";
+import { useSiteImages } from "@/hooks/useSiteImages";
 
 export default function Naturheilpraxis() {
+  const { getImageUrl } = useSiteImages();
+  
   const diagnostik = [
     { title: "Funktionelle Labordiagnostik", desc: "Vollblut-Analysen, Hormonstatus, Mikrobiom & Stoffwechsel.", path: ROUTE_PATHS.LABOR, icon: <Microscope className="w-8 h-8" /> },
     { title: "Mikrobiom- & Darmanalyse", desc: "Tiefgreifende Stuhldiagnostik zur Analyse von Dysbiosen, Leaky-Gut und Entzündungen.", path: ROUTE_PATHS.DARMANALYSE, icon: <Activity className="w-8 h-8" /> },
@@ -33,7 +36,7 @@ export default function Naturheilpraxis() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2040&auto=format&fit=crop" 
+            src={getImageUrl("img_hero_naturheilpraxis", "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2040&auto=format&fit=crop")} 
             alt="Naturheilpraxis Background" 
             className="w-full h-full object-cover"
           />
@@ -49,7 +52,7 @@ export default function Naturheilpraxis() {
             <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 uppercase tracking-wider">
               Ursachenbasierte Medizin
             </div>
-            <h1 className="text-4xl md:text-7xl font-serif text-primary mb-8 leading-[1.1]">
+            <h1 className="text-4xl md:text-7xl font-serif text-primary mb-8 leading-[1.1] [hyphens:auto] [overflow-wrap:anywhere] break-words">
               Nicht nur Symptome lindern. <span className="text-accent italic font-light">Die Ursache heilen.</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto italic font-medium mb-12">

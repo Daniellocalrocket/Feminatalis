@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import AdminLayout from "@/components/admin/AdminLayout";
 import { supabase } from "@/integrations/supabase/client";
 import { 
@@ -8,7 +8,8 @@ import {
   Upload,
   Link as LinkIcon,
   Trash2,
-  Eye
+  Eye,
+  Loader2
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -22,6 +23,7 @@ const IMAGE_CONFIG = [
     id: "naturheilpraxis",
     label: "Naturheilpraxis",
     images: [
+      { key: "img_hero_naturheilpraxis", label: "Naturheilpraxis Index Hero", default: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2040&auto=format&fit=crop" },
       { key: "img_hero_tcm", label: "TCM Hero", default: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=2070&auto=format&fit=crop" },
       { key: "img_hero_long_covid", label: "Long-Covid Hero", default: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop" },
       { key: "img_hero_schwermetall", label: "Schwermetall Hero", default: "https://images.unsplash.com/photo-1532187875605-1ef6c237f1f0?q=80&w=2070&auto=format&fit=crop" },
@@ -41,12 +43,14 @@ const IMAGE_CONFIG = [
     id: "hebammenpraxis",
     label: "Hebammenpraxis",
     images: [
+      { key: "img_hero_hebammenpraxis", label: "Hebammenpraxis Index Hero", default: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?q=80&w=2070&auto=format&fit=crop" },
       { key: "img_hero_mikronaehrstoffe", label: "Mikronährstoffe Hero", default: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=2070&auto=format&fit=crop" },
       { key: "img_hero_beschwerden", label: "Beschwerden Hero", default: "https://images.unsplash.com/photo-1493894473891-10fc1e5dbd22?q=80&w=2069&auto=format&fit=crop" },
       { key: "img_hero_geburtsvorbereitung", label: "Geburtsvorbereitung Hero", default: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop" },
       { key: "img_hero_zelltraining", label: "Zelltraining Hero", default: "https://images.unsplash.com/photo-1516670428252-df97bba108d1?q=80&w=2070&auto=format&fit=crop" },
       { key: "img_hero_wochenbett", label: "Wochenbett Hero", default: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop" },
       { key: "img_hero_rueckbildung", label: "Rückbildung Hero", default: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop" },
+      { key: "img_hero_akupunktur", label: "Akupunktur Hero", default: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=2070&auto=format&fit=crop" },
     ]
   },
   {
@@ -54,8 +58,13 @@ const IMAGE_CONFIG = [
     label: "Global & Home",
     images: [
       { key: "img_hero_home", label: "Home Hero", default: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop" },
+      { key: "img_hebammen_section_home", label: "Home Hebammen Sektion", default: "/hebammen_section.png" },
+      { key: "img_kinderwunsch_section_home", label: "Home Kinderwunsch Sektion", default: "/kinderwunsch_section.png" },
+      { key: "img_instagram_portrait", label: "Home Instagram Porträt", default: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2000&auto=format&fit=crop" },
       { key: "img_hero_ueber_mich", label: "Über Mich Hero", default: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop" },
-      { key: "img_hero_kinderwunsch", label: "Kinderwunsch Hero", default: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop" },
+      { key: "img_hero_kinderwunsch", label: "Kinderwunsch Hero", default: "https://images.unsplash.com/photo-1519689680058-324335c77eba?q=80&w=2070&auto=format&fit=crop" },
+      { key: "img_portrait_angela", label: "Porträt Angela (Global)", default: "/angela_portrait.png" },
+      { key: "img_portrait_romy", label: "Porträt Romy", default: "" },
     ]
   }
 ];
@@ -64,7 +73,9 @@ export default function AdminImages() {
   const [images, setImages] = useState<Record<string, string>>({});
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
+  const [isUploading, setIsUploading] = useState<string | null>(null);
   const [previews, setPreviews] = useState<Record<string, string>>({});
+  const fileInputRefs = useRef<Record<string, HTMLInputElement | null>>({});
 
   useEffect(() => {
     fetchImages();
@@ -95,6 +106,45 @@ export default function AdminImages() {
     // Basic URL validation before showing preview
     if (url.startsWith('http') || url.startsWith('/')) {
       setPreviews(prev => ({ ...prev, [key]: url }));
+    }
+  };
+
+  const handleFileUpload = async (key: string, event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    try {
+      setIsUploading(key);
+      
+      // Create a unique file name
+      const fileExt = file.name.split('.').pop();
+      const fileName = `${key}_${Math.random().toString(36).substring(2)}.${fileExt}`;
+      const filePath = `${fileName}`;
+
+      // Upload to Supabase Storage
+      const { error: uploadError } = await supabase.storage
+        .from('site-images')
+        .upload(filePath, file, {
+          cacheControl: '3600',
+          upsert: false
+        });
+
+      if (uploadError) throw uploadError;
+
+      // Get Public URL
+      const { data: { publicUrl } } = supabase.storage
+        .from('site-images')
+        .getPublicUrl(filePath);
+
+      // Update local state
+      handleUrlChange(key, publicUrl);
+      toast.success("Bild erfolgreich hochgeladen");
+      
+    } catch (error: any) {
+      console.error("Upload error:", error);
+      toast.error("Upload-Fehler: " + error.message);
+    } finally {
+      setIsUploading(null);
     }
   };
 
@@ -140,7 +190,7 @@ export default function AdminImages() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
             <h1 className="text-3xl font-serif text-primary">Bilder-Management</h1>
-            <p className="text-muted-foreground">Tausche hier die visuellen Assets der Webseite aus.</p>
+            <p className="text-muted-foreground">Lade Bilder hoch oder tausche URLs aus.</p>
           </div>
           <Button 
             onClick={saveImages} 
@@ -193,33 +243,46 @@ export default function AdminImages() {
                       {/* Image Preview */}
                       <div className="aspect-video w-full rounded-2xl bg-slate-100 overflow-hidden relative group/img">
                         <img 
-                          src={previews[img.key] || img.default} 
+                          src={previews[img.key] || img.default || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"} 
                           alt={img.label}
                           className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
-                          onError={(e) => {
-                            (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop";
-                          }}
                         />
+                        {isUploading === img.key && (
+                          <div className="absolute inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center">
+                            <Loader2 className="animate-spin text-white w-10 h-10" />
+                          </div>
+                        )}
                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center gap-3">
-                           <Button variant="secondary" size="sm" className="rounded-xl gap-2">
-                             <Eye size={14} /> Vorschau
+                           <Button 
+                             variant="secondary" 
+                             size="sm" 
+                             className="rounded-xl gap-2"
+                             onClick={() => fileInputRefs.current[img.key]?.click()}
+                             disabled={isUploading === img.key}
+                           >
+                             <Upload size={14} /> Bild hochladen
                            </Button>
+                           <input 
+                             type="file" 
+                             ref={el => fileInputRefs.current[img.key] = el}
+                             className="hidden" 
+                             accept="image/*"
+                             onChange={(e) => handleFileUpload(img.key, e)}
+                           />
                         </div>
                       </div>
 
                       <div className="space-y-2">
                         <Label htmlFor={img.key} className="text-[10px] font-bold uppercase opacity-60 flex items-center gap-2">
-                          <LinkIcon size={12} /> Bild-URL (Unsplash, CDN oder Local)
+                          <LinkIcon size={12} /> Bild-URL (wird nach Upload automatisch befüllt)
                         </Label>
-                        <div className="flex gap-2">
-                          <Input 
-                            id={img.key} 
-                            value={images[img.key] || ""} 
-                            onChange={(e) => handleUrlChange(img.key, e.target.value)}
-                            className="h-11 rounded-xl flex-1"
-                            placeholder={img.default}
-                          />
-                        </div>
+                        <Input 
+                          id={img.key} 
+                          value={images[img.key] || ""} 
+                          onChange={(e) => handleUrlChange(img.key, e.target.value)}
+                          className="h-11 rounded-xl"
+                          placeholder={img.default || "Hier URL einfügen..."}
+                        />
                       </div>
                     </CardContent>
                   </Card>
@@ -229,15 +292,15 @@ export default function AdminImages() {
           ))}
         </Tabs>
 
-        <Card className="border-none shadow-xl shadow-primary/5 rounded-[2.5rem] bg-amber-50 overflow-hidden border-l-4 border-amber-400">
+        <Card className="border-none shadow-xl shadow-primary/5 rounded-[2.5rem] bg-emerald-50 overflow-hidden border-l-4 border-emerald-400">
            <CardContent className="p-8 flex items-center gap-6">
-              <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 shrink-0">
-                <ImageIcon size={24} />
+              <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 shrink-0">
+                <Upload size={24} />
               </div>
               <div>
-                <h4 className="font-bold text-amber-900">Pro-Tipp für beste Performance</h4>
-                <p className="text-sm text-amber-800 opacity-80">
-                  Nutze vorzugsweise optimierte URLs von Unsplash (mit <code className="bg-amber-200/50 px-1 py-0.5 rounded">&auto=format&fit=crop&w=2000</code> Parameter) oder lade deine eigenen Bilder in ein CDN hoch. Große, unkomprimierte Bilder können die Ladezeit der Webseite negativ beeinflussen.
+                <h4 className="font-bold text-emerald-900 text-lg">Direkter Bild-Upload aktiv</h4>
+                <p className="text-sm text-emerald-800 opacity-80">
+                  Du kannst Bilder jetzt direkt von deiner Festplatte hochladen. Sie werden sicher im <strong>Supabase Storage</strong> gespeichert und automatisch auf der Webseite verlinkt. Vergiss nicht, am Ende auf "Änderungen speichern" zu klicken.
                 </p>
               </div>
            </CardContent>

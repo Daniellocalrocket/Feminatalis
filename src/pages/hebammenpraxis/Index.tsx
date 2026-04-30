@@ -4,8 +4,11 @@ import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
 import { Battery, HeartPulse, Zap, ShieldCheck, Microscope, Award, ArrowRight, Activity, Thermometer, UserCheck } from "lucide-react";
 import { motion } from "framer-motion";
+import { useSiteImages } from "@/hooks/useSiteImages";
 
 export default function Hebammenpraxis() {
+  const { getImageUrl } = useSiteImages();
+
   return (
     <div className="bg-background min-h-screen">
       <SEO 
@@ -18,7 +21,7 @@ export default function Hebammenpraxis() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?q=80&w=2070&auto=format&fit=crop" 
+            src={getImageUrl("img_hero_hebammenpraxis", "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?q=80&w=2070&auto=format&fit=crop")} 
             alt="Hebammenpraxis Background" 
             className="w-full h-full object-cover"
           />
@@ -34,7 +37,7 @@ export default function Hebammenpraxis() {
             <span className="bg-orange-100 text-orange-600 px-5 py-2 rounded-full text-xs font-black mb-8 inline-block uppercase tracking-[0.2em] shadow-sm">
               Das Feminatalis Geburtskraft-Konzept
             </span>
-            <h1 className="text-5xl lg:text-7xl font-serif text-primary mb-8 leading-[1.1]">
+            <h1 className="text-5xl lg:text-7xl font-serif text-primary mb-8 leading-[1.1] [hyphens:auto] [overflow-wrap:anywhere] break-words">
               Maximale <span className="text-orange-600">Geburtskraft</span>: <br />
               Das Zell-Protokoll für Ihre interventionsfreie Entbindung.
             </h1>
