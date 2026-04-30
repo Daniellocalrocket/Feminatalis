@@ -1,8 +1,18 @@
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 
+const CACHE_KEY = 'feminatalis_image_cache';
+
 export function useSiteImages() {
-  const [images, setImages] = useState<Record<string, string>>({});
+  // Initialize state from localStorage if available to prevent flickering
+  const [images, setImages] = useState<Record<string, string>>(() => {
+    try {
+      const cached = localStorage.getItem(CACHE_KEY);
+      return cached ? JSON.parse(cached) : {};
+    } catch (e) {
+      return {};
+    }
+  });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -19,7 +29,10 @@ export function useSiteImages() {
         data?.forEach(item => {
           imageMap[item.key] = item.value;
         });
+        
         setImages(imageMap);
+        // Save to cache for next visit
+        localStorage.setItem(CACHE_KEY, JSON.stringify(imageMap));
       } catch (err) {
         console.error("Error fetching site images:", err);
       } finally {

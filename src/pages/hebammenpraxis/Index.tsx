@@ -21,11 +21,11 @@ export default function Hebammenpraxis() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src={getImageUrl("img_hero_hebammenpraxis", "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?q=80&w=2070&auto=format&fit=crop")} 
+            src={getImageUrl("img_hero_hebammenpraxis", "https://images.unsplash.com/photo-1559839734-2b71f1e5982f?q=80&w=2000&auto=format&fit=crop")} 
             alt="Hebammenpraxis Background" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-white/75 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-white/60 backdrop-blur-[1px]" />
         </div>
 
         <div className="container mx-auto px-4 relative z-10 max-w-5xl">
@@ -34,23 +34,17 @@ export default function Hebammenpraxis() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="bg-orange-100 text-orange-600 px-5 py-2 rounded-full text-xs font-black mb-8 inline-block uppercase tracking-[0.2em] shadow-sm">
-              Das Feminatalis Geburtskraft-Konzept
-            </span>
-            <h1 className="text-5xl lg:text-7xl font-serif text-primary mb-8 leading-[1.1] [hyphens:auto] [overflow-wrap:anywhere] break-words">
-              Maximale <span className="text-orange-600">Geburtskraft</span>: <br />
-              Das Zell-Protokoll für Ihre interventionsfreie Entbindung.
+            <h1 className="text-4xl md:text-7xl font-serif text-primary mb-8 leading-[1.1] [hyphens:auto] [overflow-wrap:anywhere] break-words">
+              Hebammenbegleitung im Wandel – <br className="hidden md:block" />
+              <span className="text-orange-600 italic">bewusst · vertieft · individuell</span>
             </h1>
-            <p className="text-xl lg:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto">
-              Ihr Uterusmuskel ist der Hochleistungsmotor der Geburt. Ich sorge dafür, dass er den entscheidenden Treibstoff hat. Mit 33 Jahren Erfahrung und dem Fokus auf zelluläre Energie-Optimierung bereite ich Ihren Körper auf die größte körperliche Leistung Ihres Lebens vor.
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto italic font-medium mb-12">
+              „Ich begleite keine Checklisten, sondern Frauen, die Zusammenhänge verstehen und Verantwortung übernehmen möchten.“
             </p>
             <div className="flex flex-wrap justify-center gap-5">
-                <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:bg-primary/95 hover:shadow-2xl hover:-translate-y-0.5 transition-all active:scale-95 shadow-xl flex items-center gap-3">
-                  <UserCheck size={20} /> Termin online buchen
+                <Link to={ROUTE_PATHS.CONTACT} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:bg-primary/95 hover:shadow-2xl transition-all shadow-xl flex items-center gap-3">
+                  <UserCheck size={20} /> Vorgespräch vereinbaren
                 </Link>
-               <a href="#saeulen" className="bg-white text-primary border-2 border-primary/20 px-10 py-5 rounded-2xl font-bold hover:bg-muted transition-all flex items-center gap-2">
-                 Die 3 Säulen entdecken <ArrowRight size={20} />
-               </a>
             </div>
           </motion.div>
         </div>

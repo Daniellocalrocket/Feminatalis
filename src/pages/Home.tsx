@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { motion } from "framer-motion";
-import { Leaf, Heart, Baby, Check, Phone, Mail, Clock, MapPin, Award, ArrowRight, ChevronRight, Activity, Star, CheckCircle, Syringe, Sparkles, Microscope, Zap, ShieldCheck, Instagram, Youtube } from "lucide-react";
+import { Leaf, Heart, Baby, Check, Phone, Mail, Clock, MapPin, Award, ArrowRight, ChevronRight, Activity, Star, CheckCircle, Syringe, Sparkles, Microscope, Zap, ShieldCheck, Instagram, Youtube, UserCheck } from "lucide-react";
 import { useSiteImages } from "@/hooks/useSiteImages";
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
       <SEO title="Ganzheitliche Gesundheit | feminatalis" description="Praxis für Funktionelle Medizin & Hebammenpraxis in Bad Schönborn." />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-48 text-center overflow-hidden">
+      <section id="hero" className="relative pt-32 pb-48 text-center overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -33,31 +33,114 @@ export default function Home() {
           <div className="absolute inset-0 bg-white/75 backdrop-blur-[1px]" />
         </div>
 
-        <div className="container mx-auto px-4 relative z-10 max-w-4xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
-              Ganzheitliche Gesundheit
-            </div>
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif text-primary mb-6 leading-tight tracking-tight [hyphens:auto] [overflow-wrap:anywhere] break-words">
-              Praxis für Funktionelle <br className="hidden sm:block"/>Medizin <br className="sm:hidden"/>
-              <span className="text-accent">& Hebammenpraxis</span>
-            </h1>
-            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Wir kombinieren modernste Labordiagnostik mit tiefem naturheilkundlichen und geburtshilflichen Wissen. Für Ihre Gesundheit auf allen Lebenswegen.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to={ROUTE_PATHS.CONTACT} className="bg-accent text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-accent/90 transition-all shadow-lg shadow-accent/20 flex items-center justify-center gap-2 w-full sm:w-fit">
-                <CheckCircle className="w-5 h-5" /> Jetzt Termin online buchen
-              </Link>
-              <Link to={ROUTE_PATHS.KURS} className="bg-white text-primary border-2 border-primary/10 px-8 py-4 rounded-xl font-bold text-lg hover:border-primary/30 transition-all flex items-center justify-center gap-2 w-full sm:w-fit">
-                Kurse & Events
-              </Link>
-            </div>
-          </motion.div>
+        <div className="container mx-auto px-4 relative z-10 max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Column: Message */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-left"
+            >
+              <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
+                Ganzheitliche Gesundheit
+              </div>
+              <p className="text-accent font-bold tracking-widest uppercase text-xs mb-4">
+                Hebammenbegleitung im Wandel – bewusst · vertieft · individuell
+              </p>
+              <h1 className="text-4xl md:text-6xl xl:text-7xl font-serif text-primary mb-6 leading-tight tracking-tight [hyphens:auto] [overflow-wrap:anywhere] break-words">
+                Praxis für Funktionelle <br className="hidden sm:block"/>Medizin <br className="sm:hidden"/>
+                <span className="text-accent">& Hebammenpraxis</span>
+              </h1>
+              <p className="text-xl text-muted-foreground mb-10 max-w-xl leading-relaxed">
+                Wir kombinieren modernste Labordiagnostik mit tiefem naturheilkundlichen und geburtshilflichen Wissen. Für Ihre Gesundheit auf allen Lebenswegen.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row items-center gap-4 mb-10">
+                <div className="flex -space-x-3">
+                  {[1,2,3,4].map(i => (
+                    <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
+                      <img src={`https://i.pravatar.cc/150?u=${i+10}`} alt="Patient" className="w-full h-full object-cover" />
+                    </div>
+                  ))}
+                </div>
+                <div className="text-sm font-medium text-primary/70">
+                  <span className="font-bold text-primary">4500+</span> begleitete Patientinnen
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-4">
+                 <div className="flex items-center gap-2 text-sm font-bold text-primary/60 uppercase tracking-widest bg-white/40 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/50">
+                    <Award className="w-4 h-4 text-accent"/> 33 Jahre Erfahrung
+                 </div>
+                 <div className="flex items-center gap-2 text-sm font-bold text-primary/60 uppercase tracking-widest bg-white/40 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/50">
+                    <Heart className="w-4 h-4 text-accent"/> 100% Sicher
+                 </div>
+              </div>
+            </motion.div>
+
+            {/* Right Column: Hero Form */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="absolute -inset-1 bg-gradient-to-tr from-accent/20 to-primary/10 rounded-[2.5rem] blur-2xl" />
+              <div className="bg-white/80 backdrop-blur-xl border border-white p-8 md:p-10 rounded-[2.5rem] shadow-2xl relative">
+                <h3 className="text-2xl font-serif text-primary mb-2">Termin-Anfrage</h3>
+                <p className="text-sm text-muted-foreground mb-8 font-medium">Schildern Sie kurz Ihr Anliegen – wir melden uns bei Ihnen.</p>
+                
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <input 
+                      type="text" 
+                      placeholder="Name" 
+                      className="w-full bg-white/50 border border-border/50 rounded-xl px-4 py-3 text-sm focus:ring-accent focus:border-accent transition-all" 
+                      required
+                    />
+                    <input 
+                      type="email" 
+                      placeholder="E-Mail" 
+                      className="w-full bg-white/50 border border-border/50 rounded-xl px-4 py-3 text-sm focus:ring-accent focus:border-accent transition-all" 
+                      required
+                    />
+                  </div>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <input 
+                      type="tel" 
+                      placeholder="Telefon (optional)" 
+                      className="w-full bg-white/50 border border-border/50 rounded-xl px-4 py-3 text-sm focus:ring-accent focus:border-accent transition-all" 
+                    />
+                    <select className="w-full bg-white/50 border border-border/50 rounded-xl px-4 py-3 text-sm focus:ring-accent focus:border-accent transition-all">
+                      <option>Thema wählen</option>
+                      <option>Erstberatung & Diagnostik</option>
+                      <option>Hebammenbetreuung</option>
+                      <option>Kinderwunsch</option>
+                      <option>Zelltraining (IHHT)</option>
+                    </select>
+                  </div>
+                  <textarea 
+                    placeholder="Ihre Nachricht..." 
+                    rows={3} 
+                    className="w-full bg-white/50 border border-border/50 rounded-xl px-4 py-3 text-sm focus:ring-accent focus:border-accent transition-all resize-none" 
+                    required
+                  ></textarea>
+                  
+                  <div className="flex items-start gap-3 py-2">
+                    <input type="checkbox" id="hero-dsgvo" className="mt-1 w-4 h-4 rounded border-gray-300 text-accent focus:ring-accent" required/>
+                    <label htmlFor="hero-dsgvo" className="text-[10px] text-muted-foreground leading-tight font-medium">
+                      Ich willige ein, dass meine Daten zur Kontaktaufnahme verarbeitet werden.
+                    </label>
+                  </div>
+                  
+                  <button type="submit" className="bg-primary text-white px-8 py-4 rounded-xl font-bold w-full hover:bg-primary/95 transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2 group">
+                    Jetzt Nachricht senden <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </form>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -95,14 +178,115 @@ export default function Home() {
 
 
 
+      {/* Ablauf-Sektion */}
+      <section className="py-24 bg-slate-50 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-background to-transparent" />
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-20">
+            <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 inline-block">Der Weg zu Ihrer Gesundheit</span>
+            <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6">Ihr strukturierter Ablauf</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Klarheit und Transparenz von Anfang an. So begleiten wir Sie Schritt für Schritt zurück in Ihre Kraft.
+            </p>
+          </div>
+
+          <div className="relative">
+            {/* Vertical Line for Desktop */}
+            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-primary/10 hidden lg:block" />
+
+            <div className="space-y-16">
+              {[
+                {
+                  step: "1",
+                  title: "Telefonisches Vorgespräch",
+                  time: "15 Min. (Kostenlos)",
+                  desc: "Wir besprechen kurz dein Anliegen – Symptome, Wünsche und Erwartungen. So kann ich einschätzen, ob ich dich sinnvoll unterstützen kann.",
+                  icon: <Phone className="w-6 h-6" />
+                },
+                {
+                  step: "2",
+                  title: "Erstgespräch in der Praxis",
+                  time: "30-45 Min. (Kostenlos)",
+                  desc: "Persönliches Kennenlernen vor Ort. Wir klären allgemeine Fragen, eruieren deine genauen Ziele und stecken den finanziellen Rahmen ab. Fühlt sich alles stimmig an, schließen wir einen Behandlungsvertrag.",
+                  icon: <UserCheck className="w-6 h-6" />
+                },
+                {
+                  step: "3",
+                  title: "Anamnesetermin",
+                  time: "Faktensammeln",
+                  desc: "Wir beleuchten ganzheitlich deine Beschwerden, analysieren vorhandene Befunde und klären, welche Diagnostik sinnvoll ist, um einen maßgeschneiderten Therapievorschlag zu erstellen.",
+                  icon: <Microscope className="w-6 h-6" />
+                },
+                {
+                  step: "4",
+                  title: "Therapievorschlag & Angebot",
+                  time: "Planung & Investment",
+                  desc: "Du erhältst einen auf deine Ziele abgestimmten Therapievorschlag sowie einen klaren Kostenplan. Das schafft eine stabile Basis für deinen persönlichen Heilungsweg.",
+                  icon: <CheckCircle className="w-6 h-6" />
+                },
+                {
+                  step: "5",
+                  title: "Behandlung & Umsetzung",
+                  time: "Regelmäßige Sitzungen",
+                  desc: "Wir setzen deinen Plan konsequent um. In regelmäßigen Sitzungen arbeiten wir genau an dem, was dich jetzt am stärksten voranbringt – von akuter Linderung bis hin zur Ursachenbehandlung.",
+                  icon: <Activity className="w-6 h-6" />
+                }
+              ].map((item, i) => (
+                <motion.div 
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: i * 0.1 }}
+                  className={`flex flex-col lg:flex-row items-center gap-8 ${i % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
+                >
+                  <div className="lg:w-1/2 flex justify-end">
+                    <div className={`w-full lg:max-w-md bg-white p-8 rounded-[2.5rem] shadow-sm border border-border/50 relative hover:shadow-xl transition-all duration-500 group ${i % 2 !== 0 ? 'lg:text-left' : 'lg:text-right'}`}>
+                      <div className={`absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-primary/10 rounded-full hidden lg:block ${i % 2 !== 0 ? '-left-10' : '-right-10'}`} />
+                      <div className="text-accent font-bold text-sm mb-2 uppercase tracking-widest">{item.time}</div>
+                      <h3 className="text-2xl font-serif text-primary mb-4">{item.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed text-sm font-medium">{item.desc}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="relative z-10 flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-2xl bg-primary text-white flex items-center justify-center shadow-lg transform rotate-3 group-hover:rotate-0 transition-transform">
+                      {item.icon}
+                    </div>
+                    <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center font-bold text-xs shadow-md">
+                      {item.step}
+                    </div>
+                  </div>
+
+                  <div className="lg:w-1/2">
+                    {/* Empty div for layout balance on desktop */}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+          
+          <div className="mt-24 bg-primary text-white p-12 rounded-[3rem] text-center shadow-2xl relative overflow-hidden">
+            <div className="absolute inset-0 bg-[url('/src/assets/images/pattern-dot.svg')] opacity-10" />
+            <h3 className="text-2xl md:text-3xl font-serif mb-6 relative z-10">Bereit für den ersten Schritt?</h3>
+            <p className="text-white/80 mb-10 max-w-xl mx-auto relative z-10">Wir bringen deinen Körper zurück in eine stabile, selbstregulierende Balance.</p>
+            <a href="#hero" className="inline-flex bg-white text-primary px-10 py-5 rounded-2xl font-bold text-lg hover:shadow-2xl transition-all relative z-10 group items-center gap-3">
+              Zum Anfrage-Formular <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Hebammenpraxis Sektion */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
-            <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 inline-block tracking-widest uppercase">Das Zell-Protokoll</span>
-            <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6">Maximale Geburtskraft</h2>
+            <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 inline-block tracking-widest uppercase">Qualität vor Quantität</span>
+            <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6">
+              Hebammenbegleitung im Wandel – <span className="text-accent italic">bewusst · vertieft · individuell</span>
+            </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Ihr Uterusmuskel ist der Hochleistungsmotor der Geburt. Ich sorge dafür, dass er den entscheidenden Treibstoff hat. Mit 33 Jahren Erfahrung optimiere ich Ihre Ressourcen für eine kraftvolle Entbindung.
+              Nach 33 Jahren Erfahrung fokussiere ich mich auf eine exklusive, tiefgreifende Begleitung. Ich nehme nur eine begrenzte Anzahl an Frauen auf, die über die Standard-Versorgung hinaus in ihre Gesundheit und Geburtskraft investieren möchten.
             </p>
           </div>
 
@@ -399,100 +583,57 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Kontaktbereich */}
+      {/* Kontaktbereich - Jetzt reduziert auf Details, da Formular im Header ist */}
       <section className="py-24 bg-white relative border-t border-border/40">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-16">
-            <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 inline-block">Kontakt</span>
-            <h2 className="text-4xl md:text-5xl font-serif text-primary mb-4">Schreiben Sie mir.</h2>
-            <p className="text-lg text-muted-foreground">Nutzen Sie bequem das Formular oder kontaktieren Sie die Praxis direkt.</p>
-          </div>
-
-          <div className="flex flex-col lg:flex-row gap-10">
-            <div className="flex-1 bg-background rounded-[2.5rem] p-8 md:p-12 border border-border shadow-sm">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 inline-block">Kontakt</span>
+              <h2 className="text-4xl md:text-5xl font-serif text-primary mb-8">Direkter Draht zur Praxis.</h2>
+              <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
+                Haben Sie Fragen oder möchten Sie uns persönlich erreichen? Wir sind für Sie da. Unsere Praxis befindet sich in zentraler Lage in Bad Schönborn.
+              </p>
+              
+              <div className="grid sm:grid-cols-2 gap-8">
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-accent shrink-0 border border-orange-100"><Phone className="w-5 h-5"/></div>
                   <div>
-                    <label className="block text-sm font-bold text-primary mb-2">Name</label>
-                    <input type="text" className="w-full bg-white border border-border/70 rounded-xl px-4 py-3.5 focus:ring-accent focus:border-accent" required/>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-bold text-primary mb-2">E-Mail</label>
-                    <input type="email" className="w-full bg-white border border-border/70 rounded-xl px-4 py-3.5 focus:ring-accent focus:border-accent" required/>
+                    <div className="font-bold text-primary mb-1 text-sm">Telefon</div>
+                    <a href="tel:+4972538468728" className="text-muted-foreground hover:text-accent font-medium text-sm">07253 - 84 68 72 8</a>
                   </div>
                 </div>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-accent shrink-0 border border-orange-100"><Mail className="w-5 h-5"/></div>
                   <div>
-                    <label className="block text-sm font-bold text-primary mb-2">Ihre Telefonnummer</label>
-                    <input type="tel" className="w-full bg-white border border-border/70 rounded-xl px-4 py-3.5 focus:ring-accent focus:border-accent"/>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-bold text-primary mb-2">Thema</label>
-                    <select className="w-full bg-white border border-border/70 rounded-xl px-4 py-3.5 focus:ring-accent focus:border-accent">
-                      <option>Erstberatung & Diagnostik</option>
-                      <option>Hebammenbetreuung</option>
-                      <option>Kinderwunsch Thematik</option>
-                      <option>Zelltraining (IHHT)</option>
-                      <option>Sonstiges</option>
-                    </select>
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-primary mb-2">Ihre Nachricht</label>
-                  <textarea rows={5} className="w-full bg-white border border-border/70 rounded-xl px-4 py-3.5 focus:ring-accent focus:border-accent resize-none" required></textarea>
-                </div>
-                <div className="flex items-start gap-4 bg-white/50 p-4 rounded-xl border border-border/50">
-                  <input type="checkbox" id="dsgvo" className="mt-1 w-5 h-5 rounded border-gray-300 text-accent focus:ring-accent" required/>
-                  <label htmlFor="dsgvo" className="text-sm text-primary font-medium">Ich willige ein, dass meine Daten zur Kontaktaufnahme verarbeitet werden. Weitere Infos dazu in der Datenschutzerklärung.</label>
-                </div>
-                <button type="submit" className="bg-accent text-white px-8 py-4 rounded-xl font-bold w-full md:w-auto hover:bg-accent/90 transition-all text-lg shadow-md">Nachricht absenden</button>
-              </form>
-            </div>
-
-            <div className="lg:w-[420px] bg-[#fff08a]/30 rounded-[2.5rem] p-8 md:p-10 border border-yellow-200/50 flex flex-col justify-between">
-              <div>
-                <h3 className="text-3xl font-serif text-primary mb-8">Kontakt Details</h3>
-                
-                <div className="space-y-8 mb-10">
-                  <div className="flex gap-5">
-                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-accent shrink-0 shadow-sm border border-border/30"><Phone className="w-6 h-6"/></div>
-                    <div>
-                      <div className="font-bold text-primary text-lg mb-1">Telefon / Fax</div>
-                      <a href="tel:+4972538468728" className="text-muted-foreground hover:text-accent font-medium text-lg block">07253 - 84 68 72 8</a>
-                      <span className="text-muted-foreground opacity-60 text-sm">Fax: 07253 - 84 68 72 9</span>
-                    </div>
-                  </div>
-                  <div className="flex gap-5">
-                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-accent shrink-0 shadow-sm border border-border/30"><Mail className="w-6 h-6"/></div>
-                    <div>
-                      <div className="font-bold text-primary text-lg mb-1">E-Mail</div>
-                      <a href="mailto:info@feminatalis.de" className="text-muted-foreground hover:text-accent font-medium text-lg">info@feminatalis.de</a>
-                    </div>
-                  </div>
-                  <div className="flex gap-5">
-                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-accent shrink-0 shadow-sm border border-border/30"><MapPin className="w-6 h-6"/></div>
-                    <div>
-                      <div className="font-bold text-primary text-lg mb-1">Adresse</div>
-                      <div className="text-muted-foreground font-medium text-lg leading-relaxed">Hebelstr. 3A<br/>76669 Bad Schönborn</div>
-                    </div>
+                    <div className="font-bold text-primary mb-1 text-sm">E-Mail</div>
+                    <a href="mailto:info@feminatalis.de" className="text-muted-foreground hover:text-accent font-medium text-sm">info@feminatalis.de</a>
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div className="bg-[#fff08a]/30 rounded-[2.5rem] p-8 md:p-12 border border-yellow-200/50">
+              <div className="flex items-start gap-6 mb-8">
+                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-accent shrink-0 shadow-sm border border-border/30"><MapPin className="w-6 h-6"/></div>
+                <div>
+                   <h3 className="text-2xl font-serif text-primary mb-1">Anfahrt</h3>
+                   <p className="text-muted-foreground font-medium">Hebelstr. 3A, 76669 Bad Schönborn</p>
+                </div>
+              </div>
               
-              <div className="bg-white p-6 rounded-2xl shadow-sm border border-border/50">
-                <div className="flex items-center gap-3 mb-3 font-bold text-primary text-lg"><Clock className="w-6 h-6 text-accent"/> Sprechzeiten</div>
-                <ul className="text-xs text-muted-foreground font-medium space-y-1">
-                  <li className="flex justify-between"><span>Mo/Mi:</span> <span>08:00 – 12:30, 14:00 – 17:30</span></li>
-                  <li className="flex justify-between"><span>Dienstag:</span> <span>14:00 – 17:30</span></li>
-                  <li className="flex justify-between"><span>Donnerstag:</span> <span>08:30 – 12:30, 14:00 – 17:00</span></li>
-                  <li className="flex justify-between"><span>Freitag:</span> <span>11:00 – 14:00</span></li>
+              <div className="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-white shadow-sm">
+                <div className="flex items-center gap-3 mb-4 font-bold text-primary"><Clock className="w-5 h-5 text-accent"/> Sprechzeiten</div>
+                <ul className="text-xs text-muted-foreground font-medium space-y-2">
+                  <li className="flex justify-between border-b border-border/30 pb-2"><span>Mo / Mi:</span> <span className="text-primary">08:00 – 12:30, 14:00 – 17:30</span></li>
+                  <li className="flex justify-between border-b border-border/30 pb-2"><span>Dienstag:</span> <span className="text-primary">14:00 – 17:30</span></li>
+                  <li className="flex justify-between border-b border-border/30 pb-2"><span>Donnerstag:</span> <span className="text-primary">08:30 – 12:30, 14:00 – 17:00</span></li>
+                  <li className="flex justify-between"><span>Freitag:</span> <span className="text-primary">11:00 – 14:00</span></li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
-
       {/* Patientenstimmen */}
       <section className="py-24 bg-background border-t border-border/30">
         <div className="container mx-auto px-4 max-w-6xl">
