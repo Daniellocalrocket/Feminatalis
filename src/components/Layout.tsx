@@ -100,7 +100,7 @@ export function Layout({ children }: LayoutProps) {
     <div className="flex flex-col min-h-screen bg-background font-sans">
       {/* Header */}
       <header
-        className="fixed top-0 left-0 right-0 z-[60] bg-background border-b border-border shadow-sm h-20 flex items-center"
+        className="fixed top-0 left-0 right-0 z-[100] bg-background border-b border-border shadow-sm h-20 flex items-center"
       >
         <div className="container mx-auto px-4 h-full flex items-center justify-between">
           <Link
@@ -183,75 +183,18 @@ export function Layout({ children }: LayoutProps) {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="xl:hidden p-2 text-foreground relative z-[70]"
+            className="xl:hidden p-2 text-foreground relative z-[110]"
             onClick={(e) => {
+              e.preventDefault();
               e.stopPropagation();
               setIsMobileMenuOpen(!isMobileMenuOpen);
             }}
-            aria-label="Menü öffnen"
+            aria-label={isMobileMenuOpen ? "Menü schließen" : "Menü öffnen"}
           >
-            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {isMobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
           </button>
         </div>
       </header>
-
-      {/* Mobile Navigation Overlay */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="fixed inset-0 z-[55] bg-background xl:hidden pt-24 px-6 flex flex-col"
-          >
-            <nav className="flex flex-col gap-4 overflow-y-auto pb-10">
-              {navItems.map((item) => (
-                <div key={item.path} className="flex flex-col gap-2">
-                  <NavLink
-                    to={item.path}
-                    onClick={closeMobileMenu}
-                    className={({ isActive }) =>
-                      cn(
-                        "text-2xl font-medium transition-colors border-b border-border/30 pb-2",
-                        isActive ? "text-primary" : "text-foreground"
-                      )
-                    }
-                  >
-                    {item.name}
-                  </NavLink>
-                  
-                  {item.subItems && (
-                    <div className="flex flex-col gap-3 pl-4 mb-2">
-                      {item.subItems.map((sub, idx) => (
-                        <NavLink
-                          key={idx}
-                          to={sub.path}
-                          onClick={closeMobileMenu}
-                          className={({ isActive }) =>
-                            cn(
-                              "text-lg transition-colors flex items-center gap-2",
-                              isActive ? "text-primary font-medium" : "text-muted-foreground hover:text-foreground"
-                            )
-                          }
-                        >
-                          <span className="w-1.5 h-1.5 rounded-full bg-border inline-block" /> {sub.name}
-                        </NavLink>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-              <Link
-                to={ROUTE_PATHS.KURS}
-                onClick={closeMobileMenu}
-                className="bg-primary text-primary-foreground px-8 py-4 rounded-xl text-center text-lg font-semibold mt-4 shadow-lg"
-              >
-                Kurse & Events
-              </Link>
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       {/* Main Content */}
       <main className="flex-grow pt-20">
@@ -386,6 +329,63 @@ export function Layout({ children }: LayoutProps) {
           >
             <ArrowUp size={24} className="group-hover:-translate-y-0.5 transition-transform" />
           </motion.button>
+        )}
+      </AnimatePresence>
+      {/* Mobile Navigation Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[90] bg-background xl:hidden pt-24 px-6 flex flex-col"
+          >
+            <nav className="flex flex-col gap-2 overflow-y-auto pb-10">
+              {navItems.map((item) => (
+                <div key={item.path} className="flex flex-col gap-1">
+                  <NavLink
+                    to={item.path}
+                    onClick={closeMobileMenu}
+                    className={({ isActive }) =>
+                      cn(
+                        "text-xl font-serif py-3 border-b border-border/30 transition-colors",
+                        isActive ? "text-primary" : "text-foreground"
+                      )
+                    }
+                  >
+                    {item.name}
+                  </NavLink>
+                  
+                  {item.subItems && (
+                    <div className="flex flex-col gap-2 pl-4 py-2 border-l border-primary/10 mb-2">
+                      {item.subItems.map((sub, idx) => (
+                        <NavLink
+                          key={idx}
+                          to={sub.path}
+                          onClick={closeMobileMenu}
+                          className={({ isActive }) =>
+                            cn(
+                              "text-sm py-1 transition-colors",
+                              isActive ? "text-primary font-bold" : "text-muted-foreground hover:text-foreground"
+                            )
+                          }
+                        >
+                          {sub.name}
+                        </NavLink>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+              <Link
+                to={ROUTE_PATHS.KURS}
+                onClick={closeMobileMenu}
+                className="bg-primary text-primary-foreground px-8 py-4 rounded-2xl text-center text-lg font-bold mt-6 shadow-xl"
+              >
+                Kurse & Events
+              </Link>
+            </nav>
+          </motion.div>
         )}
       </AnimatePresence>
     </div>
