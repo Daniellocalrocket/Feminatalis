@@ -4,6 +4,7 @@ export const SERVICE_AREAS = [
   { id: "hebamme", label: "Hebammenpraxis", description: "Schwangerschaft, Geburtshilfe & Nachsorge" },
   { id: "naturheilkunde", label: "Naturheilpraxis", description: "Funktionelle Medizin & Infusionen" },
   { id: "kinderwunsch", label: "Kinderwunsch", description: "Ganzheitliche Unterstützung" },
+  { id: "kurse", label: "Kurse & Events", description: "Workshops, Seminare & Vorbereitung" },
 ] as const;
 
 export const INSURANCE_TYPES = [

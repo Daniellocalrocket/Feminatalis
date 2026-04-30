@@ -51,6 +51,10 @@ export default function VorqualifizierungForm() {
       setValue("areas", ["hebamme"], { shouldValidate: true });
     } else if (typeParam === 'naturheilpraxis') {
       setValue("areas", ["naturheilkunde"], { shouldValidate: true });
+    } else if (typeParam === 'kinderwunsch') {
+      setValue("areas", ["kinderwunsch"], { shouldValidate: true });
+    } else if (typeParam === 'kurse') {
+      setValue("areas", ["kurse"], { shouldValidate: true });
     }
   }, [typeParam, setValue]);
 
