@@ -114,10 +114,10 @@ export default function Home() {
 
               <div className="flex flex-wrap gap-4">
                  <div className="flex items-center gap-2 text-sm font-bold text-primary/60 uppercase tracking-widest bg-white/40 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/50">
-                    <Award className="w-4 h-4 text-accent"/> 33 Jahre Erfahrung
+                    <Award className="w-4 h-4 text-accent"/> 33 J. Hebammen-Erfahrung
                  </div>
                  <div className="flex items-center gap-2 text-sm font-bold text-primary/60 uppercase tracking-widest bg-white/40 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/50">
-                    <Heart className="w-4 h-4 text-accent"/> 100% Sicher
+                    <Leaf className="w-4 h-4 text-accent"/> 10 J. Heilpraktiker-Erfahrung
                  </div>
               </div>
             </motion.div>
@@ -210,11 +210,12 @@ export default function Home() {
       {/* Trust Bar */}
       <section className="py-10 border-y border-border/30 bg-white/50 mb-24">
         <div className="container mx-auto max-w-5xl px-4">
-          <div className="flex flex-wrap items-center justify-center md:justify-between gap-8 text-center sm:text-left text-primary font-medium">
-            <div className="flex items-center gap-3"><Award className="w-6 h-6 text-accent"/> 33 Jahre Hebammen-Erfahrung</div>
-            <div className="flex items-center gap-3"><Heart className="w-6 h-6 text-accent"/> 4500+ Begleitete Mütter</div>
-            <div className="flex items-center gap-3"><CheckCircle className="w-6 h-6 text-accent"/> 100% Sicher & Evidenzbasiert</div>
-            <div className="flex items-center gap-3"><Activity className="w-6 h-6 text-accent"/> Prävention & Ganzheitlichkeit</div>
+          <div className="flex flex-wrap items-center justify-center md:justify-between gap-6 md:gap-4 text-center sm:text-left text-primary font-medium text-xs md:text-sm">
+            <div className="flex items-center gap-2"><Award className="w-5 h-5 text-accent"/> 33 J. Hebamme</div>
+            <div className="flex items-center gap-2"><Leaf className="w-5 h-5 text-accent"/> 10 J. Heilpraktikerin</div>
+            <div className="flex items-center gap-2"><Heart className="w-5 h-5 text-accent"/> 4500+ Patientinnen</div>
+            <div className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-accent"/> 100% Sicher</div>
+            <div className="flex items-center gap-2"><Activity className="w-5 h-5 text-accent"/> Prävention</div>
           </div>
         </div>
       </section>
