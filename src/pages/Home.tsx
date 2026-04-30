@@ -210,12 +210,12 @@ export default function Home() {
       {/* Trust Bar */}
       <section className="py-10 border-y border-border/30 bg-white/50 mb-24">
         <div className="container mx-auto max-w-5xl px-4">
-          <div className="flex flex-wrap items-center justify-center md:justify-between gap-6 md:gap-4 text-center sm:text-left text-primary font-medium text-xs md:text-sm">
-            <div className="flex items-center gap-2"><Award className="w-5 h-5 text-accent"/> 33 J. Hebamme</div>
-            <div className="flex items-center gap-2"><Leaf className="w-5 h-5 text-accent"/> 10 J. Heilpraktikerin</div>
-            <div className="flex items-center gap-2"><Heart className="w-5 h-5 text-accent"/> 4500+ Patientinnen</div>
-            <div className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-accent"/> 100% Sicher</div>
-            <div className="flex items-center gap-2"><Activity className="w-5 h-5 text-accent"/> Prävention</div>
+          <div className="flex flex-wrap items-center justify-center md:justify-between gap-6 md:gap-4 text-center sm:text-left text-primary font-semibold text-[10px] md:text-xs lg:text-sm uppercase tracking-wider">
+            <div className="flex items-center gap-2"><Award className="w-4 h-4 md:w-5 md:h-5 text-accent"/> 33 Jahre Hebammenexpertise</div>
+            <div className="flex items-center gap-2"><Heart className="w-4 h-4 md:w-5 md:h-5 text-accent"/> 4500 Mütter</div>
+            <div className="flex items-center gap-2"><Leaf className="w-4 h-4 md:w-5 md:h-5 text-accent"/> 10 Jahre Heilpraktikererfahrung</div>
+            <div className="flex items-center gap-2"><UserCheck className="w-4 h-4 md:w-5 md:h-5 text-accent"/> über 2000 Patienten</div>
+            <div className="flex items-center gap-2"><Activity className="w-4 h-4 md:w-5 md:h-5 text-accent"/> Prävention und Ganzheitlichkeit</div>
           </div>
         </div>
       </section>
