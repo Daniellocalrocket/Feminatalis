@@ -9,10 +9,23 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
+import SEO from "@/components/SEO";
 
 const CATEGORIES = ["Alle", "Allgemein", "Hebammenpraxis", "Naturheilkunde", "Kinderwunsch", "Tipps & Tricks"];
 
 export default function Blog() {
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "feminatalis Magazin",
+    "description": "Wissen & Inspiration rund um Kinderwunsch, Hebammenpraxis und Naturheilkunde von Angela Deschner.",
+    "publisher": {
+      "@type": "Person",
+      "name": "Angela Deschner"
+    },
+    "url": "https://feminatalis.de/magazin"
+  };
+
   const [activeCategory, setActiveCategory] = useState("Alle");
   const [searchQuery, setSearchQuery] = useState("");
   const [posts, setPosts] = useState<any[]>([]);
@@ -48,6 +61,11 @@ export default function Blog() {
 
   return (
     <main className="min-h-screen bg-background pb-20" role="main">
+      <SEO 
+        title="Magazin | Wissen zu Kinderwunsch & Naturheilkunde" 
+        description="Entdecken Sie fundierte Artikel über ganzheitliche Frauengesundheit, Hebammenwissen und natürliche Wege zum Wunschkind."
+        schema={blogSchema}
+      />
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
