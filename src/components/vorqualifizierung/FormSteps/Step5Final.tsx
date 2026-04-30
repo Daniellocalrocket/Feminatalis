@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ShieldCheck, Mail, MessageCircle, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ROUTE_PATHS } from "@/lib/index";
 
 export default function Step4Final() {
   const { register, watch, setValue, formState: { errors } } = useFormContext<VorqualifizierungData>();
@@ -56,7 +57,7 @@ export default function Step4Final() {
                   <ShieldCheck className="w-4 h-4 text-green-600" /> Datenschutz & Kontakt *
                 </Label>
                 <p className="text-xs text-muted-foreground leading-relaxed">
-                  Ich stimme der <Link to="/datenschutz" className="underline hover:text-primary transition-colors">Datenschutzerklärung</Link> zu und bin einverstanden, dass meine Daten zum Zweck der Kontaktaufnahme verarbeitet werden.
+                  Ich stimme der <Link to={ROUTE_PATHS.DATENSCHUTZ} className="underline hover:text-primary transition-colors">Datenschutzerklärung</Link> zu und bin einverstanden, dass meine Daten zum Zweck der Kontaktaufnahme verarbeitet werden.
                 </p>
                 {errors.dataConsent && <p className="text-red-500 text-[10px] font-bold">{errors.dataConsent.message}</p>}
               </div>
