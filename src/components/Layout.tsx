@@ -171,7 +171,7 @@ export function Layout({ children }: LayoutProps) {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden p-2 text-foreground"
+            className="xl:hidden p-2 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Menü öffnen"
           >
@@ -187,7 +187,7 @@ export function Layout({ children }: LayoutProps) {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-background md:hidden pt-24 px-6"
+            className="fixed inset-0 z-40 bg-background xl:hidden pt-24 px-6"
           >
             <nav className="flex flex-col gap-4 overflow-y-auto max-h-[70vh] pb-10">
               {navItems.map((item) => (
