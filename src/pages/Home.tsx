@@ -193,8 +193,8 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { icon: <Leaf className="w-8 h-8 text-green-600"/>, title: "Naturheilpraxis", desc: "Ursachen finden, statt nur Symptome behandeln. Für ganzheitliche Vitalität.", link: ROUTE_PATHS.NATURHEILPRAXIS },
-              { icon: <Heart className="w-8 h-8 text-primary"/>, title: "Hebammenpraxis", desc: "Sichere Begleitung in Schwangerschaft, Wochenbett & Rückbildung.", link: ROUTE_PATHS.HEBAMMENPRAXIS },
-              { icon: <Baby className="w-8 h-8 text-blue-500"/>, title: "Kinderwunsch", desc: "Natürliche Unterstützung auf dem Weg zu Ihrem Wunschkind.", link: ROUTE_PATHS.KINDERWUNSCH }
+              { icon: <Heart className="w-8 h-8 text-primary"/>, title: "Hebammenpraxis", desc: "Sichere Begleitung in Schwangerschaft, Wochenbett & Stillbegleitung.", link: ROUTE_PATHS.HEBAMMENPRAXIS },
+              { icon: <Baby className="w-8 h-8 text-accent"/>, title: "Kinderwunsch", desc: "Natürliche Unterstützung auf dem Weg zu Ihrem Wunschkind.", link: ROUTE_PATHS.KINDERWUNSCH }
             ].map((s, i) => (
               <div key={i} className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl shadow-black/5 text-center flex flex-col items-center border border-border/50">
                 <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#fde4c8]/30 border border-border flex items-center justify-center mb-6">{s.icon}</div>
