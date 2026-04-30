@@ -84,11 +84,23 @@ export function Layout({ children }: LayoutProps) {
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <div className="flex flex-col min-h-screen bg-background font-sans">
       {/* Header */}
       <header
-        className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border shadow-sm h-20 flex items-center"
+        className="fixed top-0 left-0 right-0 z-[60] bg-background border-b border-border shadow-sm h-20 flex items-center"
       >
         <div className="container mx-auto px-4 h-full flex items-center justify-between">
           <Link
@@ -171,8 +183,11 @@ export function Layout({ children }: LayoutProps) {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="xl:hidden p-2 text-foreground"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="xl:hidden p-2 text-foreground relative z-[70]"
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsMobileMenuOpen(!isMobileMenuOpen);
+            }}
             aria-label="Menü öffnen"
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -184,12 +199,12 @@ export function Layout({ children }: LayoutProps) {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-background xl:hidden pt-24 px-6"
+            exit={{ opacity: 0, y: -10 }}
+            className="fixed inset-0 z-[55] bg-background xl:hidden pt-24 px-6 flex flex-col"
           >
-            <nav className="flex flex-col gap-4 overflow-y-auto max-h-[70vh] pb-10">
+            <nav className="flex flex-col gap-4 overflow-y-auto pb-10">
               {navItems.map((item) => (
                 <div key={item.path} className="flex flex-col gap-2">
                   <NavLink
