@@ -53,7 +53,7 @@ export default function Darmsanierung() {
                   <Microscope size={24} />
                 </div>
                 <p className="font-medium text-primary italic leading-relaxed">
-                  Basierend auf Ihren Laborwerten erstellen wir einen präzisen Fahrplan aus Ernährung, Supplementierung und Schleimhautschutz.
+                  Basierend auf deinen Laborwerten erstellen wir einen präzisen Fahrplan aus Ernährung, Supplementierung und Schleimhautschutz.
                 </p>
               </div>
             </div>

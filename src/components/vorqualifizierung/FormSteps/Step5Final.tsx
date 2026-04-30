@@ -21,7 +21,7 @@ export default function Step4Final() {
       <div className="space-y-6">
         <div className="flex items-center gap-3 mb-4">
            <MessageCircle className="w-6 h-6 text-primary/30" />
-           <Label className="text-xl font-serif text-primary">Möchten Sie mir noch etwas mitteilen?</Label>
+           <Label className="text-xl font-serif text-primary">Möchtest du mir noch etwas mitteilen?</Label>
         </div>
         <div className="space-y-4">
             <Textarea 
@@ -91,7 +91,7 @@ export default function Step4Final() {
               <Sparkles className="w-5 h-5 text-accent" />
            </div>
            <p className="text-xs text-primary font-medium italic">
-             „Fast geschafft! Nach dem Absenden erhalten Sie eine Bestätigungs-E-Mail von mir.“
+             „Fast geschafft! Nach dem Absenden erhältst du eine Bestätigungs-E-Mail von mir.“
            </p>
         </div>
       </div>

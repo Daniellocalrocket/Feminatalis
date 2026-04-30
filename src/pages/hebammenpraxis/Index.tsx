@@ -12,8 +12,8 @@ export default function Hebammenpraxis() {
   return (
     <div className="bg-background min-h-screen">
       <SEO 
-        title="Geburtskraft optimieren & Hebammenpraxis | Das Zell-Protokoll" 
-        description="Interventionsfreie Geburt vorbereiten durch Zell-Energie. Angela, Hebamme & Heilpraktikerin mit 33 Jahren Erfahrung, optimiert Ihre Geburtskraft für maximale Sicherheit."
+        title="Hebammenpraxis Bad Schönborn | Angela Deschner" 
+        description="Interventionsfreie Geburt vorbereiten durch Zell-Energie. Angela, Hebamme & Heilpraktikerin mit 33 Jahren Erfahrung, optimiert deine Geburtskraft für maximale Sicherheit."
       />
       
       {/* 1. Hero-Sektion (Der Einstieg) */}
@@ -61,7 +61,7 @@ export default function Hebammenpraxis() {
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Die klassische Schwangerenvorsorge prüft meist nur, ob „nichts fehlt“. Doch für eine kraftvolle, interventionsfreie Geburt reicht das bloße Fehlen von Mängeln nicht aus. Sie brauchen volle Reserven.
+                  Die klassische Schwangerenvorsorge prüft meist nur, ob „nichts fehlt“. Doch für eine kraftvolle, interventionsfreie Geburt reicht das bloße Fehlen von Mängeln nicht aus. Du brauchst volle Reserven.
                 </p>
                 <div className="bg-orange-50 p-8 rounded-3xl border-l-8 border-orange-400 my-10">
                   <h3 className="text-primary font-bold text-xl mb-4 flex items-center gap-3">
@@ -69,11 +69,11 @@ export default function Hebammenpraxis() {
                     Die Zell-Akku-Metapher
                   </h3>
                   <p className="text-primary/80">
-                    Stellen Sie sich Ihre Zell-Energie wie einen Akku vor: Wer mit 20 % Ladung in die Geburt geht, riskiert Wehenschwäche, Erschöpfung und unnötige medizinische Eingriffe. Mein Ziel ist die 100-Prozent-Ladung – damit Ihr Körper die Geburt aus eigener Urkraft steuern kann.
+                    Stelle dir deine Zell-Energie wie einen Akku vor: Wer mit 20 % Ladung in die Geburt geht, riskiert Wehenschwäche, Erschöpfung und unnötige medizinische Eingriffe. Mein Ziel ist die 100-Prozent-Ladung – damit dein Körper die Geburt aus eigener Urkraft steuern kann.
                   </p>
                 </div>
                 <p className="font-medium text-primary">
-                  Ich biete KEINE Routine-Vorsorge an. Mein Fokus liegt exklusiv auf der physiologischen Optimierung Ihrer Ressourcen.
+                  Ich biete KEINE Routine-Vorsorge an. Mein Fokus liegt exklusiv auf der physiologischen Optimierung deiner Ressourcen.
                 </p>
               </div>
             </div>
@@ -101,8 +101,8 @@ export default function Hebammenpraxis() {
       <section id="saeulen" className="py-32 bg-gray-50">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-20 max-w-3xl mx-auto">
-            <h2 className="text-4xl lg:text-5xl font-serif text-primary mb-6">Strukturiert zum Erfolg</h2>
-            <p className="text-xl text-muted-foreground">Drei Ebenen der Begleitung, die ineinandergreifen, um Ihre Geburt sicher und kraftvoll zu machen.</p>
+            <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6">Meine drei Säulen</h2>
+            <p className="text-xl text-muted-foreground">Drei Ebenen der Begleitung, die ineinandergreifen, um deine Geburt sicher und kraftvoll zu machen.</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -141,7 +141,7 @@ export default function Hebammenpraxis() {
               <h3 className="text-2xl font-serif text-primary mb-2">Säule 2: Akut-Hilfe</h3>
               <p className="text-primary font-bold text-sm mb-6 uppercase tracking-wider">Kasse + Naturheilkunde</p>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                <strong>„Ursachen statt Pflaster“</strong>: Gezielte Behandlung bei Schmerzen, Ödemen oder Erschöpfung. Wir analysieren tiefenphysiologisch, warum Ihr Körper reagiert.
+                <strong>„Ursachen statt Pflaster“</strong>: Gezielte Behandlung bei Schmerzen, Ödemen oder Erschöpfung. Wir analysieren tiefenphysiologisch, warum dein Körper reagiert.
               </p>
               <ul className="space-y-4 mb-10">
                 <li>
@@ -225,7 +225,7 @@ export default function Hebammenpraxis() {
                   Angela vereint die klinische Erfahrung aus 10 Jahren Kreißsaal und 22 Jahren Freiberuflichkeit mit der analytischen Tiefe der St. Petersburger Schule. Ihr Arbeitsstil ist geprägt von einer sachlichen, tiefenphysiologischen Klarheit.
                 </p>
                 <p>
-                  Als staatlich geprüfte Heilpraktikerin und Hebamme schaut sie „unter die Haut“. Wo andere Routine-Vorsorge leisten, analysiert Angela die biochemischen Grundlagen, um die Geburt sicher und kraftvoll zu machen. Es geht nicht um Träume, sondern um messbare Leistungsfähigkeit für den wichtigsten Moment Ihres Lebens.
+                  Als staatlich geprüfte Heilpraktikerin und Hebamme schaut sie „unter die Haut“. Wo andere Routine-Vorsorge leisten, analysiert Angela die biochemischen Grundlagen, um die Geburt sicher und kraftvoll zu machen. Es geht nicht um Träume, sondern um messbare Leistungsfähigkeit für den wichtigsten Moment deines Lebens.
                 </p>
                 <div className="pt-8 border-t border-border mt-10">
                    <p className="text-primary font-bold text-xl mb-1">Angela Deschner</p>
@@ -241,9 +241,9 @@ export default function Hebammenpraxis() {
       <section className="py-24 bg-background border-t border-border">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <HeartPulse className="w-16 h-16 mx-auto mb-8 text-orange-600 opacity-20" />
-          <h2 className="text-4xl font-serif text-primary mb-6">Sind Sie bereit für maximale Geburtskraft?</h2>
-          <p className="text-xl text-muted-foreground mb-12">
-            Investieren Sie in die optimale Vorbereitung Ihrer körperlichen Ressourcen. Für eine Geburt aus eigener Stärke.
+          <h2 className="text-4xl font-serif text-primary mb-6">Bist du bereit für maximale Geburtskraft?</h2>
+          <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
+            Investiere in die optimale Vorbereitung deiner körperlichen Ressourcen. Für eine Geburt aus eigener Stärke.
           </p>
           <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-block bg-primary text-white px-12 py-6 rounded-2xl font-bold text-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 w-fit mx-auto">
             <UserCheck size={24} /> Jetzt Termin online buchen

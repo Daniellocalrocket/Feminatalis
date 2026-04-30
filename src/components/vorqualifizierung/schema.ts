@@ -24,7 +24,7 @@ export const URGENCY_TYPES = [
 
 export const vorqualifizierungSchema = z.object({
   // Schritt 1
-  areas: z.array(z.string()).min(1, "Bitte wählen Sie mindestens einen Bereich aus."),
+  areas: z.array(z.string()).min(1, "Bitte wähle mindestens einen Bereich aus."),
   
   // Schritt 2
   firstName: z.string().min(2, "Vorname ist erforderlich"),
@@ -33,20 +33,20 @@ export const vorqualifizierungSchema = z.object({
   phone: z.string().min(6, "Telefonnummer ist erforderlich"),
   zipCode: z.string().length(5, "PLZ muss 5 Stellen haben"),
   insurance: z.enum(INSURANCE_TYPES, {
-    required_error: "Bitte wählen Sie Ihre Versicherungssituation aus.",
+    required_error: "Bitte wähle deine Versicherungssituation aus.",
   }),
 
   // Schritt 3: Mindset
-  mqSituation: z.enum(["A", "B", "C"], { required_error: "Bitte wählen Sie eine Option aus." }),
-  mqMotivation: z.enum(["A", "B", "C"], { required_error: "Bitte wählen Sie eine Option aus." }),
-  mqExperience: z.enum(["A", "B", "C"], { required_error: "Bitte wählen Sie eine Option aus." }),
-  mqIndividuality: z.enum(["A", "B", "C"], { required_error: "Bitte wählen Sie eine Option aus." }),
-  mqResponsibility: z.enum(["A", "B", "C"], { required_error: "Bitte wählen Sie eine Option aus." }),
+  mqSituation: z.enum(["A", "B", "C"], { required_error: "Bitte wähle eine Option aus." }),
+  mqMotivation: z.enum(["A", "B", "C"], { required_error: "Bitte wähle eine Option aus." }),
+  mqExperience: z.enum(["A", "B", "C"], { required_error: "Bitte wähle eine Option aus." }),
+  mqIndividuality: z.enum(["A", "B", "C"], { required_error: "Bitte wähle eine Option aus." }),
+  mqResponsibility: z.enum(["A", "B", "C"], { required_error: "Bitte wähle eine Option aus." }),
   mqInvestment: z.enum(["A", "B", "C"]).optional(),
   mqReality: z.enum(["A", "B", "C"]).optional(),
 
   // Schritt 4 (Bedingte Felder)
-  urgency: z.string().min(1, "Bitte wählen Sie die Dringlichkeit aus."),
+  urgency: z.string().min(1, "Bitte wähle die Dringlichkeit aus."),
   
   // Hebammenpraxis spezifisch
   pregnancyWeek: z.string().optional(),
@@ -63,7 +63,7 @@ export const vorqualifizierungSchema = z.object({
   // Schritt 5
   additionalInfo: z.string().max(500, "Maximal 500 Zeichen").optional(),
   dataConsent: z.boolean().refine(val => val === true, {
-    message: "Sie müssen der Datenschutzerklärung zustimmen.",
+    message: "Du musst der Datenschutzerklärung zustimmen.",
   }),
   newsletter: z.boolean().optional(),
 });

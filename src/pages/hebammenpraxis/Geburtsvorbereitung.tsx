@@ -19,7 +19,7 @@ export default function Geburtsvorbereitung() {
     <div className="bg-background min-h-screen font-sans">
       <SEO 
         title="Geburtsvorbereitung | Klassisches Hebammenwissen" 
-        description="Ihre solide Basis für die Geburt. Klassisches Hebammenwissen, Atemtechniken und fundierte Aufklärung, um Ängste abzubauen." 
+        description="Deine solide Basis für die Geburt. Klassisches Hebammenwissen, Atemtechniken und fundierte Aufklärung, um Ängste abzubauen." 
       />
 
       <SplitScreenHero

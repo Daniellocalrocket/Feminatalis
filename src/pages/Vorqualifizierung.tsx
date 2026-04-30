@@ -9,16 +9,16 @@ export default function Vorqualifizierung() {
   const type = searchParams.get("type");
   
   const pageTitle = type === 'naturheilpraxis' 
-    ? "Ihre Behandlungsanfrage" 
+    ? "deine Behandlungsanfrage" 
     : type === 'hebamme' 
-    ? "Ihre Betreuungsanfrage" 
+    ? "deine Betreuungsanfrage" 
     : "Persönliches Kennenlernen";
 
   return (
     <div className="bg-[#fff9f2] min-h-screen pt-24 pb-24">
       <SEO 
         title={`${pageTitle} | Feminatalis`}
-        description="Lernen wir uns kennen. Erzählen Sie mir kurz, womit ich Ihnen helfen darf, damit ich mich optimal auf unser Erstgespräch vorbereiten kann." 
+        description="Lernen wir uns kennen. Erzähle mir kurz, womit ich dir helfen darf, damit ich mich optimal auf unser Erstgespräch vorbereiten kann." 
       />
       
       <div className="container mx-auto px-4 max-w-5xl">

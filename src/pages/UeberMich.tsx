@@ -82,7 +82,7 @@ export default function UeberMich() {
                 Angela Deschner
               </h1>
               <p className="text-xl md:text-2xl font-serif text-accent italic mb-8 leading-relaxed">
-                "Ich bin ein geistiges schöpferisches Wesen, das eine menschliche Erfahrung macht – so wie Sie auch!"
+                "Ich bin ein geistiges schöpferisches Wesen, das eine menschliche Erfahrung macht – so wie du auch!"
               </p>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 Als Gründerin der feminatalis Praxis vereine ich die intuitive, tief verwurzelte Hebammenkunst mit der messbaren, biochemischen Ursachenforschung der modernen funktionellen Medizin. 
@@ -251,7 +251,7 @@ export default function UeberMich() {
               <div className="bg-[#fff9f2] p-6 rounded-2xl border border-orange-100 flex items-center gap-4">
                 <CalendarDays className="w-8 h-8 text-orange-400 shrink-0" />
                 <p className="text-sm font-medium text-primary">
-                  Sie ist meist <strong className="text-accent">Montag vormittags</strong> und <strong className="text-accent">Mittwoch nachmittags</strong> da – am Telefon, persönlich vor Ort oder online für Sie erreichbar.
+                  Sie ist meist <strong>Montag vormittags</strong> und <strong>Mittwoch nachmittags</strong> da – am Telefon, persönlich vor Ort oder online für dich erreichbar.
                 </p>
               </div>
             </div>
@@ -262,9 +262,9 @@ export default function UeberMich() {
       {/* CTA */}
       <section className="py-24 bg-white text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-serif text-primary mb-6">Möchten Sie den Weg mit mir gehen?</h2>
+          <h2 className="text-3xl font-serif text-primary mb-6">Möchtest du den Weg mit mir gehen?</h2>
           <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Ich arbeite mit Frauen, die Eigenverantwortung für ihre Gesundheit übernehmen wollen. Wenn diese Philosophie zu Ihnen passt, freue ich mich auf Ihre Anfrage.
+            Ich arbeite mit Frauen, die Eigenverantwortung für ihre Gesundheit übernehmen wollen. Wenn diese Philosophie zu dir passt, freue ich mich auf deine Anfrage.
           </p>
           <Link 
             to={ROUTE_PATHS.VORQUALIFIZIERUNG} 

@@ -154,7 +154,7 @@ export default function BrainLight() {
                 <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-accent text-white px-8 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-all w-full flex items-center justify-center gap-3 border-none shadow-accent/20 shadow-lg">
                   Persönliche Session buchen <ArrowUpRight className="w-5 h-5 text-white" />
                 </Link>
-                <p className="mt-6 text-xs opacity-60 text-white italic text-center">Zeiten & Konditionen entnehmen Sie bitte unserer aktuellen Preisliste am Empfang.</p>
+                <p className="mt-6 text-xs opacity-60 text-white italic text-center">Zeiten & Konditionen entnimm bitte unserer aktuellen Preisliste am Empfang.</p>
               </div>
             </div>
           </div>

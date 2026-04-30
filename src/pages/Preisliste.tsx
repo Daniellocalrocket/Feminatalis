@@ -42,7 +42,7 @@ export default function Preisliste() {
         { name: "10er Paket (Alle Einzelbehandlungen)", price: "-10%", detail: "Zahle 9, erhalte 10 Behandlungen" },
         { name: "5er Paket (Alle Einzelbehandlungen)", price: "-5%", detail: "Zahle 4,5, erhalte 5 Behandlungen" },
         { name: "Ultra Kombi (IHHT + Infusion)", price: "ab 140,- €", detail: "Maximale Zellregeneration" },
-        { name: "Mega Kombi (IHHT + Infusion + brainLight)", price: "ab 160,- €", detail: "Das Komplettpaket für Ihre Energie" },
+        { name: "Mega Kombi (IHHT + Infusion + brainLight)", price: "ab 160,- €", detail: "Das Komplettpaket für deine Energie" },
         { name: "Ratenzahlung (RZ)", price: "Möglich", detail: "Bei Paketen ab 500,- € Gesamtwert" },
       ]
     },
@@ -83,7 +83,7 @@ export default function Preisliste() {
               transition={{ delay: 0.1 }}
               className="text-4xl md:text-5xl font-serif text-primary mb-6"
             >
-              Investition in Ihre Gesundheit
+              Investition in deine Gesundheit
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 10 }}
@@ -91,7 +91,7 @@ export default function Preisliste() {
               transition={{ delay: 0.2 }}
               className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed"
             >
-              Qualität und Zeit haben ihren Wert. Ich nehme mir die Zeit, die Sie brauchen, um die Ursachen Ihrer Beschwerden wirklich zu verstehen.
+              Qualität und Zeit haben ihren Wert. Ich nehme mir die Zeit, die du brauchst, um die Ursachen deiner Beschwerden wirklich zu verstehen.
             </motion.p>
           </div>
 
@@ -115,11 +115,11 @@ export default function Preisliste() {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                  <span><strong>Zusatzversicherungen:</strong> Erstattungen sind je nach Tarif möglich. Bitte prüfen Sie dies vorab.</span>
+                  <span><strong>Zusatzversicherungen:</strong> Erstattungen sind je nach Tarif möglich. Bitte prüfe dies vorab.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                  <span><strong>Selbstzahler:</strong> Sie erhalten eine Rechnung für Ihre Unterlagen. Heilpraktikerleistungen sind gem. § 4 Nr. 14 UStG umsatzsteuerfrei.</span>
+                  <span><strong>Selbstzahler:</strong> Du erhältst eine Rechnung für deine Unterlagen. Heilpraktikerleistungen sind gem. § 4 Nr. 14 UStG umsatzsteuerfrei.</span>
                 </li>
               </ul>
             </motion.div>
@@ -146,7 +146,7 @@ export default function Preisliste() {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-orange-400 shrink-0 mt-0.5" />
-                  <span><strong>Vorbereitung:</strong> Bringen Sie bitte vorhandene Laborwerte oder Arztberichte zum Erstgespräch mit.</span>
+                  <span><strong>Vorbereitung:</strong> Bring bitte vorhandene Laborwerte oder Arztberichte zum Erstgespräch mit.</span>
                 </li>
               </ul>
             </motion.div>
@@ -215,9 +215,9 @@ export default function Preisliste() {
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-bl-[200px] -z-0" />
             <div className="relative z-10">
-              <h2 className="text-3xl font-serif mb-6">Haben Sie Fragen zur Abrechnung?</h2>
+              <h2 className="text-3xl font-serif mb-6">Hast du Fragen zur Abrechnung?</h2>
               <p className="text-primary-foreground/80 mb-10 max-w-xl mx-auto text-lg leading-relaxed">
-                Ich berate Sie gerne individuell, welcher Weg für Ihre Situation am sinnvollsten ist. Kontaktieren Sie mich einfach für ein kurzes Telefonat.
+                Ich berate dich gerne individuell, welcher Weg für deine Situation am sinnvollsten ist. Kontaktiere mich einfach für ein kurzes Telefonat.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link 

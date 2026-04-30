@@ -18,7 +18,7 @@ export default function Wochenbettbetreuung() {
       <SplitScreenHero
         badge="Postnatale Begleitung"
         title={<>Wochenbettbetreuung <br/><span className="text-accent italic font-light">& Hausbesuche</span></>}
-        subtitle="Die Zeit nach der Geburt ist eine fundamentale Phase der körperlichen Heilung und der psychischen Anpassung. Wir begleiten Sie mit 33 Jahren Fachwissen direkt bei Ihnen zu Hause."
+        subtitle="Die Zeit nach der Geburt ist eine fundamentale Phase der körperlichen Heilung und der psychischen Anpassung. Wir begleiten dich mit 33 Jahren Fachwissen direkt bei dir zu Hause."
         imageSrc="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2040&auto=format&fit=crop"
         imageAlt="Wochenbettbetreuung"
         imageKey="img_hero_wochenbett"
@@ -73,7 +73,7 @@ export default function Wochenbettbetreuung() {
                 <ShieldCheck className="w-12 h-12 text-primary mb-6" />
                 <h3 className="text-2xl font-serif text-primary mb-4">Medizinische Sicherheit zu Hause</h3>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  Unsere Hausbesuche garantieren, dass Mutter und Kind medizinisch überwacht werden, ohne den Stress eines Praxisaufenthalts auf sich nehmen zu müssen. Wir erkennen Abweichungen sofort und leiten rechtzeitig Gegenmaßnahmen ein.
+                  Unsere Hausbesuche garantieren, dass Mutter und Kind medizinisch überwacht werden, ohne den Stress eines Praxisaufenthalts auf dich nehmen zu müssen. Wir erkennen Abweichungen sofort und leiten rechtzeitig Gegenmaßnahmen ein.
                 </p>
               </div>
               

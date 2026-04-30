@@ -21,7 +21,7 @@ export default function Home() {
     <>
       <SEO 
         title="Heilpraktikerin & Hebamme Bad Schönborn | Funktionelle Medizin" 
-        description="Feminatalis: Ihre Praxis für Funktionelle Medizin & Hebammenbegleitung in Bad Schönborn. Spezialisiert auf Kinderwunsch, Hormone & Mitochondrien-Therapie. Jetzt Termin anfragen!"
+        description="Feminatalis: Deine Praxis für Funktionelle Medizin & Hebammenbegleitung in Bad Schönborn. Spezialisiert auf Kinderwunsch, Hormone & Mitochondrien-Therapie. Jetzt Termin anfragen!"
         ogType="business.medical"
         schema={{
           "@context": "https://schema.org",
@@ -96,7 +96,7 @@ export default function Home() {
                 <span className="text-accent">& Hebammenpraxis</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-10 max-w-xl leading-relaxed">
-                Wir kombinieren modernste Labordiagnostik mit tiefem naturheilkundlichen und geburtshilflichen Wissen. Für Ihre Gesundheit auf allen Lebenswegen.
+                Wir kombinieren modernste Labordiagnostik mit tiefem naturheilkundlichen und geburtshilflichen Wissen. Für deine Gesundheit auf allen Lebenswegen.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center gap-4 mb-10">
@@ -132,7 +132,7 @@ export default function Home() {
               <div className="absolute -inset-1 bg-gradient-to-tr from-accent/20 to-primary/10 rounded-[2.5rem] blur-2xl" />
               <div className="bg-white/80 backdrop-blur-xl border border-white p-8 md:p-10 rounded-[2.5rem] shadow-2xl relative">
                 <h3 className="text-2xl font-serif text-primary mb-2">Termin-Anfrage</h3>
-                <p className="text-sm text-muted-foreground mb-8 font-medium">Schildern Sie kurz Ihr Anliegen – wir melden uns bei Ihnen.</p>
+                <p className="text-sm text-muted-foreground mb-8 font-medium">Schildere kurz dein Anliegen – wir melden uns bei dir.</p>
                 
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid sm:grid-cols-2 gap-4">
@@ -164,7 +164,7 @@ export default function Home() {
                     </select>
                   </div>
                   <textarea 
-                    placeholder="Ihre Nachricht..." 
+                    placeholder="Deine Nachricht..." 
                     rows={3} 
                     className="w-full bg-white/50 border border-border/50 rounded-xl px-4 py-3 text-sm focus:ring-accent focus:border-accent transition-all resize-none" 
                     required
@@ -194,7 +194,7 @@ export default function Home() {
             {[
               { icon: <Leaf className="w-8 h-8 text-green-600"/>, title: "Naturheilpraxis", desc: "Ursachen finden, statt nur Symptome behandeln. Für ganzheitliche Vitalität.", link: ROUTE_PATHS.NATURHEILPRAXIS },
               { icon: <Heart className="w-8 h-8 text-primary"/>, title: "Hebammenpraxis", desc: "Sichere Begleitung in Schwangerschaft, Wochenbett, Stillzeit & Kurse.", link: ROUTE_PATHS.HEBAMMENPRAXIS },
-              { icon: <Baby className="w-8 h-8 text-accent"/>, title: "Kinderwunsch", desc: "Natürliche Unterstützung auf dem Weg zu Ihrem Wunschkind.", link: ROUTE_PATHS.KINDERWUNSCH }
+              { icon: <Baby className="w-8 h-8 text-accent"/>, title: "Kinderwunsch", desc: "Natürliche Unterstützung auf dem Weg zu deinem Wunschkind.", link: ROUTE_PATHS.KINDERWUNSCH }
             ].map((s, i) => (
               <div key={i} className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl shadow-black/5 text-center flex flex-col items-center border border-border/50">
                 <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#fde4c8]/30 border border-border flex items-center justify-center mb-6">{s.icon}</div>
@@ -228,9 +228,9 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-20">
             <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 inline-block">Der Weg zu Ihrer Gesundheit</span>
-            <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6">Ihr strukturierter Ablauf</h2>
+            <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6">Dein strukturierter Ablauf</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Klarheit und Transparenz von Anfang an. So begleiten wir Sie Schritt für Schritt zurück in Ihre Kraft.
+              Klarheit und Transparenz von Anfang an. So begleiten wir dich Schritt für Schritt zurück in deine Kraft.
             </p>
           </div>
 
@@ -384,7 +384,7 @@ export default function Home() {
                 Das Standard-Kassensystem deckt nur das absolute Minimum ab. Wer jedoch eine wirklich selbstbestimmte, kraftvolle Geburt und eine schnelle Regeneration im Wochenbett erleben möchte, braucht mehr als nur "Routine-Vorsorge".
               </p>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Ich arbeite primär mit Frauen, die verstanden haben, dass sie selbst aktiv Verantwortung übernehmen müssen. Mein Fokus liegt auf Premium-Begleitung und fundiertem Wissen. Wer mit 20 % Ladung in die Geburt geht, riskiert Wehenschwäche und medizinische Eingriffe. Mein Ziel ist die 100-Prozent-Ladung Ihres „Zell-Akkus“.
+                Ich arbeite primär mit Frauen, die verstanden haben, dass sie selbst aktiv Verantwortung übernehmen müssen. Mein Fokus liegt auf Premium-Begleitung und fundiertem Wissen. Wer mit 20 % Ladung in die Geburt geht, riskiert Wehenschwäche und medizinische Eingriffe. Mein Ziel ist die 100-Prozent-Ladung deines „Zell-Akkus“.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
                 <div><div className="text-3xl font-bold text-accent">33 J.</div><div className="text-xs font-black uppercase tracking-widest text-primary/60">Expertise</div></div>
@@ -438,7 +438,7 @@ export default function Home() {
             <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 inline-block">Naturheilpraxis</span>
             <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6">Ursachenbasierte Naturheilkunde</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Als Heilpraktikerin betrachte ich den Menschen in seiner Gesamtheit. Mit spezialisierter Labordiagnostik und orthomolekularer Therapie finden wir die wahren Ursachen Ihrer Beschwerden.
+              Als Heilpraktikerin betrachte ich den Menschen in seiner Gesamtheit. Mit spezialisierter Labordiagnostik und orthomolekularer Therapie finden wir die wahren Ursachen deiner Beschwerden.
             </p>
           </div>
 
@@ -465,7 +465,7 @@ export default function Home() {
               { title: "Allergiebehandlung", desc: "Ursächliche Behandlung durch Desensibilisierung & Immunmodulation.", link: ROUTE_PATHS.ALLERGIE },
               { title: "CO2-Therapie", desc: "Lokale Injektionen und CO2-Quellgasbehandlungen zur Schmerzlinderung.", link: ROUTE_PATHS.CO2_THERAPIE },
               { title: "Hormon-Balance", desc: "Natürliche Regulation von Zyklusbeschwerden, Wechseljahren & Schilddrüse.", link: ROUTE_PATHS.HORMONTHERAPIE },
-              { title: "Darmsanierung", desc: "Aufbau eines gesunden Mikrobioms als Fundament für Ihr Immunsystem.", link: ROUTE_PATHS.DARMANALYSE }
+              { title: "Darmsanierung", desc: "Aufbau eines gesunden Mikrobioms als Fundament für dein Immunsystem.", link: ROUTE_PATHS.DARMANALYSE }
             ].map((srv, i) => (
               <div key={i} className="bg-white border border-border text-left p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                 <h5 className="font-bold text-primary mb-2 text-lg">{srv.title}</h5>
@@ -488,7 +488,7 @@ export default function Home() {
              <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 inline-block">Kinderwunsch</span>
              <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6">Hilfe bei unerfülltem Kinderwunsch</h2>
              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Ein unerfüllter Kinderwunsch oder hormonelle Dysbalance belasten oft Körper und Seele tiefgreifend. Wir nehmen uns die Zeit, um die optimale Lösung zu finden und Ihrem Wunschkind näher zu kommen.
+                Ein unerfüllter Kinderwunsch oder hormonelle Dysbalance belasten oft Körper und Seele tiefgreifend. Wir nehmen uns die Zeit, um die optimale Lösung zu finden und deinem Wunschkind näher zu kommen.
              </p>
           </div>
 
@@ -503,8 +503,8 @@ export default function Home() {
                   <li className="flex items-start gap-3 text-muted-foreground"><Check className="w-5 h-5 text-accent shrink-0"/> Stabilisierende Begleitung vor und nach IVF-Eingriffen</li>
                 </ul>
                 <div className="bg-[#fff08a]/40 rounded-2xl p-6 border border-yellow-200/50 mt-8">
-                  <h4 className="font-bold text-primary mb-2">Sie sind nicht allein</h4>
-                  <p className="text-sm text-muted-foreground mb-4">Gemeinsam optimieren wir die funktionellen Parameter in Ihrem Zellstoffwechsel.</p>
+                  <h4 className="font-bold text-primary mb-2">Du bist nicht allein</h4>
+                  <p className="text-sm text-muted-foreground mb-4">Gemeinsam optimieren wir die funktionellen Parameter in deinem Zellstoffwechsel.</p>
                   <Link to={ROUTE_PATHS.CONTACT} className="inline-flex bg-accent text-white px-6 py-2.5 rounded-lg font-bold hover:bg-accent/90 transition-all text-sm items-center gap-2">
                     <CheckCircle className="w-4 h-4" /> Jetzt Termin online buchen
                   </Link>
@@ -537,9 +537,9 @@ export default function Home() {
             </div>
             <div className="flex-1">
               <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 inline-block">Expertin</span>
-              <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6 leading-tight">Ihre Expertin für ganzheitliche Frauengesundheit</h2>
+              <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6 leading-tight">Deine Expertin für ganzheitliche Frauengesundheit</h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Ich kombiniere meine Expertise aus drei Fachbereichen: Dem biochemischen Verständnis einer Heilpraktikerin, der Intuition einer erfahrenen Hebamme und modernster Präventivmedizin wie der IHHT-Mitochondrientherapie. Für einen Therapieansatz, der so einzigartig ist wie Sie selbst.
+                Ich kombiniere meine Expertise aus drei Fachbereichen: Dem biochemischen Verständnis einer Heilpraktikerin, der Intuition einer erfahrenen Hebamme und modernster Präventivmedizin wie der IHHT-Mitochondrientherapie. Für einen Therapieansatz, der so einzigartig ist wie du selbst.
               </p>
               
               <div className="mb-8">
@@ -588,7 +588,7 @@ export default function Home() {
                 Lernen wir <span className="text-accent underline decoration-accent/20 underline-offset-8">uns kennen</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Meine Programme erfordern Ihre aktive Mitarbeit und die Bereitschaft, Verantwortung für Ihre Gesundheit zu übernehmen. Damit wir herausfinden, ob meine Philosophie und Ihre Ziele zusammenpassen, hilft mir ein kurzer Vorab-Check.
+                Meine Programme erfordern deine aktive Mitarbeit und die Bereitschaft, Verantwortung für deine Gesundheit zu übernehmen. Damit wir herausfinden, ob meine Philosophie und deine Ziele zusammenpassen, hilft mir ein kurzer Vorab-Check.
               </p>
               
               <div className="grid sm:grid-cols-2 gap-6 mb-10">
@@ -598,7 +598,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm"><Heart className="w-5 h-5 text-accent" /></div>
-                  <span className="text-sm font-medium text-primary/80">Passt unser Konzept zu Ihnen?</span>
+                  <span className="text-sm font-medium text-primary/80">Passt unser Konzept zu dir?</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm"><Activity className="w-5 h-5 text-accent" /></div>
@@ -618,7 +618,7 @@ export default function Home() {
             <div className="w-full lg:w-5/12 relative z-10">
               <div className="aspect-[4/3] bg-white rounded-[2.5rem] border border-orange-100 flex items-center justify-center p-8 text-center bg-[url('/src/assets/images/pattern-dot.svg')] bg-repeat shadow-sm">
                 <div className="space-y-4">
-                  <p className="text-4xl font-serif text-primary italic">„Ich freue mich <br /> auf Sie!“</p>
+                  <p className="text-4xl font-serif text-primary italic">„Ich freue mich <br /> auf dich!“</p>
                   <p className="text-sm font-bold text-accent uppercase tracking-widest italic">— Angela Deschner</p>
                 </div>
               </div>
@@ -635,7 +635,7 @@ export default function Home() {
               <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 inline-block">Kontakt</span>
               <h2 className="text-4xl md:text-5xl font-serif text-primary mb-8">Direkter Draht zur Praxis.</h2>
               <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-                Haben Sie Fragen oder möchten Sie uns persönlich erreichen? Wir sind für Sie da. Unsere Praxis befindet sich in zentraler Lage in Bad Schönborn.
+                Hast du Fragen oder möchtest du uns persönlich erreichen? Wir sind für dich da. Unsere Praxis befindet sich in zentraler Lage in Bad Schönborn.
               </p>
               
               <div className="grid sm:grid-cols-2 gap-8">

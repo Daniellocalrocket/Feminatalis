@@ -225,7 +225,7 @@ export function Layout({ children }: LayoutProps) {
                 </div>
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                <strong>Angela Deschner</strong> – Ihre Heilpraktikerin & Hebamme in Bad Schönborn. 
+                <strong>Angela Deschner</strong> – Deine Heilpraktikerin & Hebamme in Bad Schönborn. 
                 Ganzheitliche Begleitung bei Kinderwunsch, Hormontherapie und zellulärer Gesundheit im Raum <strong>Bruchsal, Karlsruhe, Heidelberg & Mannheim</strong>.
               </p>
               <div className="flex gap-4">

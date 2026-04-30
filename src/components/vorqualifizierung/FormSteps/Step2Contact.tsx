@@ -52,13 +52,13 @@ export default function Step2Contact() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="space-y-2">
           <Label htmlFor="firstName" className="text-sm font-bold text-primary pl-1 uppercase opacity-60">Vorname *</Label>
-          <Input id="firstName" {...register("firstName")} className="h-14 rounded-2xl border-primary/10 transition-all focus:ring-accent" placeholder="Ihre Vorname" />
+          <Input id="firstName" {...register("firstName")} className="h-14 rounded-2xl border-primary/10 transition-all focus:ring-accent" placeholder="Dein Vorname" />
           {errors.firstName && <p className="text-red-500 text-xs pl-2 font-bold">{errors.firstName.message}</p>}
         </div>
         
         <div className="space-y-2">
           <Label htmlFor="lastName" className="text-sm font-bold text-primary pl-1 uppercase opacity-60">Nachname *</Label>
-          <Input id="lastName" {...register("lastName")} className="h-14 rounded-2xl border-primary/10 transition-all focus:ring-accent" placeholder="Ihr Nachname" />
+          <Input id="lastName" {...register("lastName")} className="h-14 rounded-2xl border-primary/10 transition-all focus:ring-accent" placeholder="Dein Nachname" />
           {errors.lastName && <p className="text-red-500 text-xs pl-2 font-bold">{errors.lastName.message}</p>}
         </div>
       </div>
@@ -66,7 +66,7 @@ export default function Step2Contact() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="space-y-2">
           <Label htmlFor="email" className="text-sm font-bold text-primary pl-1 uppercase opacity-60">E-Mail *</Label>
-          <Input id="email" type="email" {...register("email")} className="h-14 rounded-2xl border-primary/10 transition-all focus:ring-accent" placeholder="ihre@email.de" />
+          <Input id="email" type="email" {...register("email")} className="h-14 rounded-2xl border-primary/10 transition-all focus:ring-accent" placeholder="deine@email.de" />
           {errors.email && <p className="text-red-500 text-xs pl-2 font-bold">{errors.email.message}</p>}
         </div>
 
@@ -90,7 +90,7 @@ export default function Step2Contact() {
         <Alert className="bg-orange-50 border-orange-200 rounded-2xl animate-in slide-in-from-top-2 duration-300">
            <AlertDescription className="text-primary/70 flex items-center gap-3">
              <Info className="w-5 h-5 text-accent shrink-0" />
-             Sie wohnen etwas weiter entfernt. Eine Betreuung ist unter Umständen trotzdem möglich. Ich kläre das gerne persönlich mit Ihnen.
+             Du wohnst etwas weiter entfernt. Eine Betreuung ist unter Umständen trotzdem möglich. Ich kläre das gerne persönlich mit dir.
            </AlertDescription>
         </Alert>
       )}
@@ -98,7 +98,7 @@ export default function Step2Contact() {
       <div className="space-y-6 pt-6 border-t border-primary/5">
         <div className="flex items-center gap-3 mb-4">
            <Shield className="w-6 h-6 text-primary/30" />
-           <Label className="text-lg font-serif text-primary">Ihre Versicherungssituation</Label>
+           <Label className="text-lg font-serif text-primary">Deine Versicherungssituation</Label>
         </div>
         
         <RadioGroup onValueChange={(val) => register("insurance").onChange({ target: { value: val, name: "insurance" } })}>

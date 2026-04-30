@@ -19,9 +19,9 @@ import Step4Details from "./FormSteps/Step4Details";
 import Step5Final from "./FormSteps/Step5Final";
 
 const BASE_STEPS = [
-  { id: "area", title: "Schwerpunkt", subtitle: "Wählen Sie Ihren Schwerpunkt" },
-  { id: "contact", title: "Kontakt", subtitle: "Wie kann ich Sie erreichen?" },
-  { id: "mindset", title: "Ihre Situation", subtitle: "Kurze Selbsteinschätzung" },
+  { id: "area", title: "Schwerpunkt", subtitle: "Wähle deinen Schwerpunkt" },
+  { id: "contact", title: "Kontakt", subtitle: "Wie kann ich dich erreichen?" },
+  { id: "mindset", title: "Deine Situation", subtitle: "Kurze Selbsteinschätzung" },
   { id: "details", title: "Details", subtitle: "Ein paar weitere Details" },
   { id: "final", title: "Abschluss", subtitle: "Fast geschafft!" },
 ];
@@ -85,7 +85,7 @@ export default function VorqualifizierungForm() {
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-      toast.error("Bitte wählen Sie eine Option aus.");
+      toast.error("Bitte wähle eine Option aus.");
     }
   };
 
@@ -129,10 +129,10 @@ export default function VorqualifizierungForm() {
       if (error) throw error;
 
       setIsSubmitted(true);
-      toast.success("Vielen Dank! Ihre Anfrage wurde erfolgreich gesendet.");
+      toast.success("Vielen Dank! Deine Anfrage wurde erfolgreich gesendet.");
     } catch (error) {
       console.error("Supabase error:", error);
-      toast.error("Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.");
+      toast.error("Ein Fehler ist aufgetreten. Bitte versuche es später erneut.");
     }
   };
 
@@ -150,8 +150,8 @@ export default function VorqualifizierungForm() {
         </div>
         <h2 className="text-4xl font-serif text-primary mb-6">Vielen Dank, {firstName}!</h2>
         <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10">
-          Ich habe Ihre Anfrage erhalten und schaue mir diese persönlich an. 
-          Ich melde mich innerhalb von 24 Stunden (an Werktagen) bei Ihnen zurück.
+          Ich habe deine Anfrage erhalten und schaue mir diese persönlich an. 
+          Ich melde mich innerhalb von 24 Stunden (an Werktagen) bei dir zurück.
         </p>
         <p className="text-primary font-bold italic mb-10">Herzliche Grüße, <br /> Angela Deschner</p>
         <Button onClick={() => window.location.href = "/"} variant="outline" className="rounded-xl px-10 h-14 font-bold border-primary text-primary hover:bg-primary hover:text-white transition-all">

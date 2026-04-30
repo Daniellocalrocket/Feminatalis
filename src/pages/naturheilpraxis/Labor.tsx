@@ -63,7 +63,7 @@ export default function Labor() {
                   <ShieldCheck size={24} />
                 </div>
                 <p className="font-medium text-primary italic leading-relaxed">
-                  Wir arbeiten mit führenden Fachlaboren für funktionelle Medizin in ganz Europa zusammen, um Ihnen die präzisesten Ergebnisse zu liefern.
+                  Wir arbeiten mit führenden Fachlaboren für funktionelle Medizin in ganz Europa zusammen, um dir die präzisesten Ergebnisse zu liefern.
                 </p>
               </div>
             </div>

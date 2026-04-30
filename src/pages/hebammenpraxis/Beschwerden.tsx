@@ -16,8 +16,8 @@ export default function Beschwerden() {
       
       <SplitScreenHero
         badge="Hebammenpraxis"
-        title={<>Hilfe bei <span className="text-accent">Schwangerschaftsbeschwerden</span></>}
-        subtitle='Eine Schwangerschaft ist eine Höchstleistung des Körpers. Dass es dabei zu Beschwerden kommt, ist oft normal – dass man sie ertragen muss, jedoch nicht. Wir lindern Ihre Beschwerden ganzheitlich und ursachenorientiert.'
+        title="Schwangerschaftsbeschwerden lindern"
+        subtitle='Eine Schwangerschaft ist eine Höchstleistung des Körpers. Dass es dabei zu Beschwerden kommt, ist oft normal – dass man sie ertragen muss, jedoch nicht. Wir lindern deine Beschwerden ganzheitlich und ursachenorientiert.'
         imageSrc="https://images.unsplash.com/photo-1493894473891-10fc1e5dbd22?q=80&w=2069&auto=format&fit=crop"
         imageAlt="Schwangere Frau bei der Hebamme"
         imageKey="img_hero_beschwerden"
@@ -31,7 +31,7 @@ export default function Beschwerden() {
         
         <div className="prose prose-lg max-w-none text-muted-foreground mb-12">
           <p className="text-xl mb-8 leading-relaxed">
-            Eine Schwangerschaft ist eine Höchstleistung des Körpers. Dass es dabei zu Beschwerden kommt, ist oft normal – dass man sie ertragen muss, jedoch nicht. Wir lindern Ihre Beschwerden ganzheitlich und ursachenorientiert.
+            Eine Schwangerschaft ist eine Höchstleistung des Körpers. Dass es dabei zu Beschwerden kommt, ist oft normal – dass man sie ertragen muss, jedoch nicht. Wir lindern deine Beschwerden ganzheitlich und ursachenorientiert.
           </p>
           
           <div className="bg-white p-8 md:p-12 rounded-[2.5rem] border border-border shadow-sm mb-16">
@@ -65,7 +65,7 @@ export default function Beschwerden() {
         <div className="bg-primary text-white p-10 rounded-[2.5rem] text-center shadow-xl">
           <Heart className="w-16 h-16 mx-auto mb-6 opacity-80" />
           <h2 className="text-3xl font-serif mb-4">Wohlbefinden in der Schwangerschaft.</h2>
-          <p className="mb-8 opacity-90 max-w-xl mx-auto">Zögern Sie nicht – viele Beschwerden lassen sich sehr gut und sanft lindern. Oft ist es eine Kassenleistung oder wird teilweise übernommen.</p>
+          <p className="mb-8 opacity-90 max-w-xl mx-auto">Zögere nicht – viele Beschwerden lassen sich sehr gut und sanft lindern. Oft ist es eine Kassenleistung oder wird teilweise übernommen.</p>
           <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-block bg-accent text-white px-8 py-4 rounded-xl font-bold hover:bg-accent/90 transition-all flex items-center justify-center gap-2 mx-auto w-fit">
             Kostenfreie Vor-Analyse anfragen <ArrowRight className="w-5 h-5" />
           </Link>

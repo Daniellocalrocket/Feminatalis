@@ -32,7 +32,7 @@ export default function Step3Details() {
       <div className="space-y-6">
         <div className="flex items-center gap-3 mb-4">
            <Clock className="w-6 h-6 text-primary/30" />
-           <Label className="text-xl font-serif text-primary">Wie dringend ist Ihr Anliegen?</Label>
+           <Label className="text-xl font-serif text-primary">Wie dringend ist dein Anliegen?</Label>
         </div>
         <RadioGroup onValueChange={(val) => setValue("urgency", val, { shouldValidate: true })}>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -153,7 +153,7 @@ export default function Step3Details() {
             <Label className="text-sm font-bold text-primary opacity-60 uppercase">IHR HAUPTANLIEGEN IN EINEM SATZ</Label>
             <Textarea 
               {...register("mainConcern")} 
-              placeholder="Was beschäftigt Sie aktuell am meisten?" 
+              placeholder="Was beschäftigt dich aktuell am meisten?" 
               className="min-h-[120px] rounded-2xl bg-white border-primary/10 p-4"
               maxLength={200}
             />
