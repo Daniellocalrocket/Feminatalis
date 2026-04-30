@@ -211,11 +211,11 @@ export default function Home() {
       <section className="py-10 border-y border-border/30 bg-white/50 mb-24">
         <div className="container mx-auto max-w-5xl px-4">
           <div className="flex flex-wrap items-center justify-center md:justify-between gap-8 text-center sm:text-left text-primary font-medium">
-            <div className="flex items-center gap-3"><Award className="w-6 h-6 text-accent"/> 33 Jahre Hebammenexpertise</div>
+            <div className="flex items-center gap-3"><Award className="w-6 h-6 text-accent"/> 33 J. Hebammenexpertise</div>
             <div className="flex items-center gap-3"><Heart className="w-6 h-6 text-accent"/> 4500 Mütter</div>
-            <div className="flex items-center gap-3"><Leaf className="w-6 h-6 text-accent"/> 10 Jahre Heilpraktikererfahrung</div>
+            <div className="flex items-center gap-3"><Leaf className="w-6 h-6 text-accent"/> 10 J. Heilpraktikererfahrung</div>
             <div className="flex items-center gap-3"><UserCheck className="w-6 h-6 text-accent"/> über 2000 Patienten</div>
-            <div className="flex items-center gap-3"><Activity className="w-6 h-6 text-accent"/> Prävention und Ganzheitlichkeit</div>
+            <div className="flex items-center gap-3"><Activity className="w-6 h-6 text-accent"/> Prävention & Ganzheitlichkeit</div>
           </div>
         </div>
       </section>
