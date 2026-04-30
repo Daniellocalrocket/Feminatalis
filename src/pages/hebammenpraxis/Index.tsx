@@ -112,23 +112,20 @@ export default function Hebammenpraxis() {
                 <ShieldCheck className="w-10 h-10 text-blue-600" />
               </div>
               <h3 className="text-2xl font-serif text-primary mb-2">Säule 1: Basis-Begleitung</h3>
-              <p className="text-blue-600 font-bold text-sm mb-6 uppercase tracking-wider">Kassenleistung</p>
+              <p className="text-blue-600 font-bold text-sm mb-6 uppercase tracking-wider">Kasse + Privat</p>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                <strong>„Sicherheit für den Start“</strong>: Fokus auf den Geburtsvorbereitungskurs und die intensive Zeit im Wochenbett. Klassische Expertise für den stabilen Rahmen.
+                <strong>„Sicherheit für den Start“</strong>: Fokus auf Kurse und die intensive Zeit im Wochenbett. Klassische Expertise für den stabilen Rahmen.
               </p>
               <ul className="space-y-4 mb-10">
                 <li>
                   <Link to={ROUTE_PATHS.VORBEREITUNG} className="flex items-center gap-3 text-sm font-medium hover:text-accent transition-colors">
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-600"/> Vorbereitungskurse
+                    <div className="w-1.5 h-1.5 rounded-full bg-blue-600"/> Kurse
                   </Link>
                 </li>
                 <li>
                   <Link to={ROUTE_PATHS.WOCHENBETTBETREUUNG} className="flex items-center gap-3 text-sm font-medium hover:text-accent transition-colors">
                     <div className="w-1.5 h-1.5 rounded-full bg-blue-600"/> Wochenbettbetreuung
                   </Link>
-                </li>
-                <li className="flex items-center gap-3 text-sm font-medium opacity-60">
-                  <div className="w-1.5 h-1.5 rounded-full bg-blue-600"/> Hausbesuche
                 </li>
               </ul>
             </div>
@@ -141,7 +138,7 @@ export default function Hebammenpraxis() {
               <h3 className="text-2xl font-serif text-primary mb-2">Säule 2: Akut-Hilfe</h3>
               <p className="text-primary font-bold text-sm mb-6 uppercase tracking-wider">Kasse + Naturheilkunde</p>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                <strong>„Ursachen statt Pflaster“</strong>: Gezielte Behandlung bei Schmerzen, Ödemen oder Erschöpfung. Wir analysieren tiefenphysiologisch, warum dein Körper reagiert.
+                <strong>„Ursachen statt Pflaster“</strong>: Gezielte Behandlung bei Schmerzen, Schwangerschaftsübelkeit oder Erschöpfung. Wir analysieren tiefenphysiologisch, warum dein Körper reagiert.
               </p>
               <ul className="space-y-4 mb-10">
                 <li>
