@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 const FAQ_DATA = [
   {
@@ -94,8 +95,28 @@ const fadeInUp = {
 };
 
 export default function FAQ() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": FAQ_DATA.flatMap(group => 
+      group.items.map(item => ({
+        "@type": "Question",
+        "name": item.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.answer
+        }
+      }))
+    )
+  };
+
   return (
     <div className="min-h-screen bg-background pb-20">
+      <SEO 
+        title="FAQ | Fragen zu Kinderwunsch & Naturheilkunde" 
+        description="Antworten auf häufige Fragen zu meinem Kinderwunsch-Onlinekurs, der Hebammenbegleitung und meiner Arbeit als Heilpraktikerin in Bad Schönborn."
+        schema={schema}
+      />
       {/* Hero Section */}
       <section className="relative py-24 bg-accent/30 overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none">

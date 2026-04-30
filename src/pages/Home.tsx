@@ -19,7 +19,50 @@ export default function Home() {
 
   return (
     <>
-      <SEO title="Ganzheitliche Gesundheit | feminatalis" description="Praxis für Funktionelle Medizin & Hebammenpraxis in Bad Schönborn." />
+      <SEO 
+        title="Heilpraktikerin & Hebamme Bad Schönborn | Funktionelle Medizin" 
+        description="Feminatalis: Ihre Praxis für Funktionelle Medizin & Hebammenbegleitung in Bad Schönborn. Spezialisiert auf Kinderwunsch, Hormone & Mitochondrien-Therapie. Jetzt Termin anfragen!"
+        ogType="business.medical"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "MedicalBusiness",
+          "name": "feminatalis – Angela Deschner",
+          "alternateName": "Praxis für Funktionelle Medizin & Hebammenpraxis",
+          "description": "Spezialisierte Praxis für Funktionelle Medizin, Naturheilkunde und Hebammenbegleitung in Bad Schönborn. Fokus auf Kinderwunsch, hormonelle Balance und zelluläre Gesundheit.",
+          "image": "https://feminatalis.de/logo.png",
+          "@id": "https://feminatalis.de",
+          "url": "https://feminatalis.de",
+          "telephone": "+4972538468728",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Hebelstr. 3A",
+            "addressLocality": "Bad Schönborn",
+            "postalCode": "76669",
+            "addressCountry": "DE"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 49.2023,
+            "longitude": 8.6534
+          },
+          "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "08:00", "closes": "17:30" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "14:00", "closes": "17:30" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "08:00", "closes": "17:30" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "08:30", "closes": "17:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "11:00", "closes": "14:00" }
+          ],
+          "sameAs": [
+            "https://www.instagram.com/feminatalis/",
+            "https://www.facebook.com/feminatalis"
+          ],
+          "founder": {
+            "@type": "Person",
+            "name": "Angela Deschner",
+            "jobTitle": "Heilpraktikerin & Hebamme"
+          }
+        }}
+      />
 
       {/* Hero Section */}
       <section id="hero" className="relative pt-32 pb-48 text-center overflow-hidden">

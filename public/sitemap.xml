@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://feminatalis.de/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://feminatalis.de/hebammenpraxis</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://feminatalis.de/naturheilpraxis</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://feminatalis.de/kinderwunsch</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://feminatalis.de/ueber-mich</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://feminatalis.de/preisliste</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://feminatalis.de/magazin</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://feminatalis.de/faq</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://feminatalis.de/kontakt</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <!-- Hebammenpraxis Subpages -->
+  <url><loc>https://feminatalis.de/hebammenpraxis/geburtsvorbereitung</loc><priority>0.7</priority></url>
+  <url><loc>https://feminatalis.de/hebammenpraxis/wochenbettbetreuung</loc><priority>0.7</priority></url>
+  <url><loc>https://feminatalis.de/hebammenpraxis/zelltraining</loc><priority>0.7</priority></url>
+  <url><loc>https://feminatalis.de/hebammenpraxis/akupunktur</loc><priority>0.7</priority></url>
+  <url><loc>https://feminatalis.de/hebammenpraxis/rueckbildung</loc><priority>0.7</priority></url>
+  <!-- Naturheilpraxis Subpages -->
+  <url><loc>https://feminatalis.de/naturheilpraxis/labor</loc><priority>0.7</priority></url>
+  <url><loc>https://feminatalis.de/naturheilpraxis/long-covid</loc><priority>0.7</priority></url>
+  <url><loc>https://feminatalis.de/naturheilpraxis/infusionstherapie</loc><priority>0.7</priority></url>
+  <url><loc>https://feminatalis.de/naturheilpraxis/darmsanierung</loc><priority>0.7</priority></url>
+  <url><loc>https://feminatalis.de/naturheilpraxis/hormontherapie</loc><priority>0.7</priority></url>
+  <url><loc>https://feminatalis.de/naturheilpraxis/schwermetall</loc><priority>0.7</priority></url>
+  <url><loc>https://feminatalis.de/naturheilpraxis/tcm</loc><priority>0.7</priority></url>
+  <url><loc>https://feminatalis.de/naturheilpraxis/mitochondrien</loc><priority>0.7</priority></url>
+</urlset>

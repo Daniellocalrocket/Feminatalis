@@ -20,7 +20,7 @@ export default function Naturheilpraxis() {
     { title: "IHHT Zelltraining", desc: "Simulation von Höhentraining zur Regeneration der Mitochondrien.", path: ROUTE_PATHS.ZELLTRAINING, icon: <Wind className="w-6 h-6" /> },
     { title: "Hämo-Laser-Therapie", desc: "Systemische Blutbestrahlung zur Aktivierung des Stoffwechsels.", path: ROUTE_PATHS.LASERTHERAPIE, icon: <Zap className="w-6 h-6" /> },
     { title: "TCM & Akupunktur", desc: "Ganzheitliche Regulation nach der Lehre der 5 Elemente.", path: ROUTE_PATHS.TCM, icon: <Flame className="w-6 h-6" /> },
-    { title: "Homöopathie", desc: "Sanfte Informationsmedizin zur Selbstheilungsaktivierung.", path: ROUTE_PATHS.HOMOEOPATHIE, icon: <Sparkles className="w-6 h-6" /> },
+    { title: "Schwermetallausleitung", desc: "Chelat-Therapie zur Entgiftung bei chronischen Blockaden.", path: ROUTE_PATHS.SCHWERMETALL, icon: <FlaskConical className="w-6 h-6" /> },
     { title: "Blutegeltherapie", desc: "Biochemische Wirkung des Egelspeichels bei Entzündungen.", path: ROUTE_PATHS.BLUTEGEL, icon: <Thermometer className="w-6 h-6" /> }
   ];
 

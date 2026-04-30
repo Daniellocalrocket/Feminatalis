@@ -64,6 +64,7 @@ export const ROUTE_PATHS = {
 
   // Legal
   IMPRESSUM: "/impressum",
+  DATENSCHUTZ: "/datenschutz",
 } as const;
 
 export interface User {

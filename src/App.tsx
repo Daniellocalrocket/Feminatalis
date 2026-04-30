@@ -44,6 +44,7 @@ import ZellkraftRoadmap from "@/pages/kinderwunsch/ZellkraftRoadmap";
 import CoursesOverview from "@/pages/CoursesOverview";
 import EventBooking from "@/pages/EventBooking";
 import Impressum from "@/pages/Impressum";
+import Datenschutz from "@/pages/Datenschutz";
 import Preisliste from "@/pages/Preisliste";
 
 // Admin Pages
@@ -228,6 +229,10 @@ const App = () => {
               <Route 
                 path={ROUTE_PATHS.IMPRESSUM} 
                 element={<Impressum />} 
+              />
+              <Route 
+                path={ROUTE_PATHS.DATENSCHUTZ} 
+                element={<Datenschutz />} 
               />
               
               {/* Admin Routes */}

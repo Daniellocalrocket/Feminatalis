@@ -267,8 +267,8 @@ export function Layout({ children }: LayoutProps) {
                 </div>
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Ganzheitliche Begleitung auf deinem Weg zum Wunschkind.
-                Naturheilkunde, Expertinnen-Wissen und emotionale Geborgenheit.
+                <strong>Angela Deschner</strong> – Ihre Heilpraktikerin & Hebamme in Bad Schönborn. 
+                Ganzheitliche Begleitung bei Kinderwunsch, Hormontherapie und zellulärer Gesundheit im Raum <strong>Bruchsal, Karlsruhe, Heidelberg & Mannheim</strong>.
               </p>
               <div className="flex gap-4">
                 <a
@@ -342,7 +342,7 @@ export function Layout({ children }: LayoutProps) {
               </ul>
               <div className="pt-4">
                 <Link to={ROUTE_PATHS.IMPRESSUM} className="text-xs hover:text-primary transition-colors">Impressum</Link> / 
-                <Link to="#" className="text-xs hover:text-primary transition-colors"> Datenschutz</Link>
+                <Link to={ROUTE_PATHS.DATENSCHUTZ} className="text-xs hover:text-primary transition-colors"> Datenschutz</Link>
               </div>
             </div>
           </div>

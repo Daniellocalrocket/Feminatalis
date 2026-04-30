@@ -117,9 +117,19 @@ export default function Hebammenpraxis() {
                 <strong>„Sicherheit für den Start“</strong>: Fokus auf den Geburtsvorbereitungskurs und die intensive Zeit im Wochenbett. Klassische Expertise für den stabilen Rahmen.
               </p>
               <ul className="space-y-4 mb-10">
-                <li className="flex items-center gap-3 text-sm font-medium"><div className="w-1.5 h-1.5 rounded-full bg-blue-600"/> Vorbereitungskurse</li>
-                <li className="flex items-center gap-3 text-sm font-medium"><div className="w-1.5 h-1.5 rounded-full bg-blue-600"/> Wochenbettbetreuung</li>
-                <li className="flex items-center gap-3 text-sm font-medium"><div className="w-1.5 h-1.5 rounded-full bg-blue-600"/> Hausbesuche</li>
+                <li>
+                  <Link to={ROUTE_PATHS.VORBEREITUNG} className="flex items-center gap-3 text-sm font-medium hover:text-accent transition-colors">
+                    <div className="w-1.5 h-1.5 rounded-full bg-blue-600"/> Vorbereitungskurse
+                  </Link>
+                </li>
+                <li>
+                  <Link to={ROUTE_PATHS.WOCHENBETTBETREUUNG} className="flex items-center gap-3 text-sm font-medium hover:text-accent transition-colors">
+                    <div className="w-1.5 h-1.5 rounded-full bg-blue-600"/> Wochenbettbetreuung
+                  </Link>
+                </li>
+                <li className="flex items-center gap-3 text-sm font-medium opacity-60">
+                  <div className="w-1.5 h-1.5 rounded-full bg-blue-600"/> Hausbesuche
+                </li>
               </ul>
             </div>
 
@@ -134,9 +144,21 @@ export default function Hebammenpraxis() {
                 <strong>„Ursachen statt Pflaster“</strong>: Gezielte Behandlung bei Schmerzen, Ödemen oder Erschöpfung. Wir analysieren tiefenphysiologisch, warum Ihr Körper reagiert.
               </p>
               <ul className="space-y-4 mb-10">
-                <li className="flex items-center gap-3 text-sm font-medium"><div className="w-1.5 h-1.5 rounded-full bg-primary"/> Schmerzmanagement</li>
-                <li className="flex items-center gap-3 text-sm font-medium"><div className="w-1.5 h-1.5 rounded-full bg-primary"/> Ödem-Behandlung</li>
-                <li className="flex items-center gap-3 text-sm font-medium"><div className="w-1.5 h-1.5 rounded-full bg-primary"/> Erschöpfungs-Check</li>
+                <li>
+                  <Link to={ROUTE_PATHS.BESCHWERDEN} className="flex items-center gap-3 text-sm font-medium hover:text-accent transition-colors">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary"/> Schmerzmanagement & Beschwerden
+                  </Link>
+                </li>
+                <li>
+                  <Link to={ROUTE_PATHS.AKUPUNKTUR} className="flex items-center gap-3 text-sm font-medium hover:text-accent transition-colors">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary"/> Akupunktur & TCM
+                  </Link>
+                </li>
+                <li>
+                  <Link to={ROUTE_PATHS.RUECKBILDUNG} className="flex items-center gap-3 text-sm font-medium hover:text-accent transition-colors">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary"/> Rückbildung & Kräftigung
+                  </Link>
+                </li>
               </ul>
             </div>
 
@@ -152,9 +174,21 @@ export default function Hebammenpraxis() {
                 <strong>„Maximale Leistung“</strong>: Die exklusive Vorbereitung durch Vollblut-Analyse, IHHT-Zelltraining und Infusionen. Das Ziel: Volle Power für den Endspurt.
               </p>
               <ul className="space-y-4 mb-10 relative z-10">
-                <li className="flex items-center gap-3 text-sm font-medium"><div className="w-1.5 h-1.5 rounded-full bg-orange-200"/> Vollblut-Nährstoff-Analyse</li>
-                <li className="flex items-center gap-3 text-sm font-medium"><div className="w-1.5 h-1.5 rounded-full bg-orange-200"/> IHHT-Zelltraining (Hypoxie)</li>
-                <li className="flex items-center gap-3 text-sm font-medium"><div className="w-1.5 h-1.5 rounded-full bg-orange-200"/> Mitochondriale Infusionen</li>
+                <li>
+                  <Link to={ROUTE_PATHS.LABOR} className="flex items-center gap-3 text-sm font-medium hover:text-orange-200 transition-colors">
+                    <div className="w-1.5 h-1.5 rounded-full bg-orange-200"/> Vollblut-Nährstoff-Analyse
+                  </Link>
+                </li>
+                <li>
+                  <Link to={ROUTE_PATHS.ZELLTRAINING} className="flex items-center gap-3 text-sm font-medium hover:text-orange-200 transition-colors">
+                    <div className="w-1.5 h-1.5 rounded-full bg-orange-200"/> IHHT-Zelltraining (Hypoxie)
+                  </Link>
+                </li>
+                <li>
+                  <Link to={ROUTE_PATHS.INFUSIONSTHERAPIE} className="flex items-center gap-3 text-sm font-medium hover:text-orange-200 transition-colors">
+                    <div className="w-1.5 h-1.5 rounded-full bg-orange-200"/> Mitochondriale Infusionen
+                  </Link>
+                </li>
               </ul>
               <Link to={ROUTE_PATHS.ZELLTRAINING} className="inline-flex items-center gap-2 text-orange-200 font-bold text-sm group-hover:gap-4 transition-all uppercase tracking-widest relative z-10">
                 Zum Protokoll <ArrowRight size={16} />

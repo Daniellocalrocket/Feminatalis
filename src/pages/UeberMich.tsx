@@ -42,8 +42,31 @@ export default function UeberMich() {
   return (
     <>
       <SEO 
-        title="Angela Deschner | Heilpraktikerin & Hebamme in Bad Schönborn" 
-        description="Lernen Sie Angela Deschner kennen: Über 33 Jahre Hebammen-Erfahrung, Heilpraktikerin, Expertin für mitochondriale Medizin und ganzheitliche Frauengesundheit." 
+        title="Angela Deschner | Heilpraktikerin & Hebamme Bad Schönborn" 
+        description="Lernen Sie Angela Deschner kennen: Über 33 Jahre Erfahrung als Hebamme & Heilpraktikerin in Bad Schönborn. Expertin für funktionelle Medizin und Kinderwunsch." 
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Angela Deschner",
+          "jobTitle": ["Heilpraktikerin", "Hebamme"],
+          "description": "Angela Deschner ist eine erfahrene Hebamme und staatlich geprüfte Heilpraktikerin, spezialisiert auf funktionelle Medizin, mitochondriale Therapie und ganzheitliche Frauengesundheit.",
+          "image": portraitAngela,
+          "url": "https://feminatalis.de/ueber-mich",
+          "knowsAbout": [
+            "Funktionelle Medizin",
+            "Mitochondriale Medizin",
+            "Hebammenkunst",
+            "Kinderwunschbegleitung",
+            "Hormontherapie",
+            "TCM & Akupunktur",
+            "Chelat-Therapie"
+          ],
+          "knowsLanguage": ["German", "Russian"],
+          "memberOf": [
+            { "@type": "Organization", "name": "Lachesis - Berufsverband für Heilpraktikerinnen" },
+            { "@type": "Organization", "name": "Deutscher Hebammenverband" }
+          ]
+        }}
       />
 
       {/* Hero Section */}

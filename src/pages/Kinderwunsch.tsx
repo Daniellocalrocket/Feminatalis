@@ -61,14 +61,21 @@ export default function Kinderwunsch() {
             </div>
 
             <div className="grid sm:grid-cols-2 gap-6">
-              {bausteine.map((item, i) => (
-                <div key={i} className="bg-white p-10 rounded-[2.5rem] border border-border/50 shadow-sm flex flex-col group hover:border-accent transition-all">
+              {[
+                { title: "Körpercheck & Labor", desc: "Mitochondrien-Funktion, Immunstatus, Hormone, Darmflora und Mikronährstoffe.", icon: ClipboardList, path: ROUTE_PATHS.LABOR },
+                { title: "(Ei)Zelltraining IHHT", desc: "Regeneration der Eizellkraftwerke für maximale Energie und optimale Voraussetzungen.", icon: Zap, path: ROUTE_PATHS.ZELLTRAINING },
+                { title: "Hormonsystem", desc: "Phytotherapie und naturidentische Hormone, Ausleitung der Pille.", icon: Activity, path: ROUTE_PATHS.HORMONTHERAPIE },
+                { title: "Entgiftung & Milieu", desc: "Maßnahmen zur Entschlackung durch Homöopathie, Akupunktur oder Infusionen.", icon: Droplets, path: ROUTE_PATHS.INFUSIONSTHERAPIE },
+                { title: "Psychische Balance", desc: "Förderung des Loslassens, Entspannung und Klärung von Blockaden.", icon: Heart, path: ROUTE_PATHS.TCM },
+                { title: "Erfolgs-Mindset", desc: "Mentale Blockaden erkennen und realistische Etappen-Ziele setzen.", icon: Target, path: ROUTE_PATHS.UEBER_MICH }
+              ].map((item, i) => (
+                <Link to={item.path} key={i} className="bg-white p-10 rounded-[2.5rem] border border-border/50 shadow-sm flex flex-col group hover:border-accent hover:shadow-md transition-all h-full">
                   <div className="bg-muted/30 w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent/10 transition-colors">
                     <item.icon className="text-accent w-7 h-7" />
-                  </div>
-                  <h4 className="font-bold text-primary mb-3 font-serif text-xl">{item.title}</h4>
+                   </div>
+                  <h4 className="font-bold text-primary mb-3 font-serif text-xl group-hover:text-accent transition-colors">{item.title}</h4>
                   <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
