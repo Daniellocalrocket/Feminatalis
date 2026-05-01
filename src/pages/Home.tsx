@@ -337,25 +337,25 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {[
               { 
-                title: "Säule 3:\nDas Zell-Protokoll", 
-                pts: ["Vollblut-Nährstoff-Analyse", "IHHT-Zelltraining", "Mitochondriale Infusionen"], 
-                icon: <Microscope className="text-accent w-8 h-8"/>, 
-                link: ROUTE_PATHS.ZELLTRAINING,
-                badge: "Premium / Privat"
+                title: "Säule 1:\nBasis-Begleitung", 
+                pts: ["Kurse", "Wochenbettbetreuung"], 
+                icon: <ShieldCheck className="text-blue-600 w-8 h-8"/>, 
+                link: ROUTE_PATHS.HEBAMMENPRAXIS,
+                badge: "Kasse + Privat"
               },
               { 
                 title: "Säule 2:\nAkut-Hilfe", 
-                pts: ["Schmerzmanagement", "Ödem-Behandlung", "Erschöpfungs-Check"], 
+                pts: ["Schmerzmanagement", "Schwangerschaftsübelkeit", "Erschöpfungs-Check"], 
                 icon: <Zap className="text-primary w-8 h-8"/>, 
                 link: ROUTE_PATHS.HEBAMMENPRAXIS,
                 badge: "Kasse + Naturheilkunde"
               },
               { 
-                title: "Säule 1:\nBasis-Begleitung", 
-                pts: ["Vorbereitungskurse", "Wochenbettbetreuung", "Hausbesuche"], 
-                icon: <ShieldCheck className="text-blue-600 w-8 h-8"/>, 
-                link: ROUTE_PATHS.HEBAMMENPRAXIS,
-                badge: "Kassenleistung"
+                title: "Säule 3:\nDas Zell-Protokoll", 
+                pts: ["Vollblut-Nährstoff-Analyse", "IHHT-Zelltraining", "Mitochondriale Infusionen"], 
+                icon: <Microscope className="text-accent w-8 h-8"/>, 
+                link: ROUTE_PATHS.ZELLTRAINING,
+                badge: "Premium / Privat"
               }
             ].map((c, i) => (
               <div key={i} className="bg-white rounded-[2.5rem] p-10 border border-primary/5 shadow-xl shadow-primary/[0.02] relative overflow-hidden group hover:shadow-2xl transition-all hover:-translate-y-1">
