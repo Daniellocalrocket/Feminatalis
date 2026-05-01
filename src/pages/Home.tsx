@@ -338,7 +338,7 @@ export default function Home() {
             {[
               { 
                 title: "Säule 1:\nBasis-Begleitung", 
-                pts: ["Kurse", "Wochenbettbetreuung"], 
+                pts: ["Vorbereitungskurse", "Wochenbettbetreuung", "Stillbegleitung"], 
                 icon: <ShieldCheck className="text-blue-600 w-8 h-8"/>, 
                 link: ROUTE_PATHS.HEBAMMENPRAXIS,
                 badge: "Kasse + Privat"
