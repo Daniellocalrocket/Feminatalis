@@ -12,8 +12,8 @@ export default function Kinderwunsch() {
     { title: "Körpercheck & Labor", desc: "Mitochondrien-Funktion, Immunstatus, Hormone, Darmflora und Mikronährstoffe.", icon: ClipboardList },
     { title: "(Ei)Zelltraining IHHT", desc: "Regeneration der Eizellkraftwerke für maximale Energie und optimale Voraussetzungen.", icon: Zap },
     { title: "Hormonsystem", desc: "Phytotherapie und naturidentische Hormone, Ausleitung der Pille.", icon: Activity },
-    { title: "Entgiftung & Milieu", desc: "Maßnahmen zur Entschlackung durch Homöopathie, Akupunktur oder Infusionen.", icon: Droplets },
-    { title: "Psychische Balance", desc: "Förderung des Loslassens, Entspannung und Klärung von Blockaden.", icon: Heart },
+    { title: "Entgiftung & Milieu", desc: "Maßnahmen zur Entschlackung durch Homöopathie, Phytotherapie oder Infusionen.", icon: Droplets },
+    { title: "Psychische Balance", desc: "Entspannungs-Förderung, Nervensystem-Regulation und Klärung der Blockaden.", icon: Heart },
     { title: "Erfolgs-Mindset", desc: "Mentale Blockaden erkennen und realistische Etappen-Ziele setzen.", icon: Target }
   ];
 
@@ -65,8 +65,8 @@ export default function Kinderwunsch() {
                 { title: "Körpercheck & Labor", desc: "Mitochondrien-Funktion, Immunstatus, Hormone, Darmflora und Mikronährstoffe.", icon: ClipboardList, path: ROUTE_PATHS.LABOR },
                 { title: "(Ei)Zelltraining IHHT", desc: "Regeneration der Eizellkraftwerke für maximale Energie und optimale Voraussetzungen.", icon: Zap, path: ROUTE_PATHS.ZELLTRAINING },
                 { title: "Hormonsystem", desc: "Phytotherapie und naturidentische Hormone, Ausleitung der Pille.", icon: Activity, path: ROUTE_PATHS.HORMONTHERAPIE },
-                { title: "Entgiftung & Milieu", desc: "Maßnahmen zur Entschlackung durch Homöopathie, Akupunktur oder Infusionen.", icon: Droplets, path: ROUTE_PATHS.INFUSIONSTHERAPIE },
-                { title: "Psychische Balance", desc: "Förderung des Loslassens, Entspannung und Klärung von Blockaden.", icon: Heart, path: ROUTE_PATHS.TCM },
+                { title: "Entgiftung & Milieu", desc: "Maßnahmen zur Entschlackung durch Homöopathie, Phytotherapie oder Infusionen.", icon: Droplets, path: ROUTE_PATHS.INFUSIONSTHERAPIE },
+                { title: "Psychische Balance", desc: "Entspannungs-Förderung, Nervensystem-Regulation und Klärung der Blockaden.", icon: Heart, path: ROUTE_PATHS.TCM },
                 { title: "Erfolgs-Mindset", desc: "Mentale Blockaden erkennen und realistische Etappen-Ziele setzen.", icon: Target, path: ROUTE_PATHS.UEBER_MICH }
               ].map((item, i) => (
                 <Link to={item.path} key={i} className="bg-white p-10 rounded-[2.5rem] border border-border/50 shadow-sm flex flex-col group hover:border-accent hover:shadow-md transition-all h-full">
