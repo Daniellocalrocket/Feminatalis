@@ -73,11 +73,11 @@ export default function CoursesOverview() {
   const premiumCourses = [
     {
       id: "roadmap",
-      title: "Zellkraft-Roadmap",
+      title: "Fruchtbarkeits-Kompass: Zellenergie-Fahrplan",
       subtitle: "Planungsphase & Kinderwunsch",
-      description: "Vom Informationschaos zur Strategin. Deine bioenergetische 90-Tage-Begleitung für maximale Fruchtbarkeit.",
-      features: ["90-Tage-Zell-Logik", "Arzt-Leitfaden", "Befund-Board", "Animal-Based Fokus"],
-      link: `${ROUTE_PATHS.ZELLKRAFT_ROADMAP}?event=${encodeURIComponent("Zellkraft-Roadmap")}`,
+      description: "Vom Informationschaos zur Strategie. Deine bioenergetische 90-Tage-Begleitung für maximale Fruchtbarkeit.",
+      features: ["Nährstoffdichte Ernährung", "Stoffwechsel-Stabilität", "Immunsystem-Balance", "Zellenergie-Aufbau", "Nervensystem-Regulation"],
+      link: `${ROUTE_PATHS.ZELLKRAFT_ROADMAP}?event=${encodeURIComponent("Fruchtbarkeits-Kompass: Zellenergie-Fahrplan")}`,
       badge: "Strategische Wahl",
       icon: Target,
       color: "accent"

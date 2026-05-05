@@ -218,11 +218,11 @@ export default function Hebammenpraxis() {
             <div className="lg:w-1/2">
               <h2 className="text-4xl font-serif text-primary mb-8 leading-tight">
                 33 Jahre Expertise trifft <br />
-                <span className="text-orange-600">St. Petersburger Schule</span>
+                <span className="text-orange-600">funktionelle Medizin</span>
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Angela vereint die klinische Erfahrung aus 10 Jahren Kreißsaal und 22 Jahren Freiberuflichkeit mit der analytischen Tiefe der St. Petersburger Schule. Ihr Arbeitsstil ist geprägt von einer sachlichen, tiefenphysiologischen Klarheit.
+                  Angela vereint 23 Jahre Hebammenerfahrung mit 10 Jahren Heilpraktiker-Kompetenz. Ihr Arbeitsstil ist geprägt von tiefem physiologischem Verständnis, fundiertem Wissen in Psychosomatik und einem klaren Fokus auf Prävention.
                 </p>
                 <p>
                   Als staatlich geprüfte Heilpraktikerin und Hebamme schaut sie „unter die Haut“. Wo andere Routine-Vorsorge leisten, analysiert Angela die biochemischen Grundlagen, um die Geburt sicher und kraftvoll zu machen. Es geht nicht um Träume, sondern um messbare Leistungsfähigkeit für den wichtigsten Moment deines Lebens.

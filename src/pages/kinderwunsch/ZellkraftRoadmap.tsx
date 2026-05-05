@@ -2,13 +2,13 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { ROUTE_PATHS } from "@/lib/index";
-import { 
-  Zap, 
-  Target, 
-  Brain, 
-  Settings2, 
-  ShieldCheck, 
-  ChevronRight, 
+import {
+  Zap,
+  Target,
+  Brain,
+  Settings2,
+  ShieldCheck,
+  ChevronRight,
   ArrowRight,
   ClipboardCheck,
   Timer,
@@ -55,9 +55,9 @@ export default function ZellkraftRoadmap() {
 
   return (
     <div className="bg-[#FCFAF8] min-h-screen text-[#2D2D2D] font-sans selection:bg-accent/20">
-      <SEO 
-        title="Zellkraft-Roadmap | Vom Informationschaos zur Strategin" 
-        description="Ein medizinisch fundierter 6-Wochen-Kurs für Frauen, die ihren Kinderwunsch nicht mehr dem Zufall überlassen wollen. Deine 90-Tage-Fertilitäts-Roadmap." 
+      <SEO
+        title="Fruchtbarkeits-Kompass | Vom Informationschaos zur Strategie"
+        description="Ein medizinisch fundierter 6-Wochen-Kurs für Frauen, die ihren Kinderwunsch nicht mehr dem Zufall überlassen wollen. Dein Fruchtbarkeits-Kompass: Zellenergie-Fahrplan."
       />
 
       {/* Hero Section */}
@@ -65,7 +65,7 @@ export default function ZellkraftRoadmap() {
         {/* Modern Clinical Serenity Background */}
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_0%,_rgba(240,125,0,0.05)_0%,_transparent_50%)] -z-10" />
         <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-primary/3 rounded-full blur-[120px] -z-10" />
-        
+
         <div className="container mx-auto px-4 max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -76,14 +76,14 @@ export default function ZellkraftRoadmap() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-border shadow-sm text-primary text-[11px] font-bold tracking-[0.2em] uppercase mb-8">
               <Sparkles size={14} className="text-accent" /> Limitiertes Kursprogramm
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-primary mb-8 leading-[1.05] tracking-tight">
               Vom Informationschaos <br />
-              <span className="text-accent italic font-light">zur Strategin.</span>
+              <span className="text-accent italic font-light">zur Strategie.</span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto font-light">
-              Hör auf zu suchen, fang an zu steuern. Deine <strong className="text-primary font-semibold">90-Tage-Fertilitäts-Roadmap</strong> – ein medizinisch fundierter 6-Wochen-Kurs für Frauen, die nichts mehr dem Zufall überlassen wollen.
+              Hör auf zu suchen, fang an zu steuern. Dein <strong className="text-primary font-semibold">Fruchtbarkeits-Kompass</strong> – ein medizinisch fundierter 6-Wochen-Kurs für Frauen, die nichts mehr dem Zufall überlassen wollen.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -183,14 +183,14 @@ export default function ZellkraftRoadmap() {
                 </p>
               </motion.div>
             ))}
-            
+
             {/* The Extra Callout Card */}
             <div className="p-10 bg-accent rounded-[3rem] text-white flex flex-col justify-center items-center text-center">
-               <ShieldCheck size={64} className="mb-6 opacity-20" />
-               <h3 className="text-2xl font-serif mb-4">Medizinisch Fundiert</h3>
-               <p className="opacity-80 text-sm italic">
-                 Keine Esoterik, keine haltlosen Versprechen. Nur angewandte Biologie und klinische Erfahrung aus 33 Jahren.
-               </p>
+              <ShieldCheck size={64} className="mb-6 opacity-20" />
+              <h3 className="text-2xl font-serif mb-4">Medizinisch Fundiert</h3>
+              <p className="opacity-80 text-sm italic">
+                Keine Esoterik, keine haltlosen Versprechen. Nur angewandte Biologie und klinische Erfahrung aus 33 Jahren.
+              </p>
             </div>
           </div>
         </div>
@@ -199,31 +199,31 @@ export default function ZellkraftRoadmap() {
       {/* Done-For-You Elements (Mental Load reduction) */}
       <section className="py-24 bg-primary overflow-hidden relative">
         <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(255,255,255,0.05)_0%,_transparent_40%)]" />
-        
+
         <div className="container mx-auto px-4 max-w-6xl relative z-10 text-white">
           <div className="text-center mb-20">
-             <h2 className="text-4xl md:text-5xl font-serif mb-6 text-white">Senke deinen Mental Load <span className="text-[#fde4c8] italic font-light">sofort.</span></h2>
-             <p className="text-lg opacity-70 max-w-2xl mx-auto">
-               Der Kurs liefert dir fertige Werkzeuge, damit du nicht länger raten musst, sondern einfach umsetzen kannst.
-             </p>
+            <h2 className="text-4xl md:text-5xl font-serif mb-6 text-white">Senke deinen Mental Load <span className="text-[#fde4c8] italic font-light">sofort.</span></h2>
+            <p className="text-lg opacity-70 max-w-2xl mx-auto">
+              Der Kurs liefert dir fertige Werkzeuge, damit du nicht länger raten musst, sondern einfach umsetzen kannst.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-             <div className="bg-white/5 p-8 rounded-[2.5rem] border border-white/10 backdrop-blur-md">
-                <FileText className="text-[#fde4c8] mb-6 w-12 h-12" />
-                <h4 className="text-xl font-bold mb-4 text-white">Roadmap-Canvas</h4>
-                <p className="text-white/60 text-sm leading-relaxed">Dein roter faden für die nächsten 90 Tage. Alle Schritte grafisch aufbereitet für maximale Übersicht.</p>
-             </div>
-             <div className="bg-white/5 p-8 rounded-[2.5rem] border border-white/10 backdrop-blur-md">
-                <MessageSquare className="text-[#fde4c8] mb-6 w-12 h-12" />
-                <h4 className="text-xl font-bold mb-4 text-white">Arzt-Leitfaden</h4>
-                <p className="text-white/60 text-sm leading-relaxed">10 gezielte Fragen für dein nächstes Gespräch im Kinderwunschzentrum, die Klarheit und Augenhöhe erzwingen.</p>
-             </div>
-             <div className="bg-white/5 p-8 rounded-[2.5rem] border border-white/10 backdrop-blur-md">
-                <ClipboardCheck className="text-[#fde4c8] mb-6 w-12 h-12" />
-                <h4 className="text-xl font-bold mb-4 text-white">Stoffwechsel-Protokolle</h4>
-                <p className="text-white/60 text-sm leading-relaxed">Animal-based & Keto-Logik zur Optimierung deiner Biologie – ohne Rätselraten bei der Ernährung.</p>
-             </div>
+            <div className="bg-white/5 p-8 rounded-[2.5rem] border border-white/10 backdrop-blur-md">
+              <FileText className="text-[#fde4c8] mb-6 w-12 h-12" />
+              <h4 className="text-xl font-bold mb-4 text-white">Roadmap-Canvas</h4>
+              <p className="text-white/60 text-sm leading-relaxed">Dein roter faden für die nächsten 90 Tage. Alle Schritte grafisch aufbereitet für maximale Übersicht.</p>
+            </div>
+            <div className="bg-white/5 p-8 rounded-[2.5rem] border border-white/10 backdrop-blur-md">
+              <MessageSquare className="text-[#fde4c8] mb-6 w-12 h-12" />
+              <h4 className="text-xl font-bold mb-4 text-white">Arzt-Leitfaden</h4>
+              <p className="text-white/60 text-sm leading-relaxed">10 gezielte Fragen für dein nächstes Gespräch im Kinderwunschzentrum, die Klarheit und Augenhöhe erzwingen.</p>
+            </div>
+            <div className="bg-white/5 p-8 rounded-[2.5rem] border border-white/10 backdrop-blur-md">
+              <ClipboardCheck className="text-[#fde4c8] mb-6 w-12 h-12" />
+              <h4 className="text-xl font-bold mb-4 text-white">Stoffwechsel-Protokolle</h4>
+              <p className="text-white/60 text-sm leading-relaxed">Gezielte Nährstoff-Logik zur Optimierung deiner Biologie – ohne Rätselraten bei der Ernährung.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -231,25 +231,25 @@ export default function ZellkraftRoadmap() {
       {/* No-Gos & Guarantees (Trust) */}
       <section className="py-24 lg:py-32">
         <div className="container mx-auto px-4 max-w-4xl text-center">
-           <h2 className="text-3xl md:text-4xl font-serif text-primary mb-16">Wofür Zellkraft steht (und wofür nicht)</h2>
-           <div className="grid md:grid-cols-2 gap-12 text-left">
-              <div className="space-y-6">
-                 <h4 className="text-accent font-bold uppercase tracking-widest text-sm">Unsere Mission</h4>
-                 <ul className="space-y-4">
-                    <li className="flex gap-3 text-muted-foreground"><div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" /> Fokus auf messbare biologische Erfolgsfaktoren (Mitochondrien).</li>
-                    <li className="flex gap-3 text-muted-foreground"><div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" /> Befähigung zur souveränen Entscheidung (Empowerment).</li>
-                    <li className="flex gap-3 text-muted-foreground"><div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" /> Radikale Transparenz über klinische Optimalwerte.</li>
-                 </ul>
-              </div>
-              <div className="space-y-6">
-                 <h4 className="text-primary font-bold uppercase tracking-widest text-sm opacity-50">Was du bei uns nicht findest</h4>
-                 <ul className="space-y-4">
-                    <li className="flex gap-3 text-muted-foreground/60"><div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 shrink-0" /> Keine esoterischen Heilsversprechen ("In 6 Wochen schwanger").</li>
-                    <li className="flex gap-3 text-muted-foreground/60"><div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 shrink-0" /> Keine Schuldzuweisungen (Es liegt NICHT nur an deinem Stress).</li>
-                    <li className="flex gap-3 text-muted-foreground/60"><div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 shrink-0" /> Keine künstliche Panikmache oder Hype-Marketing.</li>
-                 </ul>
-              </div>
-           </div>
+          <h2 className="text-3xl md:text-4xl font-serif text-primary mb-16">Wofür Zellkraft steht (und wofür nicht)</h2>
+          <div className="grid md:grid-cols-2 gap-12 text-left">
+            <div className="space-y-6">
+              <h4 className="text-accent font-bold uppercase tracking-widest text-sm">Unsere Mission</h4>
+              <ul className="space-y-4">
+                <li className="flex gap-3 text-muted-foreground"><div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" /> Fokus auf messbare biologische Erfolgsfaktoren (Mitochondrien).</li>
+                <li className="flex gap-3 text-muted-foreground"><div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" /> Befähigung zur souveränen Entscheidung (Empowerment).</li>
+                <li className="flex gap-3 text-muted-foreground"><div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" /> Radikale Transparenz über klinische Optimalwerte.</li>
+              </ul>
+            </div>
+            <div className="space-y-6">
+              <h4 className="text-primary font-bold uppercase tracking-widest text-sm opacity-50">Was du bei uns nicht findest</h4>
+              <ul className="space-y-4">
+                <li className="flex gap-3 text-muted-foreground/60"><div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 shrink-0" /> Keine esoterischen Heilsversprechen ("In 6 Wochen schwanger").</li>
+                <li className="flex gap-3 text-muted-foreground/60"><div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 shrink-0" /> Keine Schuldzuweisungen (Es liegt NICHT nur an deinem Stress).</li>
+                <li className="flex gap-3 text-muted-foreground/60"><div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 shrink-0" /> Keine künstliche Panikmache oder Hype-Marketing.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -276,9 +276,9 @@ export default function ZellkraftRoadmap() {
 
       {/* Footer-ish Info */}
       <section className="py-12 border-t border-border opacity-50 text-center">
-         <p className="text-xs font-medium uppercase tracking-[0.3em]">
-           Feminatalis – Angela Deschner | Modern Clinical Serenity
-         </p>
+        <p className="text-xs font-medium uppercase tracking-[0.3em]">
+          Feminatalis – Angela Deschner | Modern Clinical Serenity
+        </p>
       </section>
     </div>
   );
