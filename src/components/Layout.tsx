@@ -277,13 +277,16 @@ export function Layout({ children }: LayoutProps) {
                   <MapPin size={18} className="text-primary shrink-0" />
                   <span>Hebelstr. 3A<br />76669 Bad Schönborn</span>
                 </li>
-                <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                  <Phone size={18} className="text-primary shrink-0" />
-                  <a href="tel:072538468728" className="hover:text-primary transition-colors">07253-8468728</a>
+                <li className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <Phone size={18} className="text-primary shrink-0 mt-1" />
+                  <div className="flex flex-col">
+                    <a href="tel:01716877854" className="hover:text-primary transition-colors font-bold">0171-6877854 (Notfälle)</a>
+                    <a href="tel:072538468728" className="hover:text-primary transition-colors text-xs opacity-70">Praxis: 07253-8468728</a>
+                  </div>
                 </li>
                 <li className="flex items-center gap-3 text-sm text-muted-foreground">
                   <Mail size={18} className="text-primary shrink-0" />
-                  <a href="mailto:info@feminatalis.de" className="hover:text-primary transition-colors">info@feminatalis.de</a>
+                  <a href="mailto:kontakt@feminatalis.de" className="hover:text-primary transition-colors">kontakt@feminatalis.de</a>
                 </li>
               </ul>
             </div>

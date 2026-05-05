@@ -152,26 +152,20 @@ export default function Contact() {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            <div className="flex flex-col items-center text-center p-10 rounded-[3rem] bg-slate-50 border border-slate-100 transition-all hover:bg-slate-100/50">
-               <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary mb-6">
-                 <MapPin size={24} />
-               </div>
-               <h4 className="text-lg font-serif text-primary mb-2 font-bold">Standort</h4>
-               <p className="text-muted-foreground text-sm uppercase tracking-wider font-medium mb-4">Praxis Bad Schönborn</p>
-               <p className="text-primary font-medium leading-relaxed">
-                 Hebelstr. 3A <br /> 76669 Bad-Schönborn
-               </p>
-            </div>
-
             <div className="flex flex-col items-center text-center p-10 rounded-[3rem] bg-orange-50 border border-orange-100 transition-all hover:bg-orange-100/50">
                <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-orange-600 mb-6">
                  <Phone size={24} />
                </div>
                <h4 className="text-lg font-serif text-primary mb-2 font-bold">Direkter Draht</h4>
                <p className="text-muted-foreground text-sm uppercase tracking-wider font-medium mb-4">Für Rückfragen & Notfälle</p>
-               <a href="tel:072538468728" className="text-primary text-xl font-bold hover:text-orange-600 transition-colors">
-                 07253-8468728
-               </a>
+               <div className="flex flex-col gap-1">
+                 <a href="tel:01716877854" className="text-primary text-xl font-bold hover:text-orange-600 transition-colors">
+                   0171-6877854
+                 </a>
+                 <a href="tel:072538468728" className="text-primary/60 text-sm hover:text-orange-600 transition-colors mt-1 block font-medium">
+                   Festnetz: 07253-8468728
+                 </a>
+               </div>
             </div>
 
             <div className="flex flex-col items-center text-center p-10 rounded-[3rem] bg-primary/5 border border-primary/10 transition-all hover:bg-primary/10">
@@ -180,8 +174,8 @@ export default function Contact() {
                </div>
                <h4 className="text-lg font-serif text-primary mb-2 font-bold">E-Mail</h4>
                <p className="text-muted-foreground text-sm uppercase tracking-wider font-medium mb-4">Schriftliche Anfragen</p>
-               <a href="mailto:info@feminatalis.de" className="text-primary font-bold hover:text-accent transition-colors">
-                 info@feminatalis.de
+               <a href="mailto:kontakt@feminatalis.de" className="text-primary font-bold hover:text-accent transition-colors">
+                 kontakt@feminatalis.de
                </a>
             </div>
 
