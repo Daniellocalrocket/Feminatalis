@@ -33,7 +33,7 @@ export default function Allergie() {
       
       <SplitScreenHero
         badge="Immunmodulation"
-        title={<>Allergie- <br /><span className="text-accent italic font-light">Therapie & Desensibilisierung</span></>}
+        title={<>Allergie- <br /><span className="text-accent italic font-light">Therapie</span></>}
         subtitle="Verabschiede dich von belastenden Symptomen. Wir analysieren dein Immunsystem tiefgreifend und entwickeln einen individuellen Therapieplan zur nachhaltigen Allergiebehandlung."
         imageSrc="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=2070&auto=format&fit=crop"
         imageAlt="Allergiebehandlung und Immunmodulation"
