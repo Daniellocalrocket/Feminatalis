@@ -18,14 +18,14 @@ export default function Homoeopathie() {
   return (
     <div className="bg-background min-h-screen font-sans">
       <SEO 
-        title="Klassische Homöopathie & Informationstherapie | Naturheilpraxis feminatalis" 
-        description="Ganzheitliche Heilung durch das fundamentale Ähnlichkeitsprinzip. Wir nutzen tiefgreifende Homöopathie, um deine Selbstheilungskräfte sanft zu aktivieren." 
+        title="Ganzheitliche Homöopathie & Informationstherapie | Naturheilpraxis feminatalis" 
+        description="Ganzheitliche Heilung durch moderne Homöopathie und Komplexmittel. Wir nutzen synergetische Impulse, um deine Selbstheilungskräfte sanft zu aktivieren." 
       />
       
       <SplitScreenHero
         badge="Informationsmedizin"
-        title={<>Klassische <br /><span className="text-accent italic font-light">Homöopathie</span></>}
-        subtitle="Sanfte Impulse für tiefgreifende Heilung. Die Homöopathie nutzt das Ähnlichkeitsprinzip, um deine körpereigenen Selbstheilungskräfte auf energetischer Ebene zu aktivieren."
+        title={<>Ganzheitliche <br /><span className="text-accent italic font-light">Homöopathie</span></>}
+        subtitle="Moderne Impulse für tiefgreifende Heilung. Wir nutzen die Synergie homöopathischer Komplexmittel, um deine körpereigenen Selbstheilungskräfte gezielt zu aktivieren und Organe zu unterstützen."
         imageSrc="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?q=80&w=2070&auto=format&fit=crop"
         imageAlt="Homöopathische Globuli und Naturheilkunde"
         imageKey="img_hero_homoeopathie"
@@ -43,7 +43,7 @@ export default function Homoeopathie() {
               <h2 className="text-3xl lg:text-5xl font-serif text-primary text-left leading-tight">Informations- <br />statt Chemie-Einsatz</h2>
               <div className="prose prose-lg text-muted-foreground text-left font-medium">
                 <p>
-                  Klassische Homöopathie wirkt in der Tiefe nicht durch physikalische, chemische Substanzen, sondern vielmehr als ein absolut feinstofflicher <strong>Informationsreiz</strong>. Die hochmoderne Quantenphysik liefert und diskutiert heute faszinierende wissenschaftliche Erklärungsmodelle für dieses sogenannte „Dynamisierungsverfahren“.
+                  Ganzheitliche Homöopathie wirkt in der Tiefe nicht durch physikalische, chemische Substanzen, sondern vielmehr als ein absolut feinstofflicher <strong>Informationsreiz</strong>. Die hochmoderne Quantenphysik liefert und diskutiert heute faszinierende wissenschaftliche Erklärungsmodelle für dieses sogenannte „Dynamisierungsverfahren“.
                 </p>
                 <p>
                   Das übergeordnete Prinzip ist im Kern simpel und doch so kraftvoll: „Ähnliches werde durch Ähnliches geheilt“. Ein Reiz, der bei einem völlig Gesunden temporäre Symptome hervorruft, kann bei einem chronisch Kranken genau den entscheidend fehlenden Anstoß zur endgültigen Heilung setzen.
