@@ -24,7 +24,7 @@ export default function Preisliste() {
       title: "Naturheilpraxis - Einzelbehandlungen",
       icon: <Activity className="w-6 h-6 text-primary" />,
       items: [
-        { name: "Erstanamnese & Ganzheitliche Analyse", price: "ab 120,- €", detail: "ca. 60-90 Min. (je nach Zeitaufwand)" },
+        { name: "Erstanamnese & Ganzheitliche Analyse", price: "100,- € / Std.", detail: "ca. 60-90 Min. inkl. Erstberatung, Befundanalyse und Untersuchung" },
         { name: "Folgeberatung / Therapieanpassung", price: "ab 65,- €", detail: "ca. 30-45 Min." },
         { name: "Akupunktur (TCM)", price: "65,- €", detail: "Pro Sitzung" },
         { name: "IHHT / Zelltraining (Sauerstoff)", price: "85,- €", detail: "Pro Sitzung (45 Min.)" },

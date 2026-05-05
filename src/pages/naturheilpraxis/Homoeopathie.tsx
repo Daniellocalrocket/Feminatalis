@@ -12,7 +12,6 @@ export default function Homoeopathie() {
     "Chronische Beschwerden nachhaltig lindern",
     "Tiefe psychische & emotionale Balance",
     "Gravierende hormonelle Umstellungsphasen",
-    "Akute fieberhafte Infekte begleiten",
     "Sanfte Unterstützung bei Toxinen & Entgiftung"
   ];
 
@@ -122,8 +121,8 @@ export default function Homoeopathie() {
       </section>
 
       <PreisTransparenz 
-        preisHint="Erstanamnese ab 120,- €" 
-        hinweis="Ausführliches Gespräch (60-90 Min.) inkl. Repertorisation."
+        preisHint="Erstanamnese 100 € / Std." 
+        hinweis="Ausführliches Gespräch (60-90 Min.) inkl. Erstberatung, Befundanalyse und Untersuchung."
       />
 
       {/* CTA */}
