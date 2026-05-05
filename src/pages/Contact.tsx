@@ -57,13 +57,13 @@ export default function Contact() {
               <Card className="group h-full border-none shadow-2xl rounded-[3rem] overflow-hidden bg-white hover:shadow-primary/5 transition-all duration-500">
                 <div className="h-32 bg-primary/5 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
                   <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary">
-                    <Calendar size={32} />
+                    <Phone size={32} />
                   </div>
                 </div>
                 <CardContent className="p-8 md:p-12">
-                  <h3 className="text-2xl md:text-3xl font-serif text-primary mb-4 text-center">Naturheilpraxis & Ästhetik</h3>
+                  <h3 className="text-2xl md:text-3xl font-serif text-primary mb-4 text-center">Naturheilpraxis</h3>
                   <p className="text-muted-foreground text-center mb-10 leading-relaxed min-h-[3rem]">
-                    Termine für TCM, Akupunktur, Darmsanierung oder die Poring-Methode® können Sie bequem direkt online reservieren.
+                    Termine für kostenfreie 20-minütige Eignungs-Telefonate oder Hebammenvorgespräche in der Praxis können Sie bequem direkt online buchen.
                   </p>
                   
                   <div className="space-y-4">
@@ -71,19 +71,19 @@ export default function Contact() {
                       to={`${ROUTE_PATHS.VORQUALIFIZIERUNG}?type=naturheilpraxis`}
                       className="w-full bg-primary text-white h-16 rounded-2xl font-bold flex items-center justify-center gap-3 shadow-lg hover:bg-primary/95 hover:-translate-y-1 transition-all group/btn"
                     >
-                      <Clock size={20} /> Behandlung anfragen
+                      <Calendar size={20} /> Termin online buchen
                       <ChevronRight size={16} className="opacity-50 group-hover/btn:translate-x-1 transition-transform" />
                     </Link>
                     <p className="text-[11px] text-center text-muted-foreground uppercase tracking-widest font-medium opacity-60">
-                      Für TCM, Labor & Therapie
+                      Kennenlernen & Eignungs-Check
                     </p>
                   </div>
                   
                   <ul className="mt-12 space-y-4 border-t border-border pt-8">
                      {[
-                       "Direkte Terminauswahl",
-                       "Sofortige Bestätigung",
-                       "Erinnerung per E-Mail"
+                       "Kostenfreies Erst-Telefonat",
+                       "Individuelle Eignungsprüfung",
+                       "Zentrale Terminverwaltung"
                      ].map((item, i) => (
                        <li key={i} className="flex items-center gap-3 text-sm text-primary/70">
                          <div className="w-1.5 h-1.5 rounded-full bg-accent" />
@@ -105,13 +105,13 @@ export default function Contact() {
               <Card className="group h-full border-none shadow-2xl rounded-[3rem] overflow-hidden bg-white border-2 border-accent/5 hover:shadow-accent/5 transition-all duration-500">
                 <div className="h-32 bg-accent/5 flex items-center justify-center group-hover:bg-accent/10 transition-colors">
                   <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-accent">
-                    <MessageSquare size={32} />
+                    <Users size={32} />
                   </div>
                 </div>
                 <CardContent className="p-8 md:p-12">
-                  <h3 className="text-2xl md:text-3xl font-serif text-primary mb-4 text-center">Hebammenpraxis & Kurse</h3>
+                  <h3 className="text-2xl md:text-3xl font-serif text-primary mb-4 text-center">Hebammenpraxis</h3>
                   <p className="text-muted-foreground text-center mb-10 leading-relaxed min-h-[3rem]">
-                    Für die Betreuung in der Schwangerschaft und Kurse ist ein kurzes Kennenlernen wichtig, um zu prüfen, ob wir zueinander passen.
+                    Für die Betreuung in der Schwangerschaft ist ein kurzes Kennenlernen wichtig, um zu prüfen, ob wir zueinander passen.
                   </p>
                   
                   <div className="space-y-4">
@@ -119,7 +119,7 @@ export default function Contact() {
                       to={`${ROUTE_PATHS.VORQUALIFIZIERUNG}?type=hebamme`}
                       className="w-full bg-accent text-white h-16 rounded-2xl font-bold flex items-center justify-center gap-3 shadow-lg hover:bg-accent/90 hover:-translate-y-1 transition-all group/btn"
                     >
-                      <Users size={20} /> Betreuung anfragen
+                      <Users size={20} /> Vorgespräch anfragen
                       <ChevronRight size={20} className="group-hover/btn:translate-x-1 transition-transform" />
                     </Link>
                     <p className="text-[11px] text-center text-accent uppercase tracking-widest font-bold">
@@ -129,9 +129,9 @@ export default function Contact() {
 
                   <ul className="mt-12 space-y-4 border-t border-border pt-8">
                      {[
-                       "Individuelle Kapazitätsprüfung",
-                       "Persönliches Match-Making",
-                       "Rückmeldung innerhalb von 24h"
+                       "Persönliches Vorgespräch",
+                       "Kapazitätsprüfung Hebamme",
+                       "Match-Making Garantie"
                      ].map((item, i) => (
                        <li key={i} className="flex items-center gap-3 text-sm text-primary/70">
                          <div className="w-1.5 h-1.5 rounded-full bg-primary" />
@@ -143,6 +143,65 @@ export default function Contact() {
               </Card>
             </motion.div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* NEW: Procedure / Selection Process Section */}
+      <section className="py-24 bg-primary/5">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-serif text-primary mb-4">Unser Prozedere</h2>
+            <p className="text-muted-foreground font-medium italic">Qualität erfordert Zeit und die richtige Entscheidung auf beiden Seiten.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 relative">
+            {/* Steps line for desktop */}
+            <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-primary/10 -translate-y-1/2 -z-0" />
+            
+            {[
+              { 
+                step: "01", 
+                title: "Vor-Analyse", 
+                desc: "Fülle unseren Online-Check aus. So erhalte ich ein erstes Bild deiner Situation und wir sparen wertvolle Zeit im Telefonat." 
+              },
+              { 
+                step: "02", 
+                title: "Eignungs-Check", 
+                desc: "Wir sprechen ca. 20 Min. kostenfrei am Telefon. Wir klären Erwartungen, Möglichkeiten und ob die Chemie stimmt." 
+              },
+              { 
+                step: "03", 
+                title: "Erstanamnese", 
+                desc: "Nach positivem Telefonat vereinbaren wir deinen Termin in der Praxis für die tiefe medizinische Analyse und Behandlung." 
+              }
+            ].map((item, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="bg-white p-8 rounded-[2.5rem] shadow-sm border border-border relative z-10 text-center"
+              >
+                <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold mx-auto mb-6 shadow-lg shadow-primary/20">
+                  {item.step}
+                </div>
+                <h4 className="text-xl font-bold text-primary mb-4 font-serif">{item.title}</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed font-medium">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+          
+          <div className="mt-16 bg-white p-8 rounded-[2rem] border border-accent/20 flex items-center gap-6 text-left shadow-sm">
+             <div className="bg-accent/10 p-4 rounded-2xl shrink-0">
+                <HeartPulse className="text-accent w-8 h-8" />
+             </div>
+             <p className="text-sm text-muted-foreground leading-relaxed font-medium">
+               <strong>Wichtiger Hinweis:</strong> Aufgrund der individuellen Dauer und Raumplanung für medizinische Behandlungen ist eine direkte Online-Buchung für Erstanamnesen und Therapien nicht möglich. Dieser Weg stellt sicher, dass ich mir für jeden Patienten exakt die Zeit nehmen kann, die benötigt wird.
+             </p>
           </div>
         </div>
       </section>
