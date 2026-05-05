@@ -26,7 +26,7 @@ export default function Preisliste() {
       items: [
         { name: "Erstanamnese & Ganzheitliche Analyse", price: "100,- € / Std.", detail: "ca. 60-90 Min. inkl. Erstberatung, Befundanalyse und Untersuchung" },
         { name: "Folgeberatung / Therapieanpassung", price: "ab 65,- €", detail: "ca. 30-45 Min." },
-        { name: "Akupunktur (TCM)", price: "65,- €", detail: "Pro Sitzung" },
+        { name: "Akupunktur (TCM)", price: "ab 26,- €", detail: "Pro Sitzung (Abrechnung nach GebüH)" },
         { name: "IHHT / Zelltraining (Sauerstoff)", price: "85,- €", detail: "Pro Sitzung (45 Min.)" },
         { name: "Infusionstherapie (Drip-Spa)", price: "ab 65,- €", detail: "Zzgl. Material/Labor je nach Wirkstoffen" },
         { name: "CO2-Therapie (Carboxy)", price: "45,- €", detail: "Pro Behandlung" },

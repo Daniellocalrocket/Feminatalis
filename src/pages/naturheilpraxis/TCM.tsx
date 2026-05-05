@@ -108,7 +108,7 @@ export default function TCM() {
       </section>
 
       <PreisTransparenz 
-        preisHint="Akupunktur ab 65,- €" 
+        preisHint="Akupunktur ab 26,- €" 
         hinweis="Abrechnung nach GebüH. Private Kassen übernehmen i.d.R. die Kosten."
       />
     </div>
