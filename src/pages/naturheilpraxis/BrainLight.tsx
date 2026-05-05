@@ -71,8 +71,8 @@ export default function BrainLight() {
             >
               <div className="aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
                 <img 
-                  src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=2070&auto=format&fit=crop" 
-                  alt="brainLight Wellness" 
+                  src="/assets/brainlight-system.jpg" 
+                  alt="brainLight Massagesessel System" 
                   className="w-full h-full object-cover"
                 />
               </div>
