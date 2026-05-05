@@ -51,7 +51,7 @@ export default function Lasertherapie() {
               <div className="bg-white border border-border p-6 rounded-2xl shadow-sm flex items-start gap-4 text-left">
                 <Sun className="text-accent shrink-0 w-6 h-6" />
                 <p className="text-sm font-medium italic text-left">
-                  Ideal zur Narbenentstörung, bei akuten Sportverletzungen oder zur Unterstützung der Stillzeit.
+                  Laser: Begleitend zur Förderung von Mikrozirkulation und Geweberegeneration – besonders bei belasteten Heilungsverläufen & Polyneuropathie
                 </p>
               </div>
             </div>
