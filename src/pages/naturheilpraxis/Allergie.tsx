@@ -19,9 +19,9 @@ export default function Allergie() {
     "Umfassender Aufbau der Darmflora (Mikrobiom-Therapie)",
     "Individuelle orthomolekulare Vitalstofftherapie",
     "Gezielte Regulation des Immunsystems durch Milieutherapie",
-    "Naturheilkundliche immunmodulierende Eigenbluttherapie",
-    "Ganzheitliche Klassische Homöopathie & Körperakupunktur",
-    "Gezielte und laborgeprägte Entschlackung & Ausleitung"
+    "Sanfte Mikro- und Zellimmuntherapie",
+    "Homöopathie, Phytotherapie und Körperakupunktur",
+    "Laborgestützte Entschlackung & Toxinausleitung"
   ];
 
   return (
