@@ -131,7 +131,7 @@ export default function Homoeopathie() {
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <Leaf className="w-16 h-16 text-primary opacity-20 mx-auto mb-8 animate-pulse text-center" />
           <h2 className="text-3xl md:text-5xl font-serif text-primary mb-12 leading-tight font-bold text-center">
-            Bereit für die tiefe, sanfte <br />Kraft der ewigen Regulation?
+            Bereit, deine körpereigenen Ressourcen zu stärken?
           </h2>
           <div className="flex justify-center">
              <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-12 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-2xl flex items-center justify-center gap-3 shadow-primary/20 border-none">
