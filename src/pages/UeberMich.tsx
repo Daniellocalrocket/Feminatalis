@@ -43,7 +43,7 @@ export default function UeberMich() {
     <>
       <SEO 
         title="Angela Deschner | Heilpraktikerin & Hebamme Bad Schönborn" 
-        description="Lernen Sie Angela Deschner kennen: Über 33 Jahre Erfahrung als Hebamme & Heilpraktikerin in Bad Schönborn. Expertin für funktionelle Medizin und Kinderwunsch." 
+        description="Lerne Angela Deschner kennen: Über 33 Jahre Erfahrung als Hebamme & Heilpraktikerin in Bad Schönborn. Expertin für funktionelle Medizin und Kinderwunsch." 
         schema={{
           "@context": "https://schema.org",
           "@type": "Person",
@@ -264,7 +264,7 @@ export default function UeberMich() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-serif text-primary mb-6">Möchtest du den Weg mit mir gehen?</h2>
           <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Ich arbeite mit Frauen, die Eigenverantwortung für ihre Gesundheit übernehmen wollen. Wenn diese Philosophie zu dir passt, freue ich mich auf deine Anfrage.
+            Ich arbeite mit Menschen, die bereit sind Eigenverantwortung für ihre Gesundheit zu übernehmen. Wenn diese Philosophie zu dir passt, freue ich mich auf deine Anfrage.
           </p>
           <Link 
             to={ROUTE_PATHS.VORQUALIFIZIERUNG} 

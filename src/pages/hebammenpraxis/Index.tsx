@@ -39,7 +39,7 @@ export default function Hebammenpraxis() {
               <span className="text-orange-600 italic">bewusst · vertieft · individuell</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto italic font-medium mb-12">
-              „Ich begleite keine Checklisten, sondern Frauen, die Zusammenhänge verstehen und Verantwortung übernehmen möchten.“
+              „Ich arbeite mit Frauen, die bereit sind, in Eigenverantwortung für ihre eigene und die Gesundheit ihrer Kinder zu handeln.“
             </p>
             <div className="flex flex-wrap justify-center gap-5">
                 <Link to={ROUTE_PATHS.CONTACT} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:bg-primary/95 hover:shadow-2xl transition-all shadow-xl flex items-center gap-3">
@@ -139,9 +139,9 @@ export default function Hebammenpraxis() {
                 <Thermometer className="w-10 h-10 text-primary" />
               </div>
               <h3 className="text-2xl font-serif text-primary mb-2">Säule 2: Akut-Hilfe</h3>
-              <p className="text-primary font-bold text-sm mb-6 uppercase tracking-wider">Kasse + Naturheilkunde</p>
+              <p className="text-primary font-bold text-sm mb-6 uppercase tracking-wider">Kasse / Privat</p>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                <strong>„Ursachen statt Pflaster“</strong>: Gezielte Behandlung bei Schmerzen, Schwangerschaftsübelkeit oder Erschöpfung. Wir analysieren tiefenphysiologisch, warum dein Körper reagiert.
+                <strong>„Ursachen statt Pflaster“</strong>: Gezielte Behandlung bei Übelkeit, Erschöpfung, Entwicklungsverzögerung, Schmerzen, vorzeitigen Wehen oder Ödemen – stets unter Berücksichtigung der Psychosomatik.
               </p>
               <ul className="space-y-4 mb-10">
                 <li>
@@ -152,11 +152,6 @@ export default function Hebammenpraxis() {
                 <li>
                   <Link to={ROUTE_PATHS.AKUPUNKTUR} className="flex items-center gap-3 text-sm font-medium hover:text-accent transition-colors">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary"/> Akupunktur & TCM
-                  </Link>
-                </li>
-                <li>
-                  <Link to={ROUTE_PATHS.RUECKBILDUNG} className="flex items-center gap-3 text-sm font-medium hover:text-accent transition-colors">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary"/> Rückbildung & Kräftigung
                   </Link>
                 </li>
               </ul>
@@ -171,7 +166,7 @@ export default function Hebammenpraxis() {
               <h3 className="text-2xl font-serif mb-2 relative z-10">Säule 3: Das Zell-Protokoll</h3>
               <p className="text-orange-200 font-bold text-sm mb-6 uppercase tracking-wider relative z-10">Premium / Privat</p>
               <p className="text-white/80 mb-8 leading-relaxed relative z-10">
-                <strong>„Maximale Leistung“</strong>: Die exklusive Vorbereitung durch Vollblut-Analyse, IHHT-Zelltraining und Infusionen. Das Ziel: Volle Power für den Endspurt.
+                <strong>„Maximale Leistung“</strong>: Die exklusive Vorbereitung durch Vollblut-Analyse, Infusionstherapie und IHHT. Das Ziel: Volle Power für den Endspurt.
               </p>
               <ul className="space-y-4 mb-10 relative z-10">
                 <li>
@@ -180,13 +175,13 @@ export default function Hebammenpraxis() {
                   </Link>
                 </li>
                 <li>
-                  <Link to={ROUTE_PATHS.ZELLTRAINING} className="flex items-center gap-3 text-sm font-medium hover:text-orange-200 transition-colors">
-                    <div className="w-1.5 h-1.5 rounded-full bg-orange-200"/> IHHT-Zelltraining (Hypoxie)
+                  <Link to={ROUTE_PATHS.INFUSIONSTHERAPIE} className="flex items-center gap-3 text-sm font-medium hover:text-orange-200 transition-colors">
+                    <div className="w-1.5 h-1.5 rounded-full bg-orange-200"/> Mitochondriale Infusionen
                   </Link>
                 </li>
                 <li>
-                  <Link to={ROUTE_PATHS.INFUSIONSTHERAPIE} className="flex items-center gap-3 text-sm font-medium hover:text-orange-200 transition-colors">
-                    <div className="w-1.5 h-1.5 rounded-full bg-orange-200"/> Mitochondriale Infusionen
+                  <Link to={ROUTE_PATHS.ZELLTRAINING} className="flex items-center gap-3 text-sm font-medium hover:text-orange-200 transition-colors">
+                    <div className="w-1.5 h-1.5 rounded-full bg-orange-200"/> IHHT-Zelltraining (Hypoxie)
                   </Link>
                 </li>
               </ul>
@@ -218,11 +213,11 @@ export default function Hebammenpraxis() {
             <div className="lg:w-1/2">
               <h2 className="text-4xl font-serif text-primary mb-8 leading-tight">
                 33 Jahre Expertise trifft <br />
-                <span className="text-orange-600">funktionelle Medizin</span>
+                <span className="text-orange-600">Funktionelle Medizin & Naturheilkunde</span>
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Angela vereint 23 Jahre Hebammenerfahrung mit 10 Jahren Heilpraktiker-Kompetenz. Ihr Arbeitsstil ist geprägt von tiefem physiologischem Verständnis, fundiertem Wissen in Psychosomatik und einem klaren Fokus auf Prävention.
+                  Angela vereint die klinische Erfahrung aus 23 Jahren Freiberuflichkeit mit der Tiefe der 10-jährigen Heilpraxis. Ihr Arbeitsstil ist geprägt vom tiefen Verständnis der Physiologie, Psychosomatik und Prävention.
                 </p>
                 <p>
                   Als staatlich geprüfte Heilpraktikerin und Hebamme schaut sie „unter die Haut“. Wo andere Routine-Vorsorge leisten, analysiert Angela die biochemischen Grundlagen, um die Geburt sicher und kraftvoll zu machen. Es geht nicht um Träume, sondern um messbare Leistungsfähigkeit für den wichtigsten Moment deines Lebens.
@@ -246,7 +241,7 @@ export default function Hebammenpraxis() {
             Investiere in die optimale Vorbereitung deiner körperlichen Ressourcen. Für eine Geburt aus eigener Stärke.
           </p>
           <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-block bg-primary text-white px-12 py-6 rounded-2xl font-bold text-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 w-fit mx-auto">
-            <UserCheck size={24} /> Jetzt Termin online buchen
+            <UserCheck size={24} /> Kostenfreie Vor-Analyse anfragen
           </Link>
         </div>
       </section>

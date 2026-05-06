@@ -10,8 +10,8 @@ import { motion } from "framer-motion";
 export default function Geburtsvorbereitung() {
   const modules = [
     { title: "Physische Vorbereitung", desc: "Atemtechniken, Gebärpositionen und Körperarbeit für eine aktive Geburt.", icon: Wind },
-    { title: "Mentale Stärke", desc: "Angstabbau durch fundiertes Wissen und positive Visualisierungen.", icon: Brain },
-    { title: "Partner-Einbindung", desc: "Wie der Partner effektiv unterstützen kann und was seine Rolle im Kreißsaal ist.", icon: Users },
+    { title: "Mentale Stärke", desc: "Angstabbau durch fundiertes Wissen, positive Visualisierungen und positive Ausrichtung.", icon: Brain },
+    { title: "Partner-Einbindung", desc: "Partnerrolle unter der Geburt für eine effektive Unterstützung.", icon: Users },
     { title: "Klinik-Check", desc: "Abläufe im Krankenhaus, Interventionen und selbstbestimmte Entscheidungen.", icon: Hospital }
   ];
 

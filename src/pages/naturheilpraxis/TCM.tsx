@@ -55,7 +55,7 @@ export default function TCM() {
                     </div>
                     <div>
                       <span className="text-lg font-bold text-primary text-left font-serif block">Yang</span>
-                      <span className="text-sm font-medium text-muted-foreground leading-snug block">Aktivität & Wärme</span>
+                      <span className="text-sm font-medium text-muted-foreground leading-snug block">Funktion, Aktivität & Wärme</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-4 p-5 bg-white border border-border shadow-sm rounded-[2rem]">
@@ -64,7 +64,7 @@ export default function TCM() {
                     </div>
                     <div>
                       <span className="text-lg font-bold text-primary text-left font-serif block">Yin</span>
-                      <span className="text-sm font-medium text-muted-foreground leading-snug block">Ruhe & Substanz</span>
+                      <span className="text-sm font-medium text-muted-foreground leading-snug block">Substanz, Ruhe & Kälte</span>
                     </div>
                   </div>
               </div>
@@ -85,12 +85,12 @@ export default function TCM() {
              <div className="absolute top-0 right-0 p-8 text-white/5 pointer-events-none">
                 <Compass size={300} className="-mr-10 -mt-10" />
              </div>
-             <h2 className="text-3xl lg:text-5xl font-serif mb-12 text-white font-bold relative z-10 leading-tight">Berüchtigte Stärken <br />der TCM</h2>
+             <h2 className="text-3xl lg:text-5xl font-serif mb-12 text-white font-bold relative z-10 leading-tight">TCM-Anwendungsgebiete</h2>
              <div className="grid md:grid-cols-3 gap-8 relative z-10 text-left">
                 {[
-                  { title: "Hormonelle Balance", desc: "Starke Zyklusbeschwerden, Post-Pill-Syndrom, Wechseljahre, Kinderwunsch-Vorbereitung (IVF)." },
-                  { title: "Kräftiges Immunsystem", desc: "Hartnäckige Allergien & Heuschnupfen, chronische Sinusitis, häufige langwierige Infekte." },
-                  { title: "Die Tiefe Innere Ruhe", desc: "Massive Schlafstörungen, Burnout, Erschöpfung, undefinierte psychosomatische Beschwerden." }
+                  { title: "Hormonelle Störungen", desc: "Zyklus- & Wechseljahr-Beschwerden, Unterstützung von Kinderwunsch-Behandlung (z.B. IVF)." },
+                  { title: "Ausbalanciertes Immunsystem", desc: "Hartnäckige Allergien & Heuschnupfen, chronische Sinusitis, häufige langwierige Infekte." },
+                  { title: "Innere Ruhe & Kraft", desc: "Massive Schlafstörungen, Burnout, Erschöpfung, undefinierte psychosomatische Beschwerden." }
                 ].map((item, i) => (
                   <div key={i} className="bg-white/5 backdrop-blur-sm p-8 rounded-[2rem] border border-white/10 hover:bg-white/10 transition-colors">
                     <h4 className="text-lg font-bold mb-4 text-white font-serif">{item.title}</h4>

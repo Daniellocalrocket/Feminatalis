@@ -62,7 +62,7 @@ export default function Preisliste() {
     <>
       <SEO 
         title="Preisliste & Konditionen | Feminatalis" 
-        description="Transparente Preisstruktur für Naturheilkunde, Hebammenleistungen und Wellness-Pakete. Erfahren Sie mehr über Abrechnungsmöglichkeiten und Paketpreise." 
+        description="Transparente Preisstruktur für Naturheilkunde, Hebammenleistungen und Wellness-Pakete. Erfahre mehr über Abrechnungsmöglichkeiten und Paketpreise." 
       />
 
       <div className="bg-background pt-32 pb-24">

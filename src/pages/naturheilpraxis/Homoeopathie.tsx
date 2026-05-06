@@ -18,14 +18,14 @@ export default function Homoeopathie() {
   return (
     <div className="bg-background min-h-screen font-sans">
       <SEO 
-        title="Ganzheitliche Homöopathie & Informationstherapie | Naturheilpraxis feminatalis" 
-        description="Ganzheitliche Heilung durch moderne Homöopathie und Komplexmittel. Wir nutzen synergetische Impulse, um deine Selbstheilungskräfte sanft zu aktivieren." 
+        title="Moderne Komplexmittel-Homöopathie | Naturheilpraxis feminatalis" 
+        description="Ganzheitliche Heilung durch moderne Komplexmittel-Homöopathie. Wir nutzen synergetische Impulse, um deine Selbstheilungskräfte sanft zu aktivieren." 
       />
       
       <SplitScreenHero
         badge="Informationsmedizin"
-        title={<>Ganzheitliche <br /><span className="text-accent italic font-light">Homöopathie</span></>}
-        subtitle="Moderne Impulse für tiefgreifende Heilung. Wir nutzen die Synergie homöopathischer Komplexmittel, um deine körpereigenen Selbstheilungskräfte gezielt zu aktivieren und Organe zu unterstützen."
+        title={<>Moderne <br /><span className="text-accent italic font-light">Komplexmittel-Homöopathie</span></>}
+        subtitle="Zeitgemäße Impulse für tiefgreifende Heilung. Ich nutze die Synergie homöopathischer Komplexmittel, um deine körpereigenen Selbstheilungskräfte gezielt zu aktivieren und Organe zu unterstützen."
         imageSrc="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?q=80&w=2070&auto=format&fit=crop"
         imageAlt="Homöopathische Globuli und Naturheilkunde"
         imageKey="img_hero_homoeopathie"
@@ -40,7 +40,7 @@ export default function Homoeopathie() {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-16 items-start mb-24 text-left">
             <div className="space-y-8 text-left">
-              <h2 className="text-3xl lg:text-5xl font-serif text-primary text-left leading-tight">Informations- <br />statt Chemie-Einsatz</h2>
+              <h2 className="text-3xl lg:text-5xl font-serif text-primary text-left leading-tight">Ganzheitlicher <br />Informations-Impuls</h2>
               <div className="prose prose-lg text-muted-foreground text-left font-medium">
                 <p>
                   Ganzheitliche Homöopathie wirkt in der Tiefe nicht durch physikalische, chemische Substanzen, sondern vielmehr als ein absolut feinstofflicher <strong>Informationsreiz</strong>. Die hochmoderne Quantenphysik liefert und diskutiert heute faszinierende wissenschaftliche Erklärungsmodelle für dieses sogenannte „Dynamisierungsverfahren“.

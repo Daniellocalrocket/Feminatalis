@@ -18,15 +18,15 @@ export default function Akupunktur() {
     <div className="bg-background min-h-screen font-sans">
       <SEO 
         title="Akupunktur & NADA-Protokoll | feminatalis" 
-        description="Gezielte Akupunktur für Schwangerschaft und allgemeine Gesundheit. Entdecke das NADA-Protokoll zur Entspannung und Schmerzlinderung." 
+        description="Gezielte & sanfte Regulation rund um Kinderwunsch & Geburt sowie viele funktionelle Organ-Störungen. Entdecke sterile und wissenschaftlich anerkannte Akupunktur." 
       />
 
       <SplitScreenHero
         badge="Heilung durch feine Impulse"
         title={<>Akupunktur <br /><span className="text-accent italic font-light">Tradition trifft Moderne</span></>}
-        subtitle="Kleine Nadeln, große Wirkung – schmerzfrei, steril und wissenschaftlich anerkannt. Gezielte Regulation deines Körpers für Schwangerschaft und allgemeine Gesundheit."
-        imageSrc="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=2070&auto=format&fit=crop"
-        imageAlt="Akupunktur Behandlung"
+        subtitle="Kleine Nadeln, große Wirkung – steril, nebenwirkungsarm und wissenschaftlich anerkannt. Gezielte & sanfte Regulation rund um Kinderwunsch & Geburt, sowie viele funktionelle Organ-Störungen."
+        imageSrc="/authentic_acupuncture_session_1778004927310.png"
+        imageAlt="Professionelle Akupunktur Behandlung"
         imageKey="img_hero_tcm"
       >
         <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
@@ -38,7 +38,7 @@ export default function Akupunktur() {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-24 text-left">
             <div className="space-y-6">
-              <h2 className="text-3xl font-serif text-primary leading-tight text-left">Gezielte Regulation deines Körpers</h2>
+              <h2 className="text-3xl font-serif text-primary leading-tight text-left">Gezielte & sanfte Regulation</h2>
               <div className="prose prose-lg text-muted-foreground text-left">
                 <p>
                   Akupunktur ist weit mehr als nur das Setzen von Nadeln. Es ist eine präzise Regulationstherapie, die das Nervensystem anspricht, die Durchblutung fördert und die Ausschüttung von körpereigenen Botenstoffen aktiviert.

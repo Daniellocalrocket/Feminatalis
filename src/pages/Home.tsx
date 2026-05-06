@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { motion } from "framer-motion";
-import { Leaf, Heart, Baby, Check, Phone, Mail, Clock, MapPin, Award, ArrowRight, ChevronRight, Activity, Star, CheckCircle, Syringe, Sparkles, Microscope, Zap, ShieldCheck, Instagram, Youtube, UserCheck } from "lucide-react";
+import { Leaf, Heart, Baby, Check, Phone, Mail, Clock, MapPin, Award, ArrowRight, ChevronRight, Activity, Star, CheckCircle, Syringe, Sparkles, Microscope, Zap, ShieldCheck, Instagram, Youtube, Facebook, UserCheck } from "lucide-react";
 import { useSiteImages } from "@/hooks/useSiteImages";
 
 export default function Home() {
@@ -227,7 +227,7 @@ export default function Home() {
         <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-background to-transparent" />
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-20">
-            <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 inline-block">Der Weg zu Ihrer Gesundheit</span>
+            <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 inline-block">Der Weg zu deiner Gesundheit</span>
             <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6">Dein strukturierter Ablauf</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Klarheit und Transparenz von Anfang an. So begleiten wir dich Schritt für Schritt zurück in deine Kraft.
@@ -249,7 +249,7 @@ export default function Home() {
                 },
                 {
                   step: "2",
-                  title: "Erstgespräch in der Praxis",
+                  title: "Orientierungs-Gespräch",
                   time: "30-45 Min. (Kostenlos)",
                   desc: "Persönliches Kennenlernen vor Ort. Wir klären allgemeine Fragen, eruieren deine genauen Ziele und stecken den finanziellen Rahmen ab. Fühlt sich alles stimmig an, schließen wir einen Behandlungsvertrag.",
                   icon: <UserCheck className="w-6 h-6" />
@@ -326,11 +326,11 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 inline-block tracking-widest uppercase">Qualität vor Quantität</span>
-            <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6">
+            <h2 className="text-3xl md:text-5xl font-serif text-primary mb-6">
               Hebammenbegleitung im Wandel – <span className="text-accent italic">bewusst · vertieft · individuell</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Nach 33 Jahren Erfahrung fokussiere ich mich auf eine exklusive, tiefgreifende Begleitung für eine begrenzte Anzahl an Frauen. Wenn du bereit bist, über die Standard-Versorgung hinaus in deine Gesundheit und Geburtskraft zu investieren, begleite ich dich gerne auf diesem Weg.
+              Nach 33 Jahren Erfahrung fokussiere ich mich auf eine exklusive, tiefgreifende Begleitung. Ich nehme eine begrenzte Anzahl an Frauen auf, die über die Standard-Versorgung hinaus in ihre Gesundheit und Geburtskraft investieren möchten.
             </p>
           </div>
 
@@ -384,7 +384,7 @@ export default function Home() {
                 Das Standard-Kassensystem deckt nur das absolute Minimum ab. Wer jedoch eine wirklich selbstbestimmte, kraftvolle Geburt und eine schnelle Regeneration im Wochenbett erleben möchte, braucht mehr als nur "Routine-Vorsorge".
               </p>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Ich arbeite primär mit Frauen, die verstanden haben, dass sie selbst aktiv Verantwortung übernehmen müssen. Mein Fokus liegt auf Premium-Begleitung und fundiertem Wissen. Wer mit 20 % Ladung in die Geburt geht, riskiert Wehenschwäche und medizinische Eingriffe. Mein Ziel ist die 100-Prozent-Ladung deines „Zell-Akkus“.
+                Ich arbeite mit Frauen, die bereit sind, in Eigenverantwortung für ihre eigene und die Gesundheit ihrer Kinder zu handeln. Mein Fokus liegt auf Premium-Begleitung und fundiertem Wissen. Wer mit 20 % Ladung in die Geburt geht, riskiert Wehenschwäche und medizinische Eingriffe. Mein Ziel ist die 100-Prozent-Ladung deines „Zell-Akkus“.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
                 <div><div className="text-3xl font-bold text-accent">33 J.</div><div className="text-xs font-black uppercase tracking-widest text-primary/60">Expertise</div></div>
@@ -403,7 +403,7 @@ export default function Home() {
 
           <div className="mb-12">
             <h4 className="text-2xl font-serif text-primary text-center mb-8">Weitere Hebammenleistungen</h4>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {[
                   { name: 'Geburtsvorbereitung', link: ROUTE_PATHS.GEBURTSVORBEREITUNG },
                   { name: 'Wochenbettbetreuung', link: ROUTE_PATHS.WOCHENBETTBETREUUNG },
@@ -438,16 +438,16 @@ export default function Home() {
             <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 inline-block">Naturheilpraxis</span>
             <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6">Ursachenbasierte Naturheilkunde</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Als Heilpraktikerin betrachte ich den Menschen in seiner Gesamtheit. Mit spezialisierter Labordiagnostik und orthomolekularer Therapie finden wir die wahren Ursachen deiner Beschwerden.
+              Durch eine ausführliche Anamnese, körperliche Untersuchung & spezialisierte Labordiagnostik finden wir die wahren Ursachen deiner Beschwerden.
             </p>
           </div>
 
           <h4 className="text-2xl font-serif text-primary text-center mb-8">Unsere Leistungspfeiler</h4>
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             {[
-              { title: "Zelluläre Ursachenforschung", desc: "Tiefgreifende Blut- und Mitochondrien-Analysen (IHHT) für absolute Klarheit.", icon: <Activity className="w-6 h-6"/> },
-              { title: "Regulierung des Stoffwechsels", desc: "Wir bauen Nährstoffdefizite systematisch und individuell auf.", icon: <Leaf className="w-6 h-6"/> },
-              { title: "Ganzheitliche Infusionen", desc: "Direkte und schnelle Nährstoffversorgung unter Umgehung des Magen-Darm-Traktes.", icon: <Syringe className="w-6 h-6"/> }
+              { title: "Zelluläre Ursachenforschung", desc: "Umfangreiche Stoffwechsel- und Mitochondrien-Analyse für absolute Klarheit.", icon: <Activity className="w-6 h-6"/> },
+              { title: "Regulierung des Stoffwechsels", desc: "Wir füllen Nährstoffspeicher systematisch und individuell auf.", icon: <Leaf className="w-6 h-6"/> },
+              { title: "Vitalisierende Infusionen", desc: "Direkte und schnelle Nährstoffversorgung unter Umgehung des Magen-Darm-Traktes.", icon: <Syringe className="w-6 h-6"/> }
             ].map((c, i) => (
               <div key={i} className="bg-white rounded-3xl p-8 shadow-sm flex flex-col items-center text-center border border-border">
                 <div className="w-16 h-16 rounded-2xl bg-orange-50 text-accent flex items-center justify-center mb-6 shadow-sm">{c.icon}</div>
@@ -460,11 +460,11 @@ export default function Home() {
           <h4 className="text-2xl font-serif text-primary text-center mb-8">Weitere Leistungen</h4>
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             {[
-              { title: "Long-Covid Hilfe", desc: "Vitale Hilfe bei Erschöpfung und Long-Covid. Vitalität wieder zurückgewinnen.", link: ROUTE_PATHS.LONG_COVID },
-              { title: "Labor-Diagnostik", desc: "Exakte Blutanalysen und Vollblut-Untersuchungen.", link: ROUTE_PATHS.LABOR },
-              { title: "Allergiebehandlung", desc: "Ursächliche Behandlung durch Desensibilisierung & Immunmodulation.", link: ROUTE_PATHS.ALLERGIE },
-              { title: "CO2-Therapie", desc: "Lokale Injektionen und CO2-Quellgasbehandlungen zur Schmerzlinderung.", link: ROUTE_PATHS.CO2_THERAPIE },
-              { title: "Hormon-Balance", desc: "Natürliche Regulation von Zyklusbeschwerden, Wechseljahren & Schilddrüse.", link: ROUTE_PATHS.HORMONTHERAPIE },
+              { title: "Labor-Diagnostik", desc: "Exakte Vollblut-, Stuhl-, Speichel- und Urinanalysen.", link: ROUTE_PATHS.LABOR },
+              { title: "Allergiebehandlung", desc: "Ursächliche Behandlung durch Immunmodulation und Darmsanierung.", link: ROUTE_PATHS.ALLERGIE },
+              { title: "CO2-Trockenbäder", desc: "Steigerung der Mikrozirkulation durch CO2-Trockenbäder bei Wundheilungsstörungen & zur Schmerzlinderung.", link: ROUTE_PATHS.CO2_THERAPIE },
+              { title: "Long-Covid Hilfe", desc: "Effektive Hilfe bei postviraler Erschöpfung, Long-Covid & Post-Vac-Syndrom.", link: ROUTE_PATHS.LONG_COVID },
+              { title: "Hormon-Balance", desc: "Regulation der Sexualhormone, Schilddrüse und Stressachse z.B. bei Zyklusstörungen, Hashimoto oder Depression.", link: ROUTE_PATHS.HORMONTHERAPIE },
               { title: "Darmsanierung", desc: "Aufbau eines gesunden Mikrobioms als Fundament für dein Immunsystem.", link: ROUTE_PATHS.DARMANALYSE }
             ].map((srv, i) => (
               <div key={i} className="bg-white border border-border text-left p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
@@ -496,9 +496,9 @@ export default function Home() {
             <div className="flex-1 space-y-6">
               <h3 className="text-3xl font-serif text-primary mb-6">Unser ganzheitlicher Ansatz</h3>
                <ul className="space-y-4 mb-8">
-                  <li className="flex items-start gap-3 text-muted-foreground"><Check className="w-5 h-5 text-accent shrink-0"/> Detaillierte Hormon- und Zyklusanalyse im Spezial-Labor</li>
-                  <li className="flex items-start gap-3 text-muted-foreground"><Check className="w-5 h-5 text-accent shrink-0"/> Biochemischer Aufbau der Gebärmutterschleimhaut & gezielte Durchblutung</li>
-                  <li className="flex items-start gap-3 text-muted-foreground"><Check className="w-5 h-5 text-accent shrink-0"/> Wissenschaftlich fundierter Ausgleich von Mikronährstoffdefiziten</li>
+                  <li className="flex items-start gap-3 text-muted-foreground"><Check className="w-5 h-5 text-accent shrink-0"/> Detaillierte Stoffwechsel-, Hormon- & Zell-Analyse im Spezial-Labor sowie Zyklusbeobachtung</li>
+                  <li className="flex items-start gap-3 text-muted-foreground"><Check className="w-5 h-5 text-accent shrink-0"/> Gezielte Durchblutungssteigerung</li>
+                  <li className="flex items-start gap-3 text-muted-foreground"><Check className="w-5 h-5 text-accent shrink-0"/> Laborbasierter individueller Therapieplan zur Optimierung der Mikronährstoffversorgung</li>
                   <li className="flex items-start gap-3 text-muted-foreground"><Check className="w-5 h-5 text-accent shrink-0"/> Stressreduktion, Entgiftung und Darmsanierung als Vorbereitung</li>
                   <li className="flex items-start gap-3 text-muted-foreground"><Check className="w-5 h-5 text-accent shrink-0"/> Stabilisierende Begleitung vor und nach IVF-Eingriffen</li>
                 </ul>
@@ -506,7 +506,7 @@ export default function Home() {
                   <h4 className="font-bold text-primary mb-2">Du bist nicht allein</h4>
                   <p className="text-sm text-muted-foreground mb-4">Gemeinsam optimieren wir die funktionellen Parameter in deinem Zellstoffwechsel.</p>
                   <Link to={ROUTE_PATHS.CONTACT} className="inline-flex bg-accent text-white px-6 py-2.5 rounded-lg font-bold hover:bg-accent/90 transition-all text-sm items-center gap-2">
-                    <CheckCircle className="w-4 h-4" /> Jetzt Termin online buchen
+                    <CheckCircle className="w-4 h-4" /> Beratungs-Termin anfragen
                   </Link>
                 </div>
             </div>
@@ -547,8 +547,11 @@ export default function Home() {
                 <ul className="space-y-3">
                   <li className="flex items-center gap-3 text-muted-foreground font-medium"><div className="w-2 h-2 bg-accent rounded-full"/> Staatlich geprüfte & examinierte Hebamme</li>
                   <li className="flex items-center gap-3 text-muted-foreground font-medium"><div className="w-2 h-2 bg-accent rounded-full"/> Geprüfte und zugelassene Heilpraktikerin</li>
+                  <li className="flex items-center gap-3 text-muted-foreground font-medium"><div className="w-2 h-2 bg-accent rounded-full"/> Zertifizierter Master of Acupuncture</li>
+                  <li className="flex items-center gap-3 text-muted-foreground font-medium"><div className="w-2 h-2 bg-accent rounded-full"/> Zertifizierte Mikrobiom-Spezialistin</li>
+                  <li className="flex items-center gap-3 text-muted-foreground font-medium"><div className="w-2 h-2 bg-accent rounded-full"/> Zertifizierte Chelat-Therapeutin</li>
+                  <li className="flex items-center gap-3 text-muted-foreground font-medium"><div className="w-2 h-2 bg-accent rounded-full"/> Zertifizierte Ästhetik-Therapeutin</li>
                   <li className="flex items-center gap-3 text-muted-foreground font-medium"><div className="w-2 h-2 bg-accent rounded-full"/> Therapeutin für Mitochondriale Medizin (IHHT)</li>
-                  <li className="flex items-center gap-3 text-muted-foreground font-medium"><div className="w-2 h-2 bg-accent rounded-full"/> Zertifizierte Infusions- und Injektionstherapeutin</li>
                 </ul>
               </div>
 
@@ -750,6 +753,14 @@ export default function Home() {
                   <Instagram size={24} /> Angela auf Instagram folgen
                 </a>
                 <a 
+                  href="https://facebook.com/feminatalis" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-xl font-bold flex items-center gap-3 hover:bg-white/20 transition-all"
+                >
+                  <Facebook size={24} /> Naturheilpraxis feminatalis
+                </a>
+                <a 
                   href="https://youtube.com/@feminatalis" 
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -768,7 +779,7 @@ export default function Home() {
                     <img 
                       src={getImageUrl("img_instagram_portrait", "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2000&auto=format&fit=crop")} 
                       alt="Angela Deschner Instagram" 
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-top"
                     />
                   </div>
                   <div className="flex items-center gap-4">

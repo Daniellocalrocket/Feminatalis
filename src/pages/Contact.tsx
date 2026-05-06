@@ -16,7 +16,7 @@ export default function Contact() {
     <div className="min-h-screen bg-[#fff9f2]">
       <SEO 
         title="Kontakt & Terminbuchung | Feminatalis"
-        description="Wählen Sie Ihren Weg zu uns. Direkte Terminbuchung für die Naturheilpraxis oder Vorqualifizierung für die Hebammenbegleitung."
+        description="Wähle deinen Weg zu uns. Buche ein kostenfreies Eignungs-Telefonat oder frage dein Hebammenvorgespräch an."
       />
 
       {/* Hero Section */}
@@ -63,7 +63,7 @@ export default function Contact() {
                 <CardContent className="p-8 md:p-12">
                   <h3 className="text-2xl md:text-3xl font-serif text-primary mb-4 text-center">Naturheilpraxis</h3>
                   <p className="text-muted-foreground text-center mb-10 leading-relaxed min-h-[3rem]">
-                    Termine für kostenfreie 20-minütige Eignungs-Telefonate oder Hebammenvorgespräche in der Praxis können Sie bequem direkt online buchen.
+                    Termine für kostenfreie 20-minütige Eignungs-Telefonate oder Hebammenvorgespräche in der Praxis kannst du bequem direkt online buchen.
                   </p>
                   
                   <div className="space-y-4">

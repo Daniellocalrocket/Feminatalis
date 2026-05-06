@@ -9,25 +9,25 @@ import { motion } from "framer-motion";
 
 export default function CO2Therapie() {
   const anwendungsbereiche = [
-    { title: "Durchblutungsstörungen", desc: "Bei pAVK, kalten Extremitäten, diabetischem Fuß und allgemeiner arterieller Verschlusskrankheit." },
-    { title: "Wundheilung", desc: "Unterstützung bei chronischen Wunden, Dekubitus und schlecht heilenden Narben." },
-    { title: "Schmerztherapie", desc: "Linderung bei neuropathischen Schmerzen, Fibromyalgie und muskulären Verspannungen." },
-    { title: "Hautregeneration", desc: "Verbesserung des Hautbildes bei Neurodermitis, Psoriasis und zur Anti-Aging-Unterstützung." },
-    { title: "Sportmedizin", desc: "Beschleunigte Regeneration nach Verletzungen und Steigerung der muskulären Sauerstoffkapazität." },
-    { title: "Mikrozirkulation", desc: "Gezielte Förderung der kleinsten Blutgefäße zur besseren Nährstoffversorgung des Gewebes." }
+    { title: "Mikrozirkulation", desc: "Gezielte Förderung der kleinsten Blutgefäße zur besseren Nährstoffversorgung des Gewebes." },
+    { title: "Regulation & Erholung", desc: "Unterstützung der körpereigenen Regulationsprozesse für eine tiefgreifende Regeneration." },
+    { title: "Belastete Heilungsverläufe", desc: "Begleitende Unterstützung bei stagnierenden oder erschwerten Regenerationsprozessen." },
+    { title: "Schweregefühl / müde Beine", desc: "Wohltuende Erleichterung bei Stauungsgefühl und schweren Beinen (begleitend)." },
+    { title: "Stress- & Nervensystem", desc: "Support für das Nervensystem zur Förderung von Entspannung und Stressabbau." },
+    { title: "Bohr-Effekt Aktivierung", desc: "Natürliche Optimierung der Sauerstoffabgabe aus dem Blut direkt in deine Zellen." }
   ];
 
   return (
     <div className="bg-background min-h-screen font-sans">
       <SEO 
-        title="CO2-Therapie & Gastransport | Naturheilpraxis feminatalis" 
-        description="Optimierte Sauerstoffversorgung durch transdermale CO2-Therapie. Verbessere deine Durchblutung und Zellregeneration ohne Belastung." 
+        title="CO2-Trockenbäder (Sackverfahren) | Naturheilpraxis feminatalis" 
+        description="Ganzheitliche Unterstützung von Mikrozirkulation und Regeneration durch CO2-Trockenbäder im Sackverfahren. Sanft, entspannend und effektiv." 
       />
 
       <SplitScreenHero
         badge="Regenerative Medizin"
-        title={<>Transdermale <br /><span className="text-accent italic font-light">CO2-Therapie</span></>}
-        subtitle="Bohr-Effekt für deine Durchblutung. Durch die sanfte Aufnahme von medizinischem CO2 über die Haut optimieren wir die Sauerstoffversorgung deiner Zellen und fördern tiefgreifende Heilungsprozesse."
+        title={<>Regenerative <br /><span className="text-accent italic font-light">CO2-Trockenbäder</span></>}
+        subtitle="Eine CO₂-Anwendung, bei der du im Sackverfahren von CO₂ umhüllt wirst – begleitend zur Unterstützung von Durchblutung und Regeneration."
         imageSrc="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2070&auto=format&fit=crop"
         imageAlt="CO2-Therapie Behandlung"
         imageKey="img_hero_co2_therapie"
@@ -47,7 +47,7 @@ export default function CO2Therapie() {
                   Das Geheimnis der CO2-Therapie liegt in einem physiologischen Grundgesetz: Steigt der CO2-Gehalt im Gewebe, sinkt die Bindungsaffinität von Hämoglobin zu Sauerstoff. Das Ergebnis: Sauerstoff wird vermehrt ins Gewebe abgegeben.
                 </p>
                 <p>
-                  Wir nutzen diesen Effekt durch ein spezielles transdermales Verfahren, bei dem das medizinische Kohlendioxid sanft über die Haut aufgenommen wird – völlig schmerzfrei und ohne Belastung für das Herz-Kreislauf-System.
+                  Wir nutzen diesen Effekt durch ein spezielles Verfahren, bei dem du im sogenannten <strong>Sackverfahren</strong> von medizinischem CO₂ umhüllt wirst. Das Gas wird sanft über die Haut aufgenommen – völlig schmerzfrei und ohne Belastung für dein Herz-Kreislauf-System.
                 </p>
               </div>
               <div className="bg-white border border-border/50 p-8 rounded-[2.5rem] shadow-sm space-y-4">
@@ -74,7 +74,7 @@ export default function CO2Therapie() {
                </p>
                <div className="flex items-center gap-4 bg-white/10 p-6 rounded-2xl border border-white/10 relative z-10">
                   <Activity className="text-accent shrink-0" />
-                  <span className="text-sm font-medium">Ideal kombinierbar mit der IHHT-Sauerstofftherapie.</span>
+                  <span className="text-sm font-medium">Ideal kombinierbar mit der Infusionstherapie.</span>
                </div>
             </div>
           </div>

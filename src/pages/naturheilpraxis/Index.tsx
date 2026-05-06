@@ -52,11 +52,12 @@ export default function Naturheilpraxis() {
             <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 uppercase tracking-wider">
               Ursachenbasierte Medizin
             </div>
-            <h1 className="text-4xl md:text-7xl font-serif text-primary mb-8 leading-[1.1] [hyphens:auto] [overflow-wrap:anywhere] break-words">
-              Nicht nur Symptome lindern. <span className="text-accent italic font-light">Die Ursache heilen.</span>
+            <h1 className="text-4xl md:text-7xl font-serif text-primary mb-8 leading-[1.1]">
+              Nicht nur Symptome lindern.<br />
+              <span className="text-accent italic font-light">Die Ursache adressieren.</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto italic font-medium mb-12">
-              In der Naturheilpraxis feminatalis betrachten wir deinen Körper als komplexes System. Wir messen, statt zu raten, und unterstützen deine Zellen dabei, wieder in ihre volle Kraft zu kommen.
+              „Wir betrachten deinen Organismus als komplexes mehrschichtiges System und helfen dir mit modernen Untersuchungs- und Therapiemethoden die Balance zwischen Körper, Psyche und Bewusstsein wieder zu erlangen.“
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
                <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-12 py-5 rounded-2xl font-bold hover:scale-105 transition-all shadow-2xl flex items-center justify-center gap-3 border-none text-lg">
@@ -70,19 +71,35 @@ export default function Naturheilpraxis() {
         </div>
       </section>
 
-      {/* Core Philosophy */}
+      {/* Core Philosophy & 3 Pillars */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="bg-primary p-12 lg:p-16 rounded-[4rem] border border-border shadow-2xl flex flex-col md:flex-row gap-12 items-center relative overflow-hidden">
+          <div className="bg-primary p-12 lg:p-16 rounded-[4rem] border border-border shadow-2xl flex flex-col gap-12 relative overflow-hidden">
              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/20 via-transparent to-transparent pointer-events-none"></div>
-             <div className="bg-white/10 backdrop-blur-sm w-32 h-32 rounded-[2rem] flex items-center justify-center shrink-0 border border-white/20 relative z-10 hidden sm:flex">
-                <Brain className="text-accent w-16 h-16" />
+             
+             <div className="flex flex-col md:flex-row gap-12 items-center relative z-10">
+               <div className="bg-white/10 backdrop-blur-sm w-32 h-32 rounded-[2rem] flex items-center justify-center shrink-0 border border-white/20 hidden sm:flex">
+                  <Brain className="text-accent w-16 h-16" />
+               </div>
+               <div className="text-left">
+                  <h2 className="text-3xl lg:text-5xl font-serif text-white mb-6 leading-tight">Das Prinzip der kleinsten Einheit</h2>
+                  <p className="text-lg text-white/90 leading-relaxed italic font-medium">
+                    "Die Zelle ist die kleinste lebende Einheit deines Körpers. Wenn deine Zellen gesund sind und Energie produzieren können, bist auch du gesund und leistungsfähig. Deshalb setzen wir dort an, wo Gesundheit entsteht."
+                  </p>
+               </div>
              </div>
-             <div className="relative z-10 text-left">
-                <h2 className="text-3xl lg:text-5xl font-serif text-white mb-6 leading-tight">Das Prinzip der kleinsten Einheit</h2>
-                <p className="text-lg text-white/90 leading-relaxed italic font-medium">
-                  "Die Zelle ist die kleinste lebende Einheit deines Körpers. Wenn deine Zellen gesund sind und Energie produzieren können, bist auch du gesund und leistungsfähig. Deshalb setzen wir dort an, wo Gesundheit entsteht."
-                </p>
+
+             <div className="grid md:grid-cols-3 gap-8 relative z-10 pt-12 border-t border-white/10">
+                {[
+                  { title: "Sanfte Mikro- & Zellimmuntherapie", icon: <ShieldCheck className="w-6 h-6 text-accent" /> },
+                  { title: "Homöopathie, Phytotherapie & Akupunktur", icon: <Leaf className="w-6 h-6 text-accent" /> },
+                  { title: "Laborgestützte Entschlackung & Ausleitung", icon: <FlaskConical className="w-6 h-6 text-accent" /> }
+                ].map((pillar, i) => (
+                  <div key={i} className="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 flex flex-col items-center text-center">
+                    <div className="mb-4">{pillar.icon}</div>
+                    <h4 className="text-white font-serif text-lg leading-snug">{pillar.title}</h4>
+                  </div>
+                ))}
              </div>
           </div>
         </div>
