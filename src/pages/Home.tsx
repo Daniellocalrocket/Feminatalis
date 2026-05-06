@@ -7,7 +7,7 @@ import { Leaf, Heart, Baby, Check, Phone, Mail, Clock, MapPin, Award, ArrowRight
 import { useSiteImages } from "@/hooks/useSiteImages";
 
 export default function Home() {
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", topic: "", message: "", agree: false });
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", topic: "", otherTopic: "", message: "", agree: false });
   const { getImageUrl } = useSiteImages();
 
   const heroImage = getImageUrl("img_hero_home", "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop");
@@ -139,12 +139,16 @@ export default function Home() {
                     <input 
                       type="text" 
                       placeholder="Name" 
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full bg-white/50 border border-border/50 rounded-xl px-4 py-3 text-sm focus:ring-accent focus:border-accent transition-all" 
                       required
                     />
                     <input 
                       type="email" 
                       placeholder="E-Mail" 
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full bg-white/50 border border-border/50 rounded-xl px-4 py-3 text-sm focus:ring-accent focus:border-accent transition-all" 
                       required
                     />
@@ -153,25 +157,59 @@ export default function Home() {
                     <input 
                       type="tel" 
                       placeholder="Telefon (optional)" 
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full bg-white/50 border border-border/50 rounded-xl px-4 py-3 text-sm focus:ring-accent focus:border-accent transition-all" 
                     />
-                    <select className="w-full bg-white/50 border border-border/50 rounded-xl px-4 py-3 text-sm focus:ring-accent focus:border-accent transition-all">
-                      <option>Thema wählen</option>
-                      <option>Erstberatung & Diagnostik</option>
-                      <option>Hebammenbetreuung</option>
-                      <option>Kinderwunsch</option>
-                      <option>Zelltraining (IHHT)</option>
+                    <select 
+                      value={formData.topic}
+                      onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
+                      className="w-full bg-white/50 border border-border/50 rounded-xl px-4 py-3 text-sm focus:ring-accent focus:border-accent transition-all"
+                      required
+                    >
+                      <option value="" disabled>Thema wählen</option>
+                      <option value="Hebammenbetreuung">Hebammenbetreuung</option>
+                      <option value="Naturheilkunde">Naturheilkunde</option>
+                      <option value="Kinderwunsch">Kinderwunsch</option>
+                      <option value="Sonstiges">Sonstiges</option>
                     </select>
                   </div>
+
+                  {formData.topic === "Sonstiges" && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      className="overflow-hidden"
+                    >
+                      <input 
+                        type="text" 
+                        placeholder="Dein Anliegen (bitte spezifizieren)" 
+                        value={formData.otherTopic}
+                        onChange={(e) => setFormData({ ...formData, otherTopic: e.target.value })}
+                        className="w-full bg-white/50 border border-accent/30 rounded-xl px-4 py-3 text-sm focus:ring-accent focus:border-accent transition-all mb-1" 
+                        required
+                      />
+                    </motion.div>
+                  )}
+
                   <textarea 
                     placeholder="Deine Nachricht..." 
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     rows={3} 
                     className="w-full bg-white/50 border border-border/50 rounded-xl px-4 py-3 text-sm focus:ring-accent focus:border-accent transition-all resize-none" 
                     required
                   ></textarea>
                   
                   <div className="flex items-start gap-3 py-2">
-                    <input type="checkbox" id="hero-dsgvo" className="mt-1 w-4 h-4 rounded border-gray-300 text-accent focus:ring-accent" required/>
+                    <input 
+                      type="checkbox" 
+                      id="hero-dsgvo" 
+                      checked={formData.agree}
+                      onChange={(e) => setFormData({ ...formData, agree: e.target.checked })}
+                      className="mt-1 w-4 h-4 rounded border-gray-300 text-accent focus:ring-accent" 
+                      required
+                    />
                     <label htmlFor="hero-dsgvo" className="text-[10px] text-muted-foreground leading-tight font-medium">
                       Ich willige ein, dass meine Daten zur Kontaktaufnahme verarbeitet werden.
                     </label>
