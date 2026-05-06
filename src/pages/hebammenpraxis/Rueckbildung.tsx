@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import SplitScreenHero from "@/components/SplitScreenHero";
 import PreisTransparenz from "@/components/PreisTransparenz";
 import { Link } from "react-router-dom";
