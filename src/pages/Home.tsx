@@ -20,15 +20,15 @@ export default function Home() {
   return (
     <>
       <SEO 
-        title="Heilpraktikerin & Hebamme Bad Schönborn | Funktionelle Medizin" 
-        description="Feminatalis: Deine Praxis für Funktionelle Medizin & Hebammenbegleitung in Bad Schönborn. Spezialisiert auf Kinderwunsch, Hormone & Mitochondrien-Therapie. Jetzt Termin anfragen!"
+        title="Praxis für funktionelle Medizin und Naturheilkunde & Hebammenpraxis" 
+        description="Feminatalis: Deine Praxis für funktionelle Medizin, Naturheilkunde & Hebammenbegleitung in Bad Schönborn. Spezialisiert auf Kinderwunsch, Hormone & Mitochondrien-Therapie. Jetzt Termin anfragen!"
         ogType="business.medical"
         schema={{
           "@context": "https://schema.org",
           "@type": "MedicalBusiness",
           "name": "feminatalis – Angela Deschner",
-          "alternateName": "Praxis für Funktionelle Medizin & Hebammenpraxis",
-          "description": "Spezialisierte Praxis für Funktionelle Medizin, Naturheilkunde und Hebammenbegleitung in Bad Schönborn. Fokus auf Kinderwunsch, hormonelle Balance und zelluläre Gesundheit.",
+          "alternateName": "Praxis für funktionelle Medizin und Naturheilkunde & Hebammenpraxis",
+          "description": "Spezialisierte Praxis für funktionelle Medizin, Naturheilkunde und Hebammenbegleitung in Bad Schönborn. Fokus auf Kinderwunsch, hormonelle Balance und zelluläre Gesundheit.",
           "image": "https://feminatalis.de/logo.png",
           "@id": "https://feminatalis.de",
           "url": "https://feminatalis.de",
@@ -91,9 +91,9 @@ export default function Home() {
               <p className="text-accent font-bold tracking-widest uppercase text-xs mb-4">
                 Hebammenbegleitung im Wandel – bewusst · vertieft · individuell
               </p>
-              <h1 className="text-4xl md:text-6xl xl:text-7xl font-serif text-primary mb-6 leading-tight tracking-tight [hyphens:auto] [overflow-wrap:anywhere] break-words">
-                Praxis für Funktionelle <br className="hidden sm:block"/>Medizin <br className="sm:hidden"/>
-                <span className="text-accent">& Hebammenpraxis</span>
+              <h1 className="text-4xl md:text-5xl xl:text-6xl font-serif text-primary mb-6 leading-tight tracking-tight">
+                Praxis für funktionelle Medizin und Naturheilkunde<br className="hidden sm:block"/>
+                <span className="text-accent"> & Hebammenpraxis</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-10 max-w-xl leading-relaxed">
                 Wir kombinieren modernste Labordiagnostik mit tiefem naturheilkundlichen und geburtshilflichen Wissen. Für deine Gesundheit auf allen Lebenswegen.
@@ -537,7 +537,7 @@ export default function Home() {
             </div>
             <div className="flex-1">
               <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 inline-block">Expertin</span>
-              <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6 leading-tight">Deine Expertin für ganzheitliche Frauengesundheit</h2>
+              <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6 leading-tight">Deine Expertin für ganzheitliche Gesundheit & Ursachenmedizin</h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 Ich kombiniere meine Expertise aus drei Fachbereichen: Dem biochemischen Verständnis einer Heilpraktikerin, der Intuition einer erfahrenen Hebamme und modernster Präventivmedizin wie der IHHT-Mitochondrientherapie. Für einen Therapieansatz, der so einzigartig ist wie du selbst.
               </p>
