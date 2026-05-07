@@ -2,7 +2,7 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
-import { Activity, ShieldCheck, ArrowRight, Microscope, Zap, Heart } from "lucide-react";
+import { Activity, ShieldCheck, ArrowRight, Microscope, Zap, Heart, Sparkles } from "lucide-react";
 import SplitScreenHero from "@/components/SplitScreenHero";
 import PreisTransparenz from "@/components/PreisTransparenz";
 import { motion } from "framer-motion";
@@ -73,7 +73,7 @@ export default function Darmsanierung() {
 
           <div className="bg-primary text-white p-12 lg:p-20 rounded-[4rem] text-center shadow-2xl relative overflow-hidden mb-24">
              <div className="absolute bottom-0 right-0 w-64 h-64 bg-accent/20 -mr-32 -mb-32 rounded-full blur-3xl opacity-20"></div>
-             <Zap className="w-16 h-16 text-accent mx-auto mb-8 animate-pulse relative z-10" />
+             <Sparkles className="w-16 h-16 text-accent mx-auto mb-8 animate-pulse relative z-10" />
              <h2 className="text-3xl lg:text-5xl font-serif mb-8 text-white font-bold relative z-10">Vitalität durch Balance</h2>
              <p className="text-xl opacity-90 mb-12 max-w-3xl mx-auto leading-relaxed relative z-10">
                Ein gesunder Darm bedeutet weniger Entzündungen, eine bessere Nährstoffaufnahme und eine stabilere Psyche. Lass uns gemeinsam den Grundstein für deine langfristige Gesundheit legen.

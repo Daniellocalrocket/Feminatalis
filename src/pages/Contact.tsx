@@ -102,7 +102,7 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={springPresets.gentle}
             >
-              <Card className="group h-full border-none shadow-2xl rounded-[3rem] overflow-hidden bg-white border-2 border-accent/5 hover:shadow-accent/5 transition-all duration-500">
+              <Card className="group h-full border-none shadow-2xl rounded-[3rem] overflow-hidden bg-white border border-accent/10 hover:shadow-accent/5 transition-all duration-500">
                 <div className="h-32 bg-accent/5 flex items-center justify-center group-hover:bg-accent/10 transition-colors">
                   <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-accent">
                     <Users size={32} />
@@ -243,7 +243,7 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="w-full h-[500px] relative overflow-hidden bg-slate-100 border-t border-border">
+      <section className="w-full h-[500px] relative overflow-hidden bg-orange-50/30 border-t border-border">
         <a
           href="https://www.google.com/maps/search/?api=1&query=Hebelstr.+3A,+76669+Bad-Sch%C3%B6nborn"
           target="_blank"

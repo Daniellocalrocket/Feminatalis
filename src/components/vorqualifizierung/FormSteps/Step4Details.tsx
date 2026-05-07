@@ -44,7 +44,7 @@ export default function Step3Details() {
             ))}
           </div>
         </RadioGroup>
-        {errors.urgency && <p className="text-red-500 text-xs pl-2 font-bold">{errors.urgency.message}</p>}
+        {errors.urgency && <p className="text-accent text-xs pl-2 font-bold">{errors.urgency.message}</p>}
       </div>
 
       {/* 2. Hebammenpraxis Spezifisch */}

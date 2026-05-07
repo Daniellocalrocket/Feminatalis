@@ -2,14 +2,14 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
-import { Activity, ShieldCheck, ArrowRight, Zap, Battery, Wind } from "lucide-react";
+import { Activity, ShieldCheck, ArrowRight, Sparkles, Battery, Wind } from "lucide-react";
 import SplitScreenHero from "@/components/SplitScreenHero";
 import PreisTransparenz from "@/components/PreisTransparenz";
 import { motion } from "framer-motion";
 
 export default function Zelltraining() {
   const vorteile = [
-    { title: "Zellregeneration", desc: "Abbau alter, schwacher Mitochondrien und Anregung der Vermehrung neuer, gesunder Energiekraftwerke.", icon: Zap },
+    { title: "Zellregeneration", desc: "Abbau alter, schwacher Mitochondrien und Anregung der Vermehrung neuer, gesunder Energiekraftwerke.", icon: Sparkles },
     { title: "Stressresistenz", desc: "Stärkung des vegetativen Nervensystems für mehr Gelassenheit und schnellere Erholung im Alltag.", icon: ShieldCheck },
     { title: "Stoffwechsel-Boost", desc: "Optimierung der Fettverbrennung und Verbesserung der Insulinempfindlichkeit deiner Zellen.", icon: Activity },
     { title: "Sauerstoff-Update", desc: "Verbesserung der Sauerstoffverwertung im Blut und in der Muskulatur für mehr Leistung.", icon: Wind }
@@ -73,7 +73,7 @@ export default function Zelltraining() {
 
           <div className="bg-primary text-white p-12 lg:p-20 rounded-[4rem] text-center shadow-2xl relative overflow-hidden mb-24">
              <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 -mr-32 -mt-32 rounded-full blur-3xl opacity-20"></div>
-             <Zap className="w-16 h-16 text-accent mx-auto mb-8 animate-pulse relative z-10" />
+             <Sparkles className="w-16 h-16 text-accent mx-auto mb-8 animate-pulse relative z-10" />
              <h2 className="text-3xl lg:text-5xl font-serif mb-8 text-white font-bold relative z-10">Zellkraft für jedes Alter</h2>
              <p className="text-xl opacity-90 mb-12 max-w-3xl mx-auto leading-relaxed relative z-10">
                Ob zur Vorbereitung auf eine Schwangerschaft, bei Post-Viraler Erschöpfung oder einfach für mehr Power im Alltag – IHHT ist der Bio-Hack für dein System.

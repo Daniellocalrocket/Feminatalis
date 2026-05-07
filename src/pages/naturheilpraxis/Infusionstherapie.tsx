@@ -2,7 +2,7 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
-import { Droplet, ActivitySquare, ShieldCheck, ArrowRight, FlaskConical, Zap } from "lucide-react";
+import { Droplet, ActivitySquare, ShieldCheck, ArrowRight, FlaskConical, Zap, Sparkles } from "lucide-react";
 import SplitScreenHero from "@/components/SplitScreenHero";
 import PreisTransparenz from "@/components/PreisTransparenz";
 import { motion } from "framer-motion";
@@ -105,7 +105,7 @@ export default function Infusionstherapie() {
           </div>
 
           <div className="bg-accent/5 p-12 lg:p-20 rounded-[4rem] border border-accent/20 text-center shadow-sm relative overflow-hidden mb-24">
-             <Zap className="w-16 h-16 text-accent mx-auto mb-8 animate-pulse" />
+             <Sparkles className="w-16 h-16 text-accent mx-auto mb-8 animate-pulse" />
              <h2 className="text-3xl lg:text-5xl font-serif mb-8 text-primary font-bold">Möchtest du deine Vitalität <br />sofort spürbar machen?</h2>
              <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-12 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl inline-flex items-center gap-3">
                Jetzt Vor-Analyse anfragen <ArrowRight size={20} />

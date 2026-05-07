@@ -2,7 +2,7 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
-import { ArrowRight, HeartPulse, Baby, Scale, ShieldCheck, Home } from "lucide-react";
+import { ArrowRight, HeartPulse, Baby, Utensils, ShieldCheck, Home } from "lucide-react";
 import { motion } from "framer-motion";
 import SplitScreenHero from "@/components/SplitScreenHero";
 import PreisTransparenz from "@/components/PreisTransparenz";
@@ -58,7 +58,7 @@ export default function Wochenbettbetreuung() {
                 </li>
                 <li className="flex gap-5">
                   <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center text-accent shrink-0">
-                    <Scale size={24} />
+                    <Utensils size={24} />
                   </div>
                   <div>
                     <strong className="text-foreground text-lg block mb-1">Stillberatung & Ernährung</strong>

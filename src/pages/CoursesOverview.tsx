@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import { formatDate } from "@/lib/index";
 import { Badge } from "@/components/ui/badge";
 
@@ -90,7 +91,7 @@ export default function CoursesOverview() {
       features: ["Mitochondrien-Shuttle", "Epigenetik-Matrix", "Nervensystem-Regulation", "Interventions-Schutz"],
       link: `${ROUTE_PATHS.PREMIUM_ZELLKRAFT_KURS}?event=${encodeURIComponent("Zellkraft-Geburtskompass")}`,
       badge: "Vollumfängliche Begleitung",
-      icon: Zap,
+      icon: Sparkles,
       color: "primary"
     }
   ];
@@ -173,7 +174,7 @@ export default function CoursesOverview() {
                         Nur noch {event.spots_left} Plätze
                       </Badge>
                     ) : (
-                      <div className="text-[10px] font-bold text-green-600 uppercase tracking-widest">
+                      <div className="text-[10px] font-bold text-accent uppercase tracking-widest">
                         Anmeldung möglich
                       </div>
                     )}
@@ -210,12 +211,11 @@ export default function CoursesOverview() {
                       Jetzt Platz buchen <ArrowRight size={16} />
                     </Link>
                   ) : (
-                    <Button 
-                      disabled
-                      className="w-full py-4 h-auto rounded-xl border border-border text-muted-foreground font-bold bg-slate-100 flex items-center justify-center gap-2 cursor-not-allowed"
+                    <div 
+                      className="w-full py-4 h-auto rounded-xl border border-border text-muted-foreground font-bold bg-[#fff9f2] flex items-center justify-center gap-2 cursor-not-allowed opacity-60"
                     >
                       <Lock size={16} /> Aktuell ausgebucht
-                    </Button>
+                    </div>
                   )}
                 </motion.div>
               ))}
@@ -315,7 +315,7 @@ export default function CoursesOverview() {
                </p>
             </div>
             <div className="flex flex-col items-center">
-               <div className="w-16 h-16 rounded-full bg-slate-200 mb-4 overflow-hidden border-2 border-white shadow-lg">
+               <div className="w-16 h-16 rounded-full bg-orange-50 mb-4 overflow-hidden border-2 border-white shadow-lg">
                   {/* Avatar fallback */}
                   <div className="w-full h-full bg-primary flex items-center justify-center text-white font-serif italic">AD</div>
                </div>

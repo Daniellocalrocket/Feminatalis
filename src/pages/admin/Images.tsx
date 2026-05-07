@@ -43,14 +43,15 @@ const IMAGE_CONFIG = [
     id: "hebammenpraxis",
     label: "Hebammenpraxis",
     images: [
-      { key: "img_hero_hebammenpraxis", label: "Hebammenpraxis Index Hero", default: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?q=80&w=2070&auto=format&fit=crop" },
+      { key: "img_hero_hebammenpraxis", label: "Hebammenpraxis Index Hero", default: "/hebammenpraxis_hero.png" },
+      { key: "img_portrait_angela_hebamme", label: "Angela Deschner Porträt (Hebammenpraxis)", default: "/angela_deschner.png" },
       { key: "img_hero_mikronaehrstoffe", label: "Mikronährstoffe Hero", default: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=2070&auto=format&fit=crop" },
       { key: "img_hero_beschwerden", label: "Beschwerden Hero", default: "https://images.unsplash.com/photo-1493894473891-10fc1e5dbd22?q=80&w=2069&auto=format&fit=crop" },
       { key: "img_hero_geburtsvorbereitung", label: "Geburtsvorbereitung Hero", default: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop" },
       { key: "img_hero_zelltraining", label: "Zelltraining Hero", default: "https://images.unsplash.com/photo-1516670428252-df97bba108d1?q=80&w=2070&auto=format&fit=crop" },
       { key: "img_hero_wochenbett", label: "Wochenbett Hero", default: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop" },
       { key: "img_hero_rueckbildung", label: "Rückbildung Hero", default: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop" },
-      { key: "img_hero_akupunktur", label: "Akupunktur Hero", default: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=2070&auto=format&fit=crop" },
+      { key: "img_hero_akupunktur", label: "Akupunktur Hero", default: "/akupunktur_hero.png" },
     ]
   },
   {
@@ -71,6 +72,7 @@ const IMAGE_CONFIG = [
 
 export default function AdminImages() {
   const [images, setImages] = useState<Record<string, string>>({});
+  const [dbKeys, setDbKeys] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
   const [isUploading, setIsUploading] = useState<string | null>(null);
@@ -92,18 +94,20 @@ export default function AdminImages() {
       toast.error("Fehler beim Laden der Bilder");
     } else {
       const imageMap: Record<string, string> = {};
+      const keys: string[] = [];
       data?.forEach(s => {
         imageMap[s.key] = s.value;
+        keys.push(s.key);
       });
       setImages(imageMap);
       setPreviews(imageMap);
+      setDbKeys(keys);
     }
     setIsLoading(false);
   };
 
   const handleUrlChange = (key: string, url: string) => {
     setImages(prev => ({ ...prev, [key]: url }));
-    // Basic URL validation before showing preview
     if (url.startsWith('http') || url.startsWith('/')) {
       setPreviews(prev => ({ ...prev, [key]: url }));
     }
@@ -115,13 +119,10 @@ export default function AdminImages() {
 
     try {
       setIsUploading(key);
-      
-      // Create a unique file name
       const fileExt = file.name.split('.').pop();
       const fileName = `${key}_${Math.random().toString(36).substring(2)}.${fileExt}`;
       const filePath = `${fileName}`;
 
-      // Upload to Supabase Storage
       const { error: uploadError } = await supabase.storage
         .from('site-images')
         .upload(filePath, file, {
@@ -131,12 +132,10 @@ export default function AdminImages() {
 
       if (uploadError) throw uploadError;
 
-      // Get Public URL
       const { data: { publicUrl } } = supabase.storage
         .from('site-images')
         .getPublicUrl(filePath);
 
-      // Update local state
       handleUrlChange(key, publicUrl);
       toast.success("Bild erfolgreich hochgeladen");
       
@@ -164,6 +163,7 @@ export default function AdminImages() {
       toast.error("Fehler beim Speichern: " + error.message);
     } else {
       toast.success("Bilder wurden erfolgreich aktualisiert");
+      fetchImages(); // Refresh keys
     }
     setIsSaving(false);
   };
@@ -172,6 +172,23 @@ export default function AdminImages() {
     handleUrlChange(key, defaultValue);
     toast.info("Auf Standardwert zurückgesetzt");
   };
+
+  // Identify images in DB that are not in IMAGE_CONFIG
+  const configuredKeys = new Set(IMAGE_CONFIG.flatMap(s => s.images.map(img => img.key)));
+  const unconfiguredKeys = dbKeys.filter(key => !configuredKeys.has(key));
+
+  const allTabs = [
+    ...IMAGE_CONFIG,
+    ...(unconfiguredKeys.length > 0 ? [{
+      id: "uncategorized",
+      label: "Weitere Bilder",
+      images: unconfiguredKeys.map(key => ({
+        key,
+        label: key.replace("img_", "").replace(/_/g, " "),
+        default: ""
+      }))
+    }] : [])
+  ];
 
   if (isLoading) {
     return (
@@ -190,7 +207,7 @@ export default function AdminImages() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
             <h1 className="text-3xl font-serif text-primary">Bilder-Management</h1>
-            <p className="text-muted-foreground">Lade Bilder hoch oder tausche URLs aus.</p>
+            <p className="text-muted-foreground">Verwalte alle Bilder deiner Webseite an einem zentralen Ort.</p>
           </div>
           <Button 
             onClick={saveImages} 
@@ -202,9 +219,9 @@ export default function AdminImages() {
           </Button>
         </div>
 
-        <Tabs defaultValue="naturheilpraxis" className="w-full">
+        <Tabs defaultValue={allTabs[0].id} className="w-full">
           <TabsList className="bg-white/50 backdrop-blur-sm p-1 rounded-2xl border border-primary/5 mb-8 h-auto flex flex-wrap">
-            {IMAGE_CONFIG.map(section => (
+            {allTabs.map(section => (
               <TabsTrigger 
                 key={section.id} 
                 value={section.id}
@@ -215,7 +232,7 @@ export default function AdminImages() {
             ))}
           </TabsList>
 
-          {IMAGE_CONFIG.map(section => (
+          {allTabs.map(section => (
             <TabsContent key={section.id} value={section.id} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {section.images.map(img => (
@@ -227,23 +244,24 @@ export default function AdminImages() {
                           <CardDescription className="text-xs font-mono">{img.key}</CardDescription>
                         </div>
                         <div className="flex gap-2">
-                          <Button 
-                            variant="ghost" 
-                            size="icon" 
-                            className="rounded-full hover:bg-red-50 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity"
-                            onClick={() => resetToDefault(img.key, img.default)}
-                            title="Auf Standard zurücksetzen"
-                          >
-                            <Trash2 size={16} />
-                          </Button>
+                          {img.default && (
+                            <Button 
+                              variant="ghost" 
+                              size="icon" 
+                              className="rounded-full hover:bg-red-50 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity"
+                              onClick={() => resetToDefault(img.key, img.default)}
+                              title="Auf Standard zurücksetzen"
+                            >
+                              <Trash2 size={16} />
+                            </Button>
+                          )}
                         </div>
                       </div>
                     </CardHeader>
                     <CardContent className="p-6 pt-2 space-y-4">
-                      {/* Image Preview */}
                       <div className="aspect-video w-full rounded-2xl bg-slate-100 overflow-hidden relative group/img">
                         <img 
-                          src={previews[img.key] || img.default || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"} 
+                          src={previews[img.key] || img.default || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80\u0026w=2426\u0026auto=format\u0026fit=crop"} 
                           alt={img.label}
                           className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
                         />
@@ -274,7 +292,7 @@ export default function AdminImages() {
 
                       <div className="space-y-2">
                         <Label htmlFor={img.key} className="text-[10px] font-bold uppercase opacity-60 flex items-center gap-2">
-                          <LinkIcon size={12} /> Bild-URL (wird nach Upload automatisch befüllt)
+                          <LinkIcon size={12} /> Bild-URL
                         </Label>
                         <Input 
                           id={img.key} 
@@ -298,14 +316,13 @@ export default function AdminImages() {
                 <Upload size={24} />
               </div>
               <div>
-                <h4 className="font-bold text-emerald-900 text-lg">Direkter Bild-Upload aktiv</h4>
+                <h4 className="font-bold text-emerald-900 text-lg">Dynamische Erfassung aktiv</h4>
                 <p className="text-sm text-emerald-800 opacity-80">
-                  Du kannst Bilder jetzt direkt von deiner Festplatte hochladen. Sie werden sicher im <strong>Supabase Storage</strong> gespeichert und automatisch auf der Webseite verlinkt. Vergiss nicht, am Ende auf "Änderungen speichern" zu klicken.
+                  Alle Bilder, die in der Datenbank gefunden werden (Präfix `img_`), werden hier automatisch angezeigt – auch wenn sie nicht explizit vorkonfiguriert sind. So behältst du immer die volle Kontrolle.
                 </p>
               </div>
            </CardContent>
         </Card>
-
       </div>
     </AdminLayout>
   );

@@ -109,7 +109,7 @@ export default function Homoeopathie() {
             
             <div className="bg-muted/30 p-10 lg:p-12 rounded-[3.5rem] border border-border shadow-sm text-left">
               <div className="bg-white w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-sm">
-                 <AlertCircle className="w-8 h-8 text-destructive" />
+                 <AlertCircle className="w-8 h-8 text-accent" />
               </div>
               <h4 className="text-2xl font-bold text-primary mb-6 font-serif text-left text-left">Wichtiger Hinweis</h4>
               <p className="text-base text-muted-foreground leading-relaxed font-medium text-left">

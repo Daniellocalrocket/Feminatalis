@@ -11,7 +11,7 @@ export default function Hormontherapie() {
   const fokusBereiche = [
     { title: "Speichel-Hormontests", desc: "Präzise Messung der freien, biologisch aktiven Hormone für eine exakte Diagnose.", icon: Activity },
     { title: "Natürliches Progesteron", desc: "Sanfter Ausgleich bei Progesteronmangel und Östrogendominanz mit bioidentischen Stoffen.", icon: Heart },
-    { title: "Schilddrüsen-Support", desc: "Ganzheitliche Betrachtung der Schilddrüsenachse (T3, T4, rT3) bei Hashimoto und Müdigkeit.", icon: Zap },
+    { title: "Schilddrüsen-Support", desc: "Ganzheitliche Betrachtung der Schilddrüsenachse (T3, T4, rT3) bei Hashimoto und Müdigkeit.", icon: Sparkles },
     { title: "Sexualhormon-Balance", desc: "Behandlung von Zyklusstörungen, Beschwerden im Klimakterium und Menopause mit natürlichen Mitteln.", icon: Sparkles },
     { title: "Stress- & Glückshormone", desc: "Diagnostik und Unterstützung bei stressbedingten Symptomen wie depressive Verstimmungen, Schlafmangel & Reizbarkeit.", icon: Activity }
   ];

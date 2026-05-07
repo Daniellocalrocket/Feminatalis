@@ -88,7 +88,7 @@ export default function Schwermetall() {
               <div className="grid sm:grid-cols-2 gap-4 mt-2">
                 {symptome.map((item, i) => (
                   <div key={i} className="flex items-start gap-4 bg-white p-5 rounded-2xl border border-border shadow-sm hover:border-accent transition-colors">
-                    <ShieldAlert className="w-5 h-5 text-destructive shrink-0 mt-0.5" />
+                    <ShieldAlert className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                     <span className="text-sm font-bold text-primary leading-snug">{item}</span>
                   </div>
                 ))}

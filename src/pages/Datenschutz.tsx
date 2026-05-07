@@ -35,7 +35,7 @@ export default function Datenschutz() {
                 Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten (nachfolgend kurz „Daten“) innerhalb unseres Onlineangebotes und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepräsenzen, wie z.B. unser Social Media Profile auf (nachfolgend gemeinsam bezeichnet als „Onlineangebot“). Im Hinblick auf die verwendeten Begrifflichkeiten, wie z.B. „Verarbeitung“ oder „Verantwortlicher“ verweisen wir auf die Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO).
               </p>
               
-              <div className="bg-muted/30 p-10 rounded-[2.5rem] border border-border">
+              <div className="bg-accent/5 p-10 rounded-[2.5rem] border border-border">
                 <h3 className="text-primary font-bold text-xl mb-6">Verantwortlicher</h3>
                 <p className="font-medium text-primary mb-1">Hebammen- und Naturheilpraxis feminatalis</p>
                 <p className="mb-1">Hebelstraße 3a</p>
@@ -56,16 +56,16 @@ export default function Datenschutz() {
                 Arten der verarbeiteten Daten
               </h2>
               <ul className="grid sm:grid-cols-2 gap-4 list-none p-0">
-                <li className="bg-slate-50 p-6 rounded-2xl border border-border flex items-center gap-3">
+                <li className="bg-primary/5 p-6 rounded-2xl border border-border flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-accent" /> Bestandsdaten (z.B. Namen, Adressen)
                 </li>
-                <li className="bg-slate-50 p-6 rounded-2xl border border-border flex items-center gap-3">
+                <li className="bg-primary/5 p-6 rounded-2xl border border-border flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-accent" /> Kontaktdaten (z.B. E-Mail, Telefonnummern)
                 </li>
-                <li className="bg-slate-50 p-6 rounded-2xl border border-border flex items-center gap-3">
+                <li className="bg-primary/5 p-6 rounded-2xl border border-border flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-accent" /> Inhaltsdaten (z.B. Texteingaben, Fotos)
                 </li>
-                <li className="bg-slate-50 p-6 rounded-2xl border border-border flex items-center gap-3">
+                <li className="bg-primary/5 p-6 rounded-2xl border border-border flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-accent" /> Nutzungsdaten (z.B. besuchte Webseiten)
                 </li>
               </ul>
@@ -99,13 +99,13 @@ export default function Datenschutz() {
                 Um unser Onlineangebot sicher und effizient bereitzustellen, nutzen wir die Dienste von spezialisierten Cloud- und Hosting-Anbietern.
               </p>
               <div className="space-y-6">
-                <div className="p-8 bg-slate-50 rounded-3xl border border-border">
+                <div className="p-8 bg-accent/5 rounded-3xl border border-border">
                   <h4 className="font-bold text-primary mb-3">Vercel (Hosting)</h4>
                   <p className="text-sm leading-relaxed">
                     Unsere Website wird auf der Plattform Vercel gehostet (Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA). Hierbei werden Zugriffsdaten und Server-Logfiles verarbeitet. Die Übermittlung in die USA erfolgt auf Grundlage des EU-US Data Privacy Frameworks.
                   </p>
                 </div>
-                <div className="p-8 bg-slate-50 rounded-3xl border border-border">
+                <div className="p-8 bg-accent/5 rounded-3xl border border-border">
                   <h4 className="font-bold text-primary mb-3">Supabase (Datenbank & Formulare)</h4>
                   <p className="text-sm leading-relaxed">
                     Die Speicherung Ihrer Eingaben in Kontaktformularen (z.B. Vorqualifizierung) und die Verwaltung von Kursdaten erfolgt über Supabase (Supabase Inc.). Die Daten werden in verschlüsselten Datenbanken innerhalb der EU verarbeitet, um maximale Sicherheit und Vertraulichkeit zu gewährleisten.
@@ -129,7 +129,7 @@ export default function Datenschutz() {
             </section>
 
             {/* 6. Rechte & Widerruf */}
-            <section className="bg-muted/20 p-10 rounded-[3rem] border border-border">
+            <section className="bg-primary/5 p-10 rounded-[3rem] border border-border">
               <h2 className="text-2xl font-serif text-primary mb-6">Ihre Rechte als betroffene Person</h2>
               <p className="mb-8">Sie haben jederzeit das Recht auf:</p>
               <ul className="grid md:grid-cols-2 gap-6 list-none p-0">

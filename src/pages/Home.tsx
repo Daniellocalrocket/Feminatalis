@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { motion } from "framer-motion";
-import { Leaf, Heart, Baby, Check, Phone, Mail, Clock, MapPin, Award, ArrowRight, ChevronRight, Activity, Star, CheckCircle, Syringe, Sparkles, Microscope, Zap, ShieldCheck, Instagram, Youtube, Facebook, UserCheck } from "lucide-react";
+import { Leaf, Heart, Baby, Check, Phone, Mail, Clock, MapPin, Award, ArrowRight, ChevronRight, Activity, Star, CheckCircle, Syringe, Sparkles, Microscope, Zap, ShieldCheck, Instagram, Youtube, Facebook, UserCheck, HeartPulse } from "lucide-react";
 import { useSiteImages } from "@/hooks/useSiteImages";
 
 export default function Home() {
@@ -102,7 +102,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row items-center gap-4 mb-10">
                 <div className="flex -space-x-3">
                   {[1,2,3,4].map(i => (
-                    <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
+                    <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-accent/10 overflow-hidden">
                       <img src={`https://i.pravatar.cc/150?u=${i+10}`} alt="Patient" className="w-full h-full object-cover" />
                     </div>
                   ))}
@@ -230,8 +230,8 @@ export default function Home() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: <Leaf className="w-8 h-8 text-green-600"/>, title: "Naturheilpraxis", desc: "Ursachen finden, statt nur Symptome behandeln. Für ganzheitliche Vitalität.", link: ROUTE_PATHS.NATURHEILPRAXIS },
-              { icon: <Heart className="w-8 h-8 text-primary"/>, title: "Hebammenpraxis", desc: "Sichere Begleitung in Schwangerschaft, Wochenbett, Stillzeit & Kurse.", link: ROUTE_PATHS.HEBAMMENPRAXIS },
+              { icon: <Leaf className="w-8 h-8 text-accent"/>, title: "Naturheilpraxis", desc: "Ursachen finden, statt nur Symptome behandeln. Für ganzheitliche Vitalität.", link: ROUTE_PATHS.NATURHEILPRAXIS },
+              { icon: <Heart className="text-primary w-8 h-8"/>, title: "Hebammenpraxis", desc: "Sichere Begleitung in Schwangerschaft, Wochenbett, Stillzeit & Kurse.", link: ROUTE_PATHS.HEBAMMENPRAXIS },
               { icon: <Baby className="w-8 h-8 text-accent"/>, title: "Kinderwunsch", desc: "Natürliche Unterstützung auf dem Weg zu deinem Wunschkind.", link: ROUTE_PATHS.KINDERWUNSCH }
             ].map((s, i) => (
               <div key={i} className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl shadow-black/5 text-center flex flex-col items-center border border-border/50">
@@ -261,7 +261,7 @@ export default function Home() {
 
 
       {/* Ablauf-Sektion */}
-      <section className="py-24 bg-slate-50 relative overflow-hidden">
+      <section className="py-24 bg-[#fff9f2] relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-background to-transparent" />
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-20">
@@ -377,21 +377,21 @@ export default function Home() {
               { 
                 title: "Säule 1:\nBasis-Begleitung", 
                 pts: ["Vorbereitungskurse", "Wochenbettbetreuung", "Stillbegleitung"], 
-                icon: <ShieldCheck className="text-blue-600 w-8 h-8"/>, 
+                icon: <HeartPulse className="text-primary w-8 h-8"/>, 
                 link: ROUTE_PATHS.HEBAMMENPRAXIS,
                 badge: "Kasse + Privat"
               },
               { 
                 title: "Säule 2:\nAkut-Hilfe", 
                 pts: ["Schmerzmanagement", "Schwangerschaftsübelkeit", "Erschöpfungs-Check"], 
-                icon: <Zap className="text-primary w-8 h-8"/>, 
+                icon: <Activity className="text-accent w-8 h-8"/>, 
                 link: ROUTE_PATHS.HEBAMMENPRAXIS,
                 badge: "Kasse + Naturheilkunde"
               },
               { 
                 title: "Säule 3:\nDas Zell-Protokoll", 
                 pts: ["Vollblut-Nährstoff-Analyse", "IHHT-Zelltraining", "Mitochondriale Infusionen"], 
-                icon: <Microscope className="text-accent w-8 h-8"/>, 
+                icon: <Sparkles className="text-primary w-8 h-8"/>, 
                 link: ROUTE_PATHS.ZELLTRAINING,
                 badge: "Premium / Privat"
               }
@@ -414,8 +414,8 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="bg-[#fff08a]/30 rounded-[3rem] p-8 md:p-16 mb-16 flex flex-col md:flex-row items-center gap-16 border border-yellow-200/50 shadow-inner relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#fff08a]/20 rounded-bl-[200px] -z-0" />
+          <div className="bg-[#fde4c8]/30 rounded-[3rem] p-8 md:p-16 mb-16 flex flex-col md:flex-row items-center gap-16 border border-[#fde4c8] shadow-inner relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#fde4c8]/20 rounded-bl-[200px] -z-0" />
             <div className="flex-1 relative z-10">
               <h3 className="text-3xl md:text-4xl font-serif text-primary mb-6">Warum Kassenleistungen niemals ausreichen</h3>
               <p className="text-lg text-muted-foreground mb-4 leading-relaxed font-medium">
@@ -430,7 +430,7 @@ export default function Home() {
                 <div><div className="text-3xl font-bold text-accent">Sicher</div><div className="text-xs font-black uppercase tracking-widest text-primary/60">Evidenz</div></div>
               </div>
             </div>
-            <div className="w-full md:w-1/3 aspect-[4/5] rounded-3xl overflow-hidden shadow-lg bg-slate-50">
+            <div className="w-full md:w-1/3 aspect-[4/5] rounded-3xl overflow-hidden shadow-lg bg-orange-50/50">
               <img 
                 src={getImageUrl("img_hebammen_section_home", "/hebammen_section.png")} 
                 alt="Schwangere Frau in der Hebammenpraxis" 
@@ -540,7 +540,7 @@ export default function Home() {
                   <li className="flex items-start gap-3 text-muted-foreground"><Check className="w-5 h-5 text-accent shrink-0"/> Stressreduktion, Entgiftung und Darmsanierung als Vorbereitung</li>
                   <li className="flex items-start gap-3 text-muted-foreground"><Check className="w-5 h-5 text-accent shrink-0"/> Stabilisierende Begleitung vor und nach IVF-Eingriffen</li>
                 </ul>
-                <div className="bg-[#fff08a]/40 rounded-2xl p-6 border border-yellow-200/50 mt-8">
+                <div className="bg-[#fde4c8]/40 rounded-2xl p-6 border border-[#fde4c8] mt-8">
                   <h4 className="font-bold text-primary mb-2">Du bist nicht allein</h4>
                   <p className="text-sm text-muted-foreground mb-4">Gemeinsam optimieren wir die funktionellen Parameter in deinem Zellstoffwechsel.</p>
                   <Link to={ROUTE_PATHS.CONTACT} className="inline-flex bg-accent text-white px-6 py-2.5 rounded-lg font-bold hover:bg-accent/90 transition-all text-sm items-center gap-2">
@@ -548,7 +548,7 @@ export default function Home() {
                   </Link>
                 </div>
             </div>
-            <div className="w-full lg:w-5/12 aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-lg bg-slate-50">
+            <div className="w-full lg:w-5/12 aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-lg bg-orange-50/50">
               <img 
                 src={getImageUrl("img_kinderwunsch_section_home", "/kinderwunsch_section.png")} 
                 alt="Kinderwunsch – Hoffnung und Geborgenheit" 
@@ -565,7 +565,7 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="flex flex-col md:flex-row gap-16 items-center">
             <div className="w-full md:w-5/12">
-              <div className="aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-xl border border-border/50 bg-slate-50">
+              <div className="aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-xl border border-border/50 bg-orange-50/50">
                 <img 
                   src={getImageUrl("img_portrait_angela", "/angela_portrait.png")} 
                   alt="Angela Deschner – Hebamme und Heilpraktikerin" 
@@ -697,7 +697,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-[#fff08a]/30 rounded-[2.5rem] p-8 md:p-12 border border-yellow-200/50">
+            <div className="bg-[#fde4c8]/30 rounded-[2.5rem] p-8 md:p-12 border border-[#fde4c8]">
               <div className="flex items-start gap-6 mb-8">
                 <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-accent shrink-0 shadow-sm border border-border/30"><MapPin className="w-6 h-6"/></div>
                 <div>

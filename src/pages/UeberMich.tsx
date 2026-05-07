@@ -2,21 +2,7 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { ROUTE_PATHS } from "@/lib/index";
-import { 
-  CheckCircle2, 
-  GraduationCap, 
-  Clock, 
-  Award, 
-  Heart, 
-  Leaf, 
-  Microscope, 
-  Globe, 
-  ArrowRight,
-  BookOpen,
-  CalendarDays,
-  ShieldCheck,
-  Star
-} from "lucide-react";
+import { MapPin, Mail, Award, Microscope, Star, CheckCircle2, Heart, ShieldCheck, Clock, Sparkles, User, GraduationCap, ArrowRight, Activity, Leaf, CalendarDays } from "lucide-react";
 import { motion } from "framer-motion";
 import { useSiteImages } from "@/hooks/useSiteImages";
 
@@ -98,7 +84,7 @@ export default function UeberMich() {
                   className="w-full h-full object-cover rounded-[2.5rem]" 
                 />
               ) : (
-                <div className="w-full h-full bg-slate-50 rounded-[2.5rem] flex items-center justify-center border-2 border-dashed border-primary/10 text-muted-foreground flex-col gap-3 relative z-10">
+                <div className="w-full h-full bg-accent/5 rounded-[2.5rem] flex items-center justify-center border-2 border-dashed border-primary/10 text-muted-foreground flex-col gap-3 relative z-10">
                   <Heart className="w-12 h-12 text-primary/20" />
                   <span className="font-serif text-lg text-primary/60">Porträt Angela Deschner</span>
                   <span className="text-xs uppercase tracking-widest opacity-50">(Bild im Admin-Bereich hochladen)</span>
@@ -117,10 +103,13 @@ export default function UeberMich() {
               <h2 className="text-3xl font-serif text-primary mb-6 sticky top-32">Wer bin ich?</h2>
               <div className="hidden md:flex flex-col gap-4">
                 <div className="w-16 h-16 rounded-full bg-orange-50 flex items-center justify-center text-accent">
-                  <Leaf className="w-8 h-8" />
+                  <Sparkles className="w-8 h-8" />
                 </div>
-                <div className="w-16 h-16 rounded-full bg-green-50 flex items-center justify-center text-green-600">
-                  <Globe className="w-8 h-8" />
+                <div className="w-16 h-16 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+                  <Heart className="w-8 h-8" />
+                </div>
+                <div className="w-16 h-16 rounded-full bg-orange-50 flex items-center justify-center text-accent">
+                  <GraduationCap className="w-8 h-8" />
                 </div>
               </div>
             </div>
@@ -159,10 +148,10 @@ export default function UeberMich() {
             {[
               { icon: <ShieldCheck className="text-accent w-8 h-8"/>, title: "Staatl. geprüfte Hebamme", desc: "Seit 1992. 10 Jahre Kreißsaalarbeit, über 500 begleitete Geburten. Fachliche Schulung in St. Petersburg." },
               { icon: <Award className="text-primary w-8 h-8"/>, title: "Heilpraktikerin", desc: "Amtsärztlich geprüft (2016). Ganzheitliche Ursachenforschung und funktionelle Medizin." },
-              { icon: <Microscope className="text-blue-600 w-8 h-8"/>, title: "Mitochondriale Medizin", desc: "Zertifizierte IHHT-Therapeutin (IGAF e.V.) und geprüfte Vitalstoffberaterin." },
-              { icon: <Star className="text-yellow-600 w-8 h-8"/>, title: "Master of Acupuncture", desc: "Fundierte Ausbildung (2013), speziell für Frauenheilkunde und Kinderwunsch." },
-              { icon: <CheckCircle2 className="text-green-600 w-8 h-8"/>, title: "Chelat-Therapeutin", desc: "Ausbildung bei der DACT (2023). Spezialisiert auf Schwermetallausleitung und Entgiftung." },
-              { icon: <Heart className="text-rose-500 w-8 h-8"/>, title: "Ästhetik & Anti-Aging", desc: "Fachfortbildung zur Ästhetik-Therapeutin (2024). Natürliche Konzepte für Ausstrahlung und Wellness." },
+              { icon: <Sparkles className="text-accent w-8 h-8"/>, title: "Mitochondriale Medizin", desc: "Zertifizierte IHHT-Therapeutin (IGAF e.V.) und geprüfte Vitalstoffberaterin." },
+              { icon: <Star className="text-primary w-8 h-8"/>, title: "Master of Acupuncture", desc: "Fundierte Ausbildung (2013), speziell für Frauenheilkunde und Kinderwunsch." },
+              { icon: <CheckCircle2 className="text-accent w-8 h-8"/>, title: "Chelat-Therapeutin", desc: "Ausbildung bei der DACT (2023). Spezialisiert auf Schwermetallausleitung und Entgiftung." },
+              { icon: <Heart className="text-primary w-8 h-8"/>, title: "Ästhetik & Anti-Aging", desc: "Fachfortbildung zur Ästhetik-Therapeutin (2024). Natürliche Konzepte für Ausstrahlung und Wellness." },
             ].map((q, i) => (
               <div key={i} className="bg-white p-8 rounded-[2rem] shadow-sm border border-border hover:border-accent/30 transition-all group">
                 <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -222,10 +211,10 @@ export default function UeberMich() {
       </section>
 
       {/* Team Section */}
-      <section className="py-24 bg-[#fff08a]/20 border-t border-yellow-200/50">
+      <section className="py-24 bg-[#fde4c8]/20 border-t border-[#fde4c8]">
         <div className="container mx-auto px-4 max-w-5xl">
-          <div className="bg-white rounded-[3rem] p-8 md:p-16 shadow-xl border border-yellow-200 flex flex-col md:flex-row items-center gap-12 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#fff08a]/20 rounded-bl-[200px] -z-0" />
+          <div className="bg-white rounded-[3rem] p-8 md:p-16 shadow-xl border border-[#fde4c8] flex flex-col md:flex-row items-center gap-12 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#fde4c8]/20 rounded-bl-[200px] -z-0" />
             <div className="w-full md:w-1/3 relative z-10">
               {portraitRomy ? (
                 <img 
@@ -234,7 +223,7 @@ export default function UeberMich() {
                   className="w-full aspect-square object-cover rounded-[2.5rem] border border-primary/10" 
                 />
               ) : (
-                <div className="aspect-square bg-slate-50 rounded-[2.5rem] border border-primary/10 flex items-center justify-center flex-col text-muted-foreground p-6 text-center">
+                <div className="aspect-square bg-accent/5 rounded-[2.5rem] border border-primary/10 flex items-center justify-center flex-col text-muted-foreground p-6 text-center">
                   <Heart className="w-12 h-12 text-primary/20 mb-3" />
                   <span className="font-serif">Porträt Romy</span>
                   <span className="text-xs uppercase tracking-widest opacity-50">(Bild im Admin-Bereich hochladen)</span>

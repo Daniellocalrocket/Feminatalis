@@ -8,7 +8,7 @@ import SplitScreenHero from "@/components/SplitScreenHero";
 
 export default function Mikronaehrstoffe() {
   const reasonsForSupplements = [
-    { title: "Zellebene", desc: "Sichert einen optimalen Stoffwechsel auf Zellebene und somit die Funktion jedes Organs.", icon: <Zap className="text-accent" /> },
+    { title: "Zellebene", desc: "Sichert einen optimalen Stoffwechsel auf Zellebene und somit die Funktion jedes Organs.", icon: <Activity className="text-accent" /> },
     { title: "Krankheits-Schutz", desc: "Schützende, antioxidative Wirkung vieler Vitamine bewahrt deinen Körper vor Schäden.", icon: <Sparkles className="text-accent" /> },
     { title: "Erhöhter Bedarf", desc: "Stress, Medikamente wie die Pille oder Antibiotika und Umweltgifte rauben deinem Körper wichtige Depots.", icon: <Activity className="text-accent" /> },
     { title: "Nährstoffverlust", desc: "Lange Transportwege, Lagerung und unreife Ernten führen bei modernen Lebensmitteln oft zu Vitalstoffmangel.", icon: <Target className="text-accent" /> }

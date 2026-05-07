@@ -2,13 +2,13 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
-import { Compass, Check, ArrowRight, Activity, Zap, Wind, Moon, Sun, Leaf } from "lucide-react";
+import { Compass, Check, ArrowRight, Activity, Sparkles, Wind, Moon, Sun, Leaf } from "lucide-react";
 import SplitScreenHero from "@/components/SplitScreenHero";
 import PreisTransparenz from "@/components/PreisTransparenz";
 
 export default function TCM() {
   const pillars = [
-    { title: "Akupunktur", desc: "Regulation des Qi-Flusses durch hochpräzise Reize an Energie-Meridianpunkten.", icon: <Zap className="text-accent w-8 h-8" /> },
+    { title: "Akupunktur", desc: "Regulation des Qi-Flusses durch hochpräzise Reize an Energie-Meridianpunkten.", icon: <Sparkles className="text-accent w-8 h-8" /> },
     { title: "Ernährung (5 Elemente)", desc: "Natürliche Lebensmittel als Heilmittel – exakt angepasst an deinen Konstitutionstyp.", icon: <Leaf className="text-accent w-8 h-8" /> },
     { title: "Schröpfen & Moxa", desc: "Tiefes Lösen von massiven Blockaden und intensives Wärmen bei Kältesymptomen.", icon: <Sun className="text-accent w-8 h-8" /> }
   ];
@@ -50,7 +50,7 @@ export default function TCM() {
               </div>
               <div className="grid sm:grid-cols-2 gap-6 pt-6 text-left">
                   <div className="flex items-center gap-4 p-5 bg-white border border-border shadow-sm rounded-[2rem]">
-                    <div className="bg-muted/30 p-3 rounded-xl">
+                    <div className="bg-accent/5 p-3 rounded-xl">
                        <Sun className="text-accent w-6 h-6 shrink-0" />
                     </div>
                     <div>
@@ -59,7 +59,7 @@ export default function TCM() {
                     </div>
                   </div>
                   <div className="flex items-center gap-4 p-5 bg-white border border-border shadow-sm rounded-[2rem]">
-                    <div className="bg-muted/30 p-3 rounded-xl">
+                    <div className="bg-primary/5 p-3 rounded-xl">
                        <Moon className="text-primary w-6 h-6 shrink-0" />
                     </div>
                     <div>
@@ -73,7 +73,7 @@ export default function TCM() {
             <div className="grid sm:grid-cols-2 gap-6 text-left mt-8 lg:mt-0">
               {pillars.map((pillar, i) => (
                 <div key={i} className="bg-white p-10 rounded-[2.5rem] border border-border shadow-sm hover:border-accent transition-all group">
-                   <div className="mb-6 group-hover:drop-shadow-md transition-all bg-muted/20 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:bg-accent/10">{pillar.icon}</div>
+                   <div className="mb-6 group-hover:drop-shadow-md transition-all bg-accent/5 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:bg-accent/10">{pillar.icon}</div>
                    <h4 className="text-xl font-bold text-primary mb-4 text-left font-serif">{pillar.title}</h4>
                    <p className="text-sm text-muted-foreground leading-relaxed text-left font-medium">{pillar.desc}</p>
                 </div>

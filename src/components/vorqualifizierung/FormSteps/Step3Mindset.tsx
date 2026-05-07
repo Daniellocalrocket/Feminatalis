@@ -240,7 +240,7 @@ export default function Step3Mindset({ activeIndex }: Step3MindsetProps) {
               </div>
             ))}
           </RadioGroup>
-          {error && <p className="text-red-500 text-xs text-center font-bold">{error.message as string}</p>}
+          {error && <p className="text-accent text-xs text-center font-bold">{error.message as string}</p>}
         </motion.div>
       </AnimatePresence>
     </div>

@@ -5,56 +5,63 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Layout } from "@/components/Layout";
-import Home from "@/pages/Home";
-import Blog from "@/pages/Blog";
-import BlogPostDetails from "@/pages/BlogPostDetails";
-import FAQ from "@/pages/FAQ";
-import Contact from "@/pages/Contact";
-import Hebammenpraxis from "@/pages/hebammenpraxis/Index";
-import Geburtsvorbereitung from "@/pages/hebammenpraxis/Geburtsvorbereitung";
-import PremiumZellkraftKurs from "@/pages/hebammenpraxis/PremiumZellkraftKurs";
-import Zelltraining from "@/pages/hebammenpraxis/Zelltraining";
-import Wochenbettbetreuung from "@/pages/hebammenpraxis/Wochenbettbetreuung";
-import Akupunktur from "@/pages/hebammenpraxis/Akupunktur";
-import Rueckbildung from "@/pages/hebammenpraxis/Rueckbildung";
+import { lazy, Suspense } from "react";
 
-import Naturheilpraxis from "@/pages/naturheilpraxis/Index";
-import Labor from "@/pages/naturheilpraxis/Labor";
-import LongCovid from "@/pages/naturheilpraxis/LongCovid";
-import Infusionstherapie from "@/pages/naturheilpraxis/Infusionstherapie";
-import CO2Therapie from "@/pages/naturheilpraxis/CO2Therapie";
-import Darmsanierung from "@/pages/naturheilpraxis/Darmsanierung";
-import Hormontherapie from "@/pages/naturheilpraxis/Hormontherapie";
-import Schwermetall from "@/pages/naturheilpraxis/Schwermetall";
-import TCM from "@/pages/naturheilpraxis/TCM";
-import Kinderwunsch from "@/pages/Kinderwunsch";
-import UeberMich from "@/pages/UeberMich";
+// Lazy-loaded pages for code splitting & faster initial load
+const Home = lazy(() => import("@/pages/Home"));
+const Blog = lazy(() => import("@/pages/Blog"));
+const BlogPostDetails = lazy(() => import("@/pages/BlogPostDetails"));
+const FAQ = lazy(() => import("@/pages/FAQ"));
+const Contact = lazy(() => import("@/pages/Contact"));
+const Hebammenpraxis = lazy(() => import("@/pages/hebammenpraxis/Index"));
+const Geburtsvorbereitung = lazy(() => import("@/pages/hebammenpraxis/Geburtsvorbereitung"));
+const PremiumZellkraftKurs = lazy(() => import("@/pages/hebammenpraxis/PremiumZellkraftKurs"));
+const Zelltraining = lazy(() => import("@/pages/hebammenpraxis/Zelltraining"));
+const Wochenbettbetreuung = lazy(() => import("@/pages/hebammenpraxis/Wochenbettbetreuung"));
+const Akupunktur = lazy(() => import("@/pages/hebammenpraxis/Akupunktur"));
+const Rueckbildung = lazy(() => import("@/pages/hebammenpraxis/Rueckbildung"));
+const Naturheilpraxis = lazy(() => import("@/pages/naturheilpraxis/Index"));
+const Labor = lazy(() => import("@/pages/naturheilpraxis/Labor"));
+const LongCovid = lazy(() => import("@/pages/naturheilpraxis/LongCovid"));
+const Infusionstherapie = lazy(() => import("@/pages/naturheilpraxis/Infusionstherapie"));
+const CO2Therapie = lazy(() => import("@/pages/naturheilpraxis/CO2Therapie"));
+const Darmsanierung = lazy(() => import("@/pages/naturheilpraxis/Darmsanierung"));
+const Hormontherapie = lazy(() => import("@/pages/naturheilpraxis/Hormontherapie"));
+const Schwermetall = lazy(() => import("@/pages/naturheilpraxis/Schwermetall"));
+const TCM = lazy(() => import("@/pages/naturheilpraxis/TCM"));
+const Kinderwunsch = lazy(() => import("@/pages/Kinderwunsch"));
+const UeberMich = lazy(() => import("@/pages/UeberMich"));
+const Allergie = lazy(() => import("@/pages/naturheilpraxis/Allergie"));
+const BrainLight = lazy(() => import("@/pages/naturheilpraxis/BrainLight"));
+const Mitochondrien = lazy(() => import("@/pages/naturheilpraxis/Mitochondrien"));
+const Homoeopathie = lazy(() => import("@/pages/naturheilpraxis/Homoeopathie"));
+const Blutegel = lazy(() => import("@/pages/naturheilpraxis/Blutegel"));
+const Lasertherapie = lazy(() => import("@/pages/naturheilpraxis/Lasertherapie"));
+const Beschwerden = lazy(() => import("@/pages/hebammenpraxis/Beschwerden"));
+const Mikronaehrstoffe = lazy(() => import("@/pages/hebammenpraxis/Mikronaehrstoffe"));
+const Vorqualifizierung = lazy(() => import("@/pages/Vorqualifizierung"));
+const ZellkraftRoadmap = lazy(() => import("@/pages/kinderwunsch/ZellkraftRoadmap"));
+const CoursesOverview = lazy(() => import("@/pages/CoursesOverview"));
+const EventBooking = lazy(() => import("@/pages/EventBooking"));
+const Impressum = lazy(() => import("@/pages/Impressum"));
+const Datenschutz = lazy(() => import("@/pages/Datenschutz"));
+const Preisliste = lazy(() => import("@/pages/Preisliste"));
+const AdminLogin = lazy(() => import("@/pages/admin/Login"));
+const AdminDashboard = lazy(() => import("@/pages/admin/Dashboard"));
+const AdminLeads = lazy(() => import("@/pages/admin/Leads"));
+const AdminEvents = lazy(() => import("@/pages/admin/Events"));
+const AdminBlog = lazy(() => import("@/pages/admin/Blog"));
+const AdminSettings = lazy(() => import("@/pages/admin/Settings"));
+const AdminImages = lazy(() => import("@/pages/admin/Images"));
 
-// New Pages
-import Allergie from "@/pages/naturheilpraxis/Allergie";
-import BrainLight from "@/pages/naturheilpraxis/BrainLight";
-import Mitochondrien from "@/pages/naturheilpraxis/Mitochondrien";
-import Homoeopathie from "@/pages/naturheilpraxis/Homoeopathie";
-import Blutegel from "@/pages/naturheilpraxis/Blutegel";
-import Lasertherapie from "@/pages/naturheilpraxis/Lasertherapie";
-import Beschwerden from "@/pages/hebammenpraxis/Beschwerden";
-import Mikronaehrstoffe from "@/pages/hebammenpraxis/Mikronaehrstoffe";
-import Vorqualifizierung from "@/pages/Vorqualifizierung";
-import ZellkraftRoadmap from "@/pages/kinderwunsch/ZellkraftRoadmap";
-import CoursesOverview from "@/pages/CoursesOverview";
-import EventBooking from "@/pages/EventBooking";
-import Impressum from "@/pages/Impressum";
-import Datenschutz from "@/pages/Datenschutz";
-import Preisliste from "@/pages/Preisliste";
-
-// Admin Pages
-import AdminLogin from "@/pages/admin/Login";
-import AdminDashboard from "@/pages/admin/Dashboard";
-import AdminLeads from "@/pages/admin/Leads";
-import AdminEvents from "@/pages/admin/Events";
-import AdminBlog from "@/pages/admin/Blog";
-import AdminSettings from "@/pages/admin/Settings";
-import AdminImages from "@/pages/admin/Images";
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center bg-background">
+    <div className="flex flex-col items-center gap-4">
+      <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+      <p className="text-sm text-muted-foreground font-medium">Seite wird geladen…</p>
+    </div>
+  </div>
+);
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -77,8 +84,9 @@ const App = () => {
           closeButton
         />
         <BrowserRouter>
-          <Layout>
-            <Routes>
+          <Suspense fallback={<PageLoader />}>
+            <Layout>
+              <Routes>
               <Route 
                 path={ROUTE_PATHS.HOME} 
                 element={<Home />} 
@@ -270,7 +278,8 @@ const App = () => {
                 element={<Home />} 
               />
             </Routes>
-          </Layout>
+            </Layout>
+          </Suspense>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

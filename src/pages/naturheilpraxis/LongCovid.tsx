@@ -58,9 +58,9 @@ export default function LongCovid() {
               <h3 className="font-serif text-2xl text-primary mb-3 font-bold">Post-COVID</h3>
               <p className="text-sm font-medium text-muted-foreground leading-relaxed text-left">Bei einer komplexen Symptomatik, die auch 12 Wochen nach der Infektion unverändert besteht.</p>
             </div>
-            <div className="p-10 bg-red-50 rounded-3xl border border-red-100 shadow-sm group hover:border-red-300 transition-all text-left">
-              <h3 className="font-serif text-2xl text-destructive mb-3 font-bold flex items-center gap-2"><ShieldAlert className="w-6 h-6" /> Post-Vakzin</h3>
-              <p className="text-sm font-medium text-red-900/70 leading-relaxed text-left">Schwerwiegende, anhaltende Nebenwirkungen nach einer Corona-Impfung (oft Tage bis Monate später).</p>
+            <div className="p-10 bg-[#fff9f2] rounded-3xl border border-border shadow-sm group hover:border-primary transition-all text-left">
+              <h3 className="font-serif text-2xl text-primary mb-3 font-bold flex items-center gap-2"><ShieldAlert className="w-6 h-6 text-accent" /> Post-Vakzin</h3>
+              <p className="text-sm font-medium text-muted-foreground leading-relaxed text-left">Schwerwiegende, anhaltende Nebenwirkungen nach einer Corona-Impfung (oft Tage bis Monate später).</p>
             </div>
           </div>
 

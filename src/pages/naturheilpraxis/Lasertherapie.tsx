@@ -3,7 +3,7 @@ import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
 import PreisTransparenz from "@/components/PreisTransparenz";
-import { Zap, CheckCircle2, ArrowRight, FlaskConical, HeartPulse, Sun, ShieldCheck } from "lucide-react";
+import { Zap, CheckCircle2, ArrowRight, FlaskConical, HeartPulse, Sun, ShieldCheck, Sparkles } from "lucide-react";
 import SplitScreenHero from "@/components/SplitScreenHero";
 
 export default function Lasertherapie() {
@@ -59,7 +59,7 @@ export default function Lasertherapie() {
               {laserEffekte.map((eff, i) => (
                 <div key={i} className="bg-white p-8 rounded-3xl border border-border shadow-sm hover:border-accent transition-all group">
                    <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors text-left">
-                      <Zap className="text-accent w-6 h-6 text-left" />
+                      <Sparkles className="text-accent w-6 h-6 text-left" />
                    </div>
                    <h4 className="font-bold text-primary mb-3 text-left font-serif">{eff.title}</h4>
                    <p className="text-xs text-muted-foreground leading-relaxed text-left">{eff.desc}</p>

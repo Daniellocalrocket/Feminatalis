@@ -54,12 +54,12 @@ export default function Step4Final() {
                   htmlFor="dataConsent" 
                   className="text-sm font-bold text-primary cursor-pointer flex items-center gap-2"
                 >
-                  <ShieldCheck className="w-4 h-4 text-green-600" /> Datenschutz & Kontakt *
+                  <ShieldCheck className="w-4 h-4 text-accent" /> Datenschutz & Kontakt *
                 </Label>
                 <p className="text-xs text-muted-foreground leading-relaxed">
                   Ich stimme der <Link to={ROUTE_PATHS.DATENSCHUTZ} className="underline hover:text-primary transition-colors">Datenschutzerklärung</Link> zu und bin einverstanden, dass meine Daten zum Zweck der Kontaktaufnahme verarbeitet werden.
                 </p>
-                {errors.dataConsent && <p className="text-red-500 text-[10px] font-bold">{errors.dataConsent.message}</p>}
+                {errors.dataConsent && <p className="text-accent text-[10px] font-bold">{errors.dataConsent.message}</p>}
               </div>
            </div>
 

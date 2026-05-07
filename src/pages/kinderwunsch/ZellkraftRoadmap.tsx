@@ -3,7 +3,7 @@ import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { ROUTE_PATHS } from "@/lib/index";
 import {
-  Zap,
+  Sparkles,
   Target,
   Brain,
   Settings2,
@@ -14,7 +14,6 @@ import {
   Timer,
   LineChart,
   MessageSquare,
-  Sparkles,
   FileText
 } from "lucide-react";
 import { motion } from "framer-motion";
@@ -116,7 +115,7 @@ export default function ZellkraftRoadmap() {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Google-Diagnosen, YouTube-Tipps und der ständige Druck, „sich einfach nur zu entspannen“. Die meisten Frauen mit Kinderwunsch leiden nicht unter mangelndem Wissen, sondern unter massiver <strong className="text-primary">Informationsüberflutung</strong> und einer lähmenden Handlungsparalyse.
               </p>
-              <div className="p-8 bg-slate-50 border-l-4 border-accent rounded-r-3xl italic text-primary/80">
+              <div className="p-8 bg-accent/5 border-l-4 border-accent rounded-r-3xl italic text-primary/80">
                 "Wir verkaufen kein Wissen. Wir verkaufen Orientierung und Entscheidungssicherheit."
               </div>
             </motion.div>
@@ -171,7 +170,7 @@ export default function ZellkraftRoadmap() {
                 transition={{ delay: i * 0.1 }}
                 className="group p-10 bg-white rounded-[3rem] border border-border hover:border-accent hover:shadow-2xl hover:shadow-accent/5 transition-all duration-500 h-full flex flex-col"
               >
-                <div className="w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center text-primary mb-8 group-hover:scale-110 group-hover:bg-accent group-hover:text-white transition-all duration-500">
+                <div className="w-16 h-16 rounded-2xl bg-accent/5 flex items-center justify-center text-primary mb-8 group-hover:scale-110 group-hover:bg-accent group-hover:text-white transition-all duration-500">
                   <usp.icon size={32} strokeWidth={1.5} />
                 </div>
                 <div className="mb-4">
@@ -244,9 +243,9 @@ export default function ZellkraftRoadmap() {
             <div className="space-y-6">
               <h4 className="text-primary font-bold uppercase tracking-widest text-sm opacity-50">Was du bei uns nicht findest</h4>
               <ul className="space-y-4">
-                <li className="flex gap-3 text-muted-foreground/60"><div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 shrink-0" /> Keine esoterischen Heilsversprechen ("In 6 Wochen schwanger").</li>
-                <li className="flex gap-3 text-muted-foreground/60"><div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 shrink-0" /> Keine Schuldzuweisungen (Es liegt NICHT nur an deinem Stress).</li>
-                <li className="flex gap-3 text-muted-foreground/60"><div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 shrink-0" /> Keine künstliche Panikmache oder Hype-Marketing.</li>
+                <li className="flex gap-3 text-muted-foreground/60"><div className="w-1.5 h-1.5 rounded-full bg-primary/20 mt-2 shrink-0" /> Keine esoterischen Heilsversprechen ("In 6 Wochen schwanger").</li>
+                <li className="flex gap-3 text-muted-foreground/60"><div className="w-1.5 h-1.5 rounded-full bg-primary/20 mt-2 shrink-0" /> Keine Schuldzuweisungen (Es liegt NICHT nur an deinem Stress).</li>
+                <li className="flex gap-3 text-muted-foreground/60"><div className="w-1.5 h-1.5 rounded-full bg-primary/20 mt-2 shrink-0" /> Keine künstliche Panikmache oder Hype-Marketing.</li>
               </ul>
             </div>
           </div>

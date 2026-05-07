@@ -31,7 +31,7 @@ export default function Step1Area() {
                 "p-6 rounded-[2rem] border-2 text-left transition-all duration-300 group relative overflow-hidden h-full flex flex-col justify-between",
                 isSelected 
                   ? "border-accent bg-accent/5 ring-4 ring-accent/10" 
-                  : "border-primary/5 bg-white hover:border-primary/20 hover:bg-muted/30"
+                  : "border-primary/5 bg-white hover:border-primary/20 hover:bg-orange-50/50"
               )}
             >
               <div>
@@ -60,7 +60,7 @@ export default function Step1Area() {
       </div>
       
       {errors.areas && (
-        <p className="text-red-500 text-sm font-bold text-center mt-4">
+        <p className="text-accent text-sm font-bold text-center mt-4">
           {errors.areas.message}
         </p>
       )}

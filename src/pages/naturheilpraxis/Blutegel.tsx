@@ -2,7 +2,7 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
-import { Activity, ShieldCheck, ArrowRight, Heart, Droplets, Zap } from "lucide-react";
+import { Activity, ShieldCheck, ArrowRight, Heart, Droplets, Zap, Sparkles } from "lucide-react";
 import SplitScreenHero from "@/components/SplitScreenHero";
 import PreisTransparenz from "@/components/PreisTransparenz";
 import { motion } from "framer-motion";
@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 export default function Blutegel() {
   const vorteile = [
     { title: "Entzündungshemmung", desc: "Natürliche Enzyme im Speichel des Egels wirken stark gegen Entzündungen und Schwellungen.", icon: Droplets },
-    { title: "Schmerzlinderung", desc: "Effektive Hilfe bei Arthrose, Gelenkschmerzen und chronischen Entzündungsprozessen.", icon: Zap },
+    { title: "Schmerzlinderung", desc: "Effektive Hilfe bei Arthrose, Gelenkschmerzen und chronischen Entzündungsprozessen.", icon: Sparkles },
     { title: "Durchblutung", desc: "Sanfte Blutverdünnung und Verbesserung der Mikrozirkulation im behandelten Gewebe.", icon: Activity },
     { title: "Detox-Effekt", desc: "Lokaler Aderlass fördert die Ausscheidung von Stoffwechselendprodukten und Schlacken.", icon: Heart }
   ];

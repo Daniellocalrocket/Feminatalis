@@ -72,7 +72,7 @@ export default function PremiumZellkraftKurs() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-600 text-xs font-bold tracking-widest uppercase mb-6 shadow-sm">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-primary text-xs font-bold tracking-widest uppercase mb-6 shadow-sm">
                 Der Status Quo
               </div>
               <h2 className="text-3xl md:text-5xl font-serif text-primary mb-6 leading-[1.15]">
@@ -141,9 +141,9 @@ export default function PremiumZellkraftKurs() {
               <div className="text-sm font-bold text-accent tracking-wide mb-6">Biologische Wahrheit statt Mythen</div>
               
               <ul className="space-y-3 mb-6 flex-grow">
-                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" /> Warum „Guter Hoffnung sein“ eine präzise Strategie erfordert</li>
-                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" /> Entlarvung populärer Ernährungsmythen: Die Wahrheit über fötale Baustoffe</li>
-                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" /> Wie deine Mahlzeiten die genetische Expression deines Babys manipulieren</li>
+                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-accent shrink-0" /> Warum „Guter Hoffnung sein“ eine präzise Strategie erfordert</li>
+                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-accent shrink-0" /> Entlarvung populärer Ernährungsmythen: Die Wahrheit über fötale Baustoffe</li>
+                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-accent shrink-0" /> Wie deine Mahlzeiten die genetische Expression deines Babys manipulieren</li>
               </ul>
               
               <div className="pt-4 border-t border-border mt-auto">
@@ -163,9 +163,9 @@ export default function PremiumZellkraftKurs() {
               <div className="text-sm font-bold text-accent tracking-wide mb-6">Mitochondrien & Fötale Energie</div>
               
               <ul className="space-y-3 mb-6 flex-grow">
-                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" /> Das versteckte zelluläre Kraftwerk, das über gesundes Wachstum entscheidet</li>
-                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" /> Identifikation tückischer, vermeintlich „gesunder“ Alltagsgifte, die Energie drosseln</li>
-                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" /> Gezielte Hebel und Rhythmen zur massiven Steigerung der fötalen Energie</li>
+                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-accent shrink-0" /> Das versteckte zelluläre Kraftwerk, das über gesundes Wachstum entscheidet</li>
+                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-accent shrink-0" /> Identifikation tückischer, vermeintlich „gesunder“ Alltagsgifte, die Energie drosseln</li>
+                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-accent shrink-0" /> Gezielte Hebel und Rhythmen zur massiven Steigerung der fötalen Energie</li>
               </ul>
               
               <div className="pt-4 border-t border-border mt-auto">
@@ -185,9 +185,9 @@ export default function PremiumZellkraftKurs() {
               <div className="text-sm font-bold text-accent tracking-wide mb-6">Gehirn-, Retina- & Organentwicklung</div>
               
               <ul className="space-y-3 mb-6 flex-grow">
-                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" /> Das essentielle Nährstoff-Duo für die ungestörte kognitive Entwicklung deines Kindes</li>
-                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" /> Kritische Kofaktoren für robuste Nervenisolierung und fehlerfreien Knochenaufbau</li>
-                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" /> Radikale Absicherung gegen versteckte strukturelle Defizite</li>
+                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-accent shrink-0" /> Das essentielle Nährstoff-Duo für die ungestörte kognitive Entwicklung deines Kindes</li>
+                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-accent shrink-0" /> Kritische Kofaktoren für robuste Nervenisolierung und fehlerfreien Knochenaufbau</li>
+                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-accent shrink-0" /> Radikale Absicherung gegen versteckte strukturelle Defizite</li>
               </ul>
               
               <div className="pt-4 border-t border-border mt-auto">
@@ -207,9 +207,9 @@ export default function PremiumZellkraftKurs() {
               <div className="text-sm font-bold text-accent tracking-wide mb-6">Das biochemische Gleichgewicht</div>
               
               <ul className="space-y-3 mb-6 flex-grow">
-                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" /> Die verheerenden Effekte hormoneller Achterbahnfahrten auf dein Baby</li>
-                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" /> Warum dein Stoffwechsel plötzlich in den entzündlichen „Überwinterungsmodus“ kippt</li>
-                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" /> Eine Ernährungssystematik, die hormonelle Stabilität ohne lästigen Verzicht garantiert</li>
+                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-accent shrink-0" /> Die verheerenden Effekte hormoneller Achterbahnfahrten auf dein Baby</li>
+                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-accent shrink-0" /> Warum dein Stoffwechsel plötzlich in den entzündlichen „Überwinterungsmodus“ kippt</li>
+                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-accent shrink-0" /> Eine Ernährungssystematik, die hormonelle Stabilität ohne lästigen Verzicht garantiert</li>
               </ul>
               
               <div className="pt-4 border-t border-border mt-auto">
@@ -229,9 +229,9 @@ export default function PremiumZellkraftKurs() {
               <div className="text-sm font-bold text-accent tracking-wide mb-6">Nervensystem & Geburtsreife</div>
               
               <ul className="space-y-3 mb-6 flex-grow">
-                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" /> Geheime Zusammenhänge: Wie der unbewusste Kampfmodus die Blutzufuhr abdreht</li>
-                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" /> Kurz-Protokolle zur blitzschnellen Signal-Umschaltung des zentralen Nervensystems</li>
-                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" /> Neurobiologische Hebel für maximale zelluläre Regeneration in der Nacht</li>
+                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-accent shrink-0" /> Geheime Zusammenhänge: Wie der unbewusste Kampfmodus die Blutzufuhr abdreht</li>
+                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-accent shrink-0" /> Kurz-Protokolle zur blitzschnellen Signal-Umschaltung des zentralen Nervensystems</li>
+                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-accent shrink-0" /> Neurobiologische Hebel für maximale zelluläre Regeneration in der Nacht</li>
               </ul>
               
               <div className="pt-4 border-t border-border mt-auto">
@@ -251,9 +251,9 @@ export default function PremiumZellkraftKurs() {
               <div className="text-sm font-bold text-accent tracking-wide mb-6">Entscheidungssicherheit & 4. Trimester</div>
               
               <ul className="space-y-3 mb-6 flex-grow">
-                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" /> Dein psychologischer Panzer: Die Struktur-Matrix zur absoluten Souveränität</li>
-                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" /> Welche exakten klinischen Werte deine Stillzeit und Heilung definitiv garantieren</li>
-                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" /> Ein Fahrplan gegen den "hormonellen Absturz" nach den ersten 90 Tagen</li>
+                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-accent shrink-0" /> Dein psychologischer Panzer: Die Struktur-Matrix zur absoluten Souveränität</li>
+                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-accent shrink-0" /> Welche exakten klinischen Werte deine Stillzeit und Heilung definitiv garantieren</li>
+                <li className="flex items-start gap-2 text-sm text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-accent shrink-0" /> Ein Fahrplan gegen den "hormonellen Absturz" nach den ersten 90 Tagen</li>
               </ul>
               
               <div className="pt-4 border-t border-border mt-auto">

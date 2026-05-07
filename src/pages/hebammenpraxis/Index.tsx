@@ -2,7 +2,7 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
-import { Battery, HeartPulse, Zap, ShieldCheck, Microscope, Award, ArrowRight, Activity, Thermometer, UserCheck } from "lucide-react";
+import { Battery, HeartPulse, Zap, ShieldCheck, Microscope, Award, ArrowRight, Activity, Thermometer, UserCheck, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import { useSiteImages } from "@/hooks/useSiteImages";
 
@@ -16,37 +16,95 @@ export default function Hebammenpraxis() {
         description="Interventionsfreie Geburt vorbereiten durch Zell-Energie. Angela, Hebamme & Heilpraktikerin mit 33 Jahren Erfahrung, optimiert deine Geburtskraft für maximale Sicherheit."
       />
       
-      {/* 1. Hero-Sektion (Der Einstieg) */}
-      <section className="relative pt-32 pb-48 text-center overflow-hidden">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src={getImageUrl("img_hero_hebammenpraxis", "https://images.unsplash.com/photo-1559839734-2b71f1e5982f?q=80&w=2000&auto=format&fit=crop")} 
-            alt="Hebammenpraxis Background" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-white/60 backdrop-blur-[1px]" />
-        </div>
+      {/* 1. Hero-Sektion (Premium & USP-Fokussiert) */}
+      <section className="relative pt-32 pb-24 lg:pt-48 lg:pb-40 overflow-hidden bg-[#FCFAF8]">
+        {/* Decorative Background Elements */}
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(circle_at_70%_30%,_rgba(240,125,0,0.08)_0%,_transparent_60%)] -z-10" />
+        <div className="absolute -top-24 -left-24 w-96 h-96 bg-primary/3 rounded-full blur-[100px] -z-10" />
 
-        <div className="container mx-auto px-4 relative z-10 max-w-5xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-7xl font-serif text-primary mb-8 leading-[1.1] [hyphens:auto] [overflow-wrap:anywhere] break-words">
-              Hebammenbegleitung im Wandel – <br className="hidden md:block" />
-              <span className="text-orange-600 italic">bewusst · vertieft · individuell</span>
-            </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto italic font-medium mb-12">
-              „Ich arbeite mit Frauen, die bereit sind, in Eigenverantwortung für ihre eigene und die Gesundheit ihrer Kinder zu handeln.“
-            </p>
-            <div className="flex flex-wrap justify-center gap-5">
-                <Link to={ROUTE_PATHS.CONTACT} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:bg-primary/95 hover:shadow-2xl transition-all shadow-xl flex items-center gap-3">
-                  <UserCheck size={20} /> Vorgespräch vereinbaren
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-border shadow-sm text-primary text-[11px] font-bold tracking-[0.2em] uppercase mb-8">
+                <Sparkles size={14} className="text-accent" /> Hebammenkunst trifft Zellbiologie
+              </div>
+
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-primary mb-8 leading-[1.05] tracking-tight">
+                Maximale <br />
+                <span className="text-accent italic font-light">Geburtskraft.</span>
+              </h1>
+
+              <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-2xl font-light">
+                Vom Prinzip Hoffnung zur biologischen Sicherheit. Wir optimieren deine <strong className="text-primary font-semibold">zelluläre Energie</strong> für eine interventionsfreie und selbstbestimmte Geburt.
+              </p>
+
+              <div className="grid sm:grid-cols-2 gap-6 mb-12">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0">
+                    <Award size={20} />
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-primary">33 Jahre Expertise</p>
+                    <p className="text-xs text-muted-foreground">Klinische Erfahrung & Hebammenhandwerk</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-primary/5 flex items-center justify-center text-primary shrink-0">
+                    <Battery size={20} />
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-primary">Zell-Power Fokus</p>
+                    <p className="text-xs text-muted-foreground">Mitochondrien-Optimierung für die Geburt</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-6">
+                <Link to={ROUTE_PATHS.CONTACT} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-primary/95 transition-all shadow-2xl hover:-translate-y-1 flex items-center justify-center gap-3 group">
+                  Vorgespräch vereinbaren <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </Link>
-            </div>
-          </motion.div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="relative z-10 aspect-[4/5] rounded-[4rem] overflow-hidden shadow-2xl border-[12px] border-white">
+                <img 
+                  src={getImageUrl("img_hero_hebammenpraxis", "/hebammenpraxis_hero.png")} 
+                  alt="Premium Hebammenbegleitung" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
+              </div>
+              
+              {/* Floating USP Card */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1, duration: 0.6 }}
+                className="absolute -bottom-10 -left-10 bg-white/90 backdrop-blur-md p-8 rounded-3xl shadow-2xl border border-white/50 max-w-[280px] z-20"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-white">
+                    <HeartPulse size={16} />
+                  </div>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-accent">Physiologische Überlegenheit</p>
+                </div>
+                <p className="text-lg font-serif text-primary leading-tight">„Sicherheit entsteht nicht durch Kontrolle, sondern durch Kraft.“</p>
+              </motion.div>
+
+              {/* Decorative Circle */}
+              <div className="absolute -top-12 -right-12 w-48 h-48 bg-accent/10 rounded-full blur-3xl -z-10" />
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -57,15 +115,15 @@ export default function Hebammenpraxis() {
             <div className="lg:col-span-7">
               <h2 className="text-4xl font-serif text-primary mb-8 leading-tight">
                 Mangel-Verwaltung vs. <br />
-                <span className="text-orange-600">Ressourcen-Optimierung</span>
+                <span className="text-accent">Ressourcen-Optimierung</span>
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
                   Die klassische Schwangerenvorsorge prüft meist nur, ob „nichts fehlt“. Doch für eine kraftvolle, interventionsfreie Geburt reicht das bloße Fehlen von Mängeln nicht aus. Du brauchst volle Reserven.
                 </p>
-                <div className="bg-orange-50 p-8 rounded-3xl border-l-8 border-orange-400 my-10">
+                <div className="bg-accent/5 p-8 rounded-3xl border-l-8 border-accent my-10">
                   <h3 className="text-primary font-bold text-xl mb-4 flex items-center gap-3">
-                    <Battery className="text-orange-600 w-8 h-8" />
+                    <Battery className="text-accent w-8 h-8" />
                     Die Zell-Akku-Metapher
                   </h3>
                   <p className="text-primary/80">
@@ -78,18 +136,18 @@ export default function Hebammenpraxis() {
               </div>
             </div>
             <div className="lg:col-span-5 relative">
-              <div className="bg-muted aspect-square rounded-[3rem] overflow-hidden shadow-2xl relative">
+              <div className="bg-accent/5 aspect-square rounded-[3rem] overflow-hidden shadow-2xl relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent" />
                 <div className="absolute inset-0 flex items-center justify-center p-12">
                    <div className="text-center">
-                      <Zap size={80} className="text-orange-600 mx-auto mb-6 opacity-30" />
+                      <Sparkles size={80} className="text-accent mx-auto mb-6 opacity-30" />
                       <p className="text-5xl font-serif text-primary font-bold mb-2">100%</p>
                       <p className="text-sm font-bold uppercase tracking-widest text-primary/60">Zell-Power Target</p>
                    </div>
                 </div>
               </div>
               <div className="absolute -bottom-8 -left-8 bg-white p-8 rounded-3xl shadow-xl border border-border max-w-[200px]">
-                <p className="text-xs font-bold text-orange-600 uppercase mb-2">The Focus</p>
+                <p className="text-xs font-bold text-accent uppercase mb-2">The Focus</p>
                 <p className="text-sm font-serif italic">„Sicherheit durch physiologische Überlegenheit.“</p>
               </div>
             </div>
@@ -98,7 +156,7 @@ export default function Hebammenpraxis() {
       </section>
 
       {/* 3. Die 3 Säulen der Hebammen-Begleitung */}
-      <section id="saeulen" className="py-32 bg-gray-50">
+      <section id="saeulen" className="py-32 bg-[#fff9f2]">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-20 max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6">Meine drei Säulen</h2>
@@ -108,27 +166,27 @@ export default function Hebammenpraxis() {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Säule 1 */}
             <div className="bg-white p-12 rounded-[3rem] border border-border hover:shadow-2xl transition-all group hover:-translate-y-2">
-              <div className="bg-blue-50 w-20 h-20 rounded-3xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform">
-                <ShieldCheck className="w-10 h-10 text-blue-600" />
+              <div className="bg-primary/5 w-20 h-20 rounded-3xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform">
+                <HeartPulse className="w-10 h-10 text-primary" />
               </div>
               <h3 className="text-2xl font-serif text-primary mb-2">Säule 1: Basis-Begleitung</h3>
-              <p className="text-blue-600 font-bold text-sm mb-6 uppercase tracking-wider">Kasse + Privat</p>
+              <p className="text-primary font-bold text-sm mb-6 uppercase tracking-wider">Kasse + Privat</p>
               <p className="text-muted-foreground mb-8 leading-relaxed">
                 <strong>„Sicherheit für den Start“</strong>: Fokus auf Vorbereitungskurse, die intensive Zeit im Wochenbett und Stillbegleitung. Klassische Expertise für den stabilen Rahmen.
               </p>
               <ul className="space-y-4 mb-10">
                 <li>
-                  <Link to={ROUTE_PATHS.VORBEREITUNG} className="flex items-center gap-3 text-sm font-medium hover:text-accent transition-colors">
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-600"/> Vorbereitungskurse
+                  <Link to={ROUTE_PATHS.GEBURTSVORBEREITUNG} className="flex items-center gap-3 text-sm font-medium hover:text-accent transition-colors">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary"/> Vorbereitungskurse
                   </Link>
                 </li>
                 <li>
                   <Link to={ROUTE_PATHS.WOCHENBETTBETREUUNG} className="flex items-center gap-3 text-sm font-medium hover:text-accent transition-colors">
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-600"/> Wochenbettbetreuung
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary"/> Wochenbettbetreuung
                   </Link>
                 </li>
                 <li className="flex items-center gap-3 text-sm font-medium hover:text-accent transition-colors">
-                  <div className="w-1.5 h-1.5 rounded-full bg-blue-600"/> Stillbegleitung
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary"/> Stillbegleitung
                 </li>
               </ul>
             </div>
@@ -161,31 +219,31 @@ export default function Hebammenpraxis() {
             <div className="bg-primary text-white p-12 rounded-[3rem] shadow-2xl relative overflow-hidden group hover:-translate-y-2 transition-all">
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-bl-[100px] -z-0" />
                <div className="bg-white/20 w-20 h-20 rounded-3xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform relative z-10">
-                <Microscope className="w-10 h-10 text-orange-200" />
+                <Sparkles className="w-10 h-10 text-[#fde4c8]" />
               </div>
               <h3 className="text-2xl font-serif mb-2 relative z-10">Säule 3: Das Zell-Protokoll</h3>
-              <p className="text-orange-200 font-bold text-sm mb-6 uppercase tracking-wider relative z-10">Premium / Privat</p>
+              <p className="text-[#fde4c8] font-bold text-sm mb-6 uppercase tracking-wider relative z-10">Premium / Privat</p>
               <p className="text-white/80 mb-8 leading-relaxed relative z-10">
                 <strong>„Maximale Leistung“</strong>: Die exklusive Vorbereitung durch Vollblut-Analyse, Infusionstherapie und IHHT. Das Ziel: Volle Power für den Endspurt.
               </p>
               <ul className="space-y-4 mb-10 relative z-10">
                 <li>
-                  <Link to={ROUTE_PATHS.LABOR} className="flex items-center gap-3 text-sm font-medium hover:text-orange-200 transition-colors">
-                    <div className="w-1.5 h-1.5 rounded-full bg-orange-200"/> Vollblut-Nährstoff-Analyse
+                  <Link to={ROUTE_PATHS.LABOR} className="flex items-center gap-3 text-sm font-medium hover:text-[#fde4c8] transition-colors">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#fde4c8]"/> Vollblut-Nährstoff-Analyse
                   </Link>
                 </li>
                 <li>
-                  <Link to={ROUTE_PATHS.INFUSIONSTHERAPIE} className="flex items-center gap-3 text-sm font-medium hover:text-orange-200 transition-colors">
-                    <div className="w-1.5 h-1.5 rounded-full bg-orange-200"/> Mitochondriale Infusionen
+                  <Link to={ROUTE_PATHS.INFUSIONSTHERAPIE} className="flex items-center gap-3 text-sm font-medium hover:text-[#fde4c8] transition-colors">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#fde4c8]"/> Mitochondriale Infusionen
                   </Link>
                 </li>
                 <li>
-                  <Link to={ROUTE_PATHS.ZELLTRAINING} className="flex items-center gap-3 text-sm font-medium hover:text-orange-200 transition-colors">
-                    <div className="w-1.5 h-1.5 rounded-full bg-orange-200"/> IHHT-Zelltraining (Hypoxie)
+                  <Link to={ROUTE_PATHS.ZELLTRAINING} className="flex items-center gap-3 text-sm font-medium hover:text-[#fde4c8] transition-colors">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#fde4c8]"/> IHHT-Zelltraining (Hypoxie)
                   </Link>
                 </li>
               </ul>
-              <Link to={ROUTE_PATHS.ZELLTRAINING} className="inline-flex items-center gap-2 text-orange-200 font-bold text-sm group-hover:gap-4 transition-all uppercase tracking-widest relative z-10">
+              <Link to={ROUTE_PATHS.ZELLTRAINING} className="inline-flex items-center gap-2 text-[#fde4c8] font-bold text-sm group-hover:gap-4 transition-all uppercase tracking-widest relative z-10">
                 Zum Protokoll <ArrowRight size={16} />
               </Link>
             </div>
@@ -198,13 +256,17 @@ export default function Hebammenpraxis() {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="flex flex-col lg:flex-row items-center gap-20">
             <div className="lg:w-1/2 relative">
-               <div className="absolute -top-10 -left-10 w-64 h-64 bg-orange-100 rounded-full blur-[100px] opacity-60 -z-10" />
+               <div className="absolute -top-10 -left-10 w-64 h-64 bg-accent/5 rounded-full blur-[100px] opacity-60 -z-10" />
                <div className="relative border-2 border-border p-4 rounded-[4rem] rotate-2">
-                 <div className="bg-muted aspect-[4/5] rounded-[3.5rem] flex items-center justify-center p-12">
-                    <UserCheck size={120} className="text-primary/20" />
-                 </div>
+                  <div className="aspect-[4/5] rounded-[3.5rem] overflow-hidden">
+                     <img 
+                       src={getImageUrl("img_portrait_angela_hebamme", "/angela_deschner.png")} 
+                       alt="Angela Deschner" 
+                       className="w-full h-full object-cover"
+                     />
+                  </div>
                  <div className="absolute -bottom-10 -right-10 bg-primary text-white p-10 rounded-3xl shadow-2xl max-w-[280px] -rotate-3">
-                    <Award size={48} className="text-orange-400 mb-4" />
+                    <Award size={48} className="text-accent mb-4" />
                     <p className="text-3xl font-serif font-bold mb-1">33 Jahre</p>
                     <p className="text-sm font-bold uppercase tracking-widest opacity-80">Berufserfahrung</p>
                  </div>
@@ -213,7 +275,7 @@ export default function Hebammenpraxis() {
             <div className="lg:w-1/2">
               <h2 className="text-4xl font-serif text-primary mb-8 leading-tight">
                 33 Jahre Expertise trifft <br />
-                <span className="text-orange-600">Funktionelle Medizin & Naturheilkunde</span>
+                <span className="text-accent">Funktionelle Medizin & Naturheilkunde</span>
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
@@ -224,7 +286,7 @@ export default function Hebammenpraxis() {
                 </p>
                 <div className="pt-8 border-t border-border mt-10">
                    <p className="text-primary font-bold text-xl mb-1">Angela Deschner</p>
-                   <p className="text-orange-600 font-bold uppercase tracking-widest text-xs">Hebamme & Heilpraktikerin</p>
+                   <p className="text-accent font-bold uppercase tracking-widest text-xs">Hebamme & Heilpraktikerin</p>
                 </div>
               </div>
             </div>
@@ -235,7 +297,7 @@ export default function Hebammenpraxis() {
       {/* Final CTA */}
       <section className="py-24 bg-background border-t border-border">
         <div className="container mx-auto px-4 max-w-4xl text-center">
-          <HeartPulse className="w-16 h-16 mx-auto mb-8 text-orange-600 opacity-20" />
+          <HeartPulse className="w-16 h-16 mx-auto mb-8 text-accent opacity-20" />
           <h2 className="text-4xl font-serif text-primary mb-6">Bist du bereit für maximale Geburtskraft?</h2>
           <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
             Investiere in die optimale Vorbereitung deiner körperlichen Ressourcen. Für eine Geburt aus eigener Stärke.

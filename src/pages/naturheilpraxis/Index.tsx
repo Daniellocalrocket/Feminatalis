@@ -2,7 +2,7 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
-import { Stethoscope, Droplet, Wind, Brain, Activity, Flame, Zap, ArrowRight, HeartPulse, Sparkles, Microscope, FlaskConical, Thermometer } from "lucide-react";
+import { Stethoscope, Droplet, Wind, Brain, Activity, Flame, Zap, ArrowRight, HeartPulse, Sparkles, Microscope, FlaskConical, Thermometer, ShieldCheck, Leaf } from "lucide-react";
 import { motion } from "framer-motion";
 import { useSiteImages } from "@/hooks/useSiteImages";
 
@@ -18,7 +18,7 @@ export default function Naturheilpraxis() {
   const therapien = [
     { title: "Infusionstherapie", desc: "Direkte Nährstoffflutung für maximale Zell-Energie.", path: ROUTE_PATHS.INFUSIONSTHERAPIE, icon: <Droplet className="w-6 h-6" /> },
     { title: "IHHT Zelltraining", desc: "Simulation von Höhentraining zur Regeneration der Mitochondrien.", path: ROUTE_PATHS.ZELLTRAINING, icon: <Wind className="w-6 h-6" /> },
-    { title: "Hämo-Laser-Therapie", desc: "Systemische Blutbestrahlung zur Aktivierung des Stoffwechsels.", path: ROUTE_PATHS.LASERTHERAPIE, icon: <Zap className="w-6 h-6" /> },
+    { title: "Hämo-Laser-Therapie", desc: "Systemische Blutbestrahlung zur Aktivierung des Stoffwechsels.", path: ROUTE_PATHS.LASERTHERAPIE, icon: <Sparkles className="w-6 h-6" /> },
     { title: "TCM & Akupunktur", desc: "Ganzheitliche Regulation nach der Lehre der 5 Elemente.", path: ROUTE_PATHS.TCM, icon: <Flame className="w-6 h-6" /> },
     { title: "Schwermetallausleitung", desc: "Chelat-Therapie zur Entgiftung bei chronischen Blockaden.", path: ROUTE_PATHS.SCHWERMETALL, icon: <FlaskConical className="w-6 h-6" /> },
     { title: "Blutegeltherapie", desc: "Biochemische Wirkung des Egelspeichels bei Entzündungen.", path: ROUTE_PATHS.BLUTEGEL, icon: <Thermometer className="w-6 h-6" /> }

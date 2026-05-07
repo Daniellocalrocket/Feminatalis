@@ -2,7 +2,7 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
-import { ClipboardList, Target, HeartHandshake, ArrowRight, Zap, Heart, Users, Activity, Droplets } from "lucide-react";
+import { ClipboardList, Target, HeartHandshake, ArrowRight, Zap, Heart, Users, Activity, Droplets, Sparkles } from "lucide-react";
 import SplitScreenHero from "@/components/SplitScreenHero";
 import PreisTransparenz from "@/components/PreisTransparenz";
 import { motion } from "framer-motion";
@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 export default function Kinderwunsch() {
   const bausteine = [
     { title: "Körpercheck & Labor", desc: "Mitochondrien-Funktion, Immunstatus, Hormone, Darmflora und Mikronährstoffe.", icon: ClipboardList },
-    { title: "(Ei)Zelltraining IHHT", desc: "Regeneration der Eizellkraftwerke für maximale Energie und optimale Voraussetzungen.", icon: Zap },
+    { title: "(Ei)Zelltraining IHHT", desc: "Regeneration der Eizellkraftwerke für maximale Energie und optimale Voraussetzungen.", icon: Sparkles },
     { title: "Hormonsystem", desc: "Phytotherapie und naturidentische Hormone, Ausleitung der Pille.", icon: Activity },
     { title: "Entgiftung & Milieu", desc: "Maßnahmen zur Entschlackung durch Homöopathie, Phytotherapie oder Infusionen.", icon: Droplets },
     { title: "Psychische Balance", desc: "Entspannungs-Förderung, Nervensystem-Regulation und Klärung der Blockaden.", icon: Heart },
@@ -63,14 +63,14 @@ export default function Kinderwunsch() {
             <div className="grid sm:grid-cols-2 gap-6">
               {[
                 { title: "Körpercheck & Labor", desc: "Mitochondrien-Funktion, Immunstatus, Hormone, Darmflora und Mikronährstoffe.", icon: ClipboardList, path: ROUTE_PATHS.LABOR },
-                { title: "(Ei)Zelltraining IHHT", desc: "Regeneration der Eizellkraftwerke für maximale Energie und optimale Voraussetzungen.", icon: Zap, path: ROUTE_PATHS.ZELLTRAINING },
+                { title: "(Ei)Zelltraining IHHT", desc: "Regeneration der Eizellkraftwerke für maximale Energie und optimale Voraussetzungen.", icon: Sparkles, path: ROUTE_PATHS.ZELLTRAINING },
                 { title: "Hormonsystem", desc: "Phytotherapie und naturidentische Hormone, Ausleitung der Pille.", icon: Activity, path: ROUTE_PATHS.HORMONTHERAPIE },
                 { title: "Entgiftung & Milieu", desc: "Maßnahmen zur Entschlackung durch Homöopathie, Phytotherapie oder Infusionen.", icon: Droplets, path: ROUTE_PATHS.INFUSIONSTHERAPIE },
                 { title: "Psychische Balance", desc: "Entspannungs-Förderung, Nervensystem-Regulation und Klärung der Blockaden.", icon: Heart, path: ROUTE_PATHS.TCM },
                 { title: "Erfolgs-Mindset", desc: "Mentale Blockaden erkennen und realistische Etappen-Ziele setzen.", icon: Target, path: ROUTE_PATHS.UEBER_MICH }
               ].map((item, i) => (
                 <Link to={item.path} key={i} className="bg-white p-10 rounded-[2.5rem] border border-border/50 shadow-sm flex flex-col group hover:border-accent hover:shadow-md transition-all h-full">
-                  <div className="bg-muted/30 w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent/10 transition-colors">
+                  <div className="bg-accent/5 w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent/10 transition-colors">
                     <item.icon className="text-accent w-7 h-7" />
                    </div>
                   <h4 className="font-bold text-primary mb-3 font-serif text-xl group-hover:text-accent transition-colors">{item.title}</h4>

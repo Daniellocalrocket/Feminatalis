@@ -2,7 +2,7 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
-import { Zap, ArrowRight, Activity, Target, Heart, Shield } from "lucide-react";
+import { Sparkles, ArrowRight, Activity, Target, Heart, Shield } from "lucide-react";
 import SplitScreenHero from "@/components/SplitScreenHero";
 import PreisTransparenz from "@/components/PreisTransparenz";
 
@@ -10,7 +10,7 @@ export default function Akupunktur() {
   const treatments = [
     { title: "Geburtsvorbereitung", desc: "Ab der 36. SSW zur Muttermundsreifung. Kann die Geburtsdauer nachweislich verkürzen.", icon: <Heart className="text-primary" /> },
     { title: "Schwangerschaftsbeschwerden", desc: "Effektiv bei Übelkeit (Hyperemesis), Ödemen, Sodbrennen und Rückenschmerzen.", icon: <Activity className="text-accent" /> },
-    { title: "NADA-Protokoll", desc: "Spezielle Ohrakupunktur zur Stressreduktion, bei Schlafstörungen oder Erschöpfung.", icon: <Zap className="text-accent" /> },
+    { title: "NADA-Protokoll", desc: "Spezielle Ohrakupunktur zur Stressreduktion, bei Schlafstörungen oder Erschöpfung.", icon: <Sparkles className="text-accent" /> },
     { title: "Orthopädie & Schmerz", desc: "Linderung bei Gelenkschmerzen, Migräne und muskulären Verspannungen.", icon: <Target className="text-primary" /> }
   ];
 
@@ -25,9 +25,9 @@ export default function Akupunktur() {
         badge="Heilung durch feine Impulse"
         title={<>Akupunktur <br /><span className="text-accent italic font-light">Tradition trifft Moderne</span></>}
         subtitle="Kleine Nadeln, große Wirkung – steril, nebenwirkungsarm und wissenschaftlich anerkannt. Gezielte & sanfte Regulation rund um Kinderwunsch & Geburt, sowie viele funktionelle Organ-Störungen."
-        imageSrc="/authentic_acupuncture_session_1778004927310.png"
+        imageSrc="/akupunktur_hero.png"
         imageAlt="Professionelle Akupunktur Behandlung"
-        imageKey="img_hero_tcm"
+        imageKey="img_hero_akupunktur"
       >
         <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
           Kostenfreie Vor-Analyse anfragen <ArrowRight size={20} />
@@ -67,7 +67,7 @@ export default function Akupunktur() {
 
           <div className="bg-primary text-white p-12 lg:p-20 rounded-[4rem] text-center shadow-2xl relative overflow-hidden mb-24">
              <div className="absolute bottom-0 right-0 p-8 text-white/5 rotate-12">
-                <Zap size={250} />
+                <Sparkles size={250} />
              </div>
              <h2 className="text-3xl lg:text-4xl font-serif mb-8 text-white font-bold">Das NADA-Protokoll</h2>
              <p className="text-lg opacity-80 mb-12 max-w-2xl mx-auto text-white">

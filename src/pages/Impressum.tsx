@@ -173,7 +173,7 @@ export default function Impressum() {
                   </span>
                   <div className="flex flex-wrap gap-2">
                     {["Fotolia", "Pixabay", "Canstockphoto", "IStockphoto", "Privat"].map(source => (
-                      <span key={source} className="bg-muted px-3 py-1 rounded-full text-[10px] font-medium text-muted-foreground">{source}</span>
+                      <span key={source} className="bg-primary/5 px-3 py-1 rounded-full text-[10px] font-medium text-primary/60">{source}</span>
                     ))}
                   </div>
                 </div>
