@@ -12,9 +12,9 @@ import {
   Target, 
   Heart,
   Clock,
-  Compass,
   CheckCircle2,
-  Lock
+  Lock,
+  Play
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
@@ -30,7 +30,6 @@ export default function CoursesOverview() {
     async function fetchData() {
       setIsLoading(true);
       try {
-        // Fetch events first
         const { data: eventsData, error: eventsError } = await supabase
           .from('events')
           .select('*')
@@ -40,7 +39,6 @@ export default function CoursesOverview() {
 
         if (eventsError) throw eventsError;
 
-        // Fetch stats separately
         const { data: statsData, error: statsError } = await supabase
           .from('event_stats')
           .select('*');
@@ -49,7 +47,6 @@ export default function CoursesOverview() {
           console.warn("Could not fetch event stats:", statsError);
         }
 
-        // Merge data
         if (eventsData) {
           const transformedData = eventsData.map((event: any) => {
             const stat = statsData?.find((s: any) => s.event_id === event.id);
@@ -118,23 +115,94 @@ export default function CoursesOverview() {
         description="Finde den richtigen Weg für dich. Von exklusiven Online-Programmen bis zu Live-Veranstaltungen in Bad Schönborn." 
       />
 
-      {/* Events Section - NOW STARTING AT THE TOP */}
+      {/* Online Programs - TOP SECTION */}
       <section className="pt-12 pb-20 lg:pt-16 lg:pb-24 bg-white border-b border-border/50 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-64 bg-accent/5 blur-[100px] -z-10" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 blur-[100px] -z-10" />
+        
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
-             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 text-primary text-xs font-bold tracking-widest uppercase mb-6 border border-primary/10">
-               <Compass size={14} /> Dein Wegbegleiter
-             </div>
-             <h1 className="text-4xl md:text-6xl font-serif text-primary mb-6 leading-[1.1]">
-               Kurse & <span className="text-accent italic font-light">Veranstaltungen</span>
-             </h1>
-             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-12">
-               Finde den Weg, der zu deiner aktuellen Phase passt.
-             </p>
-             <h2 className="text-2xl md:text-3xl font-serif text-primary/40 uppercase tracking-widest mb-8 border-t border-primary/5 pt-12">
-               Veranstaltungen & Termine
-             </h2>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-xs font-bold tracking-widest uppercase mb-6 border border-accent/20">
+              <Play size={14} /> Exklusiv online
+            </div>
+            <h1 className="text-4xl md:text-6xl font-serif text-primary mb-6 leading-[1.1]">
+              Premium <span className="text-accent italic font-light">Online-Programme</span>
+            </h1>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-12">
+              Deine bioenergetische Begleitung für maximale Fruchtbarkeit oder eine sichere Geburt – flexibel von zuhause.
+            </p>
+          </div>
+
+          <motion.div 
+            variants={containers}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="grid lg:grid-cols-2 gap-10"
+          >
+            {premiumCourses.map((course) => (
+              <motion.div
+                key={course.id}
+                variants={item}
+                whileHover={{ y: -5 }}
+                className="relative group bg-[#fff9f2] p-10 lg:p-12 rounded-[3.5rem] border border-border hover:border-accent/40 shadow-xl shadow-primary/5 transition-all flex flex-col"
+              >
+                <div className="absolute top-8 right-8">
+                  <Badge className={`bg-${course.color} text-white px-4 py-1.5 rounded-full text-[10px] uppercase font-black tracking-widest shadow-lg shadow-${course.color}/20`}>
+                    {course.badge}
+                  </Badge>
+                </div>
+
+                <div className={`w-16 h-16 rounded-3xl bg-${course.color}/10 flex items-center justify-center text-${course.color} mb-8 group-hover:scale-110 transition-transform`}>
+                  <course.icon size={32} strokeWidth={1.5} />
+                </div>
+
+                <div className="mb-4">
+                  <h3 className="text-xs font-bold text-accent uppercase tracking-[0.2em] mb-2">{course.subtitle}</h3>
+                  <h4 className="text-3xl lg:text-4xl font-serif text-primary leading-tight">{course.title}</h4>
+                </div>
+
+                <p className="text-muted-foreground mb-8 leading-relaxed text-lg">
+                  {course.description}
+                </p>
+
+                <div className="space-y-3 mb-10 flex-grow">
+                  {course.features.map((feature, i) => (
+                    <div key={i} className="flex items-center gap-3 text-primary/80 text-base font-medium">
+                      <CheckCircle2 size={18} className="text-accent shrink-0" />
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+
+                <Link 
+                  to={course.link} 
+                  className={`bg-${course.color} text-white w-full py-6 rounded-2xl font-bold text-center flex items-center justify-center gap-3 hover:translate-x-1 transition-all shadow-xl shadow-${course.color}/10 text-lg`}
+                >
+                  Jetzt starten <ArrowRight size={20} />
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <div className="mt-16 text-center">
+            <p className="text-sm text-muted-foreground">
+              Beide Programme sind auch als Gutschein erhältlich – perfekt zum Verschenken.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Events Section - NOW SECONDARY */}
+      <section className="py-20 lg:py-24 bg-white border-b border-border/50 relative overflow-hidden">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-2xl md:text-3xl font-serif text-primary/40 uppercase tracking-widest mb-4">
+              Oder live dabei sein
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Kurse & Veranstaltungen vor Ort in Bad Schönborn
+            </p>
           </div>
 
           {isLoading ? (
@@ -224,90 +292,12 @@ export default function CoursesOverview() {
         </div>
       </section>
 
-      {/* Psychology Teaser / Strategic Guide */}
-      <section className="py-20 bg-primary text-white overflow-hidden relative">
-         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_0%_0%,_rgba(255,255,255,0.05)_0%,_transparent_50%)]" />
-         <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
-            <Heart className="w-16 h-16 mx-auto mb-8 text-accent animate-pulse" />
-            <h2 className="text-3xl lg:text-4xl font-serif mb-8 text-white">Finde die Tiefe, die du <span className="text-accent italic">jetzt</span> brauchst.</h2>
-            <div className="grid md:grid-cols-2 gap-8 text-left bg-white/5 p-10 rounded-[3rem] border border-white/10 backdrop-blur-md">
-               <div className="space-y-4">
-                  <h4 className="font-bold text-accent uppercase tracking-widest text-xs">Der erste Impuls</h4>
-                  <p className="text-sm opacity-70">„Ich möchte die Praxis kennenlernen und einen Überblick über ein bestimmtes Thema bekommen.“</p>
-                  <p className="font-serif text-lg">→ Besuche ein Live-Event</p>
-               </div>
-               <div className="space-y-4 md:border-l md:border-white/10 md:pl-8">
-                  <h4 className="font-bold text-[#fde4c8] uppercase tracking-widest text-xs">Das Strategie-Upgrade</h4>
-                  <p className="text-sm opacity-70">„Ich möchte volle Souveränität, einen strategischen Plan und tiefgreifende biologische Optimierung.“</p>
-                  <p className="font-serif text-lg text-[#fde4c8]">→ Wähle ein Online-Programm</p>
-               </div>
-            </div>
-         </div>
-      </section>
-
-      {/* Online Programs */}
-      <section className="py-20 lg:py-24">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="flex items-center justify-between mb-16">
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-serif text-primary mb-2">Premium Online-Programme</h2>
-              <p className="text-muted-foreground underline decoration-accent/30 underline-offset-4">Maximale Flexibilität & biologische Tiefe</p>
-            </div>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-10">
-            {premiumCourses.map((course) => (
-              <motion.div
-                key={course.id}
-                whileHover={{ y: -5 }}
-                className="relative group bg-white p-10 rounded-[3.5rem] border border-border hover:border-accent/40 shadow-xl shadow-primary/5 transition-all flex flex-col h-full"
-              >
-                <div className="absolute top-8 right-8">
-                  <Badge className={`bg-${course.color} text-white px-4 py-1.5 rounded-full text-[10px] uppercase font-black tracking-widest shadow-lg shadow-${course.color}/20`}>
-                    {course.badge}
-                  </Badge>
-                </div>
-
-                <div className={`w-14 h-14 rounded-2xl bg-${course.color}/5 flex items-center justify-center text-${course.color} mb-8 group-hover:scale-110 transition-transform`}>
-                  <course.icon size={28} strokeWidth={1.5} />
-                </div>
-
-                <div className="mb-4">
-                  <h3 className="text-xs font-bold text-accent uppercase tracking-[0.2em] mb-2">{course.subtitle}</h3>
-                  <h4 className="text-3xl font-serif text-primary leading-tight">{course.title}</h4>
-                </div>
-
-                <p className="text-muted-foreground mb-8 leading-relaxed">
-                  {course.description}
-                </p>
-
-                <div className="space-y-3 mb-10 flex-grow">
-                  {course.features.map((feature, i) => (
-                    <div key={i} className="flex items-center gap-3 text-primary/80 text-sm font-medium">
-                      <CheckCircle2 size={16} className="text-accent shrink-0" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-
-                <Link 
-                  to={course.link} 
-                  className={`bg-${course.color} text-white w-full py-5 rounded-2xl font-bold text-center flex items-center justify-center gap-3 hover:translate-x-1 transition-all shadow-xl shadow-${course.color}/10`}
-                >
-                  Zum Programm <ArrowRight size={20} />
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Trust Quote */}
-      <section className="py-24 border-t border-border/50">
+      <section className="py-24 border-t border-border/50 bg-[#fff9f2]">
          <div className="container mx-auto px-4 text-center max-w-4xl">
             <div className="mb-12 relative">
                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-12">
-                  <span className="text-8xl font-serif text-accent/10">“</span>
+                 <span className="text-8xl font-serif text-accent/10">"</span>
                </div>
                <p className="text-2xl md:text-3xl font-serif italic text-primary leading-relaxed relative z-10">
                  Die beste Zeit, in deine Biologie zu investieren, war vor 90 Tagen. <br className="hidden md:block" />
@@ -316,8 +306,7 @@ export default function CoursesOverview() {
             </div>
             <div className="flex flex-col items-center">
                <div className="w-16 h-16 rounded-full bg-orange-50 mb-4 overflow-hidden border-2 border-white shadow-lg">
-                  {/* Avatar fallback */}
-                  <div className="w-full h-full bg-primary flex items-center justify-center text-white font-serif italic">AD</div>
+                 <div className="w-full h-full bg-primary flex items-center justify-center text-white font-serif italic">AD</div>
                </div>
                <p className="font-bold text-primary">Angela Deschner</p>
                <p className="text-xs text-muted-foreground uppercase tracking-widest font-black">Expertin für Zell-Energie & Hebamme</p>
