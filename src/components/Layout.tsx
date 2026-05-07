@@ -61,6 +61,7 @@ export function Layout({ children }: LayoutProps) {
       subItems: [
         { name: "Tiefgehende Labordiagnostik", path: ROUTE_PATHS.LABOR, desc: "Ursachenforschung" },
         { name: "Infusionstherapie", path: ROUTE_PATHS.INFUSIONSTHERAPIE, desc: "Direkte Nährstoffaufnahme" },
+        { name: "IHHT Höhentraining", path: ROUTE_PATHS.ZELLTRAINING, desc: "Zelltraining & Sauerstofftherapie" },
         { name: "Long-Covid Hilfe", path: ROUTE_PATHS.LONG_COVID, desc: "Energieaufbau" },
         { name: "CO2-Therapie", path: ROUTE_PATHS.CO2_THERAPIE, desc: "Carboxytherapie" },
         { name: "Darmanalyse & Mikrobiom", path: ROUTE_PATHS.DARMANALYSE, desc: "Darmgesundheit" },
