@@ -49,6 +49,7 @@ export function Layout({ children }: LayoutProps) {
         { name: "Biochemische Geburtsvorbereitung", path: ROUTE_PATHS.GEBURTSVORBEREITUNG, desc: "Zelluläre Power & Nährstoffe" },
         { name: "Wochenbett & Hausbesuche", path: ROUTE_PATHS.WOCHENBETTBETREUUNG, desc: "Ganzheitliche Begleitung" },
         { name: "IHHT / Zelltraining", path: ROUTE_PATHS.ZELLTRAINING, desc: "Sauerstofftherapie" },
+        { name: "IHHT Schwangerschaft", path: ROUTE_PATHS.ZELLTRAINING_SCHWANGERSCHAFT, desc: "Für werdende Mütter" },
         { name: "Akupunktur", path: ROUTE_PATHS.AKUPUNKTUR, desc: "TCM & Geburtsvorbereitung" },
         { name: "Rückbildung", path: ROUTE_PATHS.RUECKBILDUNG, desc: "Beckenboden-Fokus" },
         { name: "Schwangerschaftsbeschwerden", path: ROUTE_PATHS.BESCHWERDEN, desc: "Natürliche Linderung" },

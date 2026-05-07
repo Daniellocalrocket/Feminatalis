@@ -14,6 +14,7 @@ export const ROUTE_PATHS = {
   WOCHENBETTBETREUUNG: "/hebammenpraxis/wochenbettbetreuung",
   RUECKBILDUNG: "/hebammenpraxis/rueckbildung",
   ZELLTRAINING: "/hebammenpraxis/zelltraining",
+  ZELLTRAINING_SCHWANGERSCHAFT: "/hebammenpraxis/ihht-schwangerschaft",
   AKUPUNKTUR: "/hebammenpraxis/akupunktur",
   
   // Naturheilpraxis

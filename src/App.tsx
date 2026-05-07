@@ -17,6 +17,7 @@ const Hebammenpraxis = lazy(() => import("@/pages/hebammenpraxis/Index"));
 const Geburtsvorbereitung = lazy(() => import("@/pages/hebammenpraxis/Geburtsvorbereitung"));
 const PremiumZellkraftKurs = lazy(() => import("@/pages/hebammenpraxis/PremiumZellkraftKurs"));
 const Zelltraining = lazy(() => import("@/pages/hebammenpraxis/Zelltraining"));
+const ZelltrainingSchwangerschaft = lazy(() => import("@/pages/hebammenpraxis/ZelltrainingSchwangerschaft"));
 const Wochenbettbetreuung = lazy(() => import("@/pages/hebammenpraxis/Wochenbettbetreuung"));
 const Akupunktur = lazy(() => import("@/pages/hebammenpraxis/Akupunktur"));
 const Rueckbildung = lazy(() => import("@/pages/hebammenpraxis/Rueckbildung"));
@@ -122,6 +123,10 @@ const App = () => {
               <Route 
                 path={ROUTE_PATHS.ZELLTRAINING} 
                 element={<Zelltraining />} 
+              />
+              <Route 
+                path={ROUTE_PATHS.ZELLTRAINING_SCHWANGERSCHAFT} 
+                element={<ZelltrainingSchwangerschaft />} 
               />
               <Route 
                 path={ROUTE_PATHS.WOCHENBETTBETREUUNG} 
