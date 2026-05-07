@@ -38,7 +38,6 @@ export default function ZelltrainingSchwangerschaft() {
         subtitle="Sichere komplementäre Begleitung für werdende Mütter. Trainiere deine Zellen sanft während du entspannt liegst und gib deinem Baby die beste Startbedingung für eine kraftvolle Geburt."
         imageSrc="https://images.unsplash.com/photo-1559757175-5700dde67bc8?q=80&w=2070&auto=format&fit=crop"
         imageAlt="IHHT Schwangerschaft"
-        imageKey="img_hero_ihht_schwangerschaft"
       >
         <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
           Vorgespräch vereinbaren <ArrowRight size={20} />
