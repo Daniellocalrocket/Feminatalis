@@ -49,6 +49,7 @@ const IMAGE_CONFIG = [
       { key: "img_hero_beschwerden", label: "Beschwerden Hero", default: "https://images.unsplash.com/photo-1493894473891-10fc1e5dbd22?q=80&w=2069&auto=format&fit=crop" },
       { key: "img_hero_geburtsvorbereitung", label: "Geburtsvorbereitung Hero", default: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop" },
       { key: "img_hero_zelltraining", label: "Zelltraining Hero", default: "https://images.unsplash.com/photo-1516670428252-df97bba108d1?q=80&w=2070&auto=format&fit=crop" },
+      { key: "img_hero_ihht_schwangerschaft", label: "IHHT Schwangerschaft Hero", default: "https://images.unsplash.com/photo-1559757175-5700dde67bc8?q=80&w=2070&auto=format&fit=crop" },
       { key: "img_hero_wochenbett", label: "Wochenbett Hero", default: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop" },
       { key: "img_hero_rueckbildung", label: "Rückbildung Hero", default: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop" },
       { key: "img_hero_akupunktur", label: "Akupunktur Hero", default: "/akupunktur_hero.png" },
