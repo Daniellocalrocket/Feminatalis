@@ -43,6 +43,7 @@ const Mikronaehrstoffe = lazy(() => import("@/pages/hebammenpraxis/Mikronaehrsto
 const Vorqualifizierung = lazy(() => import("@/pages/Vorqualifizierung"));
 const ZellkraftRoadmap = lazy(() => import("@/pages/kinderwunsch/ZellkraftRoadmap"));
 const CoursesOverview = lazy(() => import("@/pages/CoursesOverview"));
+const KursInteresse = lazy(() => import("@/pages/KursInteresse"));
 const EventBooking = lazy(() => import("@/pages/EventBooking"));
 const Impressum = lazy(() => import("@/pages/Impressum"));
 const Datenschutz = lazy(() => import("@/pages/Datenschutz"));
@@ -187,6 +188,10 @@ const App = () => {
               <Route 
                 path={ROUTE_PATHS.KURS} 
                 element={<CoursesOverview />} 
+              />
+              <Route 
+                path={ROUTE_PATHS.KURS_INTERESSE} 
+                element={<KursInteresse />} 
               />
               <Route 
                 path={ROUTE_PATHS.EVENT_BOOKING} 

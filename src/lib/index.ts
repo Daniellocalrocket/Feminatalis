@@ -48,6 +48,7 @@ export const ROUTE_PATHS = {
   
   // Onlinekurs
   KURS: "/kurs",
+  KURS_INTERESSE: "/kurs/vorregistrierung",
   
   // Vorqualifizierungsformular
   VORQUALIFIZIERUNG: "/kontakt/vorqualifizierung",

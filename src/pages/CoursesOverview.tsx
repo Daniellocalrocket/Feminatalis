@@ -75,7 +75,7 @@ export default function CoursesOverview() {
       subtitle: "Planungsphase & Kinderwunsch",
       description: "Vom Informationschaos zur Strategie. Deine bioenergetische 90-Tage-Begleitung für maximale Fruchtbarkeit.",
       features: ["Nährstoffdichte Ernährung", "Stoffwechsel-Stabilität", "Immunsystem-Balance", "Zellenergie-Aufbau", "Nervensystem-Regulation"],
-      link: `${ROUTE_PATHS.ZELLKRAFT_ROADMAP}?event=${encodeURIComponent("Fruchtbarkeits-Kompass: Zellenergie-Fahrplan")}`,
+      link: `${ROUTE_PATHS.KURS_INTERESSE}?kurs=roadmap`,
       badge: "Strategische Wahl",
       icon: Target,
       color: "accent"
@@ -86,7 +86,7 @@ export default function CoursesOverview() {
       subtitle: "Schwangerschaft & Geburtsreife",
       description: "Werde zur Architektin der kindlichen Entwicklung. Tiefe bioenergetische Optimierung für eine sichere Geburt.",
       features: ["Mitochondrien-Shuttle", "Epigenetik-Matrix", "Nervensystem-Regulation", "Interventions-Schutz"],
-      link: `${ROUTE_PATHS.PREMIUM_ZELLKRAFT_KURS}?event=${encodeURIComponent("Zellkraft-Geburtskompass")}`,
+      link: `${ROUTE_PATHS.KURS_INTERESSE}?kurs=geburtskompass`,
       badge: "Vollumfängliche Begleitung",
       icon: Sparkles,
       color: "primary"
