@@ -185,6 +185,11 @@ export default function Hebammenpraxis() {
                     <div className="w-1.5 h-1.5 rounded-full bg-primary"/> Wochenbettbetreuung
                   </Link>
                 </li>
+                <li>
+                  <Link to={ROUTE_PATHS.RUECKBILDUNG} className="flex items-center gap-3 text-sm font-medium hover:text-accent transition-colors">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary"/> Rückbildung
+                  </Link>
+                </li>
                 <li className="flex items-center gap-3 text-sm font-medium hover:text-accent transition-colors">
                   <div className="w-1.5 h-1.5 rounded-full bg-primary"/> Stillbegleitung
                 </li>
@@ -233,8 +238,8 @@ export default function Hebammenpraxis() {
                   </Link>
                 </li>
                 <li>
-                  <Link to={ROUTE_PATHS.INFUSIONSTHERAPIE} className="flex items-center gap-3 text-sm font-medium hover:text-[#fde4c8] transition-colors">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#fde4c8]"/> Mitochondriale Infusionen
+                  <Link to={ROUTE_PATHS.MIKRONAEHRSTOFFE} className="flex items-center gap-3 text-sm font-medium hover:text-[#fde4c8] transition-colors">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#fde4c8]"/> Mikronährstoffe & Infusionen
                   </Link>
                 </li>
                 <li>
