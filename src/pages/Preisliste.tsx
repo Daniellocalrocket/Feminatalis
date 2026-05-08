@@ -1,18 +1,17 @@
 import React from "react";
 import SEO from "@/components/SEO";
-import { Layout } from "@/components/Layout";
 import { 
   CheckCircle2, 
   Info, 
-  CreditCard, 
-  Wallet, 
   ShieldCheck, 
   ChevronRight,
   Zap,
   Heart,
   Activity,
   ArrowRight,
-  Gem
+  Gem,
+  Clock,
+  Euro
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -24,48 +23,56 @@ export default function Preisliste() {
       title: "Naturheilpraxis - Einzelbehandlungen",
       icon: <Activity className="w-6 h-6 text-primary" />,
       items: [
-        { name: "Erstanamnese & Ganzheitliche Analyse", price: "100,- € / Std.", detail: "ca. 60-90 Min. inkl. Erstberatung, Befundanalyse und Untersuchung" },
-        { name: "Folgeberatung / Therapieanpassung", price: "ab 65,- €", detail: "ca. 30-45 Min." },
-        { name: "Akupunktur (TCM)", price: "ab 26,- €", detail: "Pro Sitzung (Abrechnung nach GebüH)" },
-        { name: "IHHT / Zelltraining (Sauerstoff)", price: "85,- €", detail: "Pro Sitzung (45 Min.)" },
-        { name: "Infusionstherapie (Drip-Spa)", price: "ab 65,- €", detail: "Zzgl. Material/Labor je nach Wirkstoffen" },
-        { name: "CO2-Therapie (Carboxy)", price: "45,- €", detail: "Pro Behandlung" },
-        { name: "Low-Level-Lasertherapie", price: "45,- €", detail: "Pro Behandlung" },
-        { name: "brainLight-Tiefenregeneration", price: "25,- €", detail: "20 Min. Entspannungssitzung" },
+        { name: "Einzelberatung / Erstanamnese", price: "100,- €", detail: "60 Min. inkl. Untersuchung, Therapieplan, Laborbesprechung", time: "60 min" },
+        { name: "Aku-pur (Akupunktur extra)", price: "40,- €", detail: "Behandlung nach Erstanamnese", time: "30 min" },
+        { name: "Aku-plus (Akupunktur begleitend)", price: "26,- €", detail: "Begleittherapie (z.B. zu Infusion oder Geburtsvorbereitung)", time: "30 min" },
+        { name: "IHHT / Höhentraining", price: "75,- €", detail: "Zelltraining (zzgl. einmalig 10,- € für Maske)", time: "60 min" },
+        { name: "Infusionstherapie", price: "65,- €", detail: "Wirkstoff-Drip (zzgl. Medikamente)", time: "45-90 min" },
+        { name: "Haemo-Laser", price: "60,- €", detail: "Lichttherapie inkl. Lichtleiter", time: "30 min" },
+        { name: "CO2-Vitalisierungsbad", price: "45,- €", detail: "Trockenbad (zzgl. einmalig 7,50 € für Hülle)", time: "45 min" },
+        { name: "brainLight-pur", price: "7,50 €", detail: "Nur Brille & Kopfhörer (ohne Massage)", time: "bis 30 min" },
+        { name: "brainLight komplett", price: "ab 15,- €", detail: "System & Massage / Mentaltraining", time: "15-60 min" },
+        { name: "Massagesessel individuell", price: "40,- €", detail: "Inkl. Gesundheitscheck & Ionen-Funktion", time: "60 min" },
+        { name: "Massagesessel pur", price: "ab 10,- €", detail: "Automatik-Massageprogramme", time: "15-60 min" },
       ]
     },
     {
       title: "Naturheilpraxis - Pakete & Kombis",
+      subtitle: "Günstigere Konditionen (10 zum Preis von 9!)",
       icon: <Gem className="w-6 h-6 text-accent" />,
       highlight: true,
       items: [
-        { name: "10er Paket (Alle Einzelbehandlungen)", price: "-10%", detail: "Zahle 9, erhalte 10 Behandlungen" },
-        { name: "5er Paket (Alle Einzelbehandlungen)", price: "-5%", detail: "Zahle 4,5, erhalte 5 Behandlungen" },
-        { name: "Ultra Kombi (IHHT + Infusion)", price: "ab 140,- €", detail: "Maximale Zellregeneration" },
-        { name: "Mega Kombi (IHHT + Infusion + brainLight)", price: "ab 160,- €", detail: "Das Komplettpaket für deine Energie" },
-        { name: "Ratenzahlung (RZ)", price: "Möglich", detail: "Bei Paketen ab 500,- € Gesamtwert" },
+        { name: "Air-pur 10 (IHHT)", price: "675,- €", detail: "Statt 750,- € (zzgl. Maske, 2 RZ möglich)" },
+        { name: "Drop-pur 10 (Infusionen)", price: "585,- €", detail: "Statt 650,- € (zzgl. Medikamente, 2 RZ möglich)" },
+        { name: "Light-pur 10 (Laser)", price: "540,- €", detail: "Statt 600,- € (2 RZ möglich)" },
+        { name: "Carbo-pur 10 (CO2)", price: "405,- €", detail: "Statt 450,- € (zzgl. Hülle)" },
+        { name: "Kombi AkuLight 10", price: "945,- €", detail: "Akupunktur + Laser (Statt 1.050,- €, 3 RZ möglich)" },
+        { name: "Kombi AkuDrop 10", price: "990,- €", detail: "Akupunktur + Infusion (Statt 1.100,- €, 3 RZ möglich)" },
+        { name: "Kombi AirDrop", price: "975,- €", detail: "10x IHHT + 5x Infusion (Statt 1.075,- €, 3 RZ möglich)" },
+        { name: "Ultra Kombi 20", price: "2.205,- €", detail: "20 Termine (Mix-Therapie, 4 RZ möglich)" },
+        { name: "Mega Kombi 30", price: "2.630,- €", detail: "30 Termine (Das Rundum-Paket, 5 RZ möglich)" },
       ]
     },
     {
-      title: "Hebammenpraxis & Kurse",
+      title: "Hebammenpraxis & Veranstaltungen",
       icon: <Heart className="w-6 h-6 text-rose-500" />,
       items: [
-        { name: "Geburtsvorbereitungskurs", price: "Kasse / Partnergebühr", detail: "Abrechnung Hebammen-Gebührenverordnung" },
-        { name: "Partnergebühr Geburtsvorbereitung", price: "120,- €", detail: "Inkl. Kursmaterialien & Verpflegung" },
-        { name: "Vorträge & Seminare", price: "ab 25,- €", detail: "Themenabende laut Veranstaltungskalender" },
-        { name: "Rückbildungskurs", price: "Kassenleistung", detail: "Laut gesetzlicher Regelung" },
+        { name: "Geburtsvorbereitung Partnergebühr", price: "160,- €", detail: "Kompletter Kurs (14 Stunden)" },
+        { name: "Partnergebühr (pro Stunde)", price: "12,- €", detail: "Bei stundenweiser Teilnahme" },
+        { name: "Vorträge (1,5 Std.)", price: "ab 7,50 €", detail: "Auf freiwilliger Spendenbasis möglich" },
+        { name: "Wochenend-Seminare", price: "250,- €", detail: "10-12 Std. inkl. Imbiss & Verpflegung" },
       ]
     }
   ];
 
   return (
-    <>
+    <div className="bg-background min-h-screen">
       <SEO 
         title="Preisliste & Konditionen | Feminatalis" 
-        description="Transparente Preisstruktur für Naturheilkunde, Hebammenleistungen und Wellness-Pakete. Erfahre mehr über Abrechnungsmöglichkeiten und Paketpreise." 
+        description="Transparente Preisstruktur für Naturheilkunde, Hebammenleistungen und Wellness-Pakete." 
       />
 
-      <div className="bg-background pt-32 pb-24">
+      <div className="pt-32 pb-24">
         <div className="container mx-auto px-4 max-w-5xl">
           
           {/* Header */}
@@ -75,7 +82,7 @@ export default function Preisliste() {
               animate={{ opacity: 1, y: 0 }}
               className="bg-primary/5 text-primary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block"
             >
-              Transparenz & Fairness
+              Preise & Konditionen
             </motion.span>
             <motion.h1 
               initial={{ opacity: 0, y: 10 }}
@@ -91,7 +98,7 @@ export default function Preisliste() {
               transition={{ delay: 0.2 }}
               className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed"
             >
-              Qualität und Zeit haben ihren Wert. Ich nehme mir die Zeit, die du brauchst, um die Ursachen deiner Beschwerden wirklich zu verstehen.
+              Transparente Preisgestaltung für Selbstzahler und Privatversicherte. Qualität und Zeit für deine individuelle Begleitung.
             </motion.p>
           </div>
 
@@ -111,15 +118,15 @@ export default function Preisliste() {
               <ul className="space-y-4 text-sm text-muted-foreground">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                  <span><strong>Privatversicherte:</strong> Die Abrechnung erfolgt nach der Gebührenordnung für Heilpraktiker (GeBüH).</span>
+                  <span><strong>Privatversicherte/Beihilfe:</strong> Rechnung nach GeBüH (ohne Garantie auf volle Übernahme).</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                  <span><strong>Zusatzversicherungen:</strong> Erstattungen sind je nach Tarif möglich. Bitte prüfe dies vorab.</span>
+                  <span><strong>Gesetzlich Versicherte:</strong> Die genannten Preise gelten für Selbstzahler.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                  <span><strong>Selbstzahler:</strong> Du erhältst eine Rechnung für deine Unterlagen. Heilpraktikerleistungen sind gem. § 4 Nr. 14 UStG umsatzsteuerfrei.</span>
+                  <span><strong>Paket-Anrechnung:</strong> Bei nachträglicher Paketbuchung werden Einzelbehandlungen angerechnet.</span>
                 </li>
               </ul>
             </motion.div>
@@ -138,15 +145,15 @@ export default function Preisliste() {
               <ul className="space-y-4 text-sm text-muted-foreground">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-orange-400 shrink-0 mt-0.5" />
-                  <span><strong>Terminabsagen:</strong> Bis 24 Std. vorher kostenfrei möglich. Spätere Absagen werden in Rechnung gestellt.</span>
+                  <span><strong>cosMedea Leistungen:</strong> Wellness- & Ästhetik-Leistungen verstehen sich zzgl. 19% MwSt.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-orange-400 shrink-0 mt-0.5" />
-                  <span><strong>cosMedea Leistungen:</strong> Wellness- & Ästhetik-Leistungen verstehen sich zzgl. der gesetzlichen MwSt. (19%).</span>
+                  <span><strong>Ratenzahlung (RZ):</strong> Bei Paketen sind bis zu 5 Raten möglich (siehe Details).</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-orange-400 shrink-0 mt-0.5" />
-                  <span><strong>Vorbereitung:</strong> Bring bitte vorhandene Laborwerte oder Arztberichte zum Erstgespräch mit.</span>
+                  <span><strong>Nachweis:</strong> Preise gelten für Selbstzahler, die nachweislich einer Therapie bedürfen.</span>
                 </li>
               </ul>
             </motion.div>
@@ -165,7 +172,7 @@ export default function Preisliste() {
                   cat.highlight ? "border-accent/30 bg-accent/[0.02] shadow-xl shadow-accent/5" : "border-border bg-white"
                 )}
               >
-                <div className="p-8 md:p-10 border-b border-border flex items-center justify-between">
+                <div className="p-8 md:p-10 border-b border-border flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <div className="flex items-center gap-4">
                     <div className={cn(
                       "w-12 h-12 rounded-2xl flex items-center justify-center",
@@ -173,27 +180,37 @@ export default function Preisliste() {
                     )}>
                       {cat.icon}
                     </div>
-                    <h2 className="text-2xl font-serif text-primary">{cat.title}</h2>
+                    <div>
+                      <h2 className="text-2xl font-serif text-primary">{cat.title}</h2>
+                      {cat.subtitle && <p className="text-xs text-accent font-bold uppercase tracking-wider mt-1">{cat.subtitle}</p>}
+                    </div>
                   </div>
                   {cat.highlight && (
-                    <span className="hidden md:block bg-accent text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full">
-                      Empfehlung
+                    <span className="bg-accent text-white text-[10px] uppercase font-bold tracking-widest px-4 py-1.5 rounded-full self-start md:self-center shadow-lg shadow-accent/20">
+                      Top Konditionen
                     </span>
                   )}
                 </div>
                 <div className="divide-y divide-border">
                   {cat.items.map((item, i) => (
                     <div key={i} className="p-6 md:px-10 flex flex-col md:flex-row md:items-center justify-between hover:bg-slate-50/50 transition-colors gap-4">
-                      <div className="space-y-1">
+                      <div className="space-y-1.5 flex-grow">
                         <div className="font-bold text-primary flex items-center gap-2 text-lg">
                           {item.name}
-                          {item.name.includes("Kombi") && <Zap className="w-4 h-4 text-accent fill-accent" />}
+                          {item.name.includes("Kombi") && <Zap className="w-4 h-4 text-accent fill-accent animate-pulse" />}
                         </div>
-                        <div className="text-sm text-muted-foreground">{item.detail}</div>
+                        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
+                          {item.time && (
+                            <span className="flex items-center gap-1 bg-slate-100 px-2 py-0.5 rounded text-[12px] font-medium">
+                              <Clock size={12} /> {item.time}
+                            </span>
+                          )}
+                          <span>{item.detail}</span>
+                        </div>
                       </div>
-                      <div className="flex items-center gap-4">
+                      <div className="flex items-center justify-between md:justify-end gap-6 min-w-[120px]">
                         <div className={cn(
-                          "text-xl font-serif",
+                          "text-2xl font-serif flex items-center gap-1",
                           cat.highlight ? "text-accent" : "text-primary"
                         )}>
                           {item.price}
@@ -238,11 +255,11 @@ export default function Preisliste() {
 
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
-// Helper for class names (since I can't import cn from @/lib/utils if it doesn't exist, but usually it does in this project)
 function cn(...inputs: any[]) {
   return inputs.filter(Boolean).join(" ");
 }
+

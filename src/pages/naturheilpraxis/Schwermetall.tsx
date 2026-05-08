@@ -124,7 +124,7 @@ export default function Schwermetall() {
       </section>
 
       <PreisTransparenz 
-        preisHint="Provokationstest ab 120,- €" 
+        preisHint="Provokationstest ab 100,- €" 
         hinweis="Zzgl. Laborkosten und Material (Chelatbildner)."
       />
 

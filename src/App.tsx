@@ -47,6 +47,7 @@ const KursInteresse = lazy(() => import("@/pages/KursInteresse"));
 const EventBooking = lazy(() => import("@/pages/EventBooking"));
 const Impressum = lazy(() => import("@/pages/Impressum"));
 const Datenschutz = lazy(() => import("@/pages/Datenschutz"));
+const AGB = lazy(() => import("@/pages/AGB"));
 const Preisliste = lazy(() => import("@/pages/Preisliste"));
 const AdminLogin = lazy(() => import("@/pages/admin/Login"));
 const AdminDashboard = lazy(() => import("@/pages/admin/Dashboard"));
@@ -251,6 +252,10 @@ const App = () => {
               <Route 
                 path={ROUTE_PATHS.DATENSCHUTZ} 
                 element={<Datenschutz />} 
+              />
+              <Route 
+                path={ROUTE_PATHS.AGB} 
+                element={<AGB />} 
               />
               
               {/* Admin Routes */}

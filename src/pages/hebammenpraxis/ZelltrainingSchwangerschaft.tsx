@@ -8,21 +8,18 @@ import PreisTransparenz from "@/components/PreisTransparenz";
 
 export default function ZelltrainingSchwangerschaft() {
   const vorteile = [
-    { title: "Mehr Energie", desc: "Verbesserte ATP-Produktion für weniger Erschöpfung in der Schwangerschaft.", icon: Zap },
-    { title: "Optimale Sauerstoffversorgung", desc: "Bessere Versorgung deines Babys durch verbesserte Durchblutung.", icon: Wind },
-    { title: "Stressresistenz", desc: "Stärkung des Nervensystems für mehr Gelassenheit.", icon: Shield },
-    { title: "Geburtsvorbereitung", desc: "Kräftigung der Mitochondrien für eine kraftvolle Geburt.", icon: Baby }
+    { title: "Mehr Energie", desc: "Sanfter physiologischer Trainingsreiz für verbesserte ATP-Produktion.", icon: Zap },
+    { title: "Optimale Sauerstoffversorgung", desc: "Individuell abgestimmtes Protokoll für bessere Durchblutung.", icon: Wind },
+    { title: "Stressresistenz", desc: "Komplementäre Vitalisierung des Nervensystems.", icon: Shield },
+    { title: "Geburtsvorbereitung", desc: "Kräftigung der Mitochondrien aus der Hebammenperspektive.", icon: Baby }
   ];
 
-  const anwendungen = [
-    "Schwangerschaftsdiabetes-Prävention",
+const anwendungen = [
+    "Unterstützung einer gesunden Stoffwechselleistung",
     "Übelkeit & Erschöpfung",
-    "Durchblutungsstörungen",
+    "Förderung der Durchblutung",
     "Ödeme & Wassereinlagerungen",
-    "Vorzeitige Wehen",
-    "Beckenendlage (optimal bei 28-34. SSW)",
-    "Geburtsvorbereitung",
-    "Plazenta-Funktion"
+    "Geburtsvorbereitung"
   ];
 
   return (
@@ -33,9 +30,9 @@ export default function ZelltrainingSchwangerschaft() {
       />
 
       <SplitScreenHero
-        badge="Sicher für Mutter & Baby"
-        title={<>IHHT in der <br /><span className="text-accent italic font-light">Schwangerschaft</span></>}
-        subtitle="Sichere komplementäre Begleitung für werdende Mütter. Trainiere deine Zellen sanft während du entspannt liegst und gib deinem Baby die beste Startbedingung für eine kraftvolle Geburt."
+        badge="Sanfter physiologischer Trainingsreiz"
+        title={<>Zell-Energie in der <br /><span className="text-accent italic font-light">Schwangerschaft</span></>}
+        subtitle="Komplementäre Vitalisierung für werdende Mütter. Unterstütze deine zellulären Kraftwerke sanft während du entspannt liegst – für mehr Energie und Wohlbefinden in dieser besonderen Zeit."
         imageSrc="https://images.unsplash.com/photo-1559757175-5700dde67bc8?q=80&w=2070&auto=format&fit=crop"
         imageAlt="IHHT Schwangerschaft"
         imageKey="img_hero_ihht_schwangerschaft"
@@ -49,10 +46,10 @@ export default function ZelltrainingSchwangerschaft() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="bg-accent/5 border-2 border-accent/20 p-10 lg:p-16 rounded-[4rem] text-center">
-            <Shield className="w-16 h-16 text-accent mx-auto mb-6" />
-            <h2 className="text-3xl lg:text-4xl font-serif text-primary mb-6">Sichere Anwendung in der Schwangerschaft</h2>
+            <Stethoscope className="w-16 h-16 text-accent mx-auto mb-6" />
+            <h2 className="text-3xl lg:text-4xl font-serif text-primary mb-6">Individuell geprüfte Anwendung ab dem 2. Trimester</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              IHHT ist eine <strong>nicht-invasive</strong>, sanfte Methode, die sich besonders für die Schwangerschaft eignet. Der Sauerstoffgehalt wird individuell angepasst – immer im sicheren Bereich für dich und dein Baby. Vor der ersten Anwendung klären wir in einem persönlichen Gespräch ab, ob IHHT für dich geeignet ist.
+              Die IHHT-Parameter werden für Schwangere <strong>signifikant milder</strong> eingestellt als im normalen Modus. Wir arbeiten nach dem Schon-Prinzip: Der physiologische Trainingsreiz ist sanft, aber effektiv. Vor der ersten Anwendung klären wir in einem persönlichen Vorgespräch ab, ob IHHT für dich geeignet ist und passen das Protokoll individuell an.
             </p>
           </div>
         </div>
@@ -68,17 +65,17 @@ export default function ZelltrainingSchwangerschaft() {
                 <p>
                   Während der Schwangerschaft steigt dein Energiebedarf erheblich. Dein Körper muss nicht nur dich versorgen, sondern auch dein wachsendes Baby. Die Mitochondrien – die Kraftwerke deiner Zellen – arbeiten auf Hochtouren.
                 </p>
-                <p>
-                  Durch Stress, Ernährung und Umweltgifte können diese Kraftwerke jedoch an Leistung verlieren. Das kann zu <strong>Erschöpfung</strong>, Übelkeit oder einem erhöhten Risiko für Komplikationen führen.
-                </p>
-                <div className="bg-white p-8 rounded-[2rem] border border-accent/20">
-                  <h4 className="font-bold text-primary text-xl mb-3 flex items-center gap-2">
-                    <Battery className="text-accent" /> Die Zell-Akku-Metapher
-                  </h4>
-                  <p className="text-muted-foreground">
-                    Stelle dir deinen Körper wie einen Akku vor: Mit 20% Ladung in die Geburt zu gehen, bedeutet höhere Wahrscheinlichkeit für Erschöpfung und medizinische Interventionen. <strong>Mit voller Akku-Ladung</strong> kannst du die Geburt aus eigener Kraft meistern.
+                  <p>
+                    Durch Stress, Ernährung und Umweltgifte können diese Kraftwerke jedoch an Leistung verlieren. Das kann zu <strong>Erschöpfung</strong>, Übelkeit oder einem erhöhten Risiko für Komplikationen führen.
                   </p>
-                </div>
+                  <div className="bg-white p-8 rounded-[2rem] border border-accent/20">
+                    <h4 className="font-bold text-primary text-xl mb-3 flex items-center gap-2">
+                      <Battery className="text-accent" /> Unterstützung der natürlichen Kraftreserven
+                    </h4>
+                    <p className="text-muted-foreground">
+                      Stelle dir deinen Körper wie einen Akku vor: Mit wenig Ladung in die Geburt zu gehen, bedeutet höhere Wahrscheinlichkeit für Erschöpfung. <strong>Mit gut gefüllten Kraftreserven</strong> gehst du vital und kraftvoll in die Geburt – und unterstützt damit auch dein Baby optimal.
+                    </p>
+                  </div>
               </div>
             </div>
 
@@ -133,7 +130,7 @@ export default function ZelltrainingSchwangerschaft() {
               <div className="text-center p-8 rounded-[2rem] bg-accent/10">
                 <div className="w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center font-bold text-xl mx-auto mb-4">2</div>
                 <h4 className="font-bold text-primary mb-2">Optimale Vorbereitung</h4>
-                <p className="text-sm text-muted-foreground">28.-34. SSW fürBeckenendlage</p>
+                <p className="text-sm text-muted-foreground">Ab 28. SSW zur Unterstützung</p>
               </div>
               <div className="text-center p-8 rounded-[2rem] bg-muted/20">
                 <div className="w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center font-bold text-xl mx-auto mb-4">3</div>

@@ -114,7 +114,10 @@ export default function Infusionstherapie() {
         </div>
       </section>
 
-      <PreisTransparenz />
+      <PreisTransparenz 
+        preisHint="Infusionen ab 65,- €" 
+        hinweis="Zzgl. Medikamentenkosten je nach individueller Rezeptur."
+      />
     </div>
   );
 }

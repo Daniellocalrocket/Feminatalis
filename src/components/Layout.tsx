@@ -304,7 +304,8 @@ export function Layout({ children }: LayoutProps) {
               </ul>
               <div className="pt-4">
                 <Link to={ROUTE_PATHS.IMPRESSUM} className="text-xs hover:text-primary transition-colors">Impressum</Link> / 
-                <Link to={ROUTE_PATHS.DATENSCHUTZ} className="text-xs hover:text-primary transition-colors"> Datenschutz</Link>
+                <Link to={ROUTE_PATHS.DATENSCHUTZ} className="text-xs hover:text-primary transition-colors"> Datenschutz</Link> /
+                <Link to={ROUTE_PATHS.AGB} className="text-xs hover:text-primary transition-colors"> AGB</Link>
               </div>
             </div>
           </div>

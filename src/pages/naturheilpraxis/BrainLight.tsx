@@ -162,7 +162,7 @@ export default function BrainLight() {
           <div className="bg-accent/5 p-8 rounded-[2.5rem] border border-accent/20 flex flex-col md:flex-row items-center justify-between gap-6 mt-20 max-w-5xl mx-auto">
             <div>
               <h3 className="text-xl font-bold text-primary mb-2">Investition</h3>
-              <p className="text-muted-foreground">Tiefenregeneration-Session (20 Min.): 25,- €.</p>
+              <p className="text-muted-foreground">Tiefenregeneration-Session: ab 15,- €.</p>
             </div>
             <Link to={ROUTE_PATHS.PREISLISTE} className="text-accent font-bold flex items-center gap-2 hover:underline">
               Zur kompletten Preisliste <ArrowRight size={18} />

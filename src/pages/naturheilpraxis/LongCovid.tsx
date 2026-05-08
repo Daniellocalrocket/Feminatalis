@@ -123,7 +123,7 @@ export default function LongCovid() {
       </section>
 
       <PreisTransparenz 
-        preisHint="Spezialdiagnostik & Beratung" 
+        preisHint="Beratung & Diagnostik ab 100,- €" 
         hinweis="Individuelle Abrechnung nach Zeitaufwand und Laborparametern."
       />
 

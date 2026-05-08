@@ -85,7 +85,10 @@ export default function Geburtsvorbereitung() {
         </div>
       </section>
 
-      <PreisTransparenz />
+      <PreisTransparenz 
+        preisHint="Partnergebühr 160,- €" 
+        hinweis="Abrechnung der Kursstunden für die Mutter erfolgt über die Krankenkasse."
+      />
     </div>
   );
 }

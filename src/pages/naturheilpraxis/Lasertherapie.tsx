@@ -134,7 +134,7 @@ export default function Lasertherapie() {
       </section>
 
       <PreisTransparenz 
-        preisHint="Lasertherapie ab 45,- €" 
+        preisHint="Lasertherapie ab 60,- €" 
         hinweis="Gezielte Zellregeneration durch hochreine Lichtenergie."
       />
 

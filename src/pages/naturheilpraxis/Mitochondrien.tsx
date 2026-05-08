@@ -128,7 +128,7 @@ export default function Mitochondrien() {
       </section>
 
       <PreisTransparenz 
-        preisHint="Mitochondrien-Check & Beratung" 
+        preisHint="Analyse & Beratung ab 100,- €" 
         hinweis="Analytische Tiefe für deine zelluläre Energie."
       />
     </div>
