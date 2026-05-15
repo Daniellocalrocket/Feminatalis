@@ -75,12 +75,32 @@ export default function AdminSettings() {
     toast.info("Blog-Synchronisation gestartet...");
     
     try {
-      // Here we would call an edge function or a logic to sync with Google Drive
-      // For now we simulate it
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      toast.success("Synchronisation erfolgreich abgeschlossen!");
-    } catch (err) {
-      toast.error("Sync fehlgeschlagen");
+      const response = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/sync-google-docs`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          },
+        }
+      );
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Sync fehlgeschlagen");
+      }
+
+      toast.success(
+        `${result.synced} von ${result.synced + result.errors.length} Artikeln synchronisiert`
+      );
+      
+      if (result.errors.length > 0) {
+        toast.error(`${result.errors.length} Fehler aufgetreten`);
+      }
+    } catch (err: any) {
+      toast.error(err.message || "Sync fehlgeschlagen");
     } finally {
       setIsSyncing(false);
     }

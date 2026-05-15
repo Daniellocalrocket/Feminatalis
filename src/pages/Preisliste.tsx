@@ -200,9 +200,9 @@ export default function Preisliste() {
                           {item.name.includes("Kombi") && <Zap className="w-4 h-4 text-accent fill-accent animate-pulse" />}
                         </div>
                         <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
-                          {item.time && (
+                          {(item as any).time && (
                             <span className="flex items-center gap-1 bg-slate-100 px-2 py-0.5 rounded text-[12px] font-medium">
-                              <Clock size={12} /> {item.time}
+                              <Clock size={12} /> {(item as any).time}
                             </span>
                           )}
                           <span>{item.detail}</span>

@@ -40,6 +40,7 @@ const Blutegel = lazy(() => import("@/pages/naturheilpraxis/Blutegel"));
 const Lasertherapie = lazy(() => import("@/pages/naturheilpraxis/Lasertherapie"));
 const Beschwerden = lazy(() => import("@/pages/hebammenpraxis/Beschwerden"));
 const Mikronaehrstoffe = lazy(() => import("@/pages/hebammenpraxis/Mikronaehrstoffe"));
+const CO2TherapieHebamme = lazy(() => import("@/pages/hebammenpraxis/CO2Therapie"));
 const Vorqualifizierung = lazy(() => import("@/pages/Vorqualifizierung"));
 const ZellkraftRoadmap = lazy(() => import("@/pages/kinderwunsch/ZellkraftRoadmap"));
 const CoursesOverview = lazy(() => import("@/pages/CoursesOverview"));
@@ -239,6 +240,10 @@ const App = () => {
               <Route 
                 path={ROUTE_PATHS.MIKRONAEHRSTOFFE} 
                 element={<Mikronaehrstoffe />} 
+              />
+              <Route 
+                path={ROUTE_PATHS.CO2_THERAPIE_HEBAMME} 
+                element={<CO2TherapieHebamme />} 
               />
 
               <Route 

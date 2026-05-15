@@ -32,73 +32,102 @@ export default function Allergie() {
       />
       
       <SplitScreenHero
-        badge="Immunmodulation"
-        title={<>Allergie- <br /><span className="text-accent italic font-light">Therapie</span></>}
-        subtitle="Verabschiede dich von belastenden Symptomen. Wir analysieren dein Immunsystem tiefgreifend und entwickeln einen individuellen Therapieplan zur nachhaltigen Allergiebehandlung."
+        badge="Immunmodulation & Regulation"
+        title={<>Endlich wieder frei atmen: <br /><span className="text-accent italic font-light">Die Allergie-Therapie</span></>}
+        subtitle="Dein Immunsystem ist nicht dein Feind – es ist nur „verwirrt“. Wir helfen deinem Körper, die verlorene Hygiene-Konstante zurückzugewinnen und wieder angemessen auf seine Umwelt zu reagieren. Für ein Leben ohne ständige Abwehr und Symptomunterdrückung."
         imageSrc="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=2070&auto=format&fit=crop"
         imageAlt="Allergiebehandlung und Immunmodulation"
         imageKey="img_hero_allergie"
       >
         <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
-          Kostenfreie Vor-Analyse anfragen
+          Analyse-Gespräch anfragen <ArrowRight size={20} />
         </Link>
       </SplitScreenHero>
 
-      {/* Cause Analysis */}
-      <section className="py-20 text-left">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-16 text-center">
-            <h2 className="text-3xl lg:text-4xl font-serif text-primary mb-4 text-center">Warum reagiert das System über?</h2>
-            <p className="text-muted-foreground font-medium text-center max-w-2xl mx-auto">Es gibt selten nur den einen Auslöser. Nahezu immer ist es eine hochkomplexe Kombination grundverschiedener pathologischer Faktoren.</p>
+      {/* Philosophy: The Hygiene Hypothesis */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl text-center">
+          <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-10 leading-tight">Die „verlorene Hygiene“ <br /><span className="text-accent italic">und das verwirrte System</span></h2>
+          <div className="prose prose-lg mx-auto text-muted-foreground leading-relaxed">
+            <p>
+              In unserer modernen Welt ist der „natürliche Trainingspartner“ unseres Immunsystems – der Kontakt zu Erde, Keimen und Parasiten – verloren gegangen. Die Folge: Das System langweilt sich und beginnt, harmlose Partikel wie Pollen, Hausstaub oder Nahrungsmittel als Bedrohung einzustufen. 
+            </p>
+            <p className="mt-6">
+              Oft kommt eine <strong>Histamin-Intoleranz</strong> oder eine <strong>Mastzell-Überreaktion</strong> hinzu, die klassische Allergietests nicht erfassen. In meiner Praxis arbeiten wir nicht gegen das Symptom, sondern stellen die Ordnung im System wieder her – ohne den Einsatz von Aluminiumhydroxid oder chemischen Blockern.
+            </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24 text-left">
-            {ursachen.map((u, i) => (
-              <div key={i} className="bg-white p-10 rounded-3xl border border-border shadow-sm group hover:border-accent transition-all text-left">
-                <div className="bg-muted/30 w-12 h-12 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/10 transition-colors">
-                  <Info className="w-6 h-6 text-accent" />
+        </div>
+      </section>
+
+      {/* Causes Grid */}
+      <section className="py-24 bg-muted/20">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center mb-16">
+            <span className="text-accent font-bold tracking-widest uppercase text-sm">Hintergründe</span>
+            <h2 className="text-3xl lg:text-5xl font-serif text-primary mt-4 mb-6 text-center leading-tight">Warum dein Körper <br />auf „Alarm“ schaltet</h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24 text-left">
+            {[
+              { title: "Darm-Immunität", desc: "80% deines Immunsystems sitzen im Darm. Ein 'Leaky Gut' lässt Allergene unkontrolliert passieren.", icon: <Shield className="w-8 h-8 text-accent" /> },
+              { title: "Mastzell-Stress", desc: "Wenn Mastzellen zu sensibel reagieren, schütten sie bei kleinsten Reizen massiv Histamin aus.", icon: <Activity className="w-8 h-8 text-accent" /> },
+              { title: "Kreuz-Reaktionen", desc: "Oft reagiert der Körper auf Pollen und bestimmte Nahrungsmittel gleichzeitig (z.B. Birke & Apfel).", icon: <CheckCircle2 className="w-8 h-8 text-accent" /> },
+              { title: "Umwelt-Toxine", desc: "Schwermetalle und Pestizide können das Immunsystem chronisch irritieren und sensibilisieren.", icon: <Info className="w-8 h-8 text-accent" /> },
+              { title: "Nährstoff-Mangel", desc: "Ohne ausreichend Zink, Vitamin C und Vitamin D fehlt dem Immunsystem die Bremse.", icon: <HeartPulse className="w-8 h-8 text-accent" /> },
+              { title: "Chronischer Stress", desc: "Dauerstress senkt die Toleranzschwelle deines Immunsystems massiv ab.", icon: <Activity className="w-8 h-8 text-accent" /> }
+            ].map((u, i) => (
+              <div key={i} className="bg-white p-10 rounded-[3.5rem] border border-border shadow-sm group hover:border-accent transition-all hover:shadow-2xl text-left">
+                <div className="bg-muted/50 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-accent group-hover:text-white transition-all duration-500">
+                  {u.icon}
                 </div>
-                <h4 className="font-bold text-primary mb-3 text-xl font-serif">{u.title}</h4>
-                <p className="text-sm font-medium text-muted-foreground leading-relaxed">{u.desc}</p>
+                <h4 className="font-bold text-primary mb-4 font-serif text-2xl leading-tight">{u.title}</h4>
+                <p className="text-base font-medium text-muted-foreground leading-relaxed opacity-80">{u.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Diagnosis & Specialization */}
-      <section className="py-20 bg-muted/20">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-start text-left max-w-5xl mx-auto">
+      {/* Diagnosis & Therapy */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-center text-left">
             <div className="space-y-8 text-left">
-              <h2 className="text-3xl lg:text-4xl font-serif text-primary text-left leading-tight">Spezialisierte <br />Tiefendiagnostik</h2>
-              <div className="prose prose-lg text-muted-foreground text-left mb-8">
+              <h2 className="text-3xl lg:text-5xl font-serif text-primary text-left leading-tight">Diagnostik <br /><span className="text-accent italic">mit Detektivsinn</span></h2>
+              <div className="prose prose-lg text-muted-foreground text-left mb-8 font-medium">
                 <p>
-                  Klassische Labor- und Provokationstests zeigen oft lediglich die Sensibilisierung (den momentanen Allergiefokus), legen aber nicht die wahre Wurzel des Problems frei.
+                  Ein einfacher Prick-Test reicht oft nicht aus. Wir nutzen den <strong>Metavital Human-Scan</strong> und fundierte <strong>Stuhl-Analysen</strong>, um energetische Belastungen und Mikrobiom-Störungen sichtbar zu machen.
                 </p>
                 <p>
-                  Aus diesem Grund nutzen wir eine tiefgehende <strong>funktionelle Labordiagnostik</strong> in Kombination mit einer Mikrobiom-Analyse, um versteckte Entzündungen und systemische Belastungen präzise zu identifizieren.
+                  Unser Ziel ist die natürliche Immunmodulation. Dabei setzen wir auf absolut <strong>aluminiumfreie Verfahren</strong>. Wir unterstützen deinen Körper dabei, Mastzellen zu stabilisieren und die Histamin-Toleranz nachhaltig zu erhöhen.
                 </p>
               </div>
-              <div className="bg-white p-8 lg:p-10 rounded-[2.5rem] border border-border shadow-sm text-left">
-                <h4 className="text-primary font-bold mb-4 font-serif text-2xl text-left">Mein Standpunkt zur <br />Desensibilisierung</h4>
-                <p className="text-sm opacity-90 text-muted-foreground mb-6 font-medium leading-relaxed">
-                  Einer herkömmlichen Desensibilisierung durch klassische Injektionen stehe ich oft aus Überzeugung kritisch gegenüber. Eine Vielzahl der konventionellen Präparate enthält umstrittene Adjuvantien (wie z.B. Aluminiumhydroxid), die ein ohnehin gereiztes System meist extrem zusätzlich belasten und verwirren können.
-                </p>
-                <div className="flex items-center gap-3 text-accent font-bold text-sm bg-accent/5 p-4 rounded-xl border border-accent/10">
-                  <Activity size={20} className="shrink-0" /> Wir setzen konsequent auf absolut aluminiumfreie, naturheilkundlich sanfte System-Regulation.
+              <div className="bg-accent/5 p-10 rounded-[3rem] border border-accent/20 text-left relative overflow-hidden">
+                <div className="absolute top-0 right-0 p-8 opacity-5">
+                  <Shield size={100} />
                 </div>
+                <h4 className="text-primary font-bold mb-4 font-serif text-2xl text-left leading-tight">Weg von der <br />Symptomunterdrückung</h4>
+                <p className="text-sm opacity-90 text-muted-foreground font-medium leading-relaxed italic mb-0">
+                  „Eine Desensibilisierung mit Aluminium-Trägerstoffen kann das Fass oft erst zum Überlaufen bringen. Wir wählen den Weg der sanften, aber konsequenten Regulation.“
+                </p>
               </div>
             </div>
             
-            <div className="bg-primary text-white p-12 lg:p-16 rounded-[4rem] shadow-2xl relative overflow-hidden text-left h-full">
-              <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 -mr-48 -mt-48 rounded-full blur-3xl"></div>
+            <div className="bg-primary text-white p-12 lg:p-20 rounded-[5rem] shadow-2xl relative overflow-hidden text-left h-full">
+              <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-accent/20 -mr-64 -mt-64 rounded-full blur-[100px] opacity-20"></div>
               <div className="relative z-10 text-left">
-                <h3 className="text-3xl font-serif font-bold mb-10 text-white leading-tight">Unsere integrativen <br />Behandlungssäulen</h3>
+                <h3 className="text-3xl font-serif font-bold mb-12 text-white leading-tight text-left">Ganzheitliche <br />Heilungsimpulse</h3>
                 <ul className="space-y-6 text-left">
-                  {behandlungsmethoden.map((method, i) => (
-                    <li key={i} className="flex gap-4 items-start bg-white/5 p-4 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
-                      <CheckCircle2 className="w-6 h-6 text-accent shrink-0 mt-0.5" />
-                      <span className="font-medium text-white leading-relaxed">{method}</span>
+                  {[
+                    "Mikrobiom-Therapie (Darmsanierung)",
+                    "Mastzell-Stabilisierung (Naturnah)",
+                    "Akupunktur zur Immunregulation",
+                    "Orthomolekulare Nährstoff-Infusionen",
+                    "NLS-gestützte Ursachenfindung",
+                    "Histamin-Management & Beratung"
+                  ].map((method, i) => (
+                    <li key={i} className="flex gap-5 items-start bg-white/10 p-6 rounded-[2.5rem] border border-white/10 hover:bg-white/20 transition-all group text-left">
+                      <CheckCircle2 className="w-8 h-8 text-accent shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                      <span className="font-bold text-white text-xl leading-relaxed text-left">{method}</span>
                     </li>
                   ))}
                 </ul>
@@ -117,9 +146,9 @@ export default function Allergie() {
       <section className="py-24 bg-background border-t border-border text-center">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <HeartPulse className="w-16 h-16 text-primary mx-auto mb-8 opacity-20" />
-          <h2 className="text-3xl md:text-5xl font-serif text-primary mb-8 leading-tight font-bold text-center">Bist du bereit für mehr <br />Vitalität & Lebensqualität?</h2>
+          <h2 className="text-3xl md:text-5xl font-serif text-primary mb-8 leading-tight font-bold text-center">Bist du bereit für <br />Atemfreiheit?</h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed font-medium text-center">
-            Eine nachhaltige tiefe Allergiebehandlung erfordert Geduld und Motivation, aber der Weg lohnt sich maßgeblich. Wir helfen dir intensiv, deinen Körper wieder in die selbstregulierende Balance zu bringen.
+            Der Weg zur allergiefreien Lebensqualität erfordert Geduld, aber die Ergebnisse sind lebensverändernd. Wir begleiten dich intensiv dabei, dein Immunsystem wieder zu beruhigen.
           </p>
           <div className="flex justify-center">
             <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-12 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-transform shadow-2xl flex items-center justify-center gap-3 shadow-primary/20 border-none">

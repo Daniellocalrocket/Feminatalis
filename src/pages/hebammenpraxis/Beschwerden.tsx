@@ -3,7 +3,7 @@ import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
 import PreisTransparenz from "@/components/PreisTransparenz";
-import { Heart, Check, ArrowRight, ShieldCheck, Thermometer, Smile, Clock, Droplets, Activity, Dna, AlertTriangle, Baby, Moon } from "lucide-react";
+import { Heart, Check, ArrowRight, Sparkles } from "lucide-react";
 import SplitScreenHero from "@/components/SplitScreenHero";
 
 export default function Beschwerden() {
@@ -38,20 +38,22 @@ export default function Beschwerden() {
             <h3 className="text-primary font-serif text-3xl mb-8">Häufige Behandlungsfelder</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-8">
               {[
-                { icon: <Thermometer className="text-accent w-6 h-6"/>, title: "Übelkeit & Erbrechen", desc: "Hilfe durch Infusionen, Akupunktur & Homöopathie." },
-                { icon: <Heart className="text-accent w-6 h-6"/>, title: "Rücken- & Beckenschmerz", desc: "Support durch Akupunktur, Taping & Beckengurte." },
-                { icon: <Clock className="text-accent w-6 h-6"/>, title: "Vorzeitige Wehen", desc: "Begleitung bei drohender Frühgeburt & Wehentätigkeit." },
-                { icon: <Droplets className="text-accent w-6 h-6"/>, title: "Ödeme", desc: "Gezielte Hilfe bei Wassereinlagerungen." },
-                { icon: <Activity className="text-accent w-6 h-6"/>, title: "Hoher Blutdruck", desc: "Monitoring & Regulation bei Hypertonie." },
-                { icon: <Dna className="text-accent w-6 h-6"/>, title: "Insulinresistenz", desc: "Unterstützung bei Schwangerschaftsdiabetes." },
-                { icon: <AlertTriangle className="text-accent w-6 h-6"/>, title: "Präeklampsie-Vorsorge", desc: "Begleitung bei beginnender Schwangerschaftsvergiftung." },
-                { icon: <Baby className="text-accent w-6 h-6"/>, title: "Wachstumsstörungen", desc: "Support bei IUGR & fötalen Entwicklungsverzögerungen." },
-                { icon: <Moon className="text-accent w-6 h-6"/>, title: "Erschöpfung", desc: "Vitalisierung der mütterlichen Ressourcen & Müdigkeit." },
-                { icon: <Heart className="text-accent w-6 h-6"/>, title: "Brustentzündungen", desc: "Akute Hilfe in der Stillzeit & Prävention." },
-                { icon: <ShieldCheck className="text-accent w-6 h-6"/>, title: "Hämorrhoiden", desc: "Sanfte Linderung & funktionelle Unterstützung." }
+                { title: "Übelkeit & Erbrechen", desc: "Hilfe durch Infusionen, Akupunktur & Homöopathie." },
+                { title: "Rücken- & Beckenschmerz", desc: "Support durch Akupunktur, Taping & Beckengurte." },
+                { title: "Vorzeitige Wehen", desc: "Begleitung bei drohender Frühgeburt & Wehentätigkeit." },
+                { title: "Ödeme", desc: "Gezielte Hilfe bei Wassereinlagerungen." },
+                { title: "Hoher Blutdruck", desc: "Monitoring & Regulation bei Hypertonie." },
+                { title: "Insulinresistenz", desc: "Unterstützung bei Schwangerschaftsdiabetes." },
+                { title: "Präeklampsie-Vorsorge", desc: "Begleitung bei beginnender Schwangerschaftsvergiftung." },
+                { title: "Wachstumsstörungen", desc: "Support bei IUGR & fötalen Entwicklungsverzögerungen." },
+                { title: "Erschöpfung", desc: "Vitalisierung der mütterlichen Ressourcen & Müdigkeit." },
+                { title: "Brustentzündungen", desc: "Akute Hilfe in der Stillzeit & Prävention." },
+                { title: "Hämorrhoiden", desc: "Sanfte Linderung & funktionelle Unterstützung." }
               ].map((item, i) => (
                 <div key={i} className="flex flex-col items-center text-center group">
-                  <div className="bg-[#fde4c8]/30 w-14 h-14 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">{item.icon}</div>
+                  <div className="bg-[#fde4c8]/30 w-14 h-14 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <Sparkles className="text-accent w-6 h-6"/>
+                  </div>
                   <h4 className="font-bold text-primary mb-2 text-sm leading-tight">{item.title}</h4>
                   <p className="text-[11px] leading-snug opacity-90">{item.desc}</p>
                 </div>

@@ -35,8 +35,10 @@ export const ROUTE_PATHS = {
   LASERTHERAPIE: "/naturheilpraxis/lasertherapie",
   
   // Hebammenpraxis Addons
+  HEBAMMENSPRECHSTUNDE: "/hebammenpraxis/beschwerden",
   BESCHWERDEN: "/hebammenpraxis/beschwerden",
   MIKRONAEHRSTOFFE: "/hebammenpraxis/mikronaehrstoffe",
+  CO2_THERAPIE_HEBAMME: "/hebammenpraxis/co2-therapie",
   
   // Kinderwunsch
   KINDERWUNSCH: "/kinderwunsch",
@@ -45,8 +47,10 @@ export const ROUTE_PATHS = {
   // Shop
   SHOP: "/shop",
   EVENTS: "/veranstaltungen",
+  COURSES_OVERVIEW: "/veranstaltungen",
   
   // Onlinekurs
+  COURSE: "/kurs",
   KURS: "/kurs",
   KURS_INTERESSE: "/kurs/vorregistrierung",
   

@@ -1,0 +1,44 @@
+﻿
+> vite_react_shadcn_ts@0.0.0 build
+> vite build
+
+[36mvite v5.4.21 [32mbuilding for production...[36m[39m
+transforming...
+[32mÔ£ô[39m 15 modules transformed.
+node.exe : [31mx[39m Build failed in 1.06s
+In Zeile:1 Zeichen:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([31mx[39m Build failed in 1.06s:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[31merror during build:
+[31m[vite:esbuild] Transform failed with 1 error:
+C:/Users/Nutzer/Documents/GitHub/Feminatalis/src/pages/naturheilpraxis/Darmsanierung.tsx:23:8: ERROR: Expected ">" but 
+found "<"[31m
+file: [36mC:/Users/Nutzer/Documents/GitHub/Feminatalis/src/pages/naturheilpraxis/Darmsanierung.tsx:23:8[31m
+[33m
+[33mExpected ">" but found "<"[33m
+21 |          title="Darmsanierung & Mikrobiom | Naturheilpraxis feminatalis" 
+22 |          description="Gesundheit beginnt im Darm. Mit ganzheitlicher Mikrobiomanalyse und Darmsanierung st├ñrken 
+wir deine Abwehr und dein Wohlbefinden." 
+23 |          <SplitScreenHero
+   |          ^
+24 |          badge="Zentrum der Gesundheit"
+25 |          title={<>Darmanalyse & <br /><span className="text-accent italic 
+font-light">Mikrobiom-Therapie</span></>}
+[31m
+    at failureErrorWithLog 
+(C:\Users\Nutzer\Documents\GitHub\Feminatalis\node_modules\vite\node_modules\esbuild\lib\main.js:1472:15)
+    at C:\Users\Nutzer\Documents\GitHub\Feminatalis\node_modules\vite\node_modules\esbuild\lib\main.js:755:50
+    at responseCallbacks.<computed> 
+(C:\Users\Nutzer\Documents\GitHub\Feminatalis\node_modules\vite\node_modules\esbuild\lib\main.js:622:9)
+    at handleIncomingPacket 
+(C:\Users\Nutzer\Documents\GitHub\Feminatalis\node_modules\vite\node_modules\esbuild\lib\main.js:677:12)
+    at Socket.readFromStdout 
+(C:\Users\Nutzer\Documents\GitHub\Feminatalis\node_modules\vite\node_modules\esbuild\lib\main.js:600:7)
+    at Socket.emit (node:events:508:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Readable.push (node:internal/streams/readable:390:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)[39m

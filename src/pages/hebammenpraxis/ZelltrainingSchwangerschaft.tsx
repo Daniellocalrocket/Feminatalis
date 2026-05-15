@@ -55,27 +55,27 @@ const anwendungen = [
         </div>
       </section>
 
-      {/* Warum IHHT in der Schwangerschaft? */}
+      {/* Warum IHHT in der Schwangerschaft? - Ama Taucherinnen & Wissenschaft */}
       <section className="py-24 bg-muted/20">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
-            <div>
-              <h2 className="text-4xl font-serif text-primary mb-8">Warum IHHT in der Schwangerschaft?</h2>
+            <div className="space-y-8">
+              <h2 className="text-4xl font-serif text-primary mb-8 leading-tight">Von den Ama-Taucherinnen lernen</h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Während der Schwangerschaft steigt dein Energiebedarf erheblich. Dein Körper muss nicht nur dich versorgen, sondern auch dein wachsendes Baby. Die Mitochondrien – die Kraftwerke deiner Zellen – arbeiten auf Hochtouren.
+                  Hast du schon von den japanischen <strong>Ama-Taucherinnen</strong> gehört? Diese Frauen tauchen ohne Atemgerät bis zu 20 Meter tief. Faszinierend ist: Bei ihren Kindern kommt es unter der Geburt so gut wie nie zu Sauerstoffmangel. Sie haben leichtere Geburten und ihre Kinder sind durchschnittlich fitter. 
                 </p>
-                  <p>
-                    Durch Stress, Ernährung und Umweltgifte können diese Kraftwerke jedoch an Leistung verlieren. Das kann zu <strong>Erschöpfung</strong>, Übelkeit oder einem erhöhten Risiko für Komplikationen führen.
+                <p>
+                  Der Grund liegt in den <strong>Mitochondrien</strong>. Diese Zellkraftwerke haben gelernt, auf kurze Phasen geringerer Sauerstoffzufuhr (Hypoxie) optimal zu reagieren. 
+                </p>
+                <div className="bg-white p-8 rounded-[2rem] border border-accent/20 shadow-sm">
+                  <h4 className="font-bold text-primary text-xl mb-4 flex items-center gap-2">
+                    <Baby className="text-accent" /> Mitochondriale Auslese unter Wehen
+                  </h4>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    Während einer Wehe zieht sich die Gebärmutter zusammen, was die Sauerstoffversorgung kurzzeitig reduziert. Ein gezieltes IHHT-Training wirkt wie eine <strong>„Generalprobe“</strong>: Es hilft der Zelle, schwache Mitochondrien auszusortieren und neue, leistungsstarke Kraftwerke aufzubauen. So starten kindliche Zellen nach der Geburt mit maximaler Energie ins Leben.
                   </p>
-                  <div className="bg-white p-8 rounded-[2rem] border border-accent/20">
-                    <h4 className="font-bold text-primary text-xl mb-3 flex items-center gap-2">
-                      <Battery className="text-accent" /> Unterstützung der natürlichen Kraftreserven
-                    </h4>
-                    <p className="text-muted-foreground">
-                      Stelle dir deinen Körper wie einen Akku vor: Mit wenig Ladung in die Geburt zu gehen, bedeutet höhere Wahrscheinlichkeit für Erschöpfung. <strong>Mit gut gefüllten Kraftreserven</strong> gehst du vital und kraftvoll in die Geburt – und unterstützt damit auch dein Baby optimal.
-                    </p>
-                  </div>
+                </div>
               </div>
             </div>
 
@@ -94,26 +94,58 @@ const anwendungen = [
         </div>
       </section>
 
+      {/* Fallbeispiel & Therapieerfolg */}
+      <section className="py-24 bg-white overflow-hidden">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="bg-primary text-white rounded-[4rem] p-10 lg:p-20 relative shadow-2xl">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 -mr-48 -mt-48 rounded-full blur-3xl"></div>
+            <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <h3 className="text-3xl md:text-4xl font-serif mb-8">Erfolg, der messbar ist: Das Beispiel von Patientin „N.“</h3>
+                <div className="space-y-6 opacity-90 text-lg leading-relaxed font-medium">
+                  <p>
+                    Eine 38-jährige Schwangere kam in der 15. Woche zu uns – geplagt von starker Müdigkeit und Erschöpfung. Ihr <strong>Bio-Health-Index (BHI)</strong> war deutlich erniedrigt. Es fehlte ihr und ihrem Baby schlichtweg an Zellenergie.
+                  </p>
+                  <p>
+                    Nach 4 Monaten gezielter Mikronährstoff-Therapie und 12 IHHT-Sessions erreichte sie im letzten Drittel eine Zell-Leistung, die dem Niveau auf dem Gipfel des Kilimandscharo entsprach (10% Sauerstoff für 7 Minuten).
+                  </p>
+                </div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-md p-10 rounded-[3rem] border border-white/20 italic italic text-white shadow-inner relative">
+                <blockquote className="text-xl leading-relaxed">
+                  „Ich merke, dass ich vor der Geburt viel gemacht habe, weil ich wirklich sehr fit bin. Unsere Tochter kam Sonntagmorgen zur Welt... es ging alles recht zügig. Ich fühle mich gestärkt!“
+                </blockquote>
+                <cite className="block mt-8 font-bold not-italic text-accent">— Patientin N. (per E-Mail)</cite>
+                <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-accent rounded-full flex items-center justify-center shadow-lg -rotate-12">
+                   <Heart className="w-10 h-10 text-white fill-white" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Anwendung in der Schwangerschaft */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-muted/20">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-serif text-primary mb-4">Einsatzbereiche</h2>
-            <p className="text-xl text-muted-foreground">
-              IHHT kann dich in der Schwangerschaft auf vielfältige Weise unterstützen:
+            <h2 className="text-4xl font-serif text-primary mb-4">Einsatzbereiche der IHHT</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Zelltraining kann dich in der Schwangerschaft bei vielfältigen Herausforderungen unterstützen:
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-4">
             {anwendungen.map((gebiet, i) => (
-              <div key={i} className="bg-muted/20 p-6 rounded-2xl border border-border flex items-center gap-4 hover:border-accent transition-colors">
+              <div key={i} className="bg-white p-6 rounded-2xl border border-border flex items-center gap-4 hover:border-accent transition-all hover:shadow-md">
                 <div className="w-3 h-3 bg-accent rounded-full shrink-0"></div>
-                <span className="font-medium text-primary">{gebiet}</span>
+                <span className="font-bold text-primary">{gebiet}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* Zeitpunkt */}
       <section className="py-24 bg-accent/5">

@@ -1,4 +1,4 @@
-﻿import React, { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
@@ -12,9 +12,25 @@ export default function Home() {
 
   const heroImage = getImageUrl("img_hero_home", "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [status, setStatus] = React.useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // form submission placeholder
+    if (!formData.agree) {
+      alert('Bitte akzeptiere die Datenschutzbedingungen.');
+      return;
+    }
+    setStatus('loading');
+    try {
+      // Simulate API call – replace with real endpoint as needed
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      console.log('Form submitted:', formData);
+      setStatus('success');
+      // Reset form
+      setFormData({ name: '', email: '', phone: '', topic: '', otherTopic: '', message: '', agree: false });
+} catch (err) {
+      console.error(err);
+      setStatus('error');
+    }
   };
 
   return (

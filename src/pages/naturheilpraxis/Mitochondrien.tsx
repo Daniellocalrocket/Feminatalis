@@ -3,133 +3,295 @@ import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
 import PreisTransparenz from "@/components/PreisTransparenz";
-import { Zap, Target, CheckCircle2, ShieldAlert, BatteryLow, Activity, ArrowRight, Lightbulb } from "lucide-react";
+import { 
+  Zap, 
+  BatteryLow, 
+  Activity, 
+  ArrowRight, 
+  ShieldAlert, 
+  Microscope, 
+  FlaskConical, 
+  Dna,
+  Check,
+  AlertTriangle,
+  Sparkles,
+  Info,
+  CheckCircle2
+} from "lucide-react";
 import SplitScreenHero from "@/components/SplitScreenHero";
+import { motion } from "framer-motion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 }
+  }
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: { y: 0, opacity: 1 }
+};
 
 export default function Mitochondrien() {
-  const schadfaktoren = [
-    "Medikamente (Antibiotika, Betablocker, Statine, Schmerzmittel...)",
-    "Infektionen (Viren, Bakterien, Parasiten)",
-    "Psychischer & körperlicher Stress",
-    "Toxische Metalle (Blei, Quecksilber, Aluminium...)",
-    "Umweltgifte (Pestizide, Herbizide, Holzschutzmittel...)",
-    "Elektrosmog & Geopathische Störungen",
-    "Kohlenhydratreiche Ernährung & Fehlernährung"
-  ];
-
-  const symptome = [
-    "Erschöpfungszustände & Burnout (CFS)",
-    "Durchblutungsstörungen & Bluthochdruck",
-    "Störungen der Verdauungsorgane (Leaky-Gut, M. Crohn...)",
-    "Diabetes & Stoffwechselstörungen",
-    "Autoimmunerkrankungen & Immunschwäche",
-    "Neurologische Erkrankungen (Depression, MS...)"
-  ];
+  const scrollTo = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <div className="bg-background min-h-screen font-sans">
       <SEO 
         title="Mitochondrien-Therapie & Zellkraftwerke | Naturheilpraxis feminatalis" 
-        description="Die Basis deiner Energie. Stärke deine Zellkraftwerke bei Erschöpfung, Burnout und chronischen Beschwerden durch mitochondriale Medizin." 
+        description="Optimiere deine Zellenergie (ATP) durch mitochondriale Medizin. Wir behandeln Burnout, chronische Erschöpfung und Stoffwechselstörungen an der Ursache." 
       />
-      
+
       <SplitScreenHero
-        badge="Mitochondriale Medizin"
-        title={<>Zellkraft- <br /><span className="text-accent italic font-light">Mitochondrien-Therapie</span></>}
-        subtitle="Deine Gesundheit beginnt in der Zelle. Mit gezielter IHHT-Höhentraining und Mikronährstoff-Therapie laden wir deine zellulären Kraftwerke wieder auf – für mehr Vitalität und Leistungsfähigkeit."
+        badge="Zentrum für Mitochondriale Medizin"
+        title={<>Zellkraft: <br /><span className="text-accent italic font-light">Das Fundament deiner Vitalität</span></>}
+        subtitle="Du bist nur so gesund wie deine Zellen. In meiner Praxis blicken wir tief in deine winzigen Kraftwerke – die Mitochondrien – um den Motor deiner Heilung auf zellulärer Ebene neu zu starten."
         imageSrc="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=2070&auto=format&fit=crop"
-        imageAlt="Mitochondrien-Therapie und Zellgesundheit"
+        imageAlt="Mikroskopische Ansicht von Zellstrukturen und Mitochondrien"
         imageKey="img_hero_mitochondrien"
       >
-        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
-          Kostenfreie Vor-Analyse anfragen
-        </Link>
+        <div className="flex flex-wrap gap-4">
+          <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+            Zellcheck anfragen <ArrowRight size={20} />
+          </Link>
+          <button 
+            onClick={() => scrollTo("bio-fakten")}
+            className="bg-white text-primary border border-primary/10 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50 transition-all flex items-center gap-2"
+          >
+            Mehr erfahren
+          </button>
+        </div>
       </SplitScreenHero>
 
-      {/* ATP Logic Section */}
-      <section className="py-20 text-left">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-start mb-24 text-left">
-            <div className="space-y-8">
-              <div className="bg-white p-10 rounded-[3rem] border border-border shadow-sm text-left">
-                <BatteryLow className="w-12 h-12 text-accent mb-6" />
-                <h2 className="text-3xl font-serif text-primary mb-6 text-left">Was ist ATP?</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed font-medium text-left">
-                  ATP (Adenosintriphosphat) ist der Kraftstoff deiner Zellen. Es ist aber mehr als nur Wärmeenergie – es dient gleichzeitig als <strong>Informationsenergie</strong>, die sämtliche Steuerungsprozesse in deinem Körper übernimmt. 
+      {/* Bio-Facts Section */}
+      <section id="bio-fakten" className="py-24 bg-white overflow-hidden scroll-mt-24">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl md:text-5xl font-serif text-primary mb-8 leading-tight">
+              Mitochondrien: <br /><span className="text-accent italic">Die Kraftwerke deines Lebens</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Dein Körper besteht aus rund 80 Billionen Zellen. In fast jeder von ihnen (außer roten Blutkörperchen) arbeiten 1.500 bis 6.500 Mitochondrien. In der weiblichen Eizelle sind es sogar bis zu 400.000 – ein Rekord für das Leben selbst.
+            </p>
+          </div>
+
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-3 gap-8"
+          >
+            {[
+              { 
+                icon: <Zap className="text-orange-500" />, 
+                title: "ATP-Synthese", 
+                text: "Sie wandeln Sauerstoff und Nährstoffe in ATP um – den universellen Treibstoff, der jede Sekunde 100.000 Stoffwechselreaktionen steuert." 
+              },
+              { 
+                icon: <BatteryLow className="text-red-500" />, 
+                title: "Der Sparmodus", 
+                text: "Bei Störungen schaltet die Zelle auf Blutzucker-Vergärung um. Die Folge: Ein massiver Energieabfall und Funktionsverlust aller Organe." 
+              },
+              { 
+                icon: <Sparkles className="text-accent" />, 
+                title: "Lichtquanten-Organe", 
+                text: "Mitochondrien kommunizieren mit Lichtgeschwindigkeit. Diese Biophotonen-Energie ist die Basis für die Koordination deiner Billionen Zellen." 
+              }
+            ].map((item, idx) => (
+              <motion.div key={idx} variants={itemVariants} className="bg-slate-50 p-10 rounded-[3.5rem] border border-border hover:shadow-xl transition-all">
+                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+                  {item.icon}
+                </div>
+                <h4 className="text-xl font-bold text-primary mb-4">{item.title}</h4>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  {item.text}
                 </p>
-                <div className="mt-8 p-6 bg-accent/5 rounded-2xl border border-accent/20 italic text-sm text-primary font-medium text-left">
-                  Schon ein partieller Funktionsverlust der Mitochondrien kann zu massiven Kommunikationsproblemen im gesamten Organismus führen (z.B. schwerste hormonelle Dysbalancen).
-                </div>
-              </div>
-            </div>
-            <div className="space-y-6 text-left">
-              <h3 className="text-2xl font-serif text-primary font-bold text-left mb-6">Was schadet deinen Mitochondrien?</h3>
-              <div className="grid gap-4 mt-2">
-                {schadfaktoren.map((item, i) => (
-                  <div key={i} className="flex gap-4 items-center bg-white p-5 rounded-2xl border border-border shadow-sm group hover:border-red-200 transition-colors">
-                    <ShieldAlert className="w-5 h-5 text-destructive shrink-0 group-hover:scale-110 transition-transform" />
-                    <span className="text-sm font-bold text-primary">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Consequences Section */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-serif text-primary mb-4 text-center">Wenn die Zellkraftwerke streiken</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto font-medium text-center">Eine dauerhafte Störung der Mitochondrienfunktion (Mitochondriopathie) ist die Basis vieler chronischer Zivilisationskrankheiten.</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24 text-left">
-            {symptome.map((item, i) => (
-              <div key={i} className="p-8 bg-white rounded-3xl border border-border shadow-sm flex flex-col items-start group hover:border-accent transition-all text-left">
-                <div className="bg-muted/30 w-12 h-12 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/10 transition-colors">
-                  <Activity className="w-6 h-6 text-accent" />
-                </div>
-                <span className="font-bold text-primary font-serif text-lg leading-snug">{item}</span>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
+        </div>
+      </section>
 
-          {/* Treatment Approach */}
-          <div className="bg-primary text-white rounded-[4rem] p-12 lg:p-20 overflow-hidden relative shadow-2xl text-left">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 -mr-48 -mt-48 rounded-full blur-3xl"></div>
-            <div className="relative z-10 space-y-8 text-center max-w-4xl mx-auto">
-              <Lightbulb className="w-16 h-16 text-accent mx-auto animate-pulse" />
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-white text-center leading-tight">
-                Mehr Vitalität durch <br />funktionstüchtige Zellen
-              </h2>
-              <p className="text-xl opacity-80 max-w-3xl mx-auto leading-relaxed text-center font-medium text-white text-center">
-                In meiner Praxis messen wir den Grad der Schädigung deiner Zellkraftwerke über spezialisierte Labortestverfahren. 
+      {/* Harmful Factors Grid */}
+      <section className="py-24 bg-slate-50 overflow-hidden relative">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="text-left">
+              <span className="bg-red-100 text-red-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block">
+                Gefahrenquellen
+              </span>
+              <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-8 leading-tight">Was deine Zellkraft <br /><span className="text-red-600 italic">wirklich schwächt</span></h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-10">
+                Mitochondrien reagieren hochsensibel auf Umwelteinflüsse. Viele Belastungen führen zu oxidativem und nitrosativem Stress, der die Zell-DNA schädigen kann.
               </p>
               
-              <div className="grid sm:grid-cols-3 gap-6 text-left mt-16">
+              <div className="grid grid-cols-2 gap-4">
                 {[
-                  { title: "Nähren", desc: "Den Zellen alle ca. 45 benötigten essentiellen Nährstoffe zur Verfügung stellen." },
-                  { title: "Ausleiten", desc: "Belastungen, Toxine und oxidativen Stress gezielt aus dem System entfernen." },
-                  { title: "Schützen", desc: "Neue Schädigungen durch Aufklärung und bewussten Lebensstil fernhalten." }
-                ].map((step, i) => (
-                  <div key={i} className="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20 hover:bg-white/15 transition-colors">
-                    <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center mb-6 text-white font-bold text-lg">{i+1}</div>
-                    <h4 className="text-white font-serif font-bold mb-3 text-xl">{step.title}</h4>
-                    <p className="text-sm opacity-90 leading-relaxed font-medium text-white">{step.desc}</p>
+                  "Medikamente (Statine, Antibiotika)",
+                  "Chronischer Stress & Trauma",
+                  "Toxische Metalle (Blei, Alu)",
+                  "Elektrosmog & 5G",
+                  "Viren & Parasiten",
+                  "Zuckerreiche Ernährung"
+                ].map((factor, i) => (
+                  <div key={i} className="flex items-center gap-3 p-4 bg-white rounded-2xl border border-border shadow-sm">
+                    <ShieldAlert size={18} className="text-red-500 shrink-0" />
+                    <span className="text-sm font-medium text-primary">{factor}</span>
                   </div>
                 ))}
               </div>
-              
-              <div className="pt-16 text-center">
-                <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex items-center justify-center gap-3 bg-accent text-white px-12 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-xl border-none">
-                  Kostenfreie Vor-Analyse anfragen <ArrowRight className="w-6 h-6 text-white" />
-                </Link>
+            </div>
+
+            <div className="relative">
+              <div className="absolute -inset-4 bg-accent/10 rounded-[5rem] blur-3xl" />
+              <div className="bg-white p-12 rounded-[4rem] border border-border shadow-2xl relative z-10">
+                <h3 className="text-2xl font-serif text-primary mb-8">Zellulärer Stress-Check</h3>
+                <div className="space-y-6">
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-muted-foreground">Oxidativer Stress</span>
+                      <span className="text-red-500 font-bold">Gefahr</span>
+                    </div>
+                    <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
+                      <motion.div 
+                        initial={{ width: 0 }}
+                        whileInView={{ width: "85%" }}
+                        className="h-full bg-red-500"
+                      />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-muted-foreground">Nitrosativer Stress</span>
+                      <span className="text-red-600 font-bold">Kritisch</span>
+                    </div>
+                    <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
+                      <motion.div 
+                        initial={{ width: 0 }}
+                        whileInView={{ width: "95%" }}
+                        className="h-full bg-red-600"
+                      />
+                    </div>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-8 leading-relaxed italic">
+                    Nitrosativer Stress führt zu einer Kaskade chemischer Reaktionen, die Superradikale produzieren – der größte Feind deiner Mitochondrien.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Disease Spectrum */}
+      <section className="py-24 bg-white scroll-mt-24">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-serif text-primary mb-6">Wenn die Kraft versiegt</h2>
+            <p className="text-muted-foreground text-lg">Ein Energiemangel auf Zellebene kann sich in vielfältigen Krankheitsbildern äußern.</p>
+          </div>
+
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {[
+              { 
+                id: "exhaustion", 
+                title: "Erschöpfung & Burnout", 
+                content: "CFS (Chronic Fatigue Syndrome) und Burnout sind oft direkte Folgen einer mitochondrialen Dysfunktion. Wenn der Kraftstoff ATP fehlt, streikt der gesamte Organismus." 
+              },
+              { 
+                id: "metabolic", 
+                title: "Stoffwechsel & Durchblutung", 
+                content: "Diabetes, Bluthochdruck, Schlaganfall und Herzinfarkt hängen eng mit der Energieversorgung der Gefäße und Organe zusammen." 
+              },
+              { 
+                id: "neuro", 
+                title: "Neurologische Erkrankungen", 
+                content: "Demenz, Alzheimer und Parkinson werden heute oft als energetische Krisen des Gehirns verstanden, bei denen Mitochondrien eine Schlüsselrolle spielen." 
+              },
+              { 
+                id: "immune", 
+                title: "Immunsystem & Autoimmun", 
+                content: "Allergien, chronische Infektionen und Autoimmunerkrankungen entstehen, wenn die zelluläre Kommunikation durch Energiemangel gestört ist." 
+              }
+            ].map((item) => (
+              <AccordionItem key={item.id} value={item.id} className="border border-border rounded-[2rem] px-8 py-2 hover:bg-slate-50 transition-all data-[state=open]:bg-slate-50/50">
+                <AccordionTrigger className="text-xl font-serif text-primary hover:no-underline">
+                  {item.title}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed text-lg pb-6">
+                  {item.content}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
+
+      {/* Solution Section */}
+      <section className="py-24 bg-primary text-white rounded-[4rem] mx-4 lg:mx-10 mb-24 relative overflow-hidden shadow-2xl">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mt-48 blur-3xl" />
+        <div className="container mx-auto px-4 max-w-7xl relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8 text-left">
+              <h2 className="text-3xl lg:text-5xl font-serif leading-tight">Dein Weg zurück <br /><span className="text-accent italic">zu voller Zellkraft</span></h2>
+              <p className="text-primary-foreground/80 text-lg leading-relaxed">
+                In meiner Praxis nutzen wir modernste Speziallabore, um den Grad deiner mitochondrialen Schädigung exakt nachzuweisen. Wir führen Belastungen aus, füllen Mangelzustände gezielt auf und schützen deine Zellen vor weiterem Stress.
+              </p>
+              
+              <ul className="space-y-4">
+                {[
+                  "Mitochondrien-Diagnostik per Blutprobe",
+                  "Gezielte Zufuhr von 45+ essenziellen Nährstoffen",
+                  "Ausleitung von Toxinen & Schwermetallen",
+                  "Orthomolekulare Schutzschicht (Q10, Glutathion, Vitamine)"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-primary-foreground/90 font-medium">
+                    <CheckCircle2 size={20} className="text-accent" /> {item}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="pt-8">
+                <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-accent hover:bg-orange-600 text-white px-10 py-5 rounded-2xl font-bold transition-all shadow-xl inline-flex items-center gap-2">
+                  Jetzt Zellstatus prüfen <ArrowRight size={20} />
+                </Link>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+               <div className="bg-white/10 backdrop-blur-md p-8 rounded-[3rem] border border-white/10 text-center">
+                  <div className="text-3xl font-bold text-accent mb-2">45+</div>
+                  <div className="text-xs uppercase tracking-widest text-white/60">Essenziellste Nährstoffe</div>
+               </div>
+               <div className="bg-white/10 backdrop-blur-md p-8 rounded-[3rem] border border-white/10 text-center">
+                  <div className="text-3xl font-bold text-accent mb-2">122</div>
+                  <div className="text-xs uppercase tracking-widest text-white/60">ATP pro Fettsäure</div>
+               </div>
+               <div className="bg-white/10 backdrop-blur-md p-8 rounded-[3rem] border border-white/10 text-center">
+                  <div className="text-3xl font-bold text-accent mb-2">100%</div>
+                  <div className="text-xs uppercase tracking-widest text-white/60">Individuelle Analyse</div>
+               </div>
+               <div className="bg-white/10 backdrop-blur-md p-8 rounded-[3rem] border border-white/10 text-center">
+                  <div className="text-3xl font-bold text-accent mb-2">∞</div>
+                  <div className="text-xs uppercase tracking-widest text-white/60">Dein Vital-Potenzial</div>
+               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <PreisTransparenz 
-        preisHint="Analyse & Beratung ab 100,- €" 
-        hinweis="Analytische Tiefe für deine zelluläre Energie."
+        preisHint="Zellkraft-Analyse & Basis-Therapie" 
+        hinweis="Die Investition in deine zelluläre Gesundheit ist der Grundstein für jede nachhaltige Genesung. Wir berechnen Leistungen transparent nach GebüH."
       />
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import AdminLayout from "@/components/admin/AdminLayout";
 import { supabase } from "@/integrations/supabase/client";
 import { 
@@ -9,7 +9,9 @@ import {
   ExternalLink,
   Search,
   Calendar,
-  Tag
+  Tag,
+  Upload,
+  FileCode
 } from "lucide-react";
 import { 
   Dialog, 
@@ -41,6 +43,38 @@ export default function AdminBlog() {
   const [editingPost, setEditingPost] = useState<any>(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [pubFilter, setPubFilter] = useState<"alle" | "published" | "draft">("alle");
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleHtmlFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    try {
+      const text = await file.text();
+      
+      // Extract content from body tag
+      const bodyMatch = text.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+      let htmlContent = bodyMatch ? bodyMatch[1] : text;
+
+      // Clean up Google Docs styling and extract text
+      htmlContent = htmlContent
+        .replace(/<style[\s\S]*?<\/style>/gi, '')
+        .replace(/<meta[^>]*>/gi, '')
+        .replace(/<link[^>]*>/gi, '')
+        .replace(/<script[\s\S]*?<\/script>/gi, '')
+        .replace(/class="[^"]*"/g, '')
+        .replace(/style="[^"]*"/g, '')
+        .replace(/id="[^"]*"/g, '');
+
+      setFormData(prev => ({ ...prev, content_html: htmlContent }));
+      toast.success("Inhalt aus Google Docs importiert!");
+    } catch (err) {
+      toast.error("Fehler beim Importieren der Datei");
+    }
+
+    // Reset input
+    if (fileInputRef.current) fileInputRef.current.value = '';
+  };
 
   const initialPostState = {
     title: "",
@@ -332,8 +366,26 @@ export default function AdminBlog() {
                   </div>
 
                   <div className="grid gap-2">
-                    <Label htmlFor="google_doc_id" className="uppercase text-xs font-bold opacity-60">Google Doc ID (für Sync)</Label>
-                    <Input id="google_doc_id" value={formData.google_doc_id} onChange={(e) => setFormData({...formData, google_doc_id: e.target.value})} className="h-12 rounded-xl" placeholder="z.B. 1A2b3C..." />
+                    <Label className="uppercase text-xs font-bold opacity-60">Aus Google Docs importieren</Label>
+                    <div className="flex gap-3">
+                      <input
+                        type="file"
+                        ref={fileInputRef}
+                        accept=".html,.htm"
+                        onChange={handleHtmlFileUpload}
+                        className="hidden"
+                        id="html-upload"
+                      />
+                      <label htmlFor="html-upload" className="flex-1 cursor-pointer">
+                        <div className="h-12 rounded-xl border-2 border-dashed border-primary/20 hover:border-accent hover:bg-accent/5 transition-all flex items-center justify-center gap-2 text-sm font-medium text-primary/60">
+                          <FileCode className="w-4 h-4" />
+                          HTML-Datei aus Google Docs hochladen
+                        </div>
+                      </label>
+                    </div>
+                    <p className="text-[10px] text-muted-foreground">
+                      In Google Docs: Datei → Herunterladen → Webseite (.html)
+                    </p>
                   </div>
 
                   {/* Published Toggle */}

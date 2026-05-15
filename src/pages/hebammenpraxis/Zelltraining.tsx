@@ -45,111 +45,80 @@ export default function Zelltraining() {
       />
 
       <SplitScreenHero
-        badge="Wissenschaftlich anerkannte Methode"
-        title={<>IHHT Höhentraining <br /><span className="text-accent italic font-light">Energie auf Knopfdruck</span></>}
-        subtitle="Trainiere deine Zellen, während du entspannt liegst. Das simulierte Höhentraining optimiert deine Mitochondrien und sorgt für tiefgreifende Regeneration – ganz ohne körperliche Anstrengung."
+        badge="Nobelpreis-prämierte Zell-Technologie"
+        title={<>IHHT Zelltraining: <br /><span className="text-accent italic font-light">Zell-Hausputz auf höchstem Niveau</span></>}
+        subtitle="Stell dir vor, du könntest deine Zellen trainieren, während du völlig entspannt liegst. Das IHHT-Höhentraining (Intervall-Hypoxie-Hyperoxie-Therapie) sortiert schwache Kraftwerke aus und lässt neue, gesunde Mitochondrien wachsen – für radikal mehr Energie, Fokus und Vitalität."
         imageSrc="https://images.unsplash.com/photo-1516670428252-df97bba108d1?q=80&w=2070&auto=format&fit=crop"
         imageAlt="IHHT Zelltraining Behandlung"
         imageKey="img_hero_zelltraining"
       >
         <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
-          Kostenfreie Vor-Analyse anfragen <ArrowRight size={20} />
+          Analyse-Gespräch anfragen <ArrowRight size={20} />
         </Link>
       </SplitScreenHero>
 
-      {/* Was ist IHHT? */}
+      {/* Science: The Bohr Effect & HIF */}
       <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            <div className="space-y-8">
-              <h2 className="text-4xl font-serif text-primary leading-tight">Was ist IHHT?</h2>
-              <div className="prose prose-lg text-muted-foreground leading-relaxed space-y-6">
-                <p>
-                  <strong>IHHT</strong> steht für Intervall-Hypoxie-Hyperoxie-Therapie – auch bekannt als Höhentraining. Bei dieser Methode atmest du abwechselnd sauerstoffarme und sauerstoffreiche Luft über eine Maske ein.
-                </p>
-                <p>
-                  Der Clou: Diese Technik macht sich eine Entdeckung zunutze, für die 2019 der <strong>Medizin-Nobelpreis</strong> verliehen wurde. Denn unsere Zellen können den Sauerstoffgehalt messen und bei Sauerstoffmangel körpereigene Regenerationsprozesse aktivieren.
-                </p>
-              </div>
-              <div className="bg-accent/5 border-l-4 border-accent p-6 rounded-r-2xl">
-                <p className="font-medium text-primary italic">
-                  "IHHT ist ein Zelltraining, das Ihren Körper auf Zellebene verjüngt – ein Schritt hin zu körperlicher und geistiger Höchstleistung."
-                </p>
-              </div>
-            </div>
-
-            <div className="grid sm:grid-cols-2 gap-6">
-              {vorteile.map((item, i) => (
-                <div key={i} className="bg-white p-8 rounded-[2rem] border border-border/50 shadow-sm flex flex-col group hover:border-accent transition-all">
-                  <div className="bg-muted/30 w-14 h-14 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-accent/10 transition-colors">
-                    <item.icon className="text-accent w-7 h-7" />
-                  </div>
-                  <h4 className="font-bold text-primary mb-2 font-serif text-lg">{item.title}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Warum dir Energie fehlt */}
-      <section className="py-24 bg-muted/20">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="bg-primary text-white p-12 lg:p-16 rounded-[4rem] shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 -mr-32 -mt-32 rounded-full blur-3xl opacity-20"></div>
-            
-            <div className="relative z-10">
-              <h2 className="text-3xl lg:text-4xl font-serif mb-8 font-bold">Warum dir Energie fehlt</h2>
-              <div className="grid md:grid-cols-2 gap-10">
-                <div>
-                  <p className="text-lg opacity-90 leading-relaxed mb-6">
-                    Wenn Kraft fehlt, fehlt auch der Antrieb. Vieles fühlt sich anstrengend an – was es gar nicht sein müsste.
-                  </p>
-                  <p className="text-lg opacity-90 leading-relaxed">
-                    <strong>Stress</strong> und eine ungesunde Lebensweise sorgen dafür, dass uns weniger Energie bleibt. Denn die Energielieferanten in unseren Zellen – die <strong>Mitochondrien</strong> – verlieren durch Stress und Gifte die volle Leistungsfähigkeit bei der Produktion des körpereigenen „Kraftstoffs" ATP (Adenosintriphosphat).
-                  </p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm p-8 rounded-[2rem]">
-                  <h4 className="font-bold text-accent mb-4 flex items-center gap-2">
-                    <Battery size={20} /> Die Folge:
-                  </h4>
-                  <ul className="space-y-3 opacity-90">
-                    <li className="flex items-start gap-3"><CheckCircle2 size={18} className="text-accent shrink-0 mt-1"/> Chronische Müdigkeit</li>
-                    <li className="flex items-start gap-3"><CheckCircle2 size={18} className="text-accent shrink-0 mt-1"/> Erschöpfung</li>
-                    <li className="flex items-start gap-3"><CheckCircle2 size={18} className="text-accent shrink-0 mt-1"/> Antriebslosigkeit</li>
-                    <li className="flex items-start gap-3"><CheckCircle2 size={18} className="text-accent shrink-0 mt-1"/> Konzentrationsschwierigkeiten</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Wirkung von IHHT */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif text-primary mb-4">Die Wirkung von IHHT</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Was IHHT in deinem Körper bewirkt – wissenschaftlich fundiert und praktisch spürbar.
+        <div className="container mx-auto px-4 max-w-5xl text-center">
+          <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-10 leading-tight">Biologisches <br /><span className="text-accent italic">Hochleistungstraining</span></h2>
+          <div className="prose prose-lg mx-auto text-muted-foreground leading-relaxed">
+            <p>
+              IHHT basiert auf den Erkenntnissen zum <strong>HIF-Faktor</strong> (Hypoxie-induzierter Faktor), für die 2019 der Nobelpreis verliehen wurde. Durch den kontrollierten Wechsel zwischen Bergluft (wenig Sauerstoff) und Meeresluft (viel Sauerstoff) lösen wir einen sanften biologischen Stressreiz aus.
+            </p>
+            <p className="mt-6">
+              Dieser Reiz zwingt deinen Körper dazu, beschädigte, ineffiziente Mitochondrien (die oft für Erschöpfung und Burnout verantwortlich sind) abzubauen und Platz für frische, leistungsstarke Kraftwerke zu schaffen. Gleichzeitig nutzen wir den <strong>Bohr-Effekt</strong>, um die Sauerstoffabgabe aus dem Blut direkt in das Gewebe zu optimieren. Das Ergebnis: Ein spürbarer Energieschub auf allen Ebenen.
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {wirkungen.map((item, i) => (
-              <div key={i} className="bg-background p-8 rounded-[2.5rem] border border-border hover:shadow-lg transition-all">
-                <div className="bg-accent/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-4 text-accent">
-                  <item.icon className="w-7 h-7" />
+        </div>
+      </section>
+
+      {/* Benefits Grid */}
+      <section className="py-24 bg-muted/20">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-left mb-24">
+            {[
+              { title: "Zell-Erneuerung", desc: "Gezielter Abbau alter Mitochondrien und Stimulation der Neu-Bildung.", icon: <Sparkles className="w-8 h-8 text-accent" /> },
+              { title: "Neuro-Support", desc: "Maximale Sauerstoffversorgung für das Gehirn – ideal bei Brain-Fog und Stress.", icon: <Brain className="w-8 h-8 text-accent" /> },
+              { title: "Metabolik-Turbo", desc: "Aktivierung des Fettstoffwechsels und Unterstützung der Gewichtsregulation.", icon: <Activity className="w-8 h-8 text-accent" /> },
+              { title: "Immunsystem", desc: "Stärkung der Abwehrkräfte durch optimierte zelluläre Widerstandskraft.", icon: <ShieldCheck className="w-8 h-8 text-accent" /> }
+            ].map((item, i) => (
+              <div key={i} className="bg-white p-10 rounded-[3rem] border border-border hover:border-accent transition-all hover:shadow-xl group">
+                <div className="bg-muted/30 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-all duration-500">
+                   {item.icon}
                 </div>
-                <h4 className="font-bold text-primary mb-2 font-serif text-xl">{item.title}</h4>
-                <p className="text-muted-foreground">{item.desc}</p>
+                <h4 className="font-bold text-primary mb-3 font-serif text-xl leading-tight">{item.title}</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed font-medium opacity-80">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+
+      {/* Wirkung von IHHT */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-serif text-primary mb-4">Warum dein Körper IHHT liebt</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Der Wechsel zwischen Berg- und Talluft aktiviert tiefgreifende biologische Schalter.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {wirkungen.map((item, i) => (
+              <div key={i} className="bg-background p-10 rounded-[3rem] border border-border hover:shadow-2xl transition-all group">
+                <div className="bg-accent/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-accent group-hover:bg-accent group-hover:text-white transition-all duration-500">
+                  <item.icon className="w-8 h-8" />
+                </div>
+                <h4 className="font-bold text-primary mb-3 font-serif text-2xl">{item.title}</h4>
+                <p className="text-muted-foreground text-base leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* Anwendungsgebiete */}
       <section className="py-24 bg-muted/20">

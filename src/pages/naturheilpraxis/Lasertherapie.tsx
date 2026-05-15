@@ -20,101 +20,104 @@ export default function Lasertherapie() {
         title="Lasertherapie & Hämo-Laser | Naturheilpraxis feminatalis" 
         description="Medizinische Lasertherapie zur Zellregeneration und Hämo-Laser zur systemischen Blutaktivierung. Sanfte Heilung durch Lichtenergie." 
       />
-      
+
       <SplitScreenHero
-        badge="Biophotonen & Energie"
-        title={<>Photon- <br /><span className="text-accent italic font-light">Lasertherapie</span></>}
-        subtitle="Wir bringen Licht in deine Zellen. Die Low-Level-Lasertherapie nutzt die Kraft der Photonen, um Entzündungen zu hemmen, die Wundheilung zu beschleunigen und die mitochondriale Energieproduktion sanft zu stimulieren."
+        badge="Medizin des Lichts"
+        title={<>Photon-Energie: <br /><span className="text-accent italic font-light">Lasertherapie der Zukunft</span></>}
+        subtitle="Licht ist Energie, Information und Heilung. Mit hochmodernen Low-Level-Lasern stimulieren wir direkt die Kraftwerke deiner Zellen, um Entzündungen zu löschen und die Regeneration auf Lichtgeschwindigkeit zu bringen."
         imageSrc="https://images.unsplash.com/photo-1579152276503-3406322316e6?q=80&w=2070&auto=format&fit=crop"
         imageAlt="Lasertherapie Behandlung"
         imageKey="img_hero_lasertherapie"
       >
         <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
-          Kostenfreie Vor-Analyse anfragen
+          Analyse-Gespräch anfragen <ArrowRight size={20} />
         </Link>
       </SplitScreenHero>
 
-      {/* Basic Effects */}
-      <section className="py-20 text-left">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-start mb-24 text-left">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-serif text-primary leading-tight text-left">Licht als biologischer Treibstoff</h2>
-              <div className="prose prose-lg text-muted-foreground text-left text-left">
-                <p>
-                  Laserlicht (Low-Level-Laser) ist hochreine Energie. Wenn diese Photonen auf die Mitochondrien deiner Zellen treffen, reagieren diese wie eine Solarzelle: Sie produzieren sofort mehr ATP – den universellen Kraftstoff deiner Zellen.
-                </p>
-                <p>
-                  Dies führt zu einer Kaskade von positiven Effekten: Wunden schließen sich schneller, Entzündungen klingen ab und Schmerzen werden gelindert, ohne dass der Körper mit Chemie belastet wird.
-                </p>
-              </div>
-              <div className="bg-white border border-border p-6 rounded-2xl shadow-sm flex items-start gap-4 text-left">
-                <Sun className="text-accent shrink-0 w-6 h-6" />
-                <p className="text-sm font-medium italic text-left">
-                  Laser: Begleitend zur Förderung von Mikrozirkulation und Geweberegeneration – besonders bei belasteten Heilungsverläufen & Polyneuropathie
-                </p>
-              </div>
-            </div>
-            <div className="grid sm:grid-cols-2 gap-6 mt-4 text-left">
-              {laserEffekte.map((eff, i) => (
-                <div key={i} className="bg-white p-8 rounded-3xl border border-border shadow-sm hover:border-accent transition-all group">
-                   <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors text-left">
-                      <Sparkles className="text-accent w-6 h-6 text-left" />
-                   </div>
-                   <h4 className="font-bold text-primary mb-3 text-left font-serif">{eff.title}</h4>
-                   <p className="text-xs text-muted-foreground leading-relaxed text-left">{eff.desc}</p>
+      {/* Science: Cytochrom-c-Oxidase */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl text-center">
+          <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-10 leading-tight">Wie Licht deine <br /><span className="text-accent italic">Zellen aktiviert</span></h2>
+          <div className="prose prose-lg mx-auto text-muted-foreground leading-relaxed">
+            <p>
+              In deinen Mitochondrien sitzt ein ganz spezieller „Lichtfänger“: das Enzym <strong>Cytochrom-c-Oxidase</strong>. Wenn das Laserlicht auf dieses Enzym trifft, wird es sofort aktiviert und kurbelt die Produktion von ATP (Zellenergie) massiv an. Das Gewebe erhält einen energetischen Reboot, Schwellungen klingen ab und die Selbstheilung wird radikal beschleunigt.
+            </p>
+            <p className="mt-6">
+              In unserer Praxis nutzen wir sowohl die lokale Lasertherapie für gezielte Schmerzpunkte als auch den innovativen <strong>Haemo-Laser</strong> für eine systemische Wirkung über die Blutbahn.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Effects Grid */}
+      <section className="py-24 bg-muted/20">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-left mb-24">
+            {[
+              { title: "Zell-Turbo", desc: "Steigerung der ATP-Synthese um bis zu 150% für sofortige Vitalität.", icon: <Zap className="w-8 h-8 text-accent" /> },
+              { title: "Mikro-Zirkulation", desc: "Verbesserung der fließfähigen Eigenschaften des Blutes bis in die kleinsten Kapillaren.", icon: <HeartPulse className="w-8 h-8 text-accent" /> },
+              { title: "Anti-Inflammatorisch", desc: "Schnelle Reduktion von Schwellungen und Entzündungsprozessen ohne Chemie.", icon: <ShieldCheck className="w-8 h-8 text-accent" /> },
+              { title: "Wundheilung", desc: "Beschleunigte Kollagensynthese für Haut, Sehnen und Bänder.", icon: <Sparkles className="w-8 h-8 text-accent" /> }
+            ].map((item, i) => (
+              <div key={i} className="bg-white p-10 rounded-[3rem] border border-border hover:border-accent transition-all hover:shadow-xl group">
+                <div className="bg-muted/30 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-all duration-500">
+                   {item.icon}
                 </div>
-              ))}
-            </div>
+                <h4 className="font-bold text-primary mb-3 font-serif text-xl leading-tight">{item.title}</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed font-medium opacity-80">{item.desc}</p>
+              </div>
+            ))}
           </div>
 
-          {/* Hämulaser Section */}
-          <div className="bg-primary text-white p-12 lg:p-20 rounded-[4rem] text-left shadow-2xl relative overflow-hidden mb-24">
-             <div className="absolute top-0 right-0 p-8 text-white/5 -rotate-12 translate-x-12 -translate-y-12">
-                <FlaskConical size={300} />
-             </div>
+          {/* Haemo-Laser Spectral Section */}
+          <div className="bg-primary text-white p-12 lg:p-20 rounded-[5rem] shadow-2xl relative overflow-hidden mb-24">
+             <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-accent/20 -mr-64 -mt-64 rounded-full blur-[100px] opacity-20"></div>
              <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10 text-left">
-                <div className="space-y-8 text-left">
-                   <h2 className="text-3xl lg:text-5xl font-serif font-bold text-white text-left">Hämo-Laser: <br />Blutaktivierung von innen</h2>
-                   <p className="text-lg opacity-80 leading-relaxed text-white text-left">
-                     Die intravasale Blutbestrahlung führt Laserlicht direkt in den Blutkreislauf. Hierbei wird das durchfließende Blut direkt bestrahlt und somit der Stoffwechsel der Blutzellen positiv beeinflusst.
+                <div className="space-y-8">
+                   <h2 className="text-3xl lg:text-5xl font-serif font-bold text-white leading-tight">Haemo-Laser: <br />Das Farbspektrum der Heilung</h2>
+                   <p className="text-lg opacity-90 leading-relaxed font-medium">
+                     Durch die intravenöse Bestrahlung des Blutes erreichen wir jede Zelle deines Körpers. Je nach Indikation nutzen wir unterschiedliche Frequenzen:
                    </p>
-                   <div className="bg-white/10 p-8 rounded-3xl border border-white/10 text-left">
-                      <h4 className="font-bold mb-4 text-accent uppercase tracking-widest text-sm text-left">Kerngebiete</h4>
-                      <ul className="grid sm:grid-cols-2 gap-3 text-sm text-left">
-                        {[
-                          "Immun-Modulation",
-                          "Durchblutung",
-                          "Burnout-Support",
-                          "Long-Covid-Hilfe",
-                          "Diabetes-Begleitung",
-                          "Gefäß-Stärkung"
-                        ].map((item, i) => (
-                          <li key={i} className="flex items-center gap-2 text-left text-white">
-                            <CheckCircle2 className="w-4 h-4 text-accent shrink-0" /> {item}
-                          </li>
-                        ))}
-                      </ul>
+                   <div className="grid gap-4">
+                      {[
+                        { color: "Rot", effect: "Maximum an Zellenergie, Durchblutung & Herz-Kreislauf-Support.", bg: "bg-red-500" },
+                        { color: "Blau", effect: "Starke Entzündungshemmung, Keimbekämpfung & Stickoxid-Freisetzung.", bg: "bg-blue-500" },
+                        { color: "Gelb", effect: "Stoffwechsel-Aktivierung, Entgiftung & antidepressive Wirkung.", bg: "bg-yellow-400" },
+                        { color: "Grün", effect: "Optimierte Sauerstoffbindung & Regeneration der roten Blutkörperchen.", bg: "bg-green-500" }
+                      ].map((spec, i) => (
+                        <div key={i} className="flex items-center gap-6 bg-white/10 p-5 rounded-2xl border border-white/10 backdrop-blur-sm">
+                           <div className={`w-12 h-12 rounded-full ${spec.bg} shadow-lg shrink-0 border-2 border-white/20`}></div>
+                           <div>
+                              <span className="font-bold text-white block">{spec.color}-Laser</span>
+                              <span className="text-sm opacity-80">{spec.effect}</span>
+                           </div>
+                        </div>
+                      ))}
                    </div>
                 </div>
-                <div className="bg-white/5 backdrop-blur-sm p-10 lg:p-12 rounded-[3.5rem] border border-white/10 text-center">
-                   <HeartPulse className="text-accent w-16 h-16 mx-auto mb-8 animate-pulse" />
-                   <h3 className="text-2xl font-serif font-bold mb-6 text-white text-center">Synergie-Effekt</h3>
-                   <p className="text-sm opacity-80 mb-10 text-white text-center">
-                      In unserer Praxis kombinieren wir den Hämo-Laser oft mit unseren <strong>Kur-Infusionen</strong>. Das Licht sensibilisiert die Zellen, sodass Nährstoffe und Vitamine effizienter aufgenommen werden können.
+                <div className="bg-white/10 backdrop-blur-md p-12 rounded-[4rem] border border-white/20 text-center">
+                   <Sun className="text-accent w-20 h-20 mx-auto mb-8 animate-pulse" />
+                   <h3 className="text-2xl font-serif font-bold mb-6 text-white">Systemisches Biohacking</h3>
+                   <p className="text-lg opacity-80 mb-10 leading-relaxed italic">
+                      „Der Haemo-Laser ist wie eine interne Lichtdusche. Er macht das Blut fließfähiger, verbessert die Sauerstoffaufnahme und weckt die Lebensgeister – besonders effektiv bei Burnout und Long-Covid.“
                    </p>
-                   <Link to={ROUTE_PATHS.INFUSIONSTHERAPIE} className="inline-flex bg-white text-primary px-10 py-5 rounded-xl font-bold hover:scale-105 transition-all shadow-xl border-none">
-                      Infusionen entdecken
+                   <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-white text-primary px-10 py-5 rounded-2xl font-bold hover:scale-105 transition-all shadow-xl">
+                      Therapie anfragen
                    </Link>
                 </div>
              </div>
           </div>
+        </div>
+      </section>
 
-          <div className="text-center mb-16 text-center">
-            <h2 className="text-3xl lg:text-4xl font-serif text-primary font-bold text-center">Lokale Laser-Anwendung</h2>
-            <p className="text-muted-foreground font-medium mt-4 text-center">Präzise Bestrahlung für schnelle Resultate.</p>
+      {/* Lokale Laser-Anwendung */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-serif text-primary font-bold">Lokale Laser-Anwendung</h2>
+            <p className="text-muted-foreground font-medium mt-4">Präzise Bestrahlung für schnelle Resultate.</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-24 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-24">
             {[
               "Tennisarm",
               "Narbenentstörung",
@@ -125,8 +128,8 @@ export default function Lasertherapie() {
               "Hautinfekte",
               "Sehnenreizung"
             ].map((app, i) => (
-              <div key={i} className="p-6 bg-white border border-border rounded-3xl text-center shadow-sm hover:border-accent transition-all text-center">
-                <span className="font-bold text-primary text-sm font-serif text-center">{app}</span>
+              <div key={i} className="p-6 bg-white border border-border rounded-3xl text-center shadow-sm hover:border-accent transition-all">
+                <span className="font-bold text-primary text-sm font-serif">{app}</span>
               </div>
             ))}
           </div>
@@ -142,11 +145,11 @@ export default function Lasertherapie() {
       <section className="py-24 bg-muted/20 border-t border-border text-center">
         <div className="container mx-auto px-4 max-w-4xl text-center">
            <ShieldCheck className="w-16 h-16 text-accent mx-auto mb-8 opacity-20" />
-           <h2 className="text-3xl md:text-5xl font-serif text-primary mb-10 leading-tight font-bold text-center">Bereit für deine <br />Licht-Regeneration?</h2>
-           <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-12 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-2xl flex items-center gap-3 shadow-primary/20 border-none">
-             Kostenfreie Vor-Analyse anfragen <ArrowRight className="w-6 h-6 text-white text-center" />
+           <h2 className="text-3xl md:text-5xl font-serif text-primary mb-10 leading-tight font-bold">Bereit für deine <br />Licht-Regeneration?</h2>
+           <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-12 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-2xl flex items-center gap-3">
+             Kostenfreie Vor-Analyse anfragen <ArrowRight className="w-6 h-6" />
            </Link>
-           <p className="text-xs text-muted-foreground mt-8 italic font-medium text-center">Abrechnung erfolgt nach Zeitaufwand (ca. 100 € / Std.) zzgl. evtl. Materialkosten.</p>
+           <p className="text-xs text-muted-foreground mt-8 italic font-medium">Abrechnung erfolgt nach Zeitaufwand (ca. 100 € / Std.) zzgl. evtl. Materialkosten.</p>
         </div>
       </section>
     </div>

@@ -23,78 +23,115 @@ export default function Homoeopathie() {
       />
       
       <SplitScreenHero
-        badge="Informationsmedizin"
-        title={<>Moderne <br /><span className="text-accent italic font-light">Komplexmittel-Homöopathie</span></>}
-        subtitle="Zeitgemäße Impulse für tiefgreifende Heilung. Ich nutze die Synergie homöopathischer Komplexmittel, um deine körpereigenen Selbstheilungskräfte gezielt zu aktivieren und Organe zu unterstützen."
+        badge="Ganzheitliche Informationsmedizin"
+        title={<>Sanfte Kraft: <br /><span className="text-accent italic font-light">Klassische & Komplex-Homöopathie</span></>}
+        subtitle="Heilung von innen nach außen. Wir nutzen homöopathische Impulse, um deine Lebenskraft zu harmonisieren und deine Selbstheilung auf körperlicher, emotionaler und geistiger Ebene zu aktivieren."
         imageSrc="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?q=80&w=2070&auto=format&fit=crop"
         imageAlt="Homöopathische Globuli und Naturheilkunde"
         imageKey="img_hero_homoeopathie"
       >
         <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
-          Kostenfreie Vor-Analyse anfragen
+          Analyse-Gespräch anfragen <ArrowRight size={20} />
         </Link>
       </SplitScreenHero>
 
       {/* Philosophy Section */}
-      <section className="py-20 text-left">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-start mb-24 text-left">
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl text-center">
+          <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-10 leading-tight">Ähnliches werde durch <br /><span className="text-accent italic">Ähnliches geheilt</span></h2>
+          <div className="prose prose-lg mx-auto text-muted-foreground leading-relaxed">
+            <p>
+              Das Herzstück der Homöopathie ist das Prinzip <strong>„Similia similibus curentur“</strong>. Ein Stoff, der bei einem Gesunden bestimmte Symptome hervorruft, kann genau diese Symptome bei einem Kranken heilen, indem er dem Körper den entscheidenden energetischen Spiegel vorhält.
+            </p>
+            <p className="mt-6">
+              Wir nutzen sowohl die <strong>Klassische Homöopathie</strong> (Einzelmittel) für tiefe konstitutionelle Veränderungen als auch die moderne <strong>Komplexmittel-Homöopathie</strong> zur gezielten Unterstützung von Organfunktionen (z.B. Leber-Galle-System oder Nieren-Entgiftung).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* The Anamnesis Depth */}
+      <section className="py-24 bg-muted/20">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
             <div className="space-y-8 text-left">
-              <h2 className="text-3xl lg:text-5xl font-serif text-primary text-left leading-tight">Ganzheitlicher <br />Informations-Impuls</h2>
-              <div className="prose prose-lg text-muted-foreground text-left font-medium">
-                <p>
-                  Ganzheitliche Homöopathie wirkt in der Tiefe nicht durch physikalische, chemische Substanzen, sondern vielmehr als ein absolut feinstofflicher <strong>Informationsreiz</strong>. Die hochmoderne Quantenphysik liefert und diskutiert heute faszinierende wissenschaftliche Erklärungsmodelle für dieses sogenannte „Dynamisierungsverfahren“.
-                </p>
-                <p>
-                  Das übergeordnete Prinzip ist im Kern simpel und doch so kraftvoll: „Ähnliches werde durch Ähnliches geheilt“. Ein Reiz, der bei einem völlig Gesunden temporäre Symptome hervorruft, kann bei einem chronisch Kranken genau den entscheidend fehlenden Anstoß zur endgültigen Heilung setzen.
-                </p>
-              </div>
-              <div className="bg-white p-10 rounded-[3rem] border border-border shadow-sm space-y-6 text-left">
-                <div className="flex gap-5 items-start group">
-                  <div className="bg-muted/30 p-3 rounded-xl group-hover:bg-accent/10 transition-colors">
-                    <Sparkles className="text-accent shrink-0" />
+              <h2 className="text-3xl lg:text-4xl font-serif text-primary leading-tight">Die Erstanamnese: <br />Deine Biografie im Fokus</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed font-medium">
+                In der Homöopathie behandeln wir nicht die Krankheit, sondern den <strong>Menschen mit dieser Krankheit</strong>. Deshalb nehmen wir uns für das erste Gespräch besonders viel Zeit (ca. 60 bis 90 Minuten).
+              </p>
+              <div className="grid gap-4">
+                {[
+                  { title: "Körperliche Ebene", desc: "Präzise Analyse aller aktuellen Symptome und deiner körperlichen Konstitution." },
+                  { title: "Emotionale Ebene", desc: "Berücksichtigung von Gemütszuständen, Ängsten, Träumen und Temperament." },
+                  { title: "Biografische Ebene", desc: "Blick auf familiäre Belastungen, prägende Lebensereignisse und Verhaltensmuster." }
+                ].map((level, i) => (
+                  <div key={i} className="flex gap-5 items-start bg-white p-6 rounded-3xl border border-border shadow-sm">
+                    <div className="bg-accent/10 p-3 rounded-2xl shrink-0">
+                       <CheckCircle2 className="text-accent w-6 h-6" />
+                    </div>
+                    <div>
+                       <h4 className="font-bold text-primary mb-1">{level.title}</h4>
+                       <p className="text-sm opacity-80">{level.desc}</p>
+                    </div>
                   </div>
-                  <p className="text-sm font-medium text-left leading-relaxed text-muted-foreground mt-2">Bei akuten Krankheiten nutzen wir meist tiefere Potenzen in sehr kurzen, intensiven Abständen.</p>
-                </div>
-                <div className="flex gap-5 items-start group">
-                  <div className="bg-muted/30 p-3 rounded-xl group-hover:bg-accent/10 transition-colors">
-                    <BookOpen className="text-accent shrink-0" />
-                  </div>
-                  <p className="text-sm font-medium text-left leading-relaxed text-muted-foreground mt-2">Hartnäckige emotionale oder geistige Symptome erfordern weitaus höhere Potenzen für den Ausgleich.</p>
-                </div>
+                ))}
               </div>
             </div>
             
             <div className="bg-primary text-white p-12 lg:p-16 rounded-[4rem] shadow-2xl relative overflow-hidden text-left h-full">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 -mr-32 -mt-32 rounded-full blur-3xl"></div>
-              <div className="relative z-10 text-left">
-                <h3 className="text-3xl font-serif font-bold mb-8 text-white text-left leading-tight">Einzel- oder <br />Komplexmittel?</h3>
-                <p className="text-base opacity-90 leading-relaxed mb-10 text-left text-white font-medium">
-                  In meiner Praxis verwende i.d.R. sehr gerne homöopathische Komplexmittel. Sie kombinieren genial aufeinander abgestimmte Substanzen, die langfristig systematisch tiefe Blockaden lösen und Organe wie Leber, Nieren und Darm signifikant in ihrer Ausscheidungsfunktion unterstützen.
+              <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 -mr-32 -mt-32 rounded-full blur-3xl opacity-20"></div>
+              <div className="relative z-10">
+                <Quote className="text-accent w-16 h-16 mb-8 opacity-50" />
+                <h3 className="text-3xl font-serif font-bold mb-8 text-white leading-tight text-left">Die Kraft der <br />Potenzierung</h3>
+                <p className="text-lg opacity-90 leading-relaxed mb-10 font-medium italic">
+                  „Homöopathie ist Informationsmedizin. Durch das stufenweise Verdünnen und Verschütteln (Dynamisieren) wird die rein materielle Substanz in einen energetischen Impuls umgewandelt, der direkt auf die Lebenskraft wirkt.“
                 </p>
-                <div className="p-6 rounded-2xl bg-white/10 border border-white/20 text-left">
-                  <p className="text-sm font-bold text-accent uppercase tracking-wider mb-3 text-left">Der große Vorteil:</p>
-                  <p className="text-sm opacity-90 font-medium text-left text-white leading-relaxed">Gezielte, schonende Reparatur blockierter biochemischer Abläufe in vielen kleinen, für den Organismus hochverträglichen Schritten.</p>
+                <div className="grid grid-cols-3 gap-4 border-t border-white/20 pt-8">
+                   <div className="text-center">
+                      <span className="block text-2xl font-bold text-accent">D</span>
+                      <span className="text-xs opacity-70 uppercase tracking-widest">Körperlich</span>
+                   </div>
+                   <div className="text-center">
+                      <span className="block text-2xl font-bold text-accent">C</span>
+                      <span className="text-xs opacity-70 uppercase tracking-widest">Ganzheitlich</span>
+                   </div>
+                   <div className="text-center">
+                      <span className="block text-2xl font-bold text-accent">LM/Q</span>
+                      <span className="text-xs opacity-70 uppercase tracking-widest">Feinstofflich</span>
+                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="text-center mb-16 text-center">
-            <h2 className="text-3xl lg:text-4xl font-serif text-primary mb-4 text-center">Ganzheitliche Unterstützung</h2>
-            <p className="text-muted-foreground font-medium text-center">Wir aktivieren deine immanenten Selbstheilungskräfte auf exakt allen Ebenen.</p>
+          {/* Applications Grid */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-serif text-primary mb-4">Wann Homöopathie hilft</h2>
+            <p className="text-muted-foreground font-medium">Individuelle Lösungen für komplexe Lebensphasen.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24 text-left">
-            {anwendungen.map((item, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
+            {[
+              "Chronische Erschöpfung & Burnout",
+              "Hormonelle Dysbalancen & PMS",
+              "Schlafstörungen & Stress-Symptome",
+              "Allergien & Hautbeschwerden",
+              "Häufig wiederkehrende Infekte",
+              "Psychosomatische Beschwerden"
+            ].map((item, i) => (
               <div key={i} className="flex gap-4 items-center bg-white p-8 rounded-3xl border border-border group hover:border-accent transition-all shadow-sm">
-                <div className="bg-muted/30 p-2 rounded-lg group-hover:bg-accent/10 transition-colors">
-                   <CheckCircle2 className="w-5 h-5 text-accent shrink-0 group-hover:scale-110 transition-transform" />
-                </div>
-                <span className="font-bold text-primary text-sm leading-snug">{item}</span>
+                 <div className="bg-muted/30 p-2 rounded-lg group-hover:bg-accent group-hover:text-white transition-all duration-500">
+                    <Sparkles className="w-5 h-5 text-accent group-hover:text-white" />
+                 </div>
+                 <span className="font-bold text-primary text-sm leading-snug">{item}</span>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
+      {/* Costs & Note Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto text-left">
             <div className="bg-white p-10 lg:p-12 rounded-[3.5rem] border border-border shadow-sm text-left">
               <Scale className="w-12 h-12 text-primary mb-8" />
