@@ -57,6 +57,11 @@ const AdminEvents = lazy(() => import("@/pages/admin/Events"));
 const AdminBlog = lazy(() => import("@/pages/admin/Blog"));
 const AdminSettings = lazy(() => import("@/pages/admin/Settings"));
 const AdminImages = lazy(() => import("@/pages/admin/Images"));
+const AdminCourses = lazy(() => import("@/pages/admin/Courses"));
+const AdminCourseEditor = lazy(() => import("@/pages/admin/CourseEditor"));
+const LMSLogin = lazy(() => import("@/pages/lms/LMSLogin"));
+const CourseDashboard = lazy(() => import("@/pages/lms/CourseDashboard"));
+const CourseViewer = lazy(() => import("@/pages/lms/CourseViewer"));
 
 const PageLoader = () => (
   <div className="min-h-screen flex items-center justify-center bg-background">
@@ -263,6 +268,20 @@ const App = () => {
                 element={<AGB />} 
               />
               
+              {/* LMS Routes */}
+              <Route 
+                path="/kurs/login" 
+                element={<LMSLogin />} 
+              />
+              <Route 
+                path="/lms" 
+                element={<CourseDashboard />} 
+              />
+              <Route 
+                path="/lms/:slug" 
+                element={<CourseViewer />} 
+              />
+
               {/* Admin Routes */}
               <Route 
                 path={ROUTE_PATHS.ADMIN_LOGIN} 
@@ -291,6 +310,14 @@ const App = () => {
               <Route 
                 path={ROUTE_PATHS.ADMIN_IMAGES} 
                 element={<AdminImages />} 
+              />
+              <Route 
+                path={ROUTE_PATHS.ADMIN_COURSES} 
+                element={<AdminCourses />} 
+              />
+              <Route 
+                path={ROUTE_PATHS.ADMIN_COURSE_EDITOR} 
+                element={<AdminCourseEditor />} 
               />
               {/* Fallback route - Redirecting to Home as no specific NotFound was provided */}
               <Route 
