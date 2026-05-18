@@ -75,10 +75,11 @@ export default function CoursesOverview() {
       subtitle: "Planungsphase & Kinderwunsch",
       description: "Vom Informationschaos zur Strategie. Deine bioenergetische 90-Tage-Begleitung für maximale Fruchtbarkeit.",
       features: ["Nährstoffdichte Ernährung", "Stoffwechsel-Stabilität", "Immunsystem-Balance", "Zellenergie-Aufbau", "Nervensystem-Regulation"],
-      link: `${ROUTE_PATHS.KURS_INTERESSE}?kurs=roadmap`,
+      link: ROUTE_PATHS.ZELLKRAFT_ROADMAP,
       badge: "Strategische Wahl",
       icon: Target,
-      color: "accent"
+      color: "accent",
+      cta: "Mehr erfahren"
     },
     {
       id: "geburtskompass",
@@ -86,10 +87,11 @@ export default function CoursesOverview() {
       subtitle: "Schwangerschaft & Geburtsreife",
       description: "Werde zur Architektin der kindlichen Entwicklung. Tiefe bioenergetische Optimierung für eine sichere Geburt.",
       features: ["Mitochondrien-Shuttle", "Epigenetik-Matrix", "Nervensystem-Regulation", "Interventions-Schutz"],
-      link: `${ROUTE_PATHS.KURS_INTERESSE}?kurs=geburtskompass`,
+      link: ROUTE_PATHS.PREMIUM_ZELLKRAFT_KURS,
       badge: "Vollumfängliche Begleitung",
       icon: Sparkles,
-      color: "primary"
+      color: "primary",
+      cta: "Mehr erfahren"
     }
   ];
 
@@ -179,7 +181,7 @@ export default function CoursesOverview() {
                   to={course.link} 
                   className={`bg-${course.color} text-white w-full py-6 rounded-2xl font-bold text-center flex items-center justify-center gap-3 hover:translate-x-1 transition-all shadow-xl shadow-${course.color}/10 text-lg`}
                 >
-                  Jetzt starten <ArrowRight size={20} />
+                  {course.cta || "Jetzt starten"} <ArrowRight size={20} />
                 </Link>
               </motion.div>
             ))}

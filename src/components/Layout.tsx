@@ -47,6 +47,7 @@ export function Layout({ children }: LayoutProps) {
       path: ROUTE_PATHS.HEBAMMENPRAXIS,
       subItems: [
         { name: "Biochemische Geburtsvorbereitung", path: ROUTE_PATHS.GEBURTSVORBEREITUNG, desc: "Zelluläre Power & Nährstoffe" },
+        { name: "Premium Geburtsvorbereitung", path: ROUTE_PATHS.PREMIUM_ZELLKRAFT_KURS, desc: "Der Zellkraft-Kompass" },
         { name: "Wochenbett & Hausbesuche", path: ROUTE_PATHS.WOCHENBETTBETREUUNG, desc: "Ganzheitliche Begleitung" },
         { name: "IHHT / Höhentraining", path: ROUTE_PATHS.ZELLTRAINING_SCHWANGERSCHAFT, desc: "Zelltraining für Schwangere" },
         { name: "Akupunktur", path: ROUTE_PATHS.AKUPUNKTUR, desc: "TCM & Geburtsvorbereitung" },
@@ -76,7 +77,14 @@ export function Layout({ children }: LayoutProps) {
         { name: "Lasertherapie", path: ROUTE_PATHS.LASERTHERAPIE, desc: "Regeneration & Licht" }
       ]
     },
-    { name: "Kinderwunsch", path: ROUTE_PATHS.KINDERWUNSCH },
+    { 
+      name: "Kinderwunsch", 
+      path: ROUTE_PATHS.KINDERWUNSCH,
+      subItems: [
+        { name: "Ganzheitliche Begleitung", path: ROUTE_PATHS.KINDERWUNSCH, desc: "Informationen zur Praxis" },
+        { name: "Fruchtbarkeits-Kompass", path: ROUTE_PATHS.ZELLKRAFT_ROADMAP, desc: "Premium Online-Programm" }
+      ]
+    },
     { name: "Über mich", path: ROUTE_PATHS.UEBER_MICH },
     { name: "Preisliste", path: ROUTE_PATHS.PREISLISTE },
     { name: "Magazin", path: ROUTE_PATHS.BLOG },

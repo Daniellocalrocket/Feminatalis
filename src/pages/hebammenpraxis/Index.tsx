@@ -256,6 +256,64 @@ export default function Hebammenpraxis() {
         </div>
       </section>
 
+      {/* Premium Geburtsvorbereitungskurs CTA Sektion */}
+      <section className="py-24 bg-primary text-white overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(circle_at_70%_30%,_rgba(240,125,0,0.15)_0%,_transparent_60%)] -z-10" />
+        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-accent/20 rounded-full blur-[100px] -z-10" />
+        <div className="container mx-auto px-4 max-w-6xl relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-[#fde4c8] text-[11px] font-bold tracking-[0.2em] uppercase mb-8">
+                <Award size={14} className="text-accent" /> Premium Online-Programm
+              </div>
+              <h2 className="text-4xl md:text-5xl font-serif mb-6 leading-tight">
+                Der <span className="text-accent">Zellkraft-Geburtskompass</span>
+              </h2>
+              <p className="text-lg text-white/80 mb-8 leading-relaxed">
+                Mach Schluss mit der Angst vor Kontrollverlust und Erschöpfung unter der Geburt. Lerne die biochemischen Hebel kennen, die deine Geburtskraft maximieren.
+              </p>
+              <ul className="space-y-4 mb-10">
+                <li className="flex items-start gap-3">
+                  <ShieldCheck className="text-accent shrink-0 mt-1" size={20} />
+                  <span className="text-white/90"><strong>Maximale Sicherheit:</strong> Bereite deinen Körper auf Zellebene vor, um medizinische Interventionen auf ein Minimum zu reduzieren.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Zap className="text-accent shrink-0 mt-1" size={20} />
+                  <span className="text-white/90"><strong>Volle Energie:</strong> Kein "Akku leer" mehr unter den Wehen – lade deine Mitochondrien für Ausdauer und Kraft auf.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Microscope className="text-accent shrink-0 mt-1" size={20} />
+                  <span className="text-white/90"><strong>Tiefes Wissen:</strong> Exklusives Wissen aus 33 Jahren Hebammenkunst und funktioneller Medizin.</span>
+                </li>
+              </ul>
+              <div className="bg-white/5 border border-white/10 p-6 rounded-2xl mb-8">
+                <p className="font-serif italic text-[#fde4c8] text-lg">
+                  "Du hast nur eine Chance, diesen einen Moment perfekt vorzubereiten. Überlasse ihn nicht dem Zufall."
+                </p>
+              </div>
+              <Link to={ROUTE_PATHS.PREMIUM_ZELLKRAFT_KURS} className="bg-accent text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-accent/90 transition-all shadow-xl hover:-translate-y-1 flex items-center justify-center gap-3 w-fit group">
+                Jetzt mehr erfahren <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+            <div className="relative">
+              <div className="aspect-square rounded-full border border-white/20 flex items-center justify-center relative p-8">
+                <div className="absolute inset-0 border border-accent/30 rounded-full animate-[spin_20s_linear_infinite]" />
+                <div className="absolute inset-4 border border-white/10 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
+                <img 
+                  src={getImageUrl("img_hero_hebammenpraxis", "/hebammenpraxis_hero.png")} 
+                  alt="Premium Zellkraft Kurs" 
+                  className="w-full h-full object-cover rounded-full shadow-2xl relative z-10"
+                />
+                <div className="absolute -bottom-4 right-10 bg-white text-primary p-6 rounded-2xl shadow-2xl z-20">
+                  <p className="font-bold text-sm uppercase tracking-wider mb-1">Deine Investition</p>
+                  <p className="text-xs text-muted-foreground">in Sicherheit & Kraft</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 4. Autoritäts-Block */}
       <section className="py-32 bg-white overflow-hidden">
         <div className="container mx-auto px-4 max-w-6xl">
