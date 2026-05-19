@@ -70,7 +70,7 @@ export default function Home() {
           ],
           "sameAs": [
             "https://www.instagram.com/feminatalis_praxis/",
-            "https://www.facebook.com/feminatalis"
+            "https://www.facebook.com/NaturheilpraxisFeminatalis"
           ],
           "founder": {
             "@type": "Person",
@@ -807,7 +807,7 @@ export default function Home() {
                   <Instagram size={24} /> Angela auf Instagram folgen
                 </a>
                 <a 
-                  href="https://facebook.com/feminatalis" 
+                  href="https://facebook.com/NaturheilpraxisFeminatalis" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-xl font-bold flex items-center gap-3 hover:bg-white/20 transition-all"

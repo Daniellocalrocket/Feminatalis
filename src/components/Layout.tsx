@@ -255,7 +255,7 @@ export function Layout({ children }: LayoutProps) {
                   <SiInstagram size={20} />
                 </a>
                 <a
-                  href="https://www.facebook.com/feminatalis"
+                  href="https://www.facebook.com/NaturheilpraxisFeminatalis"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Feminatalis auf Facebook"
