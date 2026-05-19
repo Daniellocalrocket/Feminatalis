@@ -7,67 +7,27 @@ import SplitScreenHero from "@/components/SplitScreenHero";
 import PreisTransparenz from "@/components/PreisTransparenz";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
+import tcmData from "@/data/content/tcm.json";
+
+const iconMap: Record<string, React.FC<{ className?: string }>> = {
+  Activity,
+  Sparkles,
+  Wind,
+  Sun,
+  Leaf,
+  Info,
+  Layers
+};
+
+const scrollTo = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+};
 
 export default function TCM() {
-  const categories = [
-    {
-      id: "schmerz",
-      title: "Schmerztherapie",
-      items: ["Alle Schmerzarten & Schmerzzustände", "Kopfschmerzen & Migräne", "Rücken- & Gelenkschmerzen (z.B. chronische Knieschmerzen, M. Bechterew)", "Fibromyalgie", "Menstruationsschmerzen", "Postoperativer & posttraumatischer Schmerz", "Tumorschmerzen"]
-    },
-    {
-      id: "allergie",
-      title: "Allergien & Atemwege",
-      items: ["Heuschnupfen, Neurodermitis, allergisches Asthma", "Nahrungsmittelunverträglichkeiten", "Akute Bronchitiden, Sinusitis, Rhinitis", "Hyperreagibles Bronchialsystem", "COPD (z.B. chron. Bronchitis), Asthma"]
-    },
-    {
-      id: "hno-augen",
-      title: "HNO & Augen",
-      items: ["Allergischer Schnupfen", "(Chron.) Entzündungen der Nebenhöhlen & Mandeln", "Innen- & Mittelohrentzündung", "Hörsturz, Tinnitus, Schwindel", "Entzündungen des Auges", "Abnehmende Sehkraft, Glaukom, Makuladegeneration"]
-    },
-    {
-      id: "herz-magen",
-      title: "Herz, Kreislauf & Verdauung",
-      items: ["Herzrhythmusstörungen", "Hyper-/Hypotonie (Blutdruck)", "Durchblutungsstörungen", "Funktionelle Magen-Darm-Störungen (Reizdarm, Reflux)", "Verstopfung/Durchfall", "Gastritis, Geschwüre, M. Crohn, Colitis ulcerosa"]
-    },
-    {
-      id: "psyche",
-      title: "Psyche, Nerven & Neurologie",
-      items: ["Schlaflosigkeit", "Innere Unruhe & Reizbarkeit", "Erschöpfungszustände (Burn-Out)", "Spannungskopfschmerz / Migräne", "Trigeminus- & Zoster-Neuralgie", "Polyneuropathie", "Depressive Verstimmungen", "Angstzustände"]
-    },
-    {
-      id: "gynaekologie",
-      title: "Gynäkologie & Urogenital",
-      items: ["Zyklusstörungen & Wechseljahrsbeschwerden", "Entzündungen der weiblichen Organe", "Blasen- & Nierenentzündung", "Beckenbodenschwäche (Inkontinenz)", "Prostataprobleme", "Impotenz / Frigidität"]
-    },
-    {
-      id: "haut",
-      title: "Hauterkrankungen",
-      items: ["Neurodermitis, atopisches Ekzem", "Entzündliche Hauterkrankungen", "Akne vulgaris, Furunkulose", "Herpes-Infektionen", "Psoriasis (Schuppenflechte)", "Nesselsucht"]
-    },
-    {
-      id: "kinderwunsch",
-      title: "Rund ums Kinderkriegen",
-      items: ["Kinderwunschbehandlung (Mann & Frau)", "Schwangerschaftsbeschwerden", "Geburtsvorbereitung", "Erschöpfung nach der Geburt (z.B. Blutverlust)", "Stillprobleme (Milchstau oder Milchmangel)"]
-    },
-    {
-      id: "bewegung",
-      title: "Stütz- & Bewegungsapparat",
-      items: ["HWS-, BWS-, LWS-Syndrom", "Rheuma, Fibromyalgie", "Arthritis, Arthrose", "Bandscheibenvorfall", "Tennisellbogen & Golfer-Arm", "Karpaltunnel-Syndrom"]
-    },
-    {
-      id: "begleit",
-      title: "Begleittherapie",
-      items: ["Linderung von Chemotherapie-Nebenwirkungen", "Allgemeine Immunschwäche", "Stoffwechselstörungen (Diabetes, Übergewicht)", "Hormonstörungen (Schilddrüse)", "Regeneration nach Operationen"]
-    }
-  ];
-
-  const scrollTo = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
+  const { hero, philosophy, pillars, akupunktur, indikationen, pulsdiagnostik, zungendiagnostik, moxa, ernaehrung, schroepfen, akutaping, cta } = tcmData;
 
   return (
     <div className="bg-background min-h-screen font-sans">
@@ -77,9 +37,9 @@ export default function TCM() {
       />
 
       <SplitScreenHero
-        badge="Traditionelle Chinesische Medizin"
-        title={<>Wieder im Fluss sein: <br /><span className="text-accent italic font-light">TCM & Frauenheilkunde</span></>}
-        subtitle="Wenn das Qi frei fließt, ist der Mensch gesund. Wir nutzen jahrtausendealte Weisheit, um Blockaden zu lösen, deine Selbstheilungskräfte zu wecken und Yin und Yang wieder in Einklang zu bringen. Sanft, ganzheitlich und tief wirksam."
+        badge={hero.badge}
+        title={<>Wieder im Fluss sein: <br /><span className="text-accent italic font-light">{hero.titleAccent}</span></>}
+        subtitle={hero.subtitle}
         imageSrc="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=2070&auto=format&fit=crop"
         imageAlt="TCM Behandlung und Akupunktur"
         imageKey="img_hero_tcm"
@@ -93,31 +53,29 @@ export default function TCM() {
       <section className="py-24 bg-white border-b border-border">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-4 leading-tight">Die Säulen deiner <br /><span className="text-accent italic">ganzheitlichen Begleitung</span></h2>
+            <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-4 leading-tight">
+              Die Säulen deiner <br /><span className="text-accent italic">ganzheitlichen Begleitung</span>
+            </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-            {[
-              { title: "Zungen- & Pulsdiagnostik", desc: "Die Landkarte deines Körpers. Wir lesen an Puls und Zunge ab, wo deine Energie stagniert oder ein Mangel besteht.", icon: <Activity className="w-8 h-8 text-accent" />, target: "diagnostik" },
-              { title: "5-Elemente-Ernährung", desc: "Nahrung als Medizin. Wir erstellen einen Plan, der exakt zu deinem Konstitutionstyp passt – für eine starke Mitte.", icon: <Leaf className="w-8 h-8 text-accent" />, target: "ernaehrung" },
-              { title: "Moxa & Wärme", desc: "Das Verglimmen von Beifuß bringt tief gehende Wärme bei Erschöpfung, Kältegefühl und Kinderwunsch.", icon: <Sun className="w-8 h-8 text-accent" />, target: "moxa" },
-              { title: "Schröpf-Therapie (Hajamat)", desc: "Lösen von tiefen muskulären Stagnationen, Ausleitung pathogener Faktoren und Aktivierung des Lymphflusses.", icon: <Wind className="w-8 h-8 text-accent" />, target: "schroepfen" },
-              { title: "Akupunktur & De-Qi", desc: "Durch präzise Nadelungen regulieren wir das Nervensystem und lösen Blockaden für einen freien Energiefluss.", icon: <Sparkles className="w-8 h-8 text-accent" />, target: "akupunktur" },
-              { title: "Aku-Taping", desc: "Elastische Tapes entlang der Meridiane stimulieren Akupunkturpunkte sanft über die Hautverschiebung.", icon: <Layers className="w-8 h-8 text-accent" />, target: "akutaping" }
-            ].map((item, i) => (
-              <div key={i} className="bg-slate-50/50 p-10 lg:p-12 rounded-[3.5rem] border border-border hover:border-accent transition-all hover:shadow-2xl flex flex-col group text-left">
-                <div className="bg-white w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-accent group-hover:text-white transition-all duration-500 shadow-sm">
-                   {item.icon}
+            {pillars.map((item, i) => {
+              const IconComponent = iconMap[item.icon];
+              return (
+                <div key={i} className="bg-slate-50/50 p-10 lg:p-12 rounded-[3.5rem] border border-border hover:border-accent transition-all hover:shadow-2xl flex flex-col group text-left">
+                  <div className="bg-white w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-accent group-hover:text-white transition-all duration-500 shadow-sm">
+                    {IconComponent && <IconComponent className="w-8 h-8 text-accent" />}
+                  </div>
+                  <h3 className="text-2xl font-serif text-primary font-bold mb-4 text-left">{item.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed font-medium opacity-80 text-left mb-8">{item.desc}</p>
+                  <button 
+                    onClick={() => scrollTo(item.target)}
+                    className="mt-auto text-accent font-bold flex items-center gap-2 hover:gap-4 transition-all w-fit group/btn"
+                  >
+                    Mehr erfahren <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-1" />
+                  </button>
                 </div>
-                <h3 className="text-2xl font-serif text-primary font-bold mb-4 text-left">{item.title}</h3>
-                <p className="text-muted-foreground leading-relaxed font-medium opacity-80 text-left mb-8">{item.desc}</p>
-                <button 
-                  onClick={() => scrollTo(item.target)}
-                  className="mt-auto text-accent font-bold flex items-center gap-2 hover:gap-4 transition-all w-fit group/btn"
-                >
-                  Mehr erfahren <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-1" />
-                </button>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -125,14 +83,13 @@ export default function TCM() {
       {/* Philosophy Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-5xl text-center">
-          <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-10 leading-tight">Dein innerer Rhythmus <br /><span className="text-accent italic">im Spiegel der Natur</span></h2>
+          <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-10 leading-tight">
+            {philosophy.headline} <br /><span className="text-accent italic">{philosophy.headlineAccent}</span>
+          </h2>
           <div className="prose prose-lg mx-auto text-muted-foreground leading-relaxed">
-            <p>
-              In der TCM betrachten wir dich als dynamisches System. Die 5 Wandlungsphasen – <strong>Holz, Feuer, Erde, Metall und Wasser</strong> – spiegeln sich in deinen Organen und Emotionen wider. Unsere Diagnostik durch <strong>Puls- und Zungenschau</strong> ermöglicht uns einen tiefen Blick in diesen energetischen Status, lange bevor sich Symptome im Labor zeigen.
-            </p>
-            <p className="mt-6 text-left">
-              Besonders bei Frauenthemen wie <strong>Endometriose, PCOS, schmerzhaften Zyklen oder Wechseljahresbeschwerden</strong> bietet die TCM Lösungen, die über die rein hormonelle Betrachtung hinausgehen. Wir regulieren das Blut (Xue) und besänftigen den Geist (Shen).
-            </p>
+            {philosophy.paragraphs.map((p, i) => (
+              <p key={i} dangerouslySetInnerHTML={{ __html: p }} className={i > 0 ? "mt-6 text-left" : "text-left"} />
+            ))}
           </div>
         </div>
       </section>
@@ -148,19 +105,15 @@ export default function TCM() {
                   whileInView={{ opacity: 1, x: 0 }}
                   className="bg-accent/10 text-accent px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block"
                 >
-                  Regulationstherapie
+                  {akupunktur.badge}
                 </motion.span>
-                <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-10 leading-tight">Akupunktur: <br /><span className="text-accent italic">Heilung durch Information</span></h2>
+                <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-10 leading-tight">
+                  {akupunktur.headline} <br /><span className="text-accent italic">{akupunktur.headlineAccent}</span>
+                </h2>
                 <div className="prose prose-lg text-muted-foreground leading-relaxed space-y-6 text-left">
-                  <p>
-                    Akupunktur ist ein wesentlicher Teil der TCM und wird weltweit angewandt. Obwohl die evidenzbasierte Schulmedizin die TCM oft kritisch betrachtet, veröffentlichte die WHO bereits 2002 eine Indikationsliste für Akupunktur, auf der diese bei 28 Krankheitsbildern explizit empfohlen wird.
-                  </p>
-                  <p>
-                    Als sogenannte <strong>Regulationstherapie</strong> wirkt sie durch die Reizung genau definierter Punkte am Körper. So können Störungen im gesamten Organismus gelindert oder gänzlich beseitigt werden. Wichtig zu wissen: Akupunktur kann das „Gestörte“ harmonisieren, jedoch nicht das „Zerstörte“.
-                  </p>
-                  <p>
-                    Alle Reize gelangen über das Zwischenhirn zu den zugeordneten Körperteilen und Organen. Aufgrund kurzer Reflexwege zwischen der Ohrmuschel und den Schmerzzentren im Gehirn ist z. B. die <strong>Ohrakupunktur</strong> besonders gut zur Schmerzlinderung geeignet.
-                  </p>
+                  {akupunktur.paragraphs.map((p, i) => (
+                    <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
+                  ))}
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-6 mt-12">
@@ -187,15 +140,14 @@ export default function TCM() {
                   <Activity size={24} className="text-accent" /> Behandlung & Dauer
                 </h4>
                 <p className="text-muted-foreground leading-relaxed mb-8 text-left">
-                  Die Therapiedauer richtet sich nach dem aktuellen Beschwerdebild und der Bestehungszeit der Erkrankung. Meist tritt nach 4-5 Sitzungen eine spürbare Besserung ein. Oft sind insgesamt ca. 10 Sitzungen notwendig, um eine beständige Wirkung zu erzielen.
+                  {akupunktur.behandlung}
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <div className="flex items-center gap-2 bg-slate-50 px-4 py-2 rounded-full text-xs font-bold text-primary/70 uppercase tracking-widest">
-                    <Check size={16} className="text-accent" /> Individuelles Konzept
-                  </div>
-                  <div className="flex items-center gap-2 bg-slate-50 px-4 py-2 rounded-full text-xs font-bold text-primary/70 uppercase tracking-widest">
-                    <Check size={16} className="text-accent" /> Punkt-Präzision
-                  </div>
+                  {akupunktur.badges.map((badge, i) => (
+                    <div key={i} className="flex items-center gap-2 bg-slate-50 px-4 py-2 rounded-full text-xs font-bold text-primary/70 uppercase tracking-widest">
+                      <Check size={16} className="text-accent" /> {badge}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -207,7 +159,7 @@ export default function TCM() {
               </div>
               
               <Accordion type="single" collapsible className="w-full space-y-4">
-                {categories.map((cat) => (
+                {indikationen.map((cat) => (
                   <AccordionItem key={cat.id} value={cat.id} className="bg-slate-50/50 px-6 rounded-3xl border border-transparent hover:border-accent/20 transition-all overflow-hidden data-[state=open]:bg-white data-[state=open]:shadow-lg data-[state=open]:border-accent/10">
                     <AccordionTrigger className="text-primary font-bold hover:no-underline py-6 text-lg text-left">
                       {cat.title}
@@ -231,7 +183,7 @@ export default function TCM() {
                    Über seltene Nebenwirkungen werden Sie vor der ersten Sitzung ausführlich aufgeklärt.
                  </p>
                  <Link to={ROUTE_PATHS.KINDERWUNSCH} className="bg-accent/5 text-accent px-8 py-3 rounded-2xl font-bold inline-flex items-center gap-2 hover:bg-accent hover:text-white transition-all">
-                   Mehr zum Thema Kinderwunsch <ArrowRight size={18} />
+                  Mehr zum Thema Kinderwunsch <ArrowRight size={18} />
                  </Link>
               </div>
             </div>
@@ -266,7 +218,7 @@ export default function TCM() {
               <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-accent mb-8 shadow-sm">
                 <Activity size={32} />
               </div>
-              <h3 className="text-3xl font-serif text-primary mb-6">Pulsdiagnostik</h3>
+              <h3 className="text-3xl font-serif text-primary mb-6">{pulsdiagnostik.headline}</h3>
               
               <div className="mb-8 rounded-3xl overflow-hidden border border-border shadow-inner bg-white">
                 <img 
@@ -277,7 +229,7 @@ export default function TCM() {
               </div>
 
               <p className="text-muted-foreground leading-relaxed mb-10 text-left">
-                Der Puls wird an drei Stellen und in drei Tiefen (Oberfläche, Mitte, Tiefe) an beiden Handgelenken gleichzeitig getastet. Wir erfassen Frequenz, Volumen, Rhythmus und Form, um Fülle- oder Leere-Zustände der Organe zu ermitteln.
+                {pulsdiagnostik.text}
               </p>
 
               <div className="space-y-6 flex-grow">
@@ -287,17 +239,17 @@ export default function TCM() {
                     <div className="space-y-3">
                       <p className="text-xs font-bold text-accent uppercase">Linke Hand</p>
                       <ul className="text-sm space-y-2 text-primary/80">
-                        <li className="flex justify-between"><span>Herz / Dünndarm</span> <span className="text-muted-foreground font-mono italic text-[10px]">Pos. 1</span></li>
-                        <li className="flex justify-between"><span>Leber / Galle</span> <span className="text-muted-foreground font-mono italic text-[10px]">Pos. 2</span></li>
-                        <li className="flex justify-between"><span>Nieren-Yin / Blase</span> <span className="text-muted-foreground font-mono italic text-[10px]">Pos. 3</span></li>
+                        {pulsdiagnostik.linkeHand.map((item, i) => (
+                          <li key={i} className="flex justify-between"><span>{item.organ}</span> <span className="text-muted-foreground font-mono italic text-[10px]">{item.pos}</span></li>
+                        ))}
                       </ul>
                     </div>
                     <div className="space-y-3 border-t sm:border-t-0 sm:border-l border-border pt-6 sm:pt-0 sm:pl-8">
                       <p className="text-xs font-bold text-accent uppercase">Rechte Hand</p>
                       <ul className="text-sm space-y-2 text-primary/80">
-                        <li className="flex justify-between"><span>Lunge / Dickdarm</span> <span className="text-muted-foreground font-mono italic text-[10px]">Pos. 1</span></li>
-                        <li className="flex justify-between"><span>Milz / Magen</span> <span className="text-muted-foreground font-mono italic text-[10px]">Pos. 2</span></li>
-                        <li className="flex justify-between"><span>Nieren-Yang / Ming-Men</span> <span className="text-muted-foreground font-mono italic text-[10px]">Pos. 3</span></li>
+                        {pulsdiagnostik.rechteHand.map((item, i) => (
+                          <li key={i} className="flex justify-between"><span>{item.organ}</span> <span className="text-muted-foreground font-mono italic text-[10px]">{item.pos}</span></li>
+                        ))}
                       </ul>
                     </div>
                   </div>
@@ -306,7 +258,7 @@ export default function TCM() {
                 <div className="bg-primary/5 p-6 rounded-2xl flex items-start gap-4">
                   <Info size={20} className="text-primary mt-1 shrink-0" />
                   <p className="text-xs text-primary/70 leading-relaxed italic">
-                    Ein „normaler“ Puls ist gleichmäßig, ruhig und kräftig (ca. 72-80 Schläge pro Minute). Morgens ist die beste Zeit für die Messung.
+                    {pulsdiagnostik.hinweis}
                   </p>
                 </div>
               </div>
@@ -321,7 +273,7 @@ export default function TCM() {
               <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center text-accent mb-8 shadow-sm">
                 <Leaf size={32} />
               </div>
-              <h3 className="text-3xl font-serif text-primary mb-6">Zungendiagnostik</h3>
+              <h3 className="text-3xl font-serif text-primary mb-6">{zungendiagnostik.headline}</h3>
 
               <div className="mb-8 rounded-3xl overflow-hidden border border-border shadow-inner bg-slate-50">
                 <img 
@@ -332,21 +284,17 @@ export default function TCM() {
               </div>
 
               <p className="text-muted-foreground leading-relaxed mb-10 text-left">
-                Die Zunge ist ein Somatothop – eine Abbildung des gesamten Körpers und ein „Spiegel der Seele“. Veränderungen in Farbe, Form, Belag und Unterzungenvenen geben direkte Hinweise auf Störungen im Organismus.
+                {zungendiagnostik.text}
               </p>
 
               <div className="space-y-6 flex-grow">
                 <div className="bg-slate-50 p-8 rounded-3xl border border-border">
                   <h4 className="text-sm font-bold text-primary uppercase tracking-widest mb-6 border-b border-border pb-3 text-left">Wichtige Vorbereitung</h4>
                   <ul className="space-y-4">
-                    {[
-                      { icon: <Check size={16} />, text: "1 Woche vorher kein Zungenbürsten" },
-                      { icon: <Check size={16} />, text: "Kein Kaffee oder färbende Lebensmittel (Rote Beete, Tee) am Untersuchungstag" },
-                      { icon: <Check size={16} />, text: "Unmittelbar vorher nicht rauchen" }
-                    ].map((item, i) => (
+                    {zungendiagnostik.vorbereitung.map((item, i) => (
                       <li key={i} className="flex items-center gap-3 text-sm text-primary/70 font-medium">
-                        <span className="text-accent">{item.icon}</span>
-                        {item.text}
+                        <span className="text-accent"><Check size={16} /></span>
+                        {item}
                       </li>
                     ))}
                   </ul>
@@ -356,17 +304,17 @@ export default function TCM() {
                   <div className="bg-white p-6 rounded-3xl border border-border shadow-sm">
                     <h5 className="text-[10px] font-bold text-accent uppercase tracking-widest mb-3">Zungenbild-Beispiele</h5>
                     <ul className="text-[11px] space-y-2 text-muted-foreground">
-                      <li><strong className="text-primary">Braunfärbung:</strong> Verdauungsstörungen / Darm</li>
-                      <li><strong className="text-primary">Zahneindrücke:</strong> Leber (rechts), Milz (links)</li>
-                      <li><strong className="text-primary">Gelber Belag:</strong> Stau in Leber/Galle oder Hitze</li>
+                      {zungendiagnostik.bilder.map((item, i) => (
+                        <li key={i}><strong className="text-primary">{item.label}</strong> {item.desc}</li>
+                      ))}
                     </ul>
                   </div>
                   <div className="bg-white p-6 rounded-3xl border border-border shadow-sm">
                     <h5 className="text-[10px] font-bold text-accent uppercase tracking-widest mb-3">Organ-Zonen</h5>
                     <ul className="text-[11px] space-y-2 text-muted-foreground">
-                      <li><strong className="text-primary">Spitze:</strong> Herz</li>
-                      <li><strong className="text-primary">Mitte:</strong> Lunge, Milz, Magen</li>
-                      <li><strong className="text-primary">Wurzel:</strong> Niere, Blase</li>
+                      {zungendiagnostik.zonen.map((item, i) => (
+                        <li key={i}><strong className="text-primary">{item.label}</strong> {item.desc}</li>
+                      ))}
                     </ul>
                   </div>
                 </div>
@@ -385,13 +333,13 @@ export default function TCM() {
               <div className="text-left md:w-2/3">
                 <h3 className="text-3xl font-serif mb-6">Deine individuelle TCM-Analyse</h3>
                 <p className="text-primary-foreground/80 text-lg leading-relaxed mb-0">
-                  Die Erstanamnese inklusive Puls- und Zungendiagnose dauert ca. 60 Minuten. Dies ist die notwendige Basis für einen nachhaltigen Behandlungserfolg.
+                  {akupunktur.preisHint}
                 </p>
               </div>
               <div className="flex flex-col items-center md:items-end gap-6 md:w-1/3">
                 <div className="text-center md:text-right">
                   <span className="block text-xs font-bold text-white/40 uppercase tracking-widest mb-1">Honorar</span>
-                  <span className="text-4xl font-bold">100,- €</span>
+                  <span className="text-4xl font-bold">{akupunktur.preis}</span>
                 </div>
                 <Link to={ROUTE_PATHS.PREISLISTE} className="bg-white text-primary px-10 py-4 rounded-2xl font-bold hover:bg-accent hover:text-white transition-all flex items-center gap-2">
                   Preise ansehen <ArrowRight size={20} />
@@ -413,16 +361,15 @@ export default function TCM() {
                 whileInView={{ opacity: 1, x: 0 }}
                 className="bg-orange-100 text-orange-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block"
               >
-                Lebensenergie durch Wärme
+                {moxa.badge}
               </motion.span>
-              <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-8 leading-tight">Moxa-Therapie: <br /><span className="text-orange-600 italic">Die Kraft der Artemisia</span></h2>
+              <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-8 leading-tight">
+                {moxa.headline} <br /><span className="text-orange-600 italic">{moxa.headlineAccent}</span>
+              </h2>
               <div className="prose prose-lg text-muted-foreground leading-relaxed space-y-6 text-left">
-                <p>
-                  Die Moxa-Therapie (Moxibustion) nutzt den gezielten Wärmereiz von glimmendem Beifuß-Kraut (Artemisia vulgaris), um den Fluss deines <strong>Qi zu regulieren und das Yang zu aktivieren</strong>. 
-                </p>
-                <p>
-                  Besonders bei chronischen Beschwerden, Kältegefühlen oder Erschöpfungszuständen entfaltet diese Methode ihre tiefgehende Wirkung. Die Wärme reizt die Akupunkturpunkte sanft, regt die Durchblutung an und mobilisiert deine Selbstheilungskräfte.
-                </p>
+                {moxa.paragraphs.map((p, i) => (
+                  <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
+                ))}
               </div>
 
               <div className="grid sm:grid-cols-2 gap-6 mt-12">
@@ -443,18 +390,13 @@ export default function TCM() {
               </div>
 
               <div className="mt-12 grid sm:grid-cols-2 gap-6">
-                 {[
-                   { title: "Moxa-Zigarre", desc: "Kontaktlose Erwärmung ca. 5mm über der Haut." },
-                   { title: "Moxa-Nadel", desc: "Die „heiße Nadel“ leitet Wärme direkt ins Zentrum." },
-                   { title: "Indirektes Moxen", desc: "Schutzbarrieren aus Ingwer, Salz oder Heilerde." },
-                   { title: "TDP-Minerallampe", desc: "Mineral-Infrarot für großflächige Energie." }
-                 ].map((m, i) => (
-                   <div key={i} className="bg-white p-6 rounded-3xl border border-orange-100 shadow-sm hover:shadow-md transition-shadow text-left">
-                     <h4 className="font-bold text-primary mb-2 flex items-center gap-2">
-                       <Check size={16} className="text-orange-600" /> {m.title}
-                     </h4>
-                     <p className="text-sm text-muted-foreground leading-relaxed">{m.desc}</p>
-                   </div>
+                 {moxa.methoden.map((m, i) => (
+                    <div key={i} className="bg-white p-6 rounded-3xl border border-orange-100 shadow-sm hover:shadow-md transition-shadow text-left">
+                      <h4 className="font-bold text-primary mb-2 flex items-center gap-2">
+                        <Check size={16} className="text-orange-600" /> {m.title}
+                      </h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{m.desc}</p>
+                    </div>
                  ))}
               </div>
             </div>
@@ -471,7 +413,7 @@ export default function TCM() {
                    <Sun size={28} className="text-orange-600" /> Sanfte Wendung
                  </h3>
                  <p className="text-muted-foreground leading-relaxed mb-8 text-left">
-                   In der Schwangerschaft ist das Moxen zur <strong>sanften Wendung des Kindes aus der Beckenendlage</strong> bekannt. Durch Stimulation des Punktes Bl 67 wird die Gebärmuttermuskulatur angeregt, was das Baby ab der 34. Woche oft dazu bewegt, sich in die Schädellage zu drehen.
+                   <span dangerouslySetInnerHTML={{ __html: moxa.wendung }} />
                  </p>
                  <Link to={ROUTE_PATHS.HEBAMMENSPRECHSTUNDE} className="text-orange-600 font-bold flex items-center gap-2 hover:gap-4 transition-all">
                    Mehr zur Hebammenbegleitung <ArrowRight size={18} />
@@ -482,10 +424,9 @@ export default function TCM() {
                <div className="bg-primary text-white p-10 rounded-[3.5rem] shadow-xl">
                  <h4 className="text-accent font-bold uppercase tracking-widest text-xs mb-6">Wann nicht moxen?</h4>
                  <ul className="space-y-4 text-sm text-white/70">
-                   <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-accent rounded-full" /> Akute Infektionen & Fieber</li>
-                   <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-accent rounded-full" /> Bluthochdruck</li>
-                   <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-accent rounded-full" /> Starke Nervosität / Hyperaktivität</li>
-                   <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-accent rounded-full" /> Bereich von Gesicht & Schleimhäuten</li>
+                   {moxa.kontraindikationen.map((item, i) => (
+                     <li key={i} className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-accent rounded-full" /> {item}</li>
+                   ))}
                  </ul>
                </div>
             </div>
@@ -493,7 +434,7 @@ export default function TCM() {
           
           <div className="mt-16 text-center">
             <p className="text-muted-foreground italic text-sm">
-              Materialkosten werden zusätzlich zum Honorar (100 €/Std.) berechnet. Eine Sitzung dauert ca. 20-30 Min.
+              {moxa.preisHint}
             </p>
           </div>
         </div>
@@ -508,11 +449,13 @@ export default function TCM() {
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-accent/5 text-accent px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block"
             >
-              Nahrung als Medizin
+              {ernaehrung.badge}
             </motion.span>
-            <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-6 leading-tight">Ernährung nach den <br /><span className="text-accent italic">5 Elementen</span></h2>
+            <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-6 leading-tight">
+              {ernaehrung.headline} <br /><span className="text-accent italic">{ernaehrung.headlineAccent}</span>
+            </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              In der TCM betrachten wir Lebensmittel nicht nach Kalorien, sondern nach ihrer energetischen Qualität, ihrem Geschmack und ihrer thermischen Wirkung. So kräftigen wir deine Grundkonstitution (Qi) nachhaltig.
+              {ernaehrung.intro}
             </p>
           </div>
 
@@ -532,13 +475,7 @@ export default function TCM() {
           </div>
 
           <div className="grid lg:grid-cols-5 gap-4 mb-20">
-            {[
-              { element: "Holz", season: "Frühling", taste: "Sauer", organ: "Leber", emotion: "Ärger" },
-              { element: "Feuer", season: "Sommer", taste: "Bitter", organ: "Herz", emotion: "Freude" },
-              { element: "Erde", season: "Spätsommer", taste: "Süß", organ: "Milz", emotion: "Mitgefühl" },
-              { element: "Metall", season: "Herbst", taste: "Scharf", organ: "Lunge", emotion: "Trauer" },
-              { element: "Wasser", season: "Winter", taste: "Salzig", organ: "Niere", emotion: "Angst" }
-            ].map((e, i) => (
+            {ernaehrung.elemente.map((e, i) => (
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
@@ -563,13 +500,7 @@ export default function TCM() {
                   Jedes Lebensmittel hat eine thermische Botschaft an deinen Körper. Wir nutzen diese, um Ungleichgewichte (wie Hitze oder Kälte) gezielt auszugleichen.
                 </p>
                 <div className="space-y-4">
-                  {[
-                    { label: "Heiß", examples: "Lamm, Grillfleisch, Zimt, Curry, Knoblauch", effect: "Wärmt stark, vertreibt Kälte" },
-                    { label: "Warm", examples: "Fenchel, Kürbis, Huhn, Dinkel, Kirschen", effect: "Unterstützt das Yang" },
-                    { label: "Neutral", examples: "Hirse, Karotten, Rindfleisch, Ei, Linsen", effect: "Baut Qi auf, harmonisiert" },
-                    { label: "Erfrischend", examples: "Brokkoli, Apfel, Sellerie, Reis, Tofu", effect: "Nährt Säfte & Blut" },
-                    { label: "Kühlend", examples: "Gurke, Tomate, Joghurt, Algen, Melone", effect: "Klärt Hitze, beruhigt" }
-                  ].map((t, i) => (
+                  {ernaehrung.thermisch.map((t, i) => (
                     <div key={i} className="bg-white p-6 rounded-3xl border border-border flex flex-col sm:flex-row sm:items-center justify-between gap-4 group hover:border-accent/20 transition-colors">
                       <div className="text-left">
                         <span className="block text-xs font-bold text-accent uppercase tracking-widest mb-1">{t.label}</span>
@@ -586,12 +517,8 @@ export default function TCM() {
              <div className="space-y-12">
                 <div className="prose prose-lg text-muted-foreground leading-relaxed text-left">
                   <h3 className="text-primary font-serif">Individuelle Ernährungsberatung</h3>
-                  <p>
-                    Ein Kind hat andere Bedürfnisse als ein Greis. Eine Frau in den Wechseljahren befindet sich in einer anderen energetischen Phase als eine Schwangere. 
-                  </p>
-                  <p>
-                    Nach einer ausführlichen Anamnese (Puls- & Zungendiagnose) helfe ich dir, deine Essgewohnheiten auf deine individuelle Konstitution abzustimmen. Ernährungsumstellung ist ein langfristiges Projekt, das tiefgehende Einsichten für körperliche und seelische Zusammenhänge ermöglicht.
-                  </p>
+                  <p>{ernaehrung.beratung.text1}</p>
+                  <p>{ernaehrung.beratung.text2}</p>
                 </div>
 
                 <div className="p-10 bg-accent/5 rounded-[3.5rem] border border-accent/10 flex flex-col md:flex-row items-center gap-10">
@@ -601,23 +528,17 @@ export default function TCM() {
                    </div>
                    <div className="text-center md:text-right shrink-0">
                       <span className="block text-[10px] font-bold text-accent uppercase tracking-widest mb-1">Honorar</span>
-                      <span className="text-3xl font-bold text-primary">100,- € / Std.</span>
+                      <span className="text-3xl font-bold text-primary">{ernaehrung.beratung.preis}</span>
                    </div>
                 </div>
 
                 <div className="grid grid-cols-3 gap-4">
-                  <div className="bg-slate-50 p-4 rounded-2xl text-center border border-border">
-                    <span className="block text-xs font-bold text-primary mb-1">Basis</span>
-                    <span className="text-[10px] text-muted-foreground">Regional & Saisonal</span>
-                  </div>
-                  <div className="bg-slate-50 p-4 rounded-2xl text-center border border-border">
-                    <span className="block text-xs font-bold text-primary mb-1">Stil</span>
-                    <span className="text-[10px] text-muted-foreground">International</span>
-                  </div>
-                  <div className="bg-slate-50 p-4 rounded-2xl text-center border border-border">
-                    <span className="block text-xs font-bold text-primary mb-1">Fokus</span>
-                    <span className="text-[10px] text-muted-foreground">Qi & Säfte</span>
-                  </div>
+                  {ernaehrung.beratung.tags.map((tag, i) => (
+                    <div key={i} className="bg-slate-50 p-4 rounded-2xl text-center border border-border">
+                      <span className="block text-xs font-bold text-primary mb-1">{tag.split(' ')[0]}</span>
+                      <span className="text-[10px] text-muted-foreground">{tag.split(' ').slice(1).join(' ')}</span>
+                    </div>
+                  ))}
                 </div>
              </div>
           </div>
@@ -635,16 +556,15 @@ export default function TCM() {
                   whileInView={{ opacity: 1, x: 0 }}
                   className="bg-accent/10 text-accent px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block"
                 >
-                  Hajamat / Ausleitverfahren
+                  {schroepfen.badge}
                 </motion.span>
-                <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-10 leading-tight">Schröpf-Therapie: <br /><span className="text-accent italic">Befreiung von Stagnationen</span></h2>
+                <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-10 leading-tight">
+                  {schroepfen.headline} <br /><span className="text-accent italic">{schroepfen.headlineAccent}</span>
+                </h2>
                 <div className="prose prose-lg text-muted-foreground leading-relaxed space-y-6 text-left">
-                  <p>
-                    Schröpfen zählt zu den klassischen Ausleitverfahren und wird seit über 5000 Jahren angewandt. Wir nutzen den gezielten Unterdruck auf der Haut, um <strong>lokale Stagnationen von Qi und Blut</strong> (z. B. tiefe Verspannungen) zu lösen.
-                  </p>
-                  <p>
-                    Über die sogenannten Head-Zonen der Haut erreichen wir reflektorisch auch die inneren Organe. So kann ein gezielter Reiz auf der Hautoberfläche die Regeneration deiner inneren Vitalfunktionen unterstützen.
-                  </p>
+                  {schroepfen.paragraphs.map((p, i) => (
+                    <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
+                  ))}
                 </div>
               </div>
 
@@ -666,18 +586,13 @@ export default function TCM() {
               </div>
 
               <div className="grid sm:grid-cols-2 gap-6">
-                 {[
-                   { title: "Feuer-Schröpfen", desc: "Traditionelle Erwärmung der Luft im Glas für sanften Sog." },
-                   { title: "Blutiges Schröpfen", desc: "Gezielte Entschlackung & Hitze-Ausleitung (Hajamat)." },
-                   { title: "Trockenes Schröpfen", desc: "Starke Durchblutung unversehrter Hautstellen." },
-                   { title: "Schröpfkopfmassage", desc: "Dynamisches Verschieben für fasziale Freiheit." }
-                 ].map((s, i) => (
-                   <div key={i} className="bg-white p-8 rounded-[2.5rem] border border-border shadow-sm hover:shadow-md transition-all text-left">
-                     <h4 className="font-bold text-primary mb-3 flex items-center gap-2">
-                       <div className="w-1.5 h-1.5 bg-accent rounded-full" /> {s.title}
-                     </h4>
-                     <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                   </div>
+                 {schroepfen.methoden.map((s, i) => (
+                    <div key={i} className="bg-white p-8 rounded-[2.5rem] border border-border shadow-sm hover:shadow-md transition-all text-left">
+                      <h4 className="font-bold text-primary mb-3 flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 bg-accent rounded-full" /> {s.title}
+                      </h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                    </div>
                  ))}
               </div>
             </div>
@@ -688,16 +603,14 @@ export default function TCM() {
                   <h3 className="text-2xl font-serif text-primary mb-8">Einsatzmöglichkeiten</h3>
                   <div className="grid sm:grid-cols-2 gap-6 text-left">
                     <ul className="space-y-3 text-sm text-muted-foreground">
-                      <li className="flex items-center gap-2"><Check size={14} className="text-accent" /> Migräne & Kopfschmerz</li>
-                      <li className="flex items-center gap-2"><Check size={14} className="text-accent" /> Bandscheibenvorfall</li>
-                      <li className="flex items-center gap-2"><Check size={14} className="text-accent" /> Karpaltunnelsyndrom</li>
-                      <li className="flex items-center gap-2"><Check size={14} className="text-accent" /> Bluthochdruck</li>
+                      {schroepfen.einsatz.slice(0, 4).map((item, i) => (
+                        <li key={i} className="flex items-center gap-2"><Check size={14} className="text-accent" /> {item}</li>
+                      ))}
                     </ul>
                     <ul className="space-y-3 text-sm text-muted-foreground">
-                      <li className="flex items-center gap-2"><Check size={14} className="text-accent" /> Bronchitis & Asthma</li>
-                      <li className="flex items-center gap-2"><Check size={14} className="text-accent" /> Müdigkeit & Burn-Out</li>
-                      <li className="flex items-center gap-2"><Check size={14} className="text-accent" /> Hormonstörungen</li>
-                      <li className="flex items-center gap-2"><Check size={14} className="text-accent" /> Verdauungsprobleme</li>
+                      {schroepfen.einsatz.slice(4).map((item, i) => (
+                        <li key={i} className="flex items-center gap-2"><Check size={14} className="text-accent" /> {item}</li>
+                      ))}
                     </ul>
                   </div>
                </div>
@@ -708,17 +621,17 @@ export default function TCM() {
                     <div>
                       <p className="font-bold text-white mb-3">Trocken:</p>
                       <ul className="space-y-2">
-                        <li>• Schwangerschaft (bis 4. Monat)</li>
-                        <li>• Tumore & Tuberkulose</li>
-                        <li>• Frische Brandwunden</li>
+                        {schroepfen.kontraindikationen.trocken.map((item, i) => (
+                          <li key={i}>• {item}</li>
+                        ))}
                       </ul>
                     </div>
                     <div>
                       <p className="font-bold text-white mb-3">Zusätzlich bei blutigem:</p>
                       <ul className="space-y-2">
-                        <li>• Menstruation & Wochenbett</li>
-                        <li>• Gerinnungsstörungen</li>
-                        <li>• Starke Erschöpfung</li>
+                        {schroepfen.kontraindikationen.blutig.map((item, i) => (
+                          <li key={i}>• {item}</li>
+                        ))}
                       </ul>
                     </div>
                  </div>
@@ -728,7 +641,7 @@ export default function TCM() {
           
           <div className="mt-16 text-center">
             <p className="text-muted-foreground italic text-sm">
-              Honorar: 100 €/Std. Eine Sitzung dauert ca. 30 Min. Die Häufigkeit richtet sich nach deinem Befund.
+              {schroepfen.preisHint}
             </p>
           </div>
         </div>
@@ -743,11 +656,13 @@ export default function TCM() {
                whileInView={{ opacity: 1, y: 0 }}
                className="bg-accent/5 text-accent px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block"
              >
-               Sanfte Meridian-Stimulation
+               {akutaping.badge}
              </motion.span>
-             <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-6 leading-tight">Aku-Taping: <br /><span className="text-accent italic">Impulse für die Selbstheilung</span></h2>
+             <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-6 leading-tight">
+               {akutaping.headline} <br /><span className="text-accent italic">{akutaping.headlineAccent}</span>
+             </h2>
              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-               Aku-Taping vereint die Regeln der TCM und Akupunktur mit moderner manueller Medizin. Anders als beim klassischen Kinesio-Taping folgen wir hier den Meridianen, um Energieflüsse gezielt zu lenken.
+               {akutaping.intro}
              </p>
 
              <div className="grid sm:grid-cols-2 gap-6 mt-12 max-w-4xl mx-auto">
@@ -769,35 +684,20 @@ export default function TCM() {
            </div>
 
            <div className="grid lg:grid-cols-3 gap-8 mb-20">
-              <div className="bg-slate-50 p-10 rounded-[3.5rem] border border-border text-left group hover:border-accent/20 transition-all">
-                 <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-accent mb-6 shadow-sm group-hover:bg-accent group-hover:text-white transition-colors">
-                    <Sparkles size={24} />
+             {akutaping.features.map((feature, i) => {
+               const IconComponent = iconMap[feature.icon];
+               return (
+                 <div key={i} className="bg-slate-50 p-10 rounded-[3.5rem] border border-border text-left group hover:border-accent/20 transition-all">
+                    <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-accent mb-6 shadow-sm group-hover:bg-accent group-hover:text-white transition-colors">
+                       {IconComponent && <IconComponent size={24} />}
+                    </div>
+                    <h4 className="text-xl font-bold text-primary mb-4">{feature.title}</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {feature.text}
+                    </p>
                  </div>
-                 <h4 className="text-xl font-bold text-primary mb-4">Wirkweise</h4>
-                 <p className="text-sm text-muted-foreground leading-relaxed">
-                   Der Reiz wird nicht durch Nadeln, sondern durch die kontinuierliche Verschiebung der Hautareale unter dem elastischen Band ausgelöst. Dies stimuliert Mechanorezeptoren und fördert den Lymphabfluss.
-                 </p>
-              </div>
-
-              <div className="bg-slate-50 p-10 rounded-[3.5rem] border border-border text-left group hover:border-accent/20 transition-all">
-                 <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-accent mb-6 shadow-sm group-hover:bg-accent group-hover:text-white transition-colors">
-                    <Activity size={24} />
-                 </div>
-                 <h4 className="text-xl font-bold text-primary mb-4">Anwendung</h4>
-                 <p className="text-sm text-muted-foreground leading-relaxed">
-                   Ideal bei Schmerzen am Bewegungsapparat, zur Regulation des Muskeltonus und zur Immunmodulation. Besonders wertvoll in der Rehabilitation und rund um die Geburt.
-                 </p>
-              </div>
-
-              <div className="bg-slate-50 p-10 rounded-[3.5rem] border border-border text-left group hover:border-accent/20 transition-all">
-                 <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-accent mb-6 shadow-sm group-hover:bg-accent group-hover:text-white transition-colors">
-                    <Info size={24} />
-                 </div>
-                 <h4 className="text-xl font-bold text-primary mb-4">Ablauf</h4>
-                 <p className="text-sm text-muted-foreground leading-relaxed">
-                   Nach der Anamnese dauert die Behandlung ca. 10-15 Min. Das Tape bleibt bis zu 5 Tage auf der Haut und entfaltet dort seine dauerhafte Wirkung.
-                 </p>
-              </div>
+               );
+             })}
            </div>
 
            <div className="grid lg:grid-cols-2 gap-12 items-stretch">
@@ -805,10 +705,9 @@ export default function TCM() {
                  <div>
                     <h3 className="text-3xl font-serif mb-8">Einsatzgebiete</h3>
                     <ul className="space-y-4 text-primary-foreground/90">
-                       <li className="flex items-start gap-3"><Check size={18} className="text-accent mt-1 shrink-0" /> Linderung chronischer Schmerzen</li>
-                       <li className="flex items-start gap-3"><Check size={18} className="text-accent mt-1 shrink-0" /> Regulation des Muskeltonus</li>
-                       <li className="flex items-start gap-3"><Check size={18} className="text-accent mt-1 shrink-0" /> Psychovegetative Störungen</li>
-                       <li className="flex items-start gap-3"><Check size={18} className="text-accent mt-1 shrink-0" /> Abschwellung & Lymphdrainage</li>
+                       {akutaping.einsatz.map((item, i) => (
+                         <li key={i} className="flex items-start gap-3"><Check size={18} className="text-accent mt-1 shrink-0" /> {item}</li>
+                       ))}
                     </ul>
                  </div>
                  <div className="mt-12 pt-8 border-t border-white/10">
@@ -825,20 +724,19 @@ export default function TCM() {
                  <div className="bg-slate-50 p-10 lg:p-12 rounded-[4rem] border border-border text-left">
                     <h4 className="text-primary font-bold uppercase tracking-widest text-xs mb-6">Wann wir nicht tapen</h4>
                     <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                      Obwohl Aku-Taping sehr sicher ist, gibt es klare Grenzen für den Einsatz:
+                      {akutaping.kontraText}
                     </p>
                     <ul className="space-y-3 text-sm text-muted-foreground">
-                       <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-accent rounded-full" /> Schwere Gerinnungsstörungen</li>
-                       <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-accent rounded-full" /> Akute psychiatrische Erkrankungen</li>
-                       <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-accent rounded-full" /> Notfälle, die schulmedizinische Hilfe erfordern</li>
-                       <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-accent rounded-full" /> Bekannte schwere Acryl-Allergien</li>
+                       {akutaping.kontraindikationen.map((item, i) => (
+                         <li key={i} className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-accent rounded-full" /> {item}</li>
+                       ))}
                     </ul>
                  </div>
 
                  <div className="p-10 bg-accent/5 rounded-[3.5rem] border border-accent/10 flex items-center justify-between gap-6">
                     <div className="text-left">
                        <h5 className="font-bold text-primary">Behandlungskosten</h5>
-                       <p className="text-xs text-muted-foreground">Pro Sitzung (10-15 Min.)</p>
+                       <p className="text-xs text-muted-foreground">{akutaping.preisHint}</p>
                     </div>
                     <div className="text-right">
                        <span className="text-3xl font-bold text-primary">100,- € <span className="text-sm font-normal text-muted-foreground">/ Std.</span></span>
@@ -857,9 +755,9 @@ export default function TCM() {
              <div className="absolute top-0 right-0 w-[50rem] h-[50rem] bg-accent/20 -mr-64 -mt-64 rounded-full blur-[120px] opacity-20 text-left"></div>
              <div className="flex flex-col lg:flex-row gap-16 items-center text-left relative z-10">
                 <div className="lg:w-2/3 text-left">
-                  <h2 className="text-3xl lg:text-5xl font-serif mb-8 text-white font-bold leading-tight text-left">Balance für die Frau</h2>
+                  <h2 className="text-3xl lg:text-5xl font-serif mb-8 text-white font-bold leading-tight text-left">{cta.headline}</h2>
                   <p className="text-xl opacity-90 mb-10 leading-relaxed font-medium text-left">
-                    „In der TCM wird die Frau oft mit dem Element Wasser und dem Blut assoziiert. Wir nutzen Akupunktur und die Lehren der 5-Elemente-Ernährung, um den Zyklus sanft zu regulieren, Entzündungen zu beruhigen und den Körper optimal vorzubereiten.“
+                    {cta.quote}
                   </p>
                   <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary px-12 py-5 rounded-2xl font-bold hover:bg-accent hover:text-white transition-all shadow-xl inline-flex items-center gap-3">
                     Beratungstermin anfragen <ArrowRight size={20} />
@@ -868,7 +766,7 @@ export default function TCM() {
                 <div className="lg:w-1/3 bg-white/10 backdrop-blur-md p-12 rounded-[4rem] border border-white/20 text-center">
                    <h4 className="text-accent font-serif font-bold text-2xl mb-6">Qi-Check</h4>
                    <p className="text-lg leading-relaxed text-white font-medium italic text-left">
-                     Löse Stagnationen, fülle deine Reserven auf und finde zurück zu deiner natürlichen Lebenskraft.
+                     {cta.qiCheck}
                    </p>
                 </div>
              </div>

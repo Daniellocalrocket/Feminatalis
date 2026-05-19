@@ -1,0 +1,169 @@
+{
+  "hero": {
+    "badge": "Traditionelle Chinesische Medizin",
+    "title": "Wieder im Fluss sein:",
+    "titleAccent": "TCM & Frauenheilkunde",
+    "subtitle": "Wenn das Qi frei flie\u00dft, ist der Mensch gesund. Wir nutzen jahrtausendealte Weisheit, um Blockaden zu l\u00f6sen, deine Selbstheilungskr\u00e4fte zu wecken und Yin und Yang wieder in Einklang zu bringen. Sanft, ganzheitlich und tief wirksam."
+  },
+  "philosophy": {
+    "headline": "Dein innerer Rhythmus",
+    "headlineAccent": "im Spiegel der Natur",
+    "paragraphs": [
+      "In der TCM betrachten wir dich als dynamisches System. Die 5 Wandlungsphasen \u2013 <strong>Holz, Feuer, Erde, Metall und Wasser</strong> \u2013 spiegeln sich in deinen Organen und Emotionen wider. Unsere Diagnostik durch <strong>Puls- und Zungenschau</strong> erm\u00f6glicht uns einen tiefen Blick in diesen energetischen Status, lange bevor sich Symptome im Labor zeigen.",
+      "Besonders bei Frauenthemen wie <strong>Endometriose, PCOS, schmerzhaften Zyklen oder Wechseljahresbeschwerden</strong> bietet die TCM L\u00f6sungen, die \u00fcber die rein hormonelle Betrachtung hinausgehen. Wir regulieren das Blut (Xue) und bes\u00e4nftigen den Geist (Shen)."
+    ]
+  },
+  "pillars": [
+    { "title": "Zungen- & Pulsdiagnostik", "desc": "Die Landkarte deines K\u00f6rpers. Wir lesen an Puls und Zunge ab, wo deine Energie stagniert oder ein Mangel besteht.", "icon": "Activity", "target": "diagnostik" },
+    { "title": "5-Elemente-Ern\u00e4hrung", "desc": "Nahrung als Medizin. Wir erstellen einen Plan, der exakt zu deinem Konstitutionstyp passt \u2013 f\u00fcr eine starke Mitte.", "icon": "Leaf", "target": "ernaehrung" },
+    { "title": "Moxa & W\u00e4rme", "desc": "Das Verglimmen von Beifuss bringt tief gehende W\u00e4rme bei Ersch\u00f6pfung, K\u00e4ltegef\u00fchl und Kinderwunsch.", "icon": "Sun", "target": "moxa" },
+    { "title": "Schr\u00f6pf-Therapie (Hajamat)", "desc": "L\u00f6sen von tiefen muskul\u00e4ren Stagnationen, Ausleitung pathogener Faktoren und Aktivierung des Lymphflusses.", "icon": "Wind", "target": "schroepfen" },
+    { "title": "Akupunktur & De-Qi", "desc": "Durch pr\u00e4zise Nadelungen regulieren wir das Nervensystem und l\u00f6sen Blockaden f\u00fcr einen freien Energiefluss.", "icon": "Sparkles", "target": "akupunktur" },
+    { "title": "Aku-Taping", "desc": "Elastische Tapes entlang der Meridiane stimulieren Akupunkturpunkte sanft \u00fcber die Hautverschiebung.", "icon": "Layers", "target": "akutaping" }
+  ],
+  "akupunktur": {
+    "badge": "Regulationstherapie",
+    "headline": "Akupunktur:",
+    "headlineAccent": "Heilung durch Information",
+    "paragraphs": [
+      "Akupunktur ist ein wesentlicher Teil der TCM und wird weltweit angewandt. Obwohl die evidenzbasierte Schulmedizin die TCM oft kritisch betrachtet, ver\u00f6ffentlichte die WHO bereits 2002 eine Indikationsliste f\u00fcr Akupunktur, auf der diese bei 28 Krankheitsbildern explizit empfohlen wird.",
+      "Als sogenannte <strong>Regulationstherapie</strong> wirkt sie durch die Reizung genau definierter Punkte am K\u00f6rper. So k\u00f6nnen St\u00f6rungen im gesamten Organismus gelindert oder g\u00e4nzlich beseitigt werden. Wichtig zu wissen: Akupunktur kann das Gest\u00f6rte harmonisieren, jedoch nicht das Zest\u00f6rte.",
+      "Alle Reize gelangen \u00fcber das Zwischenhirn zu den zugeordneten K\u00f6rperteilen und Organen. Aufgrund kurzer Reflexwege zwischen der Ohrmuschel und den Schmerzzentren im Gehirn ist z. B. die <strong>Ohrakupunktur</strong> besonders gut zur Schmerzlinderung geeignet."
+    ],
+    "behandlung": "Die Therapiedauer richtet sich nach dem aktuellen Beschwerdebild und der Bestehungszeit der Erkrankung. Meist tritt nach 4-5 Sitzungen eine sp\u00fcrbare Besserung ein. Oft sind insgesamt ca. 10 Sitzungen notwendig, um eine best\u00e4ndige Wirkung zu erzielen.",
+    "badges": ["Individuelles Konzept", "Punkt-Pr\u00e4zision"],
+    "preis": "100,- \u20ac",
+    "preisHint": "Erstanamnese inkl. Puls- & Zungendiagnose ca. 60 Min."
+  },
+  "indikationen": [
+    { "id": "schmerz", "title": "Schmerztherapie", "items": ["Alle Schmerzarten & Schmerzzust\u00e4nde", "Kopfschmerzen & Migr\u00e4ne", "R\u00fccken- & Gelenkschmerzen (z.B. chronische Knieschmerzen, M. Bechterew)", "Fibromyalgie", "Menstruationsschmerzen", "Postoperativer & posttraumatischer Schmerz", "Tumorschmerzen"] },
+    { "id": "allergie", "title": "Allergien & Atemwege", "items": ["Heuschnupfen, Neurodermitis, allergisches Asthma", "Nahrungsmittelunvertr\u00e4glichkeiten", "Akute Bronchitiden, Sinusitis, Rhinitis", "Hyperreagibles Bronchialsystem", "COPD (z.B. chron. Bronchitis), Asthma"] },
+    { "id": "hno-augen", "title": "HNO & Augen", "items": ["Allergischer Schnupfen", "(Chron.) Entz\u00fcndungen der Nebenh\u00f6hlen & Mandeln", "Innen- & Mittelohrentz\u00fcndung", "H\u00f6rsturz, Tinnitus, Schwindel", "Entz\u00fcndungen des Auges", "Abnehmende Sehkraft, Glaukom, Makuladegeneration"] },
+    { "id": "herz-magen", "title": "Herz, Kreislauf & Verdauung", "items": ["Herzrhythmusst\u00f6rungen", "Hyper-/Hypotonie (Blutdruck)", "Durchblutungsst\u00f6rungen", "Funktionelle Magen-Darm-St\u00f6rungen (Reizdarm, Reflux)", "Verstopfung/Durchfall", "Gastritis, Geschw\u00fcre, M. Crohn, Colitis ulcerosa"] },
+    { "id": "psyche", "title": "Psyche, Nerven & Neurologie", "items": ["Schlaflosigkeit", "Innere Unruhe & Reizbarkeit", "Ersch\u00f6pfungszust\u00e4nde (Burn-Out)", "Spannungskopfschmerz / Migr\u00e4ne", "Trigeminus- & Zoster-Neuralgie", "Polyneuropathie", "Depressive Verstimmungen", "Angstzust\u00e4nde"] },
+    { "id": "gynaekologie", "title": "Gyn\u00e4kologie & Urogenital", "items": ["Zyklusst\u00f6rungen & Wechseljahrsbeschwerden", "Entz\u00fcndungen der weiblichen Organe", "Blasen- & Nierenentz\u00fcndung", "Beckenbodenschw\u00e4che (Inkontinenz)", "Prostataprobleme", "Impotenz / Frigidit\u00e4t"] },
+    { "id": "haut", "title": "Hauterkrankungen", "items": ["Neurodermitis, atopisches Ekzem", "Entz\u00fcndliche Hauterkrankungen", "Akne vulgaris, Furunkulose", "Herpes-Infektionen", "Psoriasis (Schuppenflechte)", "Nesselsucht"] },
+    { "id": "kinderwunsch", "title": "Rund ums Kinderkriegen", "items": ["Kinderwunschbehandlung (Mann & Frau)", "Schwangerschaftsbeschwerden", "Geburtsvorbereitung", "Ersch\u00f6pfung nach der Geburt (z.B. Blutverlust)", "Stillprobleme (Milchstau oder Milchmangel)"] },
+    { "id": "bewegung", "title": "St\u00fctz- & Bewegungsapparat", "items": ["HWS-, BWS-, LWS-Syndrom", "Rheuma, Fibromyalgie", "Arthritis, Arthrose", "Bandscheibenvorfall", "Tennisellbogen & Golfer-Arm", "Karpaltunnel-Syndrom"] },
+    { "id": "begleit", "title": "Begleittherapie", "items": ["Linderung von Chemotherapie-Nebenwirkungen", "Allgemeine Immunschw\u00e4che", "Stoffwechselst\u00f6rungen (Diabetes, \u00dcbergewicht)", "Hormonst\u00f6rungen (Schilddr\u00fcse)", "Regeneration nach Operationen"] }
+  ],
+  "pulsdiagnostik": {
+    "headline": "Pulsdiagnostik",
+    "text": "Der Puls wird an drei Stellen und in drei Tiefen (Oberfl\u00e4che, Mitte, Tiefe) an beiden Handgelenken gleichzeitig getastet. Wir erfassen Frequenz, Volumen, Rhythmus und Form, um F\u00fclle- oder Leere-Zust\u00e4nde der Organe zu ermitteln.",
+    "hinweis": "Ein normaler Puls ist gleichm\u00e4\u00dfig, ruhig und kr\u00e4ftig (ca. 72-80 Schl\u00e4ge pro Minute). Morgens ist die beste Zeit f\u00fcr die Messung.",
+    "linkeHand": [
+      { "organ": "Herz / D\u00fcnndarm", "pos": "Pos. 1" },
+      { "organ": "Leber / Galle", "pos": "Pos. 2" },
+      { "organ": "Nieren-Yin / Blase", "pos": "Pos. 3" }
+    ],
+    "rechteHand": [
+      { "organ": "Lunge / Dickdarm", "pos": "Pos. 1" },
+      { "organ": "Milz / Magen", "pos": "Pos. 2" },
+      { "organ": "Nieren-Yang / Ming-Men", "pos": "Pos. 3" }
+    ]
+  },
+  "zungendiagnostik": {
+    "headline": "Zungendiagnostik",
+    "text": "Die Zunge ist ein Somatothop \u2013 eine Abbildung des gesamten K\u00f6rpers und ein Spiegel der Seele. Ver\u00e4nderungen in Farbe, Form, Belag und Unterzungenvenen geben direkte Hinweise auf St\u00f6rungen im Organismus.",
+    "vorbereitung": [
+      "1 Woche vorher kein Zungenb\u00fcrsten",
+      "Kein Kaffee oder f\u00e4rbende Lebensmittel (Rote Beete, Tee) am Untersuchungstag",
+      "Unmittelbar vorher nicht rauchen"
+    ],
+    "bilder": [
+      { "label": "Braunf\u00e4rbung:", "desc": "Verdauungsst\u00f6rungen / Darm" },
+      { "label": "Zahneindr\u00fccke:", "desc": "Leber (rechts), Milz (links)" },
+      { "label": "Gelber Belag:", "desc": "Stau in Leber/Galle oder Hitze" }
+    ],
+    "zonen": [
+      { "label": "Spitze:", "desc": "Herz" },
+      { "label": "Mitte:", "desc": "Lunge, Milz, Magen" },
+      { "label": "Wurzel:", "desc": "Niere, Blase" }
+    ]
+  },
+  "moxa": {
+    "badge": "Lebensenergie durch W\u00e4rme",
+    "headline": "Moxa-Therapie:",
+    "headlineAccent": "Die Kraft der Artemisia",
+    "paragraphs": [
+      "Die Moxa-Therapie (Moxibustion) nutzt den gezielten W\u00e4rmereiz von glimmendem Beifuss-Kraut (Artemisia vulgaris), um den Fluss deines <strong>Qi zu regulieren und das Yang zu aktivieren</strong>.",
+      "Besonders bei chronischen Beschwerden, K\u00e4ltegef\u00fchlen oder Ersch\u00f6pfungszust\u00e4nden entfaltet diese Methode ihre tiefgehende Wirkung. Die W\u00e4rme reizt die Akupunkturpunkte sanft, regt die Durchblutung an und mobilisiert deine Selbstheilungskr\u00e4fte."
+    ],
+    "methoden": [
+      { "title": "Moxa-Zigarre", "desc": "Kontaktlose Erw\u00e4rmung ca. 5mm \u00fcber der Haut." },
+      { "title": "Moxa-Nadel", "desc": "Die heisse Nadel leitet W\u00e4rme direkt ins Zentrum." },
+      { "title": "Indirektes Moxen", "desc": "Schutzbarrieren aus Ingwer, Salz oder Heilerde." },
+      { "title": "TDP-Minerallampe", "desc": "Mineral-Infrarot f\u00fcr gro\u00dffl\u00e4chige Energie." }
+    ],
+    "wendung": "In der Schwangerschaft ist das Moxen zur <strong>sanften Wendung des Kindes aus der Beckenendlage</strong> bekannt. Durch Stimulation des Punktes Bl 67 wird die Geb\u00e4rmuttermuskulatur angeregt, was das Baby ab der 34. Woche oft dazu bewegt, sich in die Sch\u00e4dellage zu drehen.",
+    "kontraindikationen": ["Akute Infektionen & Fieber", "Bluthochdruck", "Starke Nervosit\u00e4t / Hyperaktivit\u00e4t", "Bereich von Gesicht & Schleimh\u00e4uten"],
+    "preisHint": "Materialkosten werden zus\u00e4tzlich zum Honorar (100 \u20ac/Std.) berechnet. Eine Sitzung dauert ca. 20-30 Min."
+  },
+  "ernaehrung": {
+    "badge": "Nahrung als Medizin",
+    "headline": "Ern\u00e4hrung nach den",
+    "headlineAccent": "5 Elementen",
+    "intro": "In der TCM betrachten wir Lebensmittel nicht nach Kalorien, sondern nach ihrer energetischen Qualit\u00e4t, ihrem Geschmack und ihrer thermischen Wirkung. So kr\u00e4ftigen wir deine Grundkonstitution (Qi) nachhaltig.",
+    "elemente": [
+      { "element": "Holz", "season": "Fr\u00fchling", "taste": "Sauer", "organ": "Leber", "emotion": "\u00c4rger" },
+      { "element": "Feuer", "season": "Sommer", "taste": "Bitter", "organ": "Herz", "emotion": "Freude" },
+      { "element": "Erde", "season": "Sp\u00e4tsommer", "taste": "S\u00fc\u00df", "organ": "Milz", "emotion": "Mitgef\u00fchl" },
+      { "element": "Metall", "season": "Herbst", "taste": "Scharf", "organ": "Lunge", "emotion": "Trauer" },
+      { "element": "Wasser", "season": "Winter", "taste": "Salzig", "organ": "Niere", "emotion": "Angst" }
+    ],
+    "thermisch": [
+      { "label": "Heiss", "examples": "Lamm, Grillfleisch, Zimt, Curry, Knoblauch", "effect": "W\u00e4rmt stark, vertreibt K\u00e4lte" },
+      { "label": "Warm", "examples": "Fenchel, K\u00fcrbis, Huhn, Dinkel, Kirschen", "effect": "Unterst\u00fctzt das Yang" },
+      { "label": "Neutral", "examples": "Hirse, Karotten, Rindfleisch, Ei, Linsen", "effect": "Baut Qi auf, harmonisiert" },
+      { "label": "Erfrischend", "examples": "Brokkoli, Apfel, Sellerie, Reis, Tofu", "effect": "N\u00e4hrt S\u00e4fte & Blut" },
+      { "label": "K\u00fchlend", "examples": "Gurke, Tomate, Joghurt, Algen, Melone", "effect": "Kl\u00e4rt Hitze, beruhigt" }
+    ],
+    "beratung": {
+      "text1": "Ein Kind hat andere Bed\u00fcrfnisse als ein Greis. Eine Frau in den Wechseljahren befindet sich in einer anderen energetischen Phase als eine Schwangere.",
+      "text2": "Nach einer ausf\u00fchrlichen Anamnese (Puls- & Zungendiagnose) helfe ich dir, deine Essgewohnheiten auf deine individuelle Konstitution abzustimmen. Ern\u00e4hrungsumstellung ist ein langfristiges Projekt, das tiefgehende Einsichten f\u00fcr k\u00f6rperliche und seelische Zusammenh\u00e4nge erm\u00f6glicht.",
+      "preis": "100,- \u20ac / Std.",
+      "tags": ["Regional & Saisonal", "International", "Qi & S\u00e4fte"]
+    }
+  },
+  "schroepfen": {
+    "badge": "Hajamat / Ausleitverfahren",
+    "headline": "Schr\u00f6pf-Therapie:",
+    "headlineAccent": "Befreiung von Stagnationen",
+    "paragraphs": [
+      "Schr\u00f6pfen z\u00e4hlt zu den klassischen Ausleitverfahren und wird seit \u00fcber 5000 Jahren angewandt. Wir nutzen den gezielten Unterdruck auf der Haut, um <strong>lokale Stagnationen von Qi und Blut</strong> (z. B. tiefe Verspannungen) zu l\u00f6sen.",
+      "\u00dcber die sogenannten Head-Zonen der Haut erreichen wir reflektorisch auch die inneren Organe. So kann ein gezielter Reiz auf der Hautoberfl\u00e4che die Regeneration deiner inneren Vitalfunktionen unterst\u00fctzen."
+    ],
+    "methoden": [
+      { "title": "Feuer-Schr\u00f6pfen", "desc": "Traditionelle Erw\u00e4rmung der Luft im Glas f\u00fcr sanften Sog." },
+      { "title": "Blutiges Schr\u00f6pfen", "desc": "Gezielte Entschlackung & Hitze-Ausleitung (Hajamat)." },
+      { "title": "Trockenes Schr\u00f6pfen", "desc": "Starke Durchblutung unversehrter Hautstellen." },
+      { "title": "Schr\u00f6pfkopfmassage", "desc": "Dynamisches Verschieben f\u00fcr fasziale Freiheit." }
+    ],
+    "einsatz": ["Migr\u00e4ne & Kopfschmerz", "Bandscheibenvorfall", "Karpaltunnelsyndrom", "Bluthochdruck", "Bronchitis & Asthma", "M\u00fcdigkeit & Burn-Out", "Hormonst\u00f6rungen", "Verdauungsprobleme"],
+    "kontraindikationen": {
+      "trocken": ["Schwangerschaft (bis 4. Monat)", "Tumore & Tuberkulose", "Frische Brandwunden"],
+      "blutig": ["Menstruation & Wochenbett", "Gerinnungsst\u00f6rungen", "Starke Ersch\u00f6pfung"]
+    },
+    "preisHint": "Honorar: 100 \u20ac/Std. Eine Sitzung dauert ca. 30 Min. Die H\u00e4ufigkeit richtet sich nach deinem Befund."
+  },
+  "akutaping": {
+    "badge": "Sanfte Meridian-Stimulation",
+    "headline": "Aku-Taping:",
+    "headlineAccent": "Impulse f\u00fcr die Selbstheilung",
+    "intro": "Aku-Taping vereint die Regeln der TCM und Akupunktur mit moderner manueller Medizin. Anders als beim klassischen Kinesio-Taping folgen wir hier den Meridianen, um Energiefl\u00fcsse gezielt zu lenken.",
+    "features": [
+      { "icon": "Sparkles", "title": "Wirkweise", "text": "Der Reiz wird nicht durch Nadeln, sondern durch die kontinuierliche Verschiebung der Hautareale unter dem elastischen Band ausgel\u00f6st. Dies stimuliert Mechanorezeptoren und f\u00f6rdert den Lymphabfluss." },
+      { "icon": "Activity", "title": "Anwendung", "text": "Ideal bei Schmerzen am Bewegungsapparat, zur Regulation des Muskeltonus und zur Immunmodulation. Besonders wertvoll in der Rehabilitation und rund um die Geburt." },
+      { "icon": "Info", "title": "Ablauf", "text": "Nach der Anamnese dauert die Behandlung ca. 10-15 Min. Das Tape bleibt bis zu 5 Tage auf der Haut und entfaltet dort seine dauerhafte Wirkung." }
+    ],
+    "einsatz": ["Linderung chronischer Schmerzen", "Regulation des Muskeltonus", "Psychovegetative St\u00f6rungen", "Abschwellung & Lymphdrainage"],
+    "kontraindikationen": ["Schwere Gerinnungsst\u00f6rungen", "Akute psychiatrische Erkrankungen", "Notf\u00e4lle, die schulmedizinische Hilfe erfordern", "Bekannte schwere Acryl-Allergien"],
+    "kontraText": "Obwohl Aku-Taping sehr sicher ist, gibt es klare Grenzen f\u00fcr den Einsatz:",
+    "preisHint": "Pro Sitzung (10-15 Min.)"
+  },
+  "cta": {
+    "headline": "Balance f\u00fcr die Frau",
+    "quote": "In der TCM wird die Frau oft mit dem Element Wasser und dem Blut assoziiert. Wir nutzen Akupunktur und die Lehren der 5-Elemente-Ern\u00e4hrung, um den Zyklus sanft zu regulieren, Entz\u00fcndungen zu beruhigen und den K\u00f6rper optimal vorzubereiten.",
+    "qiCheck": "L\u00f6se Stagnationen, f\u00fclle deine Reserven auf und finde zur\u00fcck zu deiner nat\u00fcrlichen Lebenskraft."
+  }
+}

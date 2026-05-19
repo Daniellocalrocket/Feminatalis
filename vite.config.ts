@@ -1,6 +1,7 @@
 // vite.config.ts
 import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react-swc';
+import WebfontDownload from 'vite-plugin-webfont-dl';
 import tailwindcss from '@tailwindcss/vite';
 import fs from 'node:fs/promises';
 import nodePath from 'node:path';
@@ -214,6 +215,9 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       tailwindcss(),
+      WebfontDownload([
+        'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap'
+      ]),
       react(),
       mode === 'development' &&
       componentTagger(),

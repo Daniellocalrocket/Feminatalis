@@ -91,7 +91,9 @@ export function Layout({ children }: LayoutProps) {
     { name: "Kontakt", path: ROUTE_PATHS.CONTACT }
   ];
 
-  const closeMobileMenu = () => setIsMobileMenuOpen(false);
+  const closeMobileMenu = React.useCallback(() => {
+    setIsMobileMenuOpen(false);
+  }, []);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -104,6 +106,11 @@ export function Layout({ children }: LayoutProps) {
       document.body.style.overflow = 'unset';
     };
   }, [isMobileMenuOpen]);
+
+  // Close mobile menu on navigation
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
 
   return (
     <div className="flex flex-col min-h-screen bg-background font-sans">
