@@ -196,7 +196,7 @@ export default function CoursesOverview() {
       </section>
 
       {/* Events Section - NOW SECONDARY */}
-      <section className="py-20 lg:py-24 bg-white border-b border-border/50 relative overflow-hidden">
+      <section id="kurse-vor-ort" className="py-20 lg:py-24 bg-white border-b border-border/50 relative overflow-hidden">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-2xl md:text-3xl font-serif text-primary/40 uppercase tracking-widest mb-4">
