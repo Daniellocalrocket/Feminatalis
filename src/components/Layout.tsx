@@ -246,7 +246,7 @@ export function Layout({ children }: LayoutProps) {
               </p>
               <div className="flex gap-4">
                 <a
-                  href="https://www.instagram.com/feminatalis/"
+                  href="https://www.instagram.com/feminatalis_praxis/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Feminatalis auf Instagram"

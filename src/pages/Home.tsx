@@ -69,7 +69,7 @@ export default function Home() {
             { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "11:00", "closes": "14:00" }
           ],
           "sameAs": [
-            "https://www.instagram.com/feminatalis/",
+            "https://www.instagram.com/feminatalis_praxis/",
             "https://www.facebook.com/feminatalis"
           ],
           "founder": {
@@ -799,7 +799,7 @@ export default function Home() {
 
               <div className="flex flex-wrap gap-6 pt-4">
                 <a 
-                  href="https://instagram.com/feminatalis" 
+                  href="https://instagram.com/feminatalis_praxis" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-accent text-white px-8 py-4 rounded-xl font-bold flex items-center gap-3 hover:bg-accent/90 transition-all hover:-translate-y-1 shadow-lg shadow-black/20"
