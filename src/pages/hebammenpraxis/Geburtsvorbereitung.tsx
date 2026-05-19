@@ -74,14 +74,14 @@ export default function Geburtsvorbereitung() {
         imageKey="img_hero_geburtsvorbereitung"
       >
         <div className="flex flex-wrap gap-4">
-          <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
-            Kursplatz anfragen <ArrowRight size={20} />
-          </Link>
+          <a href="#kursinhalte" className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+            Kursinhalte ansehen <ArrowRight size={20} />
+          </a>
         </div>
       </SplitScreenHero>
 
       {/* Deep Dive Intro */}
-      <section className="py-24 bg-white scroll-mt-24">
+      <section id="kursinhalte" className="py-24 bg-white scroll-mt-24">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
             <div className="space-y-8 text-left">
@@ -246,7 +246,7 @@ export default function Geburtsvorbereitung() {
                 Die Plätze für unsere Intensiv-Wochenenden sind begrenzt, um eine vertrauensvolle Atmosphäre in der Gruppe zu gewährleisten.
               </p>
               <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary px-12 py-5 rounded-2xl font-bold hover:bg-accent hover:text-white transition-all shadow-xl inline-flex items-center gap-3 relative z-10">
-                Kursplatz anfragen <ArrowRight size={20} />
+                Kostenlose Vor-Analyse anfragen <ArrowRight size={20} />
               </Link>
            </div>
         </div>

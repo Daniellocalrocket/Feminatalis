@@ -45,9 +45,9 @@ export default function Rueckbildung() {
         imageAlt="Rückbildungsgymnastik – gezieltes Training für Beckenboden und Körpermitte"
         imageKey="img_hero_rueckbildung"
       >
-        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
-          Kostenlose Vor-Analyse anfragen <ArrowRight size={20} />
-        </Link>
+        <a href="#kursinhalte" className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+          Mehr erfahren <ArrowRight size={20} />
+        </a>
       </SplitScreenHero>
 
       {/* Kurs-Beschreibung */}
@@ -119,7 +119,7 @@ export default function Rueckbildung() {
       </section>
 
       {/* Kursinhalte */}
-      <section className="py-24 bg-muted/20">
+      <section id="kursinhalte" className="py-24 bg-muted/20">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <span className="bg-accent/10 text-accent px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">
