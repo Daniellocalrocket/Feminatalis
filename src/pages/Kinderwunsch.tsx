@@ -2,7 +2,7 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
-import { ClipboardList, Target, HeartHandshake, ArrowRight, Zap, Heart, Users, Activity, Droplets, Sparkles } from "lucide-react";
+import { ClipboardList, Target, HeartHandshake, ArrowRight, Zap, Heart, Users, Activity, Droplets, Sparkles, Instagram } from "lucide-react";
 import SplitScreenHero from "@/components/SplitScreenHero";
 import PreisTransparenz from "@/components/PreisTransparenz";
 import { motion } from "framer-motion";
@@ -97,6 +97,24 @@ export default function Kinderwunsch() {
         </div>
       </section>
 
+      {/* Instagram Section */}
+      <section className="py-16 bg-muted/20">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <p className="text-sm font-bold text-primary/50 uppercase tracking-widest mb-4">Folge uns für mehr Inspiration</p>
+          <h3 className="text-2xl font-serif text-primary mb-6">Fruchtbarkeits-Kompass auf Instagram</h3>
+          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Entdecke wertvolle Tipps, Studien-Insights und persönliche Geschichten rund um das Thema Fruchtbarkeit und Kinderwunsch auf unserem speziellen Instagram-Kanal.
+          </p>
+          <a 
+            href="https://instagram.com/fruchtbarkeits_kompass" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-accent text-white px-10 py-4 rounded-xl font-bold inline-flex items-center gap-3 hover:bg-accent/90 transition-all hover:-translate-y-1 shadow-lg shadow-black/20"
+          >
+            <Instagram size={24} /> @fruchtbarkeits_kompass folgen
+          </a>
+        </div>
+      </section>
 
       <PreisTransparenz />
     </div>

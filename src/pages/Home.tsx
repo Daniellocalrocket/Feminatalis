@@ -799,6 +799,14 @@ export default function Home() {
 
               <div className="flex flex-wrap gap-6 pt-4">
                 <a 
+                  href="https://instagram.com/fruchtbarkeits_kompass" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white text-primary border border-white/20 px-8 py-4 rounded-xl font-bold flex items-center gap-3 hover:bg-white hover:text-accent transition-all hover:-translate-y-1 shadow-lg"
+                >
+                  <Instagram size={24} /> Fruchtbarkeits-Kompass auf Instagram
+                </a>
+                <a 
                   href="https://instagram.com/feminatalis_praxis" 
                   target="_blank" 
                   rel="noopener noreferrer"
