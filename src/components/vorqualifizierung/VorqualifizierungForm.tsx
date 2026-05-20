@@ -105,6 +105,30 @@ export default function VorqualifizierungForm() {
     try {
       console.log("Submitting form data to Supabase:", data);
       
+      let detailTexts: string[] = [];
+      if (data.areas.includes("hebamme")) {
+        if (data.pregnancyDueDate) detailTexts.push(`Entbindungstermin: ${data.pregnancyDueDate}`);
+        if (data.midwifeService && data.midwifeService.length > 0) detailTexts.push(`Leistungen Hebamme: ${data.midwifeService.join(", ")}`);
+      }
+      if (data.areas.includes("kinderwunsch")) {
+        if (data.ttcDuration) detailTexts.push(`Kinderwunschdauer: ${data.ttcDuration}`);
+        if (data.prevTreatments && data.prevTreatments.length > 0) detailTexts.push(`Bisherige Behandlungen: ${data.prevTreatments.join(", ")}`);
+      }
+      if (data.areas.includes("naturheilkunde")) {
+        if (data.complaintType) detailTexts.push(`Art der Beschwerden: ${data.complaintType}`);
+        if (data.mainConcern) detailTexts.push(`Hauptanliegen: ${data.mainConcern}`);
+      }
+
+      const baseInfo = data.additionalInfo || "";
+      const compiledInfo = [
+        ...detailTexts,
+        baseInfo ? `Anmerkung: ${baseInfo}` : ""
+      ].filter(Boolean).join(" | ");
+
+      const finalAdditionalInfo = eventParam 
+        ? `Buchungsanfrage für: ${decodeURIComponent(eventParam)}.${compiledInfo ? ' ' + compiledInfo : ''}` 
+        : compiledInfo;
+
       const { error } = await supabase.from('leads').insert([
         {
           first_name: data.firstName,
@@ -115,7 +139,7 @@ export default function VorqualifizierungForm() {
           insurance: data.insurance,
           areas: data.areas,
           urgency: data.urgency,
-          additional_info: eventParam ? `Buchungsanfrage für: ${decodeURIComponent(eventParam)}. ${data.additionalInfo || ""}` : data.additionalInfo,
+          additional_info: finalAdditionalInfo,
           mindset_situation: data.mqSituation,
           mindset_motivation: data.mqMotivation,
           mindset_experience: data.mqExperience,

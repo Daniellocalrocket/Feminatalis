@@ -46,7 +46,7 @@ export function Layout({ children }: LayoutProps) {
       name: "Hebammenpraxis", 
       path: ROUTE_PATHS.HEBAMMENPRAXIS,
       subItems: [
-        { name: "Biochemische Geburtsvorbereitung", path: ROUTE_PATHS.GEBURTSVORBEREITUNG, desc: "Zelluläre Power & Nährstoffe" },
+        { name: "Geburtsvorbereitung für Paare", path: ROUTE_PATHS.GEBURTSVORBEREITUNG, desc: "Wochenend-Intensiv" },
         { name: "Premium Geburtsvorbereitung", path: ROUTE_PATHS.PREMIUM_ZELLKRAFT_KURS, desc: "Der Zellkraft-Kompass" },
         { name: "Wochenbett & Hausbesuche", path: ROUTE_PATHS.WOCHENBETTBETREUUNG, desc: "Ganzheitliche Begleitung" },
         { name: "IHHT / Höhentraining", path: ROUTE_PATHS.ZELLTRAINING_SCHWANGERSCHAFT, desc: "Zelltraining für Schwangere" },
@@ -60,6 +60,7 @@ export function Layout({ children }: LayoutProps) {
       name: "Naturheilpraxis", 
       path: ROUTE_PATHS.NATURHEILPRAXIS,
       subItems: [
+        { name: "Mitochondrien-Therapie", path: ROUTE_PATHS.MITOCHONDRIEN, desc: "Zelluläre Energie & Angelas Schwerpunkt" },
         { name: "Tiefgehende Labordiagnostik", path: ROUTE_PATHS.LABOR, desc: "Ursachenforschung" },
         { name: "Infusionstherapie", path: ROUTE_PATHS.INFUSIONSTHERAPIE, desc: "Direkte Nährstoffaufnahme" },
         { name: "IHHT Höhentraining", path: ROUTE_PATHS.ZELLTRAINING, desc: "Zelltraining & Sauerstofftherapie" },
@@ -71,7 +72,6 @@ export function Layout({ children }: LayoutProps) {
         { name: "TCM", path: ROUTE_PATHS.TCM, desc: "Traditionelle Chinesische Medizin" },
         { name: "Allergiebehandlung", path: ROUTE_PATHS.ALLERGIE, desc: "Immunmodulation" },
         { name: "brainLight Entspannung", path: ROUTE_PATHS.BRAINLIGHT, desc: "Tiefenregeneration" },
-        { name: "Mitochondrien-Therapie", path: ROUTE_PATHS.MITOCHONDRIEN, desc: "Zelluläre Energie" },
         { name: "Homöopathie", path: ROUTE_PATHS.HOMOEOPATHIE, desc: "Ganzheitliche Heilung" },
         { name: "Blutegeltherapie", path: ROUTE_PATHS.BLUTEGEL, desc: "Natürliche Entzündungshemmung" },
         { name: "Lasertherapie", path: ROUTE_PATHS.LASERTHERAPIE, desc: "Regeneration & Licht" }

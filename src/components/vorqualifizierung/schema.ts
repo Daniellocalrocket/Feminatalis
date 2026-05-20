@@ -49,7 +49,7 @@ export const vorqualifizierungSchema = z.object({
   urgency: z.string().min(1, "Bitte wähle die Dringlichkeit aus."),
   
   // Hebammenpraxis spezifisch
-  pregnancyWeek: z.string().optional(),
+  pregnancyDueDate: z.string().optional(),
   midwifeService: z.array(z.string()).optional(),
 
   // Kinderwunsch spezifisch

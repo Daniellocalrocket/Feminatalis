@@ -93,9 +93,12 @@ export default function Allergie() {
           <div className="grid lg:grid-cols-2 gap-16 items-center text-left">
             <div className="space-y-8 text-left">
               <h2 className="text-3xl lg:text-5xl font-serif text-primary text-left leading-tight">Diagnostik <br /><span className="text-accent italic">mit Detektivsinn</span></h2>
-              <div className="prose prose-lg text-muted-foreground text-left mb-8 font-medium">
+              <div className="prose prose-lg text-muted-foreground text-left mb-8 font-medium space-y-6">
                 <p>
-                  Ein einfacher Prick-Test reicht oft nicht aus. Wir nutzen den <strong>Metavital Human-Scan</strong> und fundierte <strong>Stuhl-Analysen</strong>, um energetische Belastungen und Mikrobiom-Störungen sichtbar zu machen.
+                  Ein einfacher Prick-Test reicht meist bei weitem nicht aus, um das komplexe Geschehen zu erfassen. In unserer Praxis stützen wir uns auf eine <strong>tiefgehende Labordiagnostik</strong> (TH1/TH2-Verteilung, IgE, IgG, LTT-Tests) sowie fundierte <strong>Stuhl-Analysen zur Mikrobiombeurteilung</strong>, um immunologische Belastungen und mikrobielle Fehlbesiedlungen zweifelsfrei sichtbar zu machen.
+                </p>
+                <p>
+                  Als tragende Säulen der Immunmodulation und Regulation des Abwehrsystems setzen wir zudem auf die <strong>Klassische Homöopathie</strong> zur tiefen systemischen Umstimmung sowie eine gezielte <strong>Parasitenbehandlung</strong>. Letztere ist ein faszinierender Ansatz der funktionellen Medizin, um einem unterforderten Immunsystem seinen evolutionsbiologischen Trainingspartner zurückzugeben und Überreaktionen zu dämpfen.
                 </p>
                 <p>
                   Unser Ziel ist die natürliche Immunmodulation. Dabei setzen wir auf absolut <strong>aluminiumfreie Verfahren</strong>. Wir unterstützen deinen Körper dabei, Mastzellen zu stabilisieren und die Histamin-Toleranz nachhaltig zu erhöhen.
@@ -120,9 +123,9 @@ export default function Allergie() {
                   {[
                     "Mikrobiom-Therapie (Darmsanierung)",
                     "Mastzell-Stabilisierung (Naturnah)",
-                    "Akupunktur zur Immunregulation",
+                    "Klassische Homöopathie (Umstimmung)",
+                    "Gezielte Parasitenbehandlung",
                     "Orthomolekulare Nährstoff-Infusionen",
-                    "NLS-gestützte Ursachenfindung",
                     "Histamin-Management & Beratung"
                   ].map((method, i) => (
                     <li key={i} className="flex gap-5 items-start bg-white/10 p-6 rounded-[2.5rem] border border-white/10 hover:bg-white/20 transition-all group text-left">

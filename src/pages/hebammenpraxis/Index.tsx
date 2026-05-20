@@ -177,7 +177,7 @@ export default function Hebammenpraxis() {
               <ul className="space-y-4 mb-10">
                 <li>
                   <Link to={ROUTE_PATHS.GEBURTSVORBEREITUNG} className="flex items-center gap-3 text-sm font-medium hover:text-accent transition-colors">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary"/> Vorbereitungskurse
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary"/> Geburtsvorbereitung für Paare (Wochenend-Intensiv)
                   </Link>
                 </li>
                 <li>

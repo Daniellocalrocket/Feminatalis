@@ -21,22 +21,22 @@ export default function Schwermetall() {
   const ablaufPhasen = [
     {
       title: "1. Provokationstest (Urin)",
-      desc: "Zunächst verabreichen wir einen Chelatbildner (z.B. DMPS/EDTA). Dieser bindet Metalle. Der anschließende Urintest zeigt, welche Gifte der Körper tatsächlich eingelagert hat.",
+      desc: "Zunächst verabreichen wir einen Chelatbildner (z.B. DMPS/EDTA). Dieser mobilisiert Metalle. Der anschließende Urintest im Speziallabor zeigt exakt, welche Gifte in deinen Geweben gelagert sind.",
       icon: <TestTube className="w-8 h-8 text-accent" />
     },
     {
       title: "2. Chelat-Infusionen",
-      desc: "Anhand der Ergebnisse erhältst du individuelle Infusionen. Die Chelate fischen die Schwermetall-Ionen förmlich aus dem Gewebe und binden sie wasserlöslich.",
+      desc: "Wir nutzen hochwirksame Infusionen mit Chelatbildnern wie Ca-/Na-EDTA in Kombination mit Alpha-Liponsäure (ALA). Letztere ist extrem wertvoll, da sie sowohl wasser- als auch fettlöslich ist, die Blut-Hirn-Schranke überwindet und zelluläre Toxine mobilisiert.",
       icon: <Syringe className="w-8 h-8 text-accent" />
     },
     {
-      title: "3. Ausleitung & Nieren",
-      desc: "Die gebundenen Toxine werden nun sicher über Nieren und Leber ausgeschieden. Wir unterstützen diesen Prozess, indem wir deine Entgiftungsorgane stärken.",
+      title: "3. Ausleitung & Organunterstützung",
+      desc: "Die stabil gebundenen Chelat-Komplexe werden sicher über Niere, Leber und Darm ausgeschieden. Um eine Rückvergiftung auszuschließen, müssen diese Ausscheidungswege maximal gestärkt werden.",
       icon: <Droplets className="w-8 h-8 text-accent" />
     },
     {
       title: "4. Mineralstoff-Refill",
-      desc: "Da Chelatbildner auch wertvolle Mineralien (wie Zink oder Magnesium) ausleiten, füllen wir diese in den darauffolgenden Sitzungen wieder gezielt auf.",
+      desc: "Da Chelate unspezifisch auch wertvolle Spurenelemente binden, füllen wir deine Speicher in Folgesitzungen mit hochdosiertem Zink, Magnesium und Selen gezielt wieder auf.",
       icon: <FlaskConical className="w-8 h-8 text-accent" />
     }
   ];
@@ -119,6 +119,25 @@ export default function Schwermetall() {
                   <p className="text-white/80 leading-relaxed text-sm font-medium">{phase.desc}</p>
                </div>
              ))}
+          </div>
+
+          {/* Professional Note: Organ-Drainage */}
+          <div className="mt-16 bg-white text-primary p-8 lg:p-12 rounded-[3rem] border border-accent/20 shadow-xl max-w-4xl mx-auto relative overflow-hidden">
+             <div className="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-bl-[150px]"></div>
+             <div className="flex flex-col md:flex-row gap-8 items-start relative z-10 text-left">
+                <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent shrink-0 mt-1">
+                   <ShieldAlert size={28} />
+                </div>
+                <div className="text-left">
+                   <h4 className="font-serif font-bold text-xl mb-3 text-primary text-left">Medizinische Notwendigkeit: Organgestützte Ausleitung</h4>
+                   <p className="text-sm text-muted-foreground leading-relaxed font-medium text-left">
+                      Eine intravenöse Chelat-Therapie mobilisiert abgelagerte Schwermetalle mit extrem hoher Effektivität. Um eine systemische Rückvergiftung oder die gefährliche Umverteilung von Toxinen im Körper zu verhindern, müssen die primären Ausscheidungsorgane – <strong>Leber, Niere und Darm</strong> – auf Hochtouren laufen. 
+                   </p>
+                   <p className="text-sm text-muted-foreground leading-relaxed font-medium mt-3 text-left">
+                      Daher begleiten wir jede Infusions-Sitzung zwingend mit einer intensiven oralen Drainage-Unterstützung (Phytotherapie für die Leber, spezielle Nierenkräuter sowie Bindemittel wie Zeolith/Chlorella im Darm), damit gelöste Gifte den Körper auch tatsächlich auf direktem Weg verlassen.
+                   </p>
+                </div>
+             </div>
           </div>
         </div>
       </section>

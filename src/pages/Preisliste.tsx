@@ -42,6 +42,7 @@ export default function Preisliste() {
       icon: <Gem className="w-6 h-6 text-accent" />,
       highlight: true,
       items: [
+        { name: "Paket Kompass-Start (Mikronährstoffe)", price: "375,- €", detail: "Anamnese, Laborberatung, Blutabnahme, Befundanalyse, schriftl. Therapieplan zzgl. Laborkosten" },
         { name: "Air-pur 10 (IHHT)", price: "675,- €", detail: "Statt 750,- € (zzgl. Maske, 2 RZ möglich)" },
         { name: "Drop-pur 10 (Infusionen)", price: "585,- €", detail: "Statt 650,- € (zzgl. Medikamente, 2 RZ möglich)" },
         { name: "Light-pur 10 (Laser)", price: "540,- €", detail: "Statt 600,- € (2 RZ möglich)" },

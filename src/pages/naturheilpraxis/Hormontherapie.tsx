@@ -36,17 +36,57 @@ export default function Hormontherapie() {
         </Link>
       </SplitScreenHero>
 
-      {/* Philosophy: Identity vs Imitation */}
+         {/* Philosophy: Regulation & compliance */}
       <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl text-center">
-          <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-10 leading-tight">Molekulare Identität <br /><span className="text-accent italic">statt synthetischer Kopie</span></h2>
-          <div className="prose prose-lg mx-auto text-muted-foreground leading-relaxed">
-            <p>
-              In meiner Praxis setzen wir konsequent auf <strong>bioidentische Hormone</strong>. Im Gegensatz zu synthetischen Gestagenen oder Östrogenen entsprechen diese in ihrer molekularen Struktur zu 100% den Hormonen, die dein Körper selbst produziert. Dein Körper erkennt sie als „eigen“ an, wodurch sie ihre regulierende Wirkung entfalten können, ohne die Leber oder das Gefäßsystem unnötig zu belasten.
-            </p>
-            <p className="mt-6">
-              Dabei betrachten wir nicht nur die Sexualhormone, sondern das gesamte Orchester: von der <strong>Schilddrüse</strong> über die <strong>Nebennieren (Stressachse)</strong> bis hin zum <strong>Vitamin D</strong>, das faktisch ein Schlüsselhormon für deine gesamte hormonelle Rezeptorempfindlichkeit ist.
-            </p>
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-6 leading-tight">Ganzheitliche Hormonregulation <br /><span className="text-accent italic">und körpereigene Balance</span></h2>
+            <div className="prose prose-lg mx-auto text-muted-foreground leading-relaxed max-w-3xl">
+              <p>
+                Hormone steuern fast jede Sekunde unseres Lebens. Doch anstatt das System von außen mit synthetischen oder hochdosierten Hormonen zu dominieren, setzen wir in unserer Praxis auf die Aktivierung der <strong>körpereigenen Regulationsfähigkeit</strong>. 
+              </p>
+              <div className="bg-accent/5 p-8 rounded-[2.5rem] border-l-4 border-accent text-left mt-8 text-sm text-primary leading-relaxed font-medium">
+                <span className="font-bold text-accent uppercase tracking-widest text-[11px] block mb-2">Rechtlicher Hinweis & Wirkprinzip:</span>
+                Als Heilpraktikerin arbeite ich streng im Rahmen des deutschen Heilpraktikergesetzes. Da hochdosierte bioidentische Hormone in Reinform rezeptpflichtig sind und somit Ärzten unterliegen, nutzen wir in der Naturheilpraxis bioidentische Hormone ausschließlich in <strong>homöopathischen Zubereitungen (z.B. als Cremes oder Globuli in D4/D8-Potenzen)</strong>. Diese potenzierten Ursubstanzen wirken als sanfte, zelluläre Feedback-Impulse. Sie weisen den Körper an, seine eigene hormonelle Synthese und Steuerung wieder zu aktivieren – ganz ohne Nebenwirkungen oder Abhängigkeiten.
+              </div>
+            </div>
+          </div>
+
+          {/* 4 Pillars Grid */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-serif text-primary text-center mb-12 font-bold">Die 4 Säulen der natürlichen Hormonregulation</h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  title: "1. Phytotherapie",
+                  desc: "Modulation durch pflanzliche Wirkstoffe wie Mönchspfeffer, Yamswurzel, Traubensilberkerze oder Frauenmantel zur sanften Unterstützung der Drüsenfunktionen.",
+                  icon: <Activity className="w-6 h-6 text-accent" />
+                },
+                {
+                  title: "2. Ernährung",
+                  desc: "Gezielte hormonfreundliche Kost liefert die biochemischen Bausteine für die Hormonproduktion und entlastet die Leber bei der Hormonentgiftung.",
+                  icon: <Heart className="w-6 h-6 text-accent" />
+                },
+                {
+                  title: "3. Lebensstil",
+                  desc: "Therapeutisches Stressmanagement und Vagus-Regulation zur drastischen Entlastung der Nebennieren- und Cortisolachse (Stresshormone).",
+                  icon: <Zap className="w-6 h-6 text-accent" />
+                },
+                {
+                  title: "4. Mikronährstoffe",
+                  desc: "Gezielte Zufuhr von Co-Faktoren wie Zink, Selen, Magnesium und Vitamin D für eine optimierte Hormonrezeptor-Sensitivität und Bildung.",
+                  icon: <ShieldCheck className="w-6 h-6 text-accent" />
+                }
+              ].map((pillar, i) => (
+                <div key={i} className="bg-muted/10 border border-border/50 p-8 rounded-[2.5rem] flex flex-col items-start hover:border-accent hover:bg-white hover:shadow-xl transition-all duration-300">
+                  <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                    {pillar.icon}
+                  </div>
+                  <h4 className="text-lg font-serif text-primary font-bold mb-3">{pillar.title}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed font-medium">{pillar.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -93,7 +133,7 @@ export default function Hormontherapie() {
 
             <div className="grid gap-6 text-left">
               {[
-                { title: "Individuelle Rezeptur", desc: "Wir arbeiten mit spezialisierten Apotheken zusammen, die deine bioidentischen Hormone individuell als Creme oder Kapsel anfertigen.", icon: Sparkles },
+                { title: "Homöopathische bioidentische Hormone", desc: "Speziell angefertigte homöopathische Potenzen (Cremes/Globuli in D4/D8) als sanfte, zelluläre Regulations-Signalgeber für deine Drüsen.", icon: Sparkles },
                 { title: "Die Stressachse (DHEA/Cortisol)", desc: "Ohne stabile Nebennieren keine Hormonbalance. Wir stärken deine Basis für mehr Belastbarkeit.", icon: Activity },
                 { title: "Progesteron-Regulierung", desc: "Sanfter Ausgleich bei Östrogendominanz – für ruhigen Schlaf und innere Gelassenheit.", icon: Heart },
                 { title: "Schilddrüsen-Optimierung", desc: "Ganzheitliche Einstellung bei Hashimoto und Unterfunktion über die Standard-Werte hinaus.", icon: Zap }
@@ -110,7 +150,11 @@ export default function Hormontherapie() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
 
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 max-w-7xl">
           <div className="bg-primary text-white p-12 lg:p-24 rounded-[5rem] text-center shadow-2xl relative overflow-hidden mb-24">
              <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-accent/20 -mr-64 -mt-64 rounded-full blur-[100px] opacity-20"></div>
              <Sparkles className="w-20 h-20 text-accent mx-auto mb-8 animate-pulse relative z-10" />

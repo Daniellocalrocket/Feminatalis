@@ -38,9 +38,9 @@ export default function Rueckbildung() {
       />
 
       <SplitScreenHero
-        badge="Rückbildungskurs am Abend"
+        badge="Rückbildungskurs | 8x 1,25 Std., abends, ohne Baby"
         title={<>Dein Körper verdient <br/><span className="text-accent italic font-light">Stärke & Stabilität</span></>}
-        subtitle="Die Wochenbettzeit liegt hinter dir – und jetzt darfst du Schritt für Schritt wieder Kraft, Stabilität und ein gutes Körpergefühl aufbauen. In kleinen Gruppen, mit engagierter Leitung und vollem Fokus auf dich."
+        subtitle="Die Wochenbettzeit liegt hinter dir – und jetzt darfst du Schritt für Schritt wieder Kraft, Stabilität und ein gutes Körpergefühl aufbauen. In kleinen Gruppen am Abend, mit engagierter Leitung und vollem Fokus auf dich. (8 Einheiten à 1,25 Stunden)."
         imageSrc="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop"
         imageAlt="Rückbildungsgymnastik – gezieltes Training für Beckenboden und Körpermitte"
         imageKey="img_hero_rueckbildung"
@@ -53,28 +53,34 @@ export default function Rueckbildung() {
       {/* Kurs-Beschreibung */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
               <span className="bg-primary/5 text-primary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block">
-                Rückbildung ohne Baby
+                8x 1,25 Stunden am Abend – Ohne Baby
               </span>
               <h2 className="text-3xl lg:text-4xl font-serif text-primary mb-8 leading-tight">
                 Warum am Abend – <br/><span className="text-accent italic">und ohne Baby?</span>
               </h2>
               <div className="prose prose-lg text-muted-foreground leading-relaxed space-y-6">
                 <p>
-                  Rückbildung ist nicht nur Training – sie ist auch ein Moment, in dem du wieder bei dir ankommst. Nach Wochen, in denen sich alles um dein Baby dreht, darfst du hier einmal nur <strong>du</strong> sein.
+                  Rückbildung ist nicht nur Training – sie ist auch ein Moment, in dem du wieder bei dir ankommst. Nach Wochen, in denen sich alles um dein Baby dreht, darfst du hier **einmal nur du sein**.
                 </p>
                 <p>
-                  Der Kurs ist bewusst ohne Baby geplant. So kannst du diese Zeit voll für dich nutzen, in Ruhe üben und dich wirklich auf deinen Körper konzentrieren.
+                  Darum ist der Kurs **ohne Babys** geplant. So kannst du diese Zeit voll für dich nutzen, in Ruhe üben und dich wirklich auf deinen Körper konzentrieren. Wenn möglich, organisiere bitte für die Kurszeit eine Betreuung – so wird die Rückbildung für dich deutlich entspannter und effektiver.
                 </p>
-                <p className="bg-primary/5 p-6 rounded-2xl border-l-4 border-primary">
-                  <strong>Tipp:</strong> Organisiere bitte für die Kurszeit eine Betreuung für dein Baby – so wird die Rückbildung für dich deutlich entspannter und effektiver.
-                </p>
+                <div className="bg-accent/5 p-8 rounded-[2rem] border-l-4 border-accent text-sm text-primary font-medium space-y-3">
+                  <h4 className="font-bold text-base">Neurophysiologische Begründung</h4>
+                  <p className="leading-relaxed">
+                    Aus neurobiologischer und physiotherapeutischer Sicht ist Rückbildung weit mehr als nur ein bisschen Gymnastik – es ist ein hochpräzises neuromuskuläres Re-Patterning und propriozeptives Training. Nach der extremen Gewebe- und Muskeldehnung unter Schwangerschaft und Geburt müssen die motorischen Kortex-Areale im Gehirn die Ansteuerung der Beckenboden- und tiefen Rumpfmuskelschichten völlig neu erlernen.
+                  </p>
+                  <p className="leading-relaxed">
+                    Dies erfordert absolute Konzentration, eine präzise Koordination mit der Atmung und eine störungsfreie Selbstwahrnehmung. Babys im Kursraum bedeuten eine ständige sympathikotone Aktivierung (Ablenkung durch Weinen, Blicke, Fürsorge-Reflexe), was die für das motorische Lernen notwendige parasympathische Konzentration hemmt. Ein Kurs ohne Baby ermöglicht es dir erst, dich voll auf die propriozeptiven Signale deines Körpers einzulassen und deine Tiefenmuskulatur neurophysiologisch korrekt zu reaktivieren.
+                  </p>
+                </div>
               </div>
             </motion.div>
 
@@ -82,15 +88,15 @@ export default function Rueckbildung() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-card p-10 lg:p-12 rounded-[3rem] border border-border shadow-xl"
+              className="bg-card p-10 lg:p-12 rounded-[3rem] border border-border shadow-xl sticky top-28"
             >
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
                   <Clock size={28} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-serif text-primary">Flexible Abendtermine</h3>
-                  <p className="text-muted-foreground text-sm">Ideal für berufstätige Mütter</p>
+                  <h3 className="text-xl font-serif text-primary">8x 1,25 Std. am Abend</h3>
+                  <p className="text-muted-foreground text-sm">Gezielte Termine für tiefe Regeneration</p>
                 </div>
               </div>
               

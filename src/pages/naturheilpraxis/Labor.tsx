@@ -33,7 +33,7 @@ export default function Labor() {
       />
       <SplitScreenHero
         badge="Funktionelle Medizindiagnostik"
-        title={<>Metabolic Mapping: <br /><span className="text-accent italic font-light">Wir raten nicht – wir wissen</span></>}
+        title={<>Labordiagnostik: <br /><span className="text-accent italic font-light">Wir raten nicht – wir wissen</span></>}
         subtitle="Symptome sind nur die Sprache deines Körpers. Mit hochspezialisierter Labordiagnostik (Vollblut, Speichel, Stuhl) blicken wir tief in deine Biochemie, um die wahren Ursachen deiner Beschwerden sichtbar zu machen. Präzise, wissenschaftlich und kompromisslos."
         imageSrc="https://images.unsplash.com/photo-1579152276503-3406322316e6?q=80&w=2070&auto=format&fit=crop"
         imageAlt="Labordiagnostik und Analysen"
@@ -53,7 +53,7 @@ export default function Labor() {
               In der klassischen Medizin wird meist das Serum gemessen. Doch der Körper hält die Serumwerte (z.B. bei Magnesium oder Kalium) um jeden Preis stabil, indem er die Reserven aus den Zellen abzieht. Ein „normaler“ Serumwert kann also einen massiven zellulären Mangel maskieren.
             </p>
             <p className="mt-6">
-              Wir nutzen die <strong>Vollblut-Diagnostik</strong>, um die tatsächliche Sättigung deiner Zellen zu messen. Nur so finden wir heraus, warum deine Mitochondrien nicht genug Energie produzieren oder warum dein Nervensystem nicht zur Ruhe kommt. Ergänzend messen wir die <strong>Herzratenvariabilität (HRV)</strong>, um den Funktionszustand deines Vagus-Nervs objektiv sichtbar zu machen.
+              Wir nutzen die <strong>Vollblut-Diagnostik</strong>, um die tatsächliche Sättigung deiner Zellen zu messen. Nur so finden wir heraus, warum deine Mitochondrien nicht genug Energie produzieren oder warum dein Nervensystem nicht zur Ruhe kommt. Ergänzend analysieren wir gezielt deinen <strong>Immunstatus und Nahrungsmittelintoleranzen</strong>, um chronische Entzündungsprozesse und autoimmune Überreaktionen an der Wurzel zu packen.
             </p>
           </div>
         </div>
@@ -65,7 +65,7 @@ export default function Labor() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left mb-24">
             {[
               { title: "Vollblut-Analyse", desc: "Präzise Messung der zellulären Sättigung von Zink, Magnesium, Selen und weiteren Co-Faktoren.", icon: <ActivitySquare className="w-8 h-8 text-accent" /> },
-              { title: "HRV & Vagus-Check", desc: "Objektive Messung deines Stresslevels und der Regulationsfähigkeit deines Nervensystems.", icon: <FlaskConical className="w-8 h-8 text-accent" /> },
+              { title: "Immunstatus & Intoleranzen", desc: "Umfassende Diagnostik von TH1/TH2-Balance, Allergenen (IgE, IgG, LTT), Fructose-/Laktoseintoleranz, MCAS & Lymphozytentypisierung.", icon: <ShieldCheck className="w-8 h-8 text-accent" /> },
               { title: "KyberStatus & Darm", desc: "Tiefenanalyse des Mikrobioms, Entzündungsmarker (Zonulin, Calprotectin) und SIBO-Diagnostik.", icon: <Dna className="w-8 h-8 text-accent" /> },
               { title: "Hormon-Mapping", desc: "Speichel-Diagnostik für freie Hormone (Östrogen, Progesteron, Cortisol) und Schilddrüsen-Full-Screening.", icon: <ShieldCheck className="w-8 h-8 text-accent" /> },
               { title: "OAT-Stoffwechseltest", desc: "Organische Säuren im Urin zeigen Blockaden im Citratzyklus (Zellenergie) und Neurotransmitter-Mängel.", icon: <ActivitySquare className="w-8 h-8 text-accent" /> },
@@ -96,7 +96,7 @@ export default function Labor() {
                 <div className="lg:w-1/3 bg-white/10 backdrop-blur-md p-10 rounded-[3rem] border border-white/20 text-center">
                    <h4 className="text-accent font-bold text-2xl mb-6">Partnerlabore</h4>
                    <p className="text-sm opacity-90 leading-relaxed italic text-white">
-                     Wir arbeiten mit führenden europäischen Speziallaboren wie Ganzimmun, Biovis und ImuPro zusammen, um modernste Testverfahren zu garantieren.
+                     Wir arbeiten mit führenden europäischen Speziallaboren wie Biovis, IMD Berlin, Enterosan und Ganzimmun zusammen, um modernste Testverfahren zu garantieren.
                    </p>
                 </div>
              </div>

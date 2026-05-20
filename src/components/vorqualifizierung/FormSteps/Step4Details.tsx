@@ -57,11 +57,10 @@ export default function Step3Details() {
           </div>
           
           <div className="space-y-4 relative z-10">
-            <Label className="text-sm font-bold text-primary opacity-60 uppercase">Aktuelle Schwangerschaftswoche</Label>
+            <Label className="text-sm font-bold text-primary opacity-60 uppercase">Errechneter Entbindungstermin</Label>
             <Input 
-              type="number" 
-              {...register("pregnancyWeek")} 
-              placeholder="z.B. 12" 
+              type="date" 
+              {...register("pregnancyDueDate")} 
               className="h-14 rounded-2xl bg-white border-primary/10"
             />
           </div>
@@ -69,7 +68,7 @@ export default function Step3Details() {
           <div className="space-y-4 relative z-10">
             <Label className="text-sm font-bold text-primary opacity-60 uppercase">Gewünschte Leistungen</Label>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {["Vorsorge", "Geburtsvorbereitung", "Nachsorge", "Kurs"].map((service) => (
+              {["Geburtsvorbereitung", "Nachsorge", "Kurs", "Hilfe bei Beschwerden", "Akupunktur", "Sonstiges"].map((service) => (
                 <div key={service} className="flex items-center space-x-2 bg-white/50 p-3 rounded-xl border border-primary/5">
                   <Checkbox 
                     id={service} 
@@ -111,7 +110,7 @@ export default function Step3Details() {
           <div className="space-y-4 relative z-10">
             <Label className="text-sm font-bold text-primary opacity-60 uppercase">Bisherige Behandlungen</Label>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {["Keine", "Hormonbehandlung", "Insemination", "IVF", "Andere"].map((treat) => (
+              {["Keine", "Hormonbehandlung", "Insemination", "IVF", "IVF/ICSI", "Andere"].map((treat) => (
                 <div key={treat} className="flex items-center space-x-2 bg-white/50 p-3 rounded-xl border border-primary/5">
                   <Checkbox 
                     id={treat} 

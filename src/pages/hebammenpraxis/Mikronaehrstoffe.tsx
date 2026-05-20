@@ -85,6 +85,71 @@ export default function Mikronaehrstoffe() {
         </div>
       </section>
 
+
+      {/* Paket Kompass-Start Section */}
+      <section className="py-24 bg-muted/20 border-t border-b border-border/50">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-16">
+            <span className="bg-primary/5 text-primary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">
+              Exklusiv-Angebot
+            </span>
+            <h2 className="text-3xl md:text-5xl font-serif text-primary mb-6">
+              Paket <span className="text-accent italic">„Kompass-Start“</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
+              Deine strukturierte und vollumfängliche Begleitung für den optimalen Vitalstoff-Status in Schwangerschaft oder Kinderwunschzeit.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-[3.5rem] border border-border shadow-xl overflow-hidden grid lg:grid-cols-[1.1fr_0.9fr] text-left">
+            <div className="p-10 lg:p-16 space-y-8 text-left">
+              <h3 className="text-3xl font-serif text-primary text-left">Inklusiv-Leistungen</h3>
+              <div className="grid gap-6">
+                {[
+                  { t: "Ausführliche Anamnese", d: "Detaillierte Erfassung deiner gesundheitlichen Vorgeschichte, Symptome und Ziele." },
+                  { t: "Fundierte Laborberatung", d: "Individuelle Beratung zur Auswahl der sinnvollsten Parameter (Vollblut, Hormone, etc.)." },
+                  { t: "Professionelle Blutabnahme", d: "Schonende und präzise Blutentnahme direkt bei uns in der Praxis." },
+                  { t: "Ganzheitliche Befundanalyse", d: "Tiefgehende Auswertung der Laborergebnisse und Erläuterung aller zellulären Zusammenhänge." },
+                  { t: "Schriftlicher Therapieplan", d: "Dein maßgeschneiderter Leitfaden für die gezielte Vitalstoff-Optimierung und Ernährung." }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4 text-left">
+                    <Check className="w-5 h-5 text-accent shrink-0 mt-1" />
+                    <div>
+                      <span className="font-bold text-primary block text-left">{item.t}</span>
+                      <span className="text-sm text-muted-foreground leading-relaxed block text-left">{item.d}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-primary text-white p-10 lg:p-16 flex flex-col justify-between relative overflow-hidden text-left">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-bl-[200px] -z-0" />
+              <div className="relative z-10 space-y-6 text-left">
+                <span className="bg-white/10 border border-white/20 text-[#fde4c8] text-[10px] uppercase font-bold tracking-widest px-4 py-1.5 rounded-full inline-block">
+                  Rundum-Sorglos-Paket
+                </span>
+                <h4 className="text-4xl font-serif font-bold text-white text-left">Kompass-Start</h4>
+                <p className="text-white/80 leading-relaxed text-sm font-medium text-left font-sans">
+                  Alles, was du für ein biochemisch optimales Umfeld deines Körpers benötigst, gebündelt in einem professionellen Diagnostik-Paket.
+                </p>
+                <div className="pt-6 border-t border-white/10 text-left">
+                  <span className="text-sm opacity-60 block text-left">Gesamtpreis</span>
+                  <span className="text-5xl font-serif font-bold text-accent block text-left">375,- €</span>
+                  <span className="text-xs opacity-60 block mt-2 text-left">* zzgl. anfallender Laborkosten des Partnerlabors</span>
+                </div>
+              </div>
+
+              <div className="relative z-10 pt-10">
+                <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-accent text-white w-full py-4 rounded-xl font-bold hover:bg-accent/90 transition-all flex items-center justify-center gap-2 shadow-lg shadow-accent/25">
+                  Paket anfragen <ArrowRight size={18} />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Case Studies / Insights */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">

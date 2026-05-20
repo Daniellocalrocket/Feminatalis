@@ -69,39 +69,42 @@ export default function Lasertherapie() {
             ))}
           </div>
 
-          {/* Haemo-Laser Spectral Section */}
+          {/* Haemo-Laser Red Spectrum Focus Section */}
           <div className="bg-primary text-white p-12 lg:p-20 rounded-[5rem] shadow-2xl relative overflow-hidden mb-24">
-             <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-accent/20 -mr-64 -mt-64 rounded-full blur-[100px] opacity-20"></div>
+             <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-red-600/10 -mr-64 -mt-64 rounded-full blur-[100px] opacity-35"></div>
+             <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-red-500/15 rounded-full blur-[120px] -z-0" />
              <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10 text-left">
                 <div className="space-y-8">
-                   <h2 className="text-3xl lg:text-5xl font-serif font-bold text-white leading-tight">Haemo-Laser: <br />Das Farbspektrum der Heilung</h2>
+                   <span className="bg-red-500/20 border border-red-500/40 text-red-200 text-xs font-bold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full inline-block">
+                     Exklusives Wirkprinzip: Rotspektrum (658 nm)
+                   </span>
+                   <h2 className="text-3xl lg:text-5xl font-serif font-bold text-white leading-tight">Haemo-Laser: <br />Die Kraft des roten Lichts</h2>
                    <p className="text-lg opacity-90 leading-relaxed font-medium">
-                     Durch die intravenöse Bestrahlung des Blutes erreichen wir jede Zelle deines Körpers. Je nach Indikation nutzen wir unterschiedliche Frequenzen:
+                     In unserer Praxis nutzen wir die intravenöse Haemo-Lasertherapie fokussiert mit dem **biologisch wirksamsten roten Frequenzbereich**. Diese hochenergetische Lichtqualität dringt tief in das zelluläre System ein und entfaltet direkt über die Blutbahn eine tiefgreifende systemische Wirkung.
                    </p>
-                   <div className="grid gap-4">
+                   <div className="grid gap-6">
                       {[
-                        { color: "Rot", effect: "Maximum an Zellenergie, Durchblutung & Herz-Kreislauf-Support.", bg: "bg-red-500" },
-                        { color: "Blau", effect: "Starke Entzündungshemmung, Keimbekämpfung & Stickoxid-Freisetzung.", bg: "bg-blue-500" },
-                        { color: "Gelb", effect: "Stoffwechsel-Aktivierung, Entgiftung & antidepressive Wirkung.", bg: "bg-yellow-400" },
-                        { color: "Grün", effect: "Optimierte Sauerstoffbindung & Regeneration der roten Blutkörperchen.", bg: "bg-green-500" }
-                      ].map((spec, i) => (
-                        <div key={i} className="flex items-center gap-6 bg-white/10 p-5 rounded-2xl border border-white/10 backdrop-blur-sm">
-                           <div className={`w-12 h-12 rounded-full ${spec.bg} shadow-lg shrink-0 border-2 border-white/20`}></div>
+                        { title: "Zellulärer Energie-Boost (ATP +150%)", effect: "Die Photonen des roten Lichts stimulieren direkt das Enzym Cytochrom-c-Oxidase in den Mitochondrien. Das Ergebnis ist eine dramatische Steigerung der zellulären Energieproduktion." },
+                        { title: "Optimierte Fließeigenschaften & Mikrozirkulation", effect: "Rotes Licht reduziert den sogenannten 'Geldrolleneffekt' (Zusammenkleben roter Blutkörperchen). Das Blut fließt spürbar leichter bis in die feinsten Endstrombahnen und Gewebeschichten." },
+                        { title: "Zellschutz & Entgiftungsaktivierung", effect: "Die Bestrahlung regt körpereigene Schutzsysteme wie die Superoxiddismutase (SOD) an. Freie Radikale werden effizienter neutralisiert und oxidative Prozesse gestoppt." }
+                      ].map((item, i) => (
+                        <div key={i} className="flex gap-4 bg-white/5 p-6 rounded-[2rem] border border-white/10 backdrop-blur-sm">
+                           <div className="w-4 h-4 rounded-full bg-red-500 shadow-[0_0_15px_rgba(239,68,68,0.8)] mt-1.5 shrink-0 animate-ping"></div>
                            <div>
-                              <span className="font-bold text-white block">{spec.color}-Laser</span>
-                              <span className="text-sm opacity-80">{spec.effect}</span>
+                              <h5 className="font-bold text-[#fde4c8] text-lg mb-1">{item.title}</h5>
+                              <p className="text-sm opacity-85 leading-relaxed font-medium">{item.effect}</p>
                            </div>
                         </div>
                       ))}
                    </div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-md p-12 rounded-[4rem] border border-white/20 text-center">
-                   <Sun className="text-accent w-20 h-20 mx-auto mb-8 animate-pulse" />
-                   <h3 className="text-2xl font-serif font-bold mb-6 text-white">Systemisches Biohacking</h3>
+                   <Sun className="text-red-400 w-20 h-20 mx-auto mb-8 animate-pulse filter drop-shadow-[0_0_10px_rgba(239,68,68,0.5)]" />
+                   <h3 className="text-2xl font-serif font-bold mb-6 text-white">Systemische Lichtdusche</h3>
                    <p className="text-lg opacity-80 mb-10 leading-relaxed italic">
-                      „Der Haemo-Laser ist wie eine interne Lichtdusche. Er macht das Blut fließfähiger, verbessert die Sauerstoffaufnahme und weckt die Lebensgeister – besonders effektiv bei Burnout und Long-Covid.“
+                      „Der Haemo-Laser wirkt wie eine energetische Lichttherapie direkt von innen. Er optimiert den Sauerstofftransport im Blut, stärkt die Abwehrkräfte und weckt die Lebenskräfte – besonders spürbar bei ausgeprägter chronischer Erschöpfung, Long-Covid und Erholungsdefiziten.“
                    </p>
-                   <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-white text-primary px-10 py-5 rounded-2xl font-bold hover:scale-105 transition-all shadow-xl">
+                   <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-white text-primary px-10 py-5 rounded-2xl font-bold hover:scale-105 hover:bg-red-500 hover:text-white transition-all shadow-xl">
                       Therapie anfragen
                    </Link>
                 </div>
