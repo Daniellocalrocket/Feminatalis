@@ -1,0 +1,271 @@
+{
+  "seo": {
+    "title": "Mitochondrien-Therapie & Zellmedizin Bad Schönborn | feminatalis",
+    "description": "Chronische Erschöpfung, Burnout & CFS an der Wurzel packen. Mitochondriale Medizin & zellulärer Nährstoffaufbau bei Angela Deschner. Jetzt informieren!"
+  },
+  "hero": {
+    "badge": "Therapeutischer Schwerpunkt von Angela Deschner",
+    "title": "Mitochondrien-Therapie:",
+    "titleAccent": "Die Urkraft deiner Zellen reaktivieren",
+    "subtitle": "Mitochondriale Medizin ist der Schlüssel zur nachhaltigen Genesung. Als mein absoluter Herzens- und Praxisschwerpunkt helfe ich dir, die Energieproduktion deines Körpers auf zellulärer Ebene tiefgehend zu analysieren, zu reinigen und systematisch wieder aufzubauen."
+  },
+  "bioFacts": {
+    "badge": "Wissenschaftliche Grundlagen",
+    "headline": "Kraftwerke des Lebens:",
+    "headlineAccent": "Die Biologie deiner Mitochondrien",
+    "intro": "Unser Körper ist ein biologisches Meisterwerk: Er besteht aus rund <strong>70 bis 80 Billionen Körperzellen</strong>, in denen jeweils ca. 100.000 perfekt koordinierte Stoffwechselreaktionen pro Sekunde ablaufen. Gesteuert und angetrieben wird dieses gewaltige System von winzigen, faszinierenden Zellorganellen – den <strong>Mitochondrien</strong>.",
+    "subHeadline": "Lebendige Symbionten mit eigener DNA",
+    "paragraphs": [
+      "Mitochondrien sind evolutionär betrachtet lebende Zellorganellen, die sich vor Jahrmillionen aus aeroben Bakterien heraus entwickelt haben (die sogenannte Endosymbiontentheorie). Sie besitzen bis heute ihre ganz eigene, mütterlicherseits vererbte DNA (mtDNA) und teilen sich unabhängig von unserer Zelle.",
+      "In nahezu jeder menschlichen Zelle leben <strong>1.500 bis 6.500 Mitochondrien</strong> (ausgenommen rote Blutkörperchen). Den absoluten Rekord hält übrigens die <strong>weibliche Eizelle mit bis zu 400.000 Mitochondrien</strong> – ein deutliches Zeichen dafür, wie essenziell zelluläre Energie für die Entstehung von neuem Leben ist."
+    ],
+    "info": "<strong>Der zelluläre Sparmodus (Gärung):</strong> Bei mitochondrialen Störungen wird die Energie (ATP) nicht mehr mit Hilfe von Sauerstoff (aerobe Endoxidation) synthetisiert. Die Zelle schaltet gezwungenermaßen auf einen ineffizienten <strong>Vergärungsprozess von Blutzucker außerhalb der Mitochondrien (anaerobe Gärung)</strong> um. Dadurch sinkt die Zellleistung dramatisch, Organe geraten in Energiemangel und ein unerwünschter Zellteilungszyklus (Gärungsstoffwechsel nach Warburg) kann aktiviert werden.",
+    "cards": [
+      {
+        "icon": "Zap",
+        "title": "70-80 Billionen Zellen",
+        "text": "Jede Sekunde laufen in jeder Zelle rund 100.000 koordinierte biochemische Reaktionen ab."
+      },
+      {
+        "icon": "Dna",
+        "title": "Eigene bakterielle DNA",
+        "text": "Hochgradig empfindlich gegenüber Toxinen, da sie keinen schützenden Histon-Mantel besitzt."
+      },
+      {
+        "icon": "Sparkles",
+        "title": "Lichtquanten-Organe",
+        "text": "Mitochondrien absorbieren und senden Photonen. Unsere Zellkommunikation läuft mit Lichtgeschwindigkeit."
+      },
+      {
+        "icon": "Activity",
+        "title": "Bis zu 400.000 / Eizelle",
+        "text": "Die Eizelle benötigt astronomische Mengen an Energie zur Steuerung der frühen Zellteilung."
+      }
+    ],
+    "threePillarsTitle": "Die drei goldenen Säulen gesunder Zellen",
+    "threePillars": [
+      {
+        "step": "01",
+        "title": "Mikronährstoff-Fülle",
+        "desc": "Mitochondrien benötigen für ihre Atmungskette rund 45 essenzielle Vitalstoffe (Coenzym Q10, Vitamine, Spurenelemente), um ATP reibungslos zu synthetisieren."
+      },
+      {
+        "step": "02",
+        "title": "Toxin-Ausleitung",
+        "desc": "Blockierende Umweltgifte, Schwermetalle und zelluläre Ablagerungen müssen systematisch ausgeleitet werden, damit die Transportkomplexe wieder frei arbeiten können."
+      },
+      {
+        "step": "03",
+        "title": "Zellulärer Schutz",
+        "desc": "Schädigende Faktoren (Elektrosmog, chronischer Stress, Entzündungen) müssen minimiert werden, um die empfindliche Zell-DNA dauerhaft zu schützen."
+      }
+    ]
+  },
+  "stressors": {
+    "badge": "Gefahrenanalyse",
+    "headline": "Was schadet unseren Kraftwerken?",
+    "subtitle": "Mitochondrien besitzen keinen schützenden Eiweißmantel (Histone) um ihre DNA. Dadurch sind sie schädigenden Umwelteinflüssen und zellulärem Stress schutzlos ausgeliefert.",
+    "categories": [
+      {
+        "category": "Medikamente & Blockaden",
+        "items": [
+          "Antibiotika & Chemotherapeutika",
+          "Statine (blockieren die körpereigene Q10-Synthese)",
+          "Säureblocker (Protonenpumpeninhibitoren)",
+          "Schmerzmittel & Entzündungshemmer",
+          "Betablocker & Antidiabetika"
+        ]
+      },
+      {
+        "category": "Umweltgifte & Toxine",
+        "items": [
+          "Toxische Metalle (Blei, Quecksilber, Cadmium, Aluminium)",
+          "Pestizide, Herbizide (z.B. Glyphosat) & Fungizide",
+          "Holzschutzmittel & Tenside in Waschmitteln",
+          "Genussmittel wie Alkohol und Nicotin"
+        ]
+      },
+      {
+        "category": "Biologische & Physische Belastungen",
+        "items": [
+          "Chronische Viren (EBV, CMV), Bakterien & Parasiten",
+          "Schwere Traumata der Halswirbelsäule (Kuklinski-Effekt)",
+          "Extremer Leistungssport (ohne Nährstoff-Ausgleich)",
+          "Kohlenhydratreiche Ernährung & Mangelernährung"
+        ]
+      },
+      {
+        "category": "Physikalische Felder",
+        "items": [
+          "Elektrosmog (Mikrowellen, Induktionsherde)",
+          "Mobilfunkstrahlung (WLAN, Handys, LTE, 5G)",
+          "Geopathische Störungen (Wasseradern, Erdverwerfungen)",
+          "Magnetische Wechselfelder & künstliche Strahlungen"
+        ]
+      },
+      {
+        "category": "Psychischer Stress",
+        "items": [
+          "Chronischer Zeitdruck & emotionaler Stress",
+          "Dauerhafte Aktivierung der Stressachse (Nebenniere)",
+          "Lichtmangel (Mitochondrien benötigen Biophotonen)",
+          "Schlafstörungen & blockierte nächtliche Regeneration"
+        ]
+      }
+    ],
+    "ctaBox": {
+      "headline": "Erkennst du dich wieder?",
+      "text": "Viele Patienten leiden unter einer schleichenden Zerstörung ihrer Mitochondrien, ohne es zu wissen. Der Körper schaltet in den Sparmodus, was zu chronischer Erschöpfung führt.",
+      "btnText": "Labordiagnostik ansehen"
+    },
+    "oxidativ": {
+      "title": "Oxidativer Stress: Das Rostproblem der Zelle",
+      "text": "Als oxidativer Stress wird ein zelluläres Ungleichgewicht zwischen freien Radikalen (reaktiven Sauerstoffspezies, ROS) und körpereigenen Antioxidantien bezeichnet. Freie Radikale greifen Zellwände und Enzyme an – der Körper „rostet“ von innen.",
+      "badgeHeadline": "Die wichtigsten zellulären Antioxidantien:",
+      "antioxidants": [
+        "Coenzym Q10",
+        "Glutathion",
+        "Vitamin C",
+        "Vitamin D3",
+        "Vitamin E",
+        "L-Carnitin",
+        "Alpha-Liponsäure"
+      ]
+    },
+    "nitrosativ": {
+      "title": "Nitrosativer Stress: Der Supergau für die DNA",
+      "text": "Nitrosativer Stress entsteht durch eine Überproduktion von Stickstoffmonoxid (NO) und dessen Reaktion mit Superoxid zu <strong>Peroxynitrit</strong>. Dieses Superradikal besitzt ein verheerendes Zerstörungspotenzial: Es blockiert biochemisch die Proteinkomplexe der Atmungskette und schädigt direkt die mitochondriale DNA.",
+      "info": "<strong>HWS-Instabilität als Auslöser:</strong> Nach Unfällen oder Schleudertraumata der Halswirbelsäule kann eine dauerhafte mechanische Reizung der HWS-Nerven zu chronischem nitrosativem Stress führen, was oft die biochemische Ursache für schwerstes CFS darstellt."
+    }
+  },
+  "diagnostics": {
+    "badge": "Präzisionsmedizin im Speziallabor",
+    "headline": "Mitochondriale Fehlfunktion sichtbar machen",
+    "subtitle": "Mitochondriale Schäden und zellulärer Stress sind kein vages Bauchgefühl – wir können sie mit modernster Spezial-Labordiagnostik anhand einer einfachen Blutprobe schwarz auf weiß belegen. Nur so können wir deine Therapie exakt auf deine biochemischen Bedürfnisse zuschneiden.",
+    "reportTitle": "Laborbefund: Mitochondriale Aktivität (BHI)",
+    "reportFootnote": "* Echter Befund aus unserer Partner-Labordiagnostik (Biovis)",
+    "explanationTitle": "Diagnostische Biomarker im Fokus",
+    "explanationText": "Der oben dargestellte Befund verdeutlicht eindrucksvoll die biochemischen Verschiebungen bei einer ausgeprägten mitochondrialen Dysfunktion:",
+    "biomarkers": [
+      {
+        "title": "Bio-Health-Index (BHI Plus) von 1,47",
+        "desc": "Der BHI ist der globale Indikator für deine bioenergetische Zellgesundheit. Normalwerte liegen über 2,20. Ein Wert von 1,47 (Zone D, tiefblau) signalisiert eine hochgradig kritische Einschränkung der zellulären Regenerationsfähigkeit.",
+        "crit": true
+      },
+      {
+        "title": "Massiv erhöhtes Lactat (2570 µmol/l)",
+        "desc": "Normalwerte liegen unter 1528. Ein so drastisch erhöhter Lactatwert im Blut beweist, dass die Zelle gezwungen ist, Energie durch unvollständige Zuckervergärung außerhalb der Mitochondrien zu gewinnen – der aerobe Stoffwechselweg ist blockiert.",
+        "crit": true
+      },
+      {
+        "title": "Lactat/Pyruvat-Quotient von 27,5",
+        "desc": "Ein Wert weit über der Norm (< 12,9) ist der absolute biochemische Beleg für ein Sauerstoffdefizit auf Zellebene (Blockierung der Elektronentransportkette).",
+        "crit": true
+      },
+      {
+        "title": "Erhöhtes Protonenleck (2,03 pmol/min)",
+        "desc": "Normal ist < 1,6. Dies zeigt, dass die innere Mitochondrienmembran beschädigt und 'undicht' ist. Die Protonen fließen ungenutzt zurück, wodurch wertvoller Sauerstoff ohne ATP-Erzeugung verpufft.",
+        "crit": false
+      },
+      {
+        "title": "Massiv reduzierte Reserveatmung (37,63)",
+        "desc": "Sollte über 78 liegen. Die zelluläre Kapazität, unter Stress oder körperlicher Belastung zusätzliche Energie bereitzustellen, ist um mehr als die Hälfte eingebrochen. Betroffene klagen über sofortige Erschöpfung bei kleinster Anstrengung (Crash / PEM).",
+        "crit": true
+      }
+    ]
+  },
+  "diseaseSpectrum": {
+    "badge": "Mitochondriale Systemerkrankung",
+    "headline": "Mitochondrial bedingte Gesundheitsstörungen",
+    "subtitle": "Da Mitochondrien in fast jeder Zelle unseres Körpers leben, zieht ein Energiemangel (ATP-Defizit) das gesamte System in Mitleidenschaft. Eine dauerhafte Funktionsstörung kann schwerwiegende klinische Krankheitsbilder begünstigen:",
+    "accordion": [
+      {
+        "id": "exhaustion",
+        "title": "Chronische Erschöpfung & Burnout (CFS)",
+        "icon": "BatteryLow",
+        "content": "Das Chronic Fatigue Syndrome (CFS) und Burnout-Zustände sind das Leitsymptom eines zellulären Energiemangels. Wenn die biologische ATP-Synthese blockiert ist, verliert der gesamte Organismus seine Vitalität, Regenerationsfähigkeit und mentale Belastbarkeit."
+      },
+      {
+        "id": "cardio",
+        "title": "Herz-Kreislauf & Durchblutungsstörungen",
+        "icon": "HeartPulse",
+        "content": "Der Herzmuskel besitzt mit ca. 40 % Gewichtsanteil die höchste Mitochondriendichte. Ein mitochondrialer Energiemangel führt direkt zu Kontraktionsschwäche, erhöhtem Blutdruck, Herzrhythmusstörungen (Antiarrhythmika schädigen oft Mitochondrien weiter), Schlaganfällen oder pAVK."
+      },
+      {
+        "id": "digestive",
+        "title": "Erkrankungen der Verdauungsorgane",
+        "icon": "Layers",
+        "content": "Die Darmschleimhaut erneuert sich alle 3 bis 5 Tage und benötigt dafür enorme Mengen ATP. Energiemangel führt zu chronischen Darmentzündungen (Colitis ulcerosa, Morbus Crohn), Reizdarmsyndrom, Leaky-Gut-Syndrom (durchlässige Darmwand), Bauchspeicheldrüsenentzündungen (Pankreatitis) und Fettleber."
+      },
+      {
+        "id": "neuro",
+        "title": "Neurologische & neurodegenerative Erkrankungen",
+        "icon": "Brain",
+        "content": "Unser Gehirn verbraucht rund 20 % unserer gesamten Stoffwechselenergie. Mitochondriale Dysfunktionen begünstigen Erkrankungen der Nerven wie Depressionen, Multiple Sklerose (MS), ALS sowie Alterserkrankungen wie Demenz, Alzheimer und Parkinson."
+      },
+      {
+        "id": "immune",
+        "title": "Immunsystem & Autoimmunerkrankungen",
+        "icon": "ShieldCheck",
+        "content": "Abwehrzellen benötigen zur Abwehr von Viren, Bakterien und Pilzen blitzschnell astronomische Mengen ATP. Fehlt diese Energie, kommt es zu rezidivierenden Infekten, Allergien oder Fehlsteuerungen des Immunsystems, die in Autoimmunerkrankungen münden."
+      },
+      {
+        "id": "tumor",
+        "title": "Tumorerkrankungen & Krebswachstum",
+        "icon": "AlertTriangle",
+        "content": "Bereits 1924 wies Nobelpreisträger Otto Warburg nach, dass Krebszellen ihren Stoffwechsel von der sauerstoffabhängigen Atmung in den Mitochondrien auf eine sauerstoffunabhängige Vergärung von Zucker im Zytoplasma umstellen. Mitochondriale Gesundheit ist somit eine der wichtigsten Säulen der Krebsprävention und biologischen Krebstherapie."
+      }
+    ]
+  },
+  "treatment": {
+    "badge": "Dein Weg zu neuer Kraft",
+    "headline": "Ursächliche Zelltherapie",
+    "headlineAccent": "in meiner Naturheilpraxis",
+    "description": "In meiner Praxis betrachten wir dich nicht als Summe von Symptomen, sondern blicken tief auf die zelluläre Ebene deines Stoffwechsels. Auf Basis einer präzisen Spezial-Labordiagnostik erstellen wir deinen maßgeschneiderten Therapieplan, um die mitochondriale Funktion nachhaltig zu regenerieren.",
+    "list": [
+      "Präzise Mitochondrien- & nitrosativer Stress-Diagnostik per Blutprobe",
+      "Gezielte, laborbasierte Zufuhr der ca. 45 essenziellen Mikronährstoffe",
+      "Schwermetallausleitung & Entgiftung blockierter Enzymkomplexe",
+      "Mitochondriale Membrantherapie zum Schutz der Mitochondrien-DNA",
+      "Individuelle Ernährungsberatung zur Umstellung auf Fettverbrennung"
+    ],
+    "stats": [
+      { "val": "45+", "desc": "Essenziellste Nährstoffe für die Atmungskette" },
+      { "val": "122 ATP", "desc": "pro Fettsäure-Molekül (Vergleich: nur 28 pro Glucose)" },
+      { "val": "1,47 BHI", "desc": "Ab diesem kritischen Index leidet der gesamte Körper" },
+      { "val": "100%", "desc": "Ursächliche & individuelle Nährstofftherapie" }
+    ]
+  },
+  "educational": {
+    "badge": "Wissensdatenbank",
+    "headline": "Für ganz Neugierige",
+    "subtitle": "Möchtest du die faszinierenden biochemischen Vorgänge in deinen Zellen noch besser verstehen? Wir haben vier hervorragende kurze Lehrfilme zusammengestellt, die dir das Fundament unserer Arbeit anschaulich erklären.",
+    "boxTitle": "Empfohlene biochemische Lehrfilme",
+    "films": [
+      {
+        "title": "1. Was sind Mitochondrien?",
+        "desc": "Verstehe den Aufbau der lebenden Zellorganellen, ihre bakterielle Herkunft, die Doppelmembran und wie sie als biologische Kraftwerke all unsere Lebensfunktionen steuern.",
+        "link": "https://www.youtube.com/results?search_query=was+sind+mitochondrien+lehrfilm",
+        "duration": "ca. 5 Minuten"
+      },
+      {
+        "title": "2. Was ist ATP?",
+        "desc": "Adenosintriphosphat is die absolute Universalwährung unseres Körpers. Lerne, wie ATP Energie speichert, biochemische Befehle transportiert und wieso wir ohne ATP in Sekundenschnelle handlungsunfähig wären.",
+        "link": "https://www.youtube.com/results?search_query=was+ist+atp+lehrfilm",
+        "duration": "ca. 4 Minuten"
+      },
+      {
+        "title": "3. Was ist der Citratzyklus?",
+        "desc": "Der Krebs-Zyklus ist das biochemische Drehkreuz unseres Stoffwechsels. Erfahre, wie Kohlenhydrate, Fette und Proteine schrittweise zerlegt werden, um Wasserstoffatome für die Energiegewinnung zu ernten.",
+        "link": "https://www.youtube.com/results?search_query=was+ist+citratzyklus+lehrfilm",
+        "duration": "ca. 6 Minuten"
+      },
+      {
+        "title": "4. Was ist die Atmungskette?",
+        "desc": "Auf der inneren Mitochondrienmembran läuft die Endoxidation ab. Siehe, wie 5 Proteinkomplexe Elektronen kontrolliert auf Sauerstoff übertragen, um eine Knallgasreaktion zu verhindern und massenhaft ATP zu generieren.",
+        "link": "https://www.youtube.com/results?search_query=was+ist+atmungskette+lehrfilm",
+        "duration": "ca. 7 Minuten"
+      }
+    ]
+  }
+}

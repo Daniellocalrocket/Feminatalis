@@ -61,6 +61,18 @@ const anwendungen = [
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div className="space-y-8">
               <h2 className="text-4xl font-serif text-primary mb-8 leading-tight">Von den Ama-Taucherinnen lernen</h2>
+              
+              <div className="relative overflow-hidden rounded-[2.5rem] shadow-xl group border border-accent/10">
+                <img 
+                  src="/ama-divers.jpg" 
+                  alt="Japanische Ama-Taucherinnen am Meer" 
+                  className="w-full aspect-[16/9] object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6 pointer-events-none">
+                  <p className="text-white text-sm font-medium tracking-wide">Traditionelle japanische Ama-Taucherinnen am Meer</p>
+                </div>
+              </div>
+
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
                   Hast du schon von den japanischen <strong>Ama-Taucherinnen</strong> gehört? Diese Frauen tauchen ohne Atemgerät bis zu 20 Meter tief. Faszinierend ist: Bei ihren Kindern kommt es unter der Geburt so gut wie nie zu Sauerstoffmangel. Sie haben leichtere Geburten und ihre Kinder sind durchschnittlich fitter. 
