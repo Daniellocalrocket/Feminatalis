@@ -16,7 +16,7 @@ export default function Contact() {
     <div className="min-h-screen bg-[#fff9f2]">
       <SEO 
         title="Kontakt & Terminbuchung | Feminatalis"
-        description="Wähle deinen Weg zu uns. Buche ein kostenfreies Eignungs-Telefonat oder frage dein Hebammenvorgespräch an."
+        description="Wähle deinen Weg zu uns. Buche ein kostenfreies Eignungs-Telefonat für die Naturheilpraxis oder frage dein Hebammenvorgespräch an."
       />
 
       {/* Hero Section */}
@@ -63,7 +63,7 @@ export default function Contact() {
                 <CardContent className="p-8 md:p-12">
                   <h3 className="text-2xl md:text-3xl font-serif text-primary mb-4 text-center">Naturheilpraxis</h3>
                   <p className="text-muted-foreground text-center mb-10 leading-relaxed min-h-[3rem]">
-                    Termine für kostenfreie 20-minütige Eignungs-Telefonate oder Hebammenvorgespräche in der Praxis kannst du bequem direkt online buchen.
+                    Termine für kostenfreie 20-minütige Eignungs-Telefonate kannst du bequem direkt online buchen.
                   </p>
                   
                   <div className="space-y-4">
@@ -155,25 +155,30 @@ export default function Contact() {
             <p className="text-muted-foreground font-medium italic">Qualität erfordert Zeit und die richtige Entscheidung auf beiden Seiten.</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 relative">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
             {/* Steps line for desktop */}
-            <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-primary/10 -translate-y-1/2 -z-0" />
+            <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-primary/10 -translate-y-1/2 -z-0" />
             
             {[
               { 
                 step: "01", 
-                title: "Vor-Analyse", 
-                desc: "Fülle unseren Online-Check aus. So erhalte ich ein erstes Bild deiner Situation und wir sparen wertvolle Zeit im Telefonat." 
+                title: "Kostenloses telefonisches Vorgespräch (ca. 15 Min.)", 
+                desc: "Erster gegenseitiger Austausch, um eine Übersicht über deine Situation zu erhalten und offene Fragen zu klären." 
               },
               { 
                 step: "02", 
-                title: "Eignungs-Check", 
-                desc: "Wir sprechen ca. 20 Min. kostenfrei am Telefon. Wir klären Erwartungen, Möglichkeiten und ob die Chemie stimmt." 
+                title: "Kostenloses Erstgespräch in der Praxis (ca. 30–45 Min.)", 
+                desc: "Orientierungsgespräch vor Ort. Wir lernen uns persönlich kennen, bauen Vertrauen auf und schließen den Behandlungsvertrag." 
               },
               { 
                 step: "03", 
-                title: "Erstanamnese", 
-                desc: "Nach positivem Telefonat vereinbaren wir deinen Termin in der Praxis für die tiefe medizinische Analyse und Behandlung." 
+                title: "Anamnesetermin", 
+                desc: "Tiefgründiges Faktensammeln, Analyse von Befunden und Erfassung aller gesundheitlichen Meilensteine als Fundament für den Behandlungsplan." 
+              },
+              { 
+                step: "04", 
+                title: "Individueller Therapievorschlag & transparentes Angebot", 
+                desc: "Konkrete Ausarbeitung der Begleitung und Behandlung. Hier besprechen wir den maßgeschneiderten Therapieplan sowie alle anfallenden finanziellen Details absolut transparent." 
               }
             ].map((item, idx) => (
               <motion.div 
@@ -182,13 +187,15 @@ export default function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-white p-8 rounded-[2.5rem] shadow-sm border border-border relative z-10 text-center"
+                className="bg-white p-6 rounded-[2.5rem] shadow-sm border border-border relative z-10 text-center flex flex-col justify-between"
               >
-                <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold mx-auto mb-6 shadow-lg shadow-primary/20">
-                  {item.step}
+                <div>
+                  <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold mx-auto mb-6 shadow-lg shadow-primary/20">
+                    {item.step}
+                  </div>
+                  <h4 className="text-lg font-bold text-primary mb-4 font-serif min-h-[3rem] flex items-center justify-center">{item.title}</h4>
                 </div>
-                <h4 className="text-xl font-bold text-primary mb-4 font-serif">{item.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed font-medium">
+                <p className="text-xs text-muted-foreground leading-relaxed font-medium">
                   {item.desc}
                 </p>
               </motion.div>
@@ -243,28 +250,15 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="w-full h-[500px] relative overflow-hidden bg-orange-50/30 border-t border-border">
-        <a
-          href="https://www.google.com/maps/search/?api=1&query=Hebelstr.+3A,+76669+Bad-Sch%C3%B6nborn"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="absolute inset-0 flex items-center justify-center group"
-          aria-label="Praxis auf Google Maps öffnen"
-        >
-          <div className="text-center space-y-6 px-4 z-10">
-            <div className="w-20 h-20 rounded-full bg-white shadow-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-500">
-              <MapPin className="h-8 w-8 text-primary" />
-            </div>
-            <div className="bg-white/80 backdrop-blur-md p-6 rounded-[2rem] shadow-xl border border-white">
-              <p className="text-xl font-serif text-primary font-bold mb-1">
-                Feminatalis Praxis
-              </p>
-              <p className="text-muted-foreground flex items-center justify-center gap-2">
-                <ExternalLink size={16} /> Auf Google Maps anzeigen
-              </p>
-            </div>
-          </div>
-        </a>
+      <section className="w-full h-[500px] relative overflow-hidden border-t border-border bg-orange-50/30">
+        <iframe
+          title="Feminatalis Praxis Hebelstr. 3A Bad Schönborn"
+          src="https://maps.google.com/maps?q=Hebelstr.%203A,%2076669%20Bad%20Sch%C3%B6nborn&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          className="w-full h-full border-0 absolute inset-0"
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </section>
     </div>
   );

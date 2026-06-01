@@ -27,13 +27,13 @@ export default function Kinderwunsch() {
       <SplitScreenHero
         badge="Projekt Glückskind"
         title={<>Wunschkind-Reise: <br /><span className="text-accent italic font-light">Den Boden bereiten</span></>}
-        subtitle="Ein neues Leben ist ein Wunder, das Kraft braucht. Wir kombinieren tiefes Hebammenwissen mit modernster Zellbiologie, um deinen Körper – und den deines Partners – optimal auf die Empfängnis vorzubereiten."
+        subtitle="Wir kombinieren tiefes Wissen der Zellbiologie, Naturheilkunde und funktionellen Medizin mit der Hebammenexpertise, um deinen Körper und Psyche optimal auf die Empfängnis vorzubereiten."
         imageSrc="https://images.unsplash.com/photo-1519689680058-324335c77eba?q=80&w=2070&auto=format&fit=crop"
         imageAlt="Kinderwunsch Begleitung"
         imageKey="img_hero_kinderwunsch"
       >
         <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
-          Dein Projekt starten <ArrowRight size={20} />
+          Projekt Glückskind starten <ArrowRight size={20} />
         </Link>
       </SplitScreenHero>
 

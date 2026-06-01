@@ -15,14 +15,16 @@ export default function UeberMich() {
     { year: "1992-1995", title: "St. Petersburg (Russland)", desc: "Wochenstation eines großen Geburtshauses." },
     { year: "1996-2004", title: "Klinik & Belegsystem", desc: "Städtisches Klinikum Pforzheim, Kreiskrankenhaus Calw & Rechbergklinik Bretten." },
     { year: "2001-2013", title: "Eigene Haus-Praxis", desc: "Freiberufliche Hebammentätigkeit in Wiesental." },
+    { year: "2010", title: "Medial-sensitive Lebensberaterin", desc: "Sensitive Lebensberatung und ganzheitliche Lebensbegleitung." },
     { year: "2013", title: "Master of Acupuncture", desc: "Prüfung und Spezialisierung im Bereich TCM." },
     { year: "2015", title: "Gründung feminatalis", desc: "Eröffnung der Hebammen-Praxis in Kirrlach." },
-    { year: "2016", title: "Heilpraktikerin", desc: "Amtsärztliche Prüfung und Gründung der kombinierten Hebammen- & Naturheilpraxis in Bad Schönborn." },
+    { year: "2016", title: "Gründung Hebammen- und Naturheilpraxis feminatalis in Bad Schönborn", desc: "Heilpraktikerin (amtsärztliche Prüfung) und Zusammenführung der kombinierten Praxis." },
     { year: "2019-2020", title: "Vitalstoffe & Metavital", desc: "Prüfung zur Vitalstoffberaterin und Ausbildung in Metavital-Diagnostik." },
     { year: "2021-2022", title: "Mitochondriale Medizin & Post-Covid", desc: "Spezialisierung auf Mikrobiom, IHHT und Long-Covid-Syndrome." },
     { year: "2023", title: "Chelat-Therapie & Hormone", desc: "Ausbildung zur Chelat-Therapeutin (DACT), Fortbildungen zur Labordiagnostik." },
     { year: "2024", title: "Ästhetik & Drip-Spa", desc: "Fachfortbildung zur Ästhetik-Therapeutin, Spezialisierung auf Infusionen und IHHT (IGAF e.V.)." },
-
+    { year: "2025", title: "Gründung \"cosmedea\" Naturheilpraxis für Ästhetik, Anti-Aging & Wellness", desc: "Gründung der Zweitpraxis für Ästhetik, Anti-Aging & Wellness." },
+    { year: "2026", title: "Bioenergo-Therapeutin nach Putschko (RU)", desc: "Online-Ausbildung, Quantenmethode Biolokation." }
   ];
 
   return (
@@ -41,7 +43,7 @@ export default function UeberMich() {
           "knowsAbout": [
             "Funktionelle Medizin",
             "Mitochondriale Medizin",
-            "Hebammenkunst",
+            "Hebammenexpertise",
             "Kinderwunschbegleitung",
             "Hormontherapie",
             "TCM & Akupunktur",
@@ -71,7 +73,7 @@ export default function UeberMich() {
                 "Ich bin ein geistiges schöpferisches Wesen, das eine menschliche Erfahrung macht – so wie du auch!"
               </p>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Als Gründerin der feminatalis Praxis vereine ich die intuitive, tief verwurzelte Hebammenkunst mit der messbaren, biochemischen Ursachenforschung der modernen funktionellen Medizin. 
+                Als Gründerin der feminatalis Praxis vereine ich die intuitive, tief verwurzelte Hebammenexpertise mit der messbaren, biochemischen Ursachenforschung der modernen funktionellen Medizin. 
               </p>
             </div>
             
@@ -121,7 +123,7 @@ export default function UeberMich() {
                 Schon früh wurde mir die Verbundenheit zur Natur in die Wiege gelegt. Eine meiner Großmütter war eine Kräuterkundige, und auch von meiner Mutter durfte ich tiefgreifendes Wissen über die Heilkraft der Pflanzen lernen. Zu meinen Sprachkenntnissen gehören heute Deutsch und Russisch.
               </p>
               <p>
-                Meinen Sohn Eduard habe ich 1992 und meine Tochter 2004 aus eigener Kraft geboren. Ich lebe in einer festen langjährigen Beziehung und achte konsequent auf eine gesunde Ernährung und Lebensweise. In meinem großen Garten baue ich viel Gemüse, Kräuter und Obst selbst an. Ich lese gerne, bilde mich unermüdlich fort, tanze, koche und male.
+                Meinen Sohn habe ich 1992 und meine Tochter 2004 aus eigener Kraft geboren. Ich lebe in einer festen langjährigen Beziehung und achte konsequent auf eine gesunde Ernährung und Lebensweise. In meinem großen Garten baue ich viel Gemüse, Kräuter und Obst selbst an. Ich lese gerne, bilde mich unermüdlich fort, tanze, koche und male.
               </p>
               <div className="bg-primary/5 p-8 rounded-[2rem] border border-primary/10 mt-8 text-primary">
                 <p className="font-serif text-xl italic mb-4">
@@ -146,12 +148,12 @@ export default function UeberMich() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: <ShieldCheck className="text-accent w-8 h-8"/>, title: "Staatl. geprüfte Hebamme", desc: "Seit 1992. 10 Jahre Kreißsaalarbeit, über 500 begleitete Geburten. Fachliche Schulung in St. Petersburg." },
-              { icon: <Award className="text-primary w-8 h-8"/>, title: "Heilpraktikerin", desc: "Amtsärztlich geprüft (2016). Ganzheitliche Ursachenforschung und funktionelle Medizin." },
-              { icon: <Sparkles className="text-accent w-8 h-8"/>, title: "Mitochondriale Medizin", desc: "Zertifizierte IHHT-Therapeutin (IGAF e.V.) und geprüfte Vitalstoffberaterin." },
-              { icon: <Star className="text-primary w-8 h-8"/>, title: "Master of Acupuncture", desc: "Fundierte Ausbildung (2013), speziell für Frauenheilkunde und Kinderwunsch." },
+              { icon: <CheckCircle2 className="text-accent w-8 h-8"/>, title: "Staatl. geprüfte Hebamme", desc: "Seit 1992. 10 Jahre Kreißsaalarbeit, über 500 begleitete Geburten. Fachliche Schulung in St. Petersburg." },
+              { icon: <CheckCircle2 className="text-accent w-8 h-8"/>, title: "Heilpraktikerin", desc: "Amtsärztlich geprüft (2016). Ganzheitliche Ursachenforschung und funktionelle Medizin." },
+              { icon: <CheckCircle2 className="text-accent w-8 h-8"/>, title: "Mitochondriale Medizin", desc: "Zertifizierte IHHT-Therapeutin (IGAF e.V.) und geprüfte Vitalstoffberaterin." },
+              { icon: <CheckCircle2 className="text-accent w-8 h-8"/>, title: "Master of Acupuncture", desc: "Fundierte Ausbildung (2013), speziell für Frauenheilkunde und Kinderwunsch." },
               { icon: <CheckCircle2 className="text-accent w-8 h-8"/>, title: "Chelat-Therapeutin", desc: "Ausbildung bei der DACT (2023). Spezialisiert auf Schwermetallausleitung und Entgiftung." },
-              { icon: <Heart className="text-primary w-8 h-8"/>, title: "Ästhetik & Anti-Aging", desc: "Fachfortbildung zur Ästhetik-Therapeutin (2024). Natürliche Konzepte für Ausstrahlung und Wellness." },
+              { icon: <CheckCircle2 className="text-accent w-8 h-8"/>, title: "Ästhetik & Anti-Aging", desc: "Fachfortbildung zur Ästhetik-Therapeutin (2024). Natürliche Konzepte für Ausstrahlung und Wellness." },
             ].map((q, i) => (
               <div key={i} className="bg-white p-8 rounded-[2rem] shadow-sm border border-border hover:border-accent/30 transition-all group">
                 <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">

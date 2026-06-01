@@ -18,7 +18,7 @@ export default function Infusionstherapie() {
       <SplitScreenHero
         badge="Medizinische Nährstoff-Infusionen"
         title={<>Vitalität ohne Umwege: <br /><span className="text-accent italic font-light">Die Infusionstherapie</span></>}
-        subtitle="Vergiss den Flaschenhals des Darms. Mit unseren laborbasierten medizinischen Infusionen bringen wir hochdosierte Vitamine, Aminosäuren und Antioxidantien direkt dorthin, wo sie wirken müssen: in deinen systemischen Kreislauf. 100% Bioverfügbarkeit für maximale Regeneration."
+        subtitle=""
         imageSrc="https://images.unsplash.com/photo-1516670428252-df97bba108d1?q=80&w=2070&auto=format&fit=crop"
         imageAlt="Infusionstherapie und Vitalstoffe"
         imageKey="img_hero_infusionstherapie"
@@ -148,7 +148,7 @@ export default function Infusionstherapie() {
                 title: "Abwehr & Immunmodulation",
                 items: [
                   "Chronische Infektanfälligkeit",
-                  "Akute virale / bakterielle Infekte",
+                  "Reaktivierung von Viren & Bakterien (Epstein-Barr, Herpes, Borrelien...)",
                   "Allergien, Heuschnupfen & Asthma",
                   "Chronisch-stille Entzündungen",
                   "Postoperative Wundheilung"
@@ -197,37 +197,6 @@ export default function Infusionstherapie() {
         </div>
       </section>
 
-      {/* Critical Medical Warning: KEIN ZINK */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="bg-red-500/5 border-2 border-red-500/20 p-10 lg:p-14 rounded-[3.5rem] shadow-lg relative overflow-hidden text-left">
-            <div className="absolute top-0 right-0 w-48 h-48 bg-red-500/10 rounded-bl-[150px] -z-0"></div>
-            <div className="flex flex-col md:flex-row gap-8 items-start relative z-10 text-left">
-              <div className="w-16 h-16 rounded-2xl bg-red-500/10 flex items-center justify-center text-red-500 shrink-0 mt-1">
-                <AlertOctagon size={32} />
-              </div>
-              <div className="text-left space-y-4">
-                <span className="text-red-500 text-xs font-bold tracking-[0.2em] uppercase px-3 py-1 rounded-full bg-red-500/10 inline-block">
-                  Wichtige Sicherheitsrichtlinie
-                </span>
-                <h3 className="font-serif font-bold text-2xl text-primary text-left">
-                  Warum wir KEIN ZINK intravenös verabreichen
-                </h3>
-                <p className="text-base text-muted-foreground leading-relaxed font-medium text-left">
-                  Zink ist ein hochreaktives, potenziell toxisches Schwermetall-Ion. Wird es intravenös verabreicht, umgeht es die strengen regulatorischen Filterschranken des Magen-Darm-Trakts vollkommen. Dies führt zu einer unkontrollierten zellulären Schwermetall-Konkurrenz: Intravenöses Zink besetzt blitzartig die Transportproteine und verdrängt andere überlebenswichtige Metalle (wie <strong>Kupfer und Eisen</strong>) aus ihren zellulären Enzymsystemen.
-                </p>
-                <p className="text-base text-muted-foreground leading-relaxed font-medium text-left">
-                  Die Folgen können schwere biochemische Entgleisungen, akute neurologische und kardiovaskuläre Störungen sowie ein massiver oxidativer Stressschub in den Mitochondrien sein. 
-                </p>
-                <div className="p-5 bg-white border border-red-500/10 rounded-2xl text-sm text-primary font-semibold leading-relaxed text-left">
-                  <strong>Unsere Leitlinie:</strong> Ein nachgewiesener Zinkmangel wird in unserer Praxis ausschließlich hochdosiert und kontrolliert <strong>oral</strong> therapiert. In unseren Infusionslösungen nutzen wir stattdessen sichere, mitochondriale Co-Faktoren und Aminosäuren, die den zellulären Kreislauf präzise und nebenwirkungsfrei stärken.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* The Active Compounds */}
       <section className="py-24 bg-muted/20">
         <div className="container mx-auto px-4 max-w-6xl">
@@ -235,7 +204,7 @@ export default function Infusionstherapie() {
             <div className="space-y-6 text-left">
               <h3 className="text-3xl font-serif text-primary font-bold text-left leading-tight">Wirkstoffe der Infusionslösungen</h3>
               <p className="text-lg text-muted-foreground leading-relaxed font-medium text-left">
-                Je nach individuellem Laborbefund und Therapieziel kombinieren wir bewährte Substanzen zu hochspezifischen Drips:
+                Je nach individuellem Laborbefund und Therapieziel:
               </p>
               <div className="space-y-4 pt-4">
                 {[

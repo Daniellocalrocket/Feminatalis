@@ -30,9 +30,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 export default function Geburtsvorbereitung() {
   const schedule = [
-    { day: "Freitag", time: "18:00 – 21:15 Uhr", focus: "Ankommen, Basis-Wissen & Kennenlernen" },
-    { day: "Samstag", time: "09:00 – 16:30 Uhr", focus: "Geburtsphasen, Körperarbeit & Partner-Support" },
-    { day: "Sonntag", time: "09:00 – 15:30 Uhr", focus: "Wochenbett, Stillen & Leben mit dem Neugeborenen" }
+    { day: "Samstag", time: "09:00 – 16:30 Uhr", focus: "Geburtsvorbereitung intensiv: Geburtsphasen, Atemtechniken, Körperarbeit & Partner-Support" },
+    { day: "Sonntag", time: "09:00 – 15:30 Uhr", focus: "Nachsorge & Familie: Wochenbett, Stillzeit, Säuglingspflege & Neugeborenen-Bedürfnisse" }
   ];
 
   const detailModules = [
@@ -145,7 +144,7 @@ export default function Geburtsvorbereitung() {
               <ul className="space-y-4 text-muted-foreground">
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 shrink-0" />
-                  <span><strong>Geburtsphasen:</strong> Was passiert wann in meinem Körper? Wir erklären die Dynamik von Eröffnung bis Austreibung.</span>
+                  <span><strong>Geburtsphasen:</strong> Was passiert wann in meinem Körper? Wir erklären die Dynamik von der Latenzphase, Eröffnungsphase, Übergangsphase und Austreibungsphase bis hin zur vollständigen Nachgeburtsphase (Plazentageburt).</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 shrink-0" />

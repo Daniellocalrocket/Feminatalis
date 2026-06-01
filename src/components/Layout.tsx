@@ -60,21 +60,22 @@ export function Layout({ children }: LayoutProps) {
       name: "Naturheilpraxis", 
       path: ROUTE_PATHS.NATURHEILPRAXIS,
       subItems: [
-        { name: "Mitochondrien-Therapie", path: ROUTE_PATHS.MITOCHONDRIEN, desc: "Zelluläre Energie & Angelas Schwerpunkt" },
-        { name: "Tiefgehende Labordiagnostik", path: ROUTE_PATHS.LABOR, desc: "Ursachenforschung" },
+        // Group 1 (Indications)
+        { name: "Mitochondrien-Dysfunktion", path: ROUTE_PATHS.MITOCHONDRIEN, desc: "Zelluläre Energie & Angelas Schwerpunkt" },
+        { name: "Allergiebehandlung", path: ROUTE_PATHS.ALLERGIE, desc: "Immunmodulation" },
+        { name: "Hilfe bei Long-Covid & Post-Vac", path: ROUTE_PATHS.LONG_COVID, desc: "Energieaufbau & Regeneration" },
+        // Group 2 (Methods)
+        { name: "Labordiagnostik", path: ROUTE_PATHS.LABOR, desc: "inkl. Darmanalyse & Mikrobiom" },
         { name: "Infusionstherapie", path: ROUTE_PATHS.INFUSIONSTHERAPIE, desc: "Direkte Nährstoffaufnahme" },
         { name: "IHHT Höhentraining", path: ROUTE_PATHS.ZELLTRAINING, desc: "Zelltraining & Sauerstofftherapie" },
-        { name: "Long-Covid Hilfe", path: ROUTE_PATHS.LONG_COVID, desc: "Energieaufbau" },
-        { name: "CO2-Therapie", path: ROUTE_PATHS.CO2_THERAPIE, desc: "Carboxytherapie" },
-        { name: "Darmanalyse & Mikrobiom", path: ROUTE_PATHS.DARMANALYSE, desc: "Darmgesundheit" },
-        { name: "Bioidentische Hormone", path: ROUTE_PATHS.HORMONTHERAPIE, desc: "Natürliche Balance" },
-        { name: "Schwermetallausleitung", path: ROUTE_PATHS.SCHWERMETALL, desc: "Chelat-Therapie" },
-        { name: "TCM", path: ROUTE_PATHS.TCM, desc: "Traditionelle Chinesische Medizin" },
-        { name: "Allergiebehandlung", path: ROUTE_PATHS.ALLERGIE, desc: "Immunmodulation" },
-        { name: "brainLight Entspannung", path: ROUTE_PATHS.BRAINLIGHT, desc: "Tiefenregeneration" },
+        { name: "Co2-Therapie", path: ROUTE_PATHS.CO2_THERAPIE, desc: "Carboxytherapie" },
+        { name: "Lasertherapie", path: ROUTE_PATHS.LASERTHERAPIE, desc: "Regeneration & Licht" },
+        { name: "TCM & Akupunktur", path: ROUTE_PATHS.TCM, desc: "Traditionelle Chinesische Medizin" },
+        { name: "Bioidentische Hormonregulation", path: ROUTE_PATHS.HORMONTHERAPIE, desc: "Natürliche Balance" },
+        { name: "Blutegel-Therapie", path: ROUTE_PATHS.BLUTEGEL, desc: "Natürliche Entzündungshemmung" },
+        { name: "Schwermetallausleitung (Chelat)", path: ROUTE_PATHS.SCHWERMETALL, desc: "Chelat-Therapie" },
         { name: "Homöopathie", path: ROUTE_PATHS.HOMOEOPATHIE, desc: "Ganzheitliche Heilung" },
-        { name: "Blutegeltherapie", path: ROUTE_PATHS.BLUTEGEL, desc: "Natürliche Entzündungshemmung" },
-        { name: "Lasertherapie", path: ROUTE_PATHS.LASERTHERAPIE, desc: "Regeneration & Licht" }
+        { name: "brainLight Entspannung", path: ROUTE_PATHS.BRAINLIGHT, desc: "Tiefenregeneration" }
       ]
     },
     { 
