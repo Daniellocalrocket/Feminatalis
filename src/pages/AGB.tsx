@@ -23,46 +23,11 @@ export default function AGB() {
             </div>
             <div>
               <h1 className="text-3xl md:text-5xl font-serif text-primary mb-2">AGB</h1>
-              <p className="text-muted-foreground font-medium text-lg italic">Stand: 26.01.2026</p>
+              <p className="text-muted-foreground font-medium text-lg italic">Stand: 26.05.2026</p>
             </div>
           </div>
 
           <div className="prose prose-slate max-w-none space-y-16 text-muted-foreground leading-relaxed">
-            
-            <section>
-              <h2 className="text-2xl font-serif text-primary mb-4">Allgemeine Geschäftsbedingungen für Präsenz- und Online-Veranstaltungen</h2>
-              <p className="text-lg mb-8">
-                Veranstalterin: Angela Deschner – Heilpraktikerin & Hebamme<br />
-                Hebammen- und Naturheilpraxis feminatalis/cosMedea · 76669 Bad Schönborn · Hebelstr. 3a<br />
-                E-Mail: kontakt@feminatalis.de
-              </p>
-              <p className="bg-accent/5 p-6 rounded-2xl border border-border italic">
-                Diese AGB regeln die Buchung und Teilnahme an den nachfolgend beschriebenen Veranstaltungen. Abweichende Vereinbarungen gelten nur, wenn sie in Textform (z. B. per E-Mail) bestätigt wurden.
-              </p>
-            </section>
-
-            {/* § 1 */}
-            <section>
-              <h2 className="text-3xl font-serif text-primary mb-8 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent"><Scale size={20}/></div>
-                § 1 Geltungsbereich, Anbieterin, Begriffe
-              </h2>
-              <div className="space-y-4">
-                <p>1. Diese AGB gelten für die Buchung und Teilnahme an folgenden Veranstaltungen (Präsenz und Online):</p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>(Online-)Vorträge, Webinare, Workshops, Seminare</li>
-                  <li>fortlaufende Gruppenkurse und Treffs</li>
-                  <li>sonstige Gruppenangebote (sofern nicht ausdrücklich anders geregelt)</li>
-                </ul>
-                <p>2. Vertragspartnerin/Veranstalterin ist Angela Deschner (Hebammen- und Naturheilpraxis feminatalis/cosMedea, Bad Schönborn).</p>
-                <p>3. Die Veranstalterin kann Veranstaltungen selbst durchführen oder sich dabei durch qualifizierte Personen (z. B. angestellte oder beauftragte Dozenten/Referenten) vertreten lassen.</p>
-                <p>4. Diese AGB gelten nicht für Veranstaltungen anderer Anbieter, die als selbstständige Kooperationspartner in den Räumen der Praxis stattfinden und eigene AGB verwenden.</p>
-                <p>5. Mitteilungen in Textform (z. B. per E-Mail) sind zulässig. Die Veranstalterin darf vertragsbezogene Informationen an die vom Kunden angegebene E-Mail-Adresse senden.</p>
-              </div>
-            </section>
-
-            {/* § 2 */}
-            <section>
               <h2 className="text-3xl font-serif text-primary mb-8 flex items-center gap-4">
                 <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent"><Calendar size={20}/></div>
                 § 2 Anmeldung, Vertragsschluss
