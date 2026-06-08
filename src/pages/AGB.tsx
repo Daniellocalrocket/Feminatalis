@@ -15,9 +15,9 @@ export default function AGB() {
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-white p-8 md:p-16 rounded-[4rem] border border-border shadow-sm"
+          className="bg-white p-5 sm:p-8 md:p-16 rounded-[2rem] sm:rounded-[3rem] md:rounded-[4rem] border border-border shadow-sm"
         >
-          <div className="flex items-center gap-6 mb-16 border-b border-border pb-10">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-16 border-b border-border pb-10">
             <div className="w-20 h-20 rounded-[2rem] bg-primary/10 flex items-center justify-center text-primary shrink-0">
               <FileText size={40} />
             </div>
@@ -39,11 +39,10 @@ export default function AGB() {
               </p>
             </section>
 
-            {/* § 1 */}
             <section>
-              <h2 className="text-3xl font-serif text-primary mb-8 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent"><Scale size={20}/></div>
-                § 1 Geltungsbereich, Anbieterin, Begriffe
+              <h2 className="text-2xl sm:text-3xl font-serif text-primary mb-8 flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0"><Scale size={20}/></div>
+                <span>§ 1 Geltungsbereich, Anbieterin, Begriffe</span>
               </h2>
               <div className="space-y-4">
                 <p>Diese AGB gelten für die Buchung und Teilnahme an folgenden Angeboten der Veranstalterin:</p>
@@ -63,11 +62,10 @@ export default function AGB() {
               </div>
             </section>
 
-            {/* § 2 */}
             <section>
-              <h2 className="text-3xl font-serif text-primary mb-8 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent"><Calendar size={20}/></div>
-                § 2 Anmeldung, Vertragsschluss
+              <h2 className="text-2xl sm:text-3xl font-serif text-primary mb-8 flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0"><Calendar size={20}/></div>
+                <span>§ 2 Anmeldung, Vertragsschluss</span>
               </h2>
               <div className="space-y-4">
                 <p>Die Anmeldung erfolgt:</p>
@@ -82,11 +80,10 @@ export default function AGB() {
               </div>
             </section>
 
-            {/* § 3 */}
             <section>
-              <h2 className="text-3xl font-serif text-primary mb-8 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent"><Users size={20}/></div>
-                § 3 Veranstaltungsort, Online-Durchführung, Änderungen
+              <h2 className="text-2xl sm:text-3xl font-serif text-primary mb-8 flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0"><Users size={20}/></div>
+                <span>§ 3 Veranstaltungsort, Online-Durchführung, Änderungen</span>
               </h2>
               <div className="space-y-4">
                 <p>Präsenzveranstaltungen finden grundsätzlich in den Räumen der Praxis feminatalis / cosMedea in Bad Schönborn statt, sofern nichts anderes angegeben ist.</p>
@@ -98,11 +95,10 @@ export default function AGB() {
               </div>
             </section>
 
-            {/* § 4 */}
             <section>
-              <h2 className="text-3xl font-serif text-primary mb-8 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent"><CreditCard size={20}/></div>
-                § 4 Teilnahmegebühren, Zahlungsbedingungen
+              <h2 className="text-2xl sm:text-3xl font-serif text-primary mb-8 flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0"><CreditCard size={20}/></div>
+                <span>§ 4 Teilnahmegebühren, Zahlungsbedingungen</span>
               </h2>
               <div className="space-y-6">
                 <p>Es gelten die zum Zeitpunkt der Buchung veröffentlichten Preise.</p>
@@ -110,7 +106,7 @@ export default function AGB() {
                 <p>Nur vollständig und fristgerecht eingegangene Zahlungen berechtigen zur Teilnahme oder Freischaltung digitaler Inhalte.</p>
                 <p>Der Zugang zu digitalen Inhalten oder Online-Angeboten erfolgt grundsätzlich erst nach vollständigem Zahlungseingang.</p>
                 
-                <div className="bg-primary/5 p-8 rounded-3xl border border-border space-y-6">
+                <div className="bg-primary/5 p-5 sm:p-8 rounded-[1.5rem] sm:rounded-3xl border border-border space-y-6">
                   <h4 className="font-bold text-primary">Zahlungsregelungen:</h4>
                   
                   <div className="space-y-2">
@@ -135,11 +131,10 @@ export default function AGB() {
               </div>
             </section>
 
-            {/* § 5 */}
             <section>
-              <h2 className="text-3xl font-serif text-primary mb-8 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent"><CreditCard size={20}/></div>
-                § 5 Bankverbindung
+              <h2 className="text-2xl sm:text-3xl font-serif text-primary mb-8 flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0"><CreditCard size={20}/></div>
+                <span>§ 5 Bankverbindung</span>
               </h2>
               <p>Die Bankverbindung wird im Rahmen der Buchung mitgeteilt.</p>
             </section>
@@ -150,11 +145,10 @@ export default function AGB() {
               <p>Bei längeren Veranstaltungen können Pausen vorgesehen sein. Teilnehmer sind selbst für gesundheitliche Besonderheiten oder Lebensmittelunverträglichkeiten verantwortlich.</p>
             </section>
 
-            {/* § 7 */}
             <section>
-              <h2 className="text-3xl font-serif text-primary mb-8 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent"><Ban size={20}/></div>
-                § 7 Rücktritt, Stornierung, Umbuchung, Ersatzperson
+              <h2 className="text-2xl sm:text-3xl font-serif text-primary mb-8 flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0"><Ban size={20}/></div>
+                <span>§ 7 Rücktritt, Stornierung, Umbuchung, Ersatzperson</span>
               </h2>
               <div className="space-y-6">
                 <p>Stornierungen müssen in Textform erfolgen.</p>
@@ -204,11 +198,10 @@ export default function AGB() {
               </div>
             </section>
 
-            {/* § 10 */}
             <section>
-              <h2 className="text-3xl font-serif text-primary mb-8 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent"><ShieldCheck size={20}/></div>
-                § 10 Datenschutz, Vertraulichkeit
+              <h2 className="text-2xl sm:text-3xl font-serif text-primary mb-8 flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0"><ShieldCheck size={20}/></div>
+                <span>§ 10 Datenschutz, Vertraulichkeit</span>
               </h2>
               <div className="space-y-4">
                 <p>Es gelten die Datenschutzhinweise der Website.</p>
@@ -218,10 +211,10 @@ export default function AGB() {
             </section>
 
             {/* § 11 */}
-            <section className="bg-primary/5 p-10 rounded-[3rem] border border-primary/10">
-              <h2 className="text-3xl font-serif text-primary mb-6 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary"><HelpCircle size={20}/></div>
-                § 11 Gesundheitlicher Hinweis / Eigenverantwortung
+            <section className="bg-primary/5 p-5 sm:p-10 rounded-[1.5rem] sm:rounded-[3rem] border border-primary/10">
+              <h2 className="text-2xl sm:text-3xl font-serif text-primary mb-6 flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0"><HelpCircle size={20}/></div>
+                <span>§ 11 Gesundheitlicher Hinweis / Eigenverantwortung</span>
               </h2>
               <div className="space-y-4">
                 <p>Die Veranstaltungen dienen der Information, Prävention und Begleitung.</p>
@@ -256,10 +249,10 @@ export default function AGB() {
             </section>
 
             {/* § 15 */}
-            <section className="bg-accent/5 p-10 rounded-[3rem] border border-border">
-              <h2 className="text-3xl font-serif text-primary mb-8 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent"><AlertCircle size={20}/></div>
-                § 15 Widerrufsrecht, digitale Inhalte und Online-Angebote
+            <section className="bg-accent/5 p-5 sm:p-10 rounded-[1.5rem] sm:rounded-[3rem] border border-border">
+              <h2 className="text-2xl sm:text-3xl font-serif text-primary mb-8 flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0"><AlertCircle size={20}/></div>
+                <span>§ 15 Widerrufsrecht, digitale Inhalte und Online-Angebote</span>
               </h2>
               <div className="space-y-4">
                 <p>Für termingebundene Veranstaltungen (z. B. Kurse, Workshops, Seminare, Intensiv-Wochenenden oder Live-Webinare mit festem Termin oder Zeitraum) besteht gemäß § 312g Abs. 2 Nr. 9 BGB kein Widerrufsrecht.</p>

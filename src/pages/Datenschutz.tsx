@@ -15,9 +15,9 @@ export default function Datenschutz() {
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-white p-8 md:p-16 rounded-[4rem] border border-border shadow-sm"
+          className="bg-white p-5 sm:p-8 md:p-16 rounded-[2rem] sm:rounded-[3rem] md:rounded-[4rem] border border-border shadow-sm"
         >
-          <div className="flex items-center gap-6 mb-16 border-b border-border pb-10">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-16 border-b border-border pb-10">
             <div className="w-20 h-20 rounded-[2rem] bg-primary/10 flex items-center justify-center text-primary shrink-0">
               <ShieldCheck size={40} />
             </div>
@@ -35,7 +35,7 @@ export default function Datenschutz() {
                 Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten (nachfolgend kurz „Daten“) innerhalb unseres Onlineangebotes und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepräsenzen, wie z.B. unser Social Media Profile auf (nachfolgend gemeinsam bezeichnet als „Onlineangebot“). Im Hinblick auf die verwendeten Begrifflichkeiten, wie z.B. „Verarbeitung“ oder „Verantwortlicher“ verweisen wir auf die Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO).
               </p>
               
-              <div className="bg-accent/5 p-10 rounded-[2.5rem] border border-border">
+              <div className="bg-accent/5 p-5 sm:p-10 rounded-[1.5rem] sm:rounded-[2.5rem] border border-border">
                 <h3 className="text-primary font-bold text-xl mb-6">Verantwortlicher</h3>
                 <p className="font-medium text-primary mb-1">Hebammen- und Naturheilpraxis feminatalis</p>
                 <p className="mb-1">Hebelstraße 3a</p>
@@ -49,11 +49,10 @@ export default function Datenschutz() {
               </div>
             </section>
 
-            {/* 2. Datenarten */}
             <section>
-              <h2 className="text-3xl font-serif text-primary mb-8 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent"><FileText size={20}/></div>
-                Arten der verarbeiteten Daten
+              <h2 className="text-2xl sm:text-3xl font-serif text-primary mb-8 flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0"><FileText size={20}/></div>
+                <span>Arten der verarbeiteten Daten</span>
               </h2>
               <ul className="grid sm:grid-cols-2 gap-4 list-none p-0">
                 <li className="bg-primary/5 p-6 rounded-2xl border border-border flex items-center gap-3">
@@ -71,11 +70,10 @@ export default function Datenschutz() {
               </ul>
             </section>
 
-            {/* 3. Gesundheitsvorsorge */}
-            <section className="bg-primary/5 p-10 rounded-[3rem] border border-primary/10">
-              <h2 className="text-3xl font-serif text-primary mb-6 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary"><Heart size={20}/></div>
-                Der Gesundheitsvorsorge dienende Leistungen
+            <section className="bg-primary/5 p-5 sm:p-10 rounded-[1.5rem] sm:rounded-[3rem] border border-primary/10">
+              <h2 className="text-2xl sm:text-3xl font-serif text-primary mb-6 flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0"><Heart size={20}/></div>
+                <span>Der Gesundheitsvorsorge dienende Leistungen</span>
               </h2>
               <p className="mb-6">
                 Wir verarbeiten die Daten unserer Patienten entsprechend Art. 6 Abs. 1 lit. b) DSGVO, um Ihnen gegenüber unsere vertraglichen Leistungen zu erbringen. 
@@ -89,26 +87,25 @@ export default function Datenschutz() {
               </p>
             </section>
 
-            {/* 4. Hosting & Backend */}
             <section>
-              <h2 className="text-3xl font-serif text-primary mb-8 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent"><Lock size={20}/></div>
-                Hosting und technisches Backend
+              <h2 className="text-2xl sm:text-3xl font-serif text-primary mb-8 flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0"><Lock size={20}/></div>
+                <span>Hosting und technisches Backend</span>
               </h2>
               <p className="mb-8">
                 Um unser Onlineangebot sicher und effizient bereitzustellen, nutzen wir die Dienste von spezialisierten Cloud- und Hosting-Anbietern.
               </p>
               <div className="space-y-6">
-                <div className="p-8 bg-accent/5 rounded-3xl border border-border">
+              <div className="p-5 sm:p-8 bg-accent/5 rounded-[1.5rem] sm:rounded-3xl border border-border">
                   <h4 className="font-bold text-primary mb-3">Vercel (Hosting)</h4>
                   <p className="text-sm leading-relaxed">
                     Unsere Website wird auf der Plattform Vercel gehostet (Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA). Hierbei werden Zugriffsdaten und Server-Logfiles verarbeitet. Die Übermittlung in die USA erfolgt auf Grundlage des EU-US Data Privacy Frameworks.
                   </p>
                 </div>
-                <div className="p-8 bg-accent/5 rounded-3xl border border-border">
+                <div className="p-5 sm:p-8 bg-accent/5 rounded-[1.5rem] sm:rounded-3xl border border-border">
                   <h4 className="font-bold text-primary mb-3">Supabase (Datenbank & Formulare)</h4>
                   <p className="text-sm leading-relaxed">
-                    Die Speicherung Ihrer Eingaben in Kontaktformularen (z.B. Vorqualifizierung) und die Verwaltung von Kursdaten erfolgt über Supabase (Supabase Inc.). Die Daten werden in verschlüsselten Datenbanken innerhalb der EU verarbeitet, um maximale Sicherheit und Vertraulichkeit zu gewährleisten.
+                    Die Speicherung Ihrer Eingaben in kontaktformularen (z.B. Vorqualifizierung) und die Verwaltung von Kursdaten erfolgt über Supabase (Supabase Inc.). Die Daten werden in verschlüsselten Datenbanken innerhalb der EU verarbeitet, um maximale Sicherheit und Vertraulichkeit zu gewährleisten.
                   </p>
                 </div>
               </div>
@@ -128,8 +125,7 @@ export default function Datenschutz() {
               </p>
             </section>
 
-            {/* 6. Rechte & Widerruf */}
-            <section className="bg-primary/5 p-10 rounded-[3rem] border border-border">
+            <section className="bg-primary/5 p-5 sm:p-10 rounded-[1.5rem] sm:rounded-[3rem] border border-border">
               <h2 className="text-2xl font-serif text-primary mb-6">Ihre Rechte als betroffene Person</h2>
               <p className="mb-8">Sie haben jederzeit das Recht auf:</p>
               <ul className="grid md:grid-cols-2 gap-6 list-none p-0">

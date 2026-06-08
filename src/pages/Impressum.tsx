@@ -28,13 +28,13 @@ export default function Impressum() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-border/50"
+              className="bg-white rounded-3xl p-5 sm:p-8 md:p-12 shadow-sm border border-border/50"
             >
-              <div className="flex items-center gap-3 mb-8">
-                <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+              <div className="flex items-start gap-3 mb-8">
+                <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary shrink-0">
                   <Info className="w-6 h-6" />
                 </div>
-                <h2 className="text-3xl font-serif text-primary">Angaben gemäß § 5 TMG</h2>
+                <h2 className="text-2xl sm:text-3xl font-serif text-primary">Angaben gemäß § 5 TMG</h2>
               </div>
               
               <div className="grid md:grid-cols-2 gap-10">
@@ -74,10 +74,10 @@ export default function Impressum() {
               transition={{ delay: 0.2 }}
               className="grid md:grid-cols-2 gap-8"
             >
-              <div className="bg-white rounded-3xl p-8 shadow-sm border border-border/50">
-                <div className="flex items-center gap-3 mb-6">
-                  <Scale className="w-6 h-6 text-primary" />
-                  <h2 className="text-2xl font-serif text-primary">Berufsbezeichnung</h2>
+              <div className="bg-white rounded-3xl p-5 sm:p-8 shadow-sm border border-border/50">
+                <div className="flex items-start gap-3 mb-6">
+                  <Scale className="w-6 h-6 text-primary shrink-0" />
+                  <h2 className="text-xl sm:text-2xl font-serif text-primary">Berufsbezeichnung</h2>
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   Land der Berufserlaubnis für beide Berufe: <strong>Deutschland</strong>
@@ -91,10 +91,10 @@ export default function Impressum() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-3xl p-8 shadow-sm border border-border/50">
-                <div className="flex items-center gap-3 mb-6">
-                  <ShieldCheck className="w-6 h-6 text-primary" />
-                  <h2 className="text-2xl font-serif text-primary">Aufsichtsbehörde</h2>
+              <div className="bg-white rounded-3xl p-5 sm:p-8 shadow-sm border border-border/50">
+                <div className="flex items-start gap-3 mb-6">
+                  <ShieldCheck className="w-6 h-6 text-primary shrink-0" />
+                  <h2 className="text-xl sm:text-2xl font-serif text-primary">Aufsichtsbehörde</h2>
                 </div>
                 <div className="space-y-4">
                   <p className="text-muted-foreground">Zuständige Aufsichtsbehörde:</p>
@@ -111,7 +111,7 @@ export default function Impressum() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-border/50 space-y-10"
+              className="bg-white rounded-3xl p-5 sm:p-8 md:p-12 shadow-sm border border-border/50 space-y-10"
             >
               {/* Haftungsausschluss */}
               <div>
@@ -186,7 +186,7 @@ export default function Impressum() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
-                className="bg-white rounded-3xl p-8 shadow-sm border border-border/50"
+                className="bg-white rounded-3xl p-5 sm:p-8 shadow-sm border border-border/50"
               >
                 <h2 className="text-xl font-serif text-primary mb-4 uppercase tracking-wide">Werbung</h2>
                 <p className="text-xs text-muted-foreground leading-relaxed">
@@ -198,7 +198,7 @@ export default function Impressum() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
-                className="bg-white rounded-3xl p-8 shadow-sm border border-border/50"
+                className="bg-white rounded-3xl p-5 sm:p-8 shadow-sm border border-border/50"
               >
                 <h2 className="text-xl font-serif text-primary mb-4 uppercase tracking-wide">Produkt- und Markennamen</h2>
                 <p className="text-xs text-muted-foreground leading-relaxed">
@@ -212,7 +212,7 @@ export default function Impressum() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="bg-white rounded-3xl p-8 shadow-sm border border-border/50"
+              className="bg-white rounded-3xl p-5 sm:p-8 shadow-sm border border-border/50"
             >
               <h2 className="text-xl font-serif text-primary mb-4">Bild- und Tonaufzeichnungen</h2>
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -225,7 +225,7 @@ export default function Impressum() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="bg-primary text-white rounded-[2.5rem] p-8 md:p-12 shadow-xl shadow-primary/10"
+              className="bg-primary text-white rounded-[1.5rem] sm:rounded-[2.5rem] p-5 sm:p-8 md:p-12 shadow-xl shadow-primary/10"
             >
               <h2 className="text-2xl font-serif mb-6 uppercase tracking-wide">Streitbeilegung</h2>
               <div className="space-y-4 text-sm text-white/80 leading-relaxed">
