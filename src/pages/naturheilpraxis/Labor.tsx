@@ -2,29 +2,11 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
-import { FlaskConical, Dna, ActivitySquare, ShieldCheck, ArrowRight } from "lucide-react";
+import { FlaskConical, ArrowRight } from "lucide-react";
 import SplitScreenHero from "@/components/SplitScreenHero";
 import PreisTransparenz from "@/components/PreisTransparenz";
 
 export default function Labor() {
-  const diagnosticItems = [
-    {
-      title: "Hormonprofil (Speichel/Blut)",
-      desc: "Analyse der freien Hormone: Östrogendominanz, Progesteronmangel, Testosteron, DHEA, Cortisol-Tagesprofil und essentielle Schilddrüsenwerte (T3/T4).",
-      icon: <Dna className="w-6 h-6 text-accent" />
-    },
-    {
-      title: "Mitochondrien-Diagnostik",
-      desc: "Spezialtests auf ATP-Produktion, nitrosativen & oxidativen Stress (MDA-LDL, Nitrotyrosin), L-Lactat & Pyruvat für die Zellenergie.",
-      icon: <FlaskConical className="w-6 h-6 text-accent" />
-    },
-    {
-      title: "Darm- & Mikrobiomanalyse",
-      desc: "Detaillierte Stuhldiagnostik bei Leaky-Gut, Dysbiose, Entzündungsmarkern, SIBO (Fehlbesiedlung) und Malabsorption.",
-      icon: <ActivitySquare className="w-6 h-6 text-accent" />
-    }
-  ];
-
   return (
     <div className="bg-background min-h-screen font-sans">
       <SEO 
@@ -59,60 +41,16 @@ export default function Labor() {
         </div>
       </section>
 
-      {/* Mikrobiom- & Darmanalyse Tiefenbereich */}
-      <section className="py-24 bg-white border-t border-border/30">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8 text-left">
-              <span className="bg-primary/5 text-primary text-xs font-bold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full inline-block">
-                Zentrum der Gesundheit
-              </span>
-              <h2 className="text-3xl lg:text-5xl font-serif text-primary leading-tight text-left">
-                Darmanalyse & <br /><span className="text-accent italic font-light">Mikrobiom-Therapie</span>
-              </h2>
-              <div className="prose prose-lg text-muted-foreground leading-relaxed space-y-6 text-left">
-                <p>
-                  Dein Darm ist weit mehr als ein Verdauungsorgan – er ist das Kraftwerk deines Immunsystems (ca. 80 % der Immunzellen sind hier beheimatet) und der Geburtsort deiner mentalen Stärke (90 % des Serotonins werden hier gebildet). Die <strong>Darm-Hirn-Achse</strong> steuert deine Energie, Stimmung und chronische Entzündungsprozesse maßgeblich.
-                </p>
-                <p>
-                  Eine durchlässige Darmwand (<strong>Leaky Gut</strong>) oder eine bakterielle Fehlbesiedlung (Dysbiose, SIBO/SIFO) lassen Toxine ungehindert in die Blutbahn gelangen. Dies triggert systemische „stille“ Entzündungen (Silent Inflammation), welche oft die versteckte Ursache für Allergien, Autoimmunerkrankungen, Hautprobleme und chronische Erschöpfung sind.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-slate-50 p-10 lg:p-12 rounded-[4rem] border border-border text-left space-y-8">
-              <h3 className="text-2xl font-serif text-primary font-bold">Diagnostische Schwerpunkte:</h3>
-              <div className="space-y-6">
-                {[
-                  { title: "Präzise Mikrobiomanalyse", desc: "Laborbasierte Stuhldiagnostik zur Bestimmung von Bakterienzusammensetzung, Diversität und eventuellen Fehlbesiedlungen." },
-                  { title: "Leaky-Gut-Diagnostik", desc: "Zonulin- und Alpha-1-Antitrypsin-Messung zur objektiven Beurteilung der Barrierefunktion der Darmwand." },
-                  { title: "Das Östrobolom", desc: "Bedeutung der Darmflora für die Ausscheidung und Regulation des Östrogenstoffwechsels (wichtig bei Zyklusstörungen, PMS & PCOS)." },
-                  { title: "Gezielter Schleimhautaufbau", desc: "Keine Standard-Kuren – sondern präzise, auf deinen Befund abgestimmte Mikronährstoff-, Prä- und Probiotika-Therapie." }
-                ].map((item, idx) => (
-                  <div key={idx} className="flex gap-4 items-start text-left">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" />
-                    <div>
-                      <h5 className="font-bold text-primary text-base leading-tight">{item.title}</h5>
-                      <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Diagnostic Capabilities Grid */}
       <section className="py-24 bg-muted/20">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left mb-24">
             {[
-              { title: "Vollblut-Analyse", desc: "Präzise Messung der zellulären Sättigung von Zink, Magnesium, Selen und weiteren Co-Faktoren.", icon: <ActivitySquare className="w-8 h-8 text-accent" /> },
-              { title: "Immunstatus & Intoleranzen", desc: "Umfassende Diagnostik von TH1/TH2-Balance, Allergenen (IgE, IgG, LTT), Fructose-/Laktoseintoleranz, MCAS & Lymphozytentypisierung.", icon: <ShieldCheck className="w-8 h-8 text-accent" /> },
-              { title: "KyberStatus & Darm", desc: "Tiefenanalyse des Mikrobioms, Entzündungsmarker (Zonulin, Calprotectin) und SIBO-Diagnostik.", icon: <Dna className="w-8 h-8 text-accent" /> },
-              { title: "Hormon-Mapping", desc: "Speichel-Diagnostik für freie Hormone (Östrogen, Progesteron, Cortisol) und Schilddrüsen-Full-Screening.", icon: <ShieldCheck className="w-8 h-8 text-accent" /> },
-              { title: "OAT-Stoffwechseltest", desc: "Organische Säuren im Urin zeigen Blockaden im Citratzyklus (Zellenergie) und Neurotransmitter-Mängel.", icon: <ActivitySquare className="w-8 h-8 text-accent" /> },
+              { title: "Vollblut-Analyse", desc: "Präzise Messung der zellulären Sättigung von Zink, Magnesium, Selen und weiteren Co-Faktoren.", icon: <FlaskConical className="w-8 h-8 text-accent" /> },
+              { title: "Immunstatus & Intoleranzen", desc: "Umfassende Diagnostik von TH1/TH2-Balance, Allergenen (IgE, IgG, LTT), Fructose-/Laktoseintoleranz, MCAS & Lymphozytentypisierung.", icon: <FlaskConical className="w-8 h-8 text-accent" /> },
+              { title: "KyberStatus & Darm", desc: "Tiefenanalyse des Mikrobioms, Entzündungsmarker (Zonulin, Calprotectin) und SIBO-Diagnostik.", icon: <FlaskConical className="w-8 h-8 text-accent" /> },
+              { title: "Hormon-Mapping", desc: "Speichel-Diagnostik für freie Hormone (Östrogen, Progesteron, Cortisol) und Schilddrüsen-Full-Screening.", icon: <FlaskConical className="w-8 h-8 text-accent" /> },
+              { title: "OAT-Stoffwechseltest", desc: "Organische Säuren im Urin zeigen Blockaden im Citratzyklus (Zellenergie) und Neurotransmitter-Mängel.", icon: <FlaskConical className="w-8 h-8 text-accent" /> },
               { title: "Silent Inflammation", desc: "Frühzeitiges Erkennen von stillen Entzündungen (hs-CRP, TNF-alpha), bevor Krankheiten entstehen.", icon: <FlaskConical className="w-8 h-8 text-accent" /> }
             ].map((item, i) => (
               <div key={i} className="bg-white p-10 lg:p-12 rounded-[3.5rem] border border-border hover:border-accent transition-all hover:shadow-2xl flex flex-col group">
@@ -267,6 +205,50 @@ export default function Labor() {
             <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-4 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-md active:scale-95 inline-flex items-center gap-2">
               Diagnostik-Gespräch anfragen <ArrowRight size={20} />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Mikrobiom- & Darmanalyse Tiefenbereich */}
+      <section className="py-24 bg-white border-t border-border/30">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8 text-left">
+              <span className="bg-primary/5 text-primary text-xs font-bold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full inline-block">
+                Zentrum der Gesundheit
+              </span>
+              <h2 className="text-3xl lg:text-5xl font-serif text-primary leading-tight text-left">
+                Darmanalyse & <br /><span className="text-accent italic font-light">Mikrobiom-Therapie</span>
+              </h2>
+              <div className="prose prose-lg text-muted-foreground leading-relaxed space-y-6 text-left">
+                <p>
+                  Dein Darm ist weit mehr als ein Verdauungsorgan – er ist das Kraftwerk deines Immunsystems (ca. 80 % der Immunzellen sind hier beheimatet) und der Geburtsort deiner mentalen Stärke (90 % des Serotonins werden hier gebildet). Die <strong>Darm-Hirn-Achse</strong> steuert deine Energie, Stimmung und chronische Entzündungsprozesse maßgeblich.
+                </p>
+                <p>
+                  Eine durchlässige Darmwand (<strong>Leaky Gut</strong>) oder eine bakterielle Fehlbesiedlung (Dysbiose, SIBO/SIFO) lassen Toxine ungehindert in die Blutbahn gelangen. Dies triggert systemische „stille“ Entzündungen (Silent Inflammation), welche oft die versteckte Ursache für Allergien, Autoimmunerkrankungen, Hautprobleme und chronische Erschöpfung sind.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-slate-50 p-10 lg:p-12 rounded-[4rem] border border-border text-left space-y-8">
+              <h3 className="text-2xl font-serif text-primary font-bold">Diagnostische Schwerpunkte:</h3>
+              <div className="space-y-6">
+                {[
+                  { title: "Präzise Mikrobiomanalyse", desc: "Laborbasierte Stuhldiagnostik zur Bestimmung von Bakterienzusammensetzung, Diversität und eventuellen Fehlbesiedlungen." },
+                  { title: "Leaky-Gut-Diagnostik", desc: "Zonulin- und Alpha-1-Antitrypsin-Messung zur objektiven Beurteilung der Barrierefunktion der Darmwand." },
+                  { title: "Das Östrobolom", desc: "Bedeutung der Darmflora für die Ausscheidung und Regulation des Östrogenstoffwechsels (wichtig bei Zyklusstörungen, PMS & PCOS)." },
+                  { title: "Gezielter Schleimhautaufbau", desc: "Keine Standard-Kuren – sondern präzise, auf deinen Befund abgestimmte Mikronährstoff-, Prä- und Probiotika-Therapie." }
+                ].map((item, idx) => (
+                  <div key={idx} className="flex gap-4 items-start text-left">
+                    <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" />
+                    <div>
+                      <h5 className="font-bold text-primary text-base leading-tight">{item.title}</h5>
+                      <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

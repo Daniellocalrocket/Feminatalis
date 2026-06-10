@@ -90,7 +90,7 @@ export default function CO2Therapie() {
                 <div className="lg:w-2/3 text-left">
                   <h2 className="text-4xl lg:text-6xl font-serif mb-10 text-white font-bold leading-tight text-left">Die Synergie <br /><span className="text-accent italic font-light text-3xl lg:text-5xl">der Elemente</span></h2>
                   <p className="text-xl opacity-90 mb-12 leading-relaxed font-medium text-left">
-                    In unserer Praxis kombinieren wir das CO2-Trockenbad oft mit dem <strong>IHHT-Zelltraining</strong>. Während das IHHT die Mitochondrien zur Erneuerung zwingt, sorgt das CO2-Bad dafür, dass der verfügbare Sauerstoff auch wirklich in jeder kleinsten Kapillare ankommt.
+                    In unserer Praxis kombinieren wir das CO2-Trockenbad oft mit unserer <strong>Infusionstherapie</strong>. Während die Infusionen hochkonzentrierte Nährstoffe und Vitamine direkt in deinen Blutkreislauf bringen, sorgt das CO2-Bad dafür, dass diese wertvollen Stoffe über eine optimierte Mikrozirkulation auch wirklich in jeder kleinsten Kapillare ankommen.
                   </p>
                   <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary px-14 py-6 rounded-2xl font-bold text-xl hover:bg-accent hover:text-white transition-all shadow-2xl inline-flex items-center gap-4">
                     Kombinations-Termin anfragen <ArrowRight size={24} />
