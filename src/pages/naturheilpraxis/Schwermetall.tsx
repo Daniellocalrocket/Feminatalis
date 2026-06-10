@@ -21,7 +21,7 @@ export default function Schwermetall() {
   const ablaufPhasen = [
     {
       title: "1. Provokationstest (Urin)",
-      desc: "Zunächst verabreichen wir einen Chelatbildner (z.B. DMPS/EDTA). Dieser mobilisiert Metalle. Der anschließende Urintest im Speziallabor zeigt exakt, welche Gifte in deinen Geweben gelagert sind.",
+      desc: "Zunächst verabreichen wir einen Chelatbildner (z.B. EDTA). Dieser mobilisiert Metalle. Der anschließende Urintest im Speziallabor zeigt exakt, welche Gifte in deinen Geweben gelagert sind.",
       icon: <TestTube className="w-8 h-8 text-accent" />
     },
     {
@@ -143,7 +143,7 @@ export default function Schwermetall() {
       </section>
 
       <PreisTransparenz 
-        preisHint="Provokationstest ab 100,- €" 
+        preisHint="Provokationstest ab 85,- €" 
         hinweis="Zzgl. Laborkosten und Material (Chelatbildner)."
       />
 
