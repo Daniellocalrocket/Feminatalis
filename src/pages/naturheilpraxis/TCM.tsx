@@ -2,7 +2,7 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
-import { Check, ArrowRight, Activity, Sparkles, Wind, Sun, Leaf, Info, ThermometerSun, Layers } from "lucide-react";
+import { Check, ArrowRight, Wind, Info } from "lucide-react";
 import SplitScreenHero from "@/components/SplitScreenHero";
 import PreisTransparenz from "@/components/PreisTransparenz";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -10,13 +10,13 @@ import { motion } from "framer-motion";
 import tcmData from "@/data/content/tcm.json";
 
 const iconMap: Record<string, React.FC<{ className?: string }>> = {
-  Activity,
-  Sparkles,
-  Wind,
-  Sun,
-  Leaf,
-  Info,
-  Layers
+  Activity: Wind,
+  Sparkles: Wind,
+  Wind: Wind,
+  Sun: Wind,
+  Leaf: Wind,
+  Info: Wind,
+  Layers: Wind
 };
 
 const scrollTo = (id: string) => {
@@ -137,7 +137,7 @@ export default function TCM() {
               <div className="p-10 bg-white rounded-[3.5rem] border border-border shadow-xl relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-bl-[5rem] -mr-16 -mt-16 transition-transform group-hover:scale-110" />
                 <h4 className="font-bold text-primary mb-6 flex items-center gap-3 text-xl">
-                  <Activity size={24} className="text-accent" /> Behandlung & Dauer
+                   <Wind size={24} className="text-accent" /> Behandlung & Dauer
                 </h4>
                 <p className="text-muted-foreground leading-relaxed mb-8 text-left">
                   {akupunktur.behandlung}
@@ -216,9 +216,9 @@ export default function TCM() {
               className="bg-slate-50 p-10 lg:p-16 rounded-[4rem] border border-border flex flex-col"
             >
               <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-accent mb-8 shadow-sm">
-                <Activity size={32} />
-              </div>
-              <h3 className="text-3xl font-serif text-primary mb-6">{pulsdiagnostik.headline}</h3>
+                <Wind size={32} />
+               </div>
+               <h3 className="text-3xl font-serif text-primary mb-6">{pulsdiagnostik.headline}</h3>
               
               <div className="mb-8 rounded-3xl overflow-hidden border border-border shadow-inner bg-white">
                 <img 
@@ -271,9 +271,9 @@ export default function TCM() {
               className="bg-white p-10 lg:p-16 rounded-[4rem] border border-border shadow-2xl flex flex-col"
             >
               <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center text-accent mb-8 shadow-sm">
-                <Leaf size={32} />
-              </div>
-              <h3 className="text-3xl font-serif text-primary mb-6">{zungendiagnostik.headline}</h3>
+                <Wind size={32} />
+               </div>
+               <h3 className="text-3xl font-serif text-primary mb-6">{zungendiagnostik.headline}</h3>
 
               <div className="mb-8 rounded-3xl overflow-hidden border border-border shadow-inner bg-slate-50">
                 <img 
@@ -410,7 +410,7 @@ export default function TCM() {
                >
                  <div className="absolute top-0 right-0 w-32 h-32 bg-orange-50 rounded-bl-[5rem] -mr-16 -mt-16 group-hover:scale-110 transition-transform" />
                  <h3 className="text-2xl font-serif text-primary mb-6 flex items-center gap-3">
-                   <Sun size={28} className="text-orange-600" /> Sanfte Wendung
+                    <Wind size={28} className="text-orange-600" /> Sanfte Wendung
                  </h3>
                  <p className="text-muted-foreground leading-relaxed mb-8 text-left">
                    <span dangerouslySetInnerHTML={{ __html: moxa.wendung }} />
