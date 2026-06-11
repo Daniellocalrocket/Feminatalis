@@ -2,7 +2,7 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
-import { Sparkles, ArrowRight, Activity, Target, Heart, Shield } from "lucide-react";
+import { Sparkles, ArrowRight, Activity, Target, Heart, Shield, Info } from "lucide-react";
 import SplitScreenHero from "@/components/SplitScreenHero";
 import PreisTransparenz from "@/components/PreisTransparenz";
 
@@ -95,6 +95,50 @@ export default function Akupunktur() {
                    Für eine nachhaltige Wirkung empfehlen wir meist Serien von 10 Sitzungen. In der Geburtsvorbereitung beginnen wir ab der 36+0 SSW wöchentlich.
                  </p>
                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Moxa-Therapie */}
+      <section className="py-20 bg-amber-50/30 border-t border-border">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-6">
+              <span className="bg-orange-100 text-orange-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block">
+                Wärmetherapie
+              </span>
+              <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-8 leading-tight">
+                Moxa-Therapie <br /><span className="text-orange-600 italic font-light">Die sanfte Kraft der Wärme</span>
+              </h2>
+              <div className="prose prose-lg text-muted-foreground leading-relaxed space-y-6 text-left">
+                <p>
+                  Moxa (Moxibustion) ist eine jahrtausendealte Therapie der TCM, bei der getrocknetes Beifußkraut (Artemisia vulgaris) über bestimmten Akupunkturpunkten abgebrannt wird. Die tiefenwirksame Wärme strömt entlang der Meridiane und kann energetische Blockaden lösen.
+                </p>
+                <p>
+                  Besonders bekannt ist die Anwendung bei <strong>Beckenenlage des Kindes</strong> (ab der 34. SSW). Durch das Erwärmen des Punktes BL 67 (Zhiyin) an der kleinen Zehe wird die kindliche Aktivität angeregt, sodass sich das Kind von alleine in die Schädellage drehen kann – ganz ohne äußere Wendung.
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-white p-8 lg:p-10 rounded-[3rem] border border-orange-100 shadow-md">
+                <h3 className="text-xl font-serif text-primary mb-6">Anwendungsgebiete</h3>
+                <ul className="space-y-4 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-orange-600 mt-2 shrink-0" /> Wendung bei Beckenendlage</li>
+                  <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-orange-600 mt-2 shrink-0" /> Stärkung der Abwehrkräfte</li>
+                  <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-orange-600 mt-2 shrink-0" /> Bei Kältegefühl und Erschöpfung</li>
+                  <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-orange-600 mt-2 shrink-0" /> Unterstützung der Nachgeburtsphase</li>
+                  <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 rounded-full bg-orange-600 mt-2 shrink-0" /> Bei Regelbeschwerden und Zyklusstörungen</li>
+                </ul>
+              </div>
+
+              <div className="bg-accent/5 p-6 rounded-2xl flex items-start gap-3 border border-accent/10">
+                <Info size={20} className="text-accent shrink-0 mt-0.5" />
+                <p className="text-xs text-primary leading-relaxed italic">
+                  Moxa wird in der Regel von den gesetzlichen Krankenkassen nicht übernommen, kann aber als IGeL-Leistung abgerechnet werden. Private Kassen übernehmen häufig die Kosten.
+                </p>
+              </div>
             </div>
           </div>
         </div>
