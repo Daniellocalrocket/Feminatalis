@@ -415,7 +415,7 @@ export default function TCM() {
                  <p className="text-muted-foreground leading-relaxed mb-8 text-left">
                    <span dangerouslySetInnerHTML={{ __html: moxa.wendung }} />
                  </p>
-                 <Link to={ROUTE_PATHS.HEBAMMENSPRECHSTUNDE} className="text-orange-600 font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                 <Link to={ROUTE_PATHS.AKUPUNKTUR} className="text-orange-600 font-bold flex items-center gap-2 hover:gap-4 transition-all">
                    Mehr zur Hebammenbegleitung <ArrowRight size={18} />
                  </Link>
                </motion.div>
