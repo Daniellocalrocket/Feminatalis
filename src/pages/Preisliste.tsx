@@ -128,22 +128,22 @@ export default function Preisliste() {
               className="bg-white p-8 rounded-[2.5rem] border border-border shadow-sm"
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600">
+                <div className="w-12 h-12 rounded-2xl bg-primary/5 flex items-center justify-center text-primary">
                   <ShieldCheck className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold text-primary">Abrechnung</h3>
               </div>
               <ul className="space-y-4 text-sm text-muted-foreground">
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                   <span><strong>Privatversicherte/Beihilfe:</strong> Rechnung nach GeBüH (ohne Garantie auf volle Übernahme).</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                   <span><strong>Gesetzlich Versicherte:</strong> Die genannten Preise gelten für Selbstzahler.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                   <span><strong>Paket-Anrechnung:</strong> Bei nachträglicher Paketbuchung werden Einzelbehandlungen angerechnet.</span>
                 </li>
               </ul>
