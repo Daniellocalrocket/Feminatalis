@@ -20,7 +20,7 @@ export default function Mikronaehrstoffe() {
         subtitle="„Für zwei essen“ bedeutet nicht die doppelte Menge, sondern die doppelte Qualität. Wir stellen sicher, dass du und dein Baby optimal mit allen essenziellen Vitalstoffen versorgt seid – für ein starkes Fundament von Anfang an."
         imageSrc="https://images.unsplash.com/photo-1510733140576-8889e8db0c0d?q=80&w=2070&auto=format&fit=crop"
         imageAlt="Mikronährstoffe in der Schwangerschaft"
-        imageKey="img_hero_hebamme_mikronaehrstoffe"
+        imageKey="img_hero_mikronaehrstoffe"
       >
         <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
           Vorgespräch vereinbaren <ArrowRight size={20} />

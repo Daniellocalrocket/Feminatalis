@@ -237,11 +237,18 @@ export default function Mitochondrien() {
                   <Microscope size={12} />
                   {diagnostics.reportTitle}
                 </div>
-                <img 
-                  src="/mitochondrien-befund.jpg" 
-                  alt="Echter Laborbefund eines Bio-Health-Index (BHI) und nitrosativen Stresses" 
-                  className="w-full h-auto rounded-2xl shadow-sm border border-border object-cover mt-4 hover:scale-[1.01] transition-transform duration-300"
-                />
+                <div className="space-y-4 mt-4">
+                  <img 
+                    src="/BHI Manovska IHT.JPG" 
+                    alt="Echter Laborbefund eines Bio-Health-Index (BHI) und nitrosativen Stresses" 
+                    className="w-full h-auto rounded-2xl shadow-sm border border-border object-cover hover:scale-[1.01] transition-transform duration-300"
+                  />
+                  <img 
+                    src="/mitochondrien-befund.jpg" 
+                    alt="Echter Laborbefund eines Bio-Health-Index (BHI) und nitrosativen Stresses" 
+                    className="w-full h-auto rounded-2xl shadow-sm border border-border object-cover hover:scale-[1.01] transition-transform duration-300"
+                  />
+                </div>
                 <div className="mt-4 flex flex-wrap gap-2 justify-center text-xs text-muted-foreground">
                   <span>{diagnostics.reportFootnote}</span>
                 </div>
