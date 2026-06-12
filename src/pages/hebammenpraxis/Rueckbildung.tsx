@@ -3,7 +3,7 @@ import SplitScreenHero from "@/components/SplitScreenHero";
 import PreisTransparenz from "@/components/PreisTransparenz";
 import { Link } from "react-router-dom";
 import { ROUTE_PATHS } from "@/lib/index";
-import { ArrowRight, BookOpen, Heart, Users, Clock, CheckCircle2, Baby } from "lucide-react";
+import { ArrowRight, BookOpen, Heart, Users, Clock, CheckCircle2, Baby, Target, Activity, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Rueckbildung() {

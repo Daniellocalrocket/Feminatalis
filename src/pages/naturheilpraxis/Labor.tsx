@@ -46,12 +46,16 @@ export default function Labor() {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left mb-24">
             {[
-              { title: "Vollblut-Analyse", desc: "Präzise Messung der zellulären Sättigung von Zink, Magnesium, Selen und weiteren Co-Faktoren.", icon: <FlaskConical className="w-8 h-8 text-accent" /> },
+              { title: "Vollblut-Analyse", desc: "Mineralien und Spurenelemente, bioaktive Vitamine und Co-Faktoren: Mg, Zn, Se, Jod, Cu, Vit. D3-Gesamtstoffwechsel, Vit. A, E, C, K2, B-Vitamine, Coenzym Q10.", icon: <FlaskConical className="w-8 h-8 text-accent" /> },
               { title: "Immunstatus & Intoleranzen", desc: "Umfassende Diagnostik von TH1/TH2-Balance, Allergenen (IgE, IgG, LTT), Fructose-/Laktoseintoleranz, MCAS & Lymphozytentypisierung.", icon: <FlaskConical className="w-8 h-8 text-accent" /> },
               { title: "KyberStatus & Darm", desc: "Tiefenanalyse des Mikrobioms, Entzündungsmarker (Zonulin, Calprotectin) und SIBO-Diagnostik.", icon: <FlaskConical className="w-8 h-8 text-accent" /> },
-              { title: "Hormon-Mapping", desc: "Speichel-Diagnostik für freie Hormone (Östrogen, Progesteron, Cortisol) und Schilddrüsen-Full-Screening.", icon: <FlaskConical className="w-8 h-8 text-accent" /> },
-              { title: "OAT-Stoffwechseltest", desc: "Organische Säuren im Urin zeigen Blockaden im Citratzyklus (Zellenergie) und Neurotransmitter-Mängel.", icon: <FlaskConical className="w-8 h-8 text-accent" /> },
-              { title: "Silent Inflammation", desc: "Frühzeitiges Erkennen von stillen Entzündungen (hs-CRP, TNF-alpha), bevor Krankheiten entstehen.", icon: <FlaskConical className="w-8 h-8 text-accent" /> }
+              { title: "Amino- & Fettsäuren-Status", desc: "Organische Säuren im Citratzyklus (Zellenergie), Vorstufen der Neurotransmitter und Hormone (Tryptophan), Entzündungsbalance (Omega-3/6-Index).", icon: <FlaskConical className="w-8 h-8 text-accent" /> },
+              { title: "Hormon-Mapping", desc: "Speichel-Diagnostik für freie Sexualhormone und Cortisol-Tagesprofil, Melatonin, Schilddrüsen-Full-Screening, Männer- und Frauenprofile.", icon: <FlaskConical className="w-8 h-8 text-accent" /> },
+              { title: "Silent Inflammation", desc: "Entzündungsparameter: hs-CRP, TNF-alpha, Interleukine, Calprotectin, LPS-AK, PSA-AK, IDO-Aktivität, Kynurenin.", icon: <FlaskConical className="w-8 h-8 text-accent" /> },
+              { title: "Metabolic-Profil", desc: "HbA1c, HOMA-Index, Blutfettwerte, Lipoprotein(a), Leber- und Nierenwerte, Adiponectin.", icon: <FlaskConical className="w-8 h-8 text-accent" /> },
+              { title: "Mitochondrien & Zellulärer Stress", desc: "Oxidativer & nitrosativer Stress: Lipidperoxidation, oxidiertes LDL, Nitrotyrosin, Citrullin, Lactat/Pyruvat, intrazelluläres ATP, BHI.", icon: <FlaskConical className="w-8 h-8 text-accent" /> },
+              { title: "Schwermetalle", desc: "Haaranalyse, Blut- & Urintests nach Chelattherapie auf Quecksilber, Blei, Cadmium, Arsen, Aluminium u. a.", icon: <FlaskConical className="w-8 h-8 text-accent" /> },
+              { title: "Standard-Check-up", desc: "Kleines und großes Differenzialblutbild, Leber- & Nierenwerte, Blutfett- und Blutzuckerwerte, Gesamteiweiß, Entzündungsparameter.", icon: <FlaskConical className="w-8 h-8 text-accent" /> }
             ].map((item, i) => (
               <div key={i} className="bg-white p-10 lg:p-12 rounded-[3.5rem] border border-border hover:border-accent transition-all hover:shadow-2xl flex flex-col group">
                 <div className="bg-muted/30 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-accent group-hover:text-white transition-all duration-500">
@@ -110,11 +114,9 @@ export default function Labor() {
                 category: "Gynäkologie & Schwangerschaft",
                 items: [
                   "Schwangerschaftstests",
-                  "Pränatale Diagnostik (z. B. Ersttrimester-Screening, NIPT)",
                   "Hormonpanel für Fruchtbarkeit (FSH, LH, AMH, Östradiol, Progesteron)",
                   "Schilddrüsenwerte (TSH, fT3, fT4, Anti-TPO) – besonders wichtig in der Schwangerschaft",
                   "TORCH-Serologie (Toxoplasmose, Röteln, CMV, Herpes)",
-                  "Gruppe-B-Streptokokken-Abstrich",
                   "Blutgruppe & Rhesus-Faktor",
                   "Gestationsdiabetes-Screening (oGTT)"
                 ]
@@ -129,55 +131,6 @@ export default function Labor() {
                   "Helicobacter-pylori-Test (Stuhl oder Atemtest)",
                   "Parasitologie & Mykologie (Pilzdiagnostik)",
                   "Okkultes Blut im Stuhl"
-                ]
-              },
-              {
-                category: "Endokrinologie & Stoffwechsel",
-                items: [
-                  "Cortisol-Tagesprofil (Speichel) & DHEA-S",
-                  "Vollständiges Schilddrüsenpanel inkl. reverses T3",
-                  "Insulinresistenz & Nüchternglukose, HbA1c",
-                  "Leptin & Adiponectin",
-                  "Vitamin D (25-OH), B12, Folsäure, Ferritin",
-                  "Organische Säuren im Urin (OAT – Stoffwechseltiefenanalyse)"
-                ]
-              },
-              {
-                category: "Immunologie & Allergologie",
-                items: [
-                  "Lymphozytentypisierung (TH1/TH2-Balance)",
-                  "Spezifische IgE-Allergietests & IgG-Nahrungsmittelunverträglichkeiten",
-                  "LTT (Lymphozyten-Transformations-Test) – z. B. bei Schimmel, Borrelien, Metallen",
-                  "MCAS-Diagnostik (Mastzellaktivierungssyndrom)",
-                  "Antinukleäre Antikörper (ANA) & Autoimmunpanel",
-                  "Histamin & DAO-Aktivität"
-                ]
-              },
-              {
-                category: "Orthomolekularmedizin & Mikronährstoffe",
-                items: [
-                  "Vollblutanalyse: Zink, Magnesium, Selen, Kupfer, Mangan",
-                  "Coenzym Q10, L-Carnitin, Alpha-Liponsäure",
-                  "Oxidativer Stress (MDA-LDL, 8-OHdG, Nitrotyrosin)",
-                  "Aminosäurenprofil",
-                  "Omega-3-Index (EPA/DHA)"
-                ]
-              },
-              {
-                category: "Mitochondrien & Zellenergie",
-                items: [
-                  "L-Lactat & Pyruvat (Citratzyklus-Funktion)",
-                  "ATP-Produktion (Zellenergiestatus)",
-                  "Nitrosativer Stress & freie Radikale",
-                  "Glutathion-Status"
-                ]
-              },
-              {
-                category: "Schwermetalle & Umweltgifte",
-                items: [
-                  "DMPS-Mobilisationstest auf Quecksilber, Blei, Cadmium, Arsen",
-                  "Aluminium, Nickel, Titan im Urin",
-                  "Mykotoxine (Schimmelpilzgifte im Urin)"
                 ]
               }
             ].map((group, idx) => (

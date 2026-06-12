@@ -199,10 +199,9 @@ export default function UeberMich() {
               "Berufsverband für Heilpraktikerinnen (Lachesis)",
               "Deutscher Hebammenverband",
               "Greenpeace",
-              "Florian Schilling-Netzwerk (Post-Covid)",
               "MWGFD e.V. (Impfschadenhilfe)",
               "Corih Impfschadenhilfe",
-              "Bürgerinitiative-Bergstraße (Gegen 5G)"
+              "Mikroimmuntherapie-Netzwerk"
             ].map((network, i) => (
               <div key={i} className="bg-white border border-primary/10 px-6 py-3 rounded-xl font-medium text-primary shadow-sm hover:border-primary/30 transition-colors">
                 {network}
