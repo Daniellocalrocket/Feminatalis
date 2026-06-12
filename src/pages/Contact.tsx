@@ -36,7 +36,7 @@ export default function Contact() {
               Lass uns den ersten <br /> Schritt gemeinsam gehen.
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Egal ob du eine medizinische Behandlung in der Naturheilpraxis suchst oder eine empathische Begleitung durch deine Schwangerschaft wünschst – ich bin für dich da.
+               Egal ob du eine medizinische Behandlung in der Naturheilpraxis suchst oder eine empathische Begleitung durch deine Schwangerschaft wünschst – wir sind für dich da.
             </p>
           </motion.div>
         </div>
@@ -207,7 +207,7 @@ export default function Contact() {
                 <HeartPulse className="text-accent w-8 h-8" />
              </div>
              <p className="text-sm text-muted-foreground leading-relaxed font-medium">
-               <strong>Wichtiger Hinweis:</strong> Aufgrund der individuellen Dauer und Raumplanung für medizinische Behandlungen ist eine direkte Online-Buchung für Erstanamnesen und Therapien nicht möglich. Dieser Weg stellt sicher, dass ich mir für jeden Patienten exakt die Zeit nehmen kann, die benötigt wird.
+                <strong>Wichtiger Hinweis:</strong> Aufgrund der individuellen Dauer und Raumplanung für medizinische Behandlungen ist eine direkte Online-Buchung für Erstanamnesen und Therapien nicht möglich. Dieser Weg stellt sicher, dass wir uns für jede Patientin exakt die Zeit nehmen können, die benötigt wird.
              </p>
           </div>
         </div>

@@ -223,7 +223,7 @@ export default function Blog() {
             <Sparkles className="mx-auto text-primary mb-6" size={32} />
             <h2 className="text-3xl md:text-4xl font-serif mb-6">Willst du tiefer eintauchen?</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-              Mein Onlinekurs bietet dir eine strukturierte Schritt-für-Schritt Begleitung,
+              Unser Onlinekurs bietet dir eine strukturierte Schritt-für-Schritt Begleitung,
               um deine Fruchtbarkeit ganzheitlich zu unterstützen.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

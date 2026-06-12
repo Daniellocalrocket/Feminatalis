@@ -193,7 +193,7 @@ const anwendungen = [
             <Gem className="w-16 h-16 text-accent mx-auto mb-6" />
             <h2 className="text-3xl lg:text-4xl font-serif mb-6">Kombination mit Mikronährstoffen</h2>
             <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              Für maximalen Effekt empfehle ich eine <strong>Kombination aus IHHT und Infusionen</strong>. Die Infusionen bereiten deine Zellen optimal vor, das IHHT aktiviert sie.
+               Für maximalen Effekt empfehlen wir eine <strong>Kombination aus IHHT und Infusionen</strong>. Die Infusionen bereiten deine Zellen optimal vor, das IHHT aktiviert sie.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary px-10 py-5 rounded-2xl font-bold hover:bg-accent hover:text-white transition-all inline-flex items-center gap-2">

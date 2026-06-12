@@ -51,7 +51,7 @@ const FAQ_DATA = [
       {
         question: "Ersetzt der Kurs einen Besuch beim Arzt?",
         answer:
-          "Nein, der Kurs ist als begleitende Unterstützung und Bildungsangebot konzipiert. Er ersetzt keine medizinische Diagnose oder Behandlung durch einen Arzt oder Heilpraktiker. Ich empfehle dir immer, medizinische Themen parallel fachärztlich abzuklären.",
+           "Nein, der Kurs ist als begleitende Unterstützung und Bildungsangebot konzipiert. Er ersetzt keine medizinische Diagnose oder Behandlung durch einen Arzt oder Heilpraktiker. Wir empfehlen dir immer, medizinische Themen parallel fachärztlich abzuklären.",
       },
       {
         question: "Ist der Kurs auch für Paare geeignet?",
@@ -135,7 +135,7 @@ export default function FAQ() {
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Hier findest du Antworten auf die wichtigsten Fragen rund um den
-              Kinderwunsch-Onlinekurs und meine Arbeit als Heilpraktikerin.
+               Kinderwunsch-Onlinekurs und unsere Arbeit als Heilpraktikerinnen.
             </p>
           </motion.div>
         </div>
@@ -202,8 +202,8 @@ export default function FAQ() {
               Deine Frage war nicht dabei?
             </h2>
             <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto">
-              Kein Problem! Schreib mir einfach eine Nachricht oder vereinbare ein
-              kostenloses Erstgespräch. Ich bin für dich da.
+               Kein Problem! Schreib uns einfach eine Nachricht oder vereinbare ein
+               kostenloses Erstgespräch. Wir sind für dich da.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button

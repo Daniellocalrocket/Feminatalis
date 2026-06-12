@@ -127,11 +127,11 @@ export default function Hebammenpraxis() {
                     Die Zell-Akku-Metapher
                   </h3>
                   <p className="text-primary/80">
-                    Stelle dir deine Zell-Energie wie einen Akku vor: Wer mit 20 % Ladung in die Geburt geht, riskiert Wehenschwäche, Erschöpfung und unnötige medizinische Eingriffe. Mein Ziel ist die 100-Prozent-Ladung – damit dein Körper die Geburt aus eigener Urkraft steuern kann.
+                     Stelle dir deine Zell-Energie wie einen Akku vor: Wer mit 20 % Ladung in die Geburt geht, riskiert Wehenschwäche, Erschöpfung und unnötige medizinische Eingriffe. Unser Ziel ist die 100-Prozent-Ladung – damit dein Körper die Geburt aus eigener Urkraft steuern kann.
                   </p>
                 </div>
                 <p className="font-medium text-primary">
-                  Ich biete KEINE Routine-Vorsorge an. Mein Fokus liegt exklusiv auf der physiologischen Optimierung deiner Ressourcen.
+                   Wir bieten KEINE Routine-Vorsorge an. Unser Fokus liegt exklusiv auf der physiologischen Optimierung deiner Ressourcen.
                 </p>
               </div>
             </div>
@@ -159,7 +159,7 @@ export default function Hebammenpraxis() {
       <section id="saeulen" className="py-32 bg-[#fff9f2]">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-20 max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6">Meine drei Säulen</h2>
+            <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6">Unsere drei Säulen</h2>
             <p className="text-xl text-muted-foreground">Drei Ebenen der Begleitung, die ineinandergreifen, um deine Geburt sicher und kraftvoll zu machen.</p>
           </div>
           

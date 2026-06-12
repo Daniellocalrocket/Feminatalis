@@ -18,7 +18,7 @@ export default function Vorqualifizierung() {
     <div className="bg-[#fff9f2] min-h-screen pt-24 pb-24">
       <SEO 
         title={`${pageTitle} | Feminatalis`}
-        description="Lernen wir uns kennen. Erzähle mir kurz, womit ich dir helfen darf, damit ich mich optimal auf unser Erstgespräch vorbereiten kann." 
+        description="Lernen wir uns kennen. Erzähle uns kurz, womit wir dir helfen dürfen, damit wir uns optimal auf unser Erstgespräch vorbereiten können." 
       />
       
       <div className="container mx-auto px-4 max-w-5xl">

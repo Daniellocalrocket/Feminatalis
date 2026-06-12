@@ -47,7 +47,7 @@ export default function Hormontherapie() {
               </p>
               <div className="bg-accent/5 p-8 rounded-[2.5rem] border-l-4 border-accent text-left mt-8 text-sm text-primary leading-relaxed font-medium">
                 <span className="font-bold text-accent uppercase tracking-widest text-[11px] block mb-2">Rechtlicher Hinweis & Wirkprinzip:</span>
-                Als Heilpraktikerin arbeite ich streng im Rahmen des deutschen Heilpraktikergesetzes. Da hochdosierte bioidentische Hormone in Reinform rezeptpflichtig sind und somit Ärzten unterliegen, nutzen wir in der Naturheilpraxis bioidentische Hormone ausschließlich in <strong>homöopathischen Zubereitungen (z.B. als Cremes oder Globuli in D4/D8-Potenzen)</strong>. Diese potenzierten Ursubstanzen wirken als sanfte, zelluläre Feedback-Impulse. Sie weisen den Körper an, seine eigene hormonelle Synthese und Steuerung wieder zu aktivieren – ganz ohne Nebenwirkungen oder Abhängigkeiten.
+                Als Heilpraktiker arbeiten wir streng im Rahmen des deutschen Heilpraktikergesetzes. Da hochdosierte bioidentische Hormone in Reinform rezeptpflichtig sind und somit Ärzten unterliegen, nutzen wir in der Naturheilpraxis bioidentische Hormone ausschließlich in <strong>homöopathischen Zubereitungen (z.B. als Cremes oder Globuli in D4/D8-Potenzen)</strong>. Diese potenzierten Ursubstanzen wirken als sanfte, zelluläre Feedback-Impulse. Sie weisen den Körper an, seine eigene hormonelle Synthese und Steuerung wieder zu aktivieren – ganz ohne Nebenwirkungen oder Abhängigkeiten.
               </div>
             </div>
           </div>

@@ -43,7 +43,7 @@ export default function Datenschutz() {
                 
                 <div className="grid sm:grid-cols-2 gap-4 text-sm">
                   <p><strong>Tel.:</strong> 07253 / 84 68 72 8</p>
-                  <p><strong>E-Mail:</strong> info@feminatalis.de</p>
+                  <p><strong>E-Mail:</strong> kontakt@feminatalis.de</p>
                   <p><strong>Inhaber:</strong> Angela Deschner</p>
                 </div>
               </div>

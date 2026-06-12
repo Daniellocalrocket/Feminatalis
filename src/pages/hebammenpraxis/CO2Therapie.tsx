@@ -98,7 +98,7 @@ export default function CO2TherapieHebamme() {
                 <div className="lg:w-2/3 text-left">
                   <h2 className="text-4xl lg:text-5xl font-serif mb-8 text-white font-bold leading-tight text-left">Die Hebammen-Perspektive</h2>
                   <p className="text-xl opacity-90 mb-10 leading-relaxed font-medium text-left">
-                    "In meiner langjährigen Erfahrung als Hebamme habe ich gesehen, wie entscheidend die metabolische Gesundheit für den Verlauf einer Schwangerschaft ist. Die CO2-Therapie ist ein sanfter Weg, um dem Körper die nötige Balance zurückzugeben – für einen entspannten Start ins Leben."
+                     "In unserer langjährigen Erfahrung als Hebammen haben wir gesehen, wie entscheidend die metabolische Gesundheit für den Verlauf einer Schwangerschaft ist. Die CO2-Therapie ist ein sanfter Weg, um dem Körper die nötige Balance zurückzugeben – für einen entspannten Start ins Leben."
                   </p>
                   <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary px-12 py-5 rounded-2xl font-bold hover:bg-accent hover:text-white transition-all shadow-xl inline-flex items-center gap-3">
                     Vorgespräch anfragen <ArrowRight size={20} />

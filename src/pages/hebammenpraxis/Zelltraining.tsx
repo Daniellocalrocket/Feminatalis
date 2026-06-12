@@ -152,7 +152,7 @@ export default function Zelltraining() {
                   <div className="w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center font-bold text-xl shrink-0">1</div>
                   <div>
                     <h4 className="font-bold text-primary text-xl mb-2">Analyse & Einstellung</h4>
-                    <p className="text-muted-foreground">Mithilfe des Bio-Health-Index (BHI) aus dem Blut und KI-Berechnung wird dein personalisiertes Trainingsprogramm erstellt.</p>
+                    <p className="text-muted-foreground">Anhand deiner Blutwerte wie ATP, Lipidperoxidation & Bio-Health-Index (BHI) wird dein personalisiertes Trainingsprogramm erstellt.</p>
                   </div>
                 </div>
                 <div className="flex gap-6">

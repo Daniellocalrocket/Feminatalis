@@ -298,7 +298,7 @@ export default function Home() {
                   step: "1",
                   title: "Telefonisches Vorgespräch",
                   time: "15 Min. (Kostenlos)",
-                  desc: "Wir besprechen kurz dein Anliegen – Symptome, Wünsche und Erwartungen. So kann ich einschätzen, ob ich dich sinnvoll unterstützen kann.",
+                   desc: "Wir besprechen kurz dein Anliegen – Symptome, Wünsche und Erwartungen. So können wir einschätzen, ob wir dich sinnvoll unterstützen können.",
                   icon: <Phone className="w-6 h-6" />
                 },
                 {
@@ -384,7 +384,7 @@ export default function Home() {
               Hebammenbegleitung im Wandel – <span className="text-accent italic">bewusst · vertieft · individuell</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Nach 33 Jahren Erfahrung fokussiere ich mich auf eine exklusive, tiefgreifende Begleitung. Ich nehme eine begrenzte Anzahl an Frauen auf, die über die Standard-Versorgung hinaus in ihre Gesundheit und Geburtskraft investieren möchten.
+               Nach 33 Jahren Erfahrung fokussieren wir uns auf eine exklusive, tiefgreifende Begleitung. Wir nehmen eine begrenzte Anzahl an Frauen auf, die über die Standard-Versorgung hinaus in ihre Gesundheit und Geburtskraft investieren möchten.
             </p>
           </div>
 
@@ -438,7 +438,7 @@ export default function Home() {
                 Das Standard-Kassensystem deckt nur das absolute Minimum ab. Wer jedoch eine wirklich selbstbestimmte, kraftvolle Geburt und eine schnelle Regeneration im Wochenbett erleben möchte, braucht mehr als nur "Routine-Vorsorge".
               </p>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Ich arbeite mit Frauen, die bereit sind, in Eigenverantwortung für ihre eigene und die Gesundheit ihrer Kinder zu handeln. Mein Fokus liegt auf Premium-Begleitung und fundiertem Wissen. Wer mit 20 % Ladung in die Geburt geht, riskiert Wehenschwäche und medizinische Eingriffe. Mein Ziel ist die 100-Prozent-Ladung deines „Zell-Akkus“.
+                Wir arbeiten mit Frauen, die bereit sind, in Eigenverantwortung für ihre eigene und die Gesundheit ihrer Kinder zu handeln. Unser Fokus liegt auf Premium-Begleitung und fundiertem Wissen. Wer mit 20 % Ladung in die Geburt geht, riskiert Wehenschwäche und medizinische Eingriffe. Unser Ziel ist die 100-Prozent-Ladung deines „Zell-Akkus“.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
                 <div><div className="text-3xl font-bold text-accent">33 J.</div><div className="text-xs font-black uppercase tracking-widest text-primary/60">Expertise</div></div>
@@ -552,7 +552,7 @@ export default function Home() {
                 Du bist nur so gesund wie deine Zellen. Chronische Erschöpfung, Burnout (CFS), hormonelle Dysbalancen und chronische Entzündungen haben ihre Ursache oft tief in den zellulären Kraftwerken – den <strong>Mitochondrien</strong>. 
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Als mein absoluter Praxisschwerpunkt untersuchen wir deine zelluläre Leistungsfähigkeit mittels modernster Spezial-Labordiagnostik. Wir machen Störungen sichtbar und bauen deine Energieproduktion (ATP) durch gezielten Nährstoffaufbau systematisch wieder auf.
+                Als unser absoluter Praxisschwerpunkt untersuchen wir deine zelluläre Leistungsfähigkeit mittels modernster Spezial-Labordiagnostik. Wir machen Störungen sichtbar und bauen deine Energieproduktion (ATP) durch gezielten Nährstoffaufbau systematisch wieder auf.
               </p>
               
               <ul className="space-y-4 mb-8">
@@ -689,7 +689,7 @@ export default function Home() {
               <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 inline-block">Expertin</span>
               <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6 leading-tight">Deine Expertin für ganzheitliche Gesundheit & Ursachenmedizin</h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Ich kombiniere meine Expertise aus drei Fachbereichen: Dem biochemischen Verständnis einer Heilpraktikerin, der Intuition einer erfahrenen Hebamme und modernster Präventivmedizin wie der IHHT-Mitochondrientherapie. Für einen Therapieansatz, der so einzigartig ist wie du selbst.
+                Wir kombinieren unsere Expertise aus drei Fachbereichen: Dem biochemischen Verständnis einer Heilpraktikerin, der Intuition einer erfahrenen Hebamme und modernster Präventivmedizin wie der IHHT-Mitochondrientherapie. Für einen Therapieansatz, der so einzigartig ist wie du selbst.
               </p>
               
               <div className="mb-8">
@@ -741,7 +741,7 @@ export default function Home() {
                 Lernen wir <span className="text-accent underline decoration-accent/20 underline-offset-8">uns kennen</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Meine Programme erfordern deine aktive Mitarbeit und die Bereitschaft, Verantwortung für deine Gesundheit zu übernehmen. Damit wir herausfinden, ob meine Philosophie und deine Ziele zusammenpassen, hilft mir ein kurzer Vorab-Check.
+                Unsere Programme erfordern deine aktive Mitarbeit und die Bereitschaft, Verantwortung für deine Gesundheit zu übernehmen. Damit wir herausfinden, ob unsere Philosophie und deine Ziele zusammenpassen, hilft uns ein kurzer Vorab-Check.
               </p>
               
               <div className="grid sm:grid-cols-2 gap-6 mb-10">
@@ -771,7 +771,7 @@ export default function Home() {
             <div className="w-full lg:w-5/12 relative z-10">
               <div className="aspect-[4/3] bg-white rounded-[2.5rem] border border-orange-100 flex items-center justify-center p-8 text-center bg-[url('/src/assets/images/pattern-dot.svg')] bg-repeat shadow-sm">
                 <div className="space-y-4">
-                  <p className="text-4xl font-serif text-primary italic">„Ich freue mich <br /> auf dich!“</p>
+                  <p className="text-4xl font-serif text-primary italic">„Wir freuen uns <br /> auf dich!“</p>
                   <p className="text-sm font-bold text-accent uppercase tracking-widest italic">— Angela Deschner</p>
                 </div>
               </div>
@@ -803,7 +803,7 @@ export default function Home() {
                   <div className="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-accent shrink-0 border border-orange-100"><Mail className="w-5 h-5"/></div>
                   <div>
                     <div className="font-bold text-primary mb-1 text-sm">E-Mail</div>
-                    <a href="mailto:info@feminatalis.de" className="text-muted-foreground hover:text-accent font-medium text-sm">info@feminatalis.de</a>
+                    <a href="mailto:kontakt@feminatalis.de" className="text-muted-foreground hover:text-accent font-medium text-sm">kontakt@feminatalis.de</a>
                   </div>
                 </div>
               </div>
@@ -963,7 +963,7 @@ export default function Home() {
                 Über die Praxis hinaus.
               </h2>
               <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl">
-                Wusstest du, dass ich fast täglich Wissen aus 33 Jahren Hebammenkunst und funktioneller Medizin auf Instagram teile? Folge mir für echte Tipps, Q&As und einen Blick hinter die Kulissen.
+                Wusstest du, dass wir fast täglich Wissen aus 33 Jahren Hebammenkunst und funktioneller Medizin auf Instagram teilen? Folge uns für echte Tipps, Q&As und einen Blick hinter die Kulissen.
               </p>
               
               <ul className="grid sm:grid-cols-2 gap-4">

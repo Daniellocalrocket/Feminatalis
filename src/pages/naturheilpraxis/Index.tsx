@@ -168,10 +168,11 @@ export default function Naturheilpraxis() {
                 </div>
                 <div className="flex flex-col gap-5 text-left">
                   {[
-                    { title: "Long-Covid & Chronic Fatigue", path: ROUTE_PATHS.LONG_COVID },
-                    { title: "Ganzheitlicher Kinderwunsch", path: ROUTE_PATHS.KINDERWUNSCH },
                     { title: "Mitochondrien-Medizin", path: ROUTE_PATHS.MITOCHONDRIEN },
-                    { title: "Hormonelle Dysbalancen", path: ROUTE_PATHS.HORMONTHERAPIE }
+                    { title: "Ganzheitlicher Kinderwunsch", path: ROUTE_PATHS.KINDERWUNSCH },
+                    { title: "Hormonelle Dysbalancen", path: ROUTE_PATHS.HORMONTHERAPIE },
+                    { title: "Long-Covid & Chronic Fatigue", path: ROUTE_PATHS.LONG_COVID },
+                    { title: "Allergiebehandlung", path: ROUTE_PATHS.ALLERGIE }
                   ].map((spec, i) => (
                     <Link key={i} to={spec.path} className="flex items-center justify-between p-6 lg:p-8 bg-white rounded-3xl border border-border hover:border-accent hover:shadow-lg transition-all group shadow-sm text-left">
                        <span className="font-bold text-primary text-xl font-serif">{spec.title}</span>

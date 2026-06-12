@@ -101,7 +101,7 @@ export default function Labor() {
               Häufige Untersuchungen <br /><span className="text-accent italic font-light">in unserer Praxis</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
-              Ich arbeite mit 5 Laboren zusammen, die sich auf die Untersuchungen des Stoffwechsels, des Mikrobioms und der Mitochondrien-Funktion spezialisiert haben. Diese Untersuchungen liefern wertvolle Informationen über den tatsächlichen Zustand der körperlichen Funktionen und eignen sich sehr gut für eine frühe Prophylaxe vieler lebensstilbedingter Krankheiten.
+               Wir arbeiten mit 5 Laboren zusammen, die sich auf die Untersuchungen des Stoffwechsels, des Mikrobioms und der Mitochondrien-Funktion spezialisiert haben. Diese Untersuchungen liefern wertvolle Informationen über den tatsächlichen Zustand der körperlichen Funktionen und eignen sich sehr gut für eine frühe Prophylaxe vieler lebensstilbedingter Krankheiten.
             </p>
             <p className="text-muted-foreground text-base max-w-3xl mx-auto mt-4 leading-relaxed bg-amber-50 border border-amber-200 rounded-2xl px-6 py-4">
               <strong>Hinweis:</strong> Die meisten dieser Untersuchungen sind sogenannte IGeL (Individuelle Gesundheits-Leistungen) und werden fast nur von privaten Krankenversicherungsanbietern bezahlt.

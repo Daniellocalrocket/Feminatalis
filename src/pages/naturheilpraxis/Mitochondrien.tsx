@@ -380,7 +380,7 @@ export default function Mitochondrien() {
                     rel="noopener noreferrer" 
                     className="inline-flex items-center gap-1.5 text-xs font-bold text-accent hover:text-orange-600 transition-colors mt-auto"
                   >
-                    Lehrfilm auf YouTube suchen <ArrowRight size={12} />
+                    Auf Studyflix ansehen <ArrowRight size={12} />
                   </a>
                 </div>
               ))}

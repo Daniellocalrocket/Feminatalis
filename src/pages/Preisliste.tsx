@@ -252,7 +252,7 @@ export default function Preisliste() {
             <div className="relative z-10">
               <h2 className="text-3xl font-serif mb-6">Hast du Fragen zur Abrechnung?</h2>
               <p className="text-primary-foreground/80 mb-10 max-w-xl mx-auto text-lg leading-relaxed">
-                Ich berate dich gerne individuell, welcher Weg für deine Situation am sinnvollsten ist. Kontaktiere mich einfach für ein kurzes Telefonat.
+                Wir beraten dich gerne individuell, welcher Weg für deine Situation am sinnvollsten ist. Kontaktiere uns einfach für ein kurzes Telefonat.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link 
