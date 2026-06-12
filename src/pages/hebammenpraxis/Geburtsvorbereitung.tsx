@@ -30,8 +30,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 export default function Geburtsvorbereitung() {
   const schedule = [
-    { day: "Samstag", time: "09:00 – 16:30 Uhr", focus: "Geburtsvorbereitung intensiv: Geburtsphasen, Atemtechniken, Körperarbeit & Partner-Support" },
-    { day: "Sonntag", time: "09:00 – 15:30 Uhr", focus: "Nachsorge & Familie: Wochenbett, Stillzeit, Säuglingspflege & Neugeborenen-Bedürfnisse" }
+    { day: "Freitag", time: "18:00 – 21:15 Uhr", focus: "Kennenlernen, Erste Atemtechniken, Beckenboden, Geburtsort-Wahl, Entspannungsübungen" },
+    { day: "Samstag", time: "09:00 – 16:30 Uhr", focus: "Schmerz-Management, Körperarbeit, Hormone, Partner-Support, Kaiserschnitt, Stillen" },
+    { day: "Sonntag", time: "09:00 – 15:30 Uhr", focus: "Geburtsphasen & Positionen, Atemtechniken, Freiwillige Prophylaxen beim Kind, Wochenbett, Geburtsbrief, weitere geburtsvorbereitende Maßnahmen" }
   ];
 
   const detailModules = [

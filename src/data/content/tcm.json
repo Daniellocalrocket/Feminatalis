@@ -2,7 +2,7 @@
   "hero": {
     "badge": "Traditionelle Chinesische Medizin",
     "title": "Wieder im Fluss sein:",
-    "titleAccent": "TCM & Frauenheilkunde",
+    "titleAccent": "TCM für Körper & Geist",
     "subtitle": "Wenn das Qi frei flie\u00dft, ist der Mensch gesund. Wir nutzen jahrtausendealte Weisheit, um Blockaden zu l\u00f6sen, deine Selbstheilungskr\u00e4fte zu wecken und Yin und Yang wieder in Einklang zu bringen. Sanft, ganzheitlich und tief wirksam."
   },
   "philosophy": {
@@ -10,7 +10,7 @@
     "headlineAccent": "im Spiegel der Natur",
     "paragraphs": [
       "In der TCM betrachten wir dich als dynamisches System. Die 5 Wandlungsphasen \u2013 <strong>Holz, Feuer, Erde, Metall und Wasser</strong> \u2013 spiegeln sich in deinen Organen und Emotionen wider. Unsere Diagnostik durch <strong>Puls- und Zungenschau</strong> erm\u00f6glicht uns einen tiefen Blick in diesen energetischen Status, lange bevor sich Symptome im Labor zeigen.",
-      "Besonders bei Frauenthemen wie <strong>Endometriose, PCOS, schmerzhaften Zyklen oder Wechseljahresbeschwerden</strong> bietet die TCM L\u00f6sungen, die \u00fcber die rein hormonelle Betrachtung hinausgehen. Wir regulieren das Blut (Xue) und bes\u00e4nftigen den Geist (Shen)."
+      "Besonders bei Frauenthemen wie Endometriose, PCOS, schmerzhaften Zyklen oder Wechseljahresbeschwerden bietet die TCM L\u00f6sungen, die \u00fcber die rein hormonelle Betrachtung hinausgehen. Auch bei M\u00e4nnerthemen wie Prostatabeschwerden, Ersch\u00f6pfungszust\u00e4nden oder Stoffwechselst\u00f6rungen kann die TCM ihre St\u00e4rken ausspielen. Wir regulieren das Blut (Xue) und bes\u00e4nftigen den Geist (Shen) \u2013 unabh\u00e4ngig vom Geschlecht."
     ]
   },
   "pillars": [
@@ -162,8 +162,8 @@
     "preisHint": "Pro Sitzung (10-15 Min.)"
   },
   "cta": {
-    "headline": "Balance f\u00fcr die Frau",
-    "quote": "In der TCM wird die Frau oft mit dem Element Wasser und dem Blut assoziiert. Wir nutzen Akupunktur und die Lehren der 5-Elemente-Ern\u00e4hrung, um den Zyklus sanft zu regulieren, Entz\u00fcndungen zu beruhigen und den K\u00f6rper optimal vorzubereiten.",
+    "headline": "Balance f\u00fcr K\u00f6rper & Geist",
+    "quote": "In der TCM betrachten wir den Menschen als Teil eines gro\u00dfen Ganzen. Wir nutzen Akupunktur und die Lehren der 5-Elemente-Ern\u00e4hrung, um Blockaden zu l\u00f6sen, Entz\u00fcndungen zu beruhigen und deine Selbstheilungskr\u00e4fte zu aktivieren \u2013 ob Frau oder Mann.",
     "qiCheck": "L\u00f6se Stagnationen, f\u00fclle deine Reserven auf und finde zur\u00fcck zu deiner nat\u00fcrlichen Lebenskraft."
   }
 }

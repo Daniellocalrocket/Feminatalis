@@ -16,9 +16,9 @@ export default function ZelltrainingSchwangerschaft() {
 
 const anwendungen = [
     "Unterstützung einer gesunden Stoffwechselleistung",
-    "Übelkeit & Erschöpfung",
+    "Müdigkeit & Erschöpfung",
     "Förderung der Durchblutung",
-    "Ödeme & Wassereinlagerungen",
+    "Regulierung des vegetativen Nervensystems und Entspannungsfördernd",
     "Geburtsvorbereitung"
   ];
 

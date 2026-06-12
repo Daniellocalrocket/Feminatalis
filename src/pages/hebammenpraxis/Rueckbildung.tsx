@@ -3,7 +3,7 @@ import SplitScreenHero from "@/components/SplitScreenHero";
 import PreisTransparenz from "@/components/PreisTransparenz";
 import { Link } from "react-router-dom";
 import { ROUTE_PATHS } from "@/lib/index";
-import { ArrowRight, Activity, ShieldCheck, Target, Heart, Users, Clock, CheckCircle2, Baby } from "lucide-react";
+import { ArrowRight, BookOpen, Heart, Users, Clock, CheckCircle2, Baby } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Rueckbildung() {
@@ -14,10 +14,10 @@ export default function Rueckbildung() {
   ];
 
   const kursInhalte = [
-    { title: "Sanftes Ankommen & Aufwärmen", desc: "Körper schonend auf die Übungen vorbereiten.", icon: Heart },
-    { title: "Beckenboden & Körpermitte", desc: "Gezielte Kräftigung von Beckenboden, Bauch und Rücken.", icon: Activity },
-    { title: "Haltung & Alltag", desc: "Ergänzende Übungen für bessere Haltung und Alltagsstabilität.", icon: ShieldCheck },
-    { title: "Dehnung & Entspannung", desc: "Sanfter Abschluss mit Stretching und Entspannung.", icon: Target }
+    { title: "Sanftes Ankommen & Aufwärmen", desc: "Körper schonend auf die Übungen vorbereiten.", icon: BookOpen },
+    { title: "Kräftigung & Stabilität", desc: "Gezielte Übungen für Beckenboden, Bauch, Beine, Po & Rücken.", icon: BookOpen },
+    { title: "Haltung & Alltag", desc: "Ergänzende Übungen für bessere Haltung und Alltagsstabilität.", icon: BookOpen },
+    { title: "Dehnung & Entspannung", desc: "Sanfter Abschluss mit Stretching und Entspannung.", icon: BookOpen }
   ];
 
   const vorteile = [

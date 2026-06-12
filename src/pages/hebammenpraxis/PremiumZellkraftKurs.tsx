@@ -43,11 +43,11 @@ export default function PremiumZellkraftKurs() {
              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#fde4c8] border border-[#e2d2c2] text-primary text-sm font-bold tracking-widest uppercase mb-8 shadow-sm">
                <Zap size={16} className="text-accent" /> Premium Kursprogramm
              </div>
-            <h1 className="text-5xl md:text-7xl font-serif text-primary mb-6 leading-[1.1]">
+            <h1 className="text-4xl md:text-7xl font-serif text-primary mb-6 leading-[1.1]">
               Der Zellkraft- <br />
               Geburtskompass.
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl">
+            <p className="text-lg md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl">
               Transformiere dich von der bloßen Informationsempfängerin zur informierten <strong className="text-primary">Architektin der kindlichen Entwicklung</strong>. 
               Wir ersetzen alte Mythen durch biologische Wahrheiten – mit radikalem Fokus auf bioenergetische Optimierung (Mitochondrien) und physiologischer Sicherheit.
             </p>

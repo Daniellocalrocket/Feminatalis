@@ -33,14 +33,14 @@ export default function TCM() {
     <div className="bg-background min-h-screen font-sans">
       <SEO 
         title="Traditionelle Chinesische Medizin (TCM) | Naturheilpraxis feminatalis" 
-        description="Ganzheitliche Heilung durch Akupunktur, Schröpfen, Moxa und Aku-Taping. Entdecke die Kraft der TCM in der Frauenheilkunde." 
+        description="Ganzheitliche Heilung durch Akupunktur, Schröpfen, Moxa und Aku-Taping. Entdecke die Kraft der TCM für Körper und Geist." 
       />
 
       <SplitScreenHero
         badge={hero.badge}
         title={<>Wieder im Fluss sein: <br /><span className="text-accent italic font-light">{hero.titleAccent}</span></>}
         subtitle={hero.subtitle}
-        imageSrc="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=2070&auto=format&fit=crop"
+        imageSrc="/suction-cups-therapy-session-close-up.jpg"
         imageAlt="TCM Behandlung und Akupunktur"
         imageKey="img_hero_tcm"
       >

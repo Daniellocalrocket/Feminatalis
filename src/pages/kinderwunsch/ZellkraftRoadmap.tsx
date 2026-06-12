@@ -47,11 +47,11 @@ export default function ZellkraftRoadmap() {
              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#fde4c8] border border-[#e2d2c2] text-primary text-sm font-bold tracking-widest uppercase mb-8 shadow-sm">
                <Zap size={16} className="text-accent" /> Premium Online-Programm
              </div>
-            <h1 className="text-5xl md:text-7xl font-serif text-primary mb-6 leading-[1.1]">
+            <h1 className="text-4xl md:text-7xl font-serif text-primary mb-6 leading-[1.1]">
               Fruchtbarkeits-Kompass:<br />
               Zellenergie-Fahrplan.
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl">
+            <p className="text-lg md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl">
               Vom Informationschaos zur Strategie. Hör auf zu suchen, fang an zu steuern. Dein medizinisch fundierter <strong className="text-primary">90-Tage-Kurs</strong> für Frauen, die ihren Kinderwunsch nicht mehr dem Zufall überlassen wollen – mit radikalem Fokus auf Mitochondrien.
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
