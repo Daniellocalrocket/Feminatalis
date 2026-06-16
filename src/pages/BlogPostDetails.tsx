@@ -51,7 +51,7 @@ export default function BlogPostDetails() {
     return (
       <div className="min-h-screen bg-background pt-32 pb-20 flex justify-center text-center px-4">
         <div className="max-w-md">
-          <BookOpen className="w-16 h-16 mx-auto opacity-10 mb-6" />
+          <BookOpen className="w-16 h-16 mx-auto opacity-10 mb-6 text-primary" />
           <h1 className="text-3xl font-serif text-primary mb-4">Artikel nicht gefunden</h1>
           <p className="text-muted-foreground mb-8">
             Dieser Beitrag existiert leider nicht oder wurde offline genommen.

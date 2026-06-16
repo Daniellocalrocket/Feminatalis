@@ -65,7 +65,7 @@ export default function Kinderwunsch() {
               { title: "Zellkraft-Roadmap", desc: "Dein individueller Fahrplan durch den Dschungel der Möglichkeiten.", icon: <Target />, path: ROUTE_PATHS.ZELLKRAFT_ROADMAP }
             ].map((item, i) => (
               <Link to={item.path} key={i} className="bg-white p-10 rounded-[3rem] border border-border hover:border-accent transition-all hover:shadow-xl group">
-                <div className="bg-muted/30 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-all duration-500">
+                <div className="bg-muted/30 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-primary group-hover:bg-accent group-hover:text-white transition-all duration-500">
                    {React.cloneElement(item.icon as React.ReactElement, { className: "w-8 h-8" })}
                 </div>
                 <h4 className="font-bold text-primary mb-3 font-serif text-xl leading-tight group-hover:text-accent transition-colors">{item.title}</h4>

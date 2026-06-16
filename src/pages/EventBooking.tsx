@@ -376,7 +376,7 @@ export default function EventBooking() {
                       )}
                     </Button>
                     
-                    <div className="flex items-center justify-center gap-6 opacity-30 pt-4">
+                    <div className="flex items-center justify-center gap-6 opacity-30 pt-4 text-primary">
                       <Sparkles size={16} />
                       <p className="text-[10px] font-bold uppercase tracking-[0.2em]">Sichere SSL-Verschlüsselung</p>
                       <Sparkles size={16} />

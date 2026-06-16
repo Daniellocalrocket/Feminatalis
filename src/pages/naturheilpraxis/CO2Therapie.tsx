@@ -75,7 +75,7 @@ export default function CO2Therapie() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-left mb-24">
             {anwendungsbereiche.map((item, i) => (
               <div key={i} className="bg-white p-10 rounded-[3.5rem] border border-border hover:border-accent transition-all hover:shadow-2xl group flex flex-col h-full">
-                <div className="bg-muted/50 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-accent group-hover:text-white transition-all duration-500 shadow-sm">
+                <div className="bg-muted/50 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 text-primary group-hover:bg-accent group-hover:text-white transition-all duration-500 shadow-sm">
                    {item.icon}
                 </div>
                 <h4 className="font-bold text-primary mb-4 font-serif text-2xl leading-tight">{item.title}</h4>

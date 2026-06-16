@@ -113,7 +113,7 @@ export default function BrainLight() {
                 <div className="space-y-10 text-left">
                   {features.map((f, i) => (
                     <div key={i} className="flex gap-6 text-left items-start group">
-                      <div className="bg-primary/5 w-16 h-16 rounded-[1.5rem] flex items-center justify-center shrink-0 border border-primary/10 group-hover:bg-accent group-hover:text-white transition-all duration-500 shadow-sm">
+                      <div className="bg-primary/5 w-16 h-16 rounded-[1.5rem] flex items-center justify-center shrink-0 border border-primary/10 text-primary group-hover:bg-accent group-hover:text-white transition-all duration-500 shadow-sm">
                         {f.icon}
                       </div>
                       <div className="text-left">
