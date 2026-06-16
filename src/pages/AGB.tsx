@@ -30,7 +30,7 @@ export default function AGB() {
           <div className="prose prose-slate max-w-none space-y-16 text-muted-foreground leading-relaxed">
             
             <section>
-              <h2 className="text-2xl font-serif text-primary mb-4">Allgemeine Geschäftsbedingungen für Präsenz- und Online-Veranstaltungen</h2>
+              <h2 className="text-xl sm:text-2xl font-serif text-primary mb-8">Allgemeine Geschäftsbedingungen für Präsenz- und Online-Veranstaltungen</h2>
               <p className="text-lg mb-8">
                 Veranstalterin: Angela Deschner – Heilpraktikerin & Hebamme<br />
                 Hebammen- und Naturheilpraxis feminatalis / cosMedea<br />
@@ -40,7 +40,7 @@ export default function AGB() {
             </section>
 
             <section>
-              <h2 className="text-2xl sm:text-3xl font-serif text-primary mb-8">
+              <h2 className="text-xl sm:text-2xl font-serif text-primary mb-8">
                 § 1 Geltungsbereich, Anbieterin, Begriffe
               </h2>
               <div className="space-y-4">
@@ -62,7 +62,7 @@ export default function AGB() {
             </section>
 
             <section>
-              <h2 className="text-2xl sm:text-3xl font-serif text-primary mb-8">
+              <h2 className="text-xl sm:text-2xl font-serif text-primary mb-8">
                 § 2 Anmeldung, Vertragsschluss
               </h2>
               <div className="space-y-4">
@@ -79,7 +79,7 @@ export default function AGB() {
             </section>
 
             <section>
-              <h2 className="text-2xl sm:text-3xl font-serif text-primary mb-8">
+              <h2 className="text-xl sm:text-2xl font-serif text-primary mb-8">
                 § 3 Veranstaltungsort, Online-Durchführung, Änderungen
               </h2>
               <div className="space-y-4">
@@ -93,7 +93,7 @@ export default function AGB() {
             </section>
 
             <section>
-              <h2 className="text-2xl sm:text-3xl font-serif text-primary mb-8">
+              <h2 className="text-xl sm:text-2xl font-serif text-primary mb-8">
                 § 4 Teilnahmegebühren, Zahlungsbedingungen
               </h2>
               <div className="space-y-6">
@@ -128,7 +128,7 @@ export default function AGB() {
             </section>
 
             <section>
-              <h2 className="text-2xl sm:text-3xl font-serif text-primary mb-8">
+              <h2 className="text-xl sm:text-2xl font-serif text-primary mb-8">
                 § 5 Bankverbindung
               </h2>
               <p>Die Bankverbindung wird im Rahmen der Buchung mitgeteilt.</p>
@@ -136,12 +136,12 @@ export default function AGB() {
 
             {/* § 6 */}
             <section>
-              <h2 className="text-3xl font-serif text-primary mb-8">§ 6 Pausen / Verpflegung</h2>
+              <h2 className="text-xl sm:text-2xl font-serif text-primary mb-8">§ 6 Pausen / Verpflegung</h2>
               <p>Bei längeren Veranstaltungen können Pausen vorgesehen sein. Teilnehmer sind selbst für gesundheitliche Besonderheiten oder Lebensmittelunverträglichkeiten verantwortlich.</p>
             </section>
 
             <section>
-              <h2 className="text-2xl sm:text-3xl font-serif text-primary mb-8">
+              <h2 className="text-xl sm:text-2xl font-serif text-primary mb-8">
                 § 7 Rücktritt, Stornierung, Umbuchung, Ersatzperson
               </h2>
               <div className="space-y-6">
@@ -173,7 +173,7 @@ export default function AGB() {
 
             {/* § 8 */}
             <section>
-              <h2 className="text-3xl font-serif text-primary mb-8">§ 8 Nichtteilnahme / Fehlzeiten</h2>
+              <h2 className="text-xl sm:text-2xl font-serif text-primary mb-8">§ 8 Nichtteilnahme / Fehlzeiten</h2>
               <div className="space-y-4">
                 <p>Bei Nichterscheinen oder versäumten Terminen besteht grundsätzlich kein Anspruch auf Erstattung.</p>
                 <p>Nicht wahrgenommene Kursstunden kassenfähiger Hebammenkurse können nicht über die gesetzliche Krankenkasse abgerechnet werden und werden daher der Teilnehmerin privat als Ausfallhonorar in Rechnung gestellt.</p>
@@ -184,7 +184,7 @@ export default function AGB() {
 
             {/* § 9 */}
             <section>
-              <h2 className="text-3xl font-serif text-primary mb-8">§ 9 Absage oder Verlegung durch die Veranstalterin</h2>
+              <h2 className="text-xl sm:text-2xl font-serif text-primary mb-8">§ 9 Absage oder Verlegung durch die Veranstalterin</h2>
               <div className="space-y-4">
                 <p>Die Veranstalterin kann Termine aus wichtigem Grund absagen oder verlegen.</p>
                 <p>Bereits gezahlte Gebühren werden anteilig oder vollständig erstattet, sofern kein Ersatztermin angeboten wird.</p>
@@ -193,7 +193,7 @@ export default function AGB() {
             </section>
 
             <section>
-              <h2 className="text-2xl sm:text-3xl font-serif text-primary mb-8">
+              <h2 className="text-xl sm:text-2xl font-serif text-primary mb-8">
                 § 10 Datenschutz, Vertraulichkeit
               </h2>
               <div className="space-y-4">
@@ -205,7 +205,7 @@ export default function AGB() {
 
             {/* § 11 */}
             <section className="bg-primary/5 p-5 sm:p-10 rounded-[1.5rem] sm:rounded-[3rem] border border-primary/10">
-              <h2 className="text-2xl sm:text-3xl font-serif text-primary mb-6">
+              <h2 className="text-xl sm:text-2xl font-serif text-primary mb-6">
                 § 11 Gesundheitlicher Hinweis / Eigenverantwortung
               </h2>
               <div className="space-y-4">
@@ -217,7 +217,7 @@ export default function AGB() {
 
             {/* § 12 */}
             <section>
-              <h2 className="text-3xl font-serif text-primary mb-8">§ 12 Haftung</h2>
+              <h2 className="text-xl sm:text-2xl font-serif text-primary mb-8">§ 12 Haftung</h2>
               <div className="space-y-4">
                 <p>Die Veranstalterin haftet unbeschränkt bei Vorsatz, grober Fahrlässigkeit sowie bei Schäden an Leben, Körper oder Gesundheit.</p>
                 <p>Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten haftet die Veranstalterin nur auf den vorhersehbaren vertragstypischen Schaden.</p>
@@ -228,21 +228,21 @@ export default function AGB() {
 
             {/* § 13 */}
             <section>
-              <h2 className="text-3xl font-serif text-primary mb-8">§ 13 Urheberrecht</h2>
+              <h2 className="text-xl sm:text-2xl font-serif text-primary mb-8">§ 13 Urheberrecht</h2>
               <p>Alle Unterlagen und Inhalte sind urheberrechtlich geschützt.</p>
               <p>Eine Weitergabe, Veröffentlichung oder Vervielfältigung ist ohne schriftliche Zustimmung unzulässig.</p>
             </section>
 
             {/* § 14 */}
             <section>
-              <h2 className="text-3xl font-serif text-primary mb-8">§ 14 Bild- und Tonaufnahmen</h2>
+              <h2 className="text-xl sm:text-2xl font-serif text-primary mb-8">§ 14 Bild- und Tonaufnahmen</h2>
               <p>Bild-, Ton- oder Bildschirmaufzeichnungen durch Teilnehmer sind nur mit vorheriger Zustimmung zulässig.</p>
               <p>Gleiches gilt für Veröffentlichungen außerhalb privater Zwecke.</p>
             </section>
 
             {/* § 15 */}
             <section className="bg-accent/5 p-5 sm:p-10 rounded-[1.5rem] sm:rounded-[3rem] border border-border">
-              <h2 className="text-2xl sm:text-3xl font-serif text-primary mb-8">
+              <h2 className="text-xl sm:text-2xl font-serif text-primary mb-8">
                 § 15 Widerrufsrecht, digitale Inhalte und Online-Angebote
               </h2>
               <div className="space-y-4">
@@ -261,7 +261,7 @@ export default function AGB() {
 
             {/* § 16 */}
             <section>
-              <h2 className="text-3xl font-serif text-primary mb-8">§ 16 Anwendbares Recht, Gerichtsstand</h2>
+              <h2 className="text-xl sm:text-2xl font-serif text-primary mb-8">§ 16 Anwendbares Recht, Gerichtsstand</h2>
               <p>Es gilt deutsches Recht.</p>
               <p>Gegenüber Verbrauchern gilt der gesetzliche Gerichtsstand.</p>
               <p>Gegenüber Unternehmern ist – soweit zulässig – Gerichtsstand der Sitz der Veranstalterin.</p>
@@ -269,7 +269,7 @@ export default function AGB() {
 
             {/* § 17 */}
             <section>
-              <h2 className="text-3xl font-serif text-primary mb-8">§ 17 Salvatorische Klausel</h2>
+              <h2 className="text-xl sm:text-2xl font-serif text-primary mb-8">§ 17 Salvatorische Klausel</h2>
               <p>Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.</p>
             </section>
 

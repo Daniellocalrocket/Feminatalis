@@ -30,7 +30,8 @@ import {
   AlertCircle,
   Copy,
   Check,
-  ChevronLeft
+  ChevronLeft,
+  Image
 } from "lucide-react";
 import { 
   Dialog, 

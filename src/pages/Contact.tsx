@@ -155,7 +155,7 @@ export default function Contact() {
             <p className="text-muted-foreground font-medium italic">Qualität erfordert Zeit und die richtige Entscheidung auf beiden Seiten.</p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 relative">
             {/* Steps line for desktop */}
             <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-primary/10 -translate-y-1/2 -z-0" />
             
@@ -179,6 +179,11 @@ export default function Contact() {
                 step: "04", 
                 title: "Individueller Therapievorschlag & transparentes Angebot", 
                 desc: "Konkrete Ausarbeitung der Begleitung und Behandlung. Hier besprechen wir den maßgeschneiderten Therapieplan sowie alle anfallenden finanziellen Details absolut transparent." 
+              },
+              { 
+                step: "05", 
+                title: "Behandlung & Umsetzung", 
+                desc: "Wir setzen deinen Behandlungsplan konsequent um. In regelmäßigen Sitzungen arbeiten wir genau an dem, was dich jetzt am stärksten voranbringt – von akuter Linderung bis hin zur Ursachenbehandlung." 
               }
             ].map((item, idx) => (
               <motion.div 

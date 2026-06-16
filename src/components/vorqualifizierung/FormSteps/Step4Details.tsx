@@ -149,7 +149,7 @@ export default function Step3Details() {
           </div>
 
           <div className="space-y-4 relative z-10">
-            <Label className="text-sm font-bold text-primary opacity-60 uppercase">IHR HAUPTANLIEGEN IN EINEM SATZ</Label>
+            <Label className="text-sm font-bold text-primary opacity-60 uppercase">DEIN HAUPTANLIEGEN IN EINEM SATZ</Label>
             <Textarea 
               {...register("mainConcern")} 
               placeholder="Was beschäftigt dich aktuell am meisten?" 
