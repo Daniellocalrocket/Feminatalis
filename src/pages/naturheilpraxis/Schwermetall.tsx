@@ -3,7 +3,7 @@ import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
 import PreisTransparenz from "@/components/PreisTransparenz";
-import { ShieldAlert, Syringe, Droplets, ArrowRight, CheckCircle2, FlaskConical, AlertTriangle, BatteryLow, TestTube } from "lucide-react";
+import { ShieldAlert, ShieldCheck, Syringe, Droplets, ArrowRight, CheckCircle2, FlaskConical, BatteryLow, TestTube } from "lucide-react";
 import SplitScreenHero from "@/components/SplitScreenHero";
 
 export default function Schwermetall() {
@@ -102,10 +102,10 @@ export default function Schwermetall() {
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16 text-center">
-             <AlertTriangle className="w-16 h-16 text-accent mx-auto mb-6 animate-pulse" />
+             <ShieldCheck className="w-16 h-16 text-accent mx-auto mb-6" />
              <h2 className="text-3xl lg:text-5xl font-serif text-white font-bold text-center mb-6">Die Chelat-Therapie</h2>
-             <p className="text-white/80 font-medium mt-4 text-center max-w-2xl mx-auto italic text-lg">
-               Sicher, evidenzbasiert und laborgeprüft. Wir raten dringend von "Eigenversuchen" mit Algen oder Koriander ab, da ungebundene Gifte im Gehirn zu schweren Umverteilungsschäden führen können.
+             <p className="text-white/80 font-medium mt-4 text-center max-w-3xl mx-auto text-lg">
+               Die Chelat-Therapie ist eine der wirkungsvollsten Methoden, um den Körper von Schwermetallen zu befreien. Sie unterstützt die Zellregeneration, entlastet den Stoffwechsel und schafft die Grundlage für mehr Energie, geistige Klarheit und eine starke Immunabwehr – sicher und unter laborgeprüfter Kontrolle.
              </p>
           </div>
           
