@@ -16,7 +16,6 @@ export default function Rueckbildung() {
   const kursInhalte = [
     { title: "Sanftes Ankommen & Aufwärmen", desc: "Körper schonend auf die Übungen vorbereiten.", icon: BookOpen },
     { title: "Kräftigung & Stabilität", desc: "Gezielte Übungen für Beckenboden, Bauch, Beine, Po & Rücken.", icon: BookOpen },
-    { title: "Haltung & Alltag", desc: "Ergänzende Übungen für bessere Haltung und Alltagsstabilität.", icon: BookOpen },
     { title: "Dehnung & Entspannung", desc: "Sanfter Abschluss mit Stretching und Entspannung.", icon: BookOpen }
   ];
 
@@ -73,12 +72,12 @@ export default function Rueckbildung() {
                   Darum ist der Kurs **ohne Babys** geplant. So kannst du diese Zeit voll für dich nutzen, in Ruhe üben und dich wirklich auf deinen Körper konzentrieren. Wenn möglich, organisiere bitte für die Kurszeit eine Betreuung – so wird die Rückbildung für dich deutlich entspannter und effektiver.
                 </p>
                 <div className="bg-accent/5 p-8 rounded-[2rem] border-l-4 border-accent text-sm text-primary font-medium space-y-3">
-                  <h4 className="font-bold text-base">Neurophysiologische Begründung</h4>
+                  <h4 className="font-bold text-base">Ganz bei dir sein</h4>
                   <p className="leading-relaxed">
-                    Aus neurobiologischer und physiotherapeutischer Sicht ist Rückbildung weit mehr als nur ein bisschen Gymnastik – es ist ein hochpräzises neuromuskuläres Re-Patterning und propriozeptives Training. Nach der extremen Gewebe- und Muskeldehnung unter Schwangerschaft und Geburt müssen die motorischen Kortex-Areale im Gehirn die Ansteuerung der Beckenboden- und tiefen Rumpfmuskelschichten völlig neu erlernen.
+                    Rückbildung erfordert Konzentration und ein gutes Gespür für den eigenen Körper. Damit die Übungen wirken können, ist es wichtig, dass du dich voll und ganz auf dich selbst einlassen kannst – ohne abgelenkt zu werden.
                   </p>
                   <p className="leading-relaxed">
-                    Dies erfordert absolute Konzentration, eine präzise Koordination mit der Atmung und eine störungsfreie Selbstwahrnehmung. Babys im Kursraum bedeuten eine ständige sympathikotone Aktivierung (Ablenkung durch Weinen, Blicke, Fürsorge-Reflexe), was die für das motorische Lernen notwendige parasympathische Konzentration hemmt. Ein Kurs ohne Baby ermöglicht es dir erst, dich voll auf die propriozeptiven Signale deines Körpers einzulassen und deine Tiefenmuskulatur neurophysiologisch korrekt zu reaktivieren.
+                    Ein Baby im Raum lenkt dich automatisch ab – selbst wenn es schläft. Dein Nervensystem bleibt im "Fürsorge-Modus" und kommt nicht richtig zur Ruhe. Wir möchten dir einen Raum schaffen, in dem du entspannen, deine Tiefenmuskulatur spüren und gezielt aktivieren kannst. Deshalb ist der Kurs bewusst ohne Baby – für eine effektive und entspannte Rückbildungszeit.
                   </p>
                 </div>
               </div>

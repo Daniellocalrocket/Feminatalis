@@ -69,9 +69,8 @@ export default function Geburtsvorbereitung() {
         badge="Intensiv-Wochenendkurs für Paare"
         title={<>Bereit für die Geburt: <br /><span className="text-accent italic font-light">Kompakt & Fundiert</span></>}
         subtitle="Ihr seid beruflich eingespannt, wollt aber keine Abstriche bei der Vorbereitung machen? Unser Intensiv-Wochenende bietet euch Orientierung für echte Entscheidungen – medizinisch klar erklärt und alltagsnah geführt."
-        imageSrc="https://images.unsplash.com/photo-1559839734-2b71f1e3c7e3?q=80&w=2070&auto=format&fit=crop"
+        imageSrc="/assets/loving-husband-hugging-pregnant-wifes-belly-male-hands-big-tummy-love-parenthood-pregnancy-concept.jpg"
         imageAlt="Paar im Geburtsvorbereitungskurs"
-        imageKey="img_hero_geburtsvorbereitung"
       >
         <div className="flex flex-wrap gap-4">
           <Link to={`${ROUTE_PATHS.KURS}#kurse-vor-ort`} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
@@ -125,6 +124,14 @@ export default function Geburtsvorbereitung() {
                 ))}
               </div>
             </div>
+          </div>
+
+          <div className="mt-12">
+            <img 
+              src="/assets/top-view-pregnant-woman-bed-preparing-baby-clothes-home-writing-list-things-notebook-pregnancy-birth-concept.jpg" 
+              alt="Geburtsvorbereitung – Planung und Vorfreude" 
+              className="w-full max-h-[500px] object-cover rounded-[3rem] shadow-lg"
+            />
           </div>
         </div>
       </section>

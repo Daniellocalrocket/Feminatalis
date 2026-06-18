@@ -14,12 +14,12 @@ export default function ZelltrainingSchwangerschaft() {
     { title: "Geburtsvorbereitung", desc: "Kräftigung der Mitochondrien aus der Hebammenperspektive.", icon: Baby }
   ];
 
-const anwendungen = [
-    "Unterstützung einer gesunden Stoffwechselleistung",
-    "Müdigkeit & Erschöpfung",
-    "Förderung der Durchblutung",
-    "Regulierung des vegetativen Nervensystems und Entspannungsfördernd",
-    "Geburtsvorbereitung"
+  const anwendungen = [
+    "Reduktion mütterlicher Erschöpfung über Mitochondrienneubildung",
+    "Hormonregulation über Vorstufe Pregnenolon",
+    "Sauerstoffmangel-Toleranz-Training für Mutter UND Kind für die Wehenarbeit",
+    "Epigenetische Programmierung des kindlichen Stoffwechsels",
+    "Regulation des vegetativen Nervensystems und Förderung der Entspannung"
   ];
 
   return (

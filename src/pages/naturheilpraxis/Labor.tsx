@@ -106,6 +106,13 @@ export default function Labor() {
             <p className="text-muted-foreground text-base max-w-3xl mx-auto mt-4 leading-relaxed bg-amber-50 border border-amber-200 rounded-2xl px-6 py-4">
               <strong>Hinweis:</strong> Die meisten dieser Untersuchungen sind sogenannte IGeL (Individuelle Gesundheits-Leistungen) und werden fast nur von privaten Krankenversicherungsanbietern bezahlt.
             </p>
+            <div className="mt-12 mb-4">
+              <img 
+                src="/assets/blood-test-21.jpg" 
+                alt="Laboranalyse Blutprobe" 
+                className="w-full max-w-4xl mx-auto rounded-[2.5rem] shadow-lg border border-border object-cover h-64 md:h-80"
+              />
+            </div>
           </div>
 
           <div className="space-y-10">

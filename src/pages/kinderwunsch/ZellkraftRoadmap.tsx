@@ -38,31 +38,45 @@ export default function ZellkraftRoadmap() {
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-[#f07d00]/10 blur-[100px]" />
         
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl pt-8"
-          >
-             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#fde4c8] border border-[#e2d2c2] text-primary text-sm font-bold tracking-widest uppercase mb-8 shadow-sm">
-               <Zap size={16} className="text-accent" /> Premium Online-Programm
-             </div>
-            <h1 className="text-4xl md:text-7xl font-serif text-primary mb-6 leading-[1.1]">
-              Fruchtbarkeits-Kompass:<br />
-              Zellenergie-Fahrplan.
-            </h1>
-            <p className="text-lg md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl">
-              Vom Informationschaos zur Strategie. Hör auf zu suchen, fang an zu steuern. Dein medizinisch fundierter <strong className="text-primary">90-Tage-Kurs</strong> für Frauen, die ihren Kinderwunsch nicht mehr dem Zufall überlassen wollen – mit radikalem Fokus auf Mitochondrien.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-5">
-               <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-accent text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 hover:bg-[#e07500] flex items-center justify-center gap-3 group text-lg">
-                 Strategie-Gespräch anfragen <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-               </Link>
-               <a href="#module" className="bg-white hover:bg-[#fde4c8]/50 text-primary border border-border px-8 py-4 rounded-xl font-bold transition-all flex items-center justify-center gap-3 text-lg">
-                 Kursinhalte ansehen
-               </a>
-            </div>
-          </motion.div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="pt-8"
+            >
+               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#fde4c8] border border-[#e2d2c2] text-primary text-sm font-bold tracking-widest uppercase mb-8 shadow-sm">
+                 <Zap size={16} className="text-accent" /> Premium Online-Programm
+               </div>
+              <h1 className="text-4xl md:text-7xl font-serif text-primary mb-6 leading-[1.1]">
+                Fruchtbarkeits-Kompass:<br />
+                Zellenergie-Fahrplan.
+              </h1>
+              <p className="text-lg md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl">
+                Vom Informationschaos zur Strategie. Hör auf zu suchen, fang an zu steuern. Dein medizinisch fundierter <strong className="text-primary">90-Tage-Kurs</strong> für Frauen, die ihren Kinderwunsch nicht mehr dem Zufall überlassen wollen – mit radikalem Fokus auf Mitochondrien.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-5">
+                 <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-accent text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 hover:bg-[#e07500] flex items-center justify-center gap-3 group text-lg">
+                   Strategie-Gespräch anfragen <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                 </Link>
+                 <a href="#module" className="bg-white hover:bg-[#fde4c8]/50 text-primary border border-border px-8 py-4 rounded-xl font-bold transition-all flex items-center justify-center gap-3 text-lg">
+                   Kursinhalte ansehen
+                 </a>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="hidden lg:block"
+            >
+              <img
+                src="/assets/pregnant-woman-her-husband-hand-showing-heart-shape.jpg"
+                alt="Paar mit Herzsymbol für Kinderwunsch"
+                className="w-full h-auto rounded-[2.5rem] shadow-2xl object-cover aspect-[3/4]"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 

@@ -62,7 +62,7 @@ export default function Mikronaehrstoffe() {
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-6">Präzision statt Standard-Supplemente</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-medium">
-              Die meisten Empfehlungen beschränken sich auf Folsäure, Jod und Eisen. Doch jede Frau ist individuell. Ein Mangel an Vitamin D, A, Magnesium oder Selen kann zu Erschöpfung, Schwangerschaftsdiabetes oder Wachstumsproblemen führen.
+              Die meisten Empfehlungen beschränken sich auf Folsäure, Jod, Eisen und Magnesium. Doch jede Frau ist individuell. Ein Mangel an Vitamin D, A, Selen, Chrom, Omega 3 oder Carnitin kann zu Erschöpfung, Schwangerschaftsdiabetes oder Wachstumsproblemen führen.
             </p>
           </div>
 
