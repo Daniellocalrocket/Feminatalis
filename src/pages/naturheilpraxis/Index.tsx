@@ -25,7 +25,7 @@ export default function Naturheilpraxis() {
   ];
 
   return (
-    <div className="bg-background min-h-screen font-sans">
+    <div className="bg-background min-h-screen font-sans overflow-x-hidden">
       <SEO 
         title="Naturheilpraxis | Funktionelle Medizin & Diagnostik | feminatalis" 
         description="Ganzheitliche Therapieansätze in Bad Schönborn. Wir finden die Ursache deiner Beschwerden durch tiefgreifende Diagnostik und modernste Naturheilkunde." 
@@ -82,11 +82,13 @@ export default function Naturheilpraxis() {
                   <Brain className="text-accent w-16 h-16" />
                </div>
                <div className="text-left">
-                  <h2 className="text-3xl lg:text-5xl font-serif text-white mb-6 leading-tight">Das Prinzip der kleinsten Einheit</h2>
-                  <p className="text-lg text-white/90 leading-relaxed italic font-medium">
-                    "Die Zelle ist die kleinste lebende Einheit deines Körpers. Wenn deine Zellen gesund sind und Energie produzieren können, bist auch du gesund und leistungsfähig. Deshalb setzen wir dort an, wo Gesundheit entsteht."
-                  </p>
-               </div>
+                   <h2 className="text-3xl lg:text-5xl font-serif text-white mb-6 leading-tight">Gesundheit beginnt in der Zelle</h2>
+                   <div className="text-lg text-white/90 leading-relaxed font-medium space-y-4">
+                     <p>Jede Körperfunktion braucht gesunde Zellprozesse: Energie, Hormonbildung, Entgiftung, Immunbalance, Schleimhautaufbau, Regeneration und Fruchtbarkeit.</p>
+                     <p>Deshalb steht in meiner Praxis die Zellgesundheit im Mittelpunkt. Ich betrachte, wie gut der Körper auf Zellebene versorgt ist, wie stabil die Mitochondrien arbeiten, welche Mikronährstoffe fehlen und welche Belastungen den Stoffwechsel stören können.</p>
+                     <p>Mit gezielter Diagnostik und individuell abgestimmten Therapien unterstütze ich den Körper dabei, wieder mehr Regulation, Energie und innere Ordnung zu finden.</p>
+                   </div>
+                </div>
              </div>
 
              <div className="grid md:grid-cols-3 gap-8 relative z-10 pt-12 border-t border-white/10">
@@ -183,9 +185,9 @@ export default function Naturheilpraxis() {
               </div>
               
               <div className="bg-primary text-primary-foreground p-12 lg:p-16 rounded-[4rem] shadow-2xl relative overflow-hidden h-full flex flex-col justify-center text-left">
-                 <div className="absolute top-0 right-0 p-8">
-                   <HeartPulse className="w-48 h-48 text-accent/10 -mr-10 -mt-10" />
-                 </div>
+                  <div className="absolute top-0 right-0 overflow-hidden">
+                    <HeartPulse className="w-48 h-48 text-accent/10 translate-x-12 -translate-y-12" />
+                  </div>
                  <h3 className="text-3xl lg:text-4xl font-serif font-bold mb-8 relative z-10 leading-tight">Wann ist die Naturheilkunde <br />für dich richtig?</h3>
                  <p className="text-lg opacity-90 leading-relaxed mb-10 relative z-10 font-medium">
                     Natürliche Ursachenmedizin ist dann besonders wertvoll, wenn du deine Gesundheit proaktiv in die eigenen Hände nehmen möchtest oder die klassische Medizin absolut keine ausreichende Erklärung für dein chronisches Empfinden findet. Wir arbeiten bewusstein komplementär, also streng wissenschaftlich ergänzend zur Schulmedizin.
