@@ -218,6 +218,16 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* Praxis Image */}
+      <section className="relative h-[400px] overflow-hidden">
+        <img
+          src="/assets/Praxisbilder/Hauseinhang-min.jpg"
+          alt="Praxis Hauseingang"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent" />
+      </section>
+
       {/* Info Blocks */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">

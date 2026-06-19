@@ -4,6 +4,7 @@ import SEO from "@/components/SEO";
 import { ROUTE_PATHS } from "@/lib/index";
 import { motion } from "framer-motion";
 import { Leaf, Heart, Baby, Check, Phone, Mail, Clock, MapPin, Award, ArrowRight, ChevronRight, Activity, Star, CheckCircle, Syringe, Sparkles, Microscope, Zap, ShieldCheck, Instagram, Youtube, Facebook, UserCheck, HeartPulse } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { useSiteImages } from "@/hooks/useSiteImages";
 
 export default function Home() {
@@ -274,7 +275,47 @@ export default function Home() {
         </div>
       </section>
 
-
+      {/* Praxis-Slider */}
+      <section className="py-24 bg-white overflow-hidden">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-12">
+            <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 inline-block">Einblicke</span>
+            <h2 className="text-4xl md:text-5xl font-serif text-primary mb-4">Willkommen in unserer Praxis</h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">Lass dich von unserer Praxisatmosphäre inspirieren.</p>
+          </div>
+          <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-5xl mx-auto">
+            <CarouselContent>
+              {[
+                "Büro mit Menschen-min.jpg",
+                "cosMedea Fensteransicht-min.jpg",
+                "cosMedea Flur-min.jpg",
+                "cosMedea Türansicht-min.jpg",
+                "feminatalis-Raum Fensteransicht-min.jpg",
+                "Hauseinhang-min.jpg",
+                "Kursraum Ansicht aus dem Flur-min.jpg",
+                "Kurstraum Matten Abendstimmung-min.jpg",
+                "Labor-min.jpg",
+                "Seminarraum mit Leinwand-min.jpg",
+                "Seminarraum mit Tischen -min.jpg",
+              ].map((img, i) => (
+                <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-md border border-border/50">
+                      <img
+                        src={`/assets/Praxisbilder/${img}`}
+                        alt={`Praxisansicht ${i + 1}`}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden sm:flex" />
+            <CarouselNext className="hidden sm:flex" />
+          </Carousel>
+        </div>
+      </section>
 
       {/* Ablauf-Sektion */}
       <section className="py-24 bg-[#fff9f2] relative overflow-hidden">
