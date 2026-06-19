@@ -59,6 +59,7 @@ const AdminSettings = lazy(() => import("@/pages/admin/Settings"));
 const AdminImages = lazy(() => import("@/pages/admin/Images"));
 const AdminCourses = lazy(() => import("@/pages/admin/Courses"));
 const AdminCourseEditor = lazy(() => import("@/pages/admin/CourseEditor"));
+const AdminPriceList = lazy(() => import("@/pages/admin/PriceList"));
 const LMSLogin = lazy(() => import("@/pages/lms/LMSLogin"));
 const CourseDashboard = lazy(() => import("@/pages/lms/CourseDashboard"));
 const CourseViewer = lazy(() => import("@/pages/lms/CourseViewer"));
@@ -318,6 +319,10 @@ const App = () => {
               <Route 
                 path={ROUTE_PATHS.ADMIN_COURSE_EDITOR} 
                 element={<AdminCourseEditor />} 
+              />
+              <Route 
+                path={ROUTE_PATHS.ADMIN_PRICE_LIST} 
+                element={<AdminPriceList />} 
               />
               {/* Fallback route - Redirecting to Home as no specific NotFound was provided */}
               <Route 

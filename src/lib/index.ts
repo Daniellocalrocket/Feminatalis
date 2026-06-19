@@ -69,6 +69,7 @@ export const ROUTE_PATHS = {
   ADMIN_IMAGES: "/admin/images",
   ADMIN_COURSES: "/admin/courses",
   ADMIN_COURSE_EDITOR: "/admin/courses/:courseId",
+  ADMIN_PRICE_LIST: "/admin/preisliste",
 
   // Legal
   IMPRESSUM: "/impressum",

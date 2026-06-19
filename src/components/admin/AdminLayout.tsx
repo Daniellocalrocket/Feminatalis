@@ -13,7 +13,8 @@ import {
   BookOpen,
   Settings,
   Image as ImageIcon,
-  GraduationCap
+  GraduationCap,
+  Euro
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ROUTE_PATHS } from "@/lib/index";
@@ -62,6 +63,7 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
     { name: "Kurse & Events", href: ROUTE_PATHS.ADMIN_EVENTS, icon: Calendar },
     { name: "LMS Kurse", href: ROUTE_PATHS.ADMIN_COURSES, icon: GraduationCap },
     { name: "Blogverwaltung", href: ROUTE_PATHS.ADMIN_BLOG, icon: BookOpen },
+    { name: "Preisliste", href: ROUTE_PATHS.ADMIN_PRICE_LIST, icon: Euro },
     { name: "Bilder-Management", href: ROUTE_PATHS.ADMIN_IMAGES, icon: ImageIcon },
     { name: "Einstellungen", href: ROUTE_PATHS.ADMIN_SETTINGS, icon: Settings },
   ];
