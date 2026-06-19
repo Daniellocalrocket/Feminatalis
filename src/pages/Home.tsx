@@ -748,19 +748,19 @@ export default function Home() {
               
               <div className="grid sm:grid-cols-2 gap-6 mb-10">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm"><Clock className="w-5 h-5 text-accent" /></div>
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm"><Check className="w-5 h-5 text-accent" /></div>
                   <span className="text-sm font-medium text-primary/80">Nur 2 Minuten Zeitaufwand</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm"><Heart className="w-5 h-5 text-accent" /></div>
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm"><Check className="w-5 h-5 text-accent" /></div>
                   <span className="text-sm font-medium text-primary/80">Passt unser Konzept zu dir?</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm"><Activity className="w-5 h-5 text-accent" /></div>
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm"><Check className="w-5 h-5 text-accent" /></div>
                   <span className="text-sm font-medium text-primary/80">Direktes Feedback & Klarheit</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm"><Sparkles className="w-5 h-5 text-accent" /></div>
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm"><Check className="w-5 h-5 text-accent" /></div>
                   <span className="text-sm font-medium text-primary/80">Völlig unverbindlich</span>
                 </div>
               </div>
@@ -773,8 +773,8 @@ export default function Home() {
             <div className="w-full lg:w-5/12 relative z-10">
               <div className="aspect-[4/3] bg-white rounded-[2.5rem] border border-orange-100 flex items-center justify-center p-8 text-center bg-[url('/src/assets/images/pattern-dot.svg')] bg-repeat shadow-sm">
                 <div className="space-y-4">
-                  <p className="text-4xl font-serif text-primary italic">„Wir freuen uns <br /> auf dich!“</p>
-                  <p className="text-sm font-bold text-accent uppercase tracking-widest italic">— Angela Deschner</p>
+                  <p className="text-4xl font-serif text-primary italic">„Lass deine Gesundheit zu deiner wichtigsten Priorität aufsteigen“</p>
+                  <p className="text-sm font-bold text-accent uppercase tracking-widest italic">— A. Deschner</p>
                 </div>
               </div>
             </div>
