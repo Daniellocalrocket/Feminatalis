@@ -176,22 +176,19 @@ export default function Hebammenpraxis() {
               </p>
               <ul className="space-y-4 mb-10">
                 <li>
+                  <Link to={ROUTE_PATHS.HEBAMMENPRAXIS} className="flex items-center gap-3 text-sm font-medium hover:text-accent transition-colors">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary"/> Schwangerschaftsbegleitung
+                  </Link>
+                </li>
+                <li>
                   <Link to={ROUTE_PATHS.GEBURTSVORBEREITUNG} className="flex items-center gap-3 text-sm font-medium hover:text-accent transition-colors">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary"/> Geburtsvorbereitung für Paare (Wochenend-Intensiv)
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary"/> Kurse (Geburtsvorbereitung & Rückbildung)
                   </Link>
                 </li>
                 <li>
                   <Link to={ROUTE_PATHS.WOCHENBETTBETREUUNG} className="flex items-center gap-3 text-sm font-medium hover:text-accent transition-colors">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary"/> Wochenbettbetreuung
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary"/> Wochenbettbetreuung & Stillberatung
                   </Link>
-                </li>
-                <li>
-                  <Link to={ROUTE_PATHS.RUECKBILDUNG} className="flex items-center gap-3 text-sm font-medium hover:text-accent transition-colors">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary"/> Rückbildung
-                  </Link>
-                </li>
-                <li className="flex items-center gap-3 text-sm font-medium hover:text-accent transition-colors">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary"/> Stillbegleitung
                 </li>
               </ul>
             </div>

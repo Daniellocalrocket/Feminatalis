@@ -392,7 +392,7 @@ export default function Home() {
             {[
               { 
                 title: "Säule 1:\nBasis-Begleitung", 
-                pts: ["Vorbereitungskurse", "Wochenbettbetreuung", "Stillbegleitung"], 
+                pts: ["Schwangerschaftsbegleitung", "Kurse (Geburtsvorbereitung & Rückbildung)", "Wochenbettbetreuung & Stillberatung"], 
                 icon: <HeartPulse className="text-primary w-8 h-8"/>, 
                 link: ROUTE_PATHS.HEBAMMENPRAXIS,
                 badge: "Kasse + Privat"
@@ -519,7 +519,9 @@ export default function Home() {
               { title: "CO2-Trockenbäder", desc: "Steigerung der Mikrozirkulation durch CO2-Trockenbäder bei Wundheilungsstörungen & zur Schmerzlinderung.", link: ROUTE_PATHS.CO2_THERAPIE },
               { title: "Long-Covid Hilfe", desc: "Effektive Hilfe bei postviraler Erschöpfung, Long-Covid & Post-Vac-Syndrom.", link: ROUTE_PATHS.LONG_COVID },
               { title: "Hormon-Balance", desc: "Regulation der Sexualhormone, Schilddrüse und Stressachse z.B. bei Zyklusstörungen, Hashimoto oder Depression.", link: ROUTE_PATHS.HORMONTHERAPIE },
-              { title: "Darmsanierung", desc: "Aufbau eines gesunden Mikrobioms als Fundament für dein Immunsystem.", link: ROUTE_PATHS.DARMANALYSE }
+              { title: "Darmsanierung", desc: "Aufbau eines gesunden Mikrobioms als Fundament für dein Immunsystem.", link: ROUTE_PATHS.DARMANALYSE },
+              { title: "TCM", desc: "Traditionelle Puls- & Zungen-Diagnostik für Energiefluss, Wohlbefinden und Schmerzlinderung. (Wir bieten keine chinesische Kräuterkunde an.)", link: ROUTE_PATHS.TCM },
+              { title: "Zelltraining (IHHT)", desc: "Intervallhypoxie für mehr Kraft, bessere Belastbarkeit und Anti-Aging.", link: ROUTE_PATHS.ZELLTRAINING }
             ].map((srv, i) => (
               <div key={i} className="bg-white border border-border text-left p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                 <h5 className="font-bold text-primary mb-2 text-lg">{srv.title}</h5>
