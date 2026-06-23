@@ -5,6 +5,7 @@ import { ROUTE_PATHS } from "@/lib/index";
 import { motion } from "framer-motion";
 import { Leaf, Heart, Baby, Check, Phone, Mail, Clock, MapPin, Award, ArrowRight, ChevronRight, Activity, Star, CheckCircle, Syringe, Sparkles, Microscope, Zap, ShieldCheck, Instagram, Youtube, Facebook, UserCheck, HeartPulse } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import { useSiteImages } from "@/hooks/useSiteImages";
 
 export default function Home() {
@@ -276,14 +277,18 @@ export default function Home() {
       </section>
 
       {/* Praxis-Slider */}
-      <section className="py-24 bg-white overflow-hidden">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-12">
             <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 inline-block">Einblicke</span>
             <h2 className="text-4xl md:text-5xl font-serif text-primary mb-4">Willkommen in unserer Praxis</h2>
             <p className="text-muted-foreground max-w-xl mx-auto">Lass dich von unserer Praxisatmosphäre inspirieren.</p>
           </div>
-          <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-5xl mx-auto">
+          <Carousel
+            opts={{ align: "start", loop: true }}
+            plugins={[Autoplay({ delay: 4000, stopOnInteraction: false })]}
+            className="w-full max-w-5xl mx-auto px-10 sm:px-12"
+          >
             <CarouselContent>
               {[
                 "Büro mit Menschen-min.jpg",
@@ -304,6 +309,7 @@ export default function Home() {
                       <img
                         src={`/assets/Praxisbilder/${img}`}
                         alt={`Praxisansicht ${i + 1}`}
+                        loading="lazy"
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                       />
                     </div>
@@ -311,8 +317,8 @@ export default function Home() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden sm:flex" />
-            <CarouselNext className="hidden sm:flex" />
+            <CarouselPrevious className="flex bg-white/90 shadow-md border border-border/50 hover:bg-white left-1 md:-left-12" />
+            <CarouselNext className="flex bg-white/90 shadow-md border border-border/50 hover:bg-white right-1 md:-right-12" />
           </Carousel>
         </div>
       </section>
