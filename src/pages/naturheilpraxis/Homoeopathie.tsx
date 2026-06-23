@@ -86,7 +86,7 @@ export default function Homoeopathie() {
                 <p className="text-lg opacity-90 leading-relaxed mb-10 font-medium italic">
                   „Homöopathie ist Informationsmedizin. Durch das stufenweise Verdünnen und Verschütteln (Dynamisieren) wird die rein materielle Substanz in einen energetischen Impuls umgewandelt, der direkt auf die Lebenskraft wirkt.“
                 </p>
-                <div className="grid grid-cols-3 gap-4 border-t border-white/20 pt-8">
+                <div className="flex flex-col md:grid md:grid-cols-3 gap-4 border-t border-white/20 pt-8">
                    <div className="text-center">
                       <span className="block text-2xl font-bold text-accent">D</span>
                       <span className="text-xs opacity-70 uppercase tracking-widest">Körperlich</span>
@@ -158,7 +158,7 @@ export default function Homoeopathie() {
       </section>
 
       <PreisTransparenz 
-        preisHint="Erstanamnese 100 € / Std." 
+        priceItemId="1a" 
         hinweis="Ausführliches Gespräch (60-90 Min.) inkl. Erstberatung, Befundanalyse und Untersuchung."
       />
 

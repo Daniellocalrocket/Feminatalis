@@ -18,10 +18,9 @@ export default function Infusionstherapie() {
       <SplitScreenHero
         badge="Medizinische Nährstoff-Infusionen"
         title={<>Vitalität ohne Umwege: <br /><span className="text-accent italic font-light">Die Infusionstherapie</span></>}
-        subtitle=""
-        imageSrc="https://images.unsplash.com/photo-1516670428252-df97bba108d1?q=80&w=2070&auto=format&fit=crop"
+        subtitle="Eine Infusionstherapie ist sinnvoll, wenn der Körper Vitalstoffe nicht mehr ausreichend über die Nahrung oder den Darm aufnehmen kann – sei es durch chronische Darmerkrankungen, hohen oxidativen Stress oder erhöhten Bedarf in besonderen Lebensphasen. Die direkte Zufuhr in die Blutbahn umgeht Engpässe im Stoffwechsel und versorgt deine Zellen sofort mit der benötigten Energie und den wichtigsten Aufbaustoffen."
+        imageSrc="/assets/iv-drip-vitamin-infusion-therapy.jpg"
         imageAlt="Infusionstherapie und Vitalstoffe"
-        imageKey="img_hero_infusionstherapie"
       >
         <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
           Analyse-Gespräch anfragen <ArrowRight size={20} />
@@ -204,14 +203,15 @@ export default function Infusionstherapie() {
             <div className="space-y-6 text-left">
               <h3 className="text-3xl font-serif text-primary font-bold text-left leading-tight">Wirkstoffe der Infusionslösungen</h3>
               <p className="text-lg text-muted-foreground leading-relaxed font-medium text-left">
-                Je nach individuellem Laborbefund und Therapieziel:
+                Je nach individuellem Laborbefund und Therapieziel kombinieren wir bewährte und hochspezifische Substanzen.
               </p>
               <div className="space-y-4 pt-4">
                 {[
                   { title: "Vitamin-Hochdosis", desc: "Unter anderem Pascorbin® (Hochdosis Vitamin C für das Immunsystem) sowie der gesamte Vitamin-B-Komplex (B1, B2, B3, B5, B6, Folsäure, hochreines B12) als Katalysatoren der Energiegewinnung." },
                   { title: "Gezielte Aminosäuren-Protokolle", desc: "Cystein, Arginin, Lysin, Glutamin, Glycin und Taurin – als direkte enzymatische Bausteine für Muskeln, Leber, Hormone und Gehirn-Neurotransmitter." },
                   { title: "Antioxidantien-Turbo", desc: "Hochreines Glutathion (das stärkste körpereigene Antioxidans) und Alpha-Liponsäure (ALA) zur Mitochondrienregeneration und Schwermetallentgiftung." },
-                  { title: "Mineralstoff-Sättigung", desc: "Magnesium, Kalium, Selen und Calcium – essentielle Elektrolyte zur Regulation des Zellmilieus und des vegetativen Nervensystems." }
+                  { title: "Mineralstoff-Sättigung", desc: "Magnesium, Kalium, Selen und Calcium – essentielle Elektrolyte zur Regulation des Zellmilieus und des vegetativen Nervensystems." },
+                  { title: "Homöopathische Lösungen & Organpräparate", desc: "Als eigenständige parenterale Therapie und zur Wirksamkeitssteigerung der orthomolekularen Therapie – individuell abgestimmt auf deine Konstitution." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 items-start text-left">
                     <CheckCircle2 className="w-6 h-6 text-accent mt-1 shrink-0" />
@@ -255,8 +255,18 @@ export default function Infusionstherapie() {
         </div>
       </section>
 
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <img 
+            src="/assets/image (9).jpg" 
+            alt="Infusionstherapie Behandlung" 
+            className="w-full max-w-4xl mx-auto rounded-[2.5rem] shadow-lg border border-border object-cover h-64 md:h-80"
+          />
+        </div>
+      </section>
+
       <PreisTransparenz 
-        preisHint="Infusionen ab 65,- €" 
+        priceItemId="1e" 
         hinweis="Zzgl. Medikamenten- und Materialkosten je nach individueller Labor-Rezeptur."
       />
     </div>

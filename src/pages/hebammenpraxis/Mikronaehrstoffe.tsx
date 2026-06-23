@@ -177,7 +177,7 @@ export default function Mikronaehrstoffe() {
       </section>
 
       <PreisTransparenz 
-        preisHint="Individuelle Beratung ab 90,- € / h" 
+        priceItemId="1m" 
         hinweis="Zzgl. Laborkosten je nach Umfang der Analyse."
       />
     </div>

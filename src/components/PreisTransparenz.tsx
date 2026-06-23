@@ -2,22 +2,25 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ROUTE_PATHS } from "@/lib/index";
 import { ArrowRight, Gem } from "lucide-react";
+import { usePriceList } from "@/hooks/usePriceList";
 
 interface PreisTransparenzProps {
   /** Short teaser, e.g. "Erstberatung ab 120 €" */
   preisHint?: string;
+  /** Price item ID from the price list for dynamic lookup */
+  priceItemId?: string;
   /** Additional context line */
   hinweis?: string;
 }
 
-/**
- * Reusable CTA module linking to the Preisliste page.
- * Drop this anywhere on a treatment page to create a trust anchor.
- */
 export default function PreisTransparenz({ 
   preisHint = "Transparente Preisgestaltung", 
+  priceItemId,
   hinweis 
 }: PreisTransparenzProps) {
+  const { getHint } = usePriceList();
+  const displayHint = priceItemId ? getHint(priceItemId, preisHint) : preisHint;
+
   return (
     <section className="py-16">
       <div className="container mx-auto px-4 max-w-5xl">
@@ -26,7 +29,7 @@ export default function PreisTransparenz({
             <Gem className="w-8 h-8 text-accent" />
           </div>
           <div className="flex-1 text-center md:text-left">
-            <p className="text-2xl font-serif font-bold text-primary mb-2">{preisHint}</p>
+            <p className="text-2xl font-serif font-bold text-primary mb-2">{displayHint}</p>
             {hinweis && (
               <p className="text-sm text-muted-foreground font-medium">{hinweis}</p>
             )}

@@ -500,12 +500,12 @@ export default function Home() {
             <h4 className="text-2xl font-serif text-primary text-center mb-8">Weitere Hebammenleistungen</h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {[
-                  { name: 'Geburtsvorbereitung', link: ROUTE_PATHS.GEBURTSVORBEREITUNG },
-                  { name: 'Wochenbettbetreuung', link: ROUTE_PATHS.WOCHENBETTBETREUUNG },
-                  { name: 'Rückbildungsgymnastik', link: ROUTE_PATHS.RUECKBILDUNG },
                   { name: 'Schwangerschaftsbeschwerden', link: ROUTE_PATHS.BESCHWERDEN },
+                  { name: 'Mikronährstoff-Beratung', link: ROUTE_PATHS.MIKRONAEHRSTOFFE },
+                  { name: 'Geburtsvorbereitung', link: ROUTE_PATHS.GEBURTSVORBEREITUNG },
                   { name: 'Akupunktur', link: ROUTE_PATHS.AKUPUNKTUR },
-                  { name: 'Mikronährstoff-Beratung', link: ROUTE_PATHS.MIKRONAEHRSTOFFE }
+                  { name: 'Wochenbettbetreuung', link: ROUTE_PATHS.WOCHENBETTBETREUUNG },
+                  { name: 'Rückbildungsgymnastik', link: ROUTE_PATHS.RUECKBILDUNG }
               ].map((srv, i) => (
                 <Link to={srv.link} key={i} className="bg-[#fff9f2] border border-border rounded-xl p-4 flex items-center gap-3 font-medium text-primary hover:border-accent transition-colors">
                   <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm shrink-0"><Check className="w-4 h-4 text-accent"/></div>
@@ -640,8 +640,8 @@ export default function Home() {
                 {/* Clinical Image Preview */}
                 <div className="rounded-2xl overflow-hidden border border-border mt-4 aspect-[4/3] relative group">
                   <img 
-                    src="/mitochondrien-befund.jpg" 
-                    alt="Mitochondrien Laborbefund des Bio-Health-Index (BHI)" 
+                    src="/BHI Manovska IHT.JPG" 
+                    alt="Echter Laborbefund eines Bio-Health-Index (BHI) und nitrosativen Stresses" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-6">

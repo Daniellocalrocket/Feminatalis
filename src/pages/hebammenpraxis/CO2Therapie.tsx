@@ -116,7 +116,7 @@ export default function CO2TherapieHebamme() {
       </section>
 
       <PreisTransparenz 
-        preisHint="CO2-Trockenbad: ab 45,– €" 
+        priceItemId="1g" 
         hinweis="Abrechnung erfolgt im Rahmen der Hebammen-Hilfe bei Beschwerden (anteilig möglich)."
       />
     </div>

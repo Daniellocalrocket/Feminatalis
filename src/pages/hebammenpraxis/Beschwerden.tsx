@@ -47,7 +47,7 @@ export default function Beschwerden() {
                 { title: "Präeklampsie-Vorsorge", desc: "Begleitung bei beginnender Schwangerschaftsvergiftung." },
                 { title: "Wachstumsstörungen", desc: "Support bei IUGR & fötalen Entwicklungsverzögerungen." },
                 { title: "Erschöpfung", desc: "Vitalisierung der mütterlichen Ressourcen & Müdigkeit." },
-                { title: "Brustentzündungen", desc: "Akute Hilfe in der Stillzeit & Prävention." },
+                { title: "Hilfe bei Beckenendlage (BEL)", desc: "Sanfte Methoden zur Unterstützung bei Beckenendlage." },
                 { title: "Hämorrhoiden", desc: "Sanfte Linderung & funktionelle Unterstützung." }
               ].map((item, i) => (
                 <div key={i} className="flex flex-col items-center text-center group">

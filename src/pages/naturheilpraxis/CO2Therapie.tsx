@@ -116,7 +116,7 @@ export default function CO2Therapie() {
       </section>
 
       <PreisTransparenz 
-        preisHint="CO2-Trockenbad: ab 45,– €" 
+        priceItemId="1g" 
         hinweis="Zzgl. einmaliger persönlicher Schutzhülle (7,50 €) für maximale Hygiene."
       />
 

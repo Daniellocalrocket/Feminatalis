@@ -133,6 +133,14 @@ export default function Mitochondrien() {
               ))}
             </div>
           </div>
+
+          <div className="mt-12">
+            <img 
+              src="/assets/BHI Manovska IHT.JPG" 
+              alt="BHI Manovska IHT – Funktionelle Mitochondrien-Diagnostik" 
+              className="w-full max-w-5xl mx-auto rounded-[2.5rem] shadow-lg border border-border object-cover h-64 md:h-80"
+            />
+          </div>
         </div>
       </section>
 
@@ -239,13 +247,13 @@ export default function Mitochondrien() {
                 </div>
                 <div className="space-y-4 mt-4">
                   <img 
-                    src="/BHI Manovska IHT.JPG" 
-                    alt="Echter Laborbefund eines Bio-Health-Index (BHI) und nitrosativen Stresses" 
+                    src="/assets/BHI Manovska IHT.JPG" 
+                    alt="BHI Manovska IHT – Mitochondrien-Diagnostik Befund" 
                     className="w-full h-auto rounded-2xl shadow-sm border border-border object-cover hover:scale-[1.01] transition-transform duration-300"
                   />
                   <img 
-                    src="/mitochondrien-befund.jpg" 
-                    alt="Echter Laborbefund eines Bio-Health-Index (BHI) und nitrosativen Stresses" 
+                    src="/assets/mitochondrien-befund, laktat.jpg" 
+                    alt="Mitochondrien-Befund und Laktat-Diagnostik" 
                     className="w-full h-auto rounded-2xl shadow-sm border border-border object-cover hover:scale-[1.01] transition-transform duration-300"
                   />
                 </div>
@@ -313,6 +321,14 @@ export default function Mitochondrien() {
               );
             })}
           </Accordion>
+        </div>
+
+        <div className="mt-12">
+          <img 
+            src="/assets/mitochondrien-befund, laktat.jpg" 
+            alt="Mitochondrien-Befund und Laktat-Test" 
+            className="w-full max-w-4xl mx-auto rounded-[2.5rem] shadow-lg border border-border object-cover h-64 md:h-80"
+          />
         </div>
       </section>
 

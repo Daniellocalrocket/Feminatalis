@@ -48,12 +48,12 @@ export function Layout({ children }: LayoutProps) {
       subItems: [
         { name: "Geburtsvorbereitung für Paare", path: ROUTE_PATHS.GEBURTSVORBEREITUNG, desc: "Wochenend-Intensiv" },
         { name: "Premium Geburtsvorbereitung", path: ROUTE_PATHS.PREMIUM_ZELLKRAFT_KURS, desc: "Der Zellkraft-Kompass" },
-        { name: "Wochenbett & Hausbesuche", path: ROUTE_PATHS.WOCHENBETTBETREUUNG, desc: "Ganzheitliche Begleitung" },
-        { name: "IHHT / Höhentraining", path: ROUTE_PATHS.ZELLTRAINING_SCHWANGERSCHAFT, desc: "Zelltraining für Schwangere" },
-        { name: "Akupunktur", path: ROUTE_PATHS.AKUPUNKTUR, desc: "TCM & Geburtsvorbereitung" },
-        { name: "Rückbildung", path: ROUTE_PATHS.RUECKBILDUNG, desc: "Beckenboden-Fokus" },
         { name: "Schwangerschaftsbeschwerden", path: ROUTE_PATHS.BESCHWERDEN, desc: "Natürliche Linderung" },
-        { name: "Mikronährstoff-Beratung", path: ROUTE_PATHS.MIKRONAEHRSTOFFE, desc: "Optimale Vitalstoff-Zufuhr" }
+        { name: "Mikronährstoff-Beratung", path: ROUTE_PATHS.MIKRONAEHRSTOFFE, desc: "Optimale Vitalstoff-Zufuhr" },
+        { name: "Akupunktur", path: ROUTE_PATHS.AKUPUNKTUR, desc: "TCM & Geburtsvorbereitung" },
+        { name: "IHHT / Höhentraining", path: ROUTE_PATHS.ZELLTRAINING_SCHWANGERSCHAFT, desc: "Zelltraining für Schwangere" },
+        { name: "Wochenbett & Hausbesuche", path: ROUTE_PATHS.WOCHENBETTBETREUUNG, desc: "Ganzheitliche Begleitung" },
+        { name: "Rückbildung", path: ROUTE_PATHS.RUECKBILDUNG, desc: "Beckenboden-Fokus" }
       ]
     },
     { 

@@ -1,9 +1,9 @@
 import * as z from "zod";
 
 export const SERVICE_AREAS = [
-  { id: "hebamme", label: "Hebammenpraxis", description: "Schwangerschaft, Geburtshilfe & Nachsorge" },
+  { id: "hebamme", label: "Hebammenpraxis", description: "Schwangerschaft, Wochenbett, Stillen & Kurse" },
   { id: "naturheilkunde", label: "Naturheilpraxis", description: "Funktionelle Medizin & Infusionen" },
-  { id: "kinderwunsch", label: "Kinderwunsch", description: "Ganzheitliche Unterstützung" },
+  { id: "kinderwunsch", label: "Kinderwunsch", description: "Ganzheitliche Unterstützung in der Praxis & Online" },
   { id: "kurse", label: "Kurse & Events", description: "Workshops, Seminare & Vorbereitung" },
 ] as const;
 

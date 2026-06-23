@@ -260,7 +260,7 @@ export default function Geburtsvorbereitung() {
       </section>
 
       <PreisTransparenz 
-        preisHint="Partnergebühr 160,- €" 
+        priceItemId="3a" 
         hinweis="Geburtsvorbereitungskurse stellen eine Kassenleistung dar. Die Abrechnung erfolgt für die werdende Mutter direkt über die gesetzliche Krankenkasse. Weitere Infos siehe AGB."
       />
     </div>

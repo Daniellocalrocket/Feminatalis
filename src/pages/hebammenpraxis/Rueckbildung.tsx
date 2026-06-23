@@ -22,10 +22,10 @@ export default function Rueckbildung() {
   const vorteile = [
     "Kleine, feste Gruppen für persönliche Betreuung",
     "Engagierte, erfahrene Kursleitung",
-    "Strukturiertes, wissenschaftlich fundiertes Training",
+    "Bewährte und effektive Übungen",
     "Kurs ohne Baby – volle Konzentration auf deinen Körper",
     "Modern ausgestatteter Trainingsraum",
-    "Flexible Abendtermine für berufstätige Mütter"
+    "Angenehme Abendtermine, mit Nachholoption im nächsten Kurs"
   ];
 
   return (
@@ -250,16 +250,16 @@ export default function Rueckbildung() {
       <section className="py-24 bg-card">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-8">
-            Starte deine <span className="text-accent italic">Rückbildung</span>
+            Sichere dir jetzt <span className="text-accent italic">deinen Platz</span>
           </h2>
           <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Melde dich jetzt für eine kostenlose Vor-Analyse an. Wir klären gemeinsam, welcher Kurs am besten zu dir passt – und welche nächsten Schritte sinnvoll sind.
+            Die Plätze in meinem Rückbildungskurs sind begrenzt. Empfehlenswert ist die Anmeldung bereits Ende der Schwangerschaft – der Kurs startet 6–12 Wochen nach der Geburt. So bist du von Anfang an dabei und kannst dich voll auf deine Rückbildung konzentrieren.
           </p>
           <Link 
-            to={ROUTE_PATHS.VORQUALIFIZIERUNG} 
+            to={ROUTE_PATHS.KURS + "#kurse-vor-ort"} 
             className="bg-accent text-white px-12 py-5 rounded-2xl text-xl font-bold hover:bg-accent/90 transition-all shadow-xl inline-flex items-center gap-3 hover:-translate-y-1"
           >
-            Kostenlose Vor-Analyse anfragen <ArrowRight size={24} />
+            Jetzt anmelden <ArrowRight size={24} />
           </Link>
         </div>
       </section>
