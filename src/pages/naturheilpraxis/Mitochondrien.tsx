@@ -100,6 +100,11 @@ export default function Mitochondrien() {
                 <Info className="text-accent shrink-0 mt-1" size={20} />
                 <p className="text-xs text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: bioFacts.info }} />
               </div>
+              <img 
+                src="/assets/Mitochiondrien 3.jpg" 
+                alt="Mitochondrien 3D – Die Kraftwerke der Zelle" 
+                className="w-full rounded-[2.5rem] shadow-lg border border-border object-cover h-64 md:h-80"
+              />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -136,8 +141,8 @@ export default function Mitochondrien() {
 
           <div className="mt-12">
             <img 
-              src="/assets/BHI Manovska IHT.JPG" 
-              alt="BHI Manovska IHT – Funktionelle Mitochondrien-Diagnostik" 
+              src="/assets/Atmungskette.jpg" 
+              alt="Atmungskette – Elektronentransport in den Mitochondrien" 
               className="w-full max-w-5xl mx-auto rounded-[2.5rem] shadow-lg border border-border object-cover h-64 md:h-80"
             />
           </div>
@@ -321,14 +326,6 @@ export default function Mitochondrien() {
               );
             })}
           </Accordion>
-        </div>
-
-        <div className="mt-12">
-          <img 
-            src="/assets/mitochondrien-befund, laktat.jpg" 
-            alt="Mitochondrien-Befund und Laktat-Test" 
-            className="w-full max-w-4xl mx-auto rounded-[2.5rem] shadow-lg border border-border object-cover h-64 md:h-80"
-          />
         </div>
       </section>
 

@@ -562,7 +562,8 @@ export default function Home() {
               { title: "Hormon-Balance", desc: "Regulation der Sexualhormone, Schilddrüse und Stressachse z.B. bei Zyklusstörungen, Hashimoto oder Depression.", link: ROUTE_PATHS.HORMONTHERAPIE },
               { title: "Darmsanierung", desc: "Aufbau eines gesunden Mikrobioms als Fundament für dein Immunsystem.", link: ROUTE_PATHS.DARMANALYSE },
               { title: "TCM", desc: "Traditionelle Puls- & Zungen-Diagnostik für Energiefluss, Wohlbefinden und Schmerzlinderung. (Wir bieten keine chinesische Kräuterkunde an.)", link: ROUTE_PATHS.TCM },
-              { title: "Zelltraining (IHHT)", desc: "Intervallhypoxie für mehr Kraft, bessere Belastbarkeit und Anti-Aging.", link: ROUTE_PATHS.ZELLTRAINING }
+              { title: "Zelltraining (IHHT)", desc: "Intervallhypoxie für mehr Kraft, bessere Belastbarkeit und Anti-Aging.", link: ROUTE_PATHS.ZELLTRAINING },
+              { title: "BrainLight", desc: "Licht- und Farbimpuls-System für Tiefenentspannung, Regeneration und mentale Klarheit.", link: ROUTE_PATHS.BRAINLIGHT }
             ].map((srv, i) => (
               <div key={i} className="bg-white border border-border text-left p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                 <h5 className="font-bold text-primary mb-2 text-lg">{srv.title}</h5>
@@ -629,43 +630,43 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Teaser Column: Lab diagnostics Preview */}
+            {/* Right Teaser Column: Mitochondrien Image */}
             <div className="w-full lg:w-5/12">
               <div className="bg-white p-6 rounded-[2.5rem] border border-border shadow-xl relative overflow-hidden">
                 <div className="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full z-10 shadow-sm flex items-center gap-1">
-                  <Microscope size={10} />
-                  Zellulärer Belastungs-Check (Labordiagnostik)
+                  <Zap size={10} />
+                  Mitochondrien-Therapie & Zellmedizin
                 </div>
                 
-                {/* Clinical Image Preview */}
+                {/* Image Preview */}
                 <div className="rounded-2xl overflow-hidden border border-border mt-4 aspect-[4/3] relative group">
                   <img 
-                    src="/BHI Manovska IHT.JPG" 
-                    alt="Echter Laborbefund eines Bio-Health-Index (BHI) und nitrosativen Stresses" 
+                    src="/assets/Mitochiondrien 3.jpg" 
+                    alt="Mitochondrien Therapie - Zellmedizin" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-6">
                     <div className="text-white text-left">
-                      <span className="text-xs text-accent font-bold uppercase tracking-wider block mb-1">Echter Befund</span>
-                      <p className="text-sm font-semibold leading-tight">Bio-Health-Index (BHI) im roten Bereich? Wir machen es sichtbar.</p>
+                      <span className="text-xs text-accent font-bold uppercase tracking-wider block mb-1">Deine Zellkraftwerke</span>
+                      <p className="text-sm font-semibold leading-tight">Mitochondrien – die Energiequellen deines Körpers.</p>
                     </div>
                   </div>
                 </div>
 
-                {/* Key indicators snippet */}
+                {/* Key mitochondria facts */}
                 <div className="grid grid-cols-2 gap-3 mt-4">
-                  <div className="p-3 bg-red-50/50 rounded-xl border border-red-100/50 text-left">
-                    <span className="text-[10px] uppercase tracking-wider text-muted-foreground block">BHI Index</span>
-                    <span className="text-base font-bold text-red-600 block">1,47 <span className="text-xs font-normal text-muted-foreground">(Kritisch)</span></span>
+                  <div className="p-3 bg-orange-50/50 rounded-xl border border-orange-100/50 text-left">
+                    <span className="text-[10px] uppercase tracking-wider text-muted-foreground block">Nährstoffe</span>
+                    <span className="text-base font-bold text-accent block">45+ <span className="text-xs font-normal text-muted-foreground">Essenziell</span></span>
                   </div>
-                  <div className="p-3 bg-red-50/50 rounded-xl border border-red-100/50 text-left">
-                    <span className="text-[10px] uppercase tracking-wider text-muted-foreground block">Lactat/Pyruvat</span>
-                    <span className="text-base font-bold text-red-600 block">27,5 <span className="text-xs font-normal text-muted-foreground">(&gt; 2x erhöht)</span></span>
+                  <div className="p-3 bg-orange-50/50 rounded-xl border border-orange-100/50 text-left">
+                    <span className="text-[10px] uppercase tracking-wider text-muted-foreground block">ATP pro Fettsäure</span>
+                    <span className="text-base font-bold text-accent block">122 <span className="text-xs font-normal text-muted-foreground">vs. 28 Glucose</span></span>
                   </div>
                 </div>
                 
                 <p className="text-[11px] text-muted-foreground leading-relaxed mt-4 italic text-left">
-                  Durch ein spezialisiertes Blutbild können wir den bioenergetischen Zustand deiner Zellen exakt messen und Blockaden lösen.
+                  Deine Zellen sind der Schlüssel zu neuer Vitalität. Mit gezielter Mitochondrien-Diagnostik und Nährstoffaufbau bringen wir deine Energieproduktion wieder in Schwung.
                 </p>
               </div>
             </div>
