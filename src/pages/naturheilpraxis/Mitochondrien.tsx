@@ -90,7 +90,7 @@ export default function Mitochondrien() {
             <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed" dangerouslySetInnerHTML={{ __html: bioFacts.intro }} />
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+          <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
             <div className="space-y-6">
               <h3 className="text-2xl lg:text-3xl font-serif text-primary">{bioFacts.subHeadline}</h3>
               {bioFacts.paragraphs.map((p, idx) => (
@@ -100,14 +100,18 @@ export default function Mitochondrien() {
                 <Info className="text-accent shrink-0 mt-1" size={20} />
                 <p className="text-xs text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: bioFacts.info }} />
               </div>
+            </div>
+
+            <div className="hidden lg:flex lg:justify-center">
               <img 
                 src="/assets/Mitochiondrien 3.jpg" 
                 alt="Mitochondrien 3D – Die Kraftwerke der Zelle" 
-                className="w-full rounded-[2.5rem] shadow-lg border border-border object-cover h-64 md:h-80"
+                className="w-full max-w-[60%] rounded-[2.5rem] shadow-lg border border-border object-cover aspect-[9/16]"
               />
             </div>
+          </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
               {bioFacts.cards.map((item, idx) => {
                 const IconComponent = iconMap[item.icon];
                 return (
@@ -123,7 +127,6 @@ export default function Mitochondrien() {
                 );
               })}
             </div>
-          </div>
 
           {/* Die 3 Goldenen Regeln der mitochondrialen Gesundheit */}
           <div className="bg-[#fde4c8]/20 rounded-[3rem] p-8 lg:p-12 border border-[#fde4c8]/50">
@@ -143,7 +146,7 @@ export default function Mitochondrien() {
             <img 
               src="/assets/Atmungskette.jpg" 
               alt="Atmungskette – Elektronentransport in den Mitochondrien" 
-              className="w-full max-w-5xl mx-auto rounded-[2.5rem] shadow-lg border border-border object-cover h-64 md:h-80"
+              className="w-full max-w-3xl mx-auto rounded-[2.5rem] shadow-lg border border-border"
             />
           </div>
         </div>
