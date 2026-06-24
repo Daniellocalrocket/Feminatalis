@@ -140,7 +140,7 @@ export default function Hormontherapie() {
               ].map((item, i) => (
                 <div key={i} className="bg-white p-6 md:p-10 rounded-[1.5rem] md:rounded-[3rem] border border-border/50 shadow-sm flex gap-4 md:gap-8 group hover:border-accent transition-all hover:shadow-xl text-left">
                   <div className="bg-muted/30 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-all duration-500 shrink-0">
-                    <item.icon className="w-8 h-8" />
+                    <item.icon className="w-8 h-8 text-accent" />
                   </div>
                   <div>
                     <h4 className="font-bold text-primary mb-3 font-serif text-2xl leading-tight">{item.title}</h4>
@@ -173,7 +173,10 @@ export default function Hormontherapie() {
 
 
 
-      <PreisTransparenz />
+      <PreisTransparenz 
+        preisHint="100 € / h Beratung"
+        hinweis="zzgl. Laborkosten" 
+      />
     </div>
   );
 }
