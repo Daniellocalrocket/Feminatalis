@@ -160,6 +160,11 @@ export default function Mikronaehrstoffe() {
               <p className="text-muted-foreground leading-relaxed">
                 Trotz Einnahme von Standard-Präparaten klagte die Patientin über starke Übelkeit und Müdigkeit. Die Analyse zeigte: Ein massiver Mangel an Vitamin A, D und Coenzym Q10. Erst nach dem gezielten Ausgleich dieser Defizite stellte sich eine deutliche Besserung ein.
               </p>
+              <img 
+                src="/assets/Schwangere%20Vitalsstoffversorgung%202.PNG" 
+                alt="Vitalstoffversorgung in der Schwangerschaft" 
+                className="w-full max-h-[400px] object-cover rounded-2xl mt-6 shadow-md"
+              />
             </div>
             <div className="p-10 bg-muted/20 rounded-[3rem] border border-border">
               <h4 className="font-bold text-primary text-xl mb-4 italic">Fallbeispiel 2: 38-jährige Schwangere</h4>
