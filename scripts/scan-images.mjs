@@ -11,7 +11,7 @@ const jsonOutputPath = path.join(root, 'src', 'data', 'assetImages.json');
 const IMAGE_EXTS = new Set(['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg', '.JPG', '.JPEG', '.PNG', '.ico']);
 
 const SKIP_FILES = new Set(['placeholder.svg', 'favicon.ico']);
-const SKIP_DIRS = new Set(['Praxisbilder']);
+const SKIP_DIRS = new Set([]);
 
 function walkDir(dir, baseDir = '') {
   const images = [];

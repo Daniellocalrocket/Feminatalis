@@ -26,6 +26,7 @@ import {
 import SplitScreenHero from "@/components/SplitScreenHero";
 import { motion } from "framer-motion";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useSiteImages } from "@/hooks/useSiteImages";
 import mitochondrienData from "@/data/content/mitochondrien.json";
 
 const iconMap: Record<string, React.FC<{ className?: string, size?: number }>> = {
@@ -42,6 +43,7 @@ const iconMap: Record<string, React.FC<{ className?: string, size?: number }>> =
 };
 
 export default function Mitochondrien() {
+  const { getImageUrl } = useSiteImages();
   const { seo, hero, bioFacts, stressors, diagnostics, diseaseSpectrum, treatment, educational } = mitochondrienData;
 
   const scrollTo = (id: string) => {
@@ -104,7 +106,7 @@ export default function Mitochondrien() {
 
             <div className="hidden lg:flex lg:justify-center">
               <img 
-                src="/assets/Mitochiondrien 3.jpg" 
+                src={getImageUrl("img_mitochondrien_3", "/assets/Mitochiondrien 3.jpg")}
                 alt="Mitochondrien 3D – Die Kraftwerke der Zelle" 
                 className="w-full max-w-[60%] rounded-[2.5rem] shadow-lg border border-border object-cover aspect-[9/16]"
               />
@@ -144,7 +146,7 @@ export default function Mitochondrien() {
 
           <div className="mt-12">
             <img 
-              src="/assets/Atmungskette.jpg" 
+              src={getImageUrl("img_atmungskette", "/assets/Atmungskette.jpg")}
               alt="Atmungskette – Elektronentransport in den Mitochondrien" 
               className="w-full max-w-3xl mx-auto rounded-[2.5rem] shadow-lg border border-border"
             />
@@ -255,12 +257,12 @@ export default function Mitochondrien() {
                 </div>
                 <div className="space-y-4 mt-4">
                   <img 
-                    src="/assets/BHI Manovska IHT.JPG" 
+                    src={getImageUrl("img_bhi_ihht", "/assets/BHI Manovska IHT.JPG")}
                     alt="BHI Manovska IHT – Mitochondrien-Diagnostik Befund" 
                     className="w-full h-auto rounded-2xl shadow-sm border border-border object-cover hover:scale-[1.01] transition-transform duration-300"
                   />
                   <img 
-                    src="/assets/mitochondrien-befund, laktat.jpg" 
+                    src={getImageUrl("img_mito_befund", "/assets/mitochondrien-befund, laktat.jpg")}
                     alt="Mitochondrien-Befund und Laktat-Diagnostik" 
                     className="w-full h-auto rounded-2xl shadow-sm border border-border object-cover hover:scale-[1.01] transition-transform duration-300"
                   />
