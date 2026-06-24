@@ -18,8 +18,11 @@ import {
   HeartPulse
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { useSiteImages } from "@/hooks/useSiteImages";
 
 export default function PremiumZellkraftKurs() {
+  const { getImageUrl } = useSiteImages();
+  const heroImage = getImageUrl("img_hero_zellkraft_kompass", "/assets/Hero%20Zellkraft%20Kompass.jpg");
   return (
     <div className="bg-background min-h-screen text-foreground font-sans">
       <SEO 
@@ -28,38 +31,56 @@ export default function PremiumZellkraftKurs() {
       />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pb-32 overflow-hidden border-b border-border/50 bg-[#fff9f2]">
-        {/* Subtle background decoration tailored to brand colors */}
-        <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-[#fde4c8]/50 to-transparent -z-10" />
-        <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-[#f07d00]/10 blur-[100px]" />
-        
-        <div className="container mx-auto px-4 max-w-6xl relative z-10">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl pt-8"
-          >
-             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#fde4c8] border border-[#e2d2c2] text-primary text-sm font-bold tracking-widest uppercase mb-8 shadow-sm">
-               <Zap size={16} className="text-accent" /> Premium Kursprogramm
-             </div>
-            <h1 className="text-4xl md:text-7xl font-serif text-primary mb-6 leading-[1.1]">
-              Der Zellkraft- <br />
-              Geburtskompass.
-            </h1>
-            <p className="text-lg md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl">
-              Transformiere dich von der bloßen Informationsempfängerin zur informierten <strong className="text-primary">Architektin der kindlichen Entwicklung</strong>. 
-              Wir ersetzen alte Mythen durch biologische Wahrheiten – mit radikalem Fokus auf bioenergetische Optimierung (Mitochondrien) und physiologischer Sicherheit.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-5">
-               <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-accent text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 hover:bg-[#e07500] flex items-center justify-center gap-3 group text-lg">
-                 Jetzt bewerben <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-               </Link>
-               <a href="#module" className="bg-white hover:bg-[#fde4c8]/50 text-primary border border-border px-8 py-4 rounded-xl font-bold transition-all flex items-center justify-center gap-3 text-lg">
-                 Kursinhalte ansehen
-               </a>
-            </div>
-          </motion.div>
+      <section id="hero" className="relative pt-32 pb-32 lg:pb-40 text-center overflow-hidden border-b border-border/50">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={heroImage} 
+            alt="Zellkraft Kompass" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-white/75 backdrop-blur-[1px]" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10 max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-left"
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#fde4c8] border border-[#e2d2c2] text-primary text-sm font-bold tracking-widest uppercase mb-8 shadow-sm">
+                <Zap size={16} className="text-accent" /> Premium Kursprogramm
+              </div>
+              <p className="text-accent font-bold tracking-widest uppercase text-xs mb-4">
+                Der Zellkraft-Geburtskompass
+              </p>
+              <h1 className="text-4xl md:text-5xl xl:text-6xl font-serif text-primary mb-6 leading-tight tracking-tight">
+                Der Zellkraft- <br />
+                Geburtskompass.
+              </h1>
+              <p className="text-xl text-muted-foreground mb-10 max-w-xl leading-relaxed">
+                Transformiere dich von der bloßen Informationsempfängerin zur informierten <strong className="text-primary">Architektin der kindlichen Entwicklung</strong>. 
+                Wir ersetzen alte Mythen durch biologische Wahrheiten – mit radikalem Fokus auf bioenergetische Optimierung (Mitochondrien) und physiologischer Sicherheit.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-accent text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 hover:bg-[#e07500] flex items-center justify-center gap-3 group text-lg">
+                  Jetzt bewerben <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <a href="#module" className="bg-white hover:bg-[#fde4c8]/50 text-primary border border-border px-8 py-4 rounded-xl font-bold transition-all flex items-center justify-center gap-3 text-lg">
+                  Kursinhalte ansehen
+                </a>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="hidden lg:block"
+            />
+          </div>
         </div>
       </section>
 
