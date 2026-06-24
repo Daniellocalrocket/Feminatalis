@@ -57,7 +57,7 @@ export default function Labor() {
               { title: "Schwermetalle", desc: "Haaranalyse, Blut- & Urintests nach Chelattherapie auf Quecksilber, Blei, Cadmium, Arsen, Aluminium u. a.", icon: <FlaskConical className="w-8 h-8 text-accent" /> },
               { title: "Standard-Check-up", desc: "Kleines und großes Differenzialblutbild, Leber- & Nierenwerte, Blutfett- und Blutzuckerwerte, Gesamteiweiß, Entzündungsparameter.", icon: <FlaskConical className="w-8 h-8 text-accent" /> }
             ].map((item, i) => (
-              <div key={i} className="bg-white p-10 lg:p-12 rounded-[3.5rem] border border-border hover:border-accent transition-all hover:shadow-2xl flex flex-col group">
+              <div key={i} className="bg-white p-6 md:p-10 lg:p-12 rounded-[1.75rem] md:rounded-[3.5rem] border border-border hover:border-accent transition-all hover:shadow-2xl flex flex-col group">
                 <div className="bg-muted/30 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-accent group-hover:text-white transition-all duration-500">
                    {item.icon}
                 </div>
@@ -67,7 +67,7 @@ export default function Labor() {
             ))}
           </div>
 
-          <div className="bg-primary text-white p-12 lg:p-20 rounded-[5rem] shadow-2xl relative overflow-hidden">
+          <div className="bg-primary text-white p-8 md:p-12 lg:p-20 rounded-[2rem] md:rounded-[4rem] lg:rounded-[5rem] shadow-2xl relative overflow-hidden">
              <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-accent/20 -mr-64 -mt-64 rounded-full blur-[100px] opacity-20"></div>
              <div className="flex flex-col lg:flex-row gap-16 items-center text-left">
                 <div className="lg:w-2/3 text-left">
@@ -75,7 +75,7 @@ export default function Labor() {
                   <p className="text-xl opacity-90 mb-10 leading-relaxed font-medium text-left">
                     „Wir warten nicht, bis ein Wert außerhalb der Norm liegt. Wir optimieren Werte für ein Leben voller Energie. Ob Kinderwunsch, Long-Covid oder chronische Erschöpfung – wir finden das fehlende Puzzleteil.“
                   </p>
-                  <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary px-12 py-5 rounded-2xl font-bold hover:bg-accent hover:text-white transition-all shadow-xl inline-flex items-center gap-3">
+                  <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary px-8 md:px-12 py-4 md:py-5 rounded-2xl font-bold hover:bg-accent hover:text-white transition-all shadow-xl inline-flex items-center gap-3">
                     Diagnostik-Termin anfragen <ArrowRight size={20} />
                   </Link>
                 </div>
@@ -190,7 +190,7 @@ export default function Labor() {
               </div>
             </div>
 
-            <div className="bg-slate-50 p-10 lg:p-12 rounded-[4rem] border border-border text-left space-y-8">
+            <div className="bg-slate-50 p-6 md:p-10 lg:p-12 rounded-[1.5rem] md:rounded-[3rem] lg:rounded-[4rem] border border-border text-left space-y-8">
               <h3 className="text-2xl font-serif text-primary font-bold">Diagnostische Schwerpunkte:</h3>
               <div className="space-y-6">
                 {[

@@ -71,7 +71,7 @@ export default function Darmsanierung() {
             ))}
           </div>
 
-          <div className="mt-24 bg-primary text-white p-12 lg:p-20 rounded-[5rem] shadow-2xl relative overflow-hidden">
+          <div className="mt-24 bg-primary text-white p-8 md:p-12 lg:p-20 rounded-[2rem] md:rounded-[4rem] lg:rounded-[5rem] shadow-2xl relative overflow-hidden">
              <div className="absolute top-0 right-0 w-[30rem] h-[30rem] bg-accent/20 -mr-48 -mt-48 rounded-full blur-[100px] opacity-20"></div>
              <div className="flex flex-col lg:flex-row gap-16 items-center text-left">
                 <div className="lg:w-2/3">

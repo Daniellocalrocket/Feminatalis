@@ -54,7 +54,7 @@ export default function CO2TherapieHebamme() {
               </p>
             </div>
             <div className="relative">
-              <div className="bg-[#fdf8f3] p-12 rounded-[4rem] border border-orange-100 shadow-sm">
+              <div className="bg-[#fdf8f3] p-6 md:p-12 rounded-[1.5rem] md:rounded-[3rem] lg:rounded-[4rem] border border-orange-100 shadow-sm">
                 <HeartPulse className="w-16 h-16 text-accent mb-8 animate-pulse" />
                 <h3 className="text-2xl font-serif text-primary mb-6 font-bold">Wirkung im Detail</h3>
                 <ul className="space-y-4">
@@ -82,7 +82,7 @@ export default function CO2TherapieHebamme() {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
             {vorteile.map((v, i) => (
-              <div key={i} className="bg-white p-10 rounded-[3.5rem] border border-border hover:border-accent transition-all hover:shadow-xl group">
+              <div key={i} className="bg-white p-6 md:p-10 rounded-[1.75rem] md:rounded-[3.5rem] border border-border hover:border-accent transition-all hover:shadow-xl group">
                 <div className="bg-muted/50 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-accent group-hover:text-white transition-all duration-500 shadow-sm text-accent">
                    {v.icon}
                 </div>
@@ -92,7 +92,7 @@ export default function CO2TherapieHebamme() {
             ))}
           </div>
 
-          <div className="bg-primary text-white p-12 lg:p-20 rounded-[5rem] shadow-2xl relative overflow-hidden">
+          <div className="bg-primary text-white p-8 md:p-12 lg:p-20 rounded-[2rem] md:rounded-[4rem] lg:rounded-[5rem] shadow-2xl relative overflow-hidden">
              <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-accent/20 -mr-64 -mt-64 rounded-full blur-[100px] opacity-20"></div>
              <div className="flex flex-col lg:flex-row gap-16 items-center text-left">
                 <div className="lg:w-2/3 text-left">

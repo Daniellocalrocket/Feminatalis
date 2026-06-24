@@ -61,7 +61,7 @@ export default function TCM() {
             {pillars.map((item, i) => {
               const IconComponent = iconMap[item.icon];
               return (
-                <div key={i} className="bg-slate-50/50 p-10 lg:p-12 rounded-[3.5rem] border border-border hover:border-accent transition-all hover:shadow-2xl flex flex-col group text-left">
+                <div key={i} className="bg-slate-50/50 p-6 md:p-10 lg:p-12 rounded-[1.75rem] md:rounded-[3.5rem] border border-border hover:border-accent transition-all hover:shadow-2xl flex flex-col group text-left">
                   <div className="bg-white w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-accent group-hover:text-white transition-all duration-500 shadow-sm">
                     {IconComponent && <IconComponent className="w-8 h-8 text-accent" />}
                   </div>
@@ -134,7 +134,7 @@ export default function TCM() {
                 </div>
               </div>
 
-              <div className="p-10 bg-white rounded-[3.5rem] border border-border shadow-xl relative overflow-hidden group">
+              <div className="p-6 md:p-10 bg-white rounded-[1.75rem] md:rounded-[3.5rem] border border-border shadow-xl relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-bl-[5rem] -mr-16 -mt-16 transition-transform group-hover:scale-110" />
                 <h4 className="font-bold text-primary mb-6 flex items-center gap-3 text-xl">
                    <Wind size={24} className="text-accent" /> Behandlung & Dauer
@@ -152,7 +152,7 @@ export default function TCM() {
               </div>
             </div>
 
-            <div className="bg-white p-8 lg:p-12 rounded-[4rem] border border-border shadow-2xl">
+            <div className="bg-white p-6 md:p-8 lg:p-12 rounded-[1.5rem] md:rounded-[3rem] lg:rounded-[4rem] border border-border shadow-2xl">
               <div className="mb-10 text-left">
                 <h3 className="text-3xl font-serif text-primary mb-4">Akupunktur kann helfen bei:</h3>
                 <p className="text-muted-foreground">Klicke auf die Kategorien, um Details zu sehen.</p>
@@ -213,7 +213,7 @@ export default function TCM() {
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="bg-slate-50 p-10 lg:p-16 rounded-[4rem] border border-border flex flex-col"
+              className="bg-slate-50 p-6 md:p-10 lg:p-16 rounded-[1.5rem] md:rounded-[3rem] lg:rounded-[4rem] border border-border flex flex-col"
             >
               <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-accent mb-8 shadow-sm">
                 <Wind size={32} />
@@ -268,7 +268,7 @@ export default function TCM() {
             <motion.div 
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="bg-white p-10 lg:p-16 rounded-[4rem] border border-border shadow-2xl flex flex-col"
+              className="bg-white p-6 md:p-10 lg:p-16 rounded-[1.5rem] md:rounded-[3rem] lg:rounded-[4rem] border border-border shadow-2xl flex flex-col"
             >
               <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center text-accent mb-8 shadow-sm">
                 <Wind size={32} />
@@ -326,7 +326,7 @@ export default function TCM() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="mt-20 p-12 lg:p-16 bg-primary text-white rounded-[4rem] shadow-2xl relative overflow-hidden"
+            className="mt-20 p-8 md:p-12 lg:p-16 bg-primary text-white rounded-[2rem] md:rounded-[3rem] lg:rounded-[4rem] shadow-2xl relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-bl-[200px] -z-0" />
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
@@ -406,7 +406,7 @@ export default function TCM() {
                <motion.div 
                  initial={{ opacity: 0, scale: 0.95 }}
                  whileInView={{ opacity: 1, scale: 1 }}
-                 className="bg-white p-10 lg:p-12 rounded-[4rem] border border-orange-200 shadow-2xl relative overflow-hidden group"
+                 className="bg-white p-6 md:p-10 lg:p-12 rounded-[1.5rem] md:rounded-[3rem] lg:rounded-[4rem] border border-orange-200 shadow-2xl relative overflow-hidden group"
                >
                  <div className="absolute top-0 right-0 w-32 h-32 bg-orange-50 rounded-bl-[5rem] -mr-16 -mt-16 group-hover:scale-110 transition-transform" />
                  <h3 className="text-2xl font-serif text-primary mb-6 flex items-center gap-3">
@@ -460,7 +460,7 @@ export default function TCM() {
           </div>
 
           <div className="flex justify-center mb-20">
-             <div className="bg-white p-8 lg:p-12 rounded-[4rem] border border-border shadow-2xl max-w-2xl w-full">
+             <div className="bg-white p-6 md:p-8 lg:p-12 rounded-[1.5rem] md:rounded-[3rem] lg:rounded-[4rem] border border-border shadow-2xl max-w-2xl w-full">
                 <img 
                   src="/fuenf-elemente-diagramm.png" 
                   alt="Das Gesetz der 5 Wandlungsphasen - Zyklus von Holz, Feuer, Erde, Metall und Wasser" 
@@ -494,7 +494,7 @@ export default function TCM() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-start">
-             <div className="bg-slate-50 p-10 lg:p-16 rounded-[4rem] border border-border">
+             <div className="bg-slate-50 p-6 md:p-10 lg:p-16 rounded-[1.5rem] md:rounded-[3rem] lg:rounded-[4rem] border border-border">
                 <h3 className="text-3xl font-serif text-primary mb-8">Thermische Wirkung</h3>
                 <p className="text-muted-foreground mb-10 leading-relaxed text-left">
                   Jedes Lebensmittel hat eine thermische Botschaft an deinen Körper. Wir nutzen diese, um Ungleichgewichte (wie Hitze oder Kälte) gezielt auszugleichen.
@@ -598,7 +598,7 @@ export default function TCM() {
             </div>
 
             <div className="space-y-8">
-               <div className="bg-white p-10 lg:p-12 rounded-[4rem] border border-border shadow-2xl relative overflow-hidden group">
+               <div className="bg-white p-6 md:p-10 lg:p-12 rounded-[1.5rem] md:rounded-[3rem] lg:rounded-[4rem] border border-border shadow-2xl relative overflow-hidden group">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-bl-[5rem] -mr-16 -mt-16 group-hover:scale-110 transition-transform" />
                   <h3 className="text-2xl font-serif text-primary mb-8">Einsatzmöglichkeiten</h3>
                   <div className="grid sm:grid-cols-2 gap-6 text-left">
@@ -701,7 +701,7 @@ export default function TCM() {
            </div>
 
            <div className="grid lg:grid-cols-2 gap-12 items-stretch">
-              <div className="bg-primary text-white p-12 lg:p-16 rounded-[4rem] shadow-2xl flex flex-col justify-between">
+              <div className="bg-primary text-white p-8 md:p-12 lg:p-16 rounded-[2rem] md:rounded-[3rem] lg:rounded-[4rem] shadow-2xl flex flex-col justify-between">
                  <div>
                     <h3 className="text-3xl font-serif mb-8">Einsatzgebiete</h3>
                     <ul className="space-y-4 text-primary-foreground/90">
@@ -721,7 +721,7 @@ export default function TCM() {
               </div>
 
               <div className="space-y-8">
-                 <div className="bg-slate-50 p-10 lg:p-12 rounded-[4rem] border border-border text-left">
+                 <div className="bg-slate-50 p-6 md:p-10 lg:p-12 rounded-[1.5rem] md:rounded-[3rem] lg:rounded-[4rem] border border-border text-left">
                     <h4 className="text-primary font-bold uppercase tracking-widest text-xs mb-6">Wann wir nicht tapen</h4>
                     <p className="text-sm text-muted-foreground leading-relaxed mb-6">
                       {akutaping.kontraText}
@@ -751,7 +751,7 @@ export default function TCM() {
       {/* Balance Section CTA */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
-          <div className="bg-primary text-white p-12 lg:p-24 rounded-[5rem] shadow-2xl relative overflow-hidden text-left mb-24">
+          <div className="bg-primary text-white p-8 md:p-12 lg:p-24 rounded-[2rem] md:rounded-[4rem] lg:rounded-[5rem] shadow-2xl relative overflow-hidden text-left mb-24">
              <div className="absolute top-0 right-0 w-[50rem] h-[50rem] bg-accent/20 -mr-64 -mt-64 rounded-full blur-[120px] opacity-20 text-left"></div>
              <div className="flex flex-col lg:flex-row gap-16 items-center text-left relative z-10">
                 <div className="lg:w-2/3 text-left">
@@ -759,11 +759,11 @@ export default function TCM() {
                   <p className="text-xl opacity-90 mb-10 leading-relaxed font-medium text-left">
                     {cta.quote}
                   </p>
-                  <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary px-12 py-5 rounded-2xl font-bold hover:bg-accent hover:text-white transition-all shadow-xl inline-flex items-center gap-3">
+                  <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary px-8 md:px-12 py-4 md:py-5 rounded-2xl font-bold hover:bg-accent hover:text-white transition-all shadow-xl inline-flex items-center gap-3">
                     Beratungstermin anfragen <ArrowRight size={20} />
                   </Link>
                 </div>
-                <div className="lg:w-1/3 bg-white/10 backdrop-blur-md p-12 rounded-[4rem] border border-white/20 text-center">
+                <div className="lg:w-1/3 bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] lg:rounded-[4rem] border border-white/20 text-center">
                    <h4 className="text-accent font-serif font-bold text-2xl mb-6">Qi-Check</h4>
                    <p className="text-lg leading-relaxed text-white font-medium italic text-left">
                      {cta.qiCheck}

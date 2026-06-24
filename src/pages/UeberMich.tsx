@@ -258,7 +258,7 @@ export default function UeberMich() {
           </p>
           <Link 
             to={ROUTE_PATHS.VORQUALIFIZIERUNG} 
-            className="inline-flex items-center gap-3 bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-primary/90 transition-all shadow-xl shadow-primary/20 hover:-translate-y-1"
+            className="inline-flex items-center gap-3 bg-primary text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold text-lg hover:bg-primary/90 transition-all shadow-xl shadow-primary/20 hover:-translate-y-1"
           >
             Zum Vorab-Check <ArrowRight size={20} />
           </Link>

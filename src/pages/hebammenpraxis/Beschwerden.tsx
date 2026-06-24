@@ -22,7 +22,7 @@ export default function Beschwerden() {
         imageAlt="Schwangere Frau bei der Hebamme"
         imageKey="img_hero_beschwerden"
       >
-        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
           Kostenfreie Vor-Analyse anfragen <ArrowRight className="w-5 h-5" />
         </Link>
       </SplitScreenHero>

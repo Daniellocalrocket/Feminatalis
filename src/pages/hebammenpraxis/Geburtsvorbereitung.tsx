@@ -71,9 +71,10 @@ export default function Geburtsvorbereitung() {
         subtitle="Ihr seid beruflich eingespannt, wollt aber keine Abstriche bei der Vorbereitung machen? Unser Intensiv-Wochenende bietet euch Orientierung für echte Entscheidungen – medizinisch klar erklärt und alltagsnah geführt."
         imageSrc="/assets/loving-husband-hugging-pregnant-wifes-belly-male-hands-big-tummy-love-parenthood-pregnancy-concept.jpg"
         imageAlt="Paar im Geburtsvorbereitungskurs"
+        imageKey="img_hero_geburtsvorbereitung"
       >
         <div className="flex flex-wrap gap-4">
-          <Link to={`${ROUTE_PATHS.KURS}#kurse-vor-ort`} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+            <Link to={`${ROUTE_PATHS.KURS}#kurse-vor-ort`} className="bg-primary text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
             Kurse & Veranstaltungen ansehen <ArrowRight size={20} />
           </Link>
         </div>
@@ -106,7 +107,7 @@ export default function Geburtsvorbereitung() {
               </div>
             </div>
             
-            <div className="bg-slate-50 p-10 lg:p-12 rounded-[4rem] border border-border">
+            <div className="bg-slate-50 p-6 md:p-10 lg:p-12 rounded-[1.5rem] md:rounded-[3rem] lg:rounded-[4rem] border border-border">
               <h3 className="text-2xl font-serif text-primary mb-8">Was euch erwartet</h3>
               <div className="space-y-6">
                 {detailModules.map((module, i) => (
@@ -145,7 +146,7 @@ export default function Geburtsvorbereitung() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8">
-            <div className="bg-white p-10 rounded-[3.5rem] border border-border shadow-sm text-left">
+            <div className="bg-white p-6 md:p-10 rounded-[1.75rem] md:rounded-[3.5rem] border border-border shadow-sm text-left">
               <h3 className="text-xl font-bold text-primary mb-6 flex items-center gap-3">
                 <Hospital className="text-accent" /> Geburt verstehen & einordnen
               </h3>
@@ -165,7 +166,7 @@ export default function Geburtsvorbereitung() {
               </ul>
             </div>
 
-            <div className="bg-white p-10 rounded-[3.5rem] border border-border shadow-sm text-left">
+            <div className="bg-white p-6 md:p-10 rounded-[1.75rem] md:rounded-[3.5rem] border border-border shadow-sm text-left">
               <h3 className="text-xl font-bold text-primary mb-6 flex items-center gap-3">
                 <ShieldCheck className="text-accent" /> Nach der Geburt
               </h3>
@@ -213,7 +214,7 @@ export default function Geburtsvorbereitung() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-slate-50 p-8 lg:p-10 rounded-[3.5rem] border border-border shadow-sm flex flex-col md:flex-row items-center justify-between gap-8 hover:bg-white hover:shadow-xl transition-all group"
+                className="bg-slate-50 p-6 md:p-8 lg:p-10 rounded-[1.75rem] md:rounded-[3.5rem] border border-border shadow-sm flex flex-col md:flex-row items-center justify-between gap-8 hover:bg-white hover:shadow-xl transition-all group"
               >
                 <div className="flex items-center gap-8 text-left w-full md:w-auto">
                   <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-accent shadow-sm group-hover:bg-accent group-hover:text-white transition-all">
@@ -245,14 +246,14 @@ export default function Geburtsvorbereitung() {
       {/* Call to Action */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
-           <div className="bg-primary text-white p-12 lg:p-20 rounded-[4rem] text-center shadow-2xl relative overflow-hidden">
+           <div className="bg-primary text-white p-8 md:p-12 lg:p-20 rounded-[2rem] md:rounded-[3rem] lg:rounded-[4rem] text-center shadow-2xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 -mr-32 -mt-32 rounded-full blur-3xl opacity-20"></div>
               <Crown className="w-16 h-16 text-accent mx-auto mb-8 relative z-10" />
               <h2 className="text-3xl lg:text-5xl font-serif mb-8 text-white font-bold relative z-10">Wir schaffen das – gemeinsam.</h2>
               <p className="text-xl opacity-90 mb-12 max-w-3xl mx-auto leading-relaxed relative z-10">
                 Die Plätze für unsere Intensiv-Wochenenden sind begrenzt, um eine vertrauensvolle Atmosphäre in der Gruppe zu gewährleisten.
               </p>
-              <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary px-12 py-5 rounded-2xl font-bold hover:bg-accent hover:text-white transition-all shadow-xl inline-flex items-center gap-3 relative z-10">
+              <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary px-8 md:px-12 py-4 md:py-5 rounded-2xl font-bold hover:bg-accent hover:text-white transition-all shadow-xl inline-flex items-center gap-3 relative z-10">
                 Kostenlose Vor-Analyse anfragen <ArrowRight size={20} />
               </Link>
            </div>

@@ -29,7 +29,7 @@ export default function Akupunktur() {
         imageAlt="Professionelle Akupunktur Behandlung"
         imageKey="img_hero_akupunktur"
       >
-        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
           Kostenfreie Vor-Analyse anfragen <ArrowRight size={20} />
         </Link>
       </SplitScreenHero>
@@ -65,7 +65,7 @@ export default function Akupunktur() {
             </div>
           </div>
 
-          <div className="bg-primary text-white p-12 lg:p-20 rounded-[4rem] text-center shadow-2xl relative overflow-hidden mb-24">
+          <div className="bg-primary text-white p-8 md:p-12 lg:p-20 rounded-[2rem] md:rounded-[3rem] lg:rounded-[4rem] text-center shadow-2xl relative overflow-hidden mb-24">
              <div className="absolute bottom-0 right-0 p-8 text-white/5 rotate-12">
                 <Sparkles size={250} />
              </div>
@@ -74,7 +74,7 @@ export default function Akupunktur() {
                Ein spezielles Ohrakupunktur-Verfahren zur Stabilisierung bei Stress, Erschöpfung und emotionalen Belastungen. Es fördert die innere Ruhe, verbessert den Schlaf und reduziert Suchtdruck.
              </p>
              <div className="flex flex-col sm:flex-row justify-center gap-6 relative z-10">
-               <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-accent text-white px-10 py-5 rounded-xl font-bold hover:scale-105 transition-all shadow-xl flex items-center justify-center gap-2 border-none">
+                <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-accent text-white px-8 md:px-10 py-4 md:py-5 rounded-xl font-bold hover:scale-105 transition-all shadow-xl flex items-center justify-center gap-2 border-none">
                  Termin für NADA vereinbaren <ArrowRight size={20} />
                </Link>
              </div>

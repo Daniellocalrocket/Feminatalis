@@ -415,7 +415,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-[url('/src/assets/images/pattern-dot.svg')] opacity-10" />
             <h3 className="text-2xl md:text-3xl font-serif mb-6 relative z-10">Bereit für den ersten Schritt?</h3>
             <p className="text-white/80 mb-10 max-w-xl mx-auto relative z-10">Wir bringen deinen Körper zurück in eine stabile, selbstregulierende Balance.</p>
-            <a href="#hero" className="inline-flex bg-white text-primary px-10 py-5 rounded-2xl font-bold text-lg hover:shadow-2xl transition-all relative z-10 group items-center gap-3">
+            <a href="#hero" className="inline-flex bg-white text-primary px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold text-lg hover:shadow-2xl transition-all relative z-10 group items-center gap-3">
               Zum Anfrage-Formular <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
@@ -813,7 +813,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-primary/95 transition-all shadow-xl shadow-primary/10 items-center gap-3 group">
+              <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold text-lg hover:bg-primary/95 transition-all shadow-xl shadow-primary/10 items-center gap-3 group">
                 Jetzt Vorab-Check starten <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>

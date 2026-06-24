@@ -51,7 +51,7 @@ export default function BrainLight() {
                 In einer Welt permanenter Reizüberflutung ist echte Stille der wahre Luxus. Das brainLight®-System nutzt audio-visuelle Stimulation, um dein Gehirn in einen Zustand tiefer Neuro-Meditation zu führen – für sofortigen Cortisol-Abbau und zelluläre Regeneration.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl flex items-center gap-2">
+                <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl flex items-center gap-2">
                   Session anfragen <ArrowRight size={20} />
                 </Link>
               </div>
@@ -91,7 +91,7 @@ export default function BrainLight() {
                   Gleichzeitig stimulieren wir über die High-End-Shiatsu-Massage den <strong>Vagus-Nerv</strong> – den "Ruhenerv" und Gegenspieler unseres Stresszentrums. Die Herzrate sinkt, die muskuläre Anspannung löst sich und Endorphine werden ausgeschüttet. Es ist ein "Bio-Reset", der die Basis für echte Heilung schafft.
                 </p>
               </div>
-              <div className="bg-[#fdf8f3] border border-orange-100 p-12 rounded-[3.5rem] shadow-sm italic text-primary font-serif text-xl leading-relaxed text-left relative group hover:border-accent/30 transition-all">
+              <div className="bg-[#fdf8f3] border border-orange-100 p-6 md:p-12 rounded-[1.75rem] md:rounded-[3.5rem] shadow-sm italic text-primary font-serif text-xl leading-relaxed text-left relative group hover:border-accent/30 transition-all">
                 <Quote className="w-12 h-12 text-accent/20 absolute -top-4 -left-4" />
                 "Die ideale Vorbereitung für eine Infusionskur oder Akupunktur. Wenn der Geist zur Ruhe kommt, kann der Körper die Heilreize viel effektiver verarbeiten und in Gesundheit umwandeln."
               </div>
@@ -105,7 +105,7 @@ export default function BrainLight() {
                    className="w-full rounded-[3rem] hover:scale-105 transition-transform duration-700"
                  />
               </div>
-              <div className="bg-white p-12 lg:p-14 rounded-[4rem] border border-border relative overflow-hidden shadow-2xl text-left bg-gradient-to-br from-white to-muted/20">
+              <div className="bg-white p-6 md:p-10 lg:p-14 rounded-[1.5rem] md:rounded-[3rem] lg:rounded-[4rem] border border-border relative overflow-hidden shadow-2xl text-left bg-gradient-to-br from-white to-muted/20">
                 <div className="absolute top-0 right-0 p-8 text-primary/5">
                   <Activity size={150} />
                 </div>
@@ -128,7 +128,7 @@ export default function BrainLight() {
           </div>
 
           {/* Interactive Card */}
-          <div className="bg-primary text-white p-12 lg:p-24 rounded-[5rem] text-left relative overflow-hidden shadow-2xl max-w-6xl mx-auto group">
+          <div className="bg-primary text-white p-8 md:p-12 lg:p-24 rounded-[2rem] md:rounded-[4rem] lg:rounded-[5rem] text-left relative overflow-hidden shadow-2xl max-w-6xl mx-auto group">
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.08)_0%,transparent_70%)]" />
             <div className="absolute bottom-0 right-0 w-[40rem] h-[40rem] bg-accent/20 -mr-64 -mb-64 rounded-full blur-[120px] opacity-20" />
             
@@ -156,7 +156,7 @@ export default function BrainLight() {
                      className="w-full rounded-[2.5rem]"
                    />
                 </div>
-                <div className="text-center bg-white/10 backdrop-blur-xl p-12 lg:p-16 rounded-[4rem] border border-white/20 shadow-2xl relative">
+                <div className="text-center bg-white/10 backdrop-blur-xl p-8 md:p-12 lg:p-16 rounded-[1.5rem] md:rounded-[3rem] lg:rounded-[4rem] border border-white/20 shadow-2xl relative">
                 <div className="absolute -top-10 -right-10 w-24 h-24 bg-accent rounded-full flex items-center justify-center shadow-2xl rotate-12 group-hover:scale-110 transition-transform">
                   <Star className="w-12 h-12 text-white fill-white" />
                 </div>
@@ -164,7 +164,7 @@ export default function BrainLight() {
                 <p className="text-lg opacity-90 mb-12 text-white font-medium leading-relaxed text-center">
                   Buche deine störungsfreie Session in unserer Praxis und erlebe, wie moderne Neuro-Technologie deine Gesundheit unterstützt.
                 </p>
-                <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary px-12 py-6 rounded-2xl font-bold text-xl hover:bg-accent hover:text-white transition-all w-full flex items-center justify-center gap-3 border-none shadow-2xl">
+                <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary px-8 md:px-12 py-4 md:py-6 rounded-2xl font-bold text-xl hover:bg-accent hover:text-white transition-all w-full flex items-center justify-center gap-3 border-none shadow-2xl">
                   Termin vereinbaren <ArrowUpRight className="w-6 h-6" />
                 </Link>
                 <p className="mt-8 text-sm opacity-60 text-white italic text-center font-medium">Ideal auch als Ergänzung zu IHHT oder Infusionen.</p>
@@ -179,7 +179,7 @@ export default function BrainLight() {
               <h3 className="text-2xl font-bold text-primary mb-2 font-serif">Investition in deine Ruhe</h3>
               <p className="text-lg text-muted-foreground font-medium">Einzelsession Tiefenregeneration: <span className="text-primary font-bold">ab 15,– €</span></p>
             </div>
-            <Link to={ROUTE_PATHS.PREISLISTE} className="bg-white border border-border text-primary px-10 py-5 rounded-2xl font-bold flex items-center gap-3 hover:bg-primary hover:text-white transition-all shadow-sm">
+            <Link to={ROUTE_PATHS.PREISLISTE} className="bg-white border border-border text-primary px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold flex items-center gap-3 hover:bg-primary hover:text-white transition-all shadow-sm">
               Gesamte Preisliste <ArrowRight size={20} />
             </Link>
           </div>

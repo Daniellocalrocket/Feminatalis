@@ -21,6 +21,7 @@ export default function Infusionstherapie() {
         subtitle="Eine Infusionstherapie ist sinnvoll, wenn der Körper Vitalstoffe nicht mehr ausreichend über die Nahrung oder den Darm aufnehmen kann – sei es durch chronische Darmerkrankungen, hohen oxidativen Stress oder erhöhten Bedarf in besonderen Lebensphasen. Die direkte Zufuhr in die Blutbahn umgeht Engpässe im Stoffwechsel und versorgt deine Zellen sofort mit der benötigten Energie und den wichtigsten Aufbaustoffen."
         imageSrc="/assets/iv-drip-vitamin-infusion-therapy.jpg"
         imageAlt="Infusionstherapie und Vitalstoffe"
+        imageKey="img_hero_infusionstherapie"
       >
         <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
           Analyse-Gespräch anfragen <ArrowRight size={20} />
@@ -58,7 +59,7 @@ export default function Infusionstherapie() {
             </div>
 
             {/* Stunning Bioavailability Graph */}
-            <div className="bg-primary text-white p-10 lg:p-12 rounded-[4rem] shadow-2xl relative overflow-hidden flex flex-col justify-between h-full border border-white/10">
+            <div className="bg-primary text-white p-6 md:p-10 lg:p-12 rounded-[1.5rem] md:rounded-[3rem] lg:rounded-[4rem] shadow-2xl relative overflow-hidden flex flex-col justify-between h-full border border-white/10">
               <div className="absolute top-0 right-0 w-64 h-64 bg-accent/15 rounded-bl-[200px] -z-0" />
               <div className="relative z-10 mb-8 text-left">
                 <span className="text-[10px] uppercase font-bold tracking-widest text-[#fde4c8] bg-white/10 px-3 py-1 rounded-full">Pharmakokinetischer Vergleich</span>
@@ -177,7 +178,7 @@ export default function Infusionstherapie() {
                 icon: <FlaskConical className="w-6 h-6 text-accent" />
               }
             ].map((box, i) => (
-              <div key={i} className="bg-white p-8 rounded-[3.5rem] border border-border shadow-sm hover:border-accent hover:shadow-xl transition-all duration-300 flex flex-col group text-left">
+              <div key={i} className="bg-white p-6 md:p-8 rounded-[1.75rem] md:rounded-[3.5rem] border border-border shadow-sm hover:border-accent hover:shadow-xl transition-all duration-300 flex flex-col group text-left">
                 <div className="bg-muted/50 w-12 h-12 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-all duration-300">
                   {box.icon}
                 </div>
@@ -224,7 +225,7 @@ export default function Infusionstherapie() {
               </div>
             </div>
 
-            <div className="bg-primary text-white p-12 lg:p-20 rounded-[5rem] shadow-2xl relative overflow-hidden h-full flex flex-col justify-center">
+            <div className="bg-primary text-white p-8 md:p-12 lg:p-20 rounded-[2rem] md:rounded-[4rem] lg:rounded-[5rem] shadow-2xl relative overflow-hidden h-full flex flex-col justify-center">
               <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-accent/20 -mr-64 -mt-64 rounded-full blur-[100px] opacity-20"></div>
               <FlaskConical className="w-16 h-16 text-accent mb-10 relative z-10 animate-bounce" />
               <h3 className="text-3xl font-serif font-bold mb-8 text-white relative z-10 leading-tight">Synergie: <br />Labor & Therapie</h3>

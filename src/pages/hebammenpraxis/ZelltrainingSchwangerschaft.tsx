@@ -37,7 +37,7 @@ export default function ZelltrainingSchwangerschaft() {
         imageAlt="IHHT Schwangerschaft"
         imageKey="img_hero_ihht_schwangerschaft"
       >
-        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
           Vorgespräch vereinbaren <ArrowRight size={20} />
         </Link>
       </SplitScreenHero>
@@ -196,10 +196,10 @@ export default function ZelltrainingSchwangerschaft() {
                Für maximalen Effekt empfehlen wir eine <strong>Kombination aus IHHT und Infusionen</strong>. Die Infusionen bereiten deine Zellen optimal vor, das IHHT aktiviert sie.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary px-10 py-5 rounded-2xl font-bold hover:bg-accent hover:text-white transition-all inline-flex items-center gap-2">
+              <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold hover:bg-accent hover:text-white transition-all inline-flex items-center gap-2">
                 Vorgespräch vereinbaren <ArrowRight size={20} />
               </Link>
-              <Link to={ROUTE_PATHS.PREISLISTE} className="border border-white/30 text-white px-10 py-5 rounded-2xl font-bold hover:bg-white/10 transition-all inline-flex items-center gap-2">
+              <Link to={ROUTE_PATHS.PREISLISTE} className="border border-white/30 text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold hover:bg-white/10 transition-all inline-flex items-center gap-2">
                 Zur Preisliste
               </Link>
             </div>

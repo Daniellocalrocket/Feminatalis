@@ -56,7 +56,7 @@ export default function Schwermetall() {
         imageAlt="Schwermetallausleitung und Entgiftung"
         imageKey="img_hero_schwermetall"
       >
-        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
           Kostenfreie Vor-Analyse anfragen
         </Link>
       </SplitScreenHero>
@@ -156,7 +156,7 @@ export default function Schwermetall() {
              Beginne mit einem Provokationstest und verschaffe dir Klarheit über deine tatsächliche Belastung.
            </p>
            <div className="flex justify-center">
-              <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-12 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-transform shadow-2xl flex items-center justify-center gap-3 shadow-primary/20 border-none">
+              <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-transform shadow-2xl flex items-center justify-center gap-3 shadow-primary/20 border-none">
                 Kostenfreie Vor-Analyse anfragen <ArrowRight className="text-white w-6 h-6" />
               </Link>
            </div>

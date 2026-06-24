@@ -147,7 +147,7 @@ export default function CoursesOverview() {
                 key={course.id}
                 variants={item}
                 whileHover={{ y: -5 }}
-                className="relative group bg-[#fff9f2] p-10 lg:p-12 rounded-[3.5rem] border border-border hover:border-accent/40 shadow-xl shadow-primary/5 transition-all flex flex-col"
+                className="relative group bg-[#fff9f2] p-6 md:p-10 lg:p-12 rounded-[1.75rem] md:rounded-[3.5rem] border border-border hover:border-accent/40 shadow-xl shadow-primary/5 transition-all flex flex-col"
               >
                 <div className="absolute top-8 right-8">
                   <Badge className={`bg-${course.color} text-white px-4 py-1.5 rounded-full text-[10px] uppercase font-black tracking-widest shadow-lg shadow-${course.color}/20`}>

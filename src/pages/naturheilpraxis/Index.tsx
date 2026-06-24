@@ -60,10 +60,10 @@ export default function Naturheilpraxis() {
               „Wir betrachten deinen Organismus als komplexes mehrschichtiges System und helfen dir mit modernen Untersuchungs- und Therapiemethoden die Balance zwischen Körper, Psyche und Bewusstsein wieder zu erlangen.“
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
-               <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-12 py-5 rounded-2xl font-bold hover:scale-105 transition-all shadow-2xl flex items-center justify-center gap-3 border-none text-lg">
+               <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl font-bold hover:scale-105 transition-all shadow-2xl flex items-center justify-center gap-3 border-none text-lg">
                   Jetzt Analyse-Termin buchen <ArrowRight className="w-6 h-6" />
                </Link>
-               <Link to={ROUTE_PATHS.LABOR} className="inline-flex bg-white text-primary border border-border px-12 py-5 rounded-2xl font-bold hover:bg-muted transition-all items-center justify-center text-lg shadow-sm">
+               <Link to={ROUTE_PATHS.LABOR} className="inline-flex bg-white text-primary border border-border px-8 md:px-12 py-4 md:py-5 rounded-2xl font-bold hover:bg-muted transition-all items-center justify-center text-lg shadow-sm">
                   Labor & Diagnostik
                </Link>
             </div>
@@ -74,7 +74,7 @@ export default function Naturheilpraxis() {
       {/* Core Philosophy & 3 Pillars */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="bg-primary p-12 lg:p-16 rounded-[4rem] border border-border shadow-2xl flex flex-col gap-12 relative overflow-hidden">
+          <div className="bg-primary p-8 md:p-12 lg:p-16 rounded-[2rem] md:rounded-[3rem] lg:rounded-[4rem] border border-border shadow-2xl flex flex-col gap-12 relative overflow-hidden">
              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/20 via-transparent to-transparent pointer-events-none"></div>
              
              <div className="flex flex-col md:flex-row gap-12 items-center relative z-10">
@@ -116,7 +116,7 @@ export default function Naturheilpraxis() {
           </div>
           <div className="grid md:grid-cols-3 gap-8 text-left">
             {diagnostik.map((item, i) => (
-              <Link to={item.path} key={i} className="group bg-white p-10 lg:p-12 rounded-[3.5rem] border border-border hover:border-accent transition-all hover:shadow-2xl flex flex-col justify-between">
+              <Link to={item.path} key={i} className="group bg-white p-6 md:p-10 lg:p-12 rounded-[1.75rem] md:rounded-[3.5rem] border border-border hover:border-accent transition-all hover:shadow-2xl flex flex-col justify-between">
                 <div>
                   <div className="bg-muted/30 w-20 h-20 rounded-2xl flex items-center justify-center mb-10 border border-border group-hover:border-accent/30 transition-colors shadow-sm text-accent">
                      {item.icon}
@@ -184,7 +184,7 @@ export default function Naturheilpraxis() {
                 </div>
               </div>
               
-              <div className="bg-primary text-primary-foreground p-12 lg:p-16 rounded-[4rem] shadow-2xl relative overflow-hidden h-full flex flex-col justify-center text-left">
+              <div className="bg-primary text-primary-foreground p-8 md:p-12 lg:p-16 rounded-[2rem] md:rounded-[3rem] lg:rounded-[4rem] shadow-2xl relative overflow-hidden h-full flex flex-col justify-center text-left">
                   <div className="absolute top-0 right-0 overflow-hidden">
                     <HeartPulse className="w-48 h-48 text-accent/10 translate-x-12 -translate-y-12" />
                   </div>

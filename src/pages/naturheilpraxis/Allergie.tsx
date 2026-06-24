@@ -75,7 +75,7 @@ export default function Allergie() {
               { title: "Nährstoff-Mangel", desc: "Ohne ausreichend Zink, Vitamin C und Vitamin D fehlt dem Immunsystem die Bremse.", icon: <HeartPulse className="w-8 h-8 text-accent" /> },
               { title: "Chronischer Stress", desc: "Dauerstress senkt die Toleranzschwelle deines Immunsystems massiv ab.", icon: <Activity className="w-8 h-8 text-accent" /> }
             ].map((u, i) => (
-              <div key={i} className="bg-white p-10 rounded-[3.5rem] border border-border shadow-sm group hover:border-accent transition-all hover:shadow-2xl text-left">
+              <div key={i} className="bg-white p-6 md:p-10 rounded-[1.75rem] md:rounded-[3.5rem] border border-border shadow-sm group hover:border-accent transition-all hover:shadow-2xl text-left">
                 <div className="bg-muted/50 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-accent group-hover:text-white transition-all duration-500">
                   {u.icon}
                 </div>
@@ -115,7 +115,7 @@ export default function Allergie() {
               </div>
             </div>
             
-            <div className="bg-primary text-white p-12 lg:p-20 rounded-[5rem] shadow-2xl relative overflow-hidden text-left h-full">
+            <div className="bg-primary text-white p-8 md:p-12 lg:p-20 rounded-[2rem] md:rounded-[4rem] lg:rounded-[5rem] shadow-2xl relative overflow-hidden text-left h-full">
               <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-accent/20 -mr-64 -mt-64 rounded-full blur-[100px] opacity-20"></div>
               <div className="relative z-10 text-left">
                 <h3 className="text-3xl font-serif font-bold mb-12 text-white leading-tight text-left">Ganzheitliche <br />Heilungsimpulse</h3>
@@ -154,7 +154,7 @@ export default function Allergie() {
             Der Weg zur allergiefreien Lebensqualität erfordert Geduld, aber die Ergebnisse sind lebensverändernd. Wir begleiten dich intensiv dabei, dein Immunsystem wieder zu beruhigen.
           </p>
           <div className="flex justify-center">
-            <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-12 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-transform shadow-2xl flex items-center justify-center gap-3 shadow-primary/20 border-none">
+            <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-transform shadow-2xl flex items-center justify-center gap-3 shadow-primary/20 border-none">
               Kostenfreie Vor-Analyse anfragen <ArrowRight className="w-6 h-6 text-white text-center" />
             </Link>
           </div>

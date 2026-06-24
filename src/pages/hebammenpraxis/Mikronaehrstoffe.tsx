@@ -22,7 +22,7 @@ export default function Mikronaehrstoffe() {
         imageAlt="Mikronährstoffe in der Schwangerschaft"
         imageKey="img_hero_mikronaehrstoffe"
       >
-        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
           Vorgespräch vereinbaren <ArrowRight size={20} />
         </Link>
       </SplitScreenHero>
@@ -42,7 +42,7 @@ export default function Mikronaehrstoffe() {
                 </p>
               </div>
             </div>
-            <div className="bg-accent/5 p-12 rounded-[4rem] border-2 border-accent/20 relative">
+            <div className="bg-accent/5 p-6 md:p-12 rounded-[1.5rem] md:rounded-[3rem] lg:rounded-[4rem] border-2 border-accent/20 relative">
                <Zap className="text-accent w-12 h-12 mb-6" />
                <h3 className="text-2xl font-serif text-primary mb-4 italic">Qualität vor Quantität</h3>
                <p className="text-muted-foreground leading-relaxed font-medium">

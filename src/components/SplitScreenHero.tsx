@@ -15,9 +15,9 @@ export default function SplitScreenHero({ badge, title, subtitle, imageSrc, imag
   const { getImageUrl } = useSiteImages();
   const finalImageSrc = imageKey ? getImageUrl(imageKey, imageSrc) : imageSrc;
   return (
-    <section className="relative pt-32 pb-24 overflow-hidden border-b border-border/50">
+    <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden border-b border-border/50">
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
+        <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-8 md:gap-12 items-center">
           {/* Left Column: Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -28,10 +28,10 @@ export default function SplitScreenHero({ badge, title, subtitle, imageSrc, imag
             <span className="bg-primary/10 text-primary px-5 py-2 rounded-full text-xs font-black mb-8 inline-block uppercase tracking-[0.2em] shadow-sm">
               {badge}
             </span>
-            <h1 className="text-4xl lg:text-6xl font-serif text-primary mb-8 leading-[1.1] [hyphens:auto] [overflow-wrap:anywhere] break-words">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-serif text-primary mb-6 md:mb-8 leading-[1.1] [hyphens:auto] [overflow-wrap:anywhere] break-words">
               {title}
             </h1>
-            <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-2xl">
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 md:mb-12 leading-relaxed max-w-2xl">
               {subtitle}
             </p>
             {children && (

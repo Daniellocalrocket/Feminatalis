@@ -44,7 +44,7 @@ export default function Rueckbildung() {
         imageAlt="Rückbildungsgymnastik – gezieltes Training für Beckenboden und Körpermitte"
         imageKey="img_hero_rueckbildung"
       >
-        <Link to={`${ROUTE_PATHS.KURS}#kurse-vor-ort`} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+        <Link to={`${ROUTE_PATHS.KURS}#kurse-vor-ort`} className="bg-primary text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
           Kurse & Veranstaltungen ansehen <ArrowRight size={20} />
         </Link>
       </SplitScreenHero>
@@ -257,7 +257,7 @@ export default function Rueckbildung() {
           </p>
           <Link 
             to={ROUTE_PATHS.KURS + "#kurse-vor-ort"} 
-            className="bg-accent text-white px-12 py-5 rounded-2xl text-xl font-bold hover:bg-accent/90 transition-all shadow-xl inline-flex items-center gap-3 hover:-translate-y-1"
+            className="bg-accent text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl text-xl font-bold hover:bg-accent/90 transition-all shadow-xl inline-flex items-center gap-3 hover:-translate-y-1"
           >
             Jetzt anmelden <ArrowRight size={24} />
           </Link>

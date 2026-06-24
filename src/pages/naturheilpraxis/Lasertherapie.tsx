@@ -70,7 +70,7 @@ export default function Lasertherapie() {
           </div>
 
           {/* Haemo-Laser Red Spectrum Focus Section */}
-          <div className="bg-primary text-white p-12 lg:p-20 rounded-[5rem] shadow-2xl relative overflow-hidden mb-24">
+          <div className="bg-primary text-white p-8 md:p-12 lg:p-20 rounded-[2rem] md:rounded-[4rem] lg:rounded-[5rem] shadow-2xl relative overflow-hidden mb-24">
              <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-red-600/10 -mr-64 -mt-64 rounded-full blur-[100px] opacity-35"></div>
              <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-red-500/15 rounded-full blur-[120px] -z-0" />
              <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10 text-left">
@@ -98,7 +98,7 @@ export default function Lasertherapie() {
                       ))}
                    </div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-md p-12 rounded-[4rem] border border-white/20 text-center">
+                <div className="bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] lg:rounded-[4rem] border border-white/20 text-center">
                    <Sun className="text-red-400 w-20 h-20 mx-auto mb-8 animate-pulse filter drop-shadow-[0_0_10px_rgba(239,68,68,0.5)]" />
                    <h3 className="text-2xl font-serif font-bold mb-6 text-white">Systemische Lichtdusche</h3>
                    <p className="text-lg opacity-80 mb-10 leading-relaxed italic">

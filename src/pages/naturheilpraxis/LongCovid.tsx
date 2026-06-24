@@ -89,7 +89,7 @@ export default function LongCovid() {
               { cat: "Körperlich", items: ["Belastungs-Intoleranz (PEM)", "Extreme Fatigue", "Atemnot (Lunge o.B.)", "Muskelschmerzen"], icon: <HeartPulse className="w-8 h-8 text-accent" /> },
               { cat: "Immunologisch", items: ["Reaktivierte Viren (EBV)", "Nahrungsmittel-Intoleranzen", "Mastzell-Aktivierung", "Haarausfall"], icon: <ShieldCheck className="w-8 h-8 text-accent" /> }
             ].map((cat, i) => (
-              <div key={i} className="bg-white p-10 rounded-[3.5rem] border border-border shadow-sm group hover:shadow-xl transition-all text-left">
+              <div key={i} className="bg-white p-6 md:p-10 rounded-[1.75rem] md:rounded-[3.5rem] border border-border shadow-sm group hover:shadow-xl transition-all text-left">
                 <div className="bg-muted/50 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-accent group-hover:text-white transition-all duration-500">
                    {cat.icon}
                 </div>
@@ -107,7 +107,7 @@ export default function LongCovid() {
           </div>
 
           {/* Diagnosis & Synergy Section */}
-          <div className="bg-primary text-white rounded-[5rem] p-12 lg:p-24 overflow-hidden relative shadow-2xl text-left">
+          <div className="bg-primary text-white rounded-[2rem] md:rounded-[4rem] lg:rounded-[5rem] p-8 md:p-12 lg:p-24 overflow-hidden relative shadow-2xl text-left">
             <div className="absolute top-0 right-0 w-[50rem] h-[50rem] bg-accent/20 -mr-64 -mt-64 rounded-full blur-[120px] opacity-20"></div>
             <div className="relative z-10 text-left max-w-5xl mx-auto">
               <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-12 leading-tight text-left">
@@ -129,7 +129,7 @@ export default function LongCovid() {
                 ))}
               </div>
               
-              <div className="bg-white/10 backdrop-blur-md p-12 rounded-[4rem] border border-white/20 text-left mb-16">
+              <div className="bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] lg:rounded-[4rem] border border-white/20 text-left mb-16">
                 <h4 className="text-3xl font-serif text-accent mb-6 font-bold text-left">Die Synergie der Heilung</h4>
                 <p className="text-white opacity-90 text-xl leading-relaxed text-left font-medium">
                   Wir kombinieren das <strong>IHHT-Zelltraining</strong> (um geschädigte Mitochondrien zu ersetzen) mit <strong>hochdosierten Infusionen</strong> (zur Entgiftung & Energiebereitstellung) und dem <strong>CO2-Trockenbad</strong> (zur Öffnung der kleinsten Kapillaren). Dieser kombinierte Ansatz ist unsere Antwort auf die Komplexität von Post-COVID.
@@ -137,7 +137,7 @@ export default function LongCovid() {
               </div>
 
               <div className="text-center">
-                <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-accent text-white px-14 py-6 rounded-2xl font-bold text-xl hover:scale-105 transition-all shadow-2xl">
+                <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-accent text-white px-8 md:px-14 py-4 md:py-6 rounded-2xl font-bold text-xl hover:scale-105 transition-all shadow-2xl">
                    Diagnostik-Termin anfragen <ArrowRight className="ml-3 w-7 h-7" />
                 </Link>
               </div>

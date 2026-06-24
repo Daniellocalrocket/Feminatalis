@@ -64,7 +64,7 @@ export default function Hebammenpraxis() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-6">
-                <Link to={ROUTE_PATHS.CONTACT} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-primary/95 transition-all shadow-2xl hover:-translate-y-1 flex items-center justify-center gap-3 group">
+                <Link to={ROUTE_PATHS.CONTACT} className="bg-primary text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold text-lg hover:bg-primary/95 transition-all shadow-2xl hover:-translate-y-1 flex items-center justify-center gap-3 group">
                   Vorgespräch vereinbaren <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -76,7 +76,7 @@ export default function Hebammenpraxis() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="relative z-10 aspect-[4/5] rounded-[4rem] overflow-hidden shadow-2xl border-[12px] border-white">
+              <div className="relative z-10 aspect-[4/5] rounded-[2rem] md:rounded-[4rem] overflow-hidden shadow-2xl border-[12px] border-white">
                 <img 
                   src="/assets/person-doing-yoga-pilates.jpg" 
                   alt="Yoga & Pilates in der Schwangerschaft" 
@@ -165,7 +165,7 @@ export default function Hebammenpraxis() {
           
           <div className="grid md:grid-cols-3 gap-8">
             {/* Säule 1 */}
-            <div className="bg-white p-12 rounded-[3rem] border border-border hover:shadow-2xl transition-all group hover:-translate-y-2">
+            <div className="bg-white p-6 md:p-12 rounded-[1.5rem] md:rounded-[3rem] border border-border hover:shadow-2xl transition-all group hover:-translate-y-2">
               <div className="bg-primary/5 w-20 h-20 rounded-3xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform">
                 <HeartPulse className="w-10 h-10 text-primary" />
               </div>
@@ -194,7 +194,7 @@ export default function Hebammenpraxis() {
             </div>
 
             {/* Säule 2 */}
-            <div className="bg-white p-12 rounded-[3rem] border border-border hover:shadow-2xl transition-all group hover:-translate-y-2 relative overflow-hidden">
+            <div className="bg-white p-6 md:p-12 rounded-[1.5rem] md:rounded-[3rem] border border-border hover:shadow-2xl transition-all group hover:-translate-y-2 relative overflow-hidden">
                <div className="bg-[#fdf2f2] w-20 h-20 rounded-3xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform">
                 <Thermometer className="w-10 h-10 text-primary" />
               </div>
@@ -218,7 +218,7 @@ export default function Hebammenpraxis() {
             </div>
 
             {/* Säule 3 */}
-            <div className="bg-primary text-white p-12 rounded-[3rem] shadow-2xl relative overflow-hidden group hover:-translate-y-2 transition-all">
+            <div className="bg-primary text-white p-6 md:p-12 rounded-[1.5rem] md:rounded-[3rem] shadow-2xl relative overflow-hidden group hover:-translate-y-2 transition-all">
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-bl-[100px] -z-0" />
                <div className="bg-white/20 w-20 h-20 rounded-3xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform relative z-10">
                 <Sparkles className="w-10 h-10 text-[#fde4c8]" />
@@ -288,7 +288,7 @@ export default function Hebammenpraxis() {
                   "Du hast nur eine Chance, diesen einen Moment perfekt vorzubereiten. Überlasse ihn nicht dem Zufall."
                 </p>
               </div>
-              <Link to={ROUTE_PATHS.PREMIUM_ZELLKRAFT_KURS} className="bg-accent text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-accent/90 transition-all shadow-xl hover:-translate-y-1 flex items-center justify-center gap-3 w-fit group">
+              <Link to={ROUTE_PATHS.PREMIUM_ZELLKRAFT_KURS} className="bg-accent text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold text-lg hover:bg-accent/90 transition-all shadow-xl hover:-translate-y-1 flex items-center justify-center gap-3 w-fit group">
                 Jetzt mehr erfahren <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -317,8 +317,8 @@ export default function Hebammenpraxis() {
           <div className="flex flex-col lg:flex-row items-center gap-20">
             <div className="lg:w-1/2 relative">
                <div className="absolute -top-10 -left-10 w-64 h-64 bg-accent/5 rounded-full blur-[100px] opacity-60 -z-10" />
-               <div className="relative border-2 border-border p-4 rounded-[4rem] rotate-2">
-                  <div className="aspect-[4/5] rounded-[3.5rem] overflow-hidden">
+               <div className="relative border-2 border-border p-4 rounded-[2rem] md:rounded-[4rem] rotate-2">
+                  <div className="aspect-[4/5] rounded-[1.75rem] md:rounded-[3.5rem] overflow-hidden">
                      <img 
                        src={getImageUrl("img_portrait_angela_hebamme", "/angela_deschner.png")} 
                        alt="Angela Deschner" 
@@ -362,7 +362,7 @@ export default function Hebammenpraxis() {
           <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
             Investiere in die optimale Vorbereitung deiner körperlichen Ressourcen. Für eine Geburt aus eigener Stärke.
           </p>
-          <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-block bg-primary text-white px-12 py-6 rounded-2xl font-bold text-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 w-fit mx-auto">
+          <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-block bg-primary text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl font-bold text-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 w-fit mx-auto">
             <UserCheck size={24} /> Kostenfreie Vor-Analyse anfragen
           </Link>
         </div>

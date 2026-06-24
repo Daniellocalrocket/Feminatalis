@@ -32,7 +32,7 @@ export default function Kinderwunsch() {
         imageAlt="Kinderwunsch Begleitung"
         imageKey="img_hero_kinderwunsch"
       >
-        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
           Projekt Glückskind starten <ArrowRight size={20} />
         </Link>
       </SplitScreenHero>
@@ -74,7 +74,7 @@ export default function Kinderwunsch() {
             ))}
           </div>
 
-          <div className="bg-primary text-white p-12 lg:p-20 rounded-[5rem] shadow-2xl relative overflow-hidden">
+          <div className="bg-primary text-white p-8 md:p-12 lg:p-20 rounded-[2rem] md:rounded-[4rem] lg:rounded-[5rem] shadow-2xl relative overflow-hidden">
              <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-accent/20 -mr-64 -mt-64 rounded-full blur-[100px] opacity-20"></div>
              <div className="flex flex-col lg:flex-row gap-16 items-center text-left">
                 <div className="lg:w-2/3">
@@ -82,7 +82,7 @@ export default function Kinderwunsch() {
                   <p className="text-xl opacity-90 mb-10 leading-relaxed font-medium">
                     „Ein Kinderwunsch ist kein Sprint, sondern eine Reise der Vorbereitung. Wir begleiten euch als Paar mit wissenschaftlicher Präzision und tiefem Vertrauen in die Weisheit der Natur.“
                   </p>
-                  <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary px-12 py-5 rounded-2xl font-bold hover:bg-accent hover:text-white transition-all shadow-xl inline-flex items-center gap-3">
+                  <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-white text-primary px-8 md:px-12 py-4 md:py-5 rounded-2xl font-bold hover:bg-accent hover:text-white transition-all shadow-xl inline-flex items-center gap-3">
                     Projekt Glückskind anfragen <ArrowRight size={20} />
                   </Link>
                 </div>

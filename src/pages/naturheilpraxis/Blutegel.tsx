@@ -53,14 +53,14 @@ export default function Blutegel() {
       {/* Benefits Grid */}
       <section className="py-24 bg-muted/20">
         <div className="container mx-auto px-4 max-w-7xl">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-left mb-24">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 text-left mb-24">
             {[
               { title: "Arthrose-Hilfe", desc: "Signifikante Schmerzreduktion bei Knie-, Daumensattel- und Sprunggelenksarthrose.", icon: <Sparkles className="w-8 h-8 text-accent" /> },
               { title: "Gefäß-Entlastung", desc: "Hervorragend bei Krampfadern, Besenreisern und zur Thromboseprophylaxe.", icon: <Activity className="w-8 h-8 text-accent" /> },
               { title: "Tinnitus-Therapie", desc: "Verbesserung der Mikrozirkulation im Innenohr zur Linderung von Ohrgeräuschen.", icon: <Zap className="w-8 h-8 text-accent" /> },
               { title: "Blutdruck-Balance", desc: "Natürliche Entlastung des Kreislaufsystems bei arteriellem Bluthochdruck.", icon: <Heart className="w-8 h-8 text-accent" /> }
             ].map((item, i) => (
-              <div key={i} className="bg-white p-10 rounded-[3rem] border border-border hover:border-accent transition-all hover:shadow-xl group">
+              <div key={i} className="bg-white p-6 md:p-10 rounded-[1.5rem] md:rounded-[3rem] border border-border hover:border-accent transition-all hover:shadow-xl group">
                 <div className="bg-muted/30 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-all duration-500">
                    {item.icon}
                 </div>
@@ -70,7 +70,7 @@ export default function Blutegel() {
             ))}
           </div>
 
-          <div className="bg-primary text-white p-12 lg:p-20 rounded-[5rem] shadow-2xl relative overflow-hidden">
+          <div className="bg-primary text-white p-8 md:p-12 lg:p-20 rounded-[2rem] md:rounded-[4rem] lg:rounded-[5rem] shadow-2xl relative overflow-hidden">
              <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-accent/20 -mr-64 -mt-64 rounded-full blur-[100px] opacity-20"></div>
              <div className="flex flex-col lg:flex-row gap-16 items-center text-left">
                 <div className="lg:w-2/3">

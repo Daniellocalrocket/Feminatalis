@@ -30,7 +30,7 @@ export default function Homoeopathie() {
         imageAlt="Homöopathische Globuli und Naturheilkunde"
         imageKey="img_hero_homoeopathie"
       >
-        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
+        <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="bg-primary text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold hover:shadow-2xl transition-all shadow-xl active:scale-95 flex items-center gap-2">
           Analyse-Gespräch anfragen <ArrowRight size={20} />
         </Link>
       </SplitScreenHero>
@@ -78,7 +78,7 @@ export default function Homoeopathie() {
               </div>
             </div>
             
-            <div className="bg-primary text-white p-12 lg:p-16 rounded-[4rem] shadow-2xl relative overflow-hidden text-left h-full">
+            <div className="bg-primary text-white p-8 md:p-12 lg:p-16 rounded-[2rem] md:rounded-[3rem] lg:rounded-[4rem] shadow-2xl relative overflow-hidden text-left h-full">
               <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 -mr-32 -mt-32 rounded-full blur-3xl opacity-20"></div>
               <div className="relative z-10">
                 <Quote className="text-accent w-16 h-16 mb-8 opacity-50" />
@@ -133,7 +133,7 @@ export default function Homoeopathie() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto text-left">
-            <div className="bg-white p-10 lg:p-12 rounded-[3.5rem] border border-border shadow-sm text-left">
+            <div className="bg-white p-6 md:p-10 lg:p-12 rounded-[1.75rem] md:rounded-[3.5rem] border border-border shadow-sm text-left">
               <Scale className="w-12 h-12 text-primary mb-8" />
               <h4 className="text-2xl font-bold text-primary mb-6 font-serif text-left">Transparente Kosten</h4>
               <p className="text-sm text-muted-foreground mb-8 font-medium text-left leading-relaxed">Die ausführliche Erst-Anamnese (oft 1-2 Stunden) und anschließende Beratung wird strikt nach tatsächlichem Zeitaufwand und GebüH berechnet.</p>
@@ -144,7 +144,7 @@ export default function Homoeopathie() {
               <p className="text-[11px] text-muted-foreground italic mt-6 text-left border-t border-border pt-4">Abrechnung erfolgt formell nach GebüH. Private Kassen übernehmen i.d.R. die anfallenden Kosten.</p>
             </div>
             
-            <div className="bg-muted/30 p-10 lg:p-12 rounded-[3.5rem] border border-border shadow-sm text-left">
+            <div className="bg-muted/30 p-6 md:p-10 lg:p-12 rounded-[1.75rem] md:rounded-[3.5rem] border border-border shadow-sm text-left">
               <div className="bg-white w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-sm">
                  <AlertCircle className="w-8 h-8 text-accent" />
               </div>
@@ -170,7 +170,7 @@ export default function Homoeopathie() {
             Bereit, deine körpereigenen Ressourcen zu stärken?
           </h2>
           <div className="flex justify-center">
-             <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-12 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-2xl flex items-center justify-center gap-3 shadow-primary/20 border-none">
+             <Link to={ROUTE_PATHS.VORQUALIFIZIERUNG} className="inline-flex bg-primary text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-2xl flex items-center justify-center gap-3 shadow-primary/20 border-none">
                Kostenfreie Vor-Analyse anfragen <ArrowRight className="w-6 h-6 text-white text-center" />
              </Link>
           </div>

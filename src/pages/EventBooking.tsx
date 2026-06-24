@@ -124,7 +124,7 @@ export default function EventBooking() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-white p-12 md:p-16 rounded-[4rem] shadow-2xl border border-white relative overflow-hidden"
+            className="bg-white p-8 md:p-12 lg:p-16 rounded-[2rem] md:rounded-[3rem] lg:rounded-[4rem] shadow-2xl border border-white relative overflow-hidden"
           >
             <div className="absolute top-0 left-0 w-full h-2 bg-green-500/20" />
             <div className="w-24 h-24 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-8">
@@ -249,7 +249,7 @@ export default function EventBooking() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="bg-white p-8 md:p-12 rounded-[3.5rem] shadow-2xl border border-white"
+              className="bg-white p-6 md:p-8 lg:p-12 rounded-[1.75rem] md:rounded-[3.5rem] shadow-2xl border border-white"
             >
               <div className="mb-10">
                 <h2 className="text-3xl font-serif text-primary mb-2">Deinen Platz sichern</h2>

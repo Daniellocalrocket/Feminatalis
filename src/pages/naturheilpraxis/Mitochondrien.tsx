@@ -333,7 +333,7 @@ export default function Mitochondrien() {
       </section>
 
       {/* Angela's Treatment Pathway Sektion */}
-      <section className="py-24 bg-primary text-white rounded-[4rem] mx-4 lg:mx-10 mb-24 relative overflow-hidden shadow-2xl">
+      <section className="py-24 bg-primary text-white rounded-[2rem] md:rounded-[4rem] mx-4 lg:mx-10 mb-24 relative overflow-hidden shadow-2xl">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mt-48 blur-3xl" />
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -383,7 +383,7 @@ export default function Mitochondrien() {
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">{educational.subtitle}</p>
           </div>
 
-          <div className="bg-[#fff9f2] p-8 lg:p-12 rounded-[3.5rem] border border-border shadow-sm">
+          <div className="bg-[#fff9f2] p-6 md:p-8 lg:p-12 rounded-[1.75rem] md:rounded-[3.5rem] border border-border shadow-sm">
             <h3 className="text-xl md:text-2xl font-serif text-primary mb-8 text-center flex items-center justify-center gap-2">
               <Play size={20} className="text-accent fill-accent" />
               {educational.boxTitle}

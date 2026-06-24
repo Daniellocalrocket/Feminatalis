@@ -53,7 +53,7 @@ export default function CO2Therapie() {
                 Das Ergebnis spürst du oft sofort als wohliges Wärmegefühl und sanftes Prickeln. Deine Kapillaren weiten sich, der Blutfluss wird optimiert und die <strong>innere Atmung</strong> läuft auf Hochtouren.
               </p>
             </div>
-            <div className="bg-[#fdf8f3] p-12 rounded-[4rem] border border-orange-100 shadow-sm relative overflow-hidden group">
+            <div className="bg-[#fdf8f3] p-6 md:p-12 rounded-[1.5rem] md:rounded-[3rem] lg:rounded-[4rem] border border-orange-100 shadow-sm relative overflow-hidden group">
                <FlaskConical className="w-16 h-16 text-accent mb-8 opacity-20 absolute top-8 right-8 group-hover:rotate-12 transition-transform" />
                <h3 className="text-2xl font-serif text-primary mb-6 font-bold">Wissenschaftlicher Fakt</h3>
                <p className="text-primary/80 italic leading-relaxed text-lg">
@@ -74,7 +74,7 @@ export default function CO2Therapie() {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-left mb-24">
             {anwendungsbereiche.map((item, i) => (
-              <div key={i} className="bg-white p-10 rounded-[3.5rem] border border-border hover:border-accent transition-all hover:shadow-2xl group flex flex-col h-full">
+              <div key={i} className="bg-white p-6 md:p-10 rounded-[1.75rem] md:rounded-[3.5rem] border border-border hover:border-accent transition-all hover:shadow-2xl group flex flex-col h-full">
                 <div className="bg-muted/50 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 text-primary group-hover:bg-accent group-hover:text-white transition-all duration-500 shadow-sm">
                    {item.icon}
                 </div>
@@ -84,7 +84,7 @@ export default function CO2Therapie() {
             ))}
           </div>
 
-          <div className="bg-primary text-white p-12 lg:p-24 rounded-[5rem] shadow-2xl relative overflow-hidden text-left">
+          <div className="bg-primary text-white p-8 md:p-12 lg:p-24 rounded-[2rem] md:rounded-[4rem] lg:rounded-[5rem] shadow-2xl relative overflow-hidden text-left">
              <div className="absolute top-0 right-0 w-[50rem] h-[50rem] bg-accent/20 -mr-64 -mt-64 rounded-full blur-[120px] opacity-20"></div>
              <div className="relative z-10 flex flex-col lg:flex-row gap-20 items-center text-left">
                 <div className="lg:w-2/3 text-left">

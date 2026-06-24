@@ -68,7 +68,7 @@ export default function KursInteresse() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-white p-12 lg:p-16 rounded-[4rem] shadow-xl"
+            className="bg-white p-8 md:p-12 lg:p-16 rounded-[2rem] md:rounded-[3rem] lg:rounded-[4rem] shadow-xl"
           >
             <div className="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-8">
               <CheckCircle2 className="w-10 h-10 text-accent" />
