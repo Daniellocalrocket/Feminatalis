@@ -6,6 +6,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { ROUTE_PATHS } from "@/lib/index";
 import { Layout } from "@/components/Layout";
 import { lazy, Suspense } from "react";
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 
 // Lazy-loaded pages for code splitting & faster initial load
 const Home = lazy(() => import("@/pages/Home"));
@@ -95,6 +96,7 @@ const App = () => {
         />
         <BrowserRouter>
           <Suspense fallback={<PageLoader />}>
+            <ErrorBoundary>
             <Layout>
               <Routes>
               <Route 
@@ -331,6 +333,7 @@ const App = () => {
               />
             </Routes>
             </Layout>
+            </ErrorBoundary>
           </Suspense>
         </BrowserRouter>
       </TooltipProvider>

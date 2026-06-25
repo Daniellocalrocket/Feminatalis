@@ -27,10 +27,16 @@ export function usePriceList() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchPriceList().then((result) => {
-      setData(result);
-      setLoading(false);
-    });
+    fetchPriceList()
+      .then((result) => {
+        setData(result);
+      })
+      .catch(() => {
+        setData(fallbackCategories);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
   function getItem(itemId: string): PriceItem | undefined {
