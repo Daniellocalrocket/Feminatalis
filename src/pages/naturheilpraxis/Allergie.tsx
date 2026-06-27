@@ -98,7 +98,7 @@ export default function Allergie() {
                   Ein einfacher Prick-Test reicht meist bei weitem nicht aus, um das komplexe Geschehen zu erfassen. In unserer Praxis stützen wir uns auf eine <strong>tiefgehende Labordiagnostik</strong> (TH1/TH2-Verteilung, IgE, IgG, LTT-Tests) sowie fundierte <strong>Stuhl-Analysen zur Mikrobiombeurteilung</strong>, um immunologische Belastungen und mikrobielle Fehlbesiedlungen zweifelsfrei sichtbar zu machen.
                 </p>
                 <p>
-                  Als tragende Säulen der Immunmodulation und Regulation des Abwehrsystems setzen wir zudem auf die <strong>Klassische Homöopathie</strong> zur tiefen systemischen Umstimmung sowie eine gezielte <strong>Parasitenbehandlung</strong>. Letztere ist ein faszinierender Ansatz der funktionellen Medizin, um einem unterforderten Immunsystem seinen evolutionsbiologischen Trainingspartner zurückzugeben und Überreaktionen zu dämpfen.
+                  Als tragende Säulen der Immunmodulation und Regulation des Abwehrsystems setzen wir zudem auf <strong>Mikroimmuntherapie und Homöopathie</strong> zur tiefen systemischen Umstimmung sowie eine gezielte <strong>Parasitenbehandlung</strong>. Letztere ist ein faszinierender Ansatz der funktionellen Medizin, um einem unterforderten Immunsystem seinen evolutionsbiologischen Trainingspartner zurückzugeben und Überreaktionen zu dämpfen.
                 </p>
                 <p>
                   Unser Ziel ist die natürliche Immunmodulation. Dabei setzen wir auf absolut <strong>aluminiumfreie Verfahren</strong>. Wir unterstützen deinen Körper dabei, Mastzellen zu stabilisieren und die Histamin-Toleranz nachhaltig zu erhöhen.
