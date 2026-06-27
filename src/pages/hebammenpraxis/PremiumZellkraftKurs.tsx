@@ -121,7 +121,7 @@ export default function PremiumZellkraftKurs() {
               </div>
               <h3 className="text-2xl md:text-3xl font-serif mb-6 text-primary">Die biologische Lösung</h3>
               <p className="text-primary/80 mb-8 leading-relaxed">
-                Dieser Kurs ist anders. Wir rüsten dich mit kompromisslosen biologischen Fakten aus. Du lernst nicht nur Atmen, sondern wie du die <strong>100.000 Mitochondrien in deiner Eizelle</strong> vor Toxinen schützt und die zukünftige hormonelle sowie kognitive Gesundheit deines Kindes durch hochverfügbare Nährstoffe (Epigenetik) aktiv programmierst.
+                Dieser Kurs ist anders. Wir rüsten dich mit kompromisslosen biologischen Fakten aus. Du lernst nicht nur Atmen, sondern wie du die <strong>400.000 Mitochondrien in deiner Eizelle</strong> vor Toxinen schützt und die zukünftige hormonelle sowie kognitive Gesundheit deines Kindes durch hochverfügbare Nährstoffe (Epigenetik) aktiv programmierst.
               </p>
               <ul className="space-y-4">
                 {[
