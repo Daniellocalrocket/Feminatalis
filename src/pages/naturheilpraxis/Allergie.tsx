@@ -50,7 +50,7 @@ export default function Allergie() {
           <h2 className="text-3xl lg:text-5xl font-serif text-primary mb-10 leading-tight">Die „verlorene Hygiene“ <br /><span className="text-accent italic">und das verwirrte System</span></h2>
           <div className="prose prose-lg mx-auto text-muted-foreground leading-relaxed">
             <p>
-              In unserer modernen Welt ist der „natürliche Trainingspartner“ unseres Immunsystems – der Kontakt zu Erde, Keimen und Parasiten – verloren gegangen. Die Folge: Das System langweilt sich und beginnt, harmlose Partikel wie Pollen, Hausstaub oder Nahrungsmittel als Bedrohung einzustufen. 
+              In unserer modernen Welt ist der „natürliche Trainingspartner“ unseres Immunsystems – der Kontakt zu Erde und Keimen – verloren gegangen. Die Folge: Das System langweilt sich und beginnt, harmlose Partikel wie Pollen, Hausstaub oder Nahrungsmittel als Bedrohung einzustufen. 
             </p>
             <p className="mt-6">
               Oft kommt eine <strong>Histamin-Intoleranz</strong> oder eine <strong>Mastzell-Überreaktion</strong> hinzu, die klassische Allergietests nicht erfassen. In meiner Praxis arbeiten wir nicht gegen das Symptom, sondern stellen die Ordnung im System wieder her – ohne den Einsatz von Aluminiumhydroxid oder chemischen Blockern.
@@ -98,7 +98,7 @@ export default function Allergie() {
                   Ein einfacher Prick-Test reicht meist bei weitem nicht aus, um das komplexe Geschehen zu erfassen. In unserer Praxis stützen wir uns auf eine <strong>tiefgehende Labordiagnostik</strong> (TH1/TH2-Verteilung, IgE, IgG, LTT-Tests) sowie fundierte <strong>Stuhl-Analysen zur Mikrobiombeurteilung</strong>, um immunologische Belastungen und mikrobielle Fehlbesiedlungen zweifelsfrei sichtbar zu machen.
                 </p>
                 <p>
-                  Als tragende Säulen der Immunmodulation und Regulation des Abwehrsystems setzen wir zudem auf <strong>Mikroimmuntherapie und Homöopathie</strong> zur tiefen systemischen Umstimmung sowie eine gezielte <strong>Parasitenbehandlung</strong>. Letztere ist ein faszinierender Ansatz der funktionellen Medizin, um einem unterforderten Immunsystem seinen evolutionsbiologischen Trainingspartner zurückzugeben und Überreaktionen zu dämpfen.
+                  Als tragende Säulen der Immunmodulation und Regulation des Abwehrsystems setzen wir zudem auf <strong>Mikroimmuntherapie und Homöopathie</strong> zur tiefen systemischen Umstimmung.
                 </p>
                 <p>
                   Unser Ziel ist die natürliche Immunmodulation. Dabei setzen wir auf absolut <strong>aluminiumfreie Verfahren</strong>. Wir unterstützen deinen Körper dabei, Mastzellen zu stabilisieren und die Histamin-Toleranz nachhaltig zu erhöhen.
@@ -124,7 +124,6 @@ export default function Allergie() {
                     "Mikrobiom-Therapie (Darmsanierung)",
                     "Mastzell-Stabilisierung (Naturnah)",
                     "Klassische Homöopathie (Umstimmung)",
-                    "Gezielte Parasitenbehandlung",
                     "Orthomolekulare Nährstoff-Infusionen",
                     "Histamin-Management & Beratung"
                   ].map((method, i) => (
