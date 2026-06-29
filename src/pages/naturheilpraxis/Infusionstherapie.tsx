@@ -6,8 +6,10 @@ import { Droplet, ActivitySquare, ShieldCheck, ArrowRight, FlaskConical, Zap, Sp
 import SplitScreenHero from "@/components/SplitScreenHero";
 import PreisTransparenz from "@/components/PreisTransparenz";
 import { motion } from "framer-motion";
+import { useSiteImages } from "@/hooks/useSiteImages";
 
 export default function Infusionstherapie() {
+  const { getImageUrl } = useSiteImages();
   return (
     <div className="bg-background min-h-screen font-sans">
       <SEO 
@@ -259,7 +261,7 @@ export default function Infusionstherapie() {
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <img 
-            src="/assets/image (9).jpg" 
+            src={getImageUrl("img_infusion_image9", "/assets/image (9).jpg")} 
             alt="Infusionstherapie Behandlung" 
             className="w-full max-w-4xl mx-auto rounded-[2.5rem] shadow-lg border border-border object-cover h-64 md:h-80"
           />

@@ -6,8 +6,10 @@ import { Activity, ShieldCheck, ArrowRight, Sparkles, Battery, Wind, Heart, Zap,
 import SplitScreenHero from "@/components/SplitScreenHero";
 import PreisTransparenz from "@/components/PreisTransparenz";
 import { motion } from "framer-motion";
+import { useSiteImages } from "@/hooks/useSiteImages";
 
 export default function Zelltraining() {
+  const { getImageUrl } = useSiteImages();
   const vorteile = [
     { title: "Zellregeneration", desc: "Abbau alter, schwacher Mitochondrien und Anregung der Vermehrung neuer, gesunder Energiekraftwerke.", icon: Sparkles },
     { title: "Stressresistenz", desc: "Stärkung des vegetativen Nervensystems für mehr Gelassenheit und schnellere Erholung im Alltag.", icon: ShieldCheck },
@@ -204,7 +206,7 @@ export default function Zelltraining() {
             
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-muted/20 p-8 rounded-[2rem]">
-                <img src="/assets/IHHT%201%20Schwangere.png" alt="IHHT Training – Sitzung 1" className="w-full h-48 object-cover rounded-xl mb-4" />
+                <img src={getImageUrl("img_ihht_schwangere_1", "/assets/IHHT%201%20Schwangere.png")} alt="IHHT Training – Sitzung 1" className="w-full h-48 object-cover rounded-xl mb-4" />
                 <p className="text-xs font-bold text-accent uppercase tracking-widest mb-4">Vorher (Sitzung 1)</p>
                 <ul className="space-y-3 text-muted-foreground">
                   <li>• 5 Min. Hypoxie bei 13% O₂</li>
@@ -214,7 +216,7 @@ export default function Zelltraining() {
                 </ul>
               </div>
               <div className="bg-accent/10 p-8 rounded-[2rem]">
-                <img src="/assets/IHHT%202%20Schwangere.png" alt="IHHT Training – Sitzung 14" className="w-full h-48 object-cover rounded-xl mb-4" />
+                <img src={getImageUrl("img_ihht_schwangere_2", "/assets/IHHT%202%20Schwangere.png")} alt="IHHT Training – Sitzung 14" className="w-full h-48 object-cover rounded-xl mb-4" />
                 <p className="text-xs font-bold text-accent uppercase tracking-widest mb-4">Nachher (Sitzung 14)</p>
                 <ul className="space-y-3 text-primary font-medium">
                   <li>• 7 Min. Hypoxie bei 11% O₂</li>

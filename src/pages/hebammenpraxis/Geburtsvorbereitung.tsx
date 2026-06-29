@@ -27,8 +27,10 @@ import SplitScreenHero from "@/components/SplitScreenHero";
 import PreisTransparenz from "@/components/PreisTransparenz";
 import { motion } from "framer-motion";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useSiteImages } from "@/hooks/useSiteImages";
 
 export default function Geburtsvorbereitung() {
+  const { getImageUrl } = useSiteImages();
   const schedule = [
     { day: "Freitag", time: "18:00 – 21:15 Uhr", focus: "Kennenlernen, Erste Atemtechniken, Beckenboden, Geburtsort-Wahl, Entspannungsübungen" },
     { day: "Samstag", time: "09:00 – 16:30 Uhr", focus: "Schmerz-Management, Körperarbeit, Hormone, Partner-Support, Kaiserschnitt, Stillen" },
@@ -129,7 +131,7 @@ export default function Geburtsvorbereitung() {
 
           <div className="mt-12">
             <img 
-              src="/assets/top-view-pregnant-woman-bed-preparing-baby-clothes-home-writing-list-things-notebook-pregnancy-birth-concept.jpg" 
+              src={getImageUrl("img_geburtsvorbereitung_paare", "/assets/top-view-pregnant-woman-bed-preparing-baby-clothes-home-writing-list-things-notebook-pregnancy-birth-concept.jpg")} 
               alt="Geburtsvorbereitung – Planung und Vorfreude" 
               className="w-full max-h-[500px] object-cover rounded-[3rem] shadow-lg"
             />

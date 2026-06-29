@@ -5,8 +5,10 @@ import { Link } from "react-router-dom";
 import PreisTransparenz from "@/components/PreisTransparenz";
 import { Activity, Check, ArrowRight, Zap, Target, Info, Sparkles, Heart } from "lucide-react";
 import SplitScreenHero from "@/components/SplitScreenHero";
+import { useSiteImages } from "@/hooks/useSiteImages";
 
 export default function Mikronaehrstoffe() {
+  const { getImageUrl } = useSiteImages();
   return (
     <div className="bg-background min-h-screen font-sans">
       <SEO 
@@ -161,7 +163,7 @@ export default function Mikronaehrstoffe() {
                 Trotz Einnahme von Standard-Präparaten klagte die Patientin über starke Übelkeit und Müdigkeit. Die Analyse zeigte: Ein massiver Mangel an Vitamin A, D und Coenzym Q10. Erst nach dem gezielten Ausgleich dieser Defizite stellte sich eine deutliche Besserung ein.
               </p>
               <img 
-                src="/assets/Schwangere%20Vitalsstoffversorgung%202.PNG" 
+                src={getImageUrl("img_mikronaehrstoffe_vitalsstoffe", "/assets/Schwangere%20Vitalsstoffversorgung%202.PNG")} 
                 alt="Vitalstoffversorgung in der Schwangerschaft" 
                 className="w-full max-h-[400px] object-cover rounded-2xl mt-6 shadow-md"
               />

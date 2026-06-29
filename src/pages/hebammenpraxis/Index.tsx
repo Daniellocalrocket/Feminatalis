@@ -78,7 +78,7 @@ export default function Hebammenpraxis() {
             >
               <div className="relative z-10 aspect-[4/5] rounded-[2rem] md:rounded-[4rem] overflow-hidden shadow-2xl border-[12px] border-white">
                 <img 
-                  src="/assets/person-doing-yoga-pilates.jpg" 
+                  src={getImageUrl("img_yoga_pilates", "/assets/person-doing-yoga-pilates.jpg")} 
                   alt="Yoga & Pilates in der Schwangerschaft" 
                   className="w-full h-full object-cover"
                 />

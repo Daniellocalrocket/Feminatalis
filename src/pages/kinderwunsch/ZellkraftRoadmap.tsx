@@ -22,8 +22,10 @@ import {
   Instagram
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { useSiteImages } from "@/hooks/useSiteImages";
 
 export default function ZellkraftRoadmap() {
+  const { getImageUrl } = useSiteImages();
   return (
     <div className="bg-background min-h-screen text-foreground font-sans">
       <SEO 
@@ -71,7 +73,7 @@ export default function ZellkraftRoadmap() {
               className="hidden lg:block"
             >
               <img
-                src="/assets/pregnant-woman-her-husband-hand-showing-heart-shape.jpg"
+                src={getImageUrl("img_zellkraft_paare", "/assets/pregnant-woman-her-husband-hand-showing-heart-shape.jpg")}
                 alt="Paar mit Herzsymbol für Kinderwunsch"
                 className="w-full h-auto rounded-[2.5rem] shadow-2xl object-cover aspect-[3/4]"
               />

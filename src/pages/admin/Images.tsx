@@ -86,6 +86,7 @@ const IMAGE_CONFIG = [
       { key: "img_yoga_pilates", label: "Übersicht – Yoga/Pilates", page: "Übersicht", default: "/assets/person-doing-yoga-pilates.jpg" },
       { key: "img_hero_beschwerden", label: "Schwangerschaftsbeschwerden – Hero", page: "Schwangerschaftsbeschwerden", default: "https://images.unsplash.com/photo-1493894473891-10fc1e5dbd22?q=80&w=2069&auto=format&fit=crop" },
       { key: "img_hero_mikronaehrstoffe", label: "Mikronährstoffe – Hero", page: "Mikronährstoffe", default: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=2070&auto=format&fit=crop" },
+      { key: "img_mikronaehrstoffe_vitalsstoffe", label: "Mikronährstoffe – Vitalstoffversorgung", page: "Mikronährstoffe", default: "/assets/Schwangere%20Vitalsstoffversorgung%202.PNG" },
       { key: "img_hero_geburtsvorbereitung", label: "Geburtsvorbereitung – Hero", page: "Geburtsvorbereitung", default: "/assets/loving-husband-hugging-pregnant-wifes-belly-male-hands-big-tummy-love-parenthood-pregnancy-concept.jpg" },
       { key: "img_geburtsvorbereitung_paare", label: "Geburtsvorbereitung – Paare", page: "Geburtsvorbereitung", default: "/assets/top-view-pregnant-woman-bed-preparing-baby-clothes-home-writing-list-things-notebook-pregnancy-birth-concept.jpg" },
       { key: "img_liebespaar_bauch", label: "Geburtsvorbereitung – Liebespaar", page: "Geburtsvorbereitung", default: "/assets/loving-husband-hugging-pregnant-wifes-belly-male-hands-big-tummy-love-parenthood-pregnancy-concept.jpg" },

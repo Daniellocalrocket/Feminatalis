@@ -4,8 +4,10 @@ import { ROUTE_PATHS } from "@/lib/index";
 import { Link } from "react-router-dom";
 import { Brain, Activity, ShieldCheck, ArrowRight, Check, Star, Quote, ArrowUpRight, Sparkles, Zap, Music } from "lucide-react";
 import { motion } from "framer-motion";
+import { useSiteImages } from "@/hooks/useSiteImages";
 
 export default function BrainLight() {
+  const { getImageUrl } = useSiteImages();
   const features = [
     { title: "Audio-Visuelle Stimulation", desc: "Über spezielle Lichtimpulse und Musik wird dein Gehirn sanft in den entspannten Theta-Zustand geführt.", icon: <Music className="w-6 h-6" /> },
     { title: "Mechanische Shiatsu-Massage", desc: "4D-Sensoren scannen deinen Rücken und lösen Verspannungen punktgenau.", icon: <Activity className="w-6 h-6" /> },
@@ -66,7 +68,7 @@ export default function BrainLight() {
               <div className="absolute -inset-4 bg-accent/20 rounded-[4rem] blur-3xl opacity-30 animate-pulse" />
               <div className="aspect-[4/3] rounded-[3.5rem] overflow-hidden shadow-2xl border-8 border-white relative z-10">
                 <img 
-                  src="/brainlight-hero.jpg" 
+                  src={getImageUrl("img_brainlight_hero", "/brainlight-hero.jpg")} 
                   alt="Das Gefühl der Schwerelosigkeit mit brainLight®" 
                   className="w-full h-full object-cover"
                 />
@@ -100,7 +102,7 @@ export default function BrainLight() {
             <div className="relative">
               <div className="bg-white p-6 rounded-[4rem] border border-border relative overflow-hidden shadow-2xl mb-8">
                  <img 
-                   src="/brainlight-chair-black.jpg" 
+                    src={getImageUrl("img_brainlight_black", "/brainlight-chair-black.jpg")} 
                    alt="brainLight® Shiatsu-Massagesessel Black Edition" 
                    className="w-full rounded-[3rem] hover:scale-105 transition-transform duration-700"
                  />
@@ -151,7 +153,7 @@ export default function BrainLight() {
               <div className="space-y-8">
                 <div className="bg-white p-6 rounded-[3.5rem] shadow-2xl">
                    <img 
-                     src="/brainlight-chair-beige.jpg" 
+                     src={getImageUrl("img_brainlight_beige", "/brainlight-chair-beige.jpg")} 
                      alt="brainLight® Relax-System Beige" 
                      className="w-full rounded-[2.5rem]"
                    />

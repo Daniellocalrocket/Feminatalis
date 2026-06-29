@@ -5,8 +5,10 @@ import { Link } from "react-router-dom";
 import { FlaskConical, ArrowRight } from "lucide-react";
 import SplitScreenHero from "@/components/SplitScreenHero";
 import PreisTransparenz from "@/components/PreisTransparenz";
+import { useSiteImages } from "@/hooks/useSiteImages";
 
 export default function Labor() {
+  const { getImageUrl } = useSiteImages();
   return (
     <div className="bg-background min-h-screen font-sans">
       <SEO 
@@ -108,7 +110,7 @@ export default function Labor() {
             </p>
             <div className="mt-12 mb-4">
               <img 
-                src="/assets/blood-test-21.jpg" 
+                src={getImageUrl("img_bluttest_labor", "/assets/blood-test-21.jpg")} 
                 alt="Laboranalyse Blutprobe" 
                 className="w-full max-w-4xl mx-auto rounded-[2.5rem] shadow-lg border border-border object-cover h-64 md:h-80"
               />

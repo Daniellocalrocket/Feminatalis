@@ -5,8 +5,10 @@ import { Link } from "react-router-dom";
 import { Activity, ArrowRight, Sparkles, Battery, Wind, Heart, Zap, Baby, Clock, CheckCircle2, Stethoscope, Gem, Shield } from "lucide-react";
 import SplitScreenHero from "@/components/SplitScreenHero";
 import PreisTransparenz from "@/components/PreisTransparenz";
+import { useSiteImages } from "@/hooks/useSiteImages";
 
 export default function ZelltrainingSchwangerschaft() {
+  const { getImageUrl } = useSiteImages();
   const vorteile = [
     { title: "Mehr Energie", desc: "Sanfter physiologischer Trainingsreiz für verbesserte ATP-Produktion.", icon: Zap },
     { title: "Optimale Sauerstoffversorgung", desc: "Individuell abgestimmtes Protokoll für bessere Durchblutung.", icon: Wind },
@@ -64,7 +66,7 @@ export default function ZelltrainingSchwangerschaft() {
               
               <div className="relative overflow-hidden rounded-[2.5rem] shadow-xl group border border-accent/10">
                 <img 
-                  src="/ama-divers.jpg" 
+                  src={getImageUrl("img_ama_divers", "/ama-divers.jpg")} 
                   alt="Japanische Ama-Taucherinnen am Meer" 
                   className="w-full aspect-[16/9] object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out" 
                 />

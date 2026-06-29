@@ -8,6 +8,7 @@ import PreisTransparenz from "@/components/PreisTransparenz";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
 import tcmData from "@/data/content/tcm.json";
+import { useSiteImages } from "@/hooks/useSiteImages";
 
 const iconMap: Record<string, React.FC<{ className?: string }>> = {
   Activity: Wind,
@@ -27,6 +28,7 @@ const scrollTo = (id: string) => {
 };
 
 export default function TCM() {
+  const { getImageUrl } = useSiteImages();
   const { hero, philosophy, pillars, akupunktur, indikationen, pulsdiagnostik, zungendiagnostik, moxa, ernaehrung, schroepfen, akutaping, cta } = tcmData;
 
   return (
@@ -119,14 +121,14 @@ export default function TCM() {
                 <div className="grid sm:grid-cols-2 gap-6 mt-12">
                    <div className="rounded-[2.5rem] overflow-hidden border border-border shadow-md">
                       <img 
-                        src="/akupunktur-modell.png" 
+                        src={getImageUrl("img_akupunktur_modell", "/akupunktur-modell.png")} 
                         alt="Klassisches Akupunktur-Modell mit Meridian-Punkten" 
                         className="w-full h-48 object-cover hover:scale-110 transition-transform duration-700"
                       />
                    </div>
                    <div className="rounded-[2.5rem] overflow-hidden border border-border shadow-md">
                       <img 
-                        src="/akupunktur-behandlung.png" 
+                        src={getImageUrl("img_akupunktur_behandlung", "/akupunktur-behandlung.png")} 
                         alt="Sanfte Akupunktur-Behandlung im Gesichtsbereich" 
                         className="w-full h-48 object-cover hover:scale-110 transition-transform duration-700"
                       />
@@ -222,7 +224,7 @@ export default function TCM() {
               
               <div className="mb-8 rounded-3xl overflow-hidden border border-border shadow-inner bg-white">
                 <img 
-                  src="/pulsdiagnostik.png" 
+                  src={getImageUrl("img_pulsdiagnostik", "/pulsdiagnostik.png")} 
                   alt="TCM Pulsdiagnostik - Tasten am Handgelenk" 
                   className="w-full h-64 object-cover hover:scale-105 transition-transform duration-700"
                 />
@@ -277,7 +279,7 @@ export default function TCM() {
 
               <div className="mb-8 rounded-3xl overflow-hidden border border-border shadow-inner bg-slate-50">
                 <img 
-                  src="/zungendiagnostik.png" 
+                  src={getImageUrl("img_zungendiagnostik", "/zungendiagnostik.png")} 
                   alt="TCM Zungendiagnostik - Zungenbilder im Vergleich" 
                   className="w-full h-64 object-cover hover:scale-105 transition-transform duration-700"
                 />
@@ -375,14 +377,14 @@ export default function TCM() {
               <div className="grid sm:grid-cols-2 gap-6 mt-12">
                  <div className="rounded-[2.5rem] overflow-hidden border border-orange-100 shadow-md bg-white">
                     <img 
-                      src="/moxa-zigarre.png" 
+                      src={getImageUrl("img_moxa_zigarre", "/moxa-zigarre.png")} 
                       alt="Anwendung einer Moxa-Zigarre zur Erwärmung von Akupunkturpunkten" 
                       className="w-full h-48 object-cover hover:scale-110 transition-transform duration-700"
                     />
                  </div>
                  <div className="rounded-[2.5rem] overflow-hidden border border-border shadow-md bg-white">
                     <img 
-                      src="/moxa-box.png" 
+                      src={getImageUrl("img_moxa_box", "/moxa-box.png")} 
                       alt="Klassische Moxa-Box zur großflächigen Wärmebehandlung" 
                       className="w-full h-48 object-cover hover:scale-110 transition-transform duration-700"
                     />
@@ -462,7 +464,7 @@ export default function TCM() {
           <div className="flex justify-center mb-20">
              <div className="bg-white p-6 md:p-8 lg:p-12 rounded-[1.5rem] md:rounded-[3rem] lg:rounded-[4rem] border border-border shadow-2xl max-w-2xl w-full">
                 <img 
-                  src="/fuenf-elemente-diagramm.png" 
+                  src={getImageUrl("img_fuenf_elemente", "/fuenf-elemente-diagramm.png")} 
                   alt="Das Gesetz der 5 Wandlungsphasen - Zyklus von Holz, Feuer, Erde, Metall und Wasser" 
                   className="w-full h-auto object-contain"
                 />
@@ -571,14 +573,14 @@ export default function TCM() {
               <div className="grid sm:grid-cols-2 gap-6 mb-12">
                  <div className="rounded-[2.5rem] overflow-hidden border border-border shadow-md bg-white">
                     <img 
-                      src="/schroepfen-feuer.png" 
+                      src={getImageUrl("img_schroepfen_feuer", "/schroepfen-feuer.png")} 
                       alt="Traditionelles Feuerschröpfen zur Vakuumerzeugung" 
                       className="w-full h-48 object-cover hover:scale-110 transition-transform duration-700"
                     />
                  </div>
                  <div className="rounded-[2.5rem] overflow-hidden border border-border shadow-md bg-white">
                     <img 
-                      src="/schroepfen-blutig.png" 
+                      src={getImageUrl("img_schroepfen_blutig", "/schroepfen-blutig.png")} 
                       alt="Hajamat - Blutiges Schröpfen zur Ausleitung" 
                       className="w-full h-48 object-cover hover:scale-110 transition-transform duration-700"
                     />
@@ -668,14 +670,14 @@ export default function TCM() {
              <div className="grid sm:grid-cols-2 gap-6 mt-12 max-w-4xl mx-auto">
                 <div className="rounded-[2.5rem] overflow-hidden border border-border shadow-md bg-white">
                    <img 
-                     src="/akutaping-nacken.png" 
+                      src={getImageUrl("img_akutaping_nacken", "/akutaping-nacken.png")} 
                      alt="Aku-Taping Anwendung im Nacken- und Schulterbereich" 
                      className="w-full h-56 object-cover hover:scale-110 transition-transform duration-700"
                    />
                 </div>
                 <div className="rounded-[2.5rem] overflow-hidden border border-border shadow-md bg-white">
                    <img 
-                     src="/akutaping-schwangerschaft.png" 
+                      src={getImageUrl("img_akutaping_schwangerschaft", "/akutaping-schwangerschaft.png")} 
                      alt="Schwangerschafts-Taping zur Unterstützung des Bauches" 
                      className="w-full h-56 object-cover hover:scale-110 transition-transform duration-700"
                    />
